@@ -31,14 +31,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 @font-face {
-	font-family:'MuseoSans-300';
-	src: url('./fonts/MuseoSans-300/museosans-300-webfont.woff');
-	src: url('./fonts/MuseoSans-300/museosans-300-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
 	font-family:'SFProDisplay-Medium';
 	src: url('./fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff2');
 	src: url('./fonts/SFProDisplay-Medium/SFProDisplay-Medium.woff2') format('woff2'),
@@ -475,9 +467,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	max-width:1140px;
 }
 .bloc-divider-b-fill{
-	fill:rgba(0,0,0,0.50);
+	fill:#5E5E5E;
 	width:100%;
-	height:5pt;
+	height:5px;
 }
 .nopadding{
 	margin-bottom:5px;
@@ -595,7 +587,7 @@ a{
 	color:#FEFFFF!important;
 }
 .top-banner-color{
-	background-color:rgba(214,214,214,0.95);
+	background-color:rgba(255,255,255,0.90);
 }
 .textshade{
 	text-shadow:0px 0px 10px #000000;
@@ -610,11 +602,14 @@ a{
 	height:85px;
 }
 .nevfont{
-	font-family:"MuseoSans-300";
-	text-align:center;
+	font-family:"Ubuntu";
+	text-align:justify;
 	color:rgba(0,0,0,0.85)!important;
-	font-size:16px;
 	border-style:solid;
+	font-size:14px;
+	text-transform:uppercase;
+	margin-right:5px;
+	margin-left:5px;
 	border-width:0px 0px 0px 0px;
 }
 .font-16{
