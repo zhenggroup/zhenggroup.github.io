@@ -20,12 +20,9 @@ a:hover{text-decoration: none; cursor:pointer;}
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'SFProDisplay-Regular';
-	src: url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff2');
-	src: url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff2') format('woff2'),
-	url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff') format('woff'),
-	url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.ttf') format('truetype');
+	font-family:'MuseoSans-300Italic';
+	src: url('./fonts/MuseoSans-300Italic/museosans-300italic-webfont.woff');
+	src: url('./fonts/MuseoSans-300Italic/museosans-300italic-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -69,12 +66,20 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 @font-face {
-	font-family:'SFProDisplay-Light';
-	src: url('./fonts/SFProDisplay-Light/SFProDisplay-Light.woff2');
-	src: url('./fonts/SFProDisplay-Light/SFProDisplay-Light.woff2') format('woff2'),
-	url('./fonts/SFProDisplay-Light/SFProDisplay-Light.woff') format('woff'),
-	url('./fonts/SFProDisplay-Light/SFProDisplay-Light.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/SFProDisplay-Light/SFProDisplay-Light.ttf') format('truetype');
+	font-family:'MuseoSans-100';
+	src: url('./fonts/MuseoSans-100/museosans-100-webfont.woff');
+	src: url('./fonts/MuseoSans-100/museosans-100-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:'SFProDisplay-Regular';
+	src: url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff2');
+	src: url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff2') format('woff2'),
+	url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.woff') format('woff'),
+	url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/SFProDisplay-Regular/SFProDisplay-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -144,57 +149,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 .bloc-divider-flip-x.bloc-divider-flip-y svg{
 	transform:scale(-1,-1);
-}
-
-
-/* Dark theme */
-
-.d-bloc{
-	color:rgba(255,255,255,.7);
-}
-.d-bloc button:hover{
-	color:rgba(255,255,255,.9);
-}
-.d-bloc .icon-round,.d-bloc .icon-square,.d-bloc .icon-rounded,.d-bloc .icon-semi-rounded-a,.d-bloc .icon-semi-rounded-b{
-	border-color:rgba(255,255,255,.9);
-}
-.d-bloc .divider-h span{
-	border-color:rgba(255,255,255,.2);
-}
-.d-bloc .a-btn,.d-bloc .navbar a, .d-bloc a .icon-sm, .d-bloc a .icon-md, .d-bloc a .icon-lg, .d-bloc a .icon-xl, .d-bloc h1 a, .d-bloc h2 a, .d-bloc h3 a, .d-bloc h4 a, .d-bloc h5 a, .d-bloc h6 a, .d-bloc p a{
-	color:rgba(255,255,255,.6);
-}
-.d-bloc .a-btn:hover,.d-bloc .navbar a:hover,.d-bloc a:hover .icon-sm, .d-bloc a:hover .icon-md, .d-bloc a:hover .icon-lg, .d-bloc a:hover .icon-xl, .d-bloc h1 a:hover, .d-bloc h2 a:hover, .d-bloc h3 a:hover, .d-bloc h4 a:hover, .d-bloc h5 a:hover, .d-bloc h6 a:hover, .d-bloc p a:hover{
-	color:rgba(255,255,255,1);
-}
-.d-bloc .navbar-toggle .icon-bar{
-	background:rgba(255,255,255,1);
-}
-.d-bloc .btn-wire,.d-bloc .btn-wire:hover{
-	color:rgba(255,255,255,1);
-	border-color:rgba(255,255,255,1);
-}
-.d-bloc .card{
-	color:rgba(0,0,0,.5);
-}
-.d-bloc .card button:hover{
-	color:rgba(0,0,0,.7);
-}
-.d-bloc .card icon{
-	border-color:rgba(0,0,0,.7);
-}
-.d-bloc .card .divider-h span{
-	border-color:rgba(0,0,0,.1);
-}
-.d-bloc .card .a-btn{
-	color:rgba(0,0,0,.6);
-}
-.d-bloc .card .a-btn:hover{
-	color:rgba(0,0,0,1);
-}
-.d-bloc .card .btn-wire, .d-bloc .card .btn-wire:hover{
-	color:rgba(0,0,0,.7);
-	border-color:rgba(0,0,0,.3);
 }
 
 
@@ -535,7 +489,7 @@ a[data-lightbox]:hover img{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"SFProDisplay-Regular";
+	font-family:"MuseoSans-300";
 }
 .container{
 	max-width:1280px;
@@ -588,13 +542,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .container-div-style{
 	height:201px;
 }
-.img-bloc-4-style{
-	width:90px;
-	height:90px;
-	border-radius:0px 0px 0px 0px;
-}
 .dropshadow{
-	box-shadow:0px 2px 7px #5E5E5E;
+	box-shadow:0px 2px 3px #5E5E5E;
 }
 .small{
 	font-family:"MuseoSans-300";
@@ -653,12 +602,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .greycolor{
 	color:#5E5E5E!important;
 }
-.link-style{
-	font-size:pt;
-}
 a{
 	color:#212121!important;
-	font-family:"SFProDisplay-Regular";
+	font-family:"MuseoSans-300Italic";
 }
 .textwhite{
 	color:#FEFFFF!important;
@@ -671,7 +617,7 @@ a{
 	font-family:"SFProDisplay-Medium";
 }
 .small-description-14pt{
-	font-family:"SFProDisplay-Light";
+	font-family:"MuseoSans-100";
 	font-size:14px;
 	color:#424242!important;
 	text-align:justify;
@@ -728,9 +674,9 @@ a{
 	width:100px;
 }
 p{
-	font-family:"SFProDisplay-Regular";
-	font-size:16px;
+	font-family:"MuseoSans-300";
 	color:#212121!important;
+	font-size:16px;
 }
 .box{
 	box-shadow:0px 0px 0px #5E5E5E;
@@ -812,7 +758,7 @@ h4{
 	color:#AE3E38!important;
 }
 h5{
-	font-family:"SFProDisplay-Medium";
+	font-family:"MuseoSans-500";
 	color:#212121!important;
 }
 .active-pageleica-like:active{
@@ -842,14 +788,21 @@ h5{
 	padding:8px 8px 8px 8px;
 }
 .leica-red-background{
-	background-color:rgba(174,61,56,0.20);
+	background-color:#AE3D38;
 }
 h6{
 	color:#212121!important;
-	font-family:"SFProDisplay-Medium";
+	font-family:"MuseoSans-500";
 }
 label{
 	font-family:"SFProDisplay-Regular";
+}
+.muse-font{
+	font-family:"MuseoSans-100";
+	writing-mode:horizontal-tb;
+}
+.spacebefore{
+	padding-top:30px;
 }
 
 /* = Colour
@@ -974,8 +927,8 @@ label{
 		text-align:center;
 	}
 	.navbar-brand img{
-		width:230px;
-		height:44px;
+		width:222px;
+		height:62px;
 	}
 	.img-style{
 		width:258px;
