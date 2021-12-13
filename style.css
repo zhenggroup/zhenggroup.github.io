@@ -28,9 +28,9 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 @font-face {
-	font-family:'FreightSansProSemibold-Regular';
-	src: url('./fonts/FreightSansProSemibold-Regular/FreightSansProSemibold-Regular.woff');
-	src: url('./fonts/FreightSansProSemibold-Regular/FreightSansProSemibold-Regular.woff') format('woff');
+	font-family:'FreightSansProMedium-Regular';
+	src: url('./fonts/FreightSansProMedium-Regular/FreightSansProMedium-Regular.woff');
+	src: url('./fonts/FreightSansProMedium-Regular/FreightSansProMedium-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -44,9 +44,9 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 @font-face {
-	font-family:'FreightSansProMedium-Regular';
-	src: url('./fonts/FreightSansProMedium-Regular/FreightSansProMedium-Regular.woff');
-	src: url('./fonts/FreightSansProMedium-Regular/FreightSansProMedium-Regular.woff') format('woff');
+	font-family:'FreightSansProSemibold-Regular';
+	src: url('./fonts/FreightSansProSemibold-Regular/FreightSansProSemibold-Regular.woff');
+	src: url('./fonts/FreightSansProSemibold-Regular/FreightSansProSemibold-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -474,20 +474,25 @@ a[data-lightbox]:hover img{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"MuseoSans-300";
+	font-family:"FreightSansProBook-Regular";
 }
 .container{
-	max-width:1280px;
+	max-width:1300px;
 }
 .bloc-divider-b-fill{
-	fill:#5E5E5E;
+	fill:#C85149;
 	width:100%;
 	height:5px;
 }
 .nopadding{
 	font-family:"HelveticaNowMicro-ExtraLight";
-	margin:0px 0px 0px 0px;
-	padding:0px 0px 0px 0px;
+	margin-bottom:0px;
+	padding-bottom:0px;
+	padding-top:0px;
+	margin-top:0px;
+	height:1px;
+	min-height:1px;
+	max-height:1px;
 }
 .widepadding{
 	margin-right:10px;
@@ -495,8 +500,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	align-content:flex-start;
 }
 .bloc-divider-t-style{
-	height:3px;
-	fill:#919191;
+	height:5px;
+	fill:#CC544C;
 }
 .blueback{
 	background-color:#1372B9;
@@ -588,8 +593,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	color:#5E5E5E!important;
 }
 a{
-	color:#212121!important;
 	font-family:"FreightSansProBook-Regular";
+	color:#005392!important;
 }
 .textwhite{
 	color:#FEFFFF!important;
@@ -609,8 +614,7 @@ a{
 	text-align:justify;
 }
 .img-style{
-	width:267px;
-	height:85px;
+	width:220px;
 }
 .font-16{
 	font-size:16px;
@@ -667,7 +671,7 @@ a{
 p{
 	font-family:"FreightSansProBook-Regular";
 	color:#212121!important;
-	font-size:16px;
+	font-size:17px;
 }
 .box{
 	box-shadow:0px 0px 0px #5E5E5E;
@@ -730,22 +734,23 @@ p{
 	white-space:initial;
 }
 .navbar-nav li a{
-	font-family:"FreightSansProSemibold-Regular";
+	font-family:"FreightSansProMedium-Regular";
+	color:#212121!important;
 }
 h1{
 	font-family:"FreightSansProMedium-Regular";
 	color:#AE3E38!important;
 }
 h2{
-	font-family:"FreightSansProMedium-Regular";
+	font-family:"FreightSansProSemibold-Regular";
 	color:#AE3E38!important;
 }
 h3{
-	font-family:"FreightSansProMedium-Regular";
+	font-family:"FreightSansProSemibold-Regular";
 	color:#AE3E38!important;
 }
 h4{
-	font-family:"FreightSansProMedium-Regular";
+	font-family:"FreightSansProSemibold-Regular";
 	color:#AE3E38!important;
 }
 h5{
@@ -787,6 +792,7 @@ h5{
 h6{
 	color:#212121!important;
 	font-family:"FreightSansProMedium-Regular";
+	font-size:17px;
 }
 label{
 	font-family:"FreightSansProBook-Italic";
@@ -796,7 +802,7 @@ label{
 	writing-mode:horizontal-tb;
 }
 .spacebefore{
-	padding-top:20px;
+	padding-top:10px;
 }
 .img-x246851-style{
 	height:150px;
@@ -811,8 +817,7 @@ label{
 	height:150px;
 }
 .img-64-style{
-	width:150px;
-	height:150px;
+	width:183px;
 }
 .nav-padding{
 	margin:2px 2px 2px 2px;
@@ -824,15 +829,16 @@ label{
 }
 .seperator{
 	font-size:20px;
-	color:#424242!important;
 	font-family:"MuseoSans-100";
 	line-height:40px;
+	color:#797979!important;
 }
 .small-14{
 	font-size:14px;
 	display:flex;
 }
 .freight-small-14{
+	font-family:"FreightSansProBook-Regular";
 	font-size:14px;
 }
 .active-page-nautilus-freight{
@@ -865,7 +871,7 @@ label{
 .date{
 	font-family:"FreightSansProBook-Regular";
 	color:#AD3D38!important;
-	text-transform:uppercase;
+	text-transform:none;
 	text-align:left;
 	font-size:16px;
 }
@@ -877,12 +883,30 @@ label{
 	border-width:0px 1px 0px 0px;
 }
 .freigh-large{
-	font-size:16px;
-	font-weight:normal;
 	font-family:"FreightSansProMedium-Regular";
+	text-transform:none;
+	text-decoration:none;
 }
 .zhongwen-light{
 	font-family:"MuseoSans-300";
+}
+.bloc-divider-b-style{
+	height:1px;
+}
+.nev-space{
+	margin-right:7px;
+	margin-left:7px;
+	padding-right:0px;
+	padding-left:0px;
+}
+.img-nz1c01350-00-style{
+	width:250px;
+}
+.img-33-bloc-4-style{
+	width:160px;
+}
+.p-bloc-3-style{
+	letter-spacing:px;
 }
 
 /* = Colour
@@ -890,8 +914,8 @@ label{
 
 /* Background colour styles */
 
-.bgc-platinum{
-	background-color:#EAEAEA;
+.bgc-white{
+	background-color:#FFFFFF;
 }
 
 
