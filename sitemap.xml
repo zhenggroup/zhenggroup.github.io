@@ -1,51 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url>
-	<loc>https://www.thezhenggroup.com</loc>
-	<lastmod>2021-12-17</lastmod>
-	<changefreq>Weekly</changefreq>
-	<priority>1.0</priority>
-	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/in%20situ.png</image:loc>
-	<image:title>in situ methods for electrochemistry</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/groupslide-04.png</image:loc>
-	<image:title>laser-assisted exfoliation of black phosphorus</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/Pt-Te.png</image:loc>
-	<image:title>cathodic exfoliation of tellurium</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/Bi-M-NPs.jpg</image:loc>
-	<image:title>dopd bismuth nanoparticles</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
-	<image:title>Twitter Social Card Image</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
-	<image:title>Facebook Social Card Image</image:title>
-	</image:image>
-</url>
-<url>
 	<loc>https://www.thezhenggroup.com/topic-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/website%20research%20area-02.png</image:loc>
-	<image:title>placeholder image</image:title>
+	<image:title>website research area 02</image:title>
 	</image:image>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/Te%20cover%20-%20300ppi-01.png</image:loc>
-	<image:title>placeholder image</image:title>
+	<image:title>Te cover   300ppi-01</image:title>
 	</image:image>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/website%20research%20area-01.png</image:loc>
-	<image:title>placeholder image</image:title>
+	<image:title>website research area 01</image:title>
 	</image:image>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
@@ -58,7 +28,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/join-us-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -80,7 +50,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/instruments-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -98,7 +68,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/contact-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -128,7 +98,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/中文-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -140,7 +110,7 @@
 	<image:title>israel institute-of-technology-logo-freelogovectors.net_</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/photo%20round-01.png</image:loc>
+	<image:loc>https://www.thezhenggroup.com/img/Weiran%20Zheng%20Profile%20picture.jpg</image:loc>
 	<image:title>photo round 01</image:title>
 	</image:image>
 	<image:image>
@@ -154,7 +124,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/publications-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -171,6 +141,10 @@
 	</image:image>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/Graphical-abstract.gif</image:loc>
+	<image:title>Get.jpeg</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/1-s2.0-S092540052101902X-ga1.jpg</image:loc>
 	<image:title>Get.jpeg</image:title>
 	</image:image>
 	<image:image>
@@ -196,11 +170,11 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/members-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/photo%20round-01.png</image:loc>
+	<image:loc>https://www.thezhenggroup.com/img/Weiran%20Zheng%20Profile%20picture.jpg</image:loc>
 	<image:title>WZheng</image:title>
 	</image:image>
 	<image:image>
@@ -214,7 +188,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/resource-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -228,9 +202,69 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/news-the-zheng-group/</loc>
-	<lastmod>2021-12-17</lastmod>
+	<lastmod>2022-01-11</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/1566891841874.jpeg</image:loc>
+	<image:title>1566891841874.jpeg</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
+	<image:title>Twitter Social Card Image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
+	<image:title>Facebook Social Card Image</image:title>
+	</image:image>
+</url>
+<url>
+	<loc>https://www.thezhenggroup.com</loc>
+	<lastmod>2022-01-11</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>1.0</priority>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/groupslide-big-04.png</image:loc>
+	<image:title>groupslide big-04</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/groupslide-small-07.png</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/groupslide-small-05.png</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/1566891841874.jpeg</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/small%20cropped.jpg</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
+	<image:title>Twitter Social Card Image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
+	<image:title>Facebook Social Card Image</image:title>
+	</image:image>
+</url>
+<url>
+	<loc>https://www.thezhenggroup.com/to-be-released/</loc>
+	<lastmod>2022-01-11</lastmod>
+	<changefreq>Weekly</changefreq>
+	<priority>0.5</priority>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/aboutlogo.png</image:loc>
+	<image:title>GTIIT</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/israel-institute-of-technology-logo-freelogovectors.net_.png</image:loc>
+	<image:title>israel institute-of-technology-logo-freelogovectors.net_</image:title>
+	</image:image>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
 	<image:title>Twitter Social Card Image</image:title>
