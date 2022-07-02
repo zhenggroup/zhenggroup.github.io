@@ -204,15 +204,15 @@
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/default_cover.webp</image:loc>
+	<image:title>TOC</image:title>
+	</image:image>
+	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/TOC.png</image:loc>
-	<image:title>1566891841874.jpeg</image:title>
+	<image:title>TOC</image:title>
 	</image:image>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/groupslide-small-07.png</image:loc>
-	<image:title>1566891841874.jpeg</image:title>
-	</image:image>
-	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/1566891841874.jpeg</image:loc>
 	<image:title>1566891841874.jpeg</image:title>
 	</image:image>
 	<image:image>
