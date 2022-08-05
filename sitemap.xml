@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url>
 	<loc>https://www.thezhenggroup.com/topic-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -28,7 +28,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/join-us-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -50,7 +50,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/instruments-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -88,7 +88,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/中文-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -114,7 +114,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/publications-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -176,7 +176,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/members-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -202,7 +202,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/resource-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -216,7 +216,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/news-the-zheng-group/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
@@ -246,7 +246,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
 	<image:image>
@@ -254,12 +254,24 @@
 	<image:title>in situ methods</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/groupslide-small-07.png</image:loc>
-	<image:title>groupslide small-07</image:title>
+	<image:loc>https://www.thezhenggroup.com/img/asia202200552-toc-0001-m.jpg</image:loc>
+	<image:title>slide 1</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>https://www.thezhenggroup.com/img/groupslide-small-05.png</image:loc>
-	<image:title>groupslide small-05</image:title>
+	<image:loc>https://www.thezhenggroup.com/img/smll202170079-gra-0001-m.jpg</image:loc>
+	<image:title>slide 2</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/aenm202070130-gra-0001-m.jpg</image:loc>
+	<image:title>slide 3</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/Screenshot%202021-04-10%20at%209.43.09%20PM.png</image:loc>
+	<image:title>Screenshot 2021 04-10 at 9.43.09 PM</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://www.thezhenggroup.com/img/Screenshot%202021-08-13%20at%204.01.00%20PM.png</image:loc>
+	<image:title>Screenshot 2021 08-13 at 4.01.00 PM</image:title>
 	</image:image>
 	<image:image>
 	<image:loc>https://www.thezhenggroup.com/img/</image:loc>
@@ -272,7 +284,7 @@
 </url>
 <url>
 	<loc>https://www.thezhenggroup.com/to-be-released/</loc>
-	<lastmod>2022-07-24</lastmod>
+	<lastmod>2022-08-05</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>0.5</priority>
 	<image:image>
