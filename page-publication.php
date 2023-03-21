@@ -1,0 +1,314 @@
+<?php
+
+/* Template Name: Publication */
+
+
+
+?><!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta name="robots" content="index, follow">
+    <link rel="shortcut icon" type="image/png" href="<?php if (get_option('site_icon')){echo get_site_icon_url();}else{ echo get_template_directory_uri().'/favicon.png';}?>">
+    
+	
+    <title><?php the_title(); ?></title>
+
+	<?php wp_head(); ?>
+
+    
+<!-- Analytics -->
+ 
+<!-- Analytics END -->
+    
+</head>
+<body class="  <?php echo implode(" ",get_body_class()); ?>">
+
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+
+<!-- Main container -->
+<div class="page-container">
+    
+<?php get_header(); ?>
+
+<!-- bloc-6 -->
+<div class="bloc l-bloc" id="bloc-6">
+	<div class="container bloc-lg bloc-sm-lg">
+		<div class="row">
+			<div class="col">
+				<h3 class="mb-4">
+					Gallery <span class="text-grey">- Covers, Highlights</span>
+				</h3>
+			</div>
+		</div>
+		<div class="row g-0">
+			<div class="col-md-2 text-start">
+				<a href="#" data-lightbox="<?php echo get_template_directory_uri(); ?>/img/3.jpg?timestamp=1679390013025" data-gallery-id="gallery-1"><picture><source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-srcset="<?php echo get_template_directory_uri(); ?>/img/3.webp"><img src="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-src="<?php echo get_template_directory_uri(); ?>/img/3.jpg" class="img-fluid mx-auto d-block lazyload" alt="3" width="190" height="249"></picture></a>
+			</div>
+			<div class="col-md-2 text-start">
+				<a href="#" data-lightbox="<?php echo get_template_directory_uri(); ?>/img/6.jpg?timestamp=1679390044639" data-gallery-id="gallery-1"><picture><source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-srcset="<?php echo get_template_directory_uri(); ?>/img/6.webp"><img src="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-src="<?php echo get_template_directory_uri(); ?>/img/6.jpg" class="img-fluid mx-auto d-block lazyload" alt="6" width="190" height="252"></picture></a>
+			</div>
+			<div class="col-md-2 text-start">
+				<a href="#" data-lightbox="<?php echo get_template_directory_uri(); ?>/img/5.jpg?timestamp=1679390035264" data-gallery-id="gallery-1"><picture><source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-srcset="<?php echo get_template_directory_uri(); ?>/img/5.webp"><img src="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-src="<?php echo get_template_directory_uri(); ?>/img/5.jpg" class="img-fluid mx-auto d-block lazyload" alt="5" width="190" height="252"></picture></a>
+			</div>
+			<div class="col-md-2 text-start">
+				<a href="#" data-lightbox="<?php echo get_template_directory_uri(); ?>/img/Screenshot%202021-04-10%20at%209.43.09%20PM.png?timestamp=1679389989655" data-gallery-id="gallery-1"><picture><source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-srcset="<?php echo get_template_directory_uri(); ?>/img/Screenshot%202021-04-10%20at%209.43.09%20PM.webp"><img src="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-src="<?php echo get_template_directory_uri(); ?>/img/Screenshot%202021-04-10%20at%209.43.09%20PM.png" class="img-fluid mx-auto d-block lazyload" alt="Screenshot%202021 04-10%20at%209.43.09%20PM" width="190" height="247"></picture></a>
+			</div>
+			<div class="col-md-2 text-start">
+				<a href="#" data-lightbox="<?php echo get_template_directory_uri(); ?>/img/1.jpg?timestamp=1679390023759" data-gallery-id="gallery-1"><picture><source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-srcset="<?php echo get_template_directory_uri(); ?>/img/1.webp"><img src="<?php echo get_template_directory_uri(); ?>/img/lazyload-ph.png" data-src="<?php echo get_template_directory_uri(); ?>/img/1.jpg" class="img-fluid mx-auto d-block lazyload" alt="1" width="190" height="250"></picture></a>
+			</div>
+			<div class="col-md-2 text-start">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-6 END -->
+
+<!-- bloc-7 -->
+<div class="bloc l-bloc" id="bloc-7">
+	<div class="container bloc-lg bloc-sm-lg">
+		<div class="row">
+			<div class="col">
+				<h3 class="mb-4">
+					Publications <span class="text-grey">- Articles, Chapters</span>
+				</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col text-start">
+				<h5 class="mb-4 text-lg-center">
+					2023
+				</h5>
+				<p>
+					<a href="https://doi.org/10.1002/cmtd.202200042" target="_blank">Beginner's Guide to Raman Spectroelectrochemistry for Electrocatalysis Study</a><br>W. Zheng*<br>Chemistry Methods, 2023, 3(2), e202200042
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1002/anse.202200070" target="_blank">Single-Atom Materials as Electrochemical Sensors: Sensitivity, Selectivity, and Stability</a><br>W. Zheng*<br>Analysis & Sensing, 2023, e202200070<br>featured as the front cover of Analysis & Sensing<br>
+				</p>
+				<h5 class="mb-4 text-lg-center mt-lg-4">
+					2022
+				</h5>
+				<p>
+					<a href="https://doi.org/10.1002/asia.202200384" target="_blank">Observing Electrocatalytic Processes via In Situ Electrochemical Scanning Tunneling Microscopy: Latest Advances</a><br>W. Zheng,* L.Y.S. Lee*<br>Chemistry - An Asian Journal, 2022, e202200384
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1016/j.matt.2021.12.010" target="_blank">Beyond Sonication: Advanced Exfoliation Methods for Scalable Production of 2D Materials</a><br>W. Zheng,* L.Y.S. Lee*<br>Matter, 2022, 5, 515-545
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1016/j.snb.2021.131334" target="_blank">Bismuth and Metal-Doped Bismuth Nanoparticles Produced by Laser Ablation for Electrochemical Glucose Sensing</a><br>W. Zheng, Y. Li, L.Y.S. Lee*<br>Sensors and Actuators B: Chemical, 2022, 357, 131334
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					(Book Chapter) <a href="https://doi.org/10.1201/9781003206507-5" target="_blank">Functionalized Covalent Organic Frameworks for Improved Energy Application</a><br>Y. Li, W. Zheng, L.Y.S. Lee<br>Chapter 5 in "Covalent Organic Frameworks: Chemistry, Properties, and Energy Applications for Sustainable Future”, CRC Press, 2022
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					(Book Chapter) <a href="https://doi.org/10.1002/9783527828562.ch1" target="_blank">Earth-Abundant Metal-Based Nanomaterials for Electrochemical Water Splitting</a><br>W. Zheng, Y. Li, L.Y.S. Lee<br>Chapter 1 in "Functional Nanomaterials: Synthesis, Properties and Applications”, Wiley-VCH, 2022<br>
+				</p>
+				<h5 class="mb-4 text-lg-center">
+					2021
+				</h5>
+				<p>
+					<a href="https://doi.org/10.1039/D1NR03294A" target="_blank">Improving the Performance Stability of Direct Seawater Electrolysis: From Catalyst Design to Electrode Engineering</a><br>W. Zheng, L.Y.S. Lee,* K. Y. Wong*<br>Nanoscale, 2021, 13, 15177–15187<br>
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1021/acsenergylett.1c01350" target="_blank">Metal-Organic Frameworks for Electrocatalysis: Catalyst or Precatalyst?</a><br>W. Zheng, L.Y.S. Lee*<br>ACS Energy Letters, 2021, 6, 2838–2843<br>most read paper of the month in ACS Energy Letters<br>media covered by: <a href="https://nyxr-home.com/55093.html" target="_blank">能源学人</a>
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1021/acsami.1c03240" target="_blank">Interface Engineering of 2D-C3N4/NiFe-LDH Heterostructure for Highly Efficient Photocatalytic Hydrogen Evolution</a><br>J. Yan, X. Zhang, W. Zheng, L.Y.S. Lee*<br>ACS Applied Materials & Interfaces, 2021, 21, 24723
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1016/j.isci.2021.102342" target="_blank">Stabilizer-Free Bismuth Nanoparticle for Selective Polyol Electrooxidation</a><br>W. Zheng, Y. Li, C.-S. Tsang, P.-K. So, L.Y.S. Lee*<br>iScience, 2021, 24, 102342<br>part of the special issue: Emerging pathways to electrochemical synthesis
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1002/smll.202007768" target="_blank">Few-Layer Tellurium: Cathodic Exfoliation and Doping for Collaborative Hydrogen Evolution</a><br>W. Zheng, Y. Li, M. Liu, L.Y.S. Lee*<br>Small, 2021, 17, 2007768<br>featured as the front cover of Small<br>media covered by: <a href="https://wemp.app/posts/4d2271ef-4214-4833-9ee4-20f0bc1fc815" target="_blank">催化计：Small封面文章</a>
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1016/j.apcatb.2020.119857" target="_blank">Interface Engineered NiFe2O4-x/NiMoO4 Nanowire Arrays for Electrochemical Oxygen Evolution</a><br>J. Choi, D. Kim, W. Zheng, B. Yan, Y. Li, L.Y.S. Lee,* Y. Piao*<br>Applied Catalysis B: Enviromental, 2021, 286, 119857<br>highly cited paper (top 1% of Chemistry), Web of Science, 2021
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1016/j.cej.2020.127900" target="_blank">TiO2 Film Supported by Vertically Aligned Gold Nanorod Superlattice Array for Enhanced Photocatalytic Hydrogen Evolution</a><br>L. Hu, Y. Li, X. Peng, W. Zheng, L.Y.S. Lee,* P.K. Chu,* K.-Y. Wong*<br>Chemical Engineering Journal, 2021, 417, 127900<br>
+				</p>
+				<h5 class="mb-lg-4 text-lg-center">
+					2020
+				</h5>
+				<p>
+					<a href="https://doi.org/10.1021/acsenergylett.0c01958" target="_blank">Best Practices in Using Foam-Type Electrodes for Electrocatalytic Performance Benchmark</a><br>W. Zheng, M. Liu, L.Y.S. Lee* <br>ACS Energy Letters, 2020, 5, 3260 <br>most read paper of the month in ACS Energy Letters <br>media covered by: <a href="https://www.bilibili.com/video/BV1dg411G7YZ?from=search&seid=5708378721929985674" target="_blank">电化学测试专题案例分享第3期-Foam泡沫电极在电催化分解水中的注意事项</a>
+				</p>
+				<p>
+					Blue Order/Disorder Janus- Type TiO2 Nanoparticles for Enhanced Photocatalytic Hydrogen Generation<br>L. Hu, Y. Li, W. Zheng, Y.-K. Peng, S.C.E. Tsang,* L.Y.S. Lee,* K.-Y. Wong*<br>Journal of Materials Chemistry A, 2020, 8, 22828
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1002/aenm.201903490" target="_blank">Laser-assisted Ultrafast Exfoliation of Black Phosphorus in Liquid with Tunable Thickness for Li-ion Batteries</a><br>W. Zheng,# J. Lee,# Z. Gao, Y. Li, S. Lin, S. P. Lau, L.Y.S. Lee*<br>Advanced Energy Materials, 2020, 10, 1903490<br>featured as the front cover of Advanced Energy Materials<br>media covered by: <br><a href="http://www.nanoer.net/e/action/ShowInfo.php?classid=4&id=20537" target="_blank">纳米人</a> <br><a href="https://www.materialsviewschina.com/2020/08/48403/" target="_blank">Wiley电学、电化学类封面文章选读</a><br>
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1016/j.apcatb.2020.118927" target="_blank">Copper Phosphosulfides as a Highly Active and Stable Photocatalyst for Hydrogen Evolution Reaction</a><br>X. Zhang,# K.-A Min,# W. Zheng, J. Hwang, B. Han,* L.Y.S. Lee* <br>Applied Catalysis B: Enviromental, 2020, 273, 118927
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					<a href="https://doi.org/10.1021/acscatal.9b03790" target="_blank">Electrochemical Instability of Metal-Organic Frameworks: In Situ Spectroelectrochemical Investigation of the Real Active Sites</a><br>W. Zheng, M. Liu, L.Y.S. Lee*<br>ACS Catalysis, 2020, 20, 81–92<br>highly cited paper (top 1% of Chemistry), Web of Science, 2021<br>media covered by: <br><a href="https://www.sohu.com/a/358216417_489486" target="_blank">研之成理：原位电化学谱图法精细剖析OER反应ZIF-67 转变过程</a><br><a href="https://www.bilibili.com/video/BV193411N7Pz/?spm_id_from=333.337.search-card.all.click&vd_source=fc9ab070c3e43559b55603564026a5de" target="_blank">文献导读 ACS Catalysis纯MOF当电催化剂靠不靠谱？</a><br>
+				</p>
+				<h5 class="mb-lg-4 text-lg-center">
+					2019 and before
+				</h5>
+				<p>
+					Highly Efficient Stepwise Electro- chemical Degradation of Antibiotics in Water by in situ Formed Cu(OH)2 Nanorods<br>W. Zheng, C.-S. Tsang, M. Liu, L.Y. So, L.-C. Leung, L.Y.S. Lee*<br>Applied Catalysis B: Enviromental, 2019, 256, 117824
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Surface Engineering of MoS2 via Laser-induced Exfoliation in Protic Solvents<br>Z. Gao, M. Liu, W. Zheng, X. Zhang, L.Y.S. Lee*<br>Small, 2019, 15, 1903791
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Highly Enhanced Pseudocapacitive Performance of Vanadium-doped MXenes in Neutral Electrolytes<br>Z. Gao, W. Zheng, L.Y.S. Lee*<br>Small, 2019, 15, 1902649
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Insights into the Transition Metal Ion-mediated Electrooxidation of Glucose in Alkaline Electrolyte<br>W. Zheng, Y. Li, L.Y.S. Lee*<br>Electrochimica Acta, 2019, 308, 9–19
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Two-Dimensional Metal-Organic Framework and Covalent-Organic Framework: Synthesis and their Energy-Related Applications<br>W. Zheng, C.-S. Tsang, L.Y.S. Lee,* K.-Y. Wong*<br>Materials Today Chemistry, 2019, 12, 34—60
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Use of Carbon Supports with Copper Ion as a Highly Sensitive Non-Enzymatic Glucose Sensor<br>W. Zheng, Y. Li, L. Hu, L.Y.S. Lee*<br>Sensors and Actuators B: Chemical, 2019, 282, 187–196
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Overall Water Splitting Electrocatalysts based on 2D CoNi Metal-Organic Frameworks and Its Derivative<br>M. Liu, W. Zheng, S. Ran, S.T. Boles, L.Y.S. Lee*<br>Advanced Materials Interfaces, 2018, 5, 1800849<br>featured as the back cover of Advanced Materials Interfaces
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Ni/Co-Based Nanosheet Arrays for Efficient Oxygen Evolution Reaction<br>Y. Li, L. Hu, W. Zheng, X. Peng, M. Liu, P. K. Chu,* L. Y. S. Lee*<br>Nano Energy, 2018, 52, 360—368
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Cu2+-doped Carbon Nitride/MWCNT as an Electrochemical Glucose Sensor<br>W. Zheng, Y. Li, M. Liu, C.-S. Tsang, L.Y.S. Lee,* K.-Y. Wong*<br>Electroanalysis, 2018, 30, 1446—1454
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					CuII-mediated Ultra-efficient Electrooxidation of Glucose<br>W. Zheng, Y. Li, C.-S. Tsang, L. Hu, M. Liu, B. Huang, L.Y.S. Lee,* K.-Y. Wong*<br>ChemElectroChem, 2017, 4, 2788—2792
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Electroreduction of Carbon Dioxide to Formic Acid and Methanol over a Palladium/Polyaniline Catalyst in Acidic Solution: A Study of the Palladium Size Effect<br>W. Zheng, H.W. Man, L. Ye,* S.C.E. Tsang*<br>Energy Technology, 2017, 5, 937—944
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Quantitative Differences in Sulfur Poisoning Phenomena over Ruthenium and Palladium: An Attempt to Deconvolute Geometric and Electronic Poisoning Effects Using Model Catalysts<br>A. Kolpin, G. Jones, S. Jones, W. Zheng, J. Cookson, A. PE York, P. J Collier, S.C.E. Tsang*<br>ACS Catalysis, 2017, 7, 592—605
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					A Tunable Metal-polyaniline Interface for Efficient Carbon Dioxide Electro-Reduction to Formic Acid and Methanol in Aqueous Solution<br>W. Zheng, S. Nayak, W. Yuan, Z. Zeng, X. Hong, K.A. Vincent, S.C.E. Tsang*<br>Chemical Communications, 2016, 52, 13901—13904
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Copper Nanoparticles/Polyaniline/Graphene Composite as a Highly Sensitive Electrochemical Glucose Sensor<br>W. Zheng, L. Hu, L.Y.S. Lee, K.-Y. Wong*<br>Journal of Electroanalytical Chemistry, 2016, 781, 155—160
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Probing the Size and Shape Effects of Cubic- and Spherical-Shaped Palladium Nanoparticles in the Electrooxidation of Formic Acid<br>W. Zheng, J. Qu, X. Hong, K. Tedsree, S.C.E. Tsang*<br>ChemCatChem, 2015, 7, 3826—3831
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Dual Doping Effects (Site Blockage and Electronic Promotion) Imposed by Adatoms on Pd Nanocrystals for Catalytic Hydrogen Production<br>S. Jones, S.M. Fairclough, M. Gordon-Brown, W. Zheng, A. Kolpin, B. Pang, W.C.H. Kuo, J.M. Smith, S.C.E. Tsang*<br>Chemical Communications, 2015, 51, 46—49
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Enhanced Photocatalytic Hydrogen Evolution from Water by Niobate Single Molecular Sheets and Ensembles<br>K. Nakagawa, T. Jia, W. Zheng, S. M. Fairclough, M. Katoh, S. Sugiyama, S.C.E. Tsang*<br>Chemical Communications, 2014, 50, 13702—13705
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Photo and Electronic Excitation for Low Temperature Catalysis Over Metal Nanoparticles Using an Organic Semiconductor<br>W. Zheng, S. Jones, X. Hong,* S.C.E. Tsang*<br>RSC Advances, 2014, 4, 47488—47496
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Palladium on Iron Oxide Nanoparticles: the Morphological Effect of the Support in Glycerol Hydrogenolysis<br>J. Ge, Z. Zeng, F. Liao, W. Zheng, X. Hong,* S.C.E. Tsang*<br>Green Chemistry, 2013, 15, 2064—2069
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Morphology-dependent Interactions of ZnO with Cu Nanoparticles at the Materials’ Interface in Selective Hydrogenation of CO2 to CH3OH<br>F. Liao, Y. Huang, J. Ge, W. Zheng, K. Tedsree, P. Collier, X. Hong,* S.C.E. Tsang*<br>Angewandte Chemie International Edition, 2011, 50, 2162—2165
+				</p>
+				<div class="divider-h">
+				</div>
+				<p>
+					Temperature and Solvent- dependent Morphological Sol-Gel Transformation: an In-Situ Microscopic Observation<br>Y. Huang, F. Liao, W. Zheng, X. Liu, X. Wu, X. Hong,* S.C.E. Tsang*<br>Langmuir, 2010, 26, 3106—3114<br>
+				</p>
+				<div class="divider-h">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-7 END -->
+
+<!-- ScrollToTop Button -->
+<button aria-label="Scroll to top button" class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></button>
+<!-- ScrollToTop Button END-->
+
+
+<?php get_footer(); ?>
+
+</div>
+<!-- Main container END -->
+    
+<?php wp_footer(); ?>
+
+<!-- Additional JS -->
+<script type='text/javascript' src="<?php echo get_template_directory_uri(); ?>/js/lazysizes.min.js" defer></script>
+<!-- Additional JS END -->
+
+
+</body>
+</html>
