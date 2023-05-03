@@ -133,6 +133,20 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 
+/* Background Styles */
+
+.bg-center,.bg-l-edge,.bg-r-edge,.bg-t-edge,.bg-b-edge,.bg-tl-edge,.bg-bl-edge,.bg-tr-edge,.bg-br-edge,.bg-repeat{
+	-webkit-background-size: auto!important;
+	-moz-background-size: auto!important;
+	-o-background-size: auto!important;
+	background-size: auto!important;
+}
+.bg-b-edge{
+	background-position: bottom!important;
+	background-repeat: no-repeat;
+}
+
+
 /* Background Textures */
 
 .bloc-bg-texture::before{
@@ -221,6 +235,35 @@ a:hover{text-decoration: none; cursor:pointer;}
 	color:rgba(0,0,0,1);
 }
 .d-bloc .card .btn-wire, .d-bloc .card .btn-wire:hover{
+	color:rgba(0,0,0,.7);
+	border-color:rgba(0,0,0,.3);
+}
+
+
+/* Light theme */
+
+.d-bloc .card,.l-bloc{
+	color:rgba(0,0,0,.5);
+}
+.d-bloc .card button:hover,.l-bloc button:hover{
+	color:rgba(0,0,0,.7);
+}
+.l-bloc .icon-round,.l-bloc .icon-square,.l-bloc .icon-rounded,.l-bloc .icon-semi-rounded-a,.l-bloc .icon-semi-rounded-b{
+	border-color:rgba(0,0,0,.7);
+}
+.d-bloc .card .divider-h span,.l-bloc .divider-h span{
+	border-color:rgba(0,0,0,.1);
+}
+.d-bloc .card .a-btn,.l-bloc .a-btn,.l-bloc .navbar a,.l-bloc a .icon-sm, .l-bloc a .icon-md, .l-bloc a .icon-lg, .l-bloc a .icon-xl, .l-bloc h1 a, .l-bloc h2 a, .l-bloc h3 a, .l-bloc h4 a, .l-bloc h5 a, .l-bloc h6 a, .l-bloc p a{
+	color:rgba(0,0,0,.6);
+}
+.d-bloc .card .a-btn:hover,.l-bloc .a-btn:hover,.l-bloc .navbar a:hover, .l-bloc a:hover .icon-sm, .l-bloc a:hover .icon-md, .l-bloc a:hover .icon-lg, .l-bloc a:hover .icon-xl, .l-bloc h1 a:hover, .l-bloc h2 a:hover, .l-bloc h3 a:hover, .l-bloc h4 a:hover, .l-bloc h5 a:hover, .l-bloc h6 a:hover, .l-bloc p a:hover{
+	color:rgba(0,0,0,1);
+}
+.l-bloc .navbar-toggle .icon-bar{
+	color:rgba(0,0,0,.6);
+}
+.d-bloc .card .btn-wire,.d-bloc .card .btn-wire:hover,.l-bloc .btn-wire,.l-bloc .btn-wire:hover{
 	color:rgba(0,0,0,.7);
 	border-color:rgba(0,0,0,.3);
 }
@@ -523,7 +566,7 @@ h3{
 	color:var(--swatch-var-1277)!important;
 }
 h4{
-	font-family:"MessinaSans-Book";
+	font-family:"MessinaSans-Bold";
 	color:var(--swatch-var-1277)!important;
 }
 h5{
@@ -695,24 +738,12 @@ a{
 
 .bg-IMG-0581{
 	background-image:url("img/IMG_0581.jpeg");
-	background-image: -webkit-image-set(url("img/IMG_0581.webp") 1x,
-url("img/IMG_0581.webp") 2x);background-image: image-set(url("img/IMG_0581.jpeg") 1x,
-url("img/IMG_0581.jpeg") 2x,url("img/IMG_0581.webp") 1x,
-url("img/IMG_0581.webp") 2x);
 }
 .bg-frontispiece{
 	background-image:url("img/frontispiece.jpg");
-	background-image: -webkit-image-set(url("img/frontispiece.webp") 1x,
-url("img/frontispiece.webp") 2x);background-image: image-set(url("img/frontispiece.jpg") 1x,
-url("img/frontispiece.jpg") 2x,url("img/frontispiece.webp") 1x,
-url("img/frontispiece.webp") 2x);
 }
 .bg-smll202170079-gra-0001-m-2{
 	background-image:url("img/smll202170079-gra-0001-m-2.jpg");
-	background-image: -webkit-image-set(url("img/smll202170079-gra-0001-m-2.webp") 1x,
-url("img/smll202170079-gra-0001-m-2.webp") 2x);background-image: image-set(url("img/smll202170079-gra-0001-m-2.jpg") 1x,
-url("img/smll202170079-gra-0001-m-2.jpg") 2x,url("img/smll202170079-gra-0001-m-2.webp") 1x,
-url("img/smll202170079-gra-0001-m-2.webp") 2x);
 }
 
 
