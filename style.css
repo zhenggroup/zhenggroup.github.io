@@ -161,6 +161,9 @@ a:hover{text-decoration: none; cursor:pointer;}
 .texture-darken::before{
 	background: rgba(0,0,0,0.5);
 }
+.texture-darken-strong::before{
+	background: rgba(0,0,0,0.8);
+}
 
 
 /* Background Effects */
@@ -359,11 +362,6 @@ button{
 }
 
 
-/* = Icons
--------------------------------------------------------------- */
-.icon-md{
-	font-size:30px!important;
-}
 
 
 /* = Text & Icon Styles
@@ -608,10 +606,10 @@ a{
 	width:200px;
 }
 .img-wechatimg1-style{
-	width:200px;
+	width:150px;
 }
 .img-12-style{
-	width:200px;
+	width:150px;
 }
 .img-aboutlo-style{
 	width:150px;
@@ -699,6 +697,12 @@ a{
 .color-light-grey{
 	background-color:var(--swatch-var-2380);
 }
+.img-bloc-6-style{
+	width:150px;
+}
+.img-7-style{
+	width:150px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -739,11 +743,17 @@ a{
 .bg-IMG-0581{
 	background-image:url("img/IMG_0581.jpeg");
 }
+.bg-IMG-0938{
+	background-image:url("img/IMG_0938.jpeg");
+}
 .bg-frontispiece{
 	background-image:url("img/frontispiece.jpg");
 }
 .bg-smll202170079-gra-0001-m-2{
 	background-image:url("img/smll202170079-gra-0001-m-2.jpg");
+}
+.bg-W020210621604702518525{
+	background-image:url("img/W020210621604702518525.jpg");
 }
 
 
