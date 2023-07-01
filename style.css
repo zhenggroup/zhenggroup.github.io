@@ -742,18 +742,38 @@ a{
 
 .bg-IMG-0581{
 	background-image:url("img/IMG_0581.jpeg");
+	background-image: -webkit-image-set(url("img/IMG_0581.webp") 1x,
+url("img/IMG_0581.webp") 2x);background-image: image-set(url("img/IMG_0581.jpeg") 1x,
+url("img/IMG_0581.jpeg") 2x,url("img/IMG_0581.webp") 1x,
+url("img/IMG_0581.webp") 2x);
 }
 .bg-IMG-0938{
 	background-image:url("img/IMG_0938.jpeg");
+	background-image: -webkit-image-set(url("img/IMG_0938.webp") 1x,
+url("img/IMG_0938.webp") 2x);background-image: image-set(url("img/IMG_0938.jpeg") 1x,
+url("img/IMG_0938.jpeg") 2x,url("img/IMG_0938.webp") 1x,
+url("img/IMG_0938.webp") 2x);
 }
 .bg-frontispiece{
 	background-image:url("img/frontispiece.jpg");
+	background-image: -webkit-image-set(url("img/frontispiece.webp") 1x,
+url("img/frontispiece.webp") 2x);background-image: image-set(url("img/frontispiece.jpg") 1x,
+url("img/frontispiece.jpg") 2x,url("img/frontispiece.webp") 1x,
+url("img/frontispiece.webp") 2x);
 }
 .bg-smll202170079-gra-0001-m-2{
 	background-image:url("img/smll202170079-gra-0001-m-2.jpg");
+	background-image: -webkit-image-set(url("img/smll202170079-gra-0001-m-2.webp") 1x,
+url("img/smll202170079-gra-0001-m-2.webp") 2x);background-image: image-set(url("img/smll202170079-gra-0001-m-2.jpg") 1x,
+url("img/smll202170079-gra-0001-m-2.jpg") 2x,url("img/smll202170079-gra-0001-m-2.webp") 1x,
+url("img/smll202170079-gra-0001-m-2.webp") 2x);
 }
 .bg-W020210621604702518525{
 	background-image:url("img/W020210621604702518525.jpg");
+	background-image: -webkit-image-set(url("img/W020210621604702518525.webp") 1x,
+url("img/W020210621604702518525.webp") 2x);background-image: image-set(url("img/W020210621604702518525.jpg") 1x,
+url("img/W020210621604702518525.jpg") 2x,url("img/W020210621604702518525.webp") 1x,
+url("img/W020210621604702518525.webp") 2x);
 }
 
 
