@@ -7,7 +7,7 @@
 body{
 	margin:0;
 	padding:0;
-    background:rgba(0,0,0,0.05);
+    background:#FEFFFF;
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -29,60 +29,48 @@ a:hover{text-decoration: none; cursor:pointer;}
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'MessinaSans-Book';
-	src: url('./fonts/MessinaSans-Book/MessinaSans-Book.woff2');
-	src: url('./fonts/MessinaSans-Book/MessinaSans-Book.woff2') format('woff2'),
-	url('./fonts/MessinaSans-Book/MessinaSans-Book.woff') format('woff'),
-	url('./fonts/MessinaSans-Book/MessinaSans-Book.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/MessinaSans-Book/MessinaSans-Book.ttf') format('truetype');
+	font-family:'HelveticaNowText-Regular';
+	src: url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.woff2');
+	src: url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.woff2') format('woff2'),
+	url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.woff') format('woff'),
+	url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'MessinaSans-Light';
-	src: url('./fonts/MessinaSans-Light/MessinaSans-Light.woff2');
-	src: url('./fonts/MessinaSans-Light/MessinaSans-Light.woff2') format('woff2'),
-	url('./fonts/MessinaSans-Light/MessinaSans-Light.woff') format('woff'),
-	url('./fonts/MessinaSans-Light/MessinaSans-Light.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/MessinaSans-Light/MessinaSans-Light.ttf') format('truetype');
+	font-family:'HelveticaNowText-Light';
+	src: url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.woff2');
+	src: url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.woff2') format('woff2'),
+	url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.woff') format('woff'),
+	url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'MessinaSans-Bold';
-	src: url('./fonts/MessinaSans-Bold/MessinaSans-Bold.woff2');
-	src: url('./fonts/MessinaSans-Bold/MessinaSans-Bold.woff2') format('woff2'),
-	url('./fonts/MessinaSans-Bold/MessinaSans-Bold.woff') format('woff'),
-	url('./fonts/MessinaSans-Bold/MessinaSans-Bold.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/MessinaSans-Bold/MessinaSans-Bold.ttf') format('truetype');
+	font-family:'HelveticaNowText-Medium';
+	src: url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.woff2');
+	src: url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.woff2') format('woff2'),
+	url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.woff') format('woff'),
+	url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'MessinaSans-SemiBold';
-	src: url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.woff2');
-	src: url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.woff2') format('woff2'),
-	url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.woff') format('woff'),
-	url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
-	font-family:'MessinaSans-Regular';
-	src: url('./fonts/MessinaSans-Regular/MessinaSans-Regular.woff2');
-	src: url('./fonts/MessinaSans-Regular/MessinaSans-Regular.woff2') format('woff2'),
-	url('./fonts/MessinaSans-Regular/MessinaSans-Regular.woff') format('woff'),
-	url('./fonts/MessinaSans-Regular/MessinaSans-Regular.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/MessinaSans-Regular/MessinaSans-Regular.ttf') format('truetype');
+	font-family:'HelveticaNowText-Bold';
+	src: url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.woff2');
+	src: url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.woff2') format('woff2'),
+	url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.woff') format('woff'),
+	url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -548,7 +536,7 @@ a[data-lightbox]:hover img{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"MessinaSans-Book";
+	font-family:"HelveticaNowText-Regular";
 }
 .container{
 	max-width:1140px;
@@ -557,38 +545,40 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:70px;
 }
 h1{
-	font-family:"MessinaSans-Bold";
+	font-family:"HelveticaNowText-Bold";
 	color:rgba(0,0,0,0.75)!important;
 }
 h2{
-	font-family:"MessinaSans-Bold";
+	font-family:"HelveticaNowText-Bold";
 	color:rgba(0,0,0,0.75)!important;
 }
 h3{
-	font-family:"MessinaSans-Bold";
+	font-family:"HelveticaNowText-Medium";
 	color:rgba(0,0,0,0.75)!important;
 }
 h4{
-	font-family:"MessinaSans-Bold";
+	font-family:"HelveticaNowText-Medium";
 	color:rgba(0,0,0,0.80)!important;
 }
 h5{
-	font-family:"MessinaSans-SemiBold";
+	font-family:"HelveticaNowText-Medium";
 	color:rgba(0,0,0,0.80)!important;
+	font-size:18px;
 }
 h6{
-	font-family:"MessinaSans-Book";
+	font-family:"HelveticaNowText-Medium";
 	color:rgba(0,0,0,0.80)!important;
+	font-size:16px;
 }
 .navbar-nav li a{
 	color:#FEFFFF!important;
-	font-family:"MessinaSans-Light";
+	font-family:"HelveticaNowText-Light";
 	font-size:18px;
 }
 p{
 	color:rgba(0,0,0,0.76)!important;
 	font-size:16px;
-	font-family:"MessinaSans-Regular";
+	font-family:"HelveticaNowText-Regular";
 }
 .text-grey{
 	color:#5E5E5E!important;
@@ -599,6 +589,7 @@ p{
 }
 a{
 	color:#011055!important;
+	font-family:"HelveticaNowText-Regular";
 }
 .quotation-style{
 	font-size:16px;
@@ -666,11 +657,9 @@ a{
 }
 .p-bloc-12-style{
 	width:69.82%;
-	font-family:"MessinaSans-Regular";
 	font-size:18px;
 }
 .h2-style{
-	font-family:"Noto Sans";
 	font-weight:200;
 }
 .text-block{
@@ -688,12 +677,6 @@ a{
 }
 .text-white-tans{
 	color:var(--swatch-var-4567)!important;
-}
-.text-bold{
-	font-family:"MessinaSans-Bold";
-}
-.text-light{
-	font-family:"MessinaSans-Light";
 }
 .color-light-grey{
 	background-color:var(--swatch-var-2380);
@@ -716,17 +699,11 @@ a{
 .img-18-style{
 	width:105px;
 }
-.h3-style{
-	font-family:"MessinaSans-Book";
-}
 .h1-style{
 	font-size:100px;
 }
 .h1-bloc-5-style{
 	font-size:100px;
-}
-.h3-bloc-12-style{
-	font-family:"MessinaSans-Book";
 }
 .img-bloc-11-style{
 	height:200px;
@@ -744,13 +721,15 @@ a{
 	
 	--swatch-var-1573:rgba(33,33,33,1.00);
 	
-	--swatch-var-3144:rgba(255,255,255,0.75);
+	--swatch-var-3144:rgba(255,255,255,0.80);
 	
 	--swatch-var-4567:rgba(255,255,255,0.50);
 	
 	--swatch-var-2358:rgba(255,255,255,0.00);
 	
 	--swatch-var-2380:rgba(0,0,0,0.30);
+	
+	--swatch-var-6728:rgba(204,204,204,0.70);
 	
 }
 
@@ -759,6 +738,9 @@ a{
 
 .bgc-1573{
 	background-color:var(--swatch-var-1573);
+}
+.bgc-6728{
+	background-color:var(--swatch-var-6728);
 }
 .bgc-3190{
 	background-color:var(--swatch-var-3190);
