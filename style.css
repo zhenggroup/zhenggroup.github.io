@@ -65,6 +65,18 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 @font-face {
+	font-family:'MessinaSans-SemiBold';
+	src: url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.woff2');
+	src: url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.woff2') format('woff2'),
+	url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.woff') format('woff'),
+	url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/MessinaSans-SemiBold/MessinaSans-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
 	font-family:'MessinaSans-Regular';
 	src: url('./fonts/MessinaSans-Regular/MessinaSans-Regular.woff2');
 	src: url('./fonts/MessinaSans-Regular/MessinaSans-Regular.woff2') format('woff2'),
@@ -542,7 +554,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	max-width:1140px;
 }
 .navbar-brand img{
-	height:80px;
+	height:70px;
 }
 h1{
 	font-family:"MessinaSans-Bold";
@@ -561,7 +573,7 @@ h4{
 	color:rgba(0,0,0,0.80)!important;
 }
 h5{
-	font-family:"MessinaSans-Book";
+	font-family:"MessinaSans-SemiBold";
 	color:rgba(0,0,0,0.80)!important;
 }
 h6{
@@ -584,6 +596,9 @@ p{
 .fixheight-front-cover{
 	max-height:360px;
 	min-height:360px;
+}
+a{
+	color:#011055!important;
 }
 .quotation-style{
 	font-size:16px;
@@ -712,6 +727,9 @@ p{
 }
 .h3-bloc-12-style{
 	font-family:"MessinaSans-Book";
+}
+.img-bloc-11-style{
+	height:200px;
 }
 
 /* = Colour
