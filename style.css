@@ -655,10 +655,6 @@ a{
 .bloc-fill{
 	fill:var(--swatch-var-3190);
 }
-.p-bloc-12-style{
-	width:69.82%;
-	font-size:18px;
-}
 .h2-style{
 	font-weight:200;
 }
@@ -707,6 +703,9 @@ a{
 }
 .img-bloc-11-style{
 	height:200px;
+}
+.p-bloc-12-style{
+	width:68.25%;
 }
 
 /* = Colour
