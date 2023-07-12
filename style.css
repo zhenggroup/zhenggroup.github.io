@@ -7,7 +7,7 @@
 body{
 	margin:0;
 	padding:0;
-    background:rgba(0,0,0,0.10);
+    background:rgba(0,0,0,0.05);
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -156,22 +156,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 .bg-b-edge{
 	background-position: bottom!important;
 	background-repeat: no-repeat;
-}
-
-
-/* Background Textures */
-
-.bloc-bg-texture::before{
-	content:"";
-	background-size: 2px 2px;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left:0;
-	right:0;
-}
-.texture-darken::before{
-	background: rgba(0,0,0,0.5);
 }
 
 
@@ -587,11 +571,11 @@ h6{
 .navbar-nav li a{
 	color:#FEFFFF!important;
 	font-family:"MessinaSans-Light";
-	font-size:20px;
+	font-size:18px;
 }
 p{
 	color:rgba(0,0,0,0.76)!important;
-	font-size:18px;
+	font-size:16px;
 	font-family:"MessinaSans-Regular";
 }
 .text-grey{
@@ -611,7 +595,8 @@ p{
 	border-color:transparent!important;
 }
 .img-style{
-	width:200px;
+	width:150px;
+	height:150px;
 }
 .img-wechatimg1-style{
 	width:150px;
@@ -665,12 +650,13 @@ p{
 	fill:var(--swatch-var-3190);
 }
 .p-bloc-12-style{
-	width:57.19%;
+	width:69.82%;
 	font-family:"MessinaSans-Regular";
 	font-size:18px;
 }
 .h2-style{
-	font-family:"MessinaSans-Book";
+	font-family:"Noto Sans";
+	font-weight:200;
 }
 .text-block{
 	text-decoration:none;
@@ -684,9 +670,6 @@ p{
 }
 .bloc-bloc-5-fill{
 	fill:var(--swatch-var-3144);
-}
-.h1-style-number{
-	font-size:100px;
 }
 .text-white-tans{
 	color:var(--swatch-var-4567)!important;
@@ -716,10 +699,18 @@ p{
 	fill:#FEFFFF;
 }
 .img-18-style{
-	height:105px;
-	width:100px;
+	width:105px;
 }
 .h3-style{
+	font-family:"MessinaSans-Book";
+}
+.h1-style{
+	font-size:100px;
+}
+.h1-bloc-5-style{
+	font-size:100px;
+}
+.h3-bloc-12-style{
 	font-family:"MessinaSans-Book";
 }
 
@@ -729,15 +720,13 @@ p{
 /* Swatch Variables */
 :root{
 	
-	--swatch-var-3190:rgba(254,255,255,0.70);
+	--swatch-var-3190:rgba(254,255,255,0.90);
 	
 	--swatch-var-3840:rgba(255,255,255,0.60);
 	
 	--swatch-var-1573:rgba(33,33,33,1.00);
 	
-	--swatch-var-1277:rgba(255,255,255,1.00);
-	
-	--swatch-var-3144:rgba(255,255,255,0.65);
+	--swatch-var-3144:rgba(255,255,255,0.75);
 	
 	--swatch-var-4567:rgba(255,255,255,0.50);
 	
