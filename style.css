@@ -573,7 +573,7 @@ h6{
 .navbar-nav li a{
 	color:#FEFFFF!important;
 	font-family:"HelveticaNowText-Light";
-	font-size:18px;
+	font-size:15px;
 }
 p{
 	color:rgba(0,0,0,0.76)!important;
@@ -707,6 +707,15 @@ a{
 .p-bloc-12-style{
 	width:68.25%;
 }
+.journal-title{
+	font-family:"HelveticaNowText-Bold";
+	text-transform:none;
+	color:#16215E!important;
+}
+.article-title{
+	font-family:"HelveticaNowText-Regular";
+	font-size:20px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -749,24 +758,12 @@ a{
 
 .bg-IMG-0581{
 	background-image:url("img/IMG_0581.jpeg");
-	background-image: -webkit-image-set(url("img/IMG_0581.webp") 1x,
-url("img/IMG_0581.webp") 2x);background-image: image-set(url("img/IMG_0581.jpeg") 1x,
-url("img/IMG_0581.jpeg") 2x,url("img/IMG_0581.webp") 1x,
-url("img/IMG_0581.webp") 2x);
 }
 .bg-frontispiece{
 	background-image:url("img/frontispiece.jpg");
-	background-image: -webkit-image-set(url("img/frontispiece.webp") 1x,
-url("img/frontispiece.webp") 2x);background-image: image-set(url("img/frontispiece.jpg") 1x,
-url("img/frontispiece.jpg") 2x,url("img/frontispiece.webp") 1x,
-url("img/frontispiece.webp") 2x);
 }
 .bg-smll202170079-gra-0001-m-2{
 	background-image:url("img/smll202170079-gra-0001-m-2.jpg");
-	background-image: -webkit-image-set(url("img/smll202170079-gra-0001-m-2.webp") 1x,
-url("img/smll202170079-gra-0001-m-2.webp") 2x);background-image: image-set(url("img/smll202170079-gra-0001-m-2.jpg") 1x,
-url("img/smll202170079-gra-0001-m-2.jpg") 2x,url("img/smll202170079-gra-0001-m-2.webp") 1x,
-url("img/smll202170079-gra-0001-m-2.webp") 2x);
 }
 
 
