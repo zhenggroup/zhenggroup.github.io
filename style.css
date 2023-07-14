@@ -407,19 +407,6 @@ button{
 	width: 100%;
 }
 }
-/* = Classic Dividers
--------------------------------------------------------------- */
-.divider-h{
-	min-height: 1px;
-	background-color:rgba(0,0,0,.2);
-	margin: 20px 0;
-}
-.divider-half{
-	width: 50%;
-}
-.dropdown-menu .divider-h{
-	margin:0;
-}
 
 
 
@@ -616,33 +603,6 @@ a{
 .text-red{
 	color:#660000!important;
 }
-.divider-0-bloc-7-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-40049-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-39150-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-9973-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-30158-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-2232-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-3984-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-8162-background-color{
-	background-color:var(--swatch-var-3840);
-}
-.divider-8410-background-color{
-	background-color:var(--swatch-var-3840);
-}
 .frontpage-tofsize{
 	overflow:hidden;
 	clear:none;
@@ -716,6 +676,11 @@ a{
 	font-family:"HelveticaNowText-Regular";
 	font-size:20px;
 }
+.publication-description{
+	font-family:"HelveticaNowText-Regular";
+	font-style:italic;
+	text-transform:none;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -758,12 +723,24 @@ a{
 
 .bg-IMG-0581{
 	background-image:url("img/IMG_0581.jpeg");
+	background-image: -webkit-image-set(url("img/IMG_0581.webp") 1x,
+url("img/IMG_0581.webp") 2x);background-image: image-set(url("img/IMG_0581.jpeg") 1x,
+url("img/IMG_0581.jpeg") 2x,url("img/IMG_0581.webp") 1x,
+url("img/IMG_0581.webp") 2x);
 }
 .bg-frontispiece{
 	background-image:url("img/frontispiece.jpg");
+	background-image: -webkit-image-set(url("img/frontispiece.webp") 1x,
+url("img/frontispiece.webp") 2x);background-image: image-set(url("img/frontispiece.jpg") 1x,
+url("img/frontispiece.jpg") 2x,url("img/frontispiece.webp") 1x,
+url("img/frontispiece.webp") 2x);
 }
 .bg-smll202170079-gra-0001-m-2{
 	background-image:url("img/smll202170079-gra-0001-m-2.jpg");
+	background-image: -webkit-image-set(url("img/smll202170079-gra-0001-m-2.webp") 1x,
+url("img/smll202170079-gra-0001-m-2.webp") 2x);background-image: image-set(url("img/smll202170079-gra-0001-m-2.jpg") 1x,
+url("img/smll202170079-gra-0001-m-2.jpg") 2x,url("img/smll202170079-gra-0001-m-2.webp") 1x,
+url("img/smll202170079-gra-0001-m-2.webp") 2x);
 }
 
 
