@@ -29,48 +29,57 @@ a:hover{text-decoration: none; cursor:pointer;}
 -------------------------------------------------------------- */
 
 @font-face {
+	font-family:'SourceSans3-Roman';
+	src: url('./fonts/SourceSans3-Roman/SourceSans3-VariableFont_wght.ttf');
+	src: url('./fonts/SourceSans3-Roman/SourceSans3-VariableFont_wght.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'SourceSans3-Medium';
+	src: url('./fonts/SourceSans3-Medium/SourceSans3-Medium.ttf');
+	src: url('./fonts/SourceSans3-Medium/SourceSans3-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'SourceSans3-SemiBold';
+	src: url('./fonts/SourceSans3-SemiBold/SourceSans3-SemiBold.ttf');
+	src: url('./fonts/SourceSans3-SemiBold/SourceSans3-SemiBold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'SourceSans3-Regular';
+	src: url('./fonts/SourceSans3-Regular/SourceSans3-Regular.ttf');
+	src: url('./fonts/SourceSans3-Regular/SourceSans3-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'SourceSans3-Bold';
+	src: url('./fonts/SourceSans3-Bold/SourceSans3-Bold.ttf');
+	src: url('./fonts/SourceSans3-Bold/SourceSans3-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
 	font-family:'HelveticaNowText-Regular';
 	src: url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.woff2');
 	src: url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.woff2') format('woff2'),
 	url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.woff') format('woff'),
 	url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.eot?#iefix') format('embedded-opentype'),
 	url('./fonts/HelveticaNowText-Regular/HelveticaNowText-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
-	font-family:'HelveticaNowText-Light';
-	src: url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.woff2');
-	src: url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.woff2') format('woff2'),
-	url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.woff') format('woff'),
-	url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/HelveticaNowText-Light/HelveticaNowText-Light.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
-	font-family:'HelveticaNowText-Medium';
-	src: url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.woff2');
-	src: url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.woff2') format('woff2'),
-	url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.woff') format('woff'),
-	url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/HelveticaNowText-Medium/HelveticaNowText-Medium.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
-	font-family:'HelveticaNowText-Bold';
-	src: url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.woff2');
-	src: url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.woff2') format('woff2'),
-	url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.woff') format('woff'),
-	url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/HelveticaNowText-Bold/HelveticaNowText-Bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -532,40 +541,40 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:70px;
 }
 h1{
-	font-family:"HelveticaNowText-Bold";
+	font-family:"SourceSans3-Bold";
 	color:rgba(0,0,0,0.75)!important;
 }
 h2{
-	font-family:"HelveticaNowText-Bold";
+	font-family:"SourceSans3-Bold";
 	color:rgba(0,0,0,0.75)!important;
 }
 h3{
-	font-family:"HelveticaNowText-Medium";
+	font-family:"SourceSans3-SemiBold";
 	color:rgba(0,0,0,0.75)!important;
 }
 h4{
-	font-family:"HelveticaNowText-Medium";
+	font-family:"SourceSans3-SemiBold";
 	color:rgba(0,0,0,0.80)!important;
 }
 h5{
-	font-family:"HelveticaNowText-Medium";
+	font-family:"SourceSans3-Medium";
 	color:rgba(0,0,0,0.80)!important;
 	font-size:18px;
 }
 h6{
-	font-family:"HelveticaNowText-Medium";
+	font-family:"SourceSans3-Medium";
 	color:rgba(0,0,0,0.80)!important;
-	font-size:16px;
+	font-size:17px;
 }
 .navbar-nav li a{
 	color:#FEFFFF!important;
-	font-family:"HelveticaNowText-Light";
+	font-family:"SourceSans3-Medium";
 	font-size:15px;
 }
 p{
 	color:rgba(0,0,0,0.76)!important;
-	font-size:16px;
-	font-family:"HelveticaNowText-Regular";
+	font-size:17px;
+	font-family:"SourceSans3-Regular";
 }
 .text-grey{
 	color:#5E5E5E!important;
@@ -576,7 +585,7 @@ p{
 }
 a{
 	color:#011055!important;
-	font-family:"HelveticaNowText-Regular";
+	font-family:"SourceSans3-Roman";
 }
 .quotation-style{
 	font-size:16px;
@@ -668,13 +677,13 @@ a{
 	width:68.25%;
 }
 .journal-title{
-	font-family:"HelveticaNowText-Bold";
+	font-family:"SourceSans3-Medium";
 	text-transform:none;
 	color:#16215E!important;
 }
 .article-title{
-	font-family:"HelveticaNowText-Regular";
-	font-size:20px;
+	font-family:"SourceSans3-Regular";
+	font-size:19px;
 }
 .publication-description{
 	font-family:"HelveticaNowText-Regular";
