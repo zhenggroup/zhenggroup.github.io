@@ -29,45 +29,60 @@ a:hover{text-decoration: none; cursor:pointer;}
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'SourceSans3-Roman';
-	src: url('./fonts/SourceSans3-Roman/SourceSans3-VariableFont_wght.ttf');
-	src: url('./fonts/SourceSans3-Roman/SourceSans3-VariableFont_wght.ttf') format('truetype');
+	font-family:'Graphik-Regular';
+	src: url('./fonts/Graphik-Regular/Graphik-Regular.woff2');
+	src: url('./fonts/Graphik-Regular/Graphik-Regular.woff2') format('woff2'),
+	url('./fonts/Graphik-Regular/Graphik-Regular.woff') format('woff'),
+	url('./fonts/Graphik-Regular/Graphik-Regular.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-Regular/Graphik-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'SourceSans3-Regular';
-	src: url('./fonts/SourceSans3-Regular/SourceSans3-Regular.ttf');
-	src: url('./fonts/SourceSans3-Regular/SourceSans3-Regular.ttf') format('truetype');
+	font-family:'Graphik-Light';
+	src: url('./fonts/Graphik-Light/Graphik-Light.woff2');
+	src: url('./fonts/Graphik-Light/Graphik-Light.woff2') format('woff2'),
+	url('./fonts/Graphik-Light/Graphik-Light.woff') format('woff'),
+	url('./fonts/Graphik-Light/Graphik-Light.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-Light/Graphik-Light.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'SourceSans3-SemiBold';
-	src: url('./fonts/SourceSans3-SemiBold/SourceSans3-SemiBold.ttf');
-	src: url('./fonts/SourceSans3-SemiBold/SourceSans3-SemiBold.ttf') format('truetype');
+	font-family:'Graphik-Semibold';
+	src: url('./fonts/Graphik-Semibold/Graphik-Semibold.woff2');
+	src: url('./fonts/Graphik-Semibold/Graphik-Semibold.woff2') format('woff2'),
+	url('./fonts/Graphik-Semibold/Graphik-Semibold.woff') format('woff'),
+	url('./fonts/Graphik-Semibold/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-Semibold/Graphik-Semibold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'SourceSans3-Medium';
-	src: url('./fonts/SourceSans3-Medium/SourceSans3-Medium.ttf');
-	src: url('./fonts/SourceSans3-Medium/SourceSans3-Medium.ttf') format('truetype');
+	font-family:'Graphik-Medium';
+	src: url('./fonts/Graphik-Medium/Graphik-Medium.woff2');
+	src: url('./fonts/Graphik-Medium/Graphik-Medium.woff2') format('woff2'),
+	url('./fonts/Graphik-Medium/Graphik-Medium.woff') format('woff'),
+	url('./fonts/Graphik-Medium/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-Medium/Graphik-Medium.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'SourceSans3-Bold';
-	src: url('./fonts/SourceSans3-Bold/SourceSans3-Bold.ttf');
-	src: url('./fonts/SourceSans3-Bold/SourceSans3-Bold.ttf') format('truetype');
+	font-family:'Graphik-Bold';
+	src: url('./fonts/Graphik-Bold/Graphik-Bold.woff2');
+	src: url('./fonts/Graphik-Bold/Graphik-Bold.woff2') format('woff2'),
+	url('./fonts/Graphik-Bold/Graphik-Bold.woff') format('woff'),
+	url('./fonts/Graphik-Bold/Graphik-Bold.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-Bold/Graphik-Bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -568,40 +583,44 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:64px;
 }
 h1{
-	font-family:"SourceSans3-Bold";
+	font-family:"Graphik-Bold";
 	color:rgba(0,0,0,0.75)!important;
+	font-size:28px;
 }
 h2{
-	font-family:"SourceSans3-Bold";
+	font-family:"Graphik-Bold";
 	color:rgba(0,0,0,0.75)!important;
+	font-size:26px;
 }
 h3{
-	font-family:"SourceSans3-SemiBold";
+	font-family:"Graphik-Semibold";
 	color:rgba(0,0,0,0.75)!important;
+	font-size:24px;
 }
 h4{
-	font-family:"SourceSans3-SemiBold";
+	font-family:"Graphik-Semibold";
 	color:rgba(0,0,0,0.80)!important;
+	font-size:22px;
 }
 h5{
-	font-family:"SourceSans3-Medium";
+	font-family:"Graphik-Medium";
+	color:rgba(0,0,0,0.80)!important;
+	font-size:20px;
+}
+h6{
+	font-family:"Graphik-Medium";
 	color:rgba(0,0,0,0.80)!important;
 	font-size:18px;
 }
-h6{
-	font-family:"SourceSans3-Medium";
-	color:rgba(0,0,0,0.80)!important;
-	font-size:17px;
-}
 .navbar-nav li a{
 	color:#FEFFFF!important;
-	font-family:"SourceSans3-Regular";
-	font-size:17px;
+	font-family:"Graphik-Light";
+	font-size:15px;
 }
 p{
-	color:rgba(0,0,0,0.76)!important;
-	font-size:17px;
-	font-family:"SourceSans3-Regular";
+	color:#000000!important;
+	font-size:15px;
+	font-family:"Graphik-Regular";
 }
 .text-grey{
 	color:#5E5E5E!important;
@@ -611,8 +630,8 @@ p{
 	min-height:360px;
 }
 a{
-	color:#011055!important;
-	font-family:"SourceSans3-Roman";
+	color:#757575!important;
+	font-family:"Graphik-Regular";
 }
 .quotation-style{
 	font-size:16px;
@@ -698,18 +717,20 @@ a{
 	height:200px;
 }
 .journal-title{
-	font-family:"SourceSans3-Medium";
+	font-family:"Graphik-Medium";
 	text-transform:none;
-	color:#16215E!important;
+	color:#165D5E!important;
 }
 .article-title{
-	font-family:"SourceSans3-Regular";
-	font-size:19px;
+	color:#000000!important;
 }
 .publication-description{
-	font-family:"HelveticaNowText-Regular";
-	font-style:italic;
-	text-transform:none;
+	font-family:"Graphik-Light";
+	text-transform:lowercase;
+	text-decoration:none;
+	font-size:10px;
+	text-indent:20px;
+	color:#777777!important;
 }
 .news-color{
 	background-color:#EAE5E5;
@@ -734,6 +755,27 @@ a{
 	box-shadow:0.00px 2.00px 5px #7C7C7C;
 }
 .p-style{
+	font-size:15px;
+}
+label{
+	font-family:"Graphik-Regular";
+}
+.text-capital{
+	text-transform:uppercase;
+}
+.img-12-bloc-6-style{
+	height:250px;
+}
+.img-15-style{
+	height:250px;
+}
+.img-13-style{
+	height:250px;
+}
+.img-14-style{
+	height:250px;
+}
+.p-bloc-7-style{
 	font-size:15px;
 }
 
