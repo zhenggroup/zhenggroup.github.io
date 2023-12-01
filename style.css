@@ -41,24 +41,24 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 @font-face {
-	font-family:'Graphik-Medium';
-	src: url('./fonts/Graphik-Medium/Graphik-Medium.woff2');
-	src: url('./fonts/Graphik-Medium/Graphik-Medium.woff2') format('woff2'),
-	url('./fonts/Graphik-Medium/Graphik-Medium.woff') format('woff'),
-	url('./fonts/Graphik-Medium/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/Graphik-Medium/Graphik-Medium.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
 	font-family:'Graphik-Semibold';
 	src: url('./fonts/Graphik-Semibold/Graphik-Semibold.woff2');
 	src: url('./fonts/Graphik-Semibold/Graphik-Semibold.woff2') format('woff2'),
 	url('./fonts/Graphik-Semibold/Graphik-Semibold.woff') format('woff'),
 	url('./fonts/Graphik-Semibold/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
 	url('./fonts/Graphik-Semibold/Graphik-Semibold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'Graphik-Medium';
+	src: url('./fonts/Graphik-Medium/Graphik-Medium.woff2');
+	src: url('./fonts/Graphik-Medium/Graphik-Medium.woff2') format('woff2'),
+	url('./fonts/Graphik-Medium/Graphik-Medium.woff') format('woff'),
+	url('./fonts/Graphik-Medium/Graphik-Medium.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-Medium/Graphik-Medium.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -382,15 +382,6 @@ button{
 .text-justify{
 	text-align: justify;
 }
-/* = Text Widths
--------------------------------------------------------------- */
-.text-w-90{
-	max-width:90%;
-}
-.text-center.text-w-sm, .text-center.text-w-md, .text-center.text-w-lg, .text-center.text-w-90, .text-center.text-w-80, .text-center.text-w-70, .text-center.text-w-60, .text-center.text-w-50{
-	margin-left: auto;
-	margin-right: auto;
-}
 
 
 /* = Cards
@@ -437,16 +428,6 @@ button{
 	stroke-width: 2px;
 	fill-rule: evenodd;
 	stroke-linecap:round;
-}
-
-.carousel-caption-center{
-	top: 50%;
-	bottom: initial;
-	transform: translateY(-50%);
-}
-
-.hide-indicators{
-	display:none;
 }
 
 
@@ -565,12 +546,12 @@ a[data-lightbox]:hover img{
 	max-width:1140px;
 }
 .navbar-brand img{
-	height:64px;
+	width:250px;
 }
 h1{
 	font-family:"Graphik-Bold";
 	color:rgba(0,0,0,0.75)!important;
-	font-size:28px;
+	font-size:38px;
 }
 h2{
 	font-family:"Graphik-Bold";
@@ -598,13 +579,13 @@ h6{
 	font-size:18px;
 }
 .navbar-nav li a{
-	color:#FEFFFF!important;
-	font-family:"Graphik-Medium";
-	font-size:15px;
+	font-family:"Graphik-Regular";
+	font-size:20px;
+	color:#000000!important;
 }
 p{
 	color:#000000!important;
-	font-size:15px;
+	font-size:18px;
 	font-family:"Graphik-Regular";
 }
 .text-grey{
@@ -658,9 +639,6 @@ a{
 .text-block{
 	text-decoration:none;
 	text-transform:capitalize;
-}
-.row-style{
-	width:89.99%;
 }
 .bloc-bloc-4-fill{
 	fill:var(--swatch-var-3144);
@@ -721,25 +699,6 @@ a{
 .news-color{
 	background-color:#EAE5E5;
 }
-.limited-size{
-	position:relative;
-	overflow:hidden;
-	display:flex;
-	height:320px;
-	min-height:320px;
-	max-height:320px;
-	border-radius:20px 20px 20px 20px;
-	border-style:none;
-	align-items:center;
-	float:none;
-	align-self:center;
-	justify-self:center;
-	justify-content:center;
-	width:700px;
-	min-width:700px;
-	max-width:700px;
-	box-shadow:0.00px 2.00px 5px #7C7C7C;
-}
 .p-style{
 	font-size:15px;
 }
@@ -747,7 +706,7 @@ label{
 	font-family:"Graphik-Regular";
 }
 .text-capital{
-	text-transform:uppercase;
+	text-transform:capitalize;
 }
 .img-12-bloc-6-style{
 	height:250px;
@@ -766,6 +725,25 @@ label{
 }
 .author{
 	font-family:"Graphik-Medium";
+}
+.img-technionlo-style{
+	width:220px;
+}
+.img-63-style{
+	height:120px;
+	width:300px;
+}
+.front-size{
+	overflow:hidden;
+	min-height:400px;
+	max-height:600px;
+	display:inline-flex;
+	float:initial;
+	clear:initial;
+	position:relative;
+	flex-wrap:nowrap;
+	align-content:space-around;
+	align-items:center;
 }
 
 /* = Colour
@@ -795,11 +773,11 @@ label{
 
 /* Background colour styles */
 
-.bgc-1573{
-	background-color:var(--swatch-var-1573);
-}
 .bgc-3190{
 	background-color:var(--swatch-var-3190);
+}
+.bgc-1573{
+	background-color:var(--swatch-var-1573);
 }
 
 /* Bloc image backgrounds */
