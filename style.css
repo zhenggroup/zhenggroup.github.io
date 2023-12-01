@@ -41,6 +41,18 @@ a:hover{text-decoration: none; cursor:pointer;}
 }
 
 @font-face {
+	font-family:'Graphik-Bold';
+	src: url('./fonts/Graphik-Bold/Graphik-Bold.woff2');
+	src: url('./fonts/Graphik-Bold/Graphik-Bold.woff2') format('woff2'),
+	url('./fonts/Graphik-Bold/Graphik-Bold.woff') format('woff'),
+	url('./fonts/Graphik-Bold/Graphik-Bold.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-Bold/Graphik-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
 	font-family:'Graphik-Semibold';
 	src: url('./fonts/Graphik-Semibold/Graphik-Semibold.woff2');
 	src: url('./fonts/Graphik-Semibold/Graphik-Semibold.woff2') format('woff2'),
@@ -71,18 +83,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 	url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.woff') format('woff'),
 	url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.eot?#iefix') format('embedded-opentype'),
 	url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-	font-display:swap;
-}
-
-@font-face {
-	font-family:'Graphik-Bold';
-	src: url('./fonts/Graphik-Bold/Graphik-Bold.woff2');
-	src: url('./fonts/Graphik-Bold/Graphik-Bold.woff2') format('woff2'),
-	url('./fonts/Graphik-Bold/Graphik-Bold.woff') format('woff'),
-	url('./fonts/Graphik-Bold/Graphik-Bold.eot?#iefix') format('embedded-opentype'),
-	url('./fonts/Graphik-Bold/Graphik-Bold.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -141,19 +141,6 @@ a:hover{text-decoration: none; cursor:pointer;}
 	height: 100%;
 	fill-rule: evenodd;
 	fill:#000000;
-}
-
-
-/* Flip Edge Divider */
-
-.bloc-divider-flip-x svg{
-	transform:scale(-1,1);
-}
-.bloc-divider-flip-y svg{
-	transform:scale(1,-1);
-}
-.bloc-divider-flip-x.bloc-divider-flip-y svg{
-	transform:scale(-1,-1);
 }
 
 
