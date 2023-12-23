@@ -732,6 +732,9 @@ label{
 	align-content:space-around;
 	align-items:center;
 }
+.box{
+	background-color:var(--swatch-var-6728);
+}
 
 /* = Colour
 -------------------------------------------------------------- */
