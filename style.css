@@ -355,6 +355,11 @@ button{
 
 
 
+/*  Image Scale */
+.img-fluid-up{
+	min-width: 100%;
+	height: auto;
+}
 
 /* = Text & Icon Styles
 -------------------------------------------------------------- */
@@ -670,6 +675,7 @@ a{
 	font-family:"Graphik-RegularItalic";
 	text-transform:none;
 	color:#AD1818!important;
+	font-weight:bold;
 }
 .article-title{
 	font-family:"Graphik-Regular";
@@ -707,9 +713,6 @@ label{
 .img-14-style{
 	height:250px;
 }
-.p-bloc-7-style{
-	font-size:15px;
-}
 .author{
 	font-family:"Graphik-Medium";
 }
@@ -734,6 +737,34 @@ label{
 }
 .box{
 	background-color:var(--swatch-var-6728);
+}
+.img-bloc-7-style{
+	height:200px;
+}
+.img-nz3c00366-00-style{
+	width:332px;
+}
+.img-nz1c01350-00-style{
+	height:200px;
+}
+.img-ecsaacff0b--style{
+	width:332px;
+}
+.img-41-style{
+	height:200px;
+}
+.img-43-style{
+	height:200px;
+}
+.img-45-style{
+	height:200px;
+}
+.img-49-style{
+	height:200px;
+}
+.paper-number{
+	border-width:0px 0px 1px 0px;
+	border-style:solid;
 }
 
 /* = Colour
