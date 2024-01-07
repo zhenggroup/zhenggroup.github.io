@@ -674,12 +674,12 @@ a{
 .journal-title{
 	font-family:"Graphik-RegularItalic";
 	text-transform:none;
-	color:#AD1818!important;
-	font-weight:bold;
+	color:#931818!important;
 }
 .article-title{
-	font-family:"Graphik-Regular";
-	font-size:17px;
+	font-family:"Graphik-Medium";
+	font-size:18px;
+	text-transform:none;
 }
 .publication-description{
 	font-family:"Graphik-Light";
@@ -714,7 +714,8 @@ label{
 	height:250px;
 }
 .author{
-	font-family:"Graphik-Medium";
+	font-family:"Graphik-Regular";
+	text-decoration:underline!important;
 }
 .img-technionlo-style{
 	width:220px;
@@ -742,7 +743,7 @@ label{
 	height:200px;
 }
 .img-nz3c00366-00-style{
-	width:332px;
+	height:230px;
 }
 .img-nz1c01350-00-style{
 	height:200px;
