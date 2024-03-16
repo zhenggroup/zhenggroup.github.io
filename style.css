@@ -227,6 +227,8 @@ button{
 
 
 
+/* = Cards
+-------------------------------------------------------------- */
 .card-sq, .card-sq .card-header, .card-sq .card-footer{
 	border-radius:0;
 }
@@ -506,6 +508,20 @@ label{
 	margin-left:5px;
 	margin-right:5px;
 }
+.grey{
+	background-color:var(--swatch-var-6100);
+}
+.no-underline{
+	text-decoration:none;
+}
+.heading-5{
+	font-size:20px;
+	font-weight:bold;
+	text-decoration:none;
+}
+.img-nz3c00366-00-style{
+	height:200px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -523,9 +539,25 @@ label{
 	
 	--swatch-var-1779:rgba(4,51,255,1.00);
 	
+	--swatch-var-6100:rgba(0,0,0,0.03);
+	
 }
 
 
+/* Background colour styles */
+
+.bgc-1830{
+	background-color:var(--swatch-var-1830);
+}
+
+/* Link colour styles */
+
+.ltc-7343{
+	color:var(--swatch-var-7343)!important;
+}
+.ltc-7343:hover{
+	color:#000000!important;
+}
 
 
 /* = Custom Bric Data
