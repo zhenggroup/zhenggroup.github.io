@@ -465,18 +465,7 @@ label{
 	background-color:#5E5E5E;
 }
 .img-placeholder-us-style{
-	width:130px;
-}
-.img-14-style{
-	width:130px;
-}
-.img-15-style{
-	width:130px;
-}
-.img-16-style{
-	width:130px;
-}
-.img-bloc-4-style{
+	height:130px;
 	width:130px;
 }
 .p-style{
@@ -503,6 +492,7 @@ label{
 }
 .interspace-label{
 	margin-right:20px;
+	margin-top:10px;
 }
 .icon-margin{
 	margin-left:5px;
@@ -521,6 +511,12 @@ label{
 }
 .img-nz3c00366-00-style{
 	height:200px;
+}
+.img-bloc-4-style{
+	height:348px;
+}
+.img-39-style{
+	width:500px;
 }
 
 /* = Colour
@@ -548,6 +544,9 @@ label{
 
 .bgc-1830{
 	background-color:var(--swatch-var-1830);
+}
+.bgc-6100{
+	background-color:var(--swatch-var-6100);
 }
 
 /* Link colour styles */
