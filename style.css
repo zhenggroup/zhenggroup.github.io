@@ -67,6 +67,18 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-display:swap;
 }
 
+@font-face {
+	font-family:'Graphik-RegularItalic';
+	src: url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.woff2');
+	src: url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.woff2') format('woff2'),
+	url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.woff') format('woff'),
+	url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Graphik-RegularItalic/Graphik-RegularItalic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
 /* = Blocs
 -------------------------------------------------------------- */
 
@@ -518,6 +530,15 @@ label{
 .img-39-style{
 	width:500px;
 }
+.journal-name{
+	color:#002FA5!important;
+	font-family:"Graphik-Medium";
+	text-decoration:none;
+}
+.publication-comment{
+	font-family:"Graphik-RegularItalic";
+	color:var(--swatch-var-7918)!important;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -529,13 +550,15 @@ label{
 	
 	--swatch-var-7343:rgba(28,28,28,1.00);
 	
-	--swatch-var-4593:rgba(255,255,255,0.5);
+	--swatch-var-4593:rgba(255,255,255,0.50);
 	
-	--swatch-var-7918:#7A7A7A;
+	--swatch-var-7918:rgba(122,122,122,1.00);
 	
 	--swatch-var-1779:rgba(4,51,255,1.00);
 	
 	--swatch-var-6100:rgba(0,0,0,0.03);
+	
+	--swatch-var-4909:rgba(255,255,255,1.00);
 	
 }
 
