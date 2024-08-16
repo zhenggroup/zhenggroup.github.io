@@ -425,7 +425,7 @@ a{
 	font-family:"OpenSans-Regular";
 }
 .navbar-nav li a{
-	font-family:"OpenSans-SemiBold";
+	font-family:"OpenSans-Regular";
 }
 .image-size-research{
 	align-items:stretch;
@@ -506,13 +506,19 @@ label{
 	width:500px;
 }
 .journal-name{
-	color:#002FA5!important;
-	font-family:"OpenSans-SemiBold";
+	color:#FF6903!important;
+	font-family:"OpenSans-Regular";
 	text-decoration:none;
 }
 .publication-comment{
 	font-family:"OpenSans-Regular";
 	color:var(--swatch-var-7918)!important;
+}
+.publication-title{
+	text-transform:none;
+	text-decoration:none;
+	font-weight:normal;
+	font-family:"OpenSans-SemiBold";
 }
 
 /* = Colour
