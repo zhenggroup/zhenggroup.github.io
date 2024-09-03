@@ -458,7 +458,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .blocs-card-width{
 	width:25%;
-	height:200px;
+	height:230px;
 }
 h1{
 	color:var(--swatch-var-7343)!important;
@@ -592,13 +592,15 @@ label{
 	font-family:"OpenSans-SemiBold";
 }
 .left-box{
-	height:310px;
+	height:300px;
+	float:inherit;
+	overflow:hidden;
 }
 .left-title{
-	background-color:#474747;
-	color:var(--swatch-var-1830)!important;
+	background-color:var(--swatch-var-4275);
 	height:80px;
 	background-position:center center;
+	color:#000000!important;
 }
 .p-bloc-4-style{
 	font-size:14px;
@@ -631,6 +633,8 @@ label{
 	--swatch-var-4174:rgba(0,0,0,1.00);
 	
 	--swatch-var-458:rgba(255,255,255,0.5);
+	
+	--swatch-var-4275:rgba(122,122,122,0.21);
 	
 }
 
