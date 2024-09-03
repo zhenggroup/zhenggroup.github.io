@@ -197,13 +197,6 @@ button{
 	font-size:18px!important;
 }
 
-/*  Rounded Image */
-.img-rd-md{
-	border-radius:20px;
-}
-.img-rd-lg{
-	border-radius:34px;
-}
 /*  Image Protection */
 .img-protected{
 	-webkit-touch-callout: none;
@@ -375,6 +368,82 @@ a[data-lightbox]:hover img{
 	display:none;
 }
 
+/* Horizontal Scroll Container */
+.blocs-horizontal-scroll-container{
+	position:relative;
+}
+.blocs-horizontal-scroll-area{
+	display:flex;
+	overflow-x:auto;
+	align-items:flex-start;
+	gap:20px;
+}
+.blocs-horizontal-scroll-area > *{
+	flex-shrink:0;
+	max-width:100%;
+}
+.blocs-horizontal-scroll-area::-webkit-scrollbar{
+	display:none;
+}
+.blocs-horizontal-scroll-control{
+	position:absolute;
+	top:50%;
+	transform:translateY(-50%);
+	z-index:1;
+	display:flex;
+	text-align:center;
+	border:0;
+	margin:0 30px;
+}
+.blocs-scroll-control-next{
+	right:0;
+}
+.blocs-round-btn{
+	background:rgba(0,0,0,0.15);
+	border-radius:100%;
+	padding:12px;
+	opacity:0;
+	cursor:pointer;
+	transform:scale(0.5);
+	backdrop-filter:blur(20px);
+	-webkit-backdrop-filter:blur(20px);
+	transition:opacity .50s ease,transform .50s ease;
+}
+.blocs-horizontal-scroll-container:hover .blocs-round-btn,.blocs-horizontal-scroll-container.show-controls .blocs-round-btn{
+	opacity:1;
+	transform:scale(1.0);
+}
+.blocs-round-btn:active{
+	background:rgba(0,0,0,0.3);
+	transform:scale(0.9)!important;
+	transition:transform .30s ease,background .50s ease;
+}
+.compact-blocs-controls .blocs-round-btn{
+	padding:2px;
+	width:30px;
+	height: 30px;
+}
+.compact-blocs-controls .blocs-round-btn svg{
+	width:14px;
+	height:14px;
+}
+.compact-blocs-controls .blocs-horizontal-scroll-control{
+	margin:0 20px;
+}
+.horizontal-scroll-icon{
+	fill:none;
+	stroke:#fff;
+	stroke-width:4px;
+	fill-rule:evenodd;
+	stroke-linecap:round;
+}
+.hide-left-control > .blocs-scroll-control-prev, .hide-right-control > .blocs-scroll-control-next{
+	opacity:0!important;
+}
+.show-controls > .blocs-scroll-control-prev, .show-controls > .blocs-scroll-control-next{
+	opacity:1!important;
+}
+
 /* = Custom Styling
 -------------------------------------------------------------- */
 
@@ -389,6 +458,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .blocs-card-width{
 	width:25%;
+	height:200px;
 }
 h1{
 	color:var(--swatch-var-7343)!important;
@@ -402,8 +472,9 @@ h2{
 	color:var(--swatch-var-1830)!important;
 }
 p{
-	color:var(--swatch-var-7343)!important;
 	font-family:"OpenSans-Regular";
+	color:var(--swatch-var-4174)!important;
+	font-size:15px;
 }
 h3{
 	color:var(--swatch-var-7343)!important;
@@ -418,8 +489,8 @@ h5{
 	font-family:"OpenSans-SemiBold";
 }
 h6{
-	color:var(--swatch-var-7343)!important;
 	font-family:"OpenSans-SemiBold";
+	color:var(--swatch-var-4174)!important;
 }
 a{
 	font-family:"OpenSans-Regular";
@@ -431,7 +502,7 @@ a{
 	align-items:stretch;
 	overflow:hidden;
 	display:flex;
-	border-radius:10px 10px 10px 10px;
+	border-radius:0px 0px 0px 0px;
 }
 label{
 	background-color:#FF9200;
@@ -520,6 +591,22 @@ label{
 	font-weight:normal;
 	font-family:"OpenSans-SemiBold";
 }
+.left-box{
+	height:310px;
+}
+.left-title{
+	background-color:#474747;
+	color:var(--swatch-var-1830)!important;
+	height:80px;
+	background-position:center center;
+}
+.p-bloc-4-style{
+	font-size:14px;
+	line-height:px;
+}
+.p-10-style{
+	font-size:14px;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -529,7 +616,7 @@ label{
 	
 	--swatch-var-1830:rgba(255,255,255,1.00);
 	
-	--swatch-var-7343:rgba(28,28,28,1.00);
+	--swatch-var-7343:#474747;
 	
 	--swatch-var-4593:rgba(255,255,255,0.50);
 	
@@ -541,11 +628,18 @@ label{
 	
 	--swatch-var-4909:rgba(255,255,255,1.00);
 	
+	--swatch-var-4174:rgba(0,0,0,1.00);
+	
+	--swatch-var-458:rgba(255,255,255,0.5);
+	
 }
 
 
 /* Background colour styles */
 
+.bgc-7343{
+	background-color:var(--swatch-var-7343);
+}
 .bgc-1830{
 	background-color:var(--swatch-var-1830);
 }
@@ -559,8 +653,10 @@ label{
 	color:var(--swatch-var-7343)!important;
 }
 .ltc-7343:hover{
-	color:#000000!important;
+	color:#141414!important;
 }
+
+/* Bloc image backgrounds */
 
 
 /* = Custom Bric Data
