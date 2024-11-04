@@ -202,6 +202,16 @@ button{
 	-webkit-touch-callout: none;
 }
 
+/* = Text & Icon Styles
+-------------------------------------------------------------- */
+.blockquote{
+	padding:0 20px;
+	border-left:2px solid;
+}
+.blockquote.text-end{
+	border-left:0;
+	border-right:2px solid;
+}
 
 
 /* = Cards
