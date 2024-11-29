@@ -75,6 +75,9 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 
 /* Sizes */
 
+.bloc-xl{
+	padding:150px 20px;
+}
 .bloc-lg{
 	padding:100px 20px;
 }
@@ -175,6 +178,13 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	top:-7px}.navbar-expand-lg .dropdown-menu .submenu-left{
 	right:100%;
 	left:auto}
+}
+/* = Bric adjustment margins
+-------------------------------------------------------------- */
+
+.mg-md{
+	margin-top:10px;
+	margin-bottom:20px;
 }
 
 /* = Buttons
@@ -660,6 +670,12 @@ label{
 }
 .bgc-6100{
 	background-color:var(--swatch-var-6100);
+}
+
+/* Text colour styles */
+
+.tc-4174{
+	color:var(--swatch-var-4174)!important;
 }
 
 /* Link colour styles */
