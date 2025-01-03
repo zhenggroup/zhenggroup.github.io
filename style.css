@@ -32,20 +32,21 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 -------------------------------------------------------------- */
 
 @font-face {
-	font-family:'OpenSans-Regular';
-	src: url('./fonts/OpenSans-Regular/open-sans.woff2');
-	src: url('./fonts/OpenSans-Regular/open-sans.woff2') format('woff2'),
-	url('./fonts/OpenSans-Regular/open-sans.ttf') format('truetype');
+	font-family:'RobotoSlab-Regular';
+	src: url('./fonts/RobotoSlab-Regular/roboto-slab.woff2');
+	src: url('./fonts/RobotoSlab-Regular/roboto-slab.woff2') format('woff2'),
+	url('./fonts/RobotoSlab-Regular/roboto-slab.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/RobotoSlab-Regular/roboto-slab.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
 }
 
 @font-face {
-	font-family:'OpenSans-SemiBold';
-	src: url('./fonts/OpenSans-SemiBold/open-sans.woff2');
-	src: url('./fonts/OpenSans-SemiBold/open-sans.woff2') format('woff2'),
-	url('./fonts/OpenSans-SemiBold/open-sans.ttf') format('truetype');
+	font-family:'OpenSans-Regular';
+	src: url('./fonts/OpenSans-Regular/open-sans.woff2');
+	src: url('./fonts/OpenSans-Regular/open-sans.woff2') format('woff2'),
+	url('./fonts/OpenSans-Regular/open-sans.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display:swap;
@@ -468,7 +469,8 @@ a[data-lightbox]:hover img{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"OpenSans-Regular";
+	font-family:"Roboto";
+	font-weight:300;
 }
 .container{
 	max-width:1140px;
@@ -482,41 +484,51 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 h1{
 	color:var(--swatch-var-7343)!important;
-	font-family:"OpenSans-SemiBold";
+	font-family:"Roboto";
+	font-weight:900;
 }
 h2{
 	color:var(--swatch-var-7343)!important;
-	font-family:"OpenSans-SemiBold";
+	font-family:"Roboto";
+	font-weight:900;
 }
 .white-color{
 	color:var(--swatch-var-1830)!important;
 }
 p{
-	font-family:"OpenSans-Regular";
+	font-family:"Roboto";
 	color:var(--swatch-var-4174)!important;
 	font-size:15px;
+	font-weight:500;
 }
 h3{
 	color:var(--swatch-var-7343)!important;
-	font-family:"OpenSans-SemiBold";
+	font-family:"Roboto";
+	font-weight:700;
 }
 h4{
 	color:var(--swatch-var-7343)!important;
-	font-family:"OpenSans-SemiBold";
+	font-family:"Roboto";
+	font-weight:700;
 }
 h5{
 	color:var(--swatch-var-7343)!important;
-	font-family:"OpenSans-SemiBold";
+	font-family:"Roboto";
+	font-weight:700;
 }
 h6{
-	font-family:"OpenSans-SemiBold";
+	font-family:"Roboto";
 	color:var(--swatch-var-4174)!important;
+	font-weight:700;
 }
 a{
-	font-family:"OpenSans-Regular";
+	font-family:"Roboto";
+	font-weight:500;
 }
 .navbar-nav li a{
-	font-family:"OpenSans-Regular";
+	font-family:"Roboto Condensed";
+	font-size:20px;
+	line-height:20px;
 }
 .image-size-research{
 	align-items:stretch;
@@ -571,7 +583,9 @@ label{
 	margin-top:10px;
 	padding-bottom:0px;
 	margin-bottom:0px;
-	font-size:12px;
+	font-size:13px;
+	font-family:"Roboto Condensed";
+	font-weight:lighter;
 }
 .icon-margin{
 	margin-left:5px;
@@ -585,8 +599,9 @@ label{
 }
 .heading-5{
 	font-size:20px;
-	font-weight:bold;
+	font-weight:500;
 	text-decoration:none;
+	font-family:"Roboto";
 }
 .img-nz3c00366-00-style{
 	height:200px;
@@ -599,8 +614,9 @@ label{
 }
 .journal-name{
 	color:#FF6903!important;
-	font-family:"OpenSans-Regular";
+	font-family:"Roboto";
 	text-decoration:none;
+	font-weight:500;
 }
 .publication-comment{
 	font-family:"OpenSans-Regular";
@@ -609,8 +625,8 @@ label{
 .publication-title{
 	text-transform:none;
 	text-decoration:none;
-	font-weight:normal;
-	font-family:"OpenSans-SemiBold";
+	font-weight:500;
+	font-family:"Roboto";
 }
 .left-box{
 	height:300px;
@@ -629,6 +645,9 @@ label{
 }
 .p-10-style{
 	font-size:14px;
+}
+.roboto-it{
+	font-family:"RobotoSlab-Regular";
 }
 
 /* = Colour
@@ -657,13 +676,17 @@ label{
 	
 	--swatch-var-4275:rgba(122,122,122,0.21);
 	
+	--swatch-var-4954:rgba(0,27,84,0.73);
+	
+	--swatch-var-5600:#580604;
+	
 }
 
 
 /* Background colour styles */
 
-.bgc-7343{
-	background-color:var(--swatch-var-7343);
+.bgc-5600{
+	background-color:var(--swatch-var-5600);
 }
 .bgc-1830{
 	background-color:var(--swatch-var-1830);
