@@ -470,7 +470,7 @@ a[data-lightbox]:hover img{
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"Roboto";
-	font-weight:300;
+	font-weight:500;
 }
 .container{
 	max-width:1140px;
@@ -583,9 +583,9 @@ label{
 	margin-top:10px;
 	padding-bottom:0px;
 	margin-bottom:0px;
-	font-size:13px;
 	font-family:"Roboto Condensed";
-	font-weight:lighter;
+	font-weight:normal;
+	font-size:14px;
 }
 .icon-margin{
 	margin-left:5px;
@@ -619,8 +619,9 @@ label{
 	font-weight:500;
 }
 .publication-comment{
-	font-family:"OpenSans-Regular";
+	font-family:"Roboto";
 	color:var(--swatch-var-7918)!important;
+	font-weight:300;
 }
 .publication-title{
 	text-transform:none;
