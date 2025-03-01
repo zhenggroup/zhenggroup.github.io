@@ -32,6 +32,17 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 -------------------------------------------------------------- */
 
 @font-face {
+	font-family:'Roboto-Regular';
+	src: url('./fonts/Roboto-Regular/roboto.woff2');
+	src: url('./fonts/Roboto-Regular/roboto.woff2') format('woff2'),
+	url('./fonts/Roboto-Regular/roboto.eot?#iefix') format('embedded-opentype'),
+	url('./fonts/Roboto-Regular/roboto.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
 	font-family:'RobotoSlab-Regular';
 	src: url('./fonts/RobotoSlab-Regular/roboto-slab.woff2');
 	src: url('./fonts/RobotoSlab-Regular/roboto-slab.woff2') format('woff2'),
@@ -496,10 +507,10 @@ h2{
 	color:var(--swatch-var-1830)!important;
 }
 p{
-	font-family:"Roboto";
+	font-family:"Roboto-Regular";
 	color:var(--swatch-var-4174)!important;
 	font-size:15px;
-	font-weight:500;
+	font-weight:300;
 }
 h3{
 	color:var(--swatch-var-7343)!important;
@@ -649,6 +660,9 @@ label{
 }
 .roboto-it{
 	font-family:"RobotoSlab-Regular";
+}
+.p-16-style{
+	font-family:"Roboto-Regular";
 }
 
 /* = Colour
