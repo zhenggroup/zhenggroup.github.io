@@ -634,7 +634,7 @@ label{
 	font-style:italic;
 }
 .publication-title{
-	text-transform:none;
+	text-transform:capitalize;
 	text-decoration:none;
 	font-weight:normal;
 	font-family:"Roboto";
