@@ -212,6 +212,11 @@ button{
 	outline: none!important;
 }
 
+.btn-style-none,.btn-style-none:hover,.btn-style-none:active,.btn-style-none:focus{
+	background:none;
+	box-shadow: none;
+	padding:0;
+}
 
 /* = Icons
 -------------------------------------------------------------- */
@@ -316,6 +321,14 @@ button{
 	stroke-width: 2px;
 	fill-rule: evenodd;
 	stroke-linecap:round;
+}
+
+.close{
+	color:#000;
+	opacity:0.5;
+}
+.close:hover{
+	opacity:1;
 }
 /* = Lightbox
 -------------------------------------------------------------- */
