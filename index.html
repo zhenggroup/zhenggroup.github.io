@@ -2,21 +2,305 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="Zheng Group, electrochemistry, research lab, GTIIT, Guangdong Technion, electrocatalysis, operando methods, Weiran Zheng">
+    <meta name="description" content="Welcome to the Electrochemical Interface & Conversion Lab (The Zheng Group) led by Dr. Weiran Zheng at Guangdong Technion-Israel Institute of Technology (GTIIT). We focus on spectroelectrochemistry and scanning probe microscopy.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="style.css?1673">
+	<link rel="stylesheet" type="text/css" href="style.css?1673"> 
 	<link rel="stylesheet" type="text/css" href="./css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
+	<!-- Google Fonts links removed as we are using system fonts globally via style.css -->
+    <!-- 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <title>Home</title>
+    -->
+    <title>Home - The Zheng Group</title>
 
+    <style>
+        /* Page-specific styles for index.html - Common styles are now in style.css */
 
+        /* Hero Section - Adopting minimalist style */
+        .hero-section {
+            background-color: var(--background-color-page); /* Use variable */
+            color: var(--text-color-dark); /* Use variable */
+            padding: 4rem 0; 
+        }
+        .hero-section .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+        }
+        .hero-text-content {
+            flex: 1 1 40%; 
+            min-width: 300px;
+            text-align: left;
+        }
+        .hero-text-content h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            color: var(--text-color-headings); /* Use variable */
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+        .hero-text-content h2 {
+            font-size: 1.7em; 
+            font-weight: 400; 
+            color: var(--text-color-dark); /* Use variable (or a specific --text-color-hero-subheading if needed) */
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .hero-text-content .research-focus-intro {
+            font-size: 1.1em; 
+            font-weight: 400;
+            opacity: 0.85;
+            margin-top: 1.5rem;
+            line-height: 1.7;
+            color: var(--text-color-dark); /* Use variable */
+        }
+        .hero-text-content .research-focus-intro strong { 
+            font-weight: 600;
+            color: var(--text-color-headings); /* Use variable */
+        }
+        
+        .hero-carousel-content {
+            flex: 1 1 55%; 
+            min-width: 320px;
+            max-width: 700px; 
+            margin: 0 auto;
+            overflow: hidden; 
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-color-medium); /* Use variable */
+        }
+        .hero-carousel-content .carousel-item {
+             min-height: 400px; 
+        }
+        .hero-carousel-content .carousel-item img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            max-height: 500px; 
+        }
+        .hero-carousel-content .carousel-caption {
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%); 
+            padding: 1.25rem; 
+            position: absolute; 
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+         .hero-carousel-content .carousel-caption h3 {
+            color: var(--text-color-light); /* Use variable */
+            font-size: 1.6em; 
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.6); 
+        }
+        .hero-carousel-content .carousel-indicators button {
+            background-color: rgba(255, 255, 255, 0.3); 
+            border: 1px solid rgba(255,255,255,0.4);
+            width: 10px; 
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 4px;
+        }
+        .hero-carousel-content .carousel-indicators .active {
+            background-color: var(--text-color-light); /* Use variable */
+        }
+        .hero-carousel-content .carousel-control-prev-icon,
+        .hero-carousel-content .carousel-control-next-icon {
+            background-color: var(--shadow-color-medium); /* Use variable (or a specific overlay variable) */
+            border-radius: 50%;
+            padding: 0.7rem; 
+            width: 2.8rem; 
+            height: 2.8rem; 
+        }
+        .hero-carousel-content .carousel-control-prev-icon:hover,
+        .hero-carousel-content .carousel-control-next-icon:hover {
+            background-color: rgba(0,0,0,0.3); /* Could be a darker variable if defined */
+        }
+
+        /* Recruitment Alert Section - Minimalist style */
+        .recruitment-alert-section {
+            padding: 3rem 0; 
+            background-color: var(--background-color-light-gray); /* Use variable */
+        }
+        .recruitment-alert {
+            background-color: var(--background-color-page); /* Use variable */
+            border: 1px solid var(--border-color-medium); /* Use variable */
+            border-left: 4px solid var(--color-primary-blue); /* Use variable */
+            padding: 1.5rem 2rem;
+            border-radius: 6px;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0,86,179,0.08); /* Specific shadow, could be a variable */
+        }
+        .recruitment-alert h3 { 
+            color: var(--color-dark-blue); /* Use variable */
+            font-size: 1.5em; 
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        .recruitment-alert p {
+            color: var(--text-color-dark); /* Use variable */
+            margin-bottom: 1rem; 
+            line-height: 1.65;
+        }
+        .recruitment-alert .contact-info {
+            margin-top: 1.25rem;
+            font-weight: 500;
+            color: var(--color-primary-blue); /* Use variable */
+            font-size: 1.05em;
+        }
+        .recruitment-alert .btn-close-alert { 
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.4rem;
+            color: var(--color-primary-blue); /* Use variable */
+            opacity: 0.6;
+        }
+        .recruitment-alert .btn-close-alert:hover {
+            opacity: 0.9;
+        }
+
+        /* News Section - Minimalist style */
+        .news-section {
+            padding: 3rem 0; 
+            background-color: var(--background-color-page); /* Use variable */
+        }
+        /* .news-section-title rule removed - using global .section-heading class in HTML now */
+        
+        /* Horizontal scroll buttons are styled in style.css */
+
+        .news-card {
+            background-color: var(--background-color-page); /* Use variable */
+            border-radius: 6px;
+            box-shadow: 0 3px 10px var(--shadow-color-soft); /* Use variable */
+            border: 1px solid var(--border-color-light); /* Use variable */
+            width: 320px !important; 
+            min-width: 320px !important;
+            display: flex !important; 
+            flex-direction: column !important; 
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            min-height: 280px; 
+            padding: 0 !important; 
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px var(--shadow-color-medium); /* Use variable */
+        }
+        .news-card .card-body { 
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; 
+        }
+        .news-card h4 {
+            font-size: 1.2em; 
+            color: var(--color-primary-blue); /* Use variable */
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .news-card .news-date {
+            font-size: 0.75em;
+            color: var(--text-color-subtle); /* Use variable */
+            margin-bottom: 0.75rem;
+            text-transform: uppercase; 
+        }
+        .news-card .news-content {
+            font-size: 0.9em;
+            color: var(--text-color-medium); /* Use variable (or a specific --text-color-news-content) */
+            line-height: 1.55;
+            flex-grow: 1; 
+            margin-bottom: 0; 
+        }
+        .news-card .news-content p:last-child {
+            margin-bottom: 0; 
+        }
+        .news-card .news-content a {
+            color: var(--text-link-color); /* Use variable */
+            text-decoration: none; 
+            font-weight: 500;
+        }
+        .news-card .news-content a:hover {
+            color: var(--text-link-hover-color); /* Use variable */
+            text-decoration: underline;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991px) {
+            .hero-section .content-container {
+                flex-direction: column;
+            }
+            .hero-text-content {
+                text-align: center;
+                margin-bottom: 2rem; 
+                flex-basis: auto; 
+            }
+            .hero-carousel-content {
+                 flex-basis: auto; 
+                 max-width: 600px; 
+            }
+            .hero-text-content h1 {
+                font-size: 2.5em;
+            }
+            .hero-text-content h2 {
+                font-size: 1.6em;
+            }
+            /* .news-section-title is now .section-heading, styled globally */
+        }
+        @media (max-width: 767px) {
+            /* #bloc-0 .nav-link is styled globally */
+            .hero-section { padding: 3rem 0; }
+            .hero-text-content h1 { font-size: 2.1em; }
+            .hero-text-content h2 { font-size: 1.4em; }
+            .hero-text-content .research-focus-intro { font-size: 1.05em; }
+            .hero-carousel-content .carousel-item { min-height: 300px; } 
+            .hero-carousel-content .carousel-caption h3 { font-size: 1.4em; }
+
+            .recruitment-alert-section { padding: 2rem 0; }
+            .recruitment-alert h3 { font-size: 1.4em; }
+            .recruitment-alert { padding: 1.5rem; }
+
+            .news-section { padding: 2rem 0; }
+            /* .news-section-title is now .section-heading */
+            .news-card {
+                width: 290px !important; 
+                min-width: 290px !important;
+                min-height: 260px;
+            }
+            .news-card .card-body { padding: 1.25rem; } 
+            .news-card h4 { font-size: 1.15em; }
+        }
+        @media (max-width: 480px) {
+            /* body font-size is global */
+            .hero-section { padding: 2.5rem 0; } 
+            .hero-text-content h1 { font-size: 1.9em; }
+            .hero-text-content h2 { font-size: 1.25em; } 
+            .hero-carousel-content .carousel-item { min-height: 250px; }
+            .hero-carousel-content .carousel-caption h3 { font-size: 1.25em; }
+            .hero-carousel-content .carousel-caption { padding: 1rem; }
+
+            .recruitment-alert h3 { font-size: 1.3em; }
+            .recruitment-alert { padding: 1.25rem; }
+            .recruitment-alert .contact-info { font-size: 1em; }
+
+            /* .news-section-title is now .section-heading */
+            .news-card {
+                width: calc(100vw - 30px) !important; 
+                min-width: calc(100vw - 30px) !important;
+                min-height: auto; 
+            }
+            .news-card .card-body { padding: 1rem; } 
+            .news-card h4 { font-size: 1.1em; }
+        }
+
+    </style>
     
 <!-- Analytics -->
  
@@ -34,40 +318,27 @@
 <div class="page-container">
     
 <header>
-
-<!-- bloc-0 -->
+<!-- bloc-0: Navigation -->
 <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
 	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
 		<div class="row">
 			<div class="col">
 				<nav class="navbar navbar-light row navbar-expand-md" role="navigation">
 					<div class="container-fluid">
-						<a class="navbar-brand img-protected" href="./"><img src="img/logo.svg" alt="logo" class="me-2" width="200" height="63"></a>
+						<a class="navbar-brand img-protected" href="./index.html"><img src="img/logo.svg" alt="The Zheng Group Logo" class="me-2" width="200" height="63"></a>
 						<button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-14477">
 							<span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon" d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
 						</button>
-						<div class="collapse navbar-collapse navbar-35179 navbar-14477">
-								<ul class="site-navigation nav navbar-nav ms-auto">
-									<li class="nav-item">
-										<a href="./" class="nav-link">Home</a>
-									</li>
-									<li class="nav-item">
-										<a href="./research/" class="nav-link">Research</a>
-									</li>
-									<li class="nav-item">
-										<a href="./publication/" class="nav-link a-btn">Publication</a>
-									</li>
-									<li class="nav-item">
-										<a href="./team/" class="nav-link a-btn">Team</a>
-									</li>
-									<li class="nav-item">
-										<a href="./resource/" class="nav-link a-btn">Resource</a>
-									</li>
-									<li class="nav-item">
-										<a href="./news/" class="a-btn nav-link">News</a>
-									</li>
-								</ul>
-							</div>
+                        <div class="collapse navbar-collapse navbar-35179 navbar-14477">
+                            <ul class="site-navigation nav navbar-nav ms-auto">
+                                <li class="nav-item"><a href="./index.html" class="nav-link active">Home</a></li>
+                                <li class="nav-item"><a href="./research/index.html" class="nav-link">Research</a></li>
+                                <li class="nav-item"><a href="./publication/index.html" class="nav-link">Publication</a></li>
+                                <li class="nav-item"><a href="./team/index.html" class="nav-link">Team</a></li>
+                                <li class="nav-item"><a href="./resource/index.html" class="nav-link">Resource</a></li>
+                                <li class="nav-item"><a href="./news/index.html" class="nav-link">News</a></li>
+                            </ul>
+                        </div>
 					</div>
 				</nav>
 			</div>
@@ -75,293 +346,181 @@
 	</div>
 </div>
 <!-- bloc-0 END -->
-
 </header>
-<!-- bloc-1 -->
-<div class="bloc l-bloc object-hidden" id="bloc-1">
-	<div class="container bloc-no-padding-md bloc-sm-sm bloc-no-padding bloc-sm-lg">
-		<div class="row">
-			<div class="col">
-				<h3 class="mb-lg-1 text-lg-end text-md-end mb-md-1 mb-sm-1 text-sm-center mb-1 text-center animated fadeIn" data-appear-anim-style="fadeIn">
-					Welcome to the Zheng Group<br>
-				</h3>
-				<h4 class="floating-hvr mb-lg-1 text-lg-end text-md-end mb-md-1 mb-sm-1 text-sm-center mb-1 text-center animated animDelay1 fadeIn" data-appear-anim-style="fadeIn">
-					We are the Electrochemical Interface & Conversion Lab @ Guangdong Technion
-				</h4>
-				<h4 class="floating-hvr mb-lg-1 text-lg-end text-md-end mb-md-1 mb-sm-1 text-sm-center mb-1 text-center animDelay2 animated fadeIn" data-appear-anim-style="fadeIn">
-					We use spectroelectrochemistry and scanning probe microscopy to study:<br>
-				</h4>
-				<div id="carousel-1" class="carousel slide mx-auto d-block carousel-fade" data-bs-ride="carousel" data-bs-theme="light" data-bs-interval="3500">
-					<ol class="carousel-indicators">
-						<li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active">
-						</li>
-						<li data-bs-target="#carousel-1" data-bs-slide-to="1">
-						</li>
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						<div class="carousel-item img-protected active">
-							<img alt="slide 2" class="d-inline-block w-100" src="img/catalyst%20deactivation.jpg">
-							<div class="carousel-caption carousel-caption-top">
-								<h2 class="mb-4 white-color text-lg-center">
-									Electrocatalyst deactivation
-								</h2>
-							</div>
-						</div>
-						<div class="carousel-item img-protected">
-							<img class="d-inline-block w-100" alt="SPM" src="img/SPM.jpg">
-							<div class="carousel-caption carousel-caption-top">
-								<h2 class="mb-4 white-color">
-									Catalyst Site - Activity Correlation
-								</h2>
-							</div>
-						</div>
-					</div><a class="carousel-nav-controls carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><svg width="26" height="26" viewBox="0 0 32 32"><path class="carousel-nav-icon carousel-prev-icon" d="M22,2L9,16,22,30"></path></svg><span class="visually-hidden">Previous</span></a><a class="carousel-nav-controls carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><svg width="26" height="26" viewBox="0 0 32 32"><path class="carousel-nav-icon carousel-next-icon" d="M10.344,2l13,14-13,14"></path></svg><span class="visually-hidden">Next</span></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-1 END -->
 
-<!-- bloc-1 -->
-<div class="bloc l-bloc" id="bloc-1">
-	<div class="container bloc-lg bloc-no-padding-lg">
-		<div class="row">
-			<div class="col text-start">
-				<div class="row">
-					<div class="col">
-						<div class="alert alert-danger" role="alert" data-bs-theme="light">
-							<a href="#" class="btn btn-d btn-lg btn-style-none float-end" data-bs-dismiss="alert" aria-label="Close"><span class="fa fa-times close"></span></a>
-							<h5 class="mb-4 mb-lg-1">
-								We are looking for team members:
-							</h5>
-							<p class="mb-0">
-								We are actively looking for a) GTIIT UG students; b) MSc students; and c) PhD students for the following project:<br>1. Modeling and detection of double-layer structure during electrocatalysis (skills in Python, theortical electrochemistry are required)<br>2. Isotopically labelled electrocatalysis for in situ spectroscopy and mass spectrometry (skills in practical electrochemistry and analytical chemistry are required)<br>
-							</p>
-							<div>
-								send email to weiran.zheng@gtiit.edu.cn for more information/interview
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-1 END -->
+<main>
+    <!-- Hero Section (Adapted from bloc-2) -->
+    <section class="hero-section" id="hero"> 
+        <div class="content-container">
+            <div class="hero-text-content">
+                <h1>The Zheng Group</h1>
+                <h2>Electrochemical Interface &amp; Conversion Lab @ GTIIT</h2>
+                <p class="research-focus-intro">
+                    Welcome to our research group. We are dedicated to advancing the understanding of electrochemical interfaces and conversion processes. Our work leverages state-of-the-art <strong>spectroelectrochemistry</strong> and <strong>scanning probe microscopy</strong> techniques to investigate fundamental challenges in electrocatalysis. Key areas of our research include elucidating the mechanisms of <strong>electrocatalyst deactivation</strong>, tracking the dynamic <strong>evolution of surface sites</strong> during reactions, and developing and applying <strong>advanced electrochemical methods</strong>.
+                </p>
+            </div>
+            <div class="hero-carousel-content">
+                <div id="carousel-15140" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000"> 
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-15140" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carousel-15140" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carousel-15140" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img alt="Electrocatalyst Deactivation Research" class="d-block w-100" src="img/catalyst%20deactivation@2x.jpg">
+                            <div class="carousel-caption"> 
+                                <h3>Electrocatalyst Deactivation</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" alt="Surface Site Evolution Study with SPM" src="img/SPM.jpg">
+                            <div class="carousel-caption">
+                                <h3>Surface Site Evolution</h3>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" alt="Advanced Electrochemical Methods Illustration" src="img/A_visually_engaging_scientific_cover_image_illustrating_electrochemical_methods_specifically_cyclic_voltammetry_CV_and_electrochemical_impedance_spectroscopy_EIS_The_image_features_a_modern_clean_design_with_a_graph_of_a_CV_curve_current_vs_voltage_r.png">
+                            <div class="carousel-caption">
+                                <h3>Electrochemical Methods</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel-15140" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel-15140" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section END -->
 
-<!-- bloc-2 -->
-<div class="bloc l-bloc" id="bloc-2">
-	<div class="container bloc-no-padding-md bloc-sm-sm bloc-no-padding bloc-no-padding-lg">
-		<div class="row bgc-7343">
-			<div class="col-lg-4 align-self-center text-sm-center">
-				<h2 class="text-md-end mb-md-1 mb-sm-1 text-sm-center mb-1 text-center animated fadeIn white-color mx-auto d-block text-lg-center mt-lg-0 mb-lg-5" data-appear-anim-style="fadeIn">
-					Welcome to<br>the Zheng Group<br>
-				</h2>
-				<h5 class="floating-hvr text-md-end mb-md-1 mb-sm-1 text-sm-center mb-1 text-center animated animDelay1 fadeIn white-color mx-auto d-block text-lg-center mt-lg-3 mb-lg-3" data-appear-anim-style="fadeIn">
-					We are the Electrochemical Interface & Conversion Lab @ GTIIT
-				</h5>
-				<h5 class="floating-hvr mb-md-1 mb-sm-1 mb-1 animDelay2 animated fadeIn white-color mx-auto d-block mt-lg-3 mb-lg-3 text-lg-center text-sm-center" data-appear-anim-style="fadeIn">
-					We use spectroelectrochemistry and scanning probe microscopy to study:<br>
-				</h5>
-			</div>
-			<div class="col-lg-8 ps-sm-0 pe-sm-0 pt-sm-0 pb-sm-0">
-				<div id="carousel-15140" class="carousel slide mx-auto d-block carousel-fade" data-bs-ride="carousel" data-bs-theme="light" data-bs-interval="3500">
-					<ol class="carousel-indicators">
-						<li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active" data-target="#carousel-15140">
-						</li>
-						<li data-bs-target="#carousel-1" data-bs-slide-to="1" data-target="#carousel-15140">
-						</li>
-						<li data-bs-target="#carousel-15140" data-bs-slide-to="2">
-						</li>
-					</ol>
-					<div class="carousel-inner" role="listbox">
-						<div class="carousel-item img-protected active">
-							<img alt="slide 2" class="d-inline-block w-100" src="img/catalyst%20deactivation@2x.jpg">
-							<div class="carousel-caption carousel-caption-top">
-								<h3 class="mb-4 text-lg-center mx-auto d-block">
-									electrocatalyst deactivation
-								</h3>
-							</div>
-						</div>
-						<div class="carousel-item img-protected">
-							<img class="d-inline-block w-100" alt="SPM" src="img/SPM.jpg">
-							<div class="carousel-caption carousel-caption-top">
-								<h3 class="mb-4">
-									surface site evolution
-								</h3>
-							</div>
-						</div>
-						<div class="carousel-item img-protected">
-							<img class="d-inline-block w-100 img-bloc-2-style" alt="A_visually_engaging_scientific_cover_image_illustrating_electrochemical_methods_specifically_cyclic_voltammetry_CV_and_electrochemical_impedance_spectroscopy_EIS_The_image_features_a_modern_clean_design_with_a_graph_of_a_CV_curve_current_vs_voltage_r" src="img/A_visually_engaging_scientific_cover_image_illustrating_electrochemical_methods_specifically_cyclic_voltammetry_CV_and_electrochemical_impedance_spectroscopy_EIS_The_image_features_a_modern_clean_design_with_a_graph_of_a_CV_curve_current_vs_voltage_r.png">
-							<div class="carousel-caption carousel-caption-top">
-								<h3 class="mb-4">
-									Electrochemical Methods
-								</h3>
-							</div>
-						</div>
-					</div><a class="carousel-nav-controls carousel-control-prev" href="#carousel-15140" role="button" data-bs-slide="prev"><svg width="26" height="26" viewBox="0 0 32 32"><path class="carousel-nav-icon carousel-prev-icon" d="M22,2L9,16,22,30"></path></svg><span class="visually-hidden">Previous</span></a><a class="carousel-nav-controls carousel-control-next" href="#carousel-15140" role="button" data-bs-slide="next"><svg width="26" height="26" viewBox="0 0 32 32"><path class="carousel-nav-icon carousel-next-icon" d="M10.344,2l13,14-13,14"></path></svg><span class="visually-hidden">Next</span></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-2 END -->
+    <!-- Recruitment Alert Section (Adapted from the second bloc-1) -->
+    <section class="recruitment-alert-section" id="recruitment-alert">
+        <div class="content-container">
+            <div class="recruitment-alert" role="alert">
+                 <button type="button" class="btn-close btn-close-alert" data-bs-dismiss="alert" aria-label="Close"></button> 
+                <h3>We are looking for team members:</h3>
+                <p>
+                    We are actively looking for a) GTIIT UG students; b) MSc students; and c) PhD students for the following project:<br>
+                    1. Modeling and detection of double-layer structure during electrocatalysis (skills in Python, theoretical electrochemistry are required)<br>
+                    2. Isotopically labelled electrocatalysis for in situ spectroscopy and mass spectrometry (skills in practical electrochemistry and analytical chemistry are required)
+                </p>
+                <div class="contact-info">
+                    Send email to weiran.zheng@gtiit.edu.cn for more information/interview.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Recruitment Alert Section END -->
 
-<!-- bloc-10 -->
-<div class="bloc l-bloc" id="bloc-10">
-	<div class="container bloc-sm-md bloc-sm-sm bloc-sm bloc-sm-lg">
-		<div class="row">
-			<div class="col text-start">
-				<h4 class="mb-4 mb-lg-2">
-					News
-				</h4>
-				<div class="blocs-horizontal-scroll-container">
-					<div class="blocs-horizontal-scroll-control blocs-scroll-control-prev">
-						<span class="blocs-round-btn"><svg width="26" height="26" viewBox="0 0 32 32"><path class="horizontal-scroll-icon" d="M22,2L9,16,22,30"></path></svg></span>
-					</div>
-					<div class="blocs-horizontal-scroll-area">
-							<div class="card ps-3 pe-3 pb-3 pt-3 blocs-card-width pb-lg-2 ps-lg-2 pe-lg-2 card-sq pt-lg-2">
-								<div class="card-body pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2">
-									<h6 class="mb-4 mb-lg-0">
-										Online Lecture
-									</h6>
-									<p class="mt-lg-0 mb-lg-0">
-										02/2025
-									</p>
-									<p class="blocsaddons-markdown mt-lg-1 mb-lg-1 news">
-										Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a href="https://www.bilibili.com/video/BV1bzN4efEDM/?spm_id_from=333.337.search-card.all.click&vd_source=fc9ab070c3e43559b55603564026a5de" target="_blank">Link</a>
-									</p>
-								</div>
-							</div>
-							<div class="card ps-3 pe-3 pb-3 pt-3 blocs-card-width pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2 card-sq">
-								<div class="card-body pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2">
-									<h6 class="mb-4 mb-lg-0">
-										Poster Award to Sijie
-									</h6>
-									<p class="mt-lg-0 mb-lg-0">
-										10/2024
-									</p>
-									<p class="blocsaddons-markdown mt-lg-1 mb-lg-1 news">
-										Ms. Sijie Chen’s poster on ammonia electrooxidation is recognized as the 2nd place in the ‘best poster’ award in the MATEC poster competition.
-									</p>
-								</div>
-							</div>
-							<div class="card ps-3 pe-3 pb-3 pt-3 blocs-card-width pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2 card-sq">
-								<div class="card-body pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2">
-									<h6 class="mb-4 mb-lg-0">
-										Paper Published
-									</h6>
-									<p class="mt-lg-0 mb-lg-0">
-										10/2024
-									</p>
-									<p class="blocsaddons-markdown mt-lg-1 mb-lg-1 news">
-										“Bismuth doping unlocks stability of copper oxides in anodic reaction: A case analysis of glucose electrooxidation” is published on [Electrochimica Acta](https://doi.org/10.1016/j.electacta.2024.145178).<br>
-									</p>
-								</div>
-							</div>
-							<div class="card ps-3 pe-3 pb-3 pt-3 blocs-card-width pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2 card-sq">
-								<div class="card-body pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2">
-									<h6 class="mb-4 mb-lg-0">
-										Paper Published
-									</h6>
-									<p class="mt-lg-0 mb-lg-0">
-										09/2024
-									</p>
-									<p class="blocsaddons-markdown mt-lg-1 mb-lg-1 news">
-										“Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation” is published on [ACS Energy Letters](https://doi.org/10.1021/acsenergylett.4c01869).<br>
-									</p>
-								</div>
-							</div>
-							<div class="card pt-3 pb-3 ps-3 pe-3 blocs-card-width pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2 card-sq">
-								<div class="card-body pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2">
-									<h6 class="mb-4 mb-lg-0">
-										Paper Published
-									</h6>
-									<p class="mt-lg-0 mb-lg-0">
-										08/2024
-									</p>
-									<p class="blocsaddons-markdown mt-lg-1 mb-lg-1 news">
-										"Correlative in situ analysis of the role of oxygen on ammonia electrooxidation selectivity on NiOOH surfaces” is published on [Journal of Catalysis](https://doi.org/10.1016/j.jcat.2024.115720).<br>
-									</p>
-								</div>
-							</div>
-							<div class="card pt-3 pb-3 ps-3 pe-3 blocs-card-width pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2 card-sq">
-								<div class="card-body pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2">
-									<h6 class="mb-4 mb-lg-0">
-										ECS Webinar by Dr. Zheng
-									</h6>
-									<p class="mt-lg-0 mb-lg-0">
-										08/2024
-									</p>
-									<p class="blocsaddons-markdown mt-lg-1 mb-lg-1 news">
-										Dr. Weiran Zheng delivered an ECS Webinar on the topic of “Introducing Python for Electrochemistry Research”. [Link](https://physicsworld.com/a/introducing-python-for-electrochemistry-research/)
-									</p>
-								</div>
-							</div>
-							<div class="card pt-3 pb-3 ps-3 pe-3 blocs-card-width pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2 card-sq">
-								<div class="card-body pt-lg-2 pb-lg-2 ps-lg-2 pe-lg-2">
-									<h6 class="mb-4 mb-lg-0">
-										Paper Published
-									</h6>
-									<p class="mt-lg-0 mb-lg-0">
-										05/2024
-									</p>
-									<p class="blocsaddons-markdown mt-lg-1 mb-lg-1 news">
-										“Catalyst Deactivation During Water Electrolysis: Understanding and Mitigation” is published on [APL Energy](https://pubs.aip.org/aip/ape/article/2/2/021501/3284761).
-									</p>
-								</div>
-							</div>
-						</div>
-					<div class="blocs-horizontal-scroll-control blocs-scroll-control-next">
-							<span class="blocs-round-btn"><svg width="26" height="26" viewBox="0 0 32 32"><path class="horizontal-scroll-icon" d="M10.344,2l13,14-13,14"></path></svg></span>
-						</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-10 END -->
+    <!-- News Section (Adapted from bloc-10) -->
+    <section class="news-section" id="news">
+        <div class="content-container">
+            <!-- Changed class from news-section-title to section-heading -->
+            <h2 class="section-heading">Latest News</h2> 
+            <div class="blocs-horizontal-scroll-container">
+                <div class="blocs-horizontal-scroll-control blocs-scroll-control-prev">
+                    <span class="blocs-round-btn"><svg width="26" height="26" viewBox="0 0 32 32"><path class="horizontal-scroll-icon" d="M22,2L9,16,22,30"></path></svg></span>
+                </div>
+                <div class="blocs-horizontal-scroll-area">
+                    <!-- News Card 1 -->
+                    <div class="card news-card"> <div class="card-body">
+                        <h4>Online Lecture</h4>
+                        <p class="news-date">02/2025</p>
+                        <div class="news-content blocsaddons-markdown">
+                            <p>Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a href="https://www.bilibili.com/video/BV1bzN4efEDM/?spm_id_from=333.337.search-card.all.click&vd_source=fc9ab070c3e43559b55603564026a5de" target="_blank" rel="noopener noreferrer">View Lecture</a></p>
+                        </div>
+                    </div></div>
+                    <!-- News Card 2 -->
+                    <div class="card news-card"> <div class="card-body">
+                        <h4>Poster Award to Sijie</h4>
+                        <p class="news-date">10/2024</p>
+                        <div class="news-content blocsaddons-markdown">
+                            <p>Ms. Sijie Chen’s poster on ammonia electrooxidation is recognized as the 2nd place in the ‘best poster’ award in the MATEC poster competition.</p>
+                        </div>
+                    </div></div>
+                    <!-- News Card 3 -->
+                    <div class="card news-card"> <div class="card-body">
+                        <h4>Paper Published</h4>
+                        <p class="news-date">10/2024</p>
+                        <div class="news-content blocsaddons-markdown">
+                            <p>“Bismuth doping unlocks stability of copper oxides in anodic reaction: A case analysis of glucose electrooxidation” is published on <a href="https://doi.org/10.1016/j.electacta.2024.145178" target="_blank" rel="noopener noreferrer">Electrochimica Acta</a>.</p>
+                        </div>
+                    </div></div>
+                    <!-- News Card 4 -->
+                    <div class="card news-card"> <div class="card-body">
+                        <h4>Paper Published</h4>
+                        <p class="news-date">09/2024</p>
+                        <div class="news-content blocsaddons-markdown">
+                            <p>“Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation” is published on <a href="https://doi.org/10.1021/acsenergylett.4c01869" target="_blank" rel="noopener noreferrer">ACS Energy Letters</a>.</p>
+                        </div>
+                    </div></div>
+                    <!-- News Card 5 -->
+                    <div class="card news-card"> <div class="card-body">
+                        <h4>Paper Published</h4>
+                        <p class="news-date">08/2024</p>
+                        <div class="news-content blocsaddons-markdown">
+                            <p>"Correlative in situ analysis of the role of oxygen on ammonia electrooxidation selectivity on NiOOH surfaces” is published on <a href="https://doi.org/10.1016/j.jcat.2024.115720" target="_blank" rel="noopener noreferrer">Journal of Catalysis</a>.</p>
+                        </div>
+                    </div></div>
+                    <!-- News Card 6 -->
+                    <div class="card news-card"> <div class="card-body">
+                        <h4>ECS Webinar by Dr. Zheng</h4>
+                        <p class="news-date">08/2024</p>
+                        <div class="news-content blocsaddons-markdown">
+                            <p>Dr. Weiran Zheng delivered an ECS Webinar on the topic of “Introducing Python for Electrochemistry Research”. <a href="https://physicsworld.com/a/introducing-python-for-electrochemistry-research/" target="_blank" rel="noopener noreferrer">Watch Webinar</a></p>
+                        </div>
+                    </div></div>
+                    <!-- News Card 7 -->
+                    <div class="card news-card"> <div class="card-body">
+                        <h4>Paper Published</h4>
+                        <p class="news-date">05/2024</p>
+                        <div class="news-content blocsaddons-markdown">
+                           <p>“Catalyst Deactivation During Water Electrolysis: Understanding and Mitigation” is published on <a href="https://pubs.aip.org/aip/ape/article/2/2/021501/3284761" target="_blank" rel="noopener noreferrer">APL Energy</a>.</p>
+                        </div>
+                    </div></div>
+                </div>
+                <div class="blocs-horizontal-scroll-control blocs-scroll-control-next">
+                    <span class="blocs-round-btn"><svg width="26" height="26" viewBox="0 0 32 32"><path class="horizontal-scroll-icon" d="M10.344,2l13,14-13,14"></path></svg></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- News Section END -->
+</main>
 
 <!-- ScrollToTop Button -->
 <button aria-label="Scroll to top button" class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></button>
 <!-- ScrollToTop Button END-->
 
 
-<!-- bloc-2 -->
-<div class="bloc l-bloc" id="bloc-2">
-	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
-		<div class="row">
-			<div class="col text-start">
-				<p class="text-lg-center mx-auto d-block p-style text-md-center text-center">
-					Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-			</div>
-		</div>
+<!-- Footer (Adapted from the last bloc-2) -->
+<footer class="footer-bloc" id="footer">
+	<div class="content-container">
+		<p>
+			Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+		</p>
 	</div>
-</div>
-<!-- bloc-2 END -->
+</footer>
+<!-- Footer END -->
 
 </div>
 <!-- Main container END -->
     
-
-
-<!-- Additional JS --><script src="./js/jquery.min.js"></script>
-
-
+<!-- Additional JS -->
+<script src="./js/jquery.min.js"></script>
 <script src="./js/bootstrap.bundle.min.js?3655"></script>
 <script src="./js/blocs.min.js?4260"></script>
 <script src="./js/lazysizes.min.js" defer></script>
 <script src="./js/blocsaddons-markdown.js?1097"></script>
 <script src="./js/marked.min.js?2823"></script>
 <!-- Additional JS END -->
-
 
 </body>
 </html>

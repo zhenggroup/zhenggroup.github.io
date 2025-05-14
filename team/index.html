@@ -2,21 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="Zheng Group team, Weiran Zheng, researchers, PhD students, MSc students, electrochemistry lab team">
+    <meta name="description" content="Meet the team of the Electrochemical Interface & Conversion Lab (The Zheng Group) at GTIIT, led by Prof. Weiran Zheng.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="../favicon.png">
     
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?1673">
+	<link rel="stylesheet" type="text/css" href="../style.css?1673"> 
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
+    <!-- Google Fonts links removed as we are using system fonts globally via style.css -->
+    <!--
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <title>Team</title>
+    -->
+    <title>Team - The Zheng Group</title>
 
+    <style>
+        /* Page-specific styles for team/index.html - Common styles are in ../style.css */
+        /* Body background is white by default from style.css, so no override needed here */
 
+        /* PI Section Styling - Refined for minimalist style */
+        .pi-section {
+            background-color: var(--background-color-page); /* Use variable */
+            padding: 2rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px var(--shadow-color-soft); /* Use variable */
+            border: 1px solid var(--border-color-light); /* Use variable */
+            margin-bottom: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: flex-start; 
+        }
+        .pi-image-contact {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+        .pi-image-contact img { /* Applied to .member-photo inside PI section */
+            width: 160px; 
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 3px solid var(--color-primary-blue); /* Use variable */
+            box-shadow: 0 2px 4px var(--shadow-color-soft); /* Use variable */
+        }
+        .pi-image-contact .pi-name {
+            font-size: 1.5em;
+            color: var(--color-dark-blue); /* Use variable */
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .pi-image-contact .pi-title {
+            font-size: 0.95em;
+            color: var(--text-color-medium); /* Use variable */
+            margin-bottom: 1rem;
+        }
+        .pi-contact-links a {
+            color: var(--text-link-color); /* Use variable */
+            margin: 0 0.4rem;
+            font-size: 1.4em; 
+            transition: color 0.2s ease;
+        }
+        .pi-contact-links a:hover {
+            color: var(--text-link-hover-color); /* Use variable */
+        }
+        .pi-details {
+            flex: 1;
+            min-width: 300px;
+        }
+        .pi-details h6 { 
+            font-size: 1.2em;
+            color: var(--color-dark-blue); /* Use variable */
+            font-weight: 600;
+            margin-top: 1.25rem;
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.25rem;
+            border-bottom: 1px solid var(--border-color-medium); /* Use variable */
+        }
+         .pi-details h6:first-child {
+            margin-top: 0;
+        }
+        .pi-details p { 
+            margin-bottom: 0.85rem;
+            line-height: 1.65;
+            font-size: 0.95em;
+            color: var(--text-color-dark); /* Use variable */
+        }
+        .pi-details p strong { 
+            font-weight: 600; 
+            color: var(--text-color-headings); /* Use variable */
+        }
+
+        /* Team Members Grid Styling - Refined for minimalist style */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.75rem;
+            margin-bottom: 3rem;
+        }
+        .team-member-card {
+            background-color: var(--background-color-page); /* Use variable */
+            padding: 1.5rem;
+            border-radius: 6px; 
+            box-shadow: 0 2px 8px var(--shadow-color-soft); /* Use variable */
+            border: 1px solid var(--border-color-light); /* Use variable */
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .team-member-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px var(--shadow-color-medium); /* Use variable */
+        }
+        .team-member-card .member-photo {
+            width: 130px; 
+            height: 130px;
+            border-radius: 50%; 
+            object-fit: cover; 
+            margin-bottom: 1rem;
+            border: 3px solid var(--color-primary-blue); /* Use variable */
+            box-shadow: 0 2px 4px var(--shadow-color-soft); /* Use variable */
+        }
+        .team-member-card .member-name {
+            font-size: 1.25em;
+            color: var(--color-dark-blue); /* Use variable */
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .team-member-card .member-role {
+            font-size: 0.9em;
+            color: var(--text-color-medium); /* Use variable */
+            margin-bottom: 0;
+            flex-grow: 1; 
+        }
+        
+        /* Responsive Adjustments - Global responsive rules are in style.css */
+        /* Page-specific responsive adjustments for team items: */
+        @media (max-width: 991px) { /* md */
+            /* .page-title-container h1 and .section-heading font sizes are handled globally */
+            .pi-section { flex-direction: column; align-items: center; padding: 1.75rem; }
+            .pi-image-contact { flex: 0 0 auto; margin-bottom: 1.5rem; }
+            .pi-details { text-align: left; width: 100%; }
+            .pi-image-contact img { width: 150px; height: 150px; }
+            .team-member-card .member-photo { width: 120px; height: 120px; }
+        }
+
+        @media (max-width: 767px) { /* sm */
+            /* .page-title-container h1 and .section-heading font sizes are handled globally */
+            .team-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.25rem; }
+            .team-member-card { padding: 1.25rem; }
+            .team-member-card .member-photo { width: 110px; height: 110px; }
+            .team-member-card .member-name { font-size: 1.15em; }
+            .pi-image-contact img { width: 140px; height: 140px; }
+            .pi-image-contact .pi-name { font-size: 1.3em; }
+            .pi-details h6 { font-size: 1.1em; }
+            .pi-details p { font-size: 0.9em; }
+        }
+
+        @media (max-width: 480px) { /* xs */
+            /* body font-size handled globally */
+            /* .page-title-container h1 and .section-heading font sizes are handled globally */
+            .team-grid { grid-template-columns: 1fr; gap: 1rem;} 
+            .team-member-card .member-photo { width: 120px; height: 120px; }
+            .pi-section { padding: 1.25rem; gap: 1.5rem;}
+            .pi-image-contact img { width: 130px; height: 130px; }
+            .pi-image-contact .pi-name { font-size: 1.25em; }
+        }
+
+    </style>
     
 <!-- Analytics -->
  
@@ -33,38 +191,37 @@
 <!-- Main container -->
 <div class="page-container">
     
-<header>
-
-<!-- bloc-0 -->
+<header> <!-- Header will be styled by global style.css -->
+<!-- bloc-0: Navigation -->
 <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
 	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
 		<div class="row">
 			<div class="col">
 				<nav class="navbar navbar-light row navbar-expand-md" role="navigation">
 					<div class="container-fluid">
-						<a class="navbar-brand img-protected" href="../"><img src="../img/logo.svg" alt="logo" class="me-2" width="200" height="63"></a>
+						<a class="navbar-brand img-protected" href="../index.html"><img src="../img/logo.svg" alt="The Zheng Group Logo" class="me-2" width="200" height="63"></a>
 						<button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-14477">
 							<span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon" d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
 						</button>
 						<div class="collapse navbar-collapse navbar-35179 navbar-14477">
 								<ul class="site-navigation nav navbar-nav ms-auto">
 									<li class="nav-item">
-										<a href="../" class="nav-link">Home</a>
+										<a href="../index.html" class="nav-link">Home</a>
 									</li>
 									<li class="nav-item">
-										<a href="../research/" class="nav-link">Research</a>
+										<a href="../research/index.html" class="nav-link">Research</a>
 									</li>
 									<li class="nav-item">
-										<a href="../publication/" class="nav-link a-btn">Publication</a>
+										<a href="../publication/index.html" class="nav-link">Publication</a>
 									</li>
 									<li class="nav-item">
-										<a href="." class="nav-link a-btn">Team</a>
+										<a href="./index.html" class="nav-link active">Team</a> 
 									</li>
 									<li class="nav-item">
-										<a href="../resource/" class="nav-link a-btn">Resource</a>
+										<a href="../resource/index.html" class="nav-link">Resource</a>
 									</li>
 									<li class="nav-item">
-										<a href="../news/" class="a-btn nav-link">News</a>
+										<a href="../news/index.html" class="nav-link">News</a>
 									</li>
 								</ul>
 							</div>
@@ -75,173 +232,163 @@
 	</div>
 </div>
 <!-- bloc-0 END -->
-
 </header>
-<!-- bloc-4 -->
-<div class="bloc l-bloc" id="bloc-4">
-	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
-		<div class="row">
-			<div class="col">
-				<h4 class="mb-4">
-					Lab PI
-				</h4>
-				<div class="row mb-lg-3">
-					<div class="align-self-center col-lg-3">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/d622efbb-fdda-451f-91d8-0e27b900b66f.webp"><img src="../img/lazyload-ph.png" data-src="../img/d622efbb-fdda-451f-91d8-0e27b900b66f.jpg" class="img-fluid img-protected rounded-circle mx-auto d-block img-protected img-placeholder-us-style lazyload" alt="WZ" width="130" height="130"></picture>
-						<h5 class="text-lg-center mb-lg-1 mt-lg-1 text-md-center text-sm-center text-center mb-2">
-							Weiran Zheng<br>郑蔚然
-						</h5>
-						<p class="text-lg-center mb-lg-1 mt-lg-1 text-md-center text-sm-center text-center">
-							Associate Professor
-						</p>
-						<div class="text-center">
-							<a href="https://orcid.org/0000-0002-9915-6982" target="_blank"><span class="fab fa-orcid icon-sm icon-margin"></span></a><a href="https://scholar.google.com.hk/citations?user=hEpBUuYAAAAJ&hl=en" target="_blank"><span class="fab fa-google pt-lg-0 pb-lg-0 ps-lg-0 pe-lg-0 icon-sm icon-margin"></span></a><a href="mailto:weiran.zheng@gtiit.edu.cn"><span class="far fa-envelope icon-sm icon-margin"></span></a>
-						</div>
-					</div>
-					<div class="col">
-						<p class="blocsaddons-markdown">
-							###### Employment<br><br>2022 — present **Associate Professor** Department of Chemistry, Guangdong Technion-Israel Institute of Technology<br>2017 — 2022 **Research Fellow** Hong Kong Polytechnic University<br>2015 — 2017 **Postdoc Fellow** Hong Kong Polytechnic University<br><br>###### Education<br><br>2009 — 2015 &nbsp;**Ph.D. (Physical Chemistry)** &nbsp;Wuhan University / University of Oxford (CSC joint PhD program)<br>2005 — 2009 **B.S. (Chemistry)** Wuhan University<br><br>###### Service<br>2024&nbsp;— present **Early Career Editorial Board Member** of **Journal of Electrochemistry (《电化学(中英文)》)** (official journal of the Chinese Electrochemistry Society)<br>2022 — present **Associate Editor** of **Heliyon** (Chemistry Section, Cell Press)<br><br>
-						</p>
-					</div>
-				</div>
-				<h4 class="mb-4">
-					Current member
-				</h4>
-				<div class="row mt-lg-2 mb-lg-2">
-					<div class="col-12 col-lg-3 col-md-6">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/WechatIMG171.webp"><img src="../img/lazyload-ph.png" data-src="../img/WechatIMG171.jpeg" class="img-fluid img-protected rounded-circle mx-auto d-block img-placeholder-us-style img-protected lazyload" alt="WechatIMG171.jpeg" width="130" height="130"></picture>
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Jiajing Zhong<br>钟嘉敬
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							PhD student (Technion-GT)<br>2023 -
-						</p>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/a25005dc4df4171109afb4a3efd090cf.webp"><img src="../img/lazyload-ph.png" data-src="../img/a25005dc4df4171109afb4a3efd090cf.JPG" class="img-fluid img-protected rounded-circle mx-auto d-block img-protected img-placeholder-us-style lazyload" alt="a25005dc4df4171109afb4a3efd090cf.JPG" width="130" height="130"></picture>
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Sijie Chen<br>陈思捷
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							MSc student (Technion-GT)<br>2024 -
-						</p>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/bc9f0bb4fe1cbc20f290c46000d6c702.webp"><img src="../img/lazyload-ph.png" data-src="../img/bc9f0bb4fe1cbc20f290c46000d6c702.JPG" class="img-fluid img-protected rounded-circle mx-auto d-block img-protected img-placeholder-us-style lazyload" alt="a25005dc4df4171109afb4a3efd090cf.JPG" width="130" height="130"></picture>
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Ting Zhang<br>张婷
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							MSc student (SUSTech-GT)<br>2023 -
-						</p>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<img src="../img/lazyload-ph.png" data-src="../img/f2e7908ba3ded17dd17c033581a79250.webp" class="img-fluid img-protected rounded-circle mx-auto d-block img-placeholder-us-style img-protected lazyload" alt="f2e7908ba3ded17dd17c033581a79250" width="130" height="130">
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Zhaohan Wu<br>武昭翰
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							Undergraduate (21MSE)<br>2023 -
-						</p>
-					</div>
-				</div>
-				<div class="row mt-lg-2 mb-lg-2">
-					<div class="col-md-6 col-lg-3">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/7fc5c8360d2a86757e73696a7d7ca0f7.webp"><img src="../img/lazyload-ph.png" data-src="../img/7fc5c8360d2a86757e73696a7d7ca0f7.JPG" class="img-fluid img-protected rounded-circle mx-auto d-block img-placeholder-us-style img-protected lazyload" alt="7fc5c8360d2a86757e73696a7d7ca0f7.JPG" width="130" height="130"></picture>
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Weike Liu<br>刘卫轲
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							Undergraduate (22Chem)<br>2024 -&nbsp;
-						</p>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/Zhengyang%20Deng.webp"><img src="../img/lazyload-ph.png" data-src="../img/Zhengyang%20Deng.jpg" class="img-fluid img-protected rounded-circle mx-auto d-block img-placeholder-us-style img-protected lazyload" alt="f2e7908ba3ded17dd17c033581a79250" width="130" height="130"></picture>
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Zhengyang Deng<br>邓征阳
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							Undergraduate (22Chem)<br>2024 -
-						</p>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/4339e05276f975da75344856d6a2ea0e%202.webp"><img src="../img/lazyload-ph.png" data-src="../img/4339e05276f975da75344856d6a2ea0e%202.JPG" class="img-fluid img-protected rounded-circle mx-auto d-block img-placeholder-us-style img-protected lazyload" alt="f2e7908ba3ded17dd17c033581a79250" width="130" height="130"></picture>
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Guanxi Wu<br>吴冠希
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							Undergraduate (22Chem)<br>2024 -
-						</p>
-					</div>
-					<div class="col">
-					</div>
-				</div>
-				<h4 class="mb-4">
-					Previous member
-				</h4>
-				<div class="row mt-lg-2 mb-lg-2">
-					<div class="col-md-6 col-lg-3">
-						<picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/WechatIMG109.webp"><img src="../img/lazyload-ph.png" data-src="../img/WechatIMG109.jpeg" class="img-fluid img-protected rounded-circle mx-auto d-block img-protected img-placeholder-us-style lazyload" alt="WechatIMG109.jpeg" width="130" height="130"></picture>
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Jing Chen<br>陈晶
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							Research Associate<br>2022 - 2024
-						</p>
-					</div>
-					<div class="col-md-6 col-lg-3">
-						<img src="../img/lazyload-ph.png" data-src="../img/42f44f20efb0f6596b699aaabd2cceb3.webp" class="img-fluid img-protected rounded-circle mx-auto d-block img-protected img-placeholder-us-style lazyload" alt="42f44f20efb0f6596b699aaabd2cceb3" width="130" height="130">
-						<h5 class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center mb-2">
-							Lijie Du<br>杜礼杰
-						</h5>
-						<p class="text-lg-center mt-lg-1 mb-lg-1 text-sm-center text-center">
-							Research Associate<br>2023 - 2024
-						</p>
-					</div>
-					<div class="col">
-					</div>
-					<div class="col">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-4 END -->
 
-<!-- bloc-2 -->
-<div class="bloc l-bloc" id="bloc-2">
-	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
-		<div class="row">
-			<div class="col text-start">
-				<p class="text-lg-center mx-auto d-block p-style text-md-center text-center">
-					Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-			</div>
-		</div>
-	</div>
+<div class="page-title-container"> <!-- This will be styled by global style.css -->
+    <div class="content-container">
+        <h1>Meet Our Team</h1>
+    </div>
 </div>
-<!-- bloc-2 END -->
+
+<main>
+    <div class="content-container">
+        
+        <h2 class="section-heading">Lab PI</h2> <!-- This will be styled by global style.css -->
+        <section class="pi-section">
+            <div class="pi-image-contact">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/d622efbb-fdda-451f-91d8-0e27b900b66f.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/d622efbb-fdda-451f-91d8-0e27b900b66f.jpg" class="lazyload member-photo" alt="Prof. Weiran Zheng" width="180" height="180"> 
+                </picture>
+                <h3 class="pi-name">Weiran Zheng (郑蔚然)</h3>
+                <p class="pi-title">Associate Professor</p>
+                <div class="pi-contact-links">
+                    <a href="https://orcid.org/0000-0002-9915-6982" target="_blank" aria-label="ORCID"><span class="fab fa-orcid"></span></a>
+                    <a href="https://scholar.google.com.hk/citations?user=hEpBUuYAAAAJ&hl=en" target="_blank" aria-label="Google Scholar"><span class="fab fa-google"></span></a>
+                    <a href="mailto:weiran.zheng@gtiit.edu.cn" aria-label="Email"><span class="far fa-envelope"></span></a>
+                </div>
+            </div>
+            <div class="pi-details">
+                <h6>Employment</h6>
+                <p>
+                2022 — present <strong>Associate Professor</strong> Department of Chemistry, Guangdong Technion-Israel Institute of Technology<br>
+                2017 — 2022 <strong>Research Fellow</strong> Hong Kong Polytechnic University<br>
+                2015 — 2017 <strong>Postdoc Fellow</strong> Hong Kong Polytechnic University
+                </p>
+                <h6>Education</h6>
+                <p>
+                2009 — 2015 <strong>Ph.D. (Physical Chemistry)</strong> Wuhan University / University of Oxford (CSC joint PhD program)<br>
+                2005 — 2009 <strong>B.S. (Chemistry)</strong> Wuhan University
+                </p>
+                <h6>Service</h6>
+                <p>
+                2024 — present <strong>Early Career Editorial Board Member</strong> of <strong>Journal of Electrochemistry (《电化学(中英文)》)</strong> (official journal of the Chinese Electrochemistry Society)<br>
+                2022 — present <strong>Associate Editor</strong> of <strong>Heliyon</strong> (Chemistry Section, Cell Press)
+                </p>
+            </div>
+        </section>
+
+        <h2 class="section-heading">Current Members</h2> <!-- This will be styled by global style.css -->
+        <section class="team-grid" id="current-members">
+            <!-- Jiajing Zhong -->
+            <div class="team-member-card">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/WechatIMG171.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/WechatIMG171.jpeg" class="lazyload member-photo" alt="Jiajing Zhong" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Jiajing Zhong (钟嘉敬)</h3>
+                <p class="member-role">PhD student (Technion-GT)<br>2023 -</p>
+            </div>
+            <!-- Sijie Chen -->
+            <div class="team-member-card">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/a25005dc4df4171109afb4a3efd090cf.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/a25005dc4df4171109afb4a3efd090cf.JPG" class="lazyload member-photo" alt="Sijie Chen" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Sijie Chen (陈思捷)</h3>
+                <p class="member-role">MSc student (Technion-GT)<br>2024 -</p>
+            </div>
+            <!-- Ting Zhang -->
+            <div class="team-member-card">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/bc9f0bb4fe1cbc20f290c46000d6c702.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/bc9f0bb4fe1cbc20f290c46000d6c702.JPG" class="lazyload member-photo" alt="Ting Zhang" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Ting Zhang (张婷)</h3>
+                <p class="member-role">MSc student (SUSTech-GT)<br>2023 -</p>
+            </div>
+            <!-- Zhaohan Wu -->
+            <div class="team-member-card">
+                 <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/f2e7908ba3ded17dd17c033581a79250.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/f2e7908ba3ded17dd17c033581a79250.webp" class="lazyload member-photo" alt="Zhaohan Wu" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Zhaohan Wu (武昭翰)</h3>
+                <p class="member-role">Undergraduate (21MSE)<br>2023 -</p>
+            </div>
+            <!-- Weike Liu -->
+            <div class="team-member-card">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/7fc5c8360d2a86757e73696a7d7ca0f7.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/7fc5c8360d2a86757e73696a7d7ca0f7.JPG" class="lazyload member-photo" alt="Weike Liu" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Weike Liu (刘卫轲)</h3>
+                <p class="member-role">Undergraduate (22Chem)<br>2024 -</p>
+            </div>
+            <!-- Zhengyang Deng -->
+            <div class="team-member-card">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/Zhengyang%20Deng.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/Zhengyang%20Deng.jpg" class="lazyload member-photo" alt="Zhengyang Deng" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Zhengyang Deng (邓征阳)</h3>
+                <p class="member-role">Undergraduate (22Chem)<br>2024 -</p>
+            </div>
+            <!-- Guanxi Wu -->
+            <div class="team-member-card">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/4339e05276f975da75344856d6a2ea0e%202.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/4339e05276f975da75344856d6a2ea0e%202.JPG" class="lazyload member-photo" alt="Guanxi Wu" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Guanxi Wu (吴冠希)</h3>
+                <p class="member-role">Undergraduate (22Chem)<br>2024 -</p>
+            </div>
+        </section>
+
+        <h2 class="section-heading">Previous Members</h2> <!-- This will be styled by global style.css -->
+        <section class="team-grid" id="previous-members">
+            <!-- Jing Chen -->
+            <div class="team-member-card">
+                <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/WechatIMG109.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/WechatIMG109.jpeg" class="lazyload member-photo" alt="Jing Chen" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Jing Chen (陈晶)</h3>
+                <p class="member-role">Research Associate<br>2022 - 2024</p>
+            </div>
+            <!-- Lijie Du -->
+            <div class="team-member-card">
+                 <picture>
+                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/42f44f20efb0f6596b699aaabd2cceb3.webp">
+                    <img src="../img/lazyload-ph.png" data-src="../img/42f44f20efb0f6596b699aaabd2cceb3.webp" class="lazyload member-photo" alt="Lijie Du" width="140" height="140">
+                </picture>
+                <h3 class="member-name">Lijie Du (杜礼杰)</h3>
+                <p class="member-role">Research Associate<br>2023 - 2024</p>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer-bloc" id="footer"> <!-- This will be styled by global style.css -->
+	<div class="content-container">
+		<p>
+			Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+		</p>
+	</div>
+</footer>
+<!-- Footer END -->
 
 </div>
 <!-- Main container END -->
     
-
-
-<!-- Additional JS --><script src="../js/jquery.min.js"></script>
-
-
+<!-- Additional JS -->
+<script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script>
 <script src="../js/lazysizes.min.js" defer></script>
-<script src="../js/blocsaddons-markdown.js?551"></script>
-<script src="../js/marked.min.js?5255"></script>
+<!-- Removed markdown scripts as they were not present in the original team page and are not needed for this structure -->
 <!-- Additional JS END -->
-
 
 </body>
 </html>

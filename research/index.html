@@ -2,21 +2,221 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="electrochemistry research, operando methods, electrocatalyst design, Weiran Zheng, GTIIT, Zheng Group research areas, advanced electrochemistry">
+    <meta name="description" content="Explore the core research areas of the Electrochemical Interface and Conversion Lab (The Zheng Group) at GTIIT, including operando electrochemistry, electrocatalyst design, and advanced electrochemistry methods.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="../favicon.png">
     
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?1673">
+	<link rel="stylesheet" type="text/css" href="../style.css?1673"> 
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <title>Research</title>
+    <!-- Google Fonts links are not needed as we use system fonts via style.css -->
+    <title>Research - The Zheng Group</title>
 
+    <style>
+        /* Page-specific styles for research/index.html - Common styles are in ../style.css */
+        /* Body background is white by default from style.css, so no override needed here */
 
+        /* Main Content Styling */
+        main {
+            padding-bottom: 3rem;
+        }
+        
+        /* Modifier for left-aligned section heading (used for Guiding Principles) */
+        .section-heading.left-aligned { 
+            text-align:left; 
+            transform:none; 
+            left:0; 
+            border-bottom:none; /* Guiding principles title doesn't have the bottom border */
+            font-size:1.8em; /* Specific size for this context */
+            color: var(--color-primary-blue); /* Use variable */
+            margin-bottom: 1.5rem;
+        }
+
+        /* Feynman Quote Styling */
+        .feynman-quote-section { 
+            background-color: var(--background-color-light-gray); /* Use variable */
+            padding: 2.5rem; 
+            margin-top: 0; 
+            margin-bottom: 3rem; 
+            border-radius: 8px;
+            border-left: 5px solid var(--color-primary-blue); /* Use variable */
+        }
+        .feynman-quote-section blockquote {
+            margin: 0;
+            font-style: italic;
+            color: var(--text-color-dark); /* Use variable */
+            font-size: 1.1em; 
+        }
+        .feynman-quote-section blockquote p {
+            margin-bottom: 1.25em;
+        }
+        .feynman-quote-section blockquote p:last-of-type {
+            margin-bottom: 0;
+        }
+        .feynman-quote-section cite { 
+            display: block;
+            text-align: right;
+            margin-top: 1.5em;
+            font-weight: bold;
+            color: var(--color-primary-blue); /* Use variable */
+        }
+        .feynman-quote-section .roboto-it { /* This class is from the original Blocs template, ensures italic style */
+            font-style: italic; 
+            /* font-family will be inherited from body (system font stack) */
+        }
+
+        /* Research Areas Section */
+        .research-section {
+            display: grid;
+            gap: 2.5rem; 
+        }
+
+        .research-card {
+            background-color: var(--background-color-page); /* Use variable */
+            padding: 2rem; 
+            border-radius: 8px;
+            box-shadow: 0 3px 10px var(--shadow-color-soft); /* Use variable */
+            border: 1px solid var(--border-color-light); /* Use variable */
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex; 
+            flex-wrap: wrap; 
+            align-items: flex-start;
+        }
+        .research-card:hover {
+            transform: translateY(-4px); 
+            box-shadow: 0 5px 15px var(--shadow-color-medium); /* Use variable */
+        }
+
+        .research-card-image-container {
+            flex: 0 0 300px;
+            margin-right: 2rem; 
+            margin-bottom: 1.5rem;
+        }
+        .research-card-image-container img,
+        .research-card-image-container picture img {
+            width: 100%;
+            height: auto;
+            max-height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block; 
+        }
+
+        .research-card-content {
+            flex: 1;
+            min-width: 280px; 
+        }
+
+        .research-card h2 { 
+            font-size: 1.8em; 
+            color: var(--color-primary-blue); /* Use variable */
+            margin-top: 0; 
+            margin-bottom: 0.75rem;
+        }
+        
+        .research-card .research-topic-intro { 
+             margin-bottom: 1.25rem;
+             color: var(--text-color-medium); /* Use variable */
+             line-height: 1.65; 
+        }
+
+        .research-card h3 { /* "Our topic", "Related publications" */
+            font-size: 1.3em; 
+            color: var(--color-dark-blue); /* Use variable */
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border-color-medium); /* Use variable */
+            padding-bottom: 0.4rem;
+        }
+
+        .research-card ul {
+            list-style-position: outside;
+            padding-left: 20px;
+            margin-bottom: 1rem;
+        }
+        .research-card ul li {
+            margin-bottom: 0.5rem;
+            color: var(--text-color-dark); /* Use variable */
+        }
+        .research-card ul li em, .research-card p em { 
+            font-style: italic;
+        }
+        .research-card .publications-list p,
+        .research-card .publications-list li { 
+            margin-bottom: 0.3rem;
+            font-size: 0.9em; 
+            line-height: 1.45;
+        }
+        .research-card .publications-list ul { 
+            padding-left: 0;
+            list-style-type: none; 
+        }
+
+        /* Responsive Design Adjustments - Global responsive rules are in style.css */
+        /* Page-specific responsive adjustments for research items: */
+        @media (max-width: 991px) { 
+             .research-card-image-container {
+                flex: 0 0 260px; 
+                margin-right: 1.5rem;
+            }
+            /* .page-title-container h1 and .section-heading font sizes are handled globally */
+             .research-card h2 { font-size: 1.7em; }
+             .research-card h3 { font-size: 1.2em; }
+        }
+
+        @media (max-width: 767px) { 
+            /* #bloc-0 styles handled globally */
+            /* .page-title-container h1 and .section-heading font sizes handled globally */
+            .section-heading.left-aligned { font-size: 1.6em; } /* Specific responsive size */
+
+            .research-card {
+                flex-direction: column; 
+                padding: 1.5rem;
+            }
+            .research-card-image-container {
+                width: 100%; 
+                max-width: 350px; 
+                margin-right: 0;
+                margin-bottom: 1.5rem; 
+                align-self: center; 
+            }
+             .research-card-image-container img {
+                max-height: 200px;
+            }
+            .research-card h2 {
+                font-size: 1.6em;
+            }
+            .research-card h3 {
+                font-size: 1.2em;
+            }
+            .feynman-quote-section {
+                padding: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* body font-size handled globally */
+            /* .page-title-container h1 and .section-heading font sizes handled globally */
+            .section-heading.left-aligned { font-size: 1.4em; } /* Specific responsive size */
+            .research-card {
+                padding: 1.25rem;
+            }
+             .research-card h2 {
+                font-size: 1.5em;
+            }
+             .research-card-image-container img {
+                max-height: 180px;
+            }
+            .feynman-quote-section {
+                padding: 1.5rem;
+            }
+            .feynman-quote-section blockquote { font-size: 1.05em; }
+            /* footer styles handled globally */
+        }
+    </style>
     
 <!-- Analytics -->
  
@@ -33,38 +233,37 @@
 <!-- Main container -->
 <div class="page-container">
     
-<header>
-
-<!-- bloc-0 -->
+<header> <!-- Header will be styled by global style.css -->
+<!-- bloc-0: Navigation -->
 <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
 	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
 		<div class="row">
 			<div class="col">
 				<nav class="navbar navbar-light row navbar-expand-md" role="navigation">
 					<div class="container-fluid">
-						<a class="navbar-brand img-protected" href="../"><img src="../img/logo.svg" alt="logo" class="me-2" width="200" height="63"></a>
+						<a class="navbar-brand img-protected" href="../index.html"><img src="../img/logo.svg" alt="The Zheng Group Logo" class="me-2" width="200" height="63"></a>
 						<button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-14477">
 							<span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon" d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
 						</button>
 						<div class="collapse navbar-collapse navbar-35179 navbar-14477">
 								<ul class="site-navigation nav navbar-nav ms-auto">
 									<li class="nav-item">
-										<a href="../" class="nav-link">Home</a>
+										<a href="../index.html" class="nav-link">Home</a>
 									</li>
 									<li class="nav-item">
-										<a href="." class="nav-link">Research</a>
+										<a href="./index.html" class="nav-link active">Research</a>
 									</li>
 									<li class="nav-item">
-										<a href="../publication/" class="nav-link a-btn">Publication</a>
+										<a href="../publication/index.html" class="nav-link">Publication</a>
 									</li>
 									<li class="nav-item">
-										<a href="../team/" class="nav-link a-btn">Team</a>
+										<a href="../team/index.html" class="nav-link">Team</a>
 									</li>
 									<li class="nav-item">
-										<a href="../resource/" class="nav-link a-btn">Resource</a>
+										<a href="../resource/index.html" class="nav-link">Resource</a>
 									</li>
 									<li class="nav-item">
-										<a href="../news/" class="a-btn nav-link">News</a>
+										<a href="../news/index.html" class="nav-link">News</a>
 									</li>
 								</ul>
 							</div>
@@ -75,183 +274,132 @@
 	</div>
 </div>
 <!-- bloc-0 END -->
-
 </header>
-<!-- bloc-3 -->
-<div class="bloc l-bloc object-hidden" id="bloc-3">
-	<div class="container bloc-sm-lg bloc-sm-md bloc-sm-sm bloc-sm">
-		<div class="row">
-			<div class="col-md-6 text-start">
-				<div>
-				</div>
-				<h4 class="mb-4 text-lg-center mt-lg-2">
-					Operando Electrochemical Methods<br>
-				</h4>
-				<p class="blocsaddons-markdown">
-					The electrochemical interface is where the electron transfer between electrode/electrocatalyst/electrolyte happens. Understanding the interface reveals the structure-property relationship of electrocatalysts. *In situ* techniques are helpful to study the interface.<br><br>**Our topic**<br>1. *In situ* atomic force microscopy (EC-AFM)<br>2. *In situ* mass spectroscopy coupled electrolysis<br><br>**Read more**<br>1. W. Zheng, *Chemistry Methods*, **2022**, e202200042<br>2. W. Zheng, et al., *ACS Energy Letters*, **2021**, 6, 2838–2843<br>3. W. Zheng, et al., *ACS Catalysis*, **2020**, 20, 81–92<br>
-				</p>
-			</div>
-			<div class="col-md-6 text-start">
-				<div>
-				</div>
-				<h4 class="mb-4 text-lg-center mt-lg-2">
-					Electrocatalyst Design and Modulation<br>
-				</h4>
-				<p class="blocsaddons-markdown">
-					Electrocatalysts are materials that can promote electrochemical conversion at a fixed potential. For the best efficiency, the materials must have a suitable surface atomic configuration and adsorption energy. The rational design of active sites is the best way to achieve this.<br><br>**Our topic**<br>1. Electrochemical synthesis of inorganic materials<br>2. Ammonia electrooxidation, water electrolysis<br><br>**Read more**<br>1. W. Zheng, *Analysis & Sensing*, **2022**, e202200070<br>2. W. Zheng, et al., *Small*, **2021**, 17, 2007768<br>3. W. Zheng, et al., *Nanoscale*, **2021**, 13, 15177–15187<br>
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-3 END -->
 
-<!-- bloc-5 -->
-<div class="bloc l-bloc" id="bloc-5">
-	<div class="container bloc-lg bloc-sm-lg">
-		<div class="row">
-			<div class="col">
-				<h6 class="mb-4 mb-lg-2">
-					We value the following statement by Prof. Richard Feynman&nbsp;in research:
-				</h6>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col text-start">
-				<div class="blockquote">
-					<p class="roboto-it">
-						The first principle is that you must not fool yourself--and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that.<br>It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.<br>
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="page-title-container"> <!-- This will be styled by global style.css -->
+    <div class="content-container">
+        <h1>Our Research Focus</h1>
+    </div>
 </div>
-<!-- bloc-5 END -->
 
-<!-- bloc-4 -->
-<div class="bloc l-bloc" id="bloc-4">
-	<div class="container bloc-lg bloc-no-padding-lg">
-		<div class="row mt-lg-2 mb-lg-2">
-			<div class="col-sm-4 col text-start align-self-center left-box pt-lg-0 pb-lg-0 ps-lg-0 pe-lg-0 me-lg-0 ms-lg-0 mb-lg-0 mt-lg-0">
-				<h4 class="mb-4 text-lg-center left-title mx-auto d-block ps-lg-0 pe-lg-0 ms-lg-0 me-lg-0 mt-lg-0 mb-lg-0 pt-lg-4 pb-lg-4">
-					Operando Electrochemistry<br>
-				</h4><picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/SPM.webp"><img src="../img/lazyload-ph.png" data-src="../img/SPM.jpg" class="img-fluid img-protected mx-auto d-block image-size-research nonein animated flash-hvr pt-lg-0 pb-lg-0 ps-lg-0 pe-lg-0 me-lg-0 ms-lg-0 mb-lg-0 mt-lg-0 lazyload" alt="SPM" width="388" height="259"></picture>
-			</div>
-			<div class="col-sm-8 col text-start align-self-center">
-				<p class="research-topic">
-					The electrochemical interface is where the electron transfer between the electrode, electrocatalyst, and electrolyte. Understanding the interface reveals the structure-property relationship of electrocatalysts. In situ techniques are helpful to study the interface.
-				</p>
-				<p>
-				</p>
-				<h6>
-					Our topic
-				</h6>
-				<p>
-					- In situ electrochemical atomic force microscopy (EC-AFM)<br>- In situ differential electrochemical mass spectroscopy (DEMS)<br>
-				</p>
-				<h6>
-					Related publications
-				</h6>
-				<p class="p-bloc-4-style">
-					- J. Chen, et al., Journal of Catalysis, 2024, 438, 115720.<br>- W. Zheng, Chemistry Methods, 2022, e202200042.<br>- W. Zheng, et al., ACS Energy Letters, 2021, 6, 2838–2843.<br>- W. Zheng, et al., ACS Catalysis, 2020, 20, 81–92.<br>
-				</p>
-			</div>
-		</div>
-		<div class="row mt-lg-2 mb-lg-2">
-			<div class="col-sm-4 col text-start left-box mt-lg-0 mb-lg-0 ms-lg-0 me-lg-0 pt-lg-0 pb-lg-0 ps-lg-0 pe-lg-0 align-self-center">
-				<h4 class="mb-4 text-lg-center left-title mb-lg-0 mt-lg-0 ms-lg-0 me-lg-0 pt-lg-4 pb-lg-4 mx-auto d-block">
-					Electrocatalyst Design
-				</h4><picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/catalyst%20deactivation.webp"><img src="../img/lazyload-ph.png" data-src="../img/catalyst%20deactivation.jpg" class="img-fluid img-protected mx-auto d-block image-size-research lazyload" alt="SPM" width="388" height="259"></picture>
-			</div>
-			<div class="col-sm-8 col text-start align-self-center">
-				<p class="research-topic">
-					Electrocatalysts are materials that can promote electrochemical conversion at a fixed potential. For the best efficiency, the materials must have a suitable surface atomic configuration and adsorption energy to achieve a good stability. The rational design of active sites is the best way to achieve this.
-				</p>
-				<h6>
-					Our topic
-				</h6>
-				<p>
-					- Electrochemical synthesis of inorganic materials<br>- Ammonia electrooxidation, water electrolysis<br>
-				</p>
-				<p>
-				</p>
-				
-				<p>
-				</p>
-				<h6>
-					Related publications
-				</h6>
-				<p class="p-10-style">
-					- J. Zhong, et al., Electrochimica Acta, 2024,&nbsp;507, 145178<br>- L. Du and W. Zheng, APL Energy, 2024, 2, 021501<br>- W. Zheng, Analysis & Sensing, 2022, e2022000702. <br>- W. Zheng, et al., Small, 2021, 17, 2007768.<br>- W. Zheng, et al., Nanoscale, 2021, 13, 15177–15187.<br>
-				</p>
-			</div>
-		</div>
-		<div class="row mt-lg-2 mb-lg-2">
-			<div class="col-sm-4 col text-start left-box align-self-center mt-lg-0 mb-lg-0 ms-lg-0 me-lg-0 pt-lg-0 pb-lg-0 ps-lg-0 pe-lg-0">
-				<h4 class="mb-4 text-lg-center left-title mx-auto d-block mb-lg-0 mt-lg-0 ms-lg-0 me-lg-0 pt-lg-4 pb-lg-4">
-					Electrochemistry Methods
-				</h4><picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/images_large_nz4c01869_0001.webp"><img src="../img/lazyload-ph.png" data-src="../img/images_large_nz4c01869_0001.jpeg" class="img-fluid img-protected mx-auto d-block image-size-research lazyload" alt="SPM" width="388" height="287"></picture>
-			</div>
-			<div class="col-sm-8 col text-start align-self-center">
-				<p class="research-topic">
-					Electrochemical results can be misleading if wrong concepts and inappropriate experimental procedures are adopted. Examining all details is essential to gaining a fundamental understanding of the electrochemical process.
-				</p>
-				<h6>
-					Our topic
-				</h6>
-				<p>
-					- Reproducibility of current electrochemical results<br>- Misleading concepts related to electrochemical process<br>
-				</p>
-				<p>
-				</p>
-				
-				
-				<h6>
-					Related publications
-				</h6>
-				<p class="p-10-style">
-					- W. Zheng and L. Du, ACS Energy Letters, 2024, 9, 4581-4586.<br>- W. Zheng,&nbsp;ACS Energy Letters, 2023, 8, 1952-1958.<br>- W. Zheng, et al.,&nbsp;ACS Energy Letters, 2021, 6, 2838–2843.<br>-&nbsp;W. Zheng, et al.,&nbsp;ACS Energy Letters, 2020, 5, 3260-3264.
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-4 END -->
+<main>
+    <div class="content-container"> 
+        
+        <section class="feynman-quote-section" id="guiding-principles">
+            <!-- Changed class to "section-heading left-aligned" -->
+            <h2 class="section-heading left-aligned">Guiding Principles</h2>
+            <blockquote class="blockquote">
+                <p class="roboto-it"> <!-- roboto-it class kept for italic style, font family from body -->
+                    The first principle is that you must not fool yourself--and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that.<br>It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.<br>
+                </p>
+                <cite>&mdash; Prof. Richard Feynman</cite>
+            </blockquote>
+        </section>
 
-<!-- bloc-2 -->
-<div class="bloc l-bloc" id="bloc-2">
-	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
-		<div class="row">
-			<div class="col text-start">
-				<p class="text-lg-center mx-auto d-block p-style text-md-center text-center">
-					Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
-				</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col">
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-2 END -->
+        <!-- Changed class to "section-heading" -->
+        <h2 class="section-heading">Core Research Areas</h2>
+        <section id="research-areas" class="research-section">
+            
+            <div class="research-card">
+                <div class="research-card-image-container">
+                    <picture>
+                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/SPM.webp">
+                        <img src="../img/lazyload-ph.png" data-src="../img/SPM.jpg" class="lazyload" alt="Illustration for Operando Electrochemistry">
+                    </picture>
+                </div>
+                <div class="research-card-content">
+                    <h2>Operando Electrochemistry</h2>
+                    <p class="research-topic-intro">
+                        The electrochemical interface is where the electron transfer between the electrode, electrocatalyst, and electrolyte. Understanding the interface reveals the structure-property relationship of electrocatalysts. <em>In situ</em> techniques are helpful to study the interface.
+                    </p>
+                    <h3>Our topic</h3>
+                    <ul>
+                        <li><em>In situ</em> electrochemical atomic force microscopy (EC-AFM)</li>
+                        <li><em>In situ</em> differential electrochemical mass spectroscopy (DEMS)</li>
+                    </ul>
+                    <h3>Related publications</h3>
+                    <ul class="publications-list"> 
+                        <li>J. Chen, et al., Journal of Catalysis, 2024, 438, 115720.</li>
+                        <li>W. Zheng, Chemistry Methods, 2023, 3(2), e202200042.</li>
+                        <li>W. Zheng, et al., ACS Energy Letters, 2021, 6, 2838–2843.</li>
+                        <li>W. Zheng, et al., ACS Catalysis, 2020, 10, 81–92.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <div class="research-card-image-container">
+                    <picture>
+                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/catalyst%20deactivation.webp">
+                        <img src="../img/lazyload-ph.png" data-src="../img/catalyst%20deactivation.jpg" class="lazyload" alt="Illustration for Electrocatalyst Design">
+                    </picture>
+                </div>
+                <div class="research-card-content">
+                    <h2>Electrocatalyst Design</h2>
+                    <p class="research-topic-intro">
+                        Electrocatalysts are materials that can promote electrochemical conversion at a fixed potential. For the best efficiency, the materials must have a suitable surface atomic configuration and adsorption energy to achieve a good stability. The rational design of active sites is the best way to achieve this.
+                    </p>
+                    <h3>Our topic</h3>
+                    <ul>
+                        <li>Electrochemical synthesis of inorganic materials</li>
+                        <li>Ammonia electrooxidation, water electrolysis</li>
+                    </ul>
+                    <h3>Related publications</h3>
+                     <ul class="publications-list"> 
+                        <li>J. Zhong, et al., Electrochimica Acta, 2024,&nbsp;497, 145178</li>
+                        <li>L. Du and W. Zheng, APL Energy, 2024, 2, 021501</li>
+                        <li>W. Zheng, Analysis & Sensing, 2023, 3(1), e202200070.</li>
+                        <li>W. Zheng, et al., Small, 2021, 17, 2007768.</li>
+                        <li>W. Zheng, et al., Nanoscale, 2021, 13, 15177–15187.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="research-card">
+                <div class="research-card-image-container">
+                    <picture>
+                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/images_large_nz4c01869_0001.webp">
+                        <img src="../img/lazyload-ph.png" data-src="../img/images_large_nz4c01869_0001.jpeg" class="lazyload" alt="Illustration for Electrochemistry Methods">
+                    </picture>
+                </div>
+                <div class="research-card-content">
+                    <h2>Electrochemistry Methods</h2>
+                    <p class="research-topic-intro">
+                        Electrochemical results can be misleading if wrong concepts and inappropriate experimental procedures are adopted. Examining all details is essential to gaining a fundamental understanding of the electrochemical process.
+                    </p>
+                    <h3>Our topic</h3>
+                    <ul>
+                        <li>Reproducibility of current electrochemical results</li>
+                        <li>Misleading concepts related to electrochemical process</li>
+                    </ul>
+                    <h3>Related publications</h3>
+                    <ul class="publications-list"> 
+                        <li>W. Zheng and L. Du, ACS Energy Letters, 2024, 9, 4581-4586.</li>
+                        <li>W. Zheng,&nbsp;ACS Energy Letters, 2023, 8, 1952-1958.</li>
+                        <li>W. Zheng, et al.,&nbsp;ACS Energy Letters, 2021, 6, 2838–2843.</li>
+                        <li>W. Zheng, et al.,&nbsp;ACS Energy Letters, 2020, 5, 3260-3264.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="footer-bloc" id="footer"> <!-- This will be styled by global style.css -->
+    <div class="content-container">
+        <p>
+            Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+        </p>
+    </div>
+</footer>
 
 </div>
 <!-- Main container END -->
     
-
-
-<!-- Additional JS --><script src="../js/jquery.min.js"></script>
-
-
+<script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script>
 <script src="../js/lazysizes.min.js" defer></script>
-<script src="../js/blocsaddons-markdown.js?1316"></script>
-<script src="../js/marked.min.js?1586"></script>
-<!-- Additional JS END -->
-
-
+<!-- Markdown scripts removed as they are not used on this page based on original -->
 </body>
 </html>
