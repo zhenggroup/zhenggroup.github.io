@@ -15,7 +15,9 @@ const allPublications = [
         authors: "<b><u>S. Chen</u></b>,^ <b><u>T. Zhang</u></b>,^ L. Zheng, J. Gao, X. Huang, J. Gu, C. Vogt,&nbsp;<b><u>W. Zheng</u></b>*",
         title: "Selective Ammonia Electrooxidation on RuO2: Competitive and Synergistic Interplay between Ammonia and Hydroxide",
         journal: "The Journal of Physical Chemistry C, 2025, accepted",
-        imageUrl: "../img/Screenshot%202025-04-30%20at%208.27.41%E2%80%AFPM.png", imageAlt: "TOC for Selective Ammonia Electrooxidation"
+        doi: "10.1021/acs.jpcc.5c02770",
+        imageUrl: "../img/Screenshot%202025-04-30%20at%208.27.41%E2%80%AFPM.png", imageAlt: "TOC for Selective Ammonia Electrooxidation",
+        dimensionsDoi: "10.1021/acs.jpcc.5c02770"
     }, 
     {
         number: 45, year: 2025, type: "Invited Review",
