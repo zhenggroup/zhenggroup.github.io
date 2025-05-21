@@ -17,6 +17,7 @@ const allPublications = [
         journal: "The Journal of Physical Chemistry C, 2025, accepted",
         doi: "10.1021/acs.jpcc.5c02770",
         imageUrl: "../img/Screenshot%202025-04-30%20at%208.27.41%E2%80%AFPM.png", imageAlt: "TOC for Selective Ammonia Electrooxidation",
+        comments: ["Featured on the cover"],
         dimensionsDoi: "10.1021/acs.jpcc.5c02770"
     }, 
     {
