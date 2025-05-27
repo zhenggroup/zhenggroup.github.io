@@ -2,14 +2,14 @@
 	wzheng
 	About: The Zheng Lab.
 	Author: Weiran Zheng
-	Version: 1.3 (Centralized Color Control with CSS Variables)
+	Version: 1.3.1 (Centralized Color Control with CSS Variables, Concise Refinements)
 -----------------------------------------------------------------------------------*/
 
 /* Define Color Palette using CSS Custom Properties */
 :root {
     --color-primary-blue: #0056b3;
     --color-dark-blue: #004080;
-    
+
     --text-color-dark: #333333;      /* Main body text, darker elements */
     --text-color-headings: #000000;  /* Main headings */
     --text-color-medium: #555555;    /* Secondary text */
@@ -19,17 +19,20 @@
     --text-link-hover-color: var(--color-dark-blue);
 
     --background-color-page: #ffffff;
-    --background-color-light-gray: #f8f9fa; /* For subtle background variations if needed */
-    --background-color-accent-tag: #e9ecef; /* e.g., publication type tag */
+    --background-color-light-gray: #f8f9fa;
+    --background-color-accent-tag: #e9ecef;
 
-    --border-color-light: #eeeeee;   /* Light borders */
-    --border-color-medium: #e0e0e0;  /* Slightly darker borders */
-    
+    --border-color-light: #eeeeee;
+    --border-color-medium: #e0e0e0;
+
     --footer-background: #2c3e50;
     --footer-text-color: #bdc3c7;
 
     --shadow-color-soft: rgba(0,0,0,0.05);
     --shadow-color-medium: rgba(0,0,0,0.1);
+
+    /* Added for consistency if used by page-specific styles */
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* Global Resets and Base Styles */
@@ -46,7 +49,7 @@ body {
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: var(--font-family-sans-serif); /* Use variable */
     line-height: 1.6;
     color: var(--text-color-dark);
     font-size: 16px;
@@ -56,28 +59,28 @@ body {
     overflow: hidden;
 }
 
-a { /* General link styling */
+a {
     color: var(--text-link-color);
-    text-decoration: none; /* Remove default underline, add contextually */
+    text-decoration: none;
 }
 a:hover {
     color: var(--text-link-hover-color);
-    text-decoration: none; /* Keep no underline on hover by default, can be added specifically */
+    /* text-decoration: none; by default, can be overridden */
     cursor: pointer;
 }
-button { /* Only transition, no color here as buttons vary */
+button {
     transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out, opacity .2s ease-in-out;
     outline: none !important;
 }
 
-
 .content-container {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1100px; /* Consider making this a variable if it's used elsewhere */
     margin: 0 auto;
     padding: 0 15px;
 }
 
+/* Preloader & Blocsapp Specific Utilities */
 .scroll-fx-lock-init {
     position: fixed !important;
     top: 0;
@@ -115,29 +118,21 @@ button { /* Only transition, no color here as buttons vary */
     100% { opacity: 0; visibility: hidden; }
 }
 
-/* Web Font @font-face declarations REMOVED/COMMENTED OUT */
-
-.bloc {
+.bloc { /* General Blocsapp section container */
     width: 100%;
     clear: both;
-    background: 50% 50% no-repeat;
-    padding: 0 20px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: 50% 50% no-repeat; /* background-position, background-repeat */
+    padding: 0 20px; /* Default padding, overridden by specific .bloc-xx classes */
     background-size: cover;
     position: relative;
 }
+/* Grouped .bloc padding classes */
+.bloc-sm, .bloc-sm-sm, .bloc-sm-md, .bloc-sm-lg { padding: 20px; } /* .bloc-sm-sm has 20px 20px, effectively same */
+.bloc-lg, .bloc-lg-sm, .bloc-lg-md, .bloc-lg-lg { padding: 100px 20px; }
+.bloc-xl, .bloc-xl-sm, .bloc-xl-md, .bloc-xl-lg { padding: 150px 20px; }
+/* .bloc-xxl-* are unique enough to keep separate for now if they differ significantly beyond just padding */
 
-.bloc-xl { padding: 150px 20px; }
-.bloc-lg { padding: 100px 20px; }
-.bloc-sm { padding: 20px; }
-
-
-/* ========================================================================== */
-/* == COMMON STYLES FOR NEW MINIMALIST DESIGN (Using CSS Variables) == */
-/* ========================================================================== */
-
+/* Minimalist Design Common Styles */
 #bloc-0 { /* Header */
     background-color: var(--background-color-page);
     border-bottom: 1px solid var(--border-color-light);
@@ -150,7 +145,7 @@ button { /* Only transition, no color here as buttons vary */
     width: auto;
 }
 #bloc-0 .nav-link {
-    font-family: inherit;
+    font-family: inherit; /* Inherits from body, which is var(--font-family-sans-serif) */
     color: var(--text-color-dark);
     padding: 0.5em 1em;
     border-radius: 4px;
@@ -165,7 +160,7 @@ button { /* Only transition, no color here as buttons vary */
     color: var(--text-color-light) !important;
 }
 
-.page-title-container {
+.page-title-container { /* Used on other pages, not index.html provided */
     background-color: var(--color-primary-blue);
     color: var(--text-color-light);
     padding: 2rem 0;
@@ -178,20 +173,19 @@ button { /* Only transition, no color here as buttons vary */
     margin: 0;
 }
 
-.section-heading {
+.section-heading { /* Used in index.html */
     font-size: 2em;
     color: var(--text-color-headings);
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    margin: 2.5rem auto 2rem; /* Simplified margin, auto for left/right with display:inline-block */
+    text-align: center; /* Already centered by transform, but good for fallback */
     padding-bottom: 0.6rem;
     border-bottom: 2px solid var(--color-primary-blue);
     display: inline-block;
-    position: relative;
+    position: relative; /* Needed for transform centering */
     left: 50%;
     transform: translateX(-50%);
 }
-.section-heading:first-of-type {
+.section-heading:first-of-type { /* Or use a more specific selector if needed */
     margin-top: 0;
 }
 
@@ -207,24 +201,20 @@ button { /* Only transition, no color here as buttons vary */
     margin-bottom: 0;
 }
 
-/* =========================================== */
-/* == END COMMON STYLES FOR NEW MINIMALIST DESIGN == */
-/* =========================================== */
-
+/* Navigation & UI Elements */
 .svg-menu-icon {
     fill: none;
-    stroke: var(--text-color-medium); /* Use variable */
+    stroke: var(--text-color-medium);
     stroke-width: 2px;
     fill-rule: evenodd;
 }
-.navbar-dark .svg-menu-icon {
-    stroke: rgba(255,255,255,0.5); /* Keep for specific .navbar-dark if used */
-}
+.navbar-dark .svg-menu-icon { stroke: rgba(255,255,255,0.5); }
+.menu-icon-filled { fill: var(--text-color-medium); stroke-width: 0px; }
+.navbar-dark .menu-icon-filled { fill: rgba(255,255,255,0.5); }
+
 .menu-icon-thin-bars { stroke-width: 1px; }
 .menu-icon-thick-bars { stroke-width: 5px; }
 .menu-icon-rounded-bars { stroke-width: 3px; stroke-linecap: round; }
-.menu-icon-filled { fill: var(--text-color-medium); stroke-width: 0px; } /* Use variable */
-.navbar-dark .menu-icon-filled { fill: rgba(255,255,255,0.5); }
 
 .navbar-toggler-icon {
     background: none !important;
@@ -235,32 +225,37 @@ button { /* Only transition, no color here as buttons vary */
     align-items: center;
     justify-content: center;
 }
-nav .dropdown-menu .nav-link {
-    color: var(--text-color-medium) !important; /* Use variable */
-}
-[data-bs-theme="dark"] nav .dropdown-menu .nav-link {
-    color: var(--bs-dropdown-link-color) !important; /* Bootstrap variable for dark themes */
-}
+nav .dropdown-menu .nav-link { color: var(--text-color-medium) !important; }
+[data-bs-theme="dark"] nav .dropdown-menu .nav-link { color: var(--bs-dropdown-link-color) !important; }
 
 .dropdown-menu .dropdown-menu { border: none; }
-@media (min-width:576px) {
-    .navbar-expand-sm .dropdown-menu .dropdown-menu { border: 1px solid var(--border-color-light); position: absolute; left: 100%; top: -7px; } /* Use variable */
-    .navbar-expand-sm .dropdown-menu .submenu-left { right: 100%; left: auto; }
+
+/* Grouped dropdown submenu styles */
+.navbar-expand-sm .dropdown-menu .dropdown-menu,
+.navbar-expand-md .dropdown-menu .dropdown-menu,
+.navbar-expand-lg .dropdown-menu .dropdown-menu {
+    border: 1px solid var(--border-color-light);
+    position: absolute;
+    left: 100%;
+    top: -7px;
 }
-@media (min-width:768px) {
-    .navbar-expand-md .dropdown-menu .dropdown-menu { border: 1px solid var(--border-color-light); position: absolute; left: 100%; top: -7px; } /* Use variable */
-    .navbar-expand-md .dropdown-menu .submenu-left { right: 100%; left: auto; }
-}
-@media (min-width:992px) {
-    .navbar-expand-lg .dropdown-menu .dropdown-menu { border: 1px solid var(--border-color-light); position: absolute; left: 100%; top: -7px; } /* Use variable */
-    .navbar-expand-lg .dropdown-menu .submenu-left { right: 100%; left: auto; }
+.navbar-expand-sm .dropdown-menu .submenu-left,
+.navbar-expand-md .dropdown-menu .submenu-left,
+.navbar-expand-lg .dropdown-menu .submenu-left {
+    right: 100%;
+    left: auto;
 }
 
+/* Utility Classes */
 .mg-md { margin-top: 10px; margin-bottom: 20px; }
+.icon-sm { font-size: 18px !important; }
+.img-protected { -webkit-touch-callout: none; user-select: none; }
+.object-hidden { display: none; }
+.no-underline { text-decoration: none !important; }
 
-.btn-d, .btn-d:hover, .btn-d:focus { /* Example dark button, can be themed with variables if used */
+.btn-d, .btn-d:hover, .btn-d:focus {
     color: var(--text-color-light);
-    background: rgba(0,0,0,.5); /* Darker semi-transparent */
+    background: rgba(0,0,0,.5);
 }
 .btn-style-none, .btn-style-none:hover, .btn-style-none:active, .btn-style-none:focus {
     background: none;
@@ -268,37 +263,37 @@ nav .dropdown-menu .nav-link {
     padding: 0;
 }
 
-.icon-sm { font-size: 18px !important; }
-.img-protected { -webkit-touch-callout: none; user-select: none; }
-
 .blockquote {
     padding: 0 20px;
-    border-left: 2px solid var(--border-color-medium); /* Use variable */
+    border-left: 2px solid var(--border-color-medium);
     margin: 1.5rem 0;
     font-style: italic;
-    color: var(--text-color-medium); /* Use variable */
+    color: var(--text-color-medium);
 }
 .blockquote.text-end {
     border-left: 0;
-    border-right: 2px solid var(--border-color-medium); /* Use variable */
+    border-right: 2px solid var(--border-color-medium);
 }
 
+/* Card Styles (Generic from Blocs) */
 .card-sq, .card-sq .card-header, .card-sq .card-footer { border-radius: 0; }
-.card-rd { border-radius: 30px; }
-.card-rd .card-header { border-radius: 29px 29px 0 0; }
-.card-rd .card-footer { border-radius: 0 0 29px 29px; }
+.card-rd, .card-rd .card-header, .card-rd .card-footer { border-radius: 30px; } /* Simplified, specific overrides if needed */
+.card-rd .card-header { border-bottom-left-radius: 0; border-bottom-right-radius: 0;} /* Correcting if it was 29px 29px 0 0 */
+.card-rd .card-footer { border-top-left-radius: 0; border-top-right-radius: 0;} /* Correcting if it was 0 0 29px 29px */
+
 
 .card-columns .card { margin-bottom: 0.75rem; }
 @media (min-width: 576px) {
     .card-columns {
-        -webkit-column-count: 3; -moz-column-count: 3; column-count: 3;
-        -webkit-column-gap: 1.25rem; -moz-column-gap: 1.25rem; column-gap: 1.25rem;
+        column-count: 3;
+        column-gap: 1.25rem;
         orphans: 1; widows: 1;
     }
     .card-columns .card { display: inline-block; width: 100%; }
 }
 
-.carousel-nav-icon { fill: none; stroke: var(--text-color-light); stroke-width: 2px; fill-rule: evenodd; stroke-linecap: round; } /* Use variable */
+/* Carousel & Lightbox (Generic from Blocs) */
+.carousel-nav-icon { fill: none; stroke: var(--text-color-light); stroke-width: 2px; fill-rule: evenodd; stroke-linecap: round; }
 .carousel-caption-top { bottom: inherit; top: 20px; }
 .carousel-indicators li::marker { font-size: 0; }
 
@@ -311,49 +306,46 @@ nav .dropdown-menu .nav-link {
     right: 20px;
     opacity: 0;
     z-index: 999;
-    transition: all .3s ease-in-out;
+    transition: opacity .3s ease-in-out, background-color .3s ease-in-out; /* Combined transition */
     pointer-events: none;
-    background-color: rgba(0, 86, 179, 0.6); /* Direct value or var(--color-primary-blue) with opacity */
+    background-color: rgba(0, 86, 179, 0.6);
     border-radius: 50%;
     border: none;
 }
-.showScrollTop {
-    opacity: 1;
-    pointer-events: all;
-}
-.scrollToTop:hover {
-    background-color: rgba(0, 64, 140, 0.8); /* Direct value or var(--color-dark-blue) with opacity */
-}
-.scroll-to-top-btn-icon {
-    fill: none;
-    stroke: var(--text-color-light); /* Use variable */
-    stroke-width: 2px;
-    fill-rule: evenodd;
-    stroke-linecap: round;
-}
+.showScrollTop { opacity: 1; pointer-events: all; }
+.scrollToTop:hover { background-color: rgba(0, 64, 140, 0.8); }
+.scroll-to-top-btn-icon { fill: none; stroke: var(--text-color-light); stroke-width: 2px; fill-rule: evenodd; stroke-linecap: round; }
 
 a[data-lightbox] { position: relative; display: block; text-align: center; }
 a[data-lightbox]:hover::before {
     content: "+";
-    font-family: inherit;
+    font-family: inherit; /* Use body font */
     font-size: 32px; line-height: 42px; width: 50px; height: 50px;
     margin-left: -25px; border-radius: 50%; background: rgba(0,0,0,.6);
-    color: var(--text-color-light); font-weight: 100; z-index: 1; position: absolute; /* Use variable */
-    top: 50%; left: 50%; transform: translateY(-50%); -webkit-transform: translateY(-50%);
+    color: var(--text-color-light); font-weight: 100; z-index: 1; position: absolute;
+    top: 50%; left: 50%; transform: translateY(-50%);
 }
-a[data-lightbox]:hover img { opacity: 0.7; -webkit-animation-fill-mode: none; animation-fill-mode: none; }
-.lightbox-caption { padding: 15px; color: var(--text-color-light); background: rgba(0,0,0,.7); position: absolute; left: 10px; right: 10px; bottom: 10px; border-radius: 4px;} /* Use variable */
+a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
+.lightbox-caption { padding: 15px; color: var(--text-color-light); background: rgba(0,0,0,.7); position: absolute; left: 10px; right: 10px; bottom: 10px; border-radius: 4px;}
+
+.next-lightbox, .prev-lightbox, .close-lightbox {
+    position: absolute;
+    padding: 8px;
+    background: rgba(0,0,0,.4);
+    line-height: 0;
+    transition: background .2s ease-in-out;
+    border-radius: .25rem;
+    border: none;
+    z-index: 20;
+}
 .close-lightbox:hover, .next-lightbox:hover, .prev-lightbox:hover { background: rgba(0,0,0,.7); }
-.next-lightbox, .prev-lightbox, .close-lightbox { position: absolute; padding: 8px; background: rgba(0,0,0,.4); line-height: 0; transition: background .2s ease-in-out; border-radius: .25rem; border: none; z-index: 20; }
 .next-lightbox, .prev-lightbox { top: 50%; transform: translateY(-50%); }
 .close-lightbox { top: 15px; right: 15px; }
-.next-lightbox { right: 15px; }
-.prev-lightbox { left: 15px; }
-.lightbox-prev-icon, .lightbox-next-icon, .lightbox-close-icon { fill: none; stroke: var(--text-color-light); stroke-width: 2.5px; fill-rule: evenodd; stroke-linecap: round; } /* Use variable */
+.next-lightbox { right: 15px; } .prev-lightbox { left: 15px; }
+.lightbox-prev-icon, .lightbox-next-icon, .lightbox-close-icon { fill: none; stroke: var(--text-color-light); stroke-width: 2.5px; fill-rule: evenodd; stroke-linecap: round; }
 .lightbox-close-svg { pointer-events: none; }
 
-.object-hidden { display: none; }
-
+/* Horizontal Scroll (Generic from Blocs) */
 .blocs-horizontal-scroll-container { position: relative; }
 .blocs-horizontal-scroll-area { display: flex; overflow-x: auto; align-items: flex-start; gap: 1.5rem; }
 .blocs-horizontal-scroll-area > * { flex-shrink: 0; max-width: 100%; }
@@ -361,94 +353,70 @@ a[data-lightbox]:hover img { opacity: 0.7; -webkit-animation-fill-mode: none; an
 .blocs-horizontal-scroll-control { position: absolute; top: 50%; transform: translateY(-50%); z-index: 1; display: flex; text-align: center; border: 0; margin: 0 15px; }
 .blocs-scroll-control-next { right: 0; }
 .blocs-round-btn {
-    background: rgba(0, 86, 179, 0.4); /* Direct value or var(--color-primary-blue) with opacity */
+    background: rgba(0, 86, 179, 0.4);
     border-radius: 50%;
     padding: 10px;
     opacity: 0;
     cursor: pointer;
     transform: scale(0.5);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     transition: opacity .4s ease, transform .4s ease, background-color .2s ease;
 }
-.blocs-horizontal-scroll-container:hover .blocs-round-btn, .blocs-horizontal-scroll-container.show-controls .blocs-round-btn { opacity: 1; transform: scale(1.0); }
-.blocs-round-btn:hover { background: rgba(0, 64, 140, 0.6); } /* Direct value or var(--color-dark-blue) with opacity */
+.blocs-horizontal-scroll-container:hover .blocs-round-btn,
+.blocs-horizontal-scroll-container.show-controls .blocs-round-btn { opacity: 1; transform: scale(1.0); }
+.blocs-round-btn:hover { background: rgba(0, 64, 140, 0.6); }
 .blocs-round-btn:active { background: rgba(0, 40, 100, 0.7); transform: scale(0.9) !important; transition: transform .2s ease, background .2s ease; }
 .compact-blocs-controls .blocs-round-btn { padding: 2px; width: 30px; height: 30px; }
 .compact-blocs-controls .blocs-round-btn svg { width: 14px; height: 14px; }
 .compact-blocs-controls .blocs-horizontal-scroll-control { margin: 0 10px; }
-.horizontal-scroll-icon { fill: none; stroke: var(--text-color-light); stroke-width: 3px; fill-rule: evenodd; stroke-linecap: round; } /* Use variable */
-.hide-left-control > .blocs-scroll-control-prev, .hide-right-control > .blocs-scroll-control-next { opacity: 0 !important; pointer-events: none; }
-.show-controls > .blocs-scroll-control-prev, .show-controls > .blocs-scroll-control-next { opacity: 1 !important; }
+.horizontal-scroll-icon { fill: none; stroke: var(--text-color-light); stroke-width: 3px; fill-rule: evenodd; stroke-linecap: round; }
+.hide-left-control > .blocs-scroll-control-prev,
+.hide-right-control > .blocs-scroll-control-next { opacity: 0 !important; pointer-events: none; }
+.show-controls > .blocs-scroll-control-prev,
+.show-controls > .blocs-scroll-control-next { opacity: 1 !important; }
 
-.interspace-label {
-    margin-right: 15px;
-    margin-top: 8px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    font-family: inherit;
-    font-weight: normal;
-    font-size: 13px;
-    color: var(--text-color-medium); /* Use variable */
-}
+/* Text Styles (Generic from Blocs) */
+.interspace-label, .heading-5, .roboto-it, .news { font-family: inherit; } /* Inherit from body */
+.interspace-label { margin: 8px 15px 0 0; font-size: 13px; color: var(--text-color-medium); }
 .icon-margin { margin-left: 5px; margin-right: 5px; }
-/* .grey { background-color: var(--swatch-var-6100); } // Old swatch, use --background-color-light-gray if needed */
-.no-underline { text-decoration: none !important; }
+.heading-5 { font-size: 1.1rem; font-weight: 500; text-decoration: none; color: var(--text-color-dark); }
+.roboto-it { font-style: italic; color: var(--text-color-medium); }
+.news { font-size: 0.9em; color: var(--text-color-medium); }
 
-.heading-5 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    text-decoration: none;
-    font-family: inherit;
-    color: var(--text-color-dark); /* Use variable */
-}
-
-.roboto-it { 
-    font-style: italic;
-    font-family: inherit; 
-    color: var(--text-color-medium); /* Use variable */
-}
-
-.news {
-    font-size: 0.9em;
-    color: var(--text-color-medium); /* Use variable */
-}
-
-/* Old Colour Swatch Variables and Classes - COMMENTED OUT */
-/*
-:root {
-    --swatch-var-1830: rgba(255,255,255,1.00);
-    --swatch-var-7343: #474747;
-    --swatch-var-7918: rgba(235,129,7,1.00);
-    --swatch-var-1779: rgba(4,51,255,1.00);
-    --swatch-var-6100: rgba(0,0,0,0.03);
-    --swatch-var-4174: rgba(0,0,0,1.00);
-    --swatch-var-4275: rgba(122,122,122,0.21);
-}
-
-.bgc-7343 { background-color: var(--swatch-var-7343); }
-.bgc-1830 { background-color: var(--swatch-var-1830); }
-.bgc-6100 { background-color: var(--swatch-var-6100); }
-.tc-4174 { color: var(--swatch-var-4174) !important; }
-.ltc-7343 { color: var(--swatch-var-7343) !important; }
-.ltc-7343:hover { color: #141414 !important; }
-*/
-
+/* Responsive Padding for .bloc containers */
 @media (min-width: 576px) {
-    .bloc-xxl-sm{padding:200px 20px;} .bloc-xl-sm{padding:150px 20px;} .bloc-lg-sm{padding:100px 20px;}
-    .bloc-md-sm{padding:50px 20px;} .bloc-sm-sm{padding:20px;} .bloc-no-padding-sm{padding:0 20px;}
+    .bloc-xxl-sm, .bloc-xl-sm, .bloc-lg-sm, .bloc-md-sm, .bloc-sm-sm, .bloc-no-padding-sm { padding-right: 20px; padding-left: 20px; } /* Base horizontal padding */
+    .bloc-xxl-sm { padding-top: 200px; padding-bottom: 200px; }
+    .bloc-xl-sm  { padding-top: 150px; padding-bottom: 150px; }
+    .bloc-lg-sm  { padding-top: 100px; padding-bottom: 100px; }
+    .bloc-md-sm  { padding-top: 50px;  padding-bottom: 50px; }
+    .bloc-sm-sm  { padding-top: 20px;  padding-bottom: 20px; } /* Already covered by .bloc-sm general rule */
+    .bloc-no-padding-sm { padding-top: 0; padding-bottom: 0; }
 }
 @media (min-width: 768px) {
-    .bloc-xxl-md{padding:200px 20px;} .bloc-xl-md{padding:150px 20px;} .bloc-lg-md{padding:100px 20px;}
-    .bloc-md-md{padding:50px 20px;} .bloc-sm-md{padding:20px 20px;} .bloc-no-padding-md{padding:0 20px;}
+    .bloc-xxl-md, .bloc-xl-md, .bloc-lg-md, .bloc-md-md, .bloc-sm-md, .bloc-no-padding-md { padding-right: 20px; padding-left: 20px; }
+    .bloc-xxl-md { padding-top: 200px; padding-bottom: 200px; }
+    .bloc-xl-md  { padding-top: 150px; padding-bottom: 150px; }
+    .bloc-lg-md  { padding-top: 100px; padding-bottom: 100px; }
+    .bloc-md-md  { padding-top: 50px;  padding-bottom: 50px; }
+    .bloc-sm-md  { padding-top: 20px;  padding-bottom: 20px; } /* .bloc-sm-md had 20px 20px */
+    .bloc-no-padding-md { padding-top: 0; padding-bottom: 0; }
 }
 @media (min-width: 992px) {
-    .bloc-xxl-lg{padding:200px 20px;} .bloc-xl-lg{padding:150px 20px;} .bloc-lg-lg{padding:100px 20px;}
-    .bloc-md-lg{padding:50px 20px;} .bloc-sm-lg{padding:20px;}
+    .bloc-xxl-lg, .bloc-xl-lg, .bloc-lg-lg, .bloc-md-lg, .bloc-sm-lg { padding-right: 20px; padding-left: 20px; }
+    .bloc-xxl-lg { padding-top: 200px; padding-bottom: 200px; }
+    .bloc-xl-lg  { padding-top: 150px; padding-bottom: 150px; }
+    .bloc-lg-lg  { padding-top: 100px; padding-bottom: 100px; }
+    .bloc-md-lg  { padding-top: 50px;  padding-bottom: 50px; }
+    /* .bloc-sm-lg is already covered by .bloc-sm general rule */
 }
 
+/* Other Responsive Adjustments from Blocs */
 @media (max-width: 1024px) {
-    .bloc.full-width-bloc, .bloc-tile-2.full-width-bloc .container, .bloc-tile-3.full-width-bloc .container, .bloc-tile-4.full-width-bloc .container {
+    .bloc.full-width-bloc,
+    .bloc-tile-2.full-width-bloc .container,
+    .bloc-tile-3.full-width-bloc .container,
+    .bloc-tile-4.full-width-bloc .container {
         padding-left: 0; padding-right: 0;
     }
 }
@@ -457,9 +425,214 @@ a[data-lightbox]:hover img { opacity: 0.7; -webkit-animation-fill-mode: none; an
     .bloc-group, .bloc-group .bloc { display: block; width: 100%; }
 }
 @media (max-width: 767px) {
-    .bloc-tile-2 .container, .bloc-tile-3 .container, .bloc-tile-4 .container { padding-left: 0; padding-right: 0; }
-    .voffset{ margin-top:5px; }
-    .voffset-md{ margin-top:20px; }
-    .voffset-lg{ margin-top:30px; }
-    .close-lightbox{ display:inline-block; }
+    .bloc-tile-2 .container,
+    .bloc-tile-3 .container,
+    .bloc-tile-4 .container { padding-left: 0; padding-right: 0; }
+    .voffset    { margin-top:5px; }
+    .voffset-md { margin-top:20px; }
+    .voffset-lg { margin-top:30px; }
+    .close-lightbox { display:inline-block; } /* Ensure lightbox close is visible */
+}
+
+/* === STYLES MOVED FROM INDEX.HTML (MERGE CAREFULLY) === */
+/* These are the styles you previously had in an inline <style> block in index.html. */
+/* They need to be MERGED with the styles above, especially the media queries. */
+/* Pay attention to selectors like .hero-section, .recruitment-alert, .news-card */
+/* and their responsive overrides. */
+
+/* Example: .hero-section styles (non-responsive part) */
+.hero-section {
+    background-color: var(--background-color-page);
+    color: var(--text-color-dark);
+    padding: 4rem 0; /* This overrides .bloc padding if .hero-section is also a .bloc */
+}
+.hero-section .content-container { /* This is fine as is */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+.hero-text-content {
+    flex: 1 1 40%;
+    min-width: 300px;
+    text-align: left;
+}
+.hero-text-content h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--text-color-headings);
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+.hero-text-content h2 {
+    font-size: 1.7em;
+    font-weight: 400;
+    color: var(--text-color-dark); /* Consider --text-color-medium if too strong */
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+.hero-text-content .research-focus-intro {
+    font-size: 1.1em;
+    font-weight: 400; /* Could be var(--font-weight-normal) */
+    opacity: 0.85;
+    margin-top: 1.5rem;
+    line-height: 1.7;
+    color: var(--text-color-dark);
+}
+.hero-text-content .research-focus-intro strong {
+    font-weight: 600; /* Could be var(--font-weight-medium) or var(--font-weight-bold) */
+    color: var(--text-color-headings);
+}
+
+.hero-carousel-content { /* These were also in the inline style */
+    flex: 1 1 55%;
+    min-width: 320px;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px; /* Or var(--card-border-radius) */
+    box-shadow: var(--shadow-color-medium); /* Use theme shadow */
+}
+.hero-carousel-content .carousel-item { min-height: 400px; }
+.hero-carousel-content .carousel-item img {
+    width: 100%; height: 100%; object-fit: cover; max-height: 500px;
+}
+.hero-carousel-content .carousel-caption {
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%);
+    padding: 1.25rem; position: absolute; bottom: 0; left: 0; right: 0;
+}
+ .hero-carousel-content .carousel-caption h3 {
+    color: var(--text-color-light); font-size: 1.6em; font-weight: bold; /* Or var(--font-weight-bold) */
+    margin-bottom: 0.25rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+/* .hero-carousel-content .carousel-indicators button and .active are already defined above from Blocs generic styles */
+/* .hero-carousel-content .carousel-control-prev-icon, .next-icon are also defined above from Blocs generic styles */
+/* The specific background-color: var(--shadow-color-medium) for icons from inline styles is a bit unusual. */
+/* You might want to stick to the Blocs default or theme it with a color variable. */
+
+
+/* Recruitment Alert Section from inline styles */
+.recruitment-alert-section {
+    padding: 3rem 0; /* Overrides .bloc padding */
+    background-color: var(--background-color-light-gray);
+}
+.recruitment-alert {
+    background-color: var(--background-color-page);
+    border: 1px solid var(--border-color-medium);
+    border-left: 4px solid var(--color-primary-blue);
+    padding: 1.5rem 2rem;
+    border-radius: 6px; /* Or var(--card-border-radius) */
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0,86,179,0.08); /* Specific shadow, or use var(--shadow-soft) */
+}
+.recruitment-alert h3 {
+    color: var(--color-dark-blue); font-size: 1.5em; margin-top: 0; margin-bottom: 1rem;
+}
+.recruitment-alert p {
+    color: var(--text-color-dark); margin-bottom: 1rem; line-height: 1.65;
+}
+.recruitment-alert .contact-info {
+    margin-top: 1.25rem; font-weight: 500; /* Or var(--font-weight-medium) */
+    color: var(--color-primary-blue); font-size: 1.05em;
+}
+.recruitment-alert .btn-close-alert { /* Already defined above from Blocs */
+    /* position: absolute; top: 1rem; right: 1rem; background: none; border: none; */
+    /* font-size: 1.4rem; color: var(--color-primary-blue); opacity: 0.6; */
+}
+/* .recruitment-alert .btn-close-alert:hover { opacity: 0.9; } */
+
+
+/* News Section from inline styles */
+.news-section {
+    padding: 3rem 0; /* Overrides .bloc padding */
+    background-color: var(--background-color-page);
+}
+
+/* .news-card and its children from inline styles */
+/* THESE ARE VERY SPECIFIC AND USE !IMPORTANT. MERGE CAREFULLY WITH BLOCS DEFAULTS OR REFACTOR */
+.news-card {
+    background-color: var(--background-color-page);
+    border-radius: 6px; /* Or var(--card-border-radius) */
+    box-shadow: 0 3px 10px var(--shadow-color-soft);
+    border: 1px solid var(--border-color-light);
+    width: 320px !important;
+    min-width: 320px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    min-height: 280px;
+    padding: 0 !important;
+}
+.news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px var(--shadow-color-medium);
+}
+.news-card .card-body {
+    padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1;
+}
+.news-card h4 {
+    font-size: 1.2em; color: var(--color-primary-blue); margin-top: 0; margin-bottom: 0.5rem;
+}
+.news-card .news-date {
+    font-size: 0.75em; color: var(--text-color-subtle); margin-bottom: 0.75rem; text-transform: uppercase;
+}
+.news-card .news-content {
+    font-size: 0.9em; color: var(--text-color-medium); line-height: 1.55;
+    flex-grow: 1; margin-bottom: 0;
+}
+.news-card .news-content p:last-child { margin-bottom: 0; }
+.news-card .news-content a {
+    color: var(--text-link-color); text-decoration: none; font-weight: 500; /* Or var(--font-weight-medium) */
+}
+.news-card .news-content a:hover {
+    color: var(--text-link-hover-color); text-decoration: underline;
+}
+
+/* Responsive Adjustments from inline styles - MERGE INTO MAIN MEDIA QUERIES */
+@media (max-width: 991px) {
+    /* Hero section specific overrides */
+    .hero-section .content-container { flex-direction: column; }
+    .hero-text-content { text-align: center; margin-bottom: 2rem; flex-basis: auto; }
+    .hero-carousel-content { flex-basis: auto; max-width: 600px; }
+    .hero-text-content h1 { font-size: 2.5em; } /* Check against global h1 responsive */
+    .hero-text-content h2 { font-size: 1.6em; } /* Check against global h2 responsive */
+}
+@media (max-width: 767px) {
+    .hero-section { padding: 3rem 0; }
+    .hero-text-content h1 { font-size: 2.1em; }
+    .hero-text-content h2 { font-size: 1.4em; }
+    .hero-text-content .research-focus-intro { font-size: 1.05em; }
+    .hero-carousel-content .carousel-item { min-height: 300px; }
+    .hero-carousel-content .carousel-caption h3 { font-size: 1.4em; }
+
+    .recruitment-alert-section { padding: 2rem 0; }
+    .recruitment-alert h3 { font-size: 1.4em; }
+    .recruitment-alert { padding: 1.5rem; }
+
+    .news-section { padding: 2rem 0; }
+    .news-card { /* From inline */
+        width: 290px !important; min-width: 290px !important; min-height: 260px;
+    }
+    .news-card .card-body { padding: 1.25rem; }
+    .news-card h4 { font-size: 1.15em; }
+}
+@media (max-width: 480px) {
+    .hero-section { padding: 2.5rem 0; }
+    .hero-text-content h1 { font-size: 1.9em; }
+    .hero-text-content h2 { font-size: 1.25em; }
+    .hero-carousel-content .carousel-item { min-height: 250px; }
+    .hero-carousel-content .carousel-caption h3 { font-size: 1.25em; }
+    .hero-carousel-content .carousel-caption { padding: 1rem; }
+
+    .recruitment-alert h3 { font-size: 1.3em; }
+    .recruitment-alert { padding: 1.25rem; }
+    .recruitment-alert .contact-info { font-size: 1em; }
+
+    .news-card { /* From inline */
+        width: calc(100vw - 30px) !important;
+        min-width: calc(100vw - 30px) !important;
+        min-height: auto; /* Changed from inline */
+    }
+    .news-card .card-body { padding: 1rem; }
+    .news-card h4 { font-size: 1.1em; }
 }
