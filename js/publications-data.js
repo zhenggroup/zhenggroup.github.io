@@ -3,7 +3,7 @@
 const allPublications = [
     // 2025
 /*    {
-        number: 47, year: 2025, type: "Article",
+        number: 53, year: 2025, type: "Article",
         authors: "K. Wang, Z. Zhu, Y. Liu, <u>W. Zheng</u>, Z. Yuan, Z. Lin, R. Semiat, L. Shao, X. He*",
         title: "Adsorption-enhanced carbon membranes derived from copolyimide for ultrafast sub-angstrom discriminating CO2 separation",
         journal: "Science Advances, 2025",
@@ -11,7 +11,7 @@ const allPublications = [
         // Add DOI, PDF, comments, featuredIn, dimensionsDoi if available
     }, */
     {
-        number: 46, year: 2025, type: "Invited Article",
+        number: 52, year: 2025, type: "Invited Article",
         authors: "<b><u>S. Chen</u></b>,^ <b><u>T. Zhang</u></b>,^ L. Zheng, J. Gao, X. Huang, J. Gu, C. Vogt,&nbsp;<b><u>W. Zheng</u></b>*",
         title: "Selective Ammonia Electrooxidation on RuO2: Competitive and Synergistic Interplay between Ammonia and Hydroxide",
         journal: "The Journal of Physical Chemistry C, 2025, online",
@@ -21,7 +21,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acs.jpcc.5c02770"
     }, 
     {
-        number: 45, year: 2025, type: "Invited Review",
+        number: 51, year: 2025, type: "Invited Review",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Spatiotemporal visualisation of electrocatalyst/electrolyte interfaces with electrochemical atomic force microscopy: Applications and notes",
         journal: "Journal of Microscopy, 2025, online",
@@ -30,7 +30,7 @@ const allPublications = [
         dimensionsDoi: "10.1111/jmi.13401"
     },
     {
-        number: 44, year: 2025, type: "Article",
+        number: 50, year: 2025, type: "Article",
         authors: "J. Ge,^&nbsp;<b><u>J. Zhong</u></b>,^&nbsp;<b><u>S. Chen</u></b>, <b><u>Z. Wu</u></b>, Y. Li,* W. He,* <b><u>W. Zheng</u></b>*",
         title: "Upcycling Industrial Resin to Transition Metal-Modulated N-Doped Carbon Electrocatalysts for Durable Oxygen Evolution Reaction",
         journal: "ACS Applied Engineering Materials, 2025, 3, 3, 718–727",
@@ -39,7 +39,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acsaenm.5c00053"
     },
     {
-        number: 43, year: 2025, type: "Article",
+        number: 49, year: 2025, type: "Article",
         authors: "X. Wang, Y. Wu, Y. Zhou, <u>W. Zheng</u>, K. Zhang, X. Ma, T. Bai, D. Li,* L. Ci,* C. P. Grey, J. Lu*",
         title: "Interface Engineering with an Organic Aluminum Additive for High-Rate Sodium Metal Batteries",
         journal: "Advanced Functional Materials, 2025,&nbsp;2414041",
@@ -50,7 +50,7 @@ const allPublications = [
 
     // 2024
     {
-        number: 42, year: 2024, type: "Article",
+        number: 48, year: 2024, type: "Article",
         authors: "<b><u>J. Zhong</u></b>, J. Ge, <b><u>Z. Wu</u></b>, Q. Zhang, E. Stavrou, <b><u>W. Zheng</u></b>*",
         title: "Bismuth Doping Unlocks Stability of Copper Oxides in Anodic Reaction: A Case Analysis of Glucose Electrooxidation",
         journal: "Electrochimica Acta, 2024, 145178", // Original HTML had 497, 145178 - using 145178 as it's likely the article ID
@@ -59,7 +59,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.electacta.2024.145178"
     },
     {
-        number: 41, year: 2024, type: "Article",
+        number: 47, year: 2024, type: "Article",
         authors: "<b><u>J. Chen</u></b>,^&nbsp;<b><u>S. Chen</u></b>,^ J. Gao, X. Huang, E. Stavrou, C. Vogt,* <b><u>W. Zheng</u></b>*",
         title: "Correlative In Situ Analysis of the Role of Oxygen on Ammonia Electrooxidation Selectivity on NiOOH Surfaces",
         journal: "Journal of Catalysis, 2024, 438, 115720",
@@ -68,7 +68,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.jcat.2024.115720"
     },
     {
-        number: 40, year: 2024, type: "Article",
+        number: 46, year: 2024, type: "Article",
         authors: "<b><u>W. Zheng</u></b>,* <b><u>L. Du</u></b>",
         title: "Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation",
         journal: "ACS Energy Letters, 2024, 9, 9, 4581–4586",
@@ -82,7 +82,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acsenergylett.4c01869"
     },
     {
-        number: 39, year: 2024, type: "Review",
+        number: 45, year: 2024, type: "Review",
         authors: "<b><u>L. Du</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Catalyst Deactivation during Water Electrolysis: Understanding and Mitigation",
         journal: "APL Energy, 2024, 2(2), 021501",
@@ -92,7 +92,7 @@ const allPublications = [
         dimensionsDoi: "10.1063/5.0191316"
     },
     {
-        number: 38, year: 2024, type: "Review",
+        number: 44, year: 2024, type: "Review",
         authors: "Y. Li,* T. Xin, Z. Cao, <u>W. Zheng</u>, P He,* L. Y. S. Lee*",
         title: "Optimized Transition Metal Phosphides for Direct Seawater Electrolysis: Current Trends",
         journal: "ChemSusChem, 2024, e202301926",
@@ -102,7 +102,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/cssc.202301926"
     },
     {
-        number: 37, year: 2024, type: "Review",
+        number: 43, year: 2024, type: "Review",
         authors: "X. Wang, J. Lu,* Y. Wu, <u>W. Zheng</u>, H. Zhang, T. Bai, H. Liu, D. Li,* L. Ci*",
         title: "Building Stable Anodes for High-Rate Na-Metal Batteries",
         journal: "Advanced Materials, 2024, 36(16), 2311256",
@@ -114,7 +114,7 @@ const allPublications = [
 
     // 2023
     {
-        number: 36, year: 2023, type: "Article",
+        number: 42, year: 2023, type: "Review",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Python for Electrochemistry: A Free and All-In-One Toolset",
         journal: "ECS Advances, 2023, 2(4), 040502",
@@ -126,7 +126,7 @@ const allPublications = [
         dimensionsDoi: "10.1149/2754-2734/acff0b"
     },
     {
-        number: 35, year: 2023, type: "Article",
+        number: 41, year: 2023, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "iR Compensation for Electrocatalysis Studies: Considerations and Recommendations",
         journal: "ACS Energy Letters, 2023, 8, 1952-1958",
@@ -138,7 +138,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acsenergylett.3c00366"
     },
     {
-        number: 34, year: 2023, type: "Article",
+        number: 40, year: 2023, type: "Review",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Beginner's Guide to Raman Spectroelectrochemistry for Electrocatalysis Study",
         journal: "Chemistry Methods, 2023, 3(2), e202200042",
@@ -149,7 +149,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/cmtd.202200042"
     },
     {
-        number: 33, year: 2023, type: "Review",
+        number: 39, year: 2023, type: "Review",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Single-Atom Materials as Electrochemical Sensors: Sensitivity, Selectivity, and Stability",
         journal: "Analysis & Sensing, 2023, e202200070", // Original had 3(1) - e202200070 is likely the article ID
@@ -161,7 +161,7 @@ const allPublications = [
 
     // 2022
     {
-        number: 32, year: 2022, type: "Article",
+        number: 38, year: 2022, type: "Review",
         authors: "<u>W. Zheng</u>,* L.Y.S. Lee*",
         title: "Observing Electrocatalytic Processes via In Situ Electrochemical Scanning Tunneling Microscopy: Latest Advances",
         journal: "Chemistry - An Asian Journal, 2022, e202200384",
@@ -171,7 +171,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/asia.202200384"
     },
     {
-        number: 31, year: 2022, type: "Review",
+        number: 37, year: 2022, type: "Review",
         authors: "<u>W. Zheng</u>,* L.Y.S. Lee*",
         title: "Beyond Sonication: Advanced Exfoliation Methods for Scalable Production of 2D Materials",
         journal: "Matter, 2022, 5, 515-545",
@@ -180,7 +180,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.matt.2021.12.010"
     },
     {
-        number: 30, year: 2022, type: "Article",
+        number: 36, year: 2022, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, L.Y.S. Lee*",
         title: "Bismuth and Metal-Doped Bismuth Nanoparticles Produced by Laser Ablation for Electrochemical Glucose Sensing",
         journal: "Sensors and Actuators B: Chemical, 2022, 357, 131334",
@@ -189,7 +189,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.snb.2021.131334"
     },
     {
-        number: 29, year: 2022, type: "Book Chapter",
+        number: 35, year: 2022, type: "Book Chapter",
         authors: "Y. Li, <u>W. Zheng</u>, L.Y.S. Lee",
         title: "Chapter 5: Functionalized Covalent Organic Frameworks for Improved Energy Application",
         journal: "in Covalent Organic Frameworks: Chemistry, Properties, and Energy Applications for Sustainable Future, CRC Press, 2022",
@@ -197,7 +197,7 @@ const allPublications = [
         imageUrl: "../img/9781032073514.webp", imageAlt: "Book Cover: Covalent Organic Frameworks"
     },
     {
-        number: 28, year: 2022, type: "Book Chapter",
+        number: 34, year: 2022, type: "Book Chapter",
         authors: "<u>W. Zheng</u>, Y. Li, L.Y.S. Lee",
         title: "Chapter 1: Earth-Abundant Metal-Based Nanomaterials for Electrochemical Water Splitting",
         journal: "in Functional Nanomaterials: Synthesis, Properties and Applications, Wiley-VCH, 2022",
@@ -207,7 +207,7 @@ const allPublications = [
 
     // 2021
     {
-        number: 27, year: 2021, type: "Article",
+        number: 33, year: 2021, type: "Article",
         authors: "<u>W. Zheng</u>, L.Y.S. Lee,* K. Y. Wong*",
         title: "Improving the Performance Stability of Direct Seawater Electrolysis: From Catalyst Design to Electrode Engineering",
         journal: "Nanoscale, 2021, 13, 15177–15187",
@@ -216,7 +216,7 @@ const allPublications = [
         dimensionsDoi: "10.1039/D1NR03294A"
     },
     {
-        number: 26, year: 2021, type: "Article",
+        number: 32, year: 2021, type: "Article",
         authors: "<u>W. Zheng</u>, L.Y.S. Lee*",
         title: "Metal-Organic Frameworks for Electrocatalysis: Catalyst or Precatalyst?",
         journal: "ACS Energy Letters, 2021, 6, 2838–2843",
@@ -226,7 +226,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acsenergylett.1c01350"
     },
     {
-        number: 25, year: 2021, type: "Article",
+        number: 31, year: 2021, type: "Article",
         authors: "J. Yan, X. Zhang, <u>W. Zheng</u>, L.Y.S. Lee*",
         title: "Interface Engineering of 2D-C3N4/NiFe-LDH Heterostructure for Highly Efficient Photocatalytic Hydrogen Evolution",
         journal: "ACS Applied Materials & Interfaces, 2021, 21, 24723", // Original HTML had 13, 24723 - assuming 13 is vol
@@ -235,7 +235,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acsami.1c03240"
     },
     {
-        number: 24, year: 2021, type: "Article",
+        number: 30, year: 2021, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, C.-S. Tsang, P.-K. So, L.Y.S. Lee*",
         title: "Stabilizer-Free Bismuth Nanoparticle for Selective Polyol Electrooxidation",
         journal: "iScience, 2021, 24, 102342",
@@ -244,7 +244,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.isci.2021.102342"
     },
     {
-        number: 23, year: 2021, type: "Article",
+        number: 29, year: 2021, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, M. Liu, L.Y.S. Lee*",
         title: "Few-Layer Tellurium: Cathodic Exfoliation and Doping for Collaborative Hydrogen Evolution",
         journal: "Small, 2021, 17, 2007768",
@@ -254,7 +254,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/smll.202007768"
     },
     {
-        number: 22, year: 2021, type: "Article",
+        number: 28, year: 2021, type: "Article",
         authors: "J. Choi, D. Kim, <u>W. Zheng</u>, B. Yan, Y. Li, L.Y.S. Lee,* Y. Piao*",
         title: "Interface Engineered NiFe2O4-x/NiMoO4 Nanowire Arrays for Electrochemical Oxygen Evolution",
         journal: "Applied Catalysis B: Environmental, 2021, 286, 119857",
@@ -264,7 +264,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.apcatb.2020.119857"
     },
     {
-        number: 21, year: 2021, type: "Article",
+        number: 27, year: 2021, type: "Article",
         authors: "L. Hu, Y. Li, X. Peng, <u>W. Zheng</u>, L.Y.S. Lee,* P.K. Chu,* K.-Y. Wong*",
         title: "TiO2 Film Supported by Vertically Aligned Gold Nanorod Superlattice Array for Enhanced Photocatalytic Hydrogen Evolution",
         journal: "Chemical Engineering Journal, 2021, 417, 127900",
@@ -275,7 +275,7 @@ const allPublications = [
 
     // 2020
     {
-        number: 20, year: 2020, type: "Article",
+        number: 26, year: 2020, type: "Article",
         authors: "<u>W. Zheng</u>, M. Liu, L.Y.S. Lee*",
         title: "Best Practices in Using Foam-Type Electrodes for Electrocatalytic Performance Benchmark",
         journal: "ACS Energy Letters, 2020, 5, 3260", // Original HTML had 3260-3264
@@ -284,7 +284,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acsenergylett.0c01958"
     },
     {
-        number: 19, year: 2020, type: "Article",
+        number: 25, year: 2020, type: "Article",
         authors: "L. Hu, Y. Li, <u>W. Zheng</u>, Y.-K. Peng, S.C.E. Tsang,* L.Y.S. Lee,* K.-Y. Wong*",
         title: "Blue Order/Disorder Janus-Type TiO2 Nanoparticles for Enhanced Photocatalytic Hydrogen Generation",
         journal: "Journal of Materials Chemistry A, 2020, 8, 22828",
@@ -293,7 +293,7 @@ const allPublications = [
         dimensionsDoi: "10.1039/D0TA06281B"
     },
     {
-        number: 18, year: 2020, type: "Article",
+        number: 24, year: 2020, type: "Article",
         authors: "<u>W. Zheng</u>, J. Lee, Z. Gao, Y. Li, S. Lin, S. P. Lau, L.Y.S. Lee*",
         title: "Laser-assisted Ultrafast Exfoliation of Black Phosphorus in Liquid with Tunable Thickness for Li-ion Batteries",
         journal: "Advanced Energy Materials, 2020, 10, 1903490",
@@ -303,7 +303,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/aenm.201903490"
     },
     {
-        number: 17, year: 2020, type: "Article",
+        number: 23, year: 2020, type: "Article",
         authors: "X. Zhang, K.-A Min, <u>W. Zheng</u>, J. Hwang, B. Han,* L.Y.S. Lee*",
         title: "Copper Phosphosulfides as a Highly Active and Stable Photocatalyst for Hydrogen Evolution Reaction",
         journal: "Applied Catalysis B: Environmental, 2020, 273, 118927",
@@ -312,7 +312,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.apcatb.2020.118927"
     },
     {
-        number: 16, year: 2020, type: "Article",
+        number: 22, year: 2020, type: "Article",
         authors: "<u>W. Zheng</u>, M. Liu, L.Y.S. Lee*",
         title: "Electrochemical Instability of Metal-Organic Frameworks: In Situ Spectroelectrochemical Investigation of the Real Active Sites",
         journal: "ACS Catalysis, 2020, 20, 81–92", // Original HTML had 10, 81-92
@@ -324,7 +324,7 @@ const allPublications = [
 
     // Before 2020 (year field will be used to group into 'before2020')
     {
-        number: 15, year: 2019, type: "Article",
+        number: 21, year: 2019, type: "Article",
         authors: "<u>W. Zheng</u>, C.-S. Tsang, M. Liu, L.Y. So, L.-C. Leung, L.Y.S. Lee*",
         title: "Highly Efficient Stepwise Electrochemical Degradation of Antibiotics in Water by In Situ Formed Cu(OH)2 Nanorods",
         journal: "Applied Catalysis B: Environmental, 2019, 256, 117824",
@@ -333,7 +333,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.apcatb.2019.117824"
     },
     {
-        number: 14, year: 2019, type: "Article",
+        number: 20, year: 2019, type: "Article",
         authors: "Z. Gao, M. Liu, <u>W. Zheng</u>, X. Zhang, L.Y.S. Lee*",
         title: "Surface Engineering of MoS2 via Laser-induced Exfoliation in Protic Solvents",
         journal: "Small, 2019, 15, 1903791",
@@ -342,7 +342,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/smll.201903791"
     },
     {
-        number: 13, year: 2019, type: "Article",
+        number: 19, year: 2019, type: "Article",
         authors: "Z. Gao, <u>W. Zheng</u>, L.Y.S. Lee*",
         title: "Highly Enhanced Pseudocapacitive Performance of Vanadium-doped MXenes in Neutral Electrolytes",
         journal: "Small, 2019, 15, 1902649",
@@ -351,7 +351,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/smll.201902649"
     },
     {
-        number: 12, year: 2019, type: "Article",
+        number: 18, year: 2019, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, L.Y.S. Lee*",
         title: "Insights into the Transition Metal Ion-mediated Electrooxidation of Glucose in Alkaline Electrolyte",
         journal: "Electrochimica Acta, 2019, 308, 9–19",
@@ -360,7 +360,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.electacta.2019.04.007"
     },
     {
-        number: 11, year: 2019, type: "Article",
+        number: 17, year: 2019, type: "Article",
         authors: "<u>W. Zheng</u>, C.-S. Tsang, L.Y.S. Lee,* K.-Y. Wong*",
         title: "Two-Dimensional Metal-Organic Framework and Covalent-Organic Framework: Synthesis and their Energy-Related Applications",
         journal: "Materials Today Chemistry, 2019, 12, 34—60",
@@ -369,7 +369,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.mtchem.2018.12.002"
     },
     {
-        number: 10, year: 2019, type: "Article",
+        number: 16, year: 2019, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, L. Hu, L.Y.S. Lee*",
         title: "Use of Carbon Supports with Copper Ion as a Highly Sensitive Non-Enzymatic Glucose Sensor",
         journal: "Sensors and Actuators B: Chemical, 2019, 282, 187–196",
@@ -378,7 +378,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.snb.2018.10.164"
     },
     {
-        number: 9, year: 2018, type: "Article",
+        number: 15, year: 2018, type: "Article",
         authors: "M. Liu, <u>W. Zheng</u>, S. Ran, S.T. Boles, L.Y.S. Lee*",
         title: "Overall Water Splitting Electrocatalysts based on 2D CoNi Metal-Organic Frameworks and Its Derivative",
         journal: "Advanced Materials Interfaces, 2018, 5, 1800849",
@@ -388,7 +388,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/admi.201800849"
     },
     {
-        number: 8, year: 2018, type: "Article",
+        number: 14, year: 2018, type: "Article",
         authors: "Y. Li, L. Hu, <u>W. Zheng</u>, X. Peng, M. Liu, P. K. Chu,* L. Y. S. Lee*",
         title: "Ni/Co-Based Nanosheet Arrays for Efficient Oxygen Evolution Reaction",
         journal: "Nano Energy, 2018, 52, 360—368",
@@ -397,7 +397,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.nanoen.2018.08.010"
     },
     {
-        number: 7, year: 2018, type: "Article",
+        number: 13, year: 2018, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, M. Liu, C.-S. Tsang, L.Y.S. Lee,* K.-Y. Wong*",
         title: "Cu2+-doped Carbon Nitride/MWCNT as an Electrochemical Glucose Sensor",
         journal: "Electroanalysis, 2018, 30, 1446—1454",
@@ -406,7 +406,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/elan.201800076"
     },
     {
-        number: 6, year: 2017, type: "Article",
+        number: 12, year: 2017, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, C.-S. Tsang, L. Hu, M. Liu, B. Huang, L.Y.S. Lee,* K.-Y. Wong*",
         title: "CuII-mediated Ultra-efficient Electrooxidation of Glucose",
         journal: "ChemElectroChem, 2017, 4, 2788—2792",
@@ -415,7 +415,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/celc.201700712"
     },
     {
-        number: 5, year: 2017, type: "Article",
+        number: 11, year: 2017, type: "Article",
         authors: "<u>W. Zheng</u>, H.W. Man, L. Ye,* S.C.E. Tsang*",
         title: "Electroreduction of Carbon Dioxide to Formic Acid and Methanol over a Palladium/Polyaniline Catalyst in Acidic Solution: A Study of the Palladium Size Effect",
         journal: "Energy Technology, 2017, 5, 937—944",
@@ -424,7 +424,7 @@ const allPublications = [
         dimensionsDoi: "10.1002/ente.201600659"
     },
     {
-        number: 4, year: 2017, type: "Article",
+        number: 10, year: 2017, type: "Article",
         authors: "A. Kolpin, G. Jones, S. Jones, <u>W. Zheng</u>, J. Cookson, A. PE York, P. J Collier, S.C.E. Tsang*",
         title: "Quantitative Differences in Sulfur Poisoning Phenomena over Ruthenium and Palladium: An Attempt to Deconvolute Geometric and Electronic Poisoning Effects Using Model Catalysts",
         journal: "ACS Catalysis, 2017, 7, 592—605",
@@ -433,7 +433,7 @@ const allPublications = [
         dimensionsDoi: "10.1021/acscatal.6b02765"
     },
     {
-        number: 3, year: 2016, type: "Article",
+        number: 9, year: 2016, type: "Article",
         authors: "<u>W. Zheng</u>, S. Nayak, W. Yuan, Z. Zeng, X. Hong, K.A. Vincent, S.C.E. Tsang*",
         title: "A Tunable Metal-polyaniline Interface for Efficient Carbon Dioxide Electro-Reduction to Formic Acid and Methanol in Aqueous Solution",
         journal: "Chemical Communications, 2016, 52, 13901—13904",
@@ -442,7 +442,7 @@ const allPublications = [
         dimensionsDoi: "10.1039/C6CC07212G"
     },
     {
-        number: 2, year: 2016, type: "Article",
+        number: 8, year: 2016, type: "Article",
         authors: "<u>W. Zheng</u>, L. Hu, L.Y.S. Lee, K.-Y. Wong*",
         title: "Copper Nanoparticles/Polyaniline/Graphene Composite as a Highly Sensitive Electrochemical Glucose Sensor",
         journal: "Journal of Electroanalytical Chemistry, 2016, 781, 155—160",
@@ -451,7 +451,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.jelechem.2016.08.004"
     },
     {
-        number: 1, year: 2015, type: "Article",
+        number: 7, year: 2015, type: "Article",
         authors: "<u>W. Zheng</u>, J. Qu, X. Hong, K. Tedsree, S.C.E. Tsang*",
         title: "Probing the Size and Shape Effects of Cubic- and Spherical-Shaped Palladium Nanoparticles in the Electrooxidation of Formic Acid",
         journal: "ChemCatChem, 2015, 7, 3826—3831",
@@ -459,4 +459,60 @@ const allPublications = [
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1002/cctc.201500774"
     }
+    {
+        number: 6, year: 2015, type: "Article",
+        authors: "S. Jones, S.M. Fairclough, M. Gordon-Brown, <u>W. Zheng</u>, A. Kolpin, B. Pang, W.C.H. Kuo, J.M. Smith, S.C.E. Tsang*",
+        title: "Dual doping effects (site blockage and electronic promotion) imposed by adatoms on Pd nanocrystals for catalytic hydrogen production",
+        journal: "Chemical Communications, 2015, 51, 46-49",
+        doi: "10.1039/C4CC06195K",
+        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        dimensionsDoi: "10.1039/C4CC06195K"
+    }
+
+    {
+        number: 5, year: 2014, type: "Article",
+        authors: "K. Nakagawa, T. Jia, <u>W. Zheng</u>, S. M. Fairclough, M. Katoh, S. Sugiyama, S.C.E. Tsang*",
+        title: "Enhanced Photocatalytic Hydrogen Evolution from Water by Niobate Single Molecular Sheets and Ensembles",
+        journal: "Chemical Communications, 2014, 50, 13702-13705",
+        doi: "10.1039/C4CC04726E",
+        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        dimensionsDoi: "10.1039/C4CC04726E"
+    }
+    {
+        number: 4, year: 2014, type: "Article",
+        authors: "<u>W. Zheng</u>, S. Jones, X. Hong, S.C.E. Tsang*",
+        title: "Photo and electronic excitation for low temperature catalysis over metal nanoparticles using an organic semiconductor",
+        journal: "RSC Advances, 2014, 4, 88, 47488-47496",
+        doi: "10.1039/C4RA08297D",
+        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        dimensionsDoi: "10.1039/C4RA08297D"
+    }
+    {
+        number: 3, year: 2013, type: "Article",
+        authors: "J. Ge, Z. Zeng, F. Liao, <u>W. Zheng</u>, X. Hong, S.C.E. Tsang*",
+        title: "Palladium on iron oxide nanoparticles: the morphological effect of the support in glycerol hydrogenolysis",
+        journal: "Green Chemistry, 2013, 15, 8, 2064-2069",
+        doi: "10.1039/C3GC40712H",
+        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        dimensionsDoi: "10.1039/C3GC40712H"
+    }
+    {
+        number: 2, year: 2011, type: "Article",
+        authors: "F. Liao, Y. Huang, J. Ge, <u>W. Zheng</u>, K. Tedsree, P. Collier, X. Hong, S.C.E. Tsang*",
+        title: "Morphology‐Dependent Interactions of ZnO with Cu Nanoparticles at the Materials’ Interface in Selective Hydrogenation of CO2 to CH3OH",
+        journal: "Angewandte Chemie International Edition, 2011, 50, 9, 2162-2165",
+        doi: "10.1002/anie.201007108",
+        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        dimensionsDoi: "10.1002/anie.201007108"
+    }
+    {
+        number: 1, year: 2010, type: "Article",
+        authors: "Y. Huang, F. Liao, <u>W. Zheng</u>, X. Liu, X. Wu, X. Hong, S.C.E. Tsang*",
+        title: "Temperature and Solvent-Dependent Morphological Sol Gel Transformation: An in Situ microscopic observation",
+        journal: "Langmuir, 2010, 26, 5, 3106-3114",
+        doi: "10.1021/la904264u",
+        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        dimensionsDoi: "10.1021/la904264u"
+    }
+
 ];
