@@ -451,7 +451,7 @@ const allPublications = [
         doi: "10.1002/cctc.201500774",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1002/cctc.201500774"
-    }
+    },
     {
         number: 6, year: 2015, type: "Article",
         authors: "S. Jones, S.M. Fairclough, M. Gordon-Brown, <u>W. Zheng</u>, A. Kolpin, B. Pang, W.C.H. Kuo, J.M. Smith, S.C.E. Tsang*",
@@ -460,8 +460,7 @@ const allPublications = [
         doi: "10.1039/C4CC06195K",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1039/C4CC06195K"
-    }
-
+    },
     {
         number: 5, year: 2014, type: "Article",
         authors: "K. Nakagawa, T. Jia, <u>W. Zheng</u>, S. M. Fairclough, M. Katoh, S. Sugiyama, S.C.E. Tsang*",
@@ -470,7 +469,7 @@ const allPublications = [
         doi: "10.1039/C4CC04726E",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1039/C4CC04726E"
-    }
+    },
     {
         number: 4, year: 2014, type: "Article",
         authors: "<u>W. Zheng</u>, S. Jones, X. Hong, S.C.E. Tsang*",
@@ -479,7 +478,7 @@ const allPublications = [
         doi: "10.1039/C4RA08297D",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1039/C4RA08297D"
-    }
+    },
     {
         number: 3, year: 2013, type: "Article",
         authors: "J. Ge, Z. Zeng, F. Liao, <u>W. Zheng</u>, X. Hong, S.C.E. Tsang*",
@@ -488,7 +487,7 @@ const allPublications = [
         doi: "10.1039/C3GC40712H",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1039/C3GC40712H"
-    }
+    },
     {
         number: 2, year: 2011, type: "Article",
         authors: "F. Liao, Y. Huang, J. Ge, <u>W. Zheng</u>, K. Tedsree, P. Collier, X. Hong, S.C.E. Tsang*",
@@ -497,7 +496,7 @@ const allPublications = [
         doi: "10.1002/anie.201007108",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1002/anie.201007108"
-    }
+    },
     {
         number: 1, year: 2010, type: "Article",
         authors: "Y. Huang, F. Liao, <u>W. Zheng</u>, X. Liu, X. Wu, X. Hong, S.C.E. Tsang*",
