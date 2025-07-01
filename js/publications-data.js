@@ -1,15 +1,8 @@
 // js/publications-data.js
 
 const allPublications = [
+
     // 2025
-/*    {
-        number: 53, year: 2025, type: "Article",
-        authors: "K. Wang, Z. Zhu, Y. Liu, <u>W. Zheng</u>, Z. Yuan, Z. Lin, R. Semiat, L. Shao, X. He*",
-        title: "Adsorption-enhanced carbon membranes derived from copolyimide for ultrafast sub-angstrom discriminating CO2 separation",
-        journal: "Science Advances, 2025",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC for Adsorption-enhanced carbon membranes"
-        // Add DOI, PDF, comments, featuredIn, dimensionsDoi if available
-    }, */
     {
         number: 52, year: 2025, type: "Invited Article",
         authors: "<b><u>S. Chen</u></b>,^ <b><u>T. Zhang</u></b>,^ L. Zheng, J. Gao, X. Huang, J. Gu, C. Vogt,&nbsp;<b><u>W. Zheng</u></b>*",
@@ -514,5 +507,4 @@ const allPublications = [
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1021/la904264u"
     }
-
 ];
