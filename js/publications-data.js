@@ -37,7 +37,7 @@ const allPublications = [
         title: "Interface Engineering with an Organic Aluminum Additive for High-Rate Sodium Metal Batteries",
         journal: "Advanced Functional Materials, 2025,&nbsp;2414041",
         doi: "10.1002/adfm.202414041",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/2025afm.jpg", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1002/adfm.202414041"
     },
 
@@ -90,7 +90,7 @@ const allPublications = [
         title: "Optimized Transition Metal Phosphides for Direct Seawater Electrolysis: Current Trends",
         journal: "ChemSusChem, 2024, e202301926",
         doi: "10.1002/cssc.202301926",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/2024csc.jpg", imageAlt: "TOC Placeholder",
         comments: ["Editors' choice: spotlights"],
         dimensionsDoi: "10.1002/cssc.202301926"
     },
