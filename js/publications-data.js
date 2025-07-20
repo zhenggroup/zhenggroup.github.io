@@ -291,7 +291,7 @@ const allPublications = [
         title: "Laser-assisted Ultrafast Exfoliation of Black Phosphorus in Liquid with Tunable Thickness for Li-ion Batteries",
         journal: "Advanced Energy Materials, 2020, 10, 1903490",
         doi: "10.1002/aenm.201903490",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder", // Original had cover image, but not specified here
+        imageUrl: "../img/2020aem.jpg", imageAlt: "TOC Placeholder", // Original had cover image, but not specified here
         comments: ["Featured on the cover"],
         dimensionsDoi: "10.1002/aenm.201903490"
     },
