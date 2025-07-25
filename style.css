@@ -7,12 +7,13 @@
 
 /* Define Color Palette using CSS Custom Properties */
 :root {
-    --color-primary-blue: #0056b3;
-    --color-dark-blue: #004080;
+    --color-primary-blue: #2E2E2E;
+    --color-dark-blue: #2E2E2E;
+    --color-light-blue: #CECECE;
 
-    --text-color-dark: #333333;      /* Main body text, darker elements */
-    --text-color-headings: #000000;  /* Main headings */
-    --text-color-medium: #555555;    /* Secondary text */
+    --text-color-dark: #2E2E2E;      /* Main body text, darker elements */
+    --text-color-headings: #2E2E2E;  /* Main headings */
+    --text-color-medium: #2E2E2E;    /* Secondary text */
     --text-color-light: #ffffff;     /* Text on dark backgrounds */
     --text-color-subtle: #777777;    /* For less important text like dates */
     --text-link-color: var(--color-primary-blue);
@@ -25,7 +26,7 @@
     --border-color-light: #eeeeee;
     --border-color-medium: #e0e0e0;
 
-    --footer-background: #2c3e50;
+    --footer-background: #2E2E2E;
     --footer-text-color: #bdc3c7;
 
     --shadow-color-soft: rgba(0,0,0,0.05);
@@ -50,9 +51,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-family-sans-serif); /* Use variable */
-    line-height: 1.6;
+    line-height: 1.5;
     color: var(--text-color-dark);
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .page-container {
@@ -165,18 +166,18 @@ button {
     color: var(--text-color-light);
     padding: 2rem 0;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 .page-title-container h1 {
-    font-size: 2.6em;
+    font-size: 1.4em;
     font-weight: 600;
     margin: 0;
 }
 
 .section-heading { /* Used in index.html */
-    font-size: 2em;
+    font-size: 1.4em;
     color: var(--text-color-headings);
-    margin: 2.5rem auto 2rem; /* Simplified margin, auto for left/right with display:inline-block */
+    margin: 2rem auto 2rem; /* Simplified margin, auto for left/right with display:inline-block */
     text-align: center; /* Already centered by transform, but good for fallback */
     padding-bottom: 0.6rem;
     border-bottom: 2px solid var(--color-primary-blue);
@@ -193,9 +194,9 @@ button {
     background-color: var(--footer-background);
     color: var(--footer-text-color);
     text-align: center;
-    padding: 2.5rem 0;
-    margin-top: 3rem;
-    font-size: 0.9em;
+    padding: 1.5rem 0;
+    margin-top: 1.5rem;
+    font-size: .75rem;
 }
 .footer-bloc p {
     margin-bottom: 0;
@@ -266,7 +267,7 @@ nav .dropdown-menu .nav-link { color: var(--text-color-medium) !important; }
 .blockquote {
     padding: 0 20px;
     border-left: 2px solid var(--border-color-medium);
-    margin: 1.5rem 0;
+    margin: 1.25rem 0;
     font-style: italic;
     color: var(--text-color-medium);
 }

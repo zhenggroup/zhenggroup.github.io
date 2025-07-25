@@ -28,13 +28,13 @@
         .featured-covers-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            gap: 1.25rem;
+            gap: 1rem;
             margin-bottom: 3rem;
         }
         .featured-cover-item img {
             width: 100%;
             height: auto;
-            border-radius: 6px;
+            border-radius: 2px;
             box-shadow: 0 2px 8px var(--shadow-color-soft);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
@@ -48,20 +48,20 @@
             border: 1px solid var(--border-color-light);
             border-radius: 6px;
             box-shadow: 0 2px 8px var(--shadow-color-soft);
-            margin-bottom: 1.25rem;
+            margin-bottom: 1rem;
             overflow: hidden; 
         }
         .publication-year-accordion .card-header {
-            background-color: var(--color-primary-blue);
+            background-color: var(color-light-blue);
             color: var(--text-color-light);
-            padding: 0.6rem 1.25rem;
+            padding: 0.6rem 1rem;
             border-bottom: none; 
             cursor: pointer;
         }
         .publication-year-accordion .card-header .year-toggle {
-            font-size: 1.4em;
+            font-size: 1em;
             font-weight: 500;
-            color: var(--text-color-light);
+            color: var(--text-color-dark);
             text-decoration: none;
             display: block;
             position: relative;
@@ -104,10 +104,10 @@
         .publication-toc img {
             width: 100%;
             height: auto;
-            max-height: 400px;
+            max-height: 200px;
             object-fit: contain; 
-            border-radius: 4px;
-            border: 1px solid var(--border-color-medium);
+            border-radius: 0px;
+            border: 0px solid var(--border-color-medium);
         }
         .publication-details {
             flex: 1;
@@ -119,18 +119,19 @@
             align-items: baseline; 
         }
         .publication-number {
-            font-weight: 600;
+            font-weight: 500;
             color: var(--color-primary-blue);
+            padding: 0.15em 0.5em;
             margin-right: 0.6em;
-            font-size: 1em;
+            font-size: 0.85em;
         }
         .publication-type-tag {
             display: inline-block;
             background-color: var(--background-color-accent-tag);
             color: var(--color-primary-blue);
             padding: 0.15em 0.5em;
-            border-radius: 3px;
-            font-size: 0.75em;
+            border-radius: 0px;
+            font-size: 0.85em;
             font-weight: 500;
             text-transform: capitalize;
         }
@@ -145,7 +146,7 @@
             color: var(--color-dark-blue);
         }
         .publication-title {
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 600;
             color: var(--color-dark-blue);
             display: block; 
@@ -258,7 +259,6 @@
 <main>
     <div class="content-container">
 
-        <h2 class="section-heading">Featured Covers</h2>
         <section class="featured-covers-grid" id="featured-covers">
             <a href="#" data-lightbox="../img/6.jpg" data-gallery-id="gallery-covers" class="featured-cover-item">
                 <picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/6.webp"><img src="../img/lazyload-ph.png" data-src="../img/6.jpg" class="lazyload" alt="Featured Cover"></picture>
