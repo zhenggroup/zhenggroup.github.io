@@ -52,16 +52,17 @@ function createPublicationHTML(pub) {
         });
     }
 
-    // Featured In
+	// Featured In
     if (pub.featuredIn && pub.featuredIn.length > 0) {
-        html += `<div class="publication-featured-links"><i>Featured in: `;
+        // The <i> and </i> tags have been removed from the lines below
+        html += `<div class="publication-featured-links">Featured in: `;
         pub.featuredIn.forEach((link, index) => {
             html += `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a>`;
             if (index < pub.featuredIn.length - 1) {
                 html += `, `;
             }
         });
-        html += `</i></div>`;
+        html += `</div>`;
     }
 
     // Dimensions Badge

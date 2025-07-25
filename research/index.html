@@ -21,7 +21,7 @@
 
         /* Main Content Styling */
         main {
-            padding-bottom: 3rem;
+            padding-bottom: 2rem;
         }
         
         /* Modifier for left-aligned section heading (used for Guiding Principles) */
@@ -30,7 +30,7 @@
             transform:none; 
             left:0; 
             border-bottom:none; /* Guiding principles title doesn't have the bottom border */
-            font-size:1.8em; /* Specific size for this context */
+            font-size:1.6em; /* Specific size for this context */
             color: var(--color-primary-blue); /* Use variable */
             margin-bottom: 1.5rem;
         }
@@ -71,12 +71,12 @@
         /* Research Areas Section */
         .research-section {
             display: grid;
-            gap: 2rem; 
+            gap: 1.5rem; 
         }
 
         .research-card {
             background-color: var(--background-color-page); /* Use variable */
-            padding: 2rem; 
+            padding: 1.5rem; 
             border-radius: 0px;
             box-shadow: 0 3px 10px var(--shadow-color-soft); /* Use variable */
             border: 1px solid var(--border-color-light); /* Use variable */
@@ -111,7 +111,7 @@
         }
 
         .research-card h2 { 
-            font-size: 1.8em; 
+            font-size: 1.4em; 
             color: var(--color-primary-blue); /* Use variable */
             margin-top: 0; 
             margin-bottom: 0.75rem;
@@ -124,7 +124,7 @@
         }
 
         .research-card h3 { /* "Our topic", "Related publications" */
-            font-size: 1.3em; 
+            font-size: 1.2em; 
             color: var(--color-dark-blue); /* Use variable */
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
@@ -163,7 +163,7 @@
                 margin-right: 1.5rem;
             }
             /* .page-title-container h1 and .section-heading font sizes are handled globally */
-             .research-card h2 { font-size: 1.5em; }
+             .research-card h2 { font-size: 1.4em; }
              .research-card h3 { font-size: 1.2em; }
         }
 
@@ -187,7 +187,7 @@
                 max-height: 200px;
             }
             .research-card h2 {
-                font-size: 1.6em;
+                font-size: 1.4em;
             }
             .research-card h3 {
                 font-size: 1.2em;
@@ -205,7 +205,7 @@
                 padding: 1.25rem;
             }
              .research-card h2 {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
              .research-card-image-container img {
                 max-height: 180px;
@@ -213,7 +213,7 @@
             .feynman-quote-section {
                 padding: 1.5rem;
             }
-            .feynman-quote-section blockquote { font-size: 1.05em; }
+            .feynman-quote-section blockquote { font-size: 1.0em; }
             /* footer styles handled globally */
         }
     </style>
@@ -274,20 +274,21 @@
 	</div>
 </div>
 <!-- bloc-0 END -->
-</header>
 
-<div class="page-title-container"> <!-- This will be styled by global style.css -->
+ </header>
+
+ <div class="page-title-container"> <!-- This will be styled by global style.css -->
     <div class="content-container">
-        <h1>Our Research Focus</h1>
+        <h1>Our Research Topics</h1> 
     </div>
-</div>
+</div> 
 
 <main>
     <div class="content-container"> 
         
         <section class="feynman-quote-section" id="guiding-principles">
             <!-- Changed class to "section-heading left-aligned" -->
-            <h2 class="section-heading left-aligned">Guiding Principles</h2>
+            <h3 class="section-heading left-aligned">Guiding Principles for Research</h3>
             <blockquote class="blockquote">
                 <p class="roboto-it"> <!-- roboto-it class kept for italic style, font family from body -->
                     The first principle is that you must not fool yourself--and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that.<br>It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.<br>
@@ -297,7 +298,7 @@
         </section>
 
         <!-- Changed class to "section-heading" -->
-        <h2 class="section-heading">Our Research Interests</h2>
+       <!-- <h2 class="section-heading">Our Research Interests</h2> -->
         <section id="research-areas" class="research-section">
             
             <div class="research-card">

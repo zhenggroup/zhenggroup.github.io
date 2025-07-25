@@ -10,14 +10,17 @@
     --color-primary-blue: #2E2E2E;
     --color-dark-blue: #2E2E2E;
     --color-light-blue: #CECECE;
+    --color-link: #0682c4;
+    --color-link-light: #00a6ff;
+
 
     --text-color-dark: #2E2E2E;      /* Main body text, darker elements */
     --text-color-headings: #2E2E2E;  /* Main headings */
     --text-color-medium: #2E2E2E;    /* Secondary text */
     --text-color-light: #ffffff;     /* Text on dark backgrounds */
     --text-color-subtle: #777777;    /* For less important text like dates */
-    --text-link-color: var(--color-primary-blue);
-    --text-link-hover-color: var(--color-dark-blue);
+    --text-link-color: var(--color-link);
+    --text-link-hover-color: var(--color-link-light);
 
     --background-color-page: #ffffff;
     --background-color-light-gray: #f8f9fa;

@@ -100,11 +100,16 @@
             flex: 0 0 300px;
             max-width: 300px;
             min-height: 1px; /* Ensure the div takes space even if image fails or is missing */
+             /* --- ADD THESE LINES --- */
+  	   display: flex;           /* Turns the container into a flexbox */
+   	   align-items: center;     /* Vertically centers the flex items (the image) */
+  	   justify-content: center; /* Horizontally centers the flex items */
+
         }
         .publication-toc img {
             width: 100%;
             height: auto;
-            max-height: 200px;
+            max-height: 160px;
             object-fit: contain; 
             border-radius: 0px;
             border: 0px solid var(--border-color-medium);
@@ -131,7 +136,7 @@
             color: var(--color-primary-blue);
             padding: 0.15em 0.5em;
             border-radius: 0px;
-            font-size: 0.85em;
+            font-size: 0.8em;
             font-weight: 500;
             text-transform: capitalize;
         }
@@ -156,36 +161,41 @@
         .publication-journal {
             font-style: italic;
             color: var(--text-color-medium);
-            font-size: 0.95em;
+            font-size: 0.90em;
             margin-bottom: 0.4rem;
         }
         .publication-links a, .publication-featured-links a {
             margin-right: 0.6rem;
-            font-size: 0.85em;
+            font-size: 0.90em;
             color: var(--text-link-color);
             text-decoration: none;
             word-break: break-all; 
         }
         .publication-links a .fa-link, .publication-links a .fa-file-pdf {
             margin-right: 0.2em;
+            font-size: 0.90em;
         }
         .publication-links a:hover, .publication-featured-links a:hover {
             color: var(--text-link-hover-color);
             text-decoration: underline;
         }
         .publication-comment {
-            font-size: 0.8em;
+            font-size: 0.90em;
             color: var(--text-color-subtle);
             display: block;
             margin-top: 0.25rem;
             line-height: 1.4;
+            margin-bottom: 0.4rem;
         }
         .publication-featured-links {
-            font-size: 0.8em;
+            font-size: 0.90em;
             margin-top: 0.25rem;
+            font-style: normal;
+            margin-bottom: 0.4rem;
+            color: var(--text-color-subtle);
         }
         .dimensions-badge-container {
-            margin-top: 0.6rem;
+            margin-top: 0.25rem;
         }
         
         @media (max-width: 991px) {
