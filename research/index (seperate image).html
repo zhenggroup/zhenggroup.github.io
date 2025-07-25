@@ -16,136 +16,108 @@
     <title>Research - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for research/index.html - Common styles are in ../style.css */
-        /* Body background is white by default from style.css, so no override needed here */
-
-        /* Main Content Styling */
+        /* Page-specific styles for research/index.html */
         main {
             padding-bottom: 2rem;
         }
         
-        /* Modifier for left-aligned section heading (used for Guiding Principles) */
         .section-heading.left-aligned { 
             text-align:left; 
             transform:none; 
             left:0; 
-            border-bottom:none; /* Guiding principles title doesn't have the bottom border */
-            font-size:1.6em; /* Specific size for this context */
-            color: var(--color-primary-blue); /* Use variable */
+            border-bottom:none;
+            font-size:1.6em;
+            color: var(--color-primary-blue);
             margin-bottom: 1.5rem;
         }
 
-        /* Feynman Quote Styling */
         .feynman-quote-section { 
-            background-color: var(--background-color-light-gray); /* Use variable */
+            background-color: var(--background-color-light-gray);
             padding: 2rem; 
             margin-top: 0; 
             margin-bottom: 2rem; 
             border-radius: 8px;
-            border-left: 5px solid var(--color-primary-blue); /* Use variable */
+            border-left: 5px solid var(--color-primary-blue);
         }
         .feynman-quote-section blockquote {
             margin: 0;
             font-style: italic;
-            color: var(--text-color-dark); /* Use variable */
+            color: var(--text-color-dark);
             font-size: 1.0em; 
         }
-        .feynman-quote-section blockquote p {
-            margin-bottom: 1.25em;
-        }
-        .feynman-quote-section blockquote p:last-of-type {
-            margin-bottom: 0;
-        }
+        .feynman-quote-section blockquote p { margin-bottom: 1.25em; }
+        .feynman-quote-section blockquote p:last-of-type { margin-bottom: 0; }
         .feynman-quote-section cite { 
             display: block;
             text-align: right;
             margin-top: 1.5em;
             font-weight: bold;
-            color: var(--color-primary-blue); /* Use variable */
+            color: var(--color-primary-blue);
         }
-        .feynman-quote-section .roboto-it { /* This class is from the original Blocs template, ensures italic style */
-            font-style: italic; 
-            /* font-family will be inherited from body (system font stack) */
-        }
+        .feynman-quote-section .roboto-it { font-style: italic; }
 
-        /* Research Areas Section */
+        /* --- NEW: Research Areas Section with Split Layout --- */
         .research-section {
             display: grid;
-            gap: 1.5rem; 
+            gap: 2rem; /* Increased gap for better separation */
         }
         
-        /* --- MODIFIED .research-card --- */
         .research-card {
-            position: relative; /* Essential for the overlay */
-            padding: 2rem; 
-            border-radius: 8px; /* Added for a modern look */
+            background-color: var(--background-color-page);
+            border-radius: 0px;
             box-shadow: 0 3px 10px var(--shadow-color-soft);
+            border: 1px solid var(--border-color-light);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
-            overflow: hidden; /* Keeps the pseudo-element contained */
-            background-size: cover;
-            background-position: center;
-            color: #FFFFFF; /* Set default text color to white */
-            display: flex; /* Use flex to align content */
-            align-items: center; /* Vertically center content */
-            min-height: 450px; /* Ensure a minimum height for visual consistency */
+            display: flex; /* Use Flexbox to create the split layout */
+            overflow: hidden; /* Important for border-radius on children */
+            align-items: stretch; /* Make columns equal height */
         }
-        
-        /* --- ADDED Dark Overlay using ::before pseudo-element --- */
-        .research-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.65); /* Dark overlay. Adjust opacity (0.0 to 1.0) as needed */
-            z-index: 1; /* Sits on top of the background image */
-        }
-
         .research-card:hover {
             transform: translateY(-4px); 
             box-shadow: 0 5px 15px var(--shadow-color-medium);
         }
-        
-        /* --- ADDED ID selectors for each card's background image --- */
-        #operando-electrochemistry {
-            background-image: url('../img/SPM.jpg');
-        }
-        #electrocatalyst-design {
-            background-image: url('../img/catalyst%20deactivation.jpg');
-        }
-        #fundamental-methods {
-            background-image: url('../img/images_large_nz4c01869_0001.jpeg');
-        }
 
-        /* --- MODIFIED .research-card-content --- */
+        /* The two panes: image and content */
+        .research-card-image {
+            flex: 1 1 45%; /* Image takes up 45% of the width */
+            min-width: 250px;
+        }
         .research-card-content {
-            position: relative; /* Ensures content sits on top of the overlay */
-            z-index: 2;
-            flex: 1;
-            min-width: 280px; 
+            flex: 1 1 55%; /* Content takes up 55% of the width */
+            padding: 2rem;
+        }
+        
+        /* Modifier class to alternate the layout */
+        .research-card.image-on-right {
+            flex-direction: row-reverse; /* This flips the order of image and content */
         }
 
-        /* --- MODIFIED text colors to be light --- */
+        .research-card-image img {
+            width: 100%;
+            height: 100%; /* Make image fill the container height */
+            object-fit: cover; /* Crucial: scales image to fit without distortion */
+            display: block;
+        }
+
         .research-card h2 { 
-            font-size: 1.6em; 
-            color: #FFFFFF; /* White heading */
+            font-size: 1.5em; 
+            color: var(--color-primary-blue);
             margin-top: 0; 
             margin-bottom: 0.75rem;
         }
         
         .research-card .research-topic-intro { 
              margin-bottom: 1.25rem;
-             color: rgba(255, 255, 255, 0.9); /* Slightly off-white for intro text */
+             color: var(--text-color-medium);
              line-height: 1.65; 
         }
 
         .research-card h3 {
-            font-size: 1.3em; 
-            color: #FFFFFF; /* White subheading */
+            font-size: 1.2em; 
+            color: var(--color-dark-blue);
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Light border */
+            border-bottom: 1px solid var(--border-color-medium);
             padding-bottom: 0.4rem;
         }
 
@@ -156,59 +128,47 @@
         }
         .research-card ul li {
             margin-bottom: 0.5rem;
-            color: rgba(255, 255, 255, 0.9); /* Light list item text */
+            color: var(--text-color-dark);
         }
-        .research-card ul li em, .research-card p em { 
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.95);
-        }
+        .research-card ul li em, .research-card p em { font-style: italic; }
+        
         .research-card .publications-list p,
         .research-card .publications-list li { 
             margin-bottom: 0.3rem;
             font-size: 0.9em; 
             line-height: 1.45;
-            color: rgba(255, 255, 255, 0.85); /* Light publication text */
         }
         .research-card .publications-list ul { 
             padding-left: 0;
             list-style-type: none; 
         }
 
-        /* --- REMOVED unused styles --- */
-        /* .research-card-image-container and its child styles are no longer needed. */
-
-        /* Responsive Design Adjustments */
+        /* --- NEW: Responsive Design for Split Layout --- */
         @media (max-width: 991px) { 
-             .research-card {
-                min-height: 400px;
-                padding: 1.5rem;
-             }
-             .research-card h2 { font-size: 1.5em; }
-             .research-card h3 { font-size: 1.2em; }
+             /* On medium screens, adjust the flex-basis for better balance */
+             .research-card-image { flex-basis: 40%; }
+             .research-card-content { flex-basis: 60%; padding: 1.5rem; }
         }
 
         @media (max-width: 767px) { 
             .section-heading.left-aligned { font-size: 1.6em; }
-            .research-card {
-                min-height: 350px;
+            .research-card,
+            .research-card.image-on-right {
+                flex-direction: column; /* Stack image and content vertically */
             }
-            .feynman-quote-section {
-                padding: 2rem;
+            .research-card-image img {
+                max-height: 220px; /* Give the image a max-height when stacked */
             }
+            .research-card-content {
+                padding: 1.5rem;
+            }
+            .feynman-quote-section { padding: 2rem; }
         }
 
         @media (max-width: 480px) {
             .section-heading.left-aligned { font-size: 1.4em; }
-            .research-card {
-                padding: 1.5rem;
-                min-height: 300px;
-            }
-             .research-card h2 {
-                font-size: 1.4em;
-            }
-            .feynman-quote-section {
-                padding: 1.5rem;
-            }
+            .research-card-content { padding: 1.25rem; }
+            .feynman-quote-section { padding: 1.5rem; }
             .feynman-quote-section blockquote { font-size: 1.0em; }
         }
     </style>
@@ -282,22 +242,25 @@
     <div class="content-container"> 
         
         <section class="feynman-quote-section" id="guiding-principles">
-            <!-- Changed class to "section-heading left-aligned" -->
             <h3 class="section-heading left-aligned">Guiding Principles for Research</h3>
             <blockquote class="blockquote">
-                <p class="roboto-it"> <!-- roboto-it class kept for italic style, font family from body -->
+                <p class="roboto-it">
                     The first principle is that you must not fool yourself--and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that.<br>It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.<br>
                 </p>
                 <cite>&mdash; Prof. Richard Feynman</cite>
             </blockquote>
         </section>
 
-        <!-- Changed class to "section-heading" -->
-       <!-- <h2 class="section-heading">Our Research Interests</h2> -->
         <section id="research-areas" class="research-section">
             
-            <!-- MODIFIED: Added id, removed image container -->
-            <div class="research-card" id="operando-electrochemistry">
+            <!-- NEW HTML STRUCTURE FOR RESEARCH CARD -->
+            <div class="research-card">
+                <div class="research-card-image">
+                    <picture>
+                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/SPM.webp">
+                        <img src="../img/lazyload-ph.png" data-src="../img/SPM.jpg" class="lazyload" alt="Illustration for Operando Electrochemistry">
+                    </picture>
+                </div>
                 <div class="research-card-content">
                     <h2>Time-Resolved Operando Electrochemistry</h2>
                     <p class="research-topic-intro">
@@ -318,8 +281,14 @@
                 </div>
             </div>
 
-            <!-- MODIFIED: Added id, removed image container -->
-            <div class="research-card" id="electrocatalyst-design">
+            <!-- ADDED "image-on-right" CLASS TO ALTERNATE LAYOUT -->
+            <div class="research-card image-on-right">
+                <div class="research-card-image">
+                    <picture>
+                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/catalyst%20deactivation.webp">
+                        <img src="../img/lazyload-ph.png" data-src="../img/catalyst%20deactivation.jpg" class="lazyload" alt="Illustration for Electrocatalyst Design">
+                    </picture>
+                </div>
                 <div class="research-card-content">
                     <h2>Electrocatalyst Design and Degradation</h2>
                     <p class="research-topic-intro">
@@ -341,8 +310,13 @@
                 </div>
             </div>
 
-            <!-- MODIFIED: Added id, removed image container -->
-            <div class="research-card" id="fundamental-methods">
+            <div class="research-card">
+                <div class="research-card-image">
+                    <picture>
+                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/images_large_nz4c01869_0001.webp">
+                        <img src="../img/lazyload-ph.png" data-src="../img/images_large_nz4c01869_0001.jpeg" class="lazyload" alt="Illustration for Electrochemistry Methods">
+                    </picture>
+                </div>
                 <div class="research-card-content">
                     <h2>Fundamental Electrochemistry Methods</h2>
                     <p class="research-topic-intro">
