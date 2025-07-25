@@ -16,81 +16,68 @@
     <title>Research - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for research/index.html - Common styles are in ../style.css */
-        /* Body background is white by default from style.css, so no override needed here */
-
-        /* Main Content Styling */
+        /* Page-specific styles for research/index.html */
         main {
             padding-bottom: 2rem;
         }
         
-        /* Modifier for left-aligned section heading (used for Guiding Principles) */
         .section-heading.left-aligned { 
             text-align:left; 
             transform:none; 
             left:0; 
-            border-bottom:none; /* Guiding principles title doesn't have the bottom border */
-            font-size:1.6em; /* Specific size for this context */
-            color: var(--color-primary-blue); /* Use variable */
+            border-bottom:none;
+            font-size: 1.4em;
+            color: var(--color-primary-blue);
             margin-bottom: 1.5rem;
         }
 
-        /* Feynman Quote Styling */
         .feynman-quote-section { 
-            background-color: var(--background-color-light-gray); /* Use variable */
+            background-color: var(--background-color-light-gray);
             padding: 2rem; 
             margin-top: 0; 
             margin-bottom: 2rem; 
             border-radius: 8px;
-            border-left: 5px solid var(--color-primary-blue); /* Use variable */
+            border-left: 5px solid var(--color-primary-blue);
         }
         .feynman-quote-section blockquote {
             margin: 0;
             font-style: italic;
-            color: var(--text-color-dark); /* Use variable */
+            color: var(--text-color-dark);
             font-size: 1.0em; 
         }
-        .feynman-quote-section blockquote p {
-            margin-bottom: 1.25em;
-        }
-        .feynman-quote-section blockquote p:last-of-type {
-            margin-bottom: 0;
-        }
+        .feynman-quote-section blockquote p { margin-bottom: 1.25em; }
+        .feynman-quote-section blockquote p:last-of-type { margin-bottom: 0; }
         .feynman-quote-section cite { 
             display: block;
             text-align: right;
             margin-top: 1.5em;
             font-weight: bold;
-            color: var(--color-primary-blue); /* Use variable */
+            color: var(--color-primary-blue);
         }
-        .feynman-quote-section .roboto-it { /* This class is from the original Blocs template, ensures italic style */
-            font-style: italic; 
-            /* font-family will be inherited from body (system font stack) */
-        }
+        .feynman-quote-section .roboto-it { font-style: italic; }
 
-        /* Research Areas Section */
         .research-section {
             display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.5rem; 
         }
         
-        /* --- MODIFIED .research-card --- */
         .research-card {
-            position: relative; /* Essential for the overlay */
-            padding: 2rem; 
-            border-radius: 8px; /* Added for a modern look */
+            position: relative;
+            padding: 2.5rem 2rem;
+            border-radius: 0px;
             box-shadow: 0 3px 10px var(--shadow-color-soft);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            overflow: hidden; /* Keeps the pseudo-element contained */
+            overflow: hidden;
             background-size: cover;
             background-position: center;
-            color: #FFFFFF; /* Set default text color to white */
-            display: flex; /* Use flex to align content */
-            align-items: center; /* Vertically center content */
-            min-height: 450px; /* Ensure a minimum height for visual consistency */
+            color: #FFFFFF;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Aligns content to the top */
+            min-height: 480px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
         
-        /* --- ADDED Dark Overlay using ::before pseudo-element --- */
         .research-card::before {
             content: '';
             position: absolute;
@@ -98,54 +85,50 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.65); /* Dark overlay. Adjust opacity (0.0 to 1.0) as needed */
-            z-index: 1; /* Sits on top of the background image */
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+            transition: background-color 0.3s ease-in-out;
         }
 
         .research-card:hover {
-            transform: translateY(-4px); 
-            box-shadow: 0 5px 15px var(--shadow-color-medium);
+            transform: translateY(-8px) scale(1.06);
+            box-shadow: 0 10px 25px var(--shadow-color-medium);
+        }
+        .research-card:hover::before {
+            background-color: rgba(0, 0, 0, 0.4);
         }
         
-        /* --- ADDED ID selectors for each card's background image --- */
-        #operando-electrochemistry {
-            background-image: url('../img/SPM.jpg');
-        }
-        #electrocatalyst-design {
-            background-image: url('../img/catalyst%20deactivation.jpg');
-        }
-        #fundamental-methods {
-            background-image: url('../img/images_large_nz4c01869_0001.jpeg');
-        }
+        #operando-electrochemistry { background-image: url('../img/cover-operando.jpg'); }
+        #electrocatalyst-design { background-image: url('../img/cover-design.jpg'); }
+        #fundamental-methods { background-image: url('../img/cover-methods.jpg'); }
 
-        /* --- MODIFIED .research-card-content --- */
         .research-card-content {
-            position: relative; /* Ensures content sits on top of the overlay */
+            position: relative;
             z-index: 2;
-            flex: 1;
-            min-width: 280px; 
         }
 
-        /* --- MODIFIED text colors to be light --- */
         .research-card h2 { 
-            font-size: 1.6em; 
-            color: #FFFFFF; /* White heading */
+            font-size: 1.5em;
+            color: #FFFFFF;
             margin-top: 0; 
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
+            text-align: center;
         }
         
         .research-card .research-topic-intro { 
              margin-bottom: 1.25rem;
-             color: rgba(255, 255, 255, 0.9); /* Slightly off-white for intro text */
+             color: rgba(255, 255, 255, 0.9);
              line-height: 1.65; 
+             text-align: center;
+             font-size: 0.95em;
         }
 
         .research-card h3 {
-            font-size: 1.3em; 
-            color: #FFFFFF; /* White subheading */
+            font-size: 1.2em;
+            color: #FFFFFF;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4); /* Light border */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
             padding-bottom: 0.4rem;
         }
 
@@ -154,61 +137,51 @@
             padding-left: 20px;
             margin-bottom: 1rem;
         }
-        .research-card ul li {
+        
+        /* --- MODIFIED: "Our topic" list font size --- */
+        .research-card .topic-list li {
+            font-size: 0.95em; /* Match intro text size */
+            line-height: 1.65; /* Match intro text line height */
             margin-bottom: 0.5rem;
-            color: rgba(255, 255, 255, 0.9); /* Light list item text */
+            color: rgba(255, 255, 255, 0.9);
         }
         .research-card ul li em, .research-card p em { 
             font-style: italic;
             color: rgba(255, 255, 255, 0.95);
         }
-        .research-card .publications-list p,
+        
+        /* --- MODIFIED: "Related publications" font size and link styles --- */
         .research-card .publications-list li { 
-            margin-bottom: 0.3rem;
-            font-size: 0.9em; 
-            line-height: 1.45;
-            color: rgba(255, 255, 255, 0.85); /* Light publication text */
+            margin-bottom: 0.4rem; /* Increased margin slightly */
+            font-size: 0.85em; /* Decreased font size */
+            line-height: 1.4;
         }
         .research-card .publications-list ul { 
             padding-left: 0;
             list-style-type: none; 
         }
-
-        /* --- REMOVED unused styles --- */
-        /* .research-card-image-container and its child styles are no longer needed. */
-
-        /* Responsive Design Adjustments */
-        @media (max-width: 991px) { 
-             .research-card {
-                min-height: 400px;
-                padding: 1.5rem;
-             }
-             .research-card h2 { font-size: 1.5em; }
-             .research-card h3 { font-size: 1.2em; }
+        .research-card .publications-list a {
+            color: rgba(255, 255, 255, 0.85); /* Match li text color */
+            text-decoration: none; /* Remove default underline */
+            transition: color 0.2s ease;
+        }
+        .research-card .publications-list a:hover {
+            color: #FFFFFF; /* Make brighter on hover */
+            text-decoration: underline; /* Add underline on hover for clarity */
         }
 
+        /* Responsive Design Adjustments */
         @media (max-width: 767px) { 
-            .section-heading.left-aligned { font-size: 1.6em; }
-            .research-card {
-                min-height: 350px;
-            }
-            .feynman-quote-section {
-                padding: 2rem;
-            }
+            .section-heading.left-aligned { font-size: 1.4em; }
+            .research-card { min-height: 400px; }
+            .feynman-quote-section { padding: 2rem; }
         }
 
         @media (max-width: 480px) {
-            .section-heading.left-aligned { font-size: 1.4em; }
-            .research-card {
-                padding: 1.5rem;
-                min-height: 300px;
-            }
-             .research-card h2 {
-                font-size: 1.4em;
-            }
-            .feynman-quote-section {
-                padding: 1.5rem;
-            }
+            .section-heading.left-aligned { font-size: 1.3em; }
+            .research-card { padding: 1.5rem; }
+            .research-card h2 { font-size: 1.4em; }
+            .feynman-quote-section { padding: 1.5rem; }
             .feynman-quote-section blockquote { font-size: 1.0em; }
         }
     </style>
@@ -282,21 +255,17 @@
     <div class="content-container"> 
         
         <section class="feynman-quote-section" id="guiding-principles">
-            <!-- Changed class to "section-heading left-aligned" -->
             <h3 class="section-heading left-aligned">Guiding Principles for Research</h3>
             <blockquote class="blockquote">
-                <p class="roboto-it"> <!-- roboto-it class kept for italic style, font family from body -->
+                <p class="roboto-it">
                     The first principle is that you must not fool yourself--and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that.<br>It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.<br>
                 </p>
                 <cite>&mdash; Prof. Richard Feynman</cite>
             </blockquote>
         </section>
 
-        <!-- Changed class to "section-heading" -->
-       <!-- <h2 class="section-heading">Our Research Interests</h2> -->
         <section id="research-areas" class="research-section">
             
-            <!-- MODIFIED: Added id, removed image container -->
             <div class="research-card" id="operando-electrochemistry">
                 <div class="research-card-content">
                     <h2>Time-Resolved Operando Electrochemistry</h2>
@@ -304,21 +273,26 @@
                         The electrochemical interface is where the electron transfer occurs between the electrode, electrocatalyst, and electrolyte. Understanding the interface reveals the structure-property relationship of electrocatalysts. <em>In situ</em> techniques are helpful to study the interface.
                     </p>
                     <h3>Our topic</h3>
-                    <ul>
+                    <!-- MODIFIED: Added class="topic-list" -->
+                    <ul class="topic-list">
                         <li><em>In situ</em> electrochemical atomic force microscopy (EC-AFM)</li>
                         <li><em>In situ</em> differential electrochemical mass spectroscopy (DEMS)</li>
                     </ul>
                     <h3>Related publications</h3>
+                    <!--
+                        MODIFIED: Publication list now contains links.
+                        To add your own URL, replace the "#" in href="#" with your link.
+                        For example: href="https://doi.org/your-publication-link"
+                    -->
                     <ul class="publications-list"> 
-                        <li>J. Chen, et al., Journal of Catalysis, 2024, 438, 115720.</li>
-                        <li>W. Zheng, Chemistry Methods, 2023, 3(2), e202200042.</li>
-                        <li>W. Zheng, et al., ACS Energy Letters, 2021, 6, 2838–2843.</li>
-                        <li>W. Zheng, et al., ACS Catalysis, 2020, 10, 81–92.</li>
+                        <li><a href="#">J. Chen, et al., Journal of Catalysis, 2024, 438, 115720.</a></li>
+                        <li><a href="#">W. Zheng, Chemistry Methods, 2023, 3(2), e202200042.</a></li>
+                        <li><a href="#">W. Zheng, et al., ACS Energy Letters, 2021, 6, 2838–2843.</a></li>
+                        <li><a href="#">W. Zheng, et al., ACS Catalysis, 2020, 10, 81–92.</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- MODIFIED: Added id, removed image container -->
             <div class="research-card" id="electrocatalyst-design">
                 <div class="research-card-content">
                     <h2>Electrocatalyst Design and Degradation</h2>
@@ -326,22 +300,22 @@
                         Electrocatalysts are materials that can promote electrochemical conversion at a fixed potential. For optimal efficiency, the materials must have a suitable surface atomic configuration and adsorption energy to achieve both good activity and stability. The rational design of active sites is the best way to achieve this.
                     </p>
                     <h3>Our topic</h3>
-                    <ul>
+                    <!-- MODIFIED: Added class="topic-list" -->
+                    <ul class="topic-list">
                         <li>Electrochemical synthesis of inorganic materials</li>
                         <li>Ammonia electrooxidation, water electrolysis</li>
                     </ul>
                     <h3>Related publications</h3>
                      <ul class="publications-list"> 
-                        <li>J. Zhong, et al., Electrochimica Acta, 2024,&nbsp;497, 145178</li>
-                        <li>L. Du and W. Zheng, APL Energy, 2024, 2, 021501</li>
-                        <li>W. Zheng, Analysis & Sensing, 2023, 3(1), e202200070.</li>
-                        <li>W. Zheng, et al., Small, 2021, 17, 2007768.</li>
-                        <li>W. Zheng, et al., Nanoscale, 2021, 13, 15177–15187.</li>
+                        <li><a href="#">J. Zhong, et al., Electrochimica Acta, 2024,&nbsp;497, 145178</a></li>
+                        <li><a href="#">L. Du and W. Zheng, APL Energy, 2024, 2, 021501</a></li>
+                        <li><a href="#">W. Zheng, Analysis & Sensing, 2023, 3(1), e202200070.</a></li>
+                        <li><a href="#">W. Zheng, et al., Small, 2021, 17, 2007768.</a></li>
+                        <li><a href="#">W. Zheng, et al., Nanoscale, 2021, 13, 15177–15187.</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- MODIFIED: Added id, removed image container -->
             <div class="research-card" id="fundamental-methods">
                 <div class="research-card-content">
                     <h2>Fundamental Electrochemistry Methods</h2>
@@ -349,16 +323,17 @@
                         Electrochemical results can be misleading if wrong concepts and inappropriate experimental procedures are adopted. Examining all details is essential to gaining a fundamental understanding of the electrochemical process.
                     </p>
                     <h3>Our topic</h3>
-                    <ul>
+                    <!-- MODIFIED: Added class="topic-list" -->
+                    <ul class="topic-list">
                         <li>Reproducibility of current electrochemical results</li>
                         <li>Misleading concepts related to electrochemical process</li>
                     </ul>
                     <h3>Related publications</h3>
                     <ul class="publications-list"> 
-                        <li>W. Zheng and L. Du, ACS Energy Letters, 2024, 9, 4581-4586.</li>
-                        <li>W. Zheng,&nbsp;ACS Energy Letters, 2023, 8, 1952-1958.</li>
-                        <li>W. Zheng, et al.,&nbsp;ACS Energy Letters, 2021, 6, 2838–2843.</li>
-                        <li>W. Zheng, et al.,&nbsp;ACS Energy Letters, 2020, 5, 3260-3264.</li>
+                        <li><a href="#">W. Zheng and L. Du, ACS Energy Letters, 2024, 9, 4581-4586.</a></li>
+                        <li><a href="#">W. Zheng,&nbsp;ACS Energy Letters, 2023, 8, 1952-1958.</a></li>
+                        <li><a href="#">W. Zheng, et al.,&nbsp;ACS Energy Letters, 2021, 6, 2838–2843.</a></li>
+                        <li><a href="#">W. Zheng, et al.,&nbsp;ACS Energy Letters, 2020, 5, 3260-3264.</a></li>
                     </ul>
                 </div>
             </div>
