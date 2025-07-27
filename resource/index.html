@@ -12,132 +12,104 @@
 	<link rel="stylesheet" type="text/css" href="../style.css?1673"> 
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-    <!-- Google Fonts links removed as we are using system fonts globally via style.css -->
-    <!--
-	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    -->
     <title>Resources - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for resource/index.html - Common styles are in ../style.css */
+        /* --- Compact Styles --- */
 
-        body {
-            background-color: var(--background-color-light-gray); /* Use variable for light grey page background */
-            /* Other body properties like font-family, color, line-height are inherited from style.css */
-        }
-
-        /* Section Styling */
-        .resource-section {
-            background-color: var(--background-color-page); /* Use variable (white) */
-            padding: 1.75rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px var(--shadow-color-soft); /* Use variable */
-            border: 1px solid var(--border-color-light); /* Use variable */
+        /* Lab System Buttons */
+        .lab-system-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.25rem;
             margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color-medium);
+            padding: 0.5rem 0 2.5rem 0;
         }
-        .resource-section h2 { 
-            font-size: 1.7em;
-            color: var(--color-dark-blue); /* Use variable */
-            margin-top: 0;
-            margin-bottom: 1.25rem;
-            padding-bottom: 0.4rem;
-            border-bottom: 2px solid var(--color-primary-blue); /* Use variable */
-        }
-        .resource-section h3 { 
-            font-size: 1.3em;
-            color: var(--color-primary-blue); /* Use variable */
-            margin-top: 1.25rem;
-            margin-bottom: 0.6rem;
-        }
-        .resource-section h3:first-child {
-            margin-top: 0;
-        }
-
-        .resource-section p, .resource-section ul {
-            margin-bottom: 0.8rem;
-            line-height: 1.65;
-            color: var(--text-color-medium); /* Use variable */
-            font-size: 0.95em;
-        }
-        .resource-section ul {
-            padding-left: 22px;
-            list-style-type: disc; 
-        }
-        .resource-section li {
-            margin-bottom: 0.4rem;
-        }
-        .resource-section a {
-            color: var(--text-link-color); /* Use variable */
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .resource-section a:hover {
-            color: var(--text-link-hover-color); /* Use variable */
-            text-decoration: underline;
-        }
-        .resource-section strong { 
+        .lab-system-buttons .btn {
+            flex-grow: 1;
+            max-width: 300px;
+            font-size: 1em; /* smaller font */
             font-weight: 600;
-            color: var(--text-color-dark); /* Use variable */
+            padding: 0.7rem 1.25rem; /* smaller padding */
+            border: none;
+            border-radius: 6px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+            color: #fff;
+            text-align: center;
         }
-        .resource-section .note { 
-            font-size: 0.85em;
-            color: var(--text-color-subtle); /* Use variable */
-            display: inline; 
-            margin-left: 0.5em;
+        .lab-system-buttons .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-color-medium);
+            color: #fff;
+            filter: brightness(90%);
         }
-        .resource-section .members-only {
-            font-weight: bold;
-            color: #b30000; /* Specific alert red, kept as is */
+        .lab-system-buttons .btn .fas {
+            margin-right: 0.6em;
+        }
+        .btn-booking { background-color: var(--color-primary-blue); }
+        .btn-nas { background-color: var(--color-dark-blue); }
+
+        /* Resource Cards */
+        .resource-card {
+            background-color: var(--background-color-page);
+            padding: 1.5rem; /* reduced padding */
+            margin-bottom: 2rem; /* reduced margin */
+            box-shadow: var(--shadow-color-soft);
+        }
+        .resource-card h3 { 
+            font-size: 1.2em; /* smaller font */
+            color: var(--color-dark-blue);
+            font-weight: 600;
+            margin-top: 1.25rem; /* reduced margin */
+            margin-bottom: 0.5rem;
+        }
+        .resource-card h3:first-of-type {
+            margin-top: 0;
+        }
+        .resource-card p, .resource-card ul {
+            margin-bottom: 0.75rem; /* reduced margin */
+            line-height: 1.6; /* tighter line height */
+            font-size: 0.95em; /* smaller font */
+            color: var(--text-color-dark);
+        }
+        .resource-card ul { padding-left: 20px; }
+        .resource-card li { margin-bottom: 0.4rem; }
+        .resource-card a { color: var(--text-link-color); text-decoration: none; font-weight: 500; }
+        .resource-card a:hover { color: var(--text-link-hover-color); text-decoration: underline; }
+        .resource-card strong { font-weight: 600; color: var(--text-color-headings); }
+        .resource-card .note { 
             font-size: 0.9em;
+            font-weight: 400;
+            color: var(--text-color-subtle);
+            margin-left: 0.75em;
         }
 
-        /* Specific styling for software list items for better structure */
+        /* Software List */
         .software-list-item {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.25rem; /* reduced margin */
+            padding-bottom: 1.25rem; /* reduced padding */
+            border-bottom: 1px solid var(--border-color-light);
         }
-        .software-list-item h3 { 
-            margin-bottom: 0.2rem;
-        }
+        .software-list-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+        .software-list-item h3 { margin-top: 0; }
         .software-list-item .software-description {
-            margin-left: 0; 
-            padding-left: 0;
-            margin-top: 0.2rem; 
-            margin-bottom: 0.4rem; 
+            margin-bottom: 0.6rem; 
+            color: var(--text-color-medium);
         }
-        .software-list-item ul { 
-            margin-top: 0.4rem;
-            list-style-type: circle;
-        }
+        .software-list-item ul { margin-top: 0.4rem; list-style-type: circle; }
         
-        /* Responsive Adjustments - Global responsive rules are in style.css */
-        /* Page-specific responsive adjustments for resource items: */
-        @media (max-width: 991px) { 
-            /* .page-title-container h1 font size handled globally */
-            .resource-section h2 { font-size: 1.5em; }
-            .resource-section h3 { font-size: 1.2em; }
+        /* Responsive */
+        @media (max-width: 576px) {
+            .lab-system-buttons { flex-direction: column; gap: 0.75rem; align-items: stretch; }
+            .lab-system-buttons .btn { max-width: 100%; }
         }
-
         @media (max-width: 767px) { 
-            /* .page-title-container h1 font size handled globally */
-            .resource-section { padding: 1.25rem; }
-            .resource-section h2 { font-size: 1.4em; }
-            .resource-section h3 { font-size: 1.1em; }
-            .resource-section p, .resource-section ul { font-size: 0.9em; }
+            .resource-card { padding: 1.25rem; }
+            .resource-card h3 { font-size: 1.1em; }
         }
-
-        @media (max-width: 480px) { 
-            /* body font-size handled globally */
-            /* .page-title-container h1 font size handled globally */
-            .resource-section h2 { font-size: 1.3em; }
-            .resource-section h3 { font-size: 1em; }
-        }
-
     </style>
-    
-<!-- Analytics -->
- 
-<!-- Analytics END -->
     
 </head>
 <body data-clean-url="true">
@@ -146,11 +118,10 @@
 <div id="page-loading-blocs-notifaction" class="page-preloader"></div>
 <!-- Preloader END -->
 
-
 <!-- Main container -->
 <div class="page-container">
     
-<header> <!-- Header will be styled by global style.css -->
+<header>
 <!-- bloc-0: Navigation -->
 <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
 	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
@@ -164,24 +135,12 @@
 						</button>
 						<div class="collapse navbar-collapse navbar-35179 navbar-14477">
 								<ul class="site-navigation nav navbar-nav ms-auto">
-									<li class="nav-item">
-										<a href="../index.html" class="nav-link">Home</a>
-									</li>
-									<li class="nav-item">
-										<a href="../research/index.html" class="nav-link">Research</a>
-									</li>
-									<li class="nav-item">
-										<a href="../publication/index.html" class="nav-link">Publication</a>
-									</li>
-									<li class="nav-item">
-										<a href="../team/index.html" class="nav-link">Team</a>
-									</li>
-									<li class="nav-item">
-										<a href="./index.html" class="nav-link active">Resource</a> 
-									</li>
-									<li class="nav-item">
-										<a href="../news/index.html" class="nav-link">News</a>
-									</li>
+									<li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+									<li class="nav-item"><a href="../research/index.html" class="nav-link">Research</a></li>
+									<li class="nav-item"><a href="../publication/index.html" class="nav-link">Publication</a></li>
+									<li class="nav-item"><a href="../team/index.html" class="nav-link">Team</a></li>
+									<li class="nav-item"><a href="./index.html" class="nav-link active">Resource</a></li>
+									<li class="nav-item"><a href="../news/index.html" class="nav-link">News</a></li>
 								</ul>
 							</div>
 					</div>
@@ -193,7 +152,7 @@
 <!-- bloc-0 END -->
 </header>
 
-<div class="page-title-container"> <!-- This will be styled by global style.css -->
+<div class="page-title-container">
     <div class="content-container">
         <h1>Resources</h1>
     </div>
@@ -202,91 +161,73 @@
 <main>
     <div class="content-container">
         
-        <section class="resource-section" id="online-lectures">
-            <h2>Online Lectures</h2>
-            <p>
-                电催化剂失活过程的原位研究策略 (06/02/2025 科研云讲座) <a href="https://www.bilibili.com/video/BV1bzN4efEDM/?spm_id_from=333.337.search-card.all.click&vd_source=fc9ab070c3e43559b55603564026a5de" target="_blank" rel="noopener noreferrer">View Lecture on Bilibili</a>
-            </p>
-        </section>
+        <!-- Lab System Buttons Section -->
+        <div class="lab-system-buttons">
+            <a href="https://el.easylab.xyz/lab/zhenggroup" target="_blank" rel="noopener noreferrer" class="btn btn-booking">
+                <i class="fas fa-calendar-alt"></i> Instrument Booking
+            </a>
+            <a href="https://zheng-lab-gtiit.cn5.quickconnect.cn/" target="_blank" rel="noopener noreferrer" class="btn btn-nas">
+                <i class="fas fa-server"></i> NAS Data & Files
+            </a>
+        </div>
 
-        <section class="resource-section" id="lab-systems">
-            <h2>Lab Systems <span class="members-only">(Members Only)</span></h2>
-            <p>
-                To book instruments, please go to <a href="https://el.easylab.xyz/lab/zhenggroup" target="_blank" rel="noopener noreferrer">Instrument booking system</a>.
-            </p>
-            <p>
-                To access the experimental raw data and shared files, please go to <a href="https://zheng-lab-gtiit.cn5.quickconnect.cn/" target="_blank" rel="noopener noreferrer">NAS data and file system</a>.
-            </p>
-        </section>
-
-        <section class="resource-section" id="software">
-            <h2>Software</h2>
-            
+        <!-- Software Section -->
+        <h2 class="section-heading">Software</h2>
+        <div class="resource-card">
             <div class="software-list-item">
                 <h3><a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a><span class="note">(Free)</span></h3>
-                <p class="software-description">
-                    Used for data processing and plotting, electrochemical system simulation, and hardware control.
-                </p>
+                <p class="software-description">Used for data processing, plotting, system simulation, and hardware control.</p>
                 <ul>
-                    <li>We mainly use <strong>NumPy, Pandas,</strong> and <strong>SciPy</strong> packages for data analysis; <strong>Matplotlib</strong> and <strong>Seaborn</strong> packages for data plotting.</li>
-                    <li>Coding should be done in <strong>JupyterLab</strong> for better sharing and reading. We suggest <a href="https://github.com/jupyterlab/jupyterlab-desktop" target="_blank" rel="noopener noreferrer">JupyterLab Desktop</a>.</li>
-                    <li>Read <a href="https://iopscience.iop.org/article/10.1149/2754-2734/acff0b/meta" target="_blank" rel="noopener noreferrer">this article</a> to know why we use Python, not OriginLab or Excel.</li>
-                    <li>Dr. Weiran Zheng delivered an ECS Webinar on “Introducing Python for electrochemistry research”. You can view the recording <a href="https://physicsworld.com/a/introducing-python-for-electrochemistry-research/" target="_blank" rel="noopener noreferrer">here</a>.</li>
-                    <li>For introductory tutorials, we suggest:
-                        <ul>
-                            <li><a href="https://weisscharlesj.github.io/SciCompforChemists/notebooks/introduction/intro.html" target="_blank" rel="noopener noreferrer">Scientific Computing for Chemists with Python</a> by Charles J. Weiss</li>
-                            <li><a href="https://education.molssi.org/python-data-analysis/" target="_blank" rel="noopener noreferrer">Python for Data Analysis</a> from MolSSI</li>
-                        </ul>
-                    </li>
+                    <li>Packages: <strong>NumPy, Pandas, SciPy, Matplotlib, Seaborn</strong>.</li>
+                    <li>Environment: <a href="https://github.com/jupyterlab/jupyterlab-desktop" target="_blank" rel="noopener noreferrer">JupyterLab Desktop</a> for better sharing and reading.</li>
+                    <li>Read <a href="https://iopscience.iop.org/article/10.1149/2754-2734/acff0b/meta" target="_blank" rel="noopener noreferrer">this article</a> to know why we use Python over OriginLab or Excel.</li>
+                    <li>View Dr. Zheng's ECS Webinar on Python for electrochemistry <a href="https://physicsworld.com/a/introducing-python-for-electrochemistry-research/" target="_blank" rel="noopener noreferrer">here</a>.</li>
                 </ul>
             </div>
-
             <div class="software-list-item">
                 <h3><a href="https://www.blender.org/" target="_blank" rel="noopener noreferrer">Blender</a><span class="note">(Free)</span></h3>
                 <p class="software-description">Software for 3D modeling, animation, rendering, and visual effects.</p>
             </div>
-
             <div class="software-list-item">
                 <h3><a href="https://fiji.sc/" target="_blank" rel="noopener noreferrer">Fiji (ImageJ)</a><span class="note">(Free)</span></h3>
-                <p class="software-description">An open-source image processing program designed for scientific image analysis, particularly popular in life sciences (e.g., for electron microscopy images).</p>
+                <p class="software-description">Open-source image processing for scientific image analysis (e.g., for EM images).</p>
             </div>
-
             <div class="software-list-item">
                 <h3><a href="https://jp-minerals.org/vesta/en/" target="_blank" rel="noopener noreferrer">VESTA</a><span class="note">(Free)</span></h3>
-                <p class="software-description">A 3D visualization program for crystal structures, volumetric data such as electron/nuclear densities, and crystal morphologies.</p>
+                <p class="software-description">3D visualization for crystal structures, volumetric data, and crystal morphologies.</p>
             </div>
-
             <div class="software-list-item">
                 <h3><a href="https://gwyddion.net/" target="_blank" rel="noopener noreferrer">Gwyddion</a><span class="note">(Free)</span></h3>
-                <p class="software-description">A modular program for scanning probe microscopy (SPM) data visualization and analysis (e.g., AFM, MFM, STM, SNOM/NSOM).</p>
+                <p class="software-description">A modular program for scanning probe microscopy (SPM) data analysis.</p>
             </div>
-        </section>
+        </div>
 
-        <section class="resource-section" id="general-electrochemistry">
-            <h2>General Electrochemical Resources</h2>
+        <!-- External Resources Section (Consolidated) -->
+        <h2 class="section-heading">Electrochemical Resources</h2>
+        <div class="resource-card">
+            <h3>Online Lecture</h3>
             <p>
-                For <strong>basic principles of electrochemistry</strong>, you can refer to:
+                电催化剂失活过程的原位研究策略 (06/02/2025 科研云讲座) by Weiran Zheng <a href="https://www.bilibili.com/video/BV1bzN4efEDM/" target="_blank" rel="noopener noreferrer">View on Bilibili</a>
             </p>
+            <h3>Basic Principles</h3>
             <ul>
                 <li><a href="https://www.ceb.cam.ac.uk/research/groups/rg-eme/research/undergraduate-teaching-notes" target="_blank" rel="noopener noreferrer">Electrochemistry 101 (Cambridge)</a></li>
                 <li><a href="https://ocw.mit.edu/courses/chemical-engineering/10-626-electrochemical-energy-systems-spring-2014/study-materials/" target="_blank" rel="noopener noreferrer">Electrochemistry 101 (MIT)</a></li>
                 <li><a href="https://sop4cv.com/" target="_blank" rel="noopener noreferrer">sop4cv.com</a></li>
             </ul>
-            <p>
-                For a <strong>deeper understanding of the electrochemical methods</strong> we are using, you can refer to:
-            </p>
+            <h3>Advanced Methods</h3>
             <ul>
                 <li><a href="https://www.gamry.com/application-notes/" target="_blank" rel="noopener noreferrer">Gamry application notes</a></li>
                 <li><a href="https://pineresearch.com/shop/kb/knowledge-category/theory/" target="_blank" rel="noopener noreferrer">Pine research notes</a></li>
-                <li>The electrochemistry Bible: <a href="https://www.wiley.com/en-kr/Electrochemical+Methods:+Fundamentals+and+Applications,+2nd+Edition-p-9780471043720" target="_blank" rel="noopener noreferrer">Electrochemical Methods: Fundamentals and Applications</a> by Allen J. Bard et al.</li>
+                <li>The electrochemistry Bible: <a href="https://www.wiley.com/en-kr/Electrochemical+Methods:+Fundamentals+and+Applications,+2nd+Edition-p-9780471043720" target="_blank" rel="noopener noreferrer">Electrochemical Methods</a> by Bard et al.</li>
             </ul>
-        </section>
+        </div>
 
     </div>
 </main>
 
 <!-- Footer -->
-<footer class="footer-bloc" id="footer"> <!-- This will be styled by global style.css -->
+<footer class="footer-bloc" id="footer">
 	<div class="content-container">
 		<p>
 			Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
@@ -303,8 +244,6 @@
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script>
 <script src="../js/lazysizes.min.js" defer></script>
-<script src="../js/blocsaddons-markdown.js?510"></script> 
-<script src="../js/marked.min.js?2952"></script> 
 <!-- Additional JS END -->
 
 </body>
