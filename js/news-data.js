@@ -23,23 +23,34 @@ const newsData = [
     id: "paper-published-jpcc-2025",
     date: "2025-07-20",
     title: "Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published",
-    content: `<p>Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published in <a href="https://doi.org/10.1021/acs.jpcc.5c02770" target="_blank" rel="noopener noreferrer">The Journal of Physical Chemistry C</a>, featured as front cover. This article is published as part of The Journal of Physical Chemistry C special issue “Jacek Lipkowski Festschrift”.</p>`,
+    content: `<p>Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published in <a href="https://doi.org/10.1021/acs.jpcc.5c02770" target="_blank" rel="noopener noreferrer">The Journal of Physical Chemistry C</a>, featured as front cover. This article is published as part of The Journal of Physical Chemistry C special issue “Jacek Lipkowski Festschrift”.</p> <p>Ammonia electrooxidation (AOR) on metal oxides involves a complex interplay between nitrogen (N)- and oxygen (O)-containing intermediates, critically influencing reaction activity and product selectivity. In this study, we investigate AOR on RuO2 under alkaline conditions with electrochemical and in situ characterization techniques, including differential electrochemical mass spectrometry (DEMS) and ultraviolet–visible (UV–vis) spectroelectrochemistry. The effects of NH3 and OH– concentration (0.1–2.0 M, and 0.01–1.0 M, respectively) as well as applied potential on AOR and the concurrent oxygen evolution reaction (OER) are examined. NO and NO3– are identified as the main AOR products, especially at high OH– concentration and potential, with minor quantities of N2O and no detectable N2 formation. Increasing NH3 concentration suppresses OER by competing for surface sites, particularly at low OH– concentrations, while promoting AOR pathways. Product analysis with DEMS and colorimetry identifies two distinct regimes of N2O and NO3– formation: a low-potential, NH3-driven pathway, and a high-potential, *OOH-mediated pathway. The exclusive formation of NO at high OH– concentration and potential underscores the role of *OOH in *NOH dehydrogenation. Moreover, NO3– arises through both *OOH-assisted and NH3-rich surface mechanisms, depending on the electrolyte environment. The absence of N2 suggests that *N–*N coupling is kinetically or thermodynamically limited on RuO2. These findings highlight the critical role of intermediates (*NHx, *NOH, and *OOH) in dictating product selectivity, offering tunable control over AOR pathways.</p>`,
     imageSrc: "../img/7.JPG",
     imageAlt: "JPCC cover",
     imageFloat: 'left', // DEMO: Image will float to the right
     imageWidth: '20%',   // DEMO: Image will take up 45% of the container width
     imageCaption: "JPCC cover (Vol 129/Issue 27 2025)"  
     },
+    {
+    id: "python-may-2025",
+    date: "2025-05-18",
+    title: "Prof. Zheng delivered a short course at the 247th ECS Meeting in Montreal, Canada",
+    content: `<p>Prof. Zheng delivered an ECS short course on "Introducing Python for Electrochemistry Research" at the 247th ECS Meeting in Montreal, Canada.</p> <p>This course is designed for electrochemists at all levels who are interested in incorporating Python into their research workflows. Specifically, this course is intended for: Electrochemists with little to no experience with Python but are eager to learn its applications in research; Researchers who spend significant time with repetitive tasks like data processing, plotting, and format adjustments; Researchers who want to reduce reliance on commercial software and transition to a versatile, open source platform.</p>`,
+    imageSrc: "../img/25ecs.jpeg",
+    imageAlt: null,
+    imageFloat: 'right',
+    imageWidth: '30%',
+    imageCaption: "Short Course on Python in Electrochemistry"
+  },
   {
     id: "online-lecture-feb-2025",
     date: "2025-02-10",
     title: "Prof. Zheng delivered an online lecture on Operando Methods",
     content: `<p>Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a href="https://www.bilibili.com/video/BV1bzN4efEDM/" target="_blank" rel="noopener noreferrer">View Lecture</a></p>`,
-    imageSrc: null,
+    imageSrc: "../img/keyanyun.jpg",
     imageAlt: null,
-    imageFloat: null,
-    imageWidth: null,
-    imageCaption: null
+    imageFloat: 'left',
+    imageWidth: '30%',
+    imageCaption: "Webinar at 科研云"
   },
   {
     id: "poster-award-sijie-2024",
@@ -56,7 +67,7 @@ const newsData = [
     id: "paper-published-electrochimica-acta-2024",
     date: "2024-10-15",
     title: "Paper on Bismuth doping in copper oxides published in Electrochimica Acta",
-    content: `<p>“Bismuth doping unlocks stability of copper oxides in anodic reaction: A case analysis of glucose electrooxidation” is published on <a href="https://doi.org/10.1016/j.electacta.2024.145178" target="_blank" rel="noopener noreferrer">Electrochimica Acta</a>.</p>`,
+    content: `<p>“Bismuth doping unlocks stability of copper oxides in anodic reaction: A case analysis of glucose electrooxidation” is published on <a href="https://doi.org/10.1016/j.electacta.2024.145178" target="_blank" rel="noopener noreferrer">Electrochimica Acta</a>. The research is led by Jiajing Zhong (PhD candidate).</p>`,
     imageSrc: null,
     imageAlt: null,
     imageFloat: null,
@@ -67,7 +78,7 @@ const newsData = [
     id: "paper-published-acs-energy-lett-2024",
     date: "2024-09-05",
     title: "Paper on graphite counter electrodes published in ACS Energy Letters",
-    content: `<p>“Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation” is published on <a href="https://doi.org/10.1021/acsenergylett.4c01869" target="_blank" rel="noopener noreferrer">ACS Energy Letters</a>.</p>`,
+    content: `<p>“Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation” is published on <a href="https://doi.org/10.1021/acsenergylett.4c01869" target="_blank" rel="noopener noreferrer">ACS Energy Letters</a>. The research is led by Prof. Weiran Zheng and Mr. Lijie Du (RA).</p>`,
     imageSrc: null,
     imageAlt: null,
     imageFloat: null,
@@ -78,7 +89,7 @@ const newsData = [
     id: "paper-published-jcat-2024",
     date: "2024-08-18",
     title: "Paper on ammonia electrooxidation on NiOOH published in Journal of Catalysis",
-    content: `<p>"Correlative in situ analysis of the role of oxygen on ammonia electrooxidation selectivity on NiOOH surfaces” is published on <a href="https://doi.org/10.1016/j.jcat.2024.115720" target="_blank" rel="noopener noreferrer">Journal of Catalysis</a>.</p>`,
+    content: `<p>"Correlative in situ analysis of the role of oxygen on ammonia electrooxidation selectivity on NiOOH surfaces” is published on <a href="https://doi.org/10.1016/j.jcat.2024.115720" target="_blank" rel="noopener noreferrer">Journal of Catalysis</a>. The research is led by Jing Chen (RA) and Sijie Chen (MSc candidate).</p>`,
     imageSrc: null,
     imageAlt: null,
     imageFloat: null,
