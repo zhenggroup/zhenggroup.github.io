@@ -78,12 +78,12 @@ const newsData = [
     id: "paper-published-acs-energy-lett-2024",
     date: "2024-09-05",
     title: "Paper on graphite counter electrodes published in ACS Energy Letters",
-    content: `<p>“Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation” is published on <a href="https://doi.org/10.1021/acsenergylett.4c01869" target="_blank" rel="noopener noreferrer">ACS Energy Letters</a>. The research is led by Prof. Weiran Zheng and Mr. Lijie Du (RA).</p>`,
-    imageSrc: null,
+    content: `<p>“Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation” is published on <a href="https://doi.org/10.1021/acsenergylett.4c01869" target="_blank" rel="noopener noreferrer">ACS Energy Letters</a>. The research is led by Prof. Weiran Zheng and Mr. Lijie Du (RA).</p> <p>This study evaluates the applicability of graphite as an anodic counter electrode (CE) for electrocatalyst testing in acidic and alkaline conditions. While graphite is cost-effective and stable, it suffers from corrosion, producing CO/CO2 in acidic media, which can interfere with working electrodes (WE). Recommendations include using separators, optimizing CV parameters, and polishing graphite to minimize contamination and ensure reproducibility, particularly for hydrogen evolution reaction (HER) studies.</p>`,
+    imageSrc: "../img/24acse.jpeg",
     imageAlt: null,
-    imageFloat: null,
-    imageWidth: null,
-    imageCaption: null
+    imageFloat: 'left',
+    imageWidth: '30%',
+    imageCaption: 'Potential/current relationship in a three-electrode cell',
   },
   {
     id: "paper-published-jcat-2024",
