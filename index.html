@@ -15,7 +15,64 @@
     <title>Home - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for index.html */
+        /* --- Transparent Header on Hero Section (Homepage Only) --- */
+
+        /* Position the entire header block over the hero section */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        /* 
+         * Target the specific div (#bloc-0) to make it transparent and remove dividers.
+        */
+        header #bloc-0 {
+            background: transparent !important;
+            border-bottom: none !important; /* ADDED: Remove any bottom border */
+            box-shadow: none !important;    /* ADDED: Remove any box shadow */
+        }
+        
+        /* Make navigation links white for visibility against the video */
+        header #bloc-0 .nav-link {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+        }
+        
+        /* Make active and hovered links brighter white */
+        header #bloc-0 .nav-link.active,
+        header #bloc-0 .nav-link:hover {
+            color: #FFFFFF;
+        }
+
+        /* Use a more specific selector to make the logo white */
+        header #bloc-0 .navbar-brand img {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Change mobile hamburger menu icon to white */
+        header #bloc-0 .svg-menu-icon {
+            stroke: #FFFFFF;
+        }
+        
+        /* Add padding to the top of the hero section to push content down below the header */
+        .hero-section {
+            padding-top: 120px; /* Adjust as needed */
+        }
+
+        /* Add a dark background to the collapsed mobile menu for readability */
+        @media (max-width: 767px) {
+            header #bloc-0 .navbar-collapse {
+                background-color: rgba(0, 0, 0, 0.85);
+                border-radius: 8px;
+                padding: 1rem;
+                margin-top: 0.5rem;
+            }
+        }
+        /* --- End of Custom Homepage Styles --- */
 
         /* Hero Section with Video Background */
         .hero-section {
@@ -24,9 +81,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 85vh;
-            background-color: #222; /* Fallback color */
-            padding: 2rem 1rem;
+            min-height: 100vh;
+            background-color: #222;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-bottom: 2rem;
         }
         
         .hero-video-background {
@@ -39,11 +98,11 @@
             width: auto;
             height: auto;
             z-index: 1;
-            opacity: 0; /* Hidden by default */
-            transition: opacity 1.0s ease-in-out; /* Smooth fade transition */
+            opacity: 0;
+            transition: opacity 1.0s ease-in-out;
         }
         .hero-video-background.video-active {
-            opacity: 1; /* Make the active video visible */
+            opacity: 1;
         }
 
         .hero-section::before {
@@ -53,7 +112,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+            background-color: rgba(0, 0, 0, 0.4);
             z-index: 2;
         }
 
@@ -66,7 +125,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding-bottom: 2rem; 
         }
 
         .hero-text-content {
@@ -113,6 +171,7 @@
             flex-wrap: wrap;
             gap: 2.5rem;
             padding-top: 2rem;
+            padding-bottom: 2rem;
         }
 
         .hero-gallery-image-container {
@@ -187,12 +246,12 @@
 
         /* Responsive Adjustments */
         @media (max-width: 991px) {
-            .hero-section { min-height: 80vh; }
+            .hero-section { min-height: 90vh; }
             .hero-text-content h1 { font-size: 2.8em; }
             .hero-text-content h2 { font-size: 1.6em; }
         }
         @media (max-width: 767px) {
-            .hero-section { min-height: 75vh; }
+            .hero-section { min-height: 85vh; padding-top: 100px; }
             .hero-text-content h1 { font-size: 2.2em; }
             .hero-text-content h2 { font-size: 1.4em; }
             .hero-text-content .research-focus-intro { font-size: 1.05em; }
@@ -240,14 +299,13 @@
             font-weight: 500;
             color: var(--color-primary-blue);
             flex-shrink: 0;
-            width: 90px; /* Fixed width for alignment */
+            width: 90px;
         }
         .homepage-news-title {
             font-size: 1em;
             color: var(--text-color-dark);
             font-weight: 400;
             line-height: 1.5;
-            /* Truncation for single line */
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -335,7 +393,7 @@
                 <h1>The Zheng Group</h1>
                 <h2>Electrochemical Interface &amp; Conversion Lab @ GTIIT</h2>
                 <p class="research-focus-intro">
-                    Welcome to our research group. We are dedicated to advancing the understanding of electrochemical interfaces and conversion processes. Our work leverages state-of-the-art <strong>spectroelectrochemistry</strong> and <strong>scanning probe microscopy</strong> techniques to investigate fundamental challenges in electrocatalysis. Key areas of our research include elucidating the mechanisms of <strong>electrocatalyst deactivation</strong>, tracking the dynamic <strong>evolution of surface sites</strong> during reactions, and developing and applying <strong>advanced electrochemical methods</strong>.
+                    Welcome to our research group led by Dr. Weiran Zheng 郑蔚然! Our mission is to deepen the understanding of electrochemical interfaces and processes by leveraging cutting-edge operando electrochemical methods. We focus on tracking electrochemical behavior in real time to unravel the mechanisms behind activity, selectivity, and, most importantly, the degradation of electrocatalysts. Using advanced techniques such as spectroelectrochemistry and scanning probe microscopy, we aim to elucidate the dynamic evolution of surface sites and the underlying causes of catalyst deactivation. By addressing these fundamental challenges, we aim to contribute to the development of more efficient and durable electrocatalysis systems, ultimately helping to achieve a greener and shared future.
                 </p>
             </div>
 
@@ -423,12 +481,10 @@
         if (!container) return;
 
         const maxItems = 6;
-        // The newsData is already sorted newest first in the file
         const newsToDisplay = newsData.slice(0, maxItems);
 
         let newsHTML = '';
         newsToDisplay.forEach(item => {
-            // Format date from "YYYY-MM-DD" to "YYYY-MM"
             const displayDate = item.date.substring(0, 7);
             
             newsHTML += `
