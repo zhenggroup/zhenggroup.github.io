@@ -22,14 +22,14 @@ const newsData = [
   {
     id: "paper-published-jpcc-2025",
     date: "2025-07-20",
-    title: "Sijie and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published",
-    content: `<p>Sijie and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published in <a href="https://doi.org/10.1021/acs.jpcc.5c02770" target="_blank" rel="noopener noreferrer">The Journal of Physical Chemistry C</a>, featured as front cover.</p>`,
-    imageSrc: null,
-    imageAlt: null,
-    imageFloat: null,
-    imageWidth: null,
-    imageCaption: null
-  },
+    title: "Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published",
+    content: `<p>Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published in <a href="https://doi.org/10.1021/acs.jpcc.5c02770" target="_blank" rel="noopener noreferrer">The Journal of Physical Chemistry C</a>, featured as front cover. This article is published as part of The Journal of Physical Chemistry C special issue “Jacek Lipkowski Festschrift”.</p>`,
+    imageSrc: "../img/7.JPG",
+    imageAlt: "JPCC cover",
+    imageFloat: 'left', // DEMO: Image will float to the right
+    imageWidth: '20%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: "JPCC cover (Vol 129/Issue 27 2025)"  
+    },
   {
     id: "online-lecture-feb-2025",
     date: "2025-02-10",
