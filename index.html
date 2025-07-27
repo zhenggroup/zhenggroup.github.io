@@ -184,61 +184,6 @@
             padding: 3rem 0; 
             background-color: var(--background-color-page);
         }
-        
-        .news-card {
-            background-color: var(--background-color-page);
-            border-radius: 6px;
-            box-shadow: 0 3px 10px var(--shadow-color-soft);
-            border: 1px solid var(--border-color-light);
-            width: 320px !important; 
-            min-width: 320px !important;
-            display: flex !important; 
-            flex-direction: column !important; 
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            min-height: 200px; 
-            padding: 0 !important; 
-        }
-        .news-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 5px 15px var(--shadow-color-medium);
-        }
-        .news-card .card-body { 
-            padding: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1; 
-        }
-        .news-card h4 {
-            font-size: 1.2em; 
-            color: var(--color-primary-blue);
-            margin-top: 0;
-            margin-bottom: 0.5rem;
-        }
-        .news-card .news-date {
-            font-size: 0.75em;
-            color: var(--text-color-subtle);
-            margin-bottom: 0.75rem;
-            text-transform: uppercase; 
-        }
-        .news-card .news-content {
-            font-size: 0.9em;
-            color: var(--text-color-medium);
-            line-height: 1.55;
-            flex-grow: 1; 
-            margin-bottom: 0; 
-        }
-        .news-card .news-content p:last-child {
-            margin-bottom: 0; 
-        }
-        .news-card .news-content a {
-            color: var(--text-link-color);
-            text-decoration: none; 
-            font-weight: 500;
-        }
-        .news-card .news-content a:hover {
-            color: var(--text-link-hover-color);
-            text-decoration: underline;
-        }
 
         /* Responsive Adjustments */
         @media (max-width: 991px) {
@@ -258,13 +203,6 @@
             .recruitment-alert { padding: 1.5rem; }
 
             .news-section { padding: 2rem 0; }
-            .news-card {
-                width: 290px !important; 
-                min-width: 290px !important;
-                min-height: 260px;
-            }
-            .news-card .card-body { padding: 1.25rem; } 
-            .news-card h4 { font-size: 1.15em; }
         }
         @media (max-width: 480px) {
             .hero-text-content h1 { font-size: 2em; }
@@ -275,14 +213,58 @@
             .recruitment-alert h3 { font-size: 1.3em; }
             .recruitment-alert { padding: 1.25rem; }
             .recruitment-alert .contact-info { font-size: 1em; }
+        }
 
-            .news-card {
-                width: calc(100vw - 30px) !important; 
-                min-width: calc(100vw - 30px) !important;
-                min-height: auto; 
-            }
-            .news-card .card-body { padding: 1rem; } 
-            .news-card h4 { font-size: 1.1em; }
+        /* Homepage News List Styling */
+        .homepage-news-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1.5rem;
+        }
+        .homepage-news-item {
+            border-bottom: 1px solid var(--border-color-light);
+        }
+        .homepage-news-item a {
+            display: flex;
+            align-items: baseline;
+            padding: 0.9rem 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out;
+            gap: 1.5rem;
+        }
+        .homepage-news-item a:hover {
+            background-color: var(--background-color-light-gray);
+        }
+        .homepage-news-date {
+            font-size: 0.9em;
+            font-weight: 500;
+            color: var(--color-primary-blue);
+            flex-shrink: 0;
+            width: 90px; /* Fixed width for alignment */
+        }
+        .homepage-news-title {
+            font-size: 1em;
+            color: var(--text-color-dark);
+            font-weight: 400;
+            line-height: 1.5;
+            /* Truncation for single line */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .homepage-news-more-link {
+            display: block;
+            text-align: right;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+        .homepage-news-more-link a {
+             color: var(--text-link-color);
+             text-decoration: none;
+        }
+         .homepage-news-more-link a:hover {
+             color: var(--text-link-hover-color);
+             text-decoration: underline;
         }
 
     </style>
@@ -391,18 +373,15 @@
     <!-- News Section -->
     <section class="news-section" id="news">
         <div class="content-container">
-            <h2 class="section-heading">Latest News</h2> 
-            <div class="blocs-horizontal-scroll-container">
-                <div class="blocs-horizontal-scroll-control blocs-scroll-control-prev">
-                    <span class="blocs-round-btn"><svg width="26" height="26" viewBox="0 0 32 32"><path class="horizontal-scroll-icon" d="M22,2L9,16,22,30"></path></svg></span>
-                </div>
-                <!-- MODIFIED: This area is now empty and will be filled by JavaScript -->
-                <div class="blocs-horizontal-scroll-area" id="news-card-container">
-                    <!-- News cards will be generated here -->
-                </div>
-                <div class="blocs-horizontal-scroll-control blocs-scroll-control-next">
-                    <span class="blocs-round-btn"><svg width="26" height="26" viewBox="0 0 32 32"><path class="horizontal-scroll-icon" d="M10.344,2l13,14-13,14"></path></svg></span>
-                </div>
+            <h2 class="section-heading">Latest News</h2>
+            
+            <!-- This list will be filled by JavaScript -->
+            <ul class="homepage-news-list" id="homepage-news-container">
+                <!-- JS will generate news items here -->
+            </ul>
+    
+            <div class="homepage-news-more-link">
+                <a href="./news/index.html">View all news &rarr;</a>
             </div>
         </div>
     </section>
@@ -432,90 +411,36 @@
 <script src="./js/bootstrap.bundle.min.js?3655"></script>
 <script src="./js/blocs.min.js?4260"></script>
 <script src="./js/lazysizes.min.js" defer></script>
-<script src="./js/blocsaddons-markdown.js?1097"></script>
-<script src="./js/marked.min.js?2823"></script>
 <!-- Additional JS END -->
 
-<!-- MODIFIED: News Data and Generation Script -->
+<!-- Load Central News Data -->
+<script src="./js/news-data.js"></script>
+
+<!-- Script to Generate Homepage News List -->
 <script>
-    // --- 1. EDIT YOUR NEWS HERE ---
-    // Add new items to the TOP of this list.
-    // The `content` can include HTML tags like links <a>.
-    const newsData = [
-        {
-            date: "07/2025",
-            title: "Paper Published",
-            content: `<p>Sijie and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published in <a href="https://doi.org/10.1021/acs.jpcc.5c02770" target="_blank" rel="noopener noreferrer">The Journal of Physical Chemistry C</a>, featured as front cover.</p>`
-        },
-        {
-            date: "02/2025",
-            title: "Online Lecture",
-            content: `<p>Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a href="https://www.bilibili.com/video/BV1bzN4efEDM/?spm_id_from=333.337.search-card.all.click&vd_source=fc9ab070c3e43559b55603564026a5de" target="_blank" rel="noopener noreferrer">View Lecture</a></p>`
-        },
-        {
-            date: "10/2024",
-            title: "Poster Award to Sijie",
-            content: "<p>Ms. Sijie Chen’s poster on ammonia electrooxidation is recognized as the 2nd place in the ‘best poster’ award in the MATEC poster competition.</p>"
-        },
-        {
-            date: "10/2024",
-            title: "Paper Published",
-            content: `<p>“Bismuth doping unlocks stability of copper oxides in anodic reaction: A case analysis of glucose electrooxidation” is published on <a href="https://doi.org/10.1016/j.electacta.2024.145178" target="_blank" rel="noopener noreferrer">Electrochimica Acta</a>.</p>`
-        },
-        {
-            date: "09/2024",
-            title: "Paper Published",
-            content: `<p>“Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation” is published on <a href="https://doi.org/10.1021/acsenergylett.4c01869" target="_blank" rel="noopener noreferrer">ACS Energy Letters</a>.</p>`
-        },
-        {
-            date: "08/2024",
-            title: "Paper Published",
-            content: `<p>"Correlative in situ analysis of the role of oxygen on ammonia electrooxidation selectivity on NiOOH surfaces” is published on <a href="https://doi.org/10.1016/j.jcat.2024.115720" target="_blank" rel="noopener noreferrer">Journal of Catalysis</a>.</p>`
-        },
-        {
-            date: "08/2024",
-            title: "ECS Webinar by Dr. Zheng",
-            content: `<p>Dr. Weiran Zheng delivered an ECS Webinar on the topic of “Introducing Python for Electrochemistry Research”. <a href="https://physicsworld.com/a/introducing-python-for-electrochemistry-research/" target="_blank" rel="noopener noreferrer">Watch Webinar</a></p>`
-        },
-        {
-            date: "05/2024",
-            title: "Paper Published",
-            content: `<p>“Catalyst Deactivation During Water Electrolysis: Understanding and Mitigation” is published on <a href="https://pubs.aip.org/aip/ape/article/2/2/021501/3284761" target="_blank" rel="noopener noreferrer">APL Energy</a>.</p>`
-        }
-    ];
-
-    // --- 2. SETTINGS ---
-    // Controls how many news items appear on the homepage.
-    const maxNewsItemsOnHomepage = 7;
-
-    // --- 3. SCRIPT TO GENERATE NEWS (No need to edit below this line) ---
     document.addEventListener('DOMContentLoaded', function() {
-        const newsContainer = document.getElementById('news-card-container');
-        if (!newsContainer) return;
+        const container = document.getElementById('homepage-news-container');
+        if (!container) return;
 
-        // Sort news by date, newest first.
-        const sortedNews = newsData.sort((a, b) => {
-            const dateA = new Date(a.date.substring(3, 7), a.date.substring(0, 2) - 1);
-            const dateB = new Date(b.date.substring(3, 7), b.date.substring(0, 2) - 1);
-            return dateB - dateA;
-        });
+        const maxItems = 6;
+        // The newsData is already sorted newest first in the file
+        const newsToDisplay = newsData.slice(0, maxItems);
 
-        // Get only the most recent items based on the max setting.
-        const newsToDisplay = sortedNews.slice(0, maxNewsItemsOnHomepage);
-
-        // Generate and insert the HTML for each news card.
         let newsHTML = '';
         newsToDisplay.forEach(item => {
+            // Format date from "YYYY-MM-DD" to "YYYY-MM"
+            const displayDate = item.date.substring(0, 7);
+            
             newsHTML += `
-                <div class="card news-card">
-                    <div class="card-body">
-                        <h4>${item.title}</h4>
-                        <p class="news-date">${item.date}</p>
-                        <div class="news-content blocsaddons-markdown">${item.content}</div>
-                    </div>
-                </div>`;
+                <li class="homepage-news-item">
+                    <a href="./news/index.html#${item.id}">
+                        <span class="homepage-news-date">${displayDate}</span>
+                        <span class="homepage-news-title">${item.title}</span>
+                    </a>
+                </li>
+            `;
         });
-        newsContainer.innerHTML = newsHTML;
+        container.innerHTML = newsHTML;
     });
 </script>
 

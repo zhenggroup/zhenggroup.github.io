@@ -9,45 +9,36 @@
     <link rel="shortcut icon" type="image/png" href="../favicon.png">
     
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?1673"> <!-- UNCOMMENTED to link global stylesheet -->
+	<link rel="stylesheet" type="text/css" href="../style.css?1673">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-	<!-- Google Fonts links removed as we are using system fonts globally via style.css -->
-    <!--
-	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:100..900,40&display=swap&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    -->
     <title>News - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for news/index.html - Common styles are in ../style.css */
-
-        /* Retaining page-specific light grey background for the news page */
+        /* Page-specific styles for news/index.html */
         body {
-            background-color: var(--background-color-light-gray); /* Use variable for light grey */
-            /* Other body properties like font-family, color, line-height are inherited from style.css */
+            background-color: var(--background-color-light-gray);
         }
         
-        /* News Item Styling */
         .news-entry-card {
-            background-color: var(--background-color-page); /* Use variable (white) */
-            border: 1px solid var(--border-color-medium); /* Use variable */
+            background-color: var(--background-color-page);
+            border: 1px solid var(--border-color-medium);
             border-radius: 0.375rem; 
             padding: 1.5rem;
             margin-bottom: 1.5rem; 
-            box-shadow: 0 0.125rem 0.25rem var(--shadow-color-soft); /* Use variable */
+            box-shadow: 0 0.125rem 0.25rem var(--shadow-color-soft);
         }
 
         .news-entry-header {
             margin-bottom: 1rem;
             padding-bottom: 0.75rem;
-            border-bottom: 1px solid var(--border-color-light); /* Use variable */
+            border-bottom: 1px solid var(--border-color-light);
         }
         
         .news-entry-date {
             display: block; 
             font-size: 0.9em;
-            color: var(--text-color-subtle); /* Use variable */
+            color: var(--text-color-subtle);
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
@@ -55,21 +46,14 @@
         .news-entry-title {
             font-size: 1.35em; 
             font-weight: 600;
-            color: var(--color-dark-blue); /* Use variable */
+            color: var(--color-dark-blue);
             margin-bottom: 0; 
-        }
-        .news-entry-title em, .news-entry-title i {
-            font-style: italic;
-            font-weight: normal; 
-        }
-         .news-entry-title strong, .news-entry-title b {
-            font-weight: 700; 
         }
 
         .news-entry-body {
             font-size: 1em;
             line-height: 1.7;
-            color: var(--text-color-dark); /* Use variable */
+            color: var(--text-color-dark);
         }
         .news-entry-body p {
             margin-bottom: 1rem;
@@ -77,53 +61,86 @@
         .news-entry-body p:last-child {
             margin-bottom: 0;
         }
-        .news-entry-body img,
-        .news-entry-body picture img {
-            max-width: 70%; 
-            height: auto;
-            display: block; 
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 0.375rem; 
-            margin-top: 1rem; 
-            margin-bottom: 1rem; 
-            box-shadow: 0 0.125rem 0.25rem var(--shadow-color-soft); /* Use variable */
-        }
         .news-entry-body a {
-            color: var(--text-link-color); /* Use variable */
+            color: var(--text-link-color);
             text-decoration: underline;
             font-weight: 500;
         }
         .news-entry-body a:hover {
-            color: var(--text-link-hover-color); /* Use variable */
+            color: var(--text-link-hover-color);
         }
 
-        /* Responsive Adjustments - Global responsive rules are in style.css */
-        /* Page-specific responsive adjustments for news items: */
-        @media (max-width: 991px) {
-            /* .page-title-container h1 and .section-heading font sizes are handled globally if possible,
-               or can be overridden here if news page needs specific sizes */
-            .news-entry-title { font-size: 1.25em; }
-            .news-entry-body img,
-            .news-entry-body picture img {
-                max-width: 80%; 
-            }
+        /* --- NEW STYLES FOR IMAGE LAYOUT --- */
+
+        /* Container for the image and its caption */
+        .news-image-container {
+            border: 1px solid var(--border-color-light);
+            background-color: #fdfdfd;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
+        .news-image-container img {
+            display: block;
+            width: 100%; /* Image fills the container */
+            height: auto;
+            border-radius: 0.125rem;
+        }
+        .news-image-caption {
+            font-size: 0.85em;
+            color: var(--text-color-subtle);
+            padding: 0.5rem 0.25rem 0.25rem;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* Classes for floating */
+        .news-image-container.float-left {
+            float: left;
+            margin-right: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .news-image-container.float-right {
+            float: right;
+            margin-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Default centered layout (when float is null) */
+        .news-image-container.centered {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Clearfix: Ensures the card container properly wraps floated children */
+        .news-entry-body::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive Adjustments */
         @media (max-width: 767px) {
-            .news-entry-card { padding: 1.25rem; }
             .news-entry-title { font-size: 1.15em; }
-            .news-entry-body img,
-            .news-entry-body picture img {
-                max-width: 90%; 
+            
+            /* On mobile, disable float and center the image */
+            .news-image-container.float-left,
+            .news-image-container.float-right {
+                float: none;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 1.5rem;
+                max-width: 90%;
             }
         }
         @media (max-width: 480px) {
-            /* body font-size handled globally */
-            .news-entry-card { padding: 1rem; }
             .news-entry-title { font-size: 1.1em; }
-            .news-entry-body img,
-            .news-entry-body picture img {
-                max-width: 100%; 
+            .news-image-container.float-left,
+            .news-image-container.float-right {
+                max-width: 100%;
             }
         }
 
@@ -183,7 +200,7 @@
 <!-- bloc-0 END -->
 </header>
 
-<div class="page-title-container"> <!-- This will be styled by global style.css -->
+<div class="page-title-container">
     <div class="content-container">
         <h1>Group News</h1>
     </div>
@@ -192,66 +209,19 @@
 <main>
     <div class="content-container">
         
-        <!-- Changed class from news-section-title to section-heading -->
         <h2 class="section-heading">Latest Updates</h2>
 
         <div class="news-list-container" id="news-items-list">
-
-            <!-- News Item 1 -->
-            <div class="news-entry-card">
-                <div class="news-entry-header">
-                    <span class="news-entry-date">2024-05-24</span>
-                    <h3 class="news-entry-title">Weiran Zheng delivered a talk at CIAC, CAS</h3>
-                </div>
-                <div class="news-entry-body">
-                    <p>
-                        Invited by Prof. Wenhui He, Prof. Weiran Zheng delivered an invited lecture on “In-situ Analysis of Electrocatalyst Deactivation” at the Changchun Institute of Applied Chemistry (CIAC), Chinese Academy Of Sciences.<br>应中国科学院长春应用化学研究所何文辉研究员邀请，郑蔚然副教授作关于“电催化剂失活过程的原位研究策略”的报告。
-                    </p>
-                    <picture>
-                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/791fda8a572e0f4286e082e46dc912bf.webp">
-                        <img src="../img/lazyload-ph.png" data-src="../img/791fda8a572e0f4286e082e46dc912bf.JPG" class="img-fluid lazyload" alt="Weiran Zheng talk at CIAC CAS">
-                    </picture>
-                </div>
-            </div>
-
-            <!-- News Item 2 -->
-            <div class="news-entry-card">
-                <div class="news-entry-header">
-                    <span class="news-entry-date">2024-03-18</span>
-                    <h3 class="news-entry-title">Lijie Du’s paper is published on <em>APL Energy</em></h3>
-                </div>
-                <div class="news-entry-body">
-                    <p>
-                        Link to the paper: <a href="https://pubs.aip.org/aip/ape/article/2/2/021501/3284761" target="_blank" rel="noopener noreferrer">Catalyst deactivation during water electrolysis: Understanding and mitigation</a>.
-                        <br>The paper explores the structural factors contributing to catalyst deactivation, elucidating the underlying mechanisms with detailed case studies of hydrogen and oxygen evolution reactions. Specifically, the in situ assessment and characterization techniques are highlighted, which can offer a collective understanding of catalyst deactivation. Building on these insights, recent advances in mitigating catalyst deactivation are introduced, from innovative catalyst designs to advanced electrode engineering. The review concludes by emphasizing the necessity for universal test protocols for deactivation and integrating evidence from diverse in situ measurements, aiming to provide introductive guidance examining the complexities of electrocatalyst deactivation.
-                    </p>
-                </div>
-            </div>
-
-            <!-- News Item 3 -->
-            <div class="news-entry-card">
-                <div class="news-entry-header">
-                    <span class="news-entry-date">2023-10-11</span>
-                    <h3 class="news-entry-title">Weiran Zheng delivered a talk at 244th ECS Meeting</h3>
-                </div>
-                <div class="news-entry-body">
-                    <p>
-                        At the 244th Electrochemical Society (ECS) Meeting, Prof. Weiran Zheng delivered an oral presentation on “How to perform iR compensation in electrocatalytic study”.<br>在第244次美国电化学学会（ECS）年会上，郑蔚然副教授就“电催化研究中的iR校正原理与规范”作口头报告。
-                    </p>
-                    <picture>
-                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/530b6f0ea5ae43d916f7de211361d9a5.webp">
-                        <img src="../img/lazyload-ph.png" data-src="../img/530b6f0ea5ae43d916f7de211361d9a5.JPG" class="img-fluid lazyload" alt="Weiran Zheng at 244th ECS Meeting">
-                    </picture>
-                </div>
-            </div>
+            <!-- News items will be dynamically generated here by JavaScript -->
         </div> <!-- End #news-items-list -->
+        
     </div> <!-- End .content-container -->
 </main>
 
 
 <!-- Footer -->
-<footer class="bloc l-bloc footer-bloc" id="footer-main"> <!-- This will be styled by global style.css -->
-	<div class="container"> <!-- This container is from Blocs, global .content-container is preferred for consistency -->
+<footer class="bloc l-bloc footer-bloc" id="footer-main">
+	<div class="container">
 		<div class="row">
 			<div class="col text-center">
 				<p>
@@ -271,8 +241,51 @@
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script> 
 <script src="../js/lazysizes.min.js" defer></script>
-<!-- Markdown JS removed -->
 <!-- Additional JS END -->
+
+<!-- Load Central News Data -->
+<script src="../js/news-data.js"></script>
+
+<!-- Script to Generate Full News Page List -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('news-items-list');
+        if (!container || typeof newsData === 'undefined') return;
+
+        let newsHTML = '';
+        newsData.forEach(item => {
+            let imageHTML = '';
+            // Check if there is an image to include
+            if (item.imageSrc) {
+                const floatClass = item.imageFloat ? `float-${item.imageFloat}` : 'centered';
+                const style = item.imageWidth ? `style="width: ${item.imageWidth};"` : 'style="max-width: 70%;"'; // Default width if not specified
+                const captionHTML = item.imageCaption ? `<div class="news-image-caption">${item.imageCaption}</div>` : '';
+
+                imageHTML = `
+                    <div class="news-image-container ${floatClass}" ${style}>
+                        <img src="../img/lazyload-ph.png" data-src="${item.imageSrc}" class="lazyload" alt="${item.imageAlt || item.title}">
+                        ${captionHTML}
+                    </div>
+                `;
+            }
+
+            newsHTML += `
+                <!-- News Item Anchor -->
+                <div class="news-entry-card" id="${item.id}">
+                    <div class="news-entry-header">
+                        <span class="news-entry-date">${item.date}</span>
+                        <h3 class="news-entry-title">${item.title}</h3>
+                    </div>
+                    <div class="news-entry-body">
+                        ${imageHTML}
+                        ${item.content}
+                    </div>
+                </div>
+            `;
+        });
+        container.innerHTML = newsHTML;
+    });
+</script>
 
 </body>
 </html>

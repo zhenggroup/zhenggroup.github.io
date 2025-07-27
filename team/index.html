@@ -12,53 +12,48 @@
 	<link rel="stylesheet" type="text/css" href="../style.css?1673"> 
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
-    <!-- Google Fonts links removed as we are using system fonts globally via style.css -->
     <title>Team - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for team/index.html - Common styles are in ../style.css */
+        /* Page-specific styles for team/index.html */
 
-        /* PI Section Styling - Refined for academic block design */
+        /* PI Section Styling */
         .pi-section {
             background-color: var(--background-color-page); 
-            padding: 2.5rem; /* Increased padding for a more substantial block */
-            border-radius: 0px; /* Consistent with other card-like elements */
-            box-shadow: var(--shadow-color-medium); /* Slightly more defined shadow for PI block */
-            border: 0px solid var(--border-color-light); 
-            margin-bottom: 4rem; /* More space after PI section */
+            padding: 2.5rem;
+            margin-bottom: 4rem;
             display: flex;
             flex-wrap: wrap;
-            gap: 2.5rem; /* Increased gap */
+            gap: 2.5rem;
             align-items: flex-start; 
         }
         .pi-image-contact {
-            flex: 0 0 220px; /* Slightly more space for PI image and contact */
+            flex: 0 0 220px;
             text-align: center;
         }
-        .pi-image-contact img.member-photo { /* More specific selector */
+        .pi-image-contact img.member-photo {
             width: 180px; 
             height: 180px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
-            border: 0px solid var(--color-primary-blue); /* Thicker border for PI */
             box-shadow: 0 2px 6px var(--shadow-color-soft); 
         }
         .pi-image-contact .pi-name {
-            font-size: var(--font-size-xl); /* Use variable, approx 20px */
+            font-size: var(--font-size-xl);
             color: var(--color-dark-blue); 
             font-weight: 600;
             margin-bottom: 0.35rem;
         }
         .pi-image-contact .pi-title {
-            font-size: var(--font-size-base); /* Approx 16px */
+            font-size: var(--font-size-base);
             color: var(--text-color-medium); 
             margin-bottom: 1.25rem;
         }
         .pi-contact-links a {
             color: var(--text-link-color); 
-            margin: 0 0.5rem; /* Slightly more space between icons */
-            font-size: 1.6em; /* Larger icons for PI */
+            margin: 0 0.5rem;
+            font-size: 1.6em;
             transition: color 0.2s ease;
         }
         .pi-contact-links a:hover {
@@ -68,22 +63,22 @@
             flex: 1;
             min-width: 300px;
         }
-        .pi-details h6 { /* These are styled as sub-headings for sections like Employment */
-            font-size: var(--font-size-lg); /* Approx 18px */
+        .pi-details h6 {
+            font-size: var(--font-size-lg);
             color: var(--color-dark-blue); 
             font-weight: 600;
-            margin-top: 1.5rem; /* More space above sub-heading */
+            margin-top: 1.5rem;
             margin-bottom: 0.75rem;
             padding-bottom: 0.35rem;
             border-bottom: 1px solid var(--border-color-medium); 
         }
-         .pi-details h6:first-of-type { /* Use :first-of-type for first h6 */
+         .pi-details h6:first-of-type {
             margin-top: 0;
         }
         .pi-details p { 
             margin-bottom: 1rem;
-            line-height: 1.7; /* Consistent with body line-height */
-            font-size: var(--font-size-sm); /* Approx 14px for details, can be --font-size-base if preferred */
+            line-height: 1.7;
+            font-size: var(--font-size-sm);
             color: var(--text-color-dark); 
         }
         .pi-details p strong { 
@@ -91,19 +86,17 @@
             color: var(--text-color-headings); 
         }
 
-        /* Team Members Grid Styling - Refined for academic block design */
+        /* Team Members Grid Styling */
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Slightly wider min card width */
-            gap: 1rem; /* Increased gap */
-            margin-bottom: 2rem; /* More space after team grids */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem; 
+            margin-bottom: 3rem;
         }
         .team-member-card {
             background-color: var(--background-color-page); 
-            padding: 1.75rem; /* Increased padding */
-            border-radius: 0px; /* Consistent radius */
+            padding: 1.75rem;
             box-shadow: var(--shadow-color-soft); 
-            border: 0px solid var(--border-color-light); 
             text-align: center;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: flex;
@@ -111,7 +104,7 @@
             align-items: center;
         }
         .team-member-card:hover {
-            transform: translateY(-4px); /* Slightly more lift */
+            transform: translateY(-4px);
             box-shadow: var(--shadow-color-medium); 
         }
         .team-member-card .member-photo {
@@ -119,79 +112,52 @@
             height: 140px;
             border-radius: 50%; 
             object-fit: cover; 
-            margin-bottom: 1.25rem; /* More space below photo */
-            border: 0px solid var(--color-primary-blue); 
+            margin-bottom: 1.25rem;
             box-shadow: 0 2px 4px var(--shadow-color-soft); 
         }
         .team-member-card .member-name {
-            font-size: var(--font-size-lg); /* Approx 18px */
+            font-size: var(--font-size-lg);
             color: var(--color-dark-blue); 
             font-weight: 600;
             margin-bottom: 0.35rem;
             line-height: 1.3;
         }
         .team-member-card .member-role {
-            font-size: var(--font-size-sm); /* Approx 14px */
+            font-size: var(--font-size-sm);
             color: var(--text-color-medium); 
             margin-bottom: 0;
             line-height: 1.5;
-            flex-grow: 1; 
+            flex-grow: 1; /* Pushes contact links to the bottom */
         }
         
+        /* --- NEW STYLES FOR MEMBER CONTACT LINKS --- */
+        .member-contact-links {
+            margin-top: 1rem; /* Space above the icons */
+            padding-top: 0.5rem;
+        }
+        .member-contact-links a {
+            color: var(--text-color-subtle);
+            margin: 0 0.4rem;
+            font-size: 1.3em;
+            transition: color 0.2s ease;
+        }
+        .member-contact-links a:hover {
+            color: var(--text-link-hover-color);
+        }
+
         /* Responsive Adjustments */
-        @media (max-width: 991px) { /* md */
-            .pi-section { 
-                flex-direction: column; 
-                align-items: center; 
-                padding: 2rem; 
-                gap: 2rem;
-            }
-            .pi-image-contact { 
-                flex: 0 0 auto; 
-                margin-bottom: 1.5rem; 
-            }
-            .pi-details { 
-                text-align: left; /* Keep left align for details on mobile */
-                width: 100%; 
-            }
-            .pi-image-contact img.member-photo { width: 160px; height: 160px; }
-            .team-member-card .member-photo { width: 130px; height: 130px; }
+        @media (max-width: 991px) {
+            .pi-section { flex-direction: column; align-items: center; padding: 2rem; gap: 2rem; }
+            .pi-image-contact { flex: 0 0 auto; margin-bottom: 1.5rem; }
+            .pi-details { text-align: left; width: 100%; }
         }
-
-        @media (max-width: 767px) { /* sm */
-            .team-grid { 
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
-                gap: 1.5rem; 
-            }
-            .team-member-card { padding: 1.5rem; }
-            .team-member-card .member-photo { width: 120px; height: 120px; }
-            .team-member-card .member-name { font-size: var(--font-size-base); } /* Approx 16px */
-            
-            .pi-image-contact img.member-photo { width: 150px; height: 150px; }
-            .pi-image-contact .pi-name { font-size: var(--font-size-lg); } /* Approx 18px */
-            .pi-details h6 { font-size: var(--font-size-base); } /* Approx 16px */
-            .pi-details p { font-size: var(--font-size-sm); } /* Approx 14px */
+        @media (max-width: 767px) {
+            .team-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
         }
-
-        @media (max-width: 480px) { /* xs */
-            .team-grid { 
-                grid-template-columns: 1fr; /* Single column for very small screens */
-                gap: 1.25rem;
-            } 
-            .team-member-card .member-photo { width: 110px; height: 110px; }
-            .team-member-card .member-name { font-size: var(--font-size-base); }
-
-            .pi-section { padding: 1.5rem; gap: 1.5rem;}
-            .pi-image-contact img.member-photo { width: 140px; height: 140px; }
-            .pi-image-contact .pi-name { font-size: var(--font-size-lg); }
-            .pi-contact-links a { font-size: 1.5em; }
+        @media (max-width: 480px) {
+            .team-grid { grid-template-columns: 1fr; } 
         }
-
     </style>
-    
-<!-- Analytics -->
- 
-<!-- Analytics END -->
     
 </head>
 <body data-clean-url="true">
@@ -200,11 +166,10 @@
 <div id="page-loading-blocs-notifaction" class="page-preloader"></div>
 <!-- Preloader END -->
 
-
 <!-- Main container -->
 <div class="page-container">
     
-<header> <!-- Header will be styled by global style.css -->
+<header>
 <!-- bloc-0: Navigation -->
 <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
 	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
@@ -218,24 +183,12 @@
 						</button>
 						<div class="collapse navbar-collapse navbar-35179 navbar-14477">
 								<ul class="site-navigation nav navbar-nav ms-auto">
-									<li class="nav-item">
-										<a href="../index.html" class="nav-link">Home</a>
-									</li>
-									<li class="nav-item">
-										<a href="../research/index.html" class="nav-link">Research</a>
-									</li>
-									<li class="nav-item">
-										<a href="../publication/index.html" class="nav-link">Publication</a>
-									</li>
-									<li class="nav-item">
-										<a href="./index.html" class="nav-link active">Team</a> 
-									</li>
-									<li class="nav-item">
-										<a href="../resource/index.html" class="nav-link">Resource</a>
-									</li>
-									<li class="nav-item">
-										<a href="../news/index.html" class="nav-link">News</a>
-									</li>
+									<li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+									<li class="nav-item"><a href="../research/index.html" class="nav-link">Research</a></li>
+									<li class="nav-item"><a href="../publication/index.html" class="nav-link">Publication</a></li>
+									<li class="nav-item"><a href="./index.html" class="nav-link active">Team</a></li>
+									<li class="nav-item"><a href="../resource/index.html" class="nav-link">Resource</a></li>
+									<li class="nav-item"><a href="../news/index.html" class="nav-link">News</a></li>
 								</ul>
 							</div>
 					</div>
@@ -247,142 +200,38 @@
 <!-- bloc-0 END -->
 </header>
 
-<div class="page-title-container"> <!-- This will be styled by global style.css -->
+<div class="page-title-container">
     <div class="content-container">
         <h1>Meet Our Team</h1>
     </div>
 </div>
 
 <main>
-    <div class="content-container"> <!-- Ensures consistent max-width and centering -->
+    <div class="content-container">
         
-        <h2 class="section-heading">Lab PI</h2> <!-- This will be styled by global style.css -->
-        <section class="pi-section">
-            <div class="pi-image-contact">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/d622efbb-fdda-451f-91d8-0e27b900b66f.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/d622efbb-fdda-451f-91d8-0e27b900b66f.jpg" class="lazyload member-photo" alt="Prof. Weiran Zheng" width="180" height="180"> 
-                </picture>
-                <h3 class="pi-name">Weiran Zheng (郑蔚然)</h3>
-                <p class="pi-title">Associate Professor</p>
-                <div class="pi-contact-links">
-                    <a href="https://orcid.org/0000-0002-9915-6982" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><span class="fab fa-orcid"></span></a>
-                    <a href="https://scholar.google.com.hk/citations?user=hEpBUuYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="fab fa-google"></span></a>
-                    <a href="mailto:weiran.zheng@gtiit.edu.cn" aria-label="Email"><span class="far fa-envelope"></span></a>
-                </div>
-            </div>
-            <div class="pi-details">
-                <h6>Employment</h6>
-                <p>
-                2022 — present <strong>Associate Professor</strong> Department of Chemistry, Guangdong Technion-Israel Institute of Technology<br>
-                2017 — 2022 <strong>Research Fellow</strong> Hong Kong Polytechnic University<br>
-                2015 — 2017 <strong>Postdoc Fellow</strong> Hong Kong Polytechnic University
-                </p>
-                <h6>Education</h6>
-                <p>
-                2009 — 2015 <strong>Ph.D. (Physical Chemistry)</strong> Wuhan University / University of Oxford (CSC joint PhD program)<br>
-                2005 — 2009 <strong>B.S. (Chemistry)</strong> Wuhan University
-                </p>
-                <h6>Service</h6>
-                <p>
-                2024 — present <strong>Early Career Editorial Board Member</strong> of <strong>Journal of Electrochemistry (《电化学(中英文)》)</strong> (official journal of the Chinese Electrochemistry Society)<br>
-                </p>
-            </div>
+        <h2 class="section-heading">Lab PI</h2>
+        <!-- PI Section: Content will be generated by JavaScript -->
+        <section class="pi-section" id="pi-container">
+            <!-- JS will inject PI photo and details here -->
         </section>
 
-        <h2 class="section-heading">Current Members</h2> <!-- This will be styled by global style.css -->
-        <section class="team-grid" id="current-members">
-            <!-- Jiajing Zhong -->
-            <div class="team-member-card">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/WechatIMG171.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/WechatIMG171.jpeg" class="lazyload member-photo" alt="Jiajing Zhong" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Jiajing Zhong (钟嘉敬)</h3>
-                <p class="member-role">PhD student (Technion-GT)<br>2023 -</p>
-            </div>
-            <!-- Sijie Chen -->
-            <div class="team-member-card">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/a25005dc4df4171109afb4a3efd090cf.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/a25005dc4df4171109afb4a3efd090cf.JPG" class="lazyload member-photo" alt="Sijie Chen" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Sijie Chen (陈思捷)</h3>
-                <p class="member-role">MSc student (Technion-GT)<br>2024 -</p>
-            </div>
-            <!-- Ting Zhang -->
-            <div class="team-member-card">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/bc9f0bb4fe1cbc20f290c46000d6c702.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/bc9f0bb4fe1cbc20f290c46000d6c702.JPG" class="lazyload member-photo" alt="Ting Zhang" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Ting Zhang (张婷)</h3>
-                <p class="member-role">MSc student (SUSTech-GT)<br>2023 -</p>
-            </div>
-            <!-- Zhaohan Wu -->
-            <div class="team-member-card">
-                 <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/f2e7908ba3ded17dd17c033581a79250.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/f2e7908ba3ded17dd17c033581a79250.webp" class="lazyload member-photo" alt="Zhaohan Wu" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Zhaohan Wu (武昭翰)</h3>
-                <p class="member-role">Undergraduate (21MSE)<br>2023 -</p>
-            </div>
-            <!-- Weike Liu -->
-            <div class="team-member-card">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/7fc5c8360d2a86757e73696a7d7ca0f7.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/7fc5c8360d2a86757e73696a7d7ca0f7.JPG" class="lazyload member-photo" alt="Weike Liu" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Weike Liu (刘卫轲)</h3>
-                <p class="member-role">Undergraduate (22Chem)<br>2024 -</p>
-            </div>
-            <!-- Zhengyang Deng -->
-            <div class="team-member-card">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/Zhengyang%20Deng.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/Zhengyang%20Deng.jpg" class="lazyload member-photo" alt="Zhengyang Deng" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Zhengyang Deng (邓征阳)</h3>
-                <p class="member-role">Undergraduate (22Chem)<br>2024 -</p>
-            </div>
-            <!-- Guanxi Wu -->
-            <div class="team-member-card">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/4339e05276f975da75344856d6a2ea0e%202.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/4339e05276f975da75344856d6a2ea0e%202.JPG" class="lazyload member-photo" alt="Guanxi Wu" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Guanxi Wu (吴冠希)</h3>
-                <p class="member-role">Undergraduate (22Chem)<br>2024 -</p>
-            </div>
+        <h2 class="section-heading">Current Members</h2>
+        <!-- Current Members Grid: Content will be generated by JavaScript -->
+        <section class="team-grid" id="current-members-grid">
+            <!-- JS will inject member cards here -->
         </section>
 
-        <h2 class="section-heading">Previous Members</h2> <!-- This will be styled by global style.css -->
-        <section class="team-grid" id="previous-members">
-            <!-- Jing Chen -->
-            <div class="team-member-card">
-                <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/WechatIMG109.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/WechatIMG109.jpeg" class="lazyload member-photo" alt="Jing Chen" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Jing Chen (陈晶)</h3>
-                <p class="member-role">Research Associate<br>2022 - 2024</p>
-            </div>
-            <!-- Lijie Du -->
-            <div class="team-member-card">
-                 <picture>
-                    <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/42f44f20efb0f6596b699aaabd2cceb3.webp">
-                    <img src="../img/lazyload-ph.png" data-src="../img/42f44f20efb0f6596b699aaabd2cceb3.webp" class="lazyload member-photo" alt="Lijie Du" width="140" height="140">
-                </picture>
-                <h3 class="member-name">Lijie Du (杜礼杰)</h3>
-                <p class="member-role">Research Associate<br>2023 - 2024</p>
-            </div>
+        <h2 class="section-heading">Previous Members</h2>
+        <!-- Previous Members Grid: Content will be generated by JavaScript -->
+        <section class="team-grid" id="previous-members-grid">
+            <!-- JS will inject member cards here -->
         </section>
-    </div> <!-- End of .content-container for main content -->
+
+    </div>
 </main>
 
 <!-- Footer -->
-<footer class="footer-bloc" id="footer"> <!-- This will be styled by global style.css -->
+<footer class="footer-bloc" id="footer">
 	<div class="content-container">
 		<p>
 			Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
@@ -399,6 +248,76 @@
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script>
 <script src="../js/lazysizes.min.js" defer></script>
+
+<!-- *** NEW: Load the team data *** -->
+<script src="../js/team-data.js"></script>
+
+<!-- *** NEW: Script to build the team page from data *** -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+    // --- 1. GENERATE PI SECTION ---
+    const piContainer = document.getElementById('pi-container');
+    if (piContainer && typeof piData !== 'undefined') {
+        let piLinks = '';
+        if (piData.orcid) {
+            piLinks += `<a href="${piData.orcid}" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><span class="fab fa-orcid"></span></a>`;
+        }
+        if (piData.googleScholar) {
+            piLinks += `<a href="${piData.googleScholar}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="fab fa-google"></span></a>`;
+        }
+        if (piData.email) {
+            piLinks += `<a href="mailto:${piData.email}" aria-label="Email"><span class="far fa-envelope"></span></a>`;
+        }
+
+        const piHTML = `
+            <div class="pi-image-contact">
+                <img src="../img/lazyload-ph.png" data-src="${piData.photoSrc}" class="lazyload member-photo" alt="Photo of ${piData.name}" width="180" height="180">
+                <h3 class="pi-name">${piData.name}</h3>
+                <p class="pi-title">${piData.title}</p>
+                <div class="pi-contact-links">${piLinks}</div>
+            </div>
+            <div class="pi-details">
+                ${piData.bio}
+            </div>
+        `;
+        piContainer.innerHTML = piHTML;
+    }
+
+    // --- 2. GENERATE MEMBER GRIDS (A REUSABLE FUNCTION) ---
+    const generateMemberGrid = (membersArray, containerId) => {
+        const container = document.getElementById(containerId);
+        if (!container || typeof membersArray === 'undefined') return;
+
+        let allCardsHTML = '';
+        membersArray.forEach(member => {
+            let memberLinks = '';
+            if (member.orcid) {
+                memberLinks += `<a href="${member.orcid}" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><span class="fab fa-orcid"></span></a>`;
+            }
+            if (member.googleScholar) {
+                memberLinks += `<a href="${member.googleScholar}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="fab fa-google"></span></a>`;
+            }
+
+            const linksHTML = memberLinks ? `<div class="member-contact-links">${memberLinks}</div>` : '';
+
+            allCardsHTML += `
+                <div class="team-member-card">
+                    <img src="../img/lazyload-ph.png" data-src="${member.photoSrc}" class="lazyload member-photo" alt="Photo of ${member.name}" width="140" height="140">
+                    <h3 class="member-name">${member.name}</h3>
+                    <p class="member-role">${member.role}</p>
+                    ${linksHTML}
+                </div>
+            `;
+        });
+        container.innerHTML = allCardsHTML;
+    };
+
+    // --- 3. CALL THE FUNCTION FOR CURRENT AND PREVIOUS MEMBERS ---
+    generateMemberGrid(currentMembers, 'current-members-grid');
+    generateMemberGrid(previousMembers, 'previous-members-grid');
+});
+</script>
 <!-- Additional JS END -->
 
 </body>
