@@ -29,8 +29,8 @@ const newsData = [
     imageFloat: 'left', // DEMO: Image will float to the right
     imageWidth: '20%',   // DEMO: Image will take up 45% of the container width
     imageCaption: "JPCC cover (Vol 129/Issue 27 2025)"  
-    },
-    {
+  },
+  {
     id: "python-may-2025",
     date: "2025-05-18",
     title: "Prof. Zheng delivered a short course at the 247th ECS Meeting in Montreal, Canada",
