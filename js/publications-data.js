@@ -4,9 +4,28 @@ const allPublications = [
 
     // 2025
     {
+        number: 54, year: 2025, type: "Article",
+        authors: "S. Kong, D. Raturi, B. Owens-Baird, <b><u>W. Zheng</u></b>, Y.V. Kolen'ko, P. Singh, D.D. Johnson, K. Kovnir*",
+        title: "Facet-Dependent Hydrogen Evolution Reaction on M2P (M = Ni, Co, Fe) Single Crystals",
+        journal: "ACS Catalysis, accepted",
+        doi: "10.1021/acscatal.5c04802",
+        imageUrl: "../img/25acscat.jpg", imageAlt: "acs catalysis",
+	comments: ["Featured on the cover"],
+        dimensionsDoi: "10.1021/acscatal.5c04802"
+    }, 
+    {
+        number: 53, year: 2025, type: "Invited Review",
+        authors: "<b><u>T. Zhang</u></b>,^ Y. Li,&nbsp;<b><u>W. Zheng</u></b>*",
+        title: "Morphological Control Synthesis of Layered Double Hydroxides for Energy Applications",
+        journal: "Discover Materials, 2025, 5, 191",
+        doi: "10.1007/s43939-025-00393-6",
+        imageUrl: "../img/ldh.jpg", imageAlt: "none",
+        dimensionsDoi: "10.1007/s43939-025-00393-6"
+    }, 
+    {
         number: 52, year: 2025, type: "Invited Article",
         authors: "<b><u>S. Chen</u></b>,^ <b><u>T. Zhang</u></b>,^ L. Zheng, J. Gao, X. Huang, J. Gu, C. Vogt,&nbsp;<b><u>W. Zheng</u></b>*",
-        title: "Selective Ammonia Electrooxidation on RuO2: Competitive and Synergistic Interplay between Ammonia and Hydroxide",
+        title: "Selective Ammonia Electrooxidation on RuO<sub>2</sub>: Competitive and Synergistic Interplay between Ammonia and Hydroxide",
         journal: "The Journal of Physical Chemistry C, 2025, 129, 12351-12361",
         doi: "10.1021/acs.jpcc.5c02770",
         imageUrl: "../img/Screenshot%202025-04-30%20at%208.27.41%E2%80%AFPM.png", imageAlt: "TOC for Selective Ammonia Electrooxidation",
@@ -16,7 +35,7 @@ const allPublications = [
     {
         number: 51, year: 2025, type: "Invited Review",
         authors: "<b><u>W. Zheng</u></b>*",
-        title: "Spatiotemporal visualisation of electrocatalyst/electrolyte interfaces with electrochemical atomic force microscopy: Applications and notes",
+        title: "Spatiotemporal Visualisation of Electrocatalyst/Electrolyte Interfaces with Electrochemical Atomic Force Microscopy: Applications and Notes",
         journal: "Journal of Microscopy, 2025, online",
         doi: "10.1111/jmi.13401",
         imageUrl: "../img/jmi13401-fig-0006-m.png", imageAlt: "TOC for Spatiotemporal visualisation",
@@ -221,7 +240,7 @@ const allPublications = [
     {
         number: 31, year: 2021, type: "Article",
         authors: "J. Yan, X. Zhang, <u>W. Zheng</u>, L.Y.S. Lee*",
-        title: "Interface Engineering of 2D-C3N4/NiFe-LDH Heterostructure for Highly Efficient Photocatalytic Hydrogen Evolution",
+        title: "Interface Engineering of 2D-C<sub>3</sub>N<sub>4</sub>/NiFe-LDH Heterostructure for Highly Efficient Photocatalytic Hydrogen Evolution",
         journal: "ACS Applied Materials & Interfaces, 2021, 21, 24723", // Original HTML had 13, 24723 - assuming 13 is vol
         doi: "10.1021/acsami.1c03240",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -259,7 +278,7 @@ const allPublications = [
     {
         number: 27, year: 2021, type: "Article",
         authors: "L. Hu, Y. Li, X. Peng, <u>W. Zheng</u>, L.Y.S. Lee,* P.K. Chu,* K.-Y. Wong*",
-        title: "TiO2 Film Supported by Vertically Aligned Gold Nanorod Superlattice Array for Enhanced Photocatalytic Hydrogen Evolution",
+        title: "TiO<sub>2</sub> Film Supported by Vertically Aligned Gold Nanorod Superlattice Array for Enhanced Photocatalytic Hydrogen Evolution",
         journal: "Chemical Engineering Journal, 2021, 417, 127900",
         doi: "10.1016/j.cej.2020.127900",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -279,7 +298,7 @@ const allPublications = [
     {
         number: 25, year: 2020, type: "Article",
         authors: "L. Hu, Y. Li, <u>W. Zheng</u>, Y.-K. Peng, S.C.E. Tsang,* L.Y.S. Lee,* K.-Y. Wong*",
-        title: "Blue Order/Disorder Janus-Type TiO2 Nanoparticles for Enhanced Photocatalytic Hydrogen Generation",
+        title: "Blue Order/Disorder Janus-Type TiO<sub>2</sub> Nanoparticles for Enhanced Photocatalytic Hydrogen Generation",
         journal: "Journal of Materials Chemistry A, 2020, 8, 22828",
         doi: "10.1039/D0TA06281B",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -319,16 +338,16 @@ const allPublications = [
     {
         number: 21, year: 2019, type: "Article",
         authors: "<u>W. Zheng</u>, C.-S. Tsang, M. Liu, L.Y. So, L.-C. Leung, L.Y.S. Lee*",
-        title: "Highly Efficient Stepwise Electrochemical Degradation of Antibiotics in Water by In Situ Formed Cu(OH)2 Nanorods",
+        title: "Highly Efficient Stepwise Electrochemical Degradation of Antibiotics in Water by In Situ Formed Cu(OH)<sub>2</sub> Nanorods",
         journal: "Applied Catalysis B: Environmental, 2019, 256, 117824",
         doi: "10.1016/j.apcatb.2019.117824",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/20acb.jpg", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1016/j.apcatb.2019.117824"
     },
     {
         number: 20, year: 2019, type: "Article",
         authors: "Z. Gao, M. Liu, <u>W. Zheng</u>, X. Zhang, L.Y.S. Lee*",
-        title: "Surface Engineering of MoS2 via Laser-induced Exfoliation in Protic Solvents",
+        title: "Surface Engineering of MoS<sub>2</sub> via Laser-induced Exfoliation in Protic Solvents",
         journal: "Small, 2019, 15, 1903791",
         doi: "10.1002/smll.201903791",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -349,7 +368,7 @@ const allPublications = [
         title: "Insights into the Transition Metal Ion-mediated Electrooxidation of Glucose in Alkaline Electrolyte",
         journal: "Electrochimica Acta, 2019, 308, 9–19",
         doi: "10.1016/j.electacta.2019.04.007",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/19ea.jpg", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1016/j.electacta.2019.04.007"
     },
     {
@@ -392,16 +411,16 @@ const allPublications = [
     {
         number: 13, year: 2018, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, M. Liu, C.-S. Tsang, L.Y.S. Lee,* K.-Y. Wong*",
-        title: "Cu2+-doped Carbon Nitride/MWCNT as an Electrochemical Glucose Sensor",
+        title: "Cu<sup>2+</sup>-doped Carbon Nitride/MWCNT as an Electrochemical Glucose Sensor",
         journal: "Electroanalysis, 2018, 30, 1446—1454",
         doi: "10.1002/elan.201800076",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/elan.jpg", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1002/elan.201800076"
     },
     {
         number: 12, year: 2017, type: "Article",
         authors: "<u>W. Zheng</u>, Y. Li, C.-S. Tsang, L. Hu, M. Liu, B. Huang, L.Y.S. Lee,* K.-Y. Wong*",
-        title: "CuII-mediated Ultra-efficient Electrooxidation of Glucose",
+        title: "Cu<sup>II</sup>-mediated Ultra-efficient Electrooxidation of Glucose",
         journal: "ChemElectroChem, 2017, 4, 2788—2792",
         doi: "10.1002/celc.201700712",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -428,7 +447,7 @@ const allPublications = [
     {
         number: 9, year: 2016, type: "Article",
         authors: "<u>W. Zheng</u>, S. Nayak, W. Yuan, Z. Zeng, X. Hong, K.A. Vincent, S.C.E. Tsang*",
-        title: "A Tunable Metal-polyaniline Interface for Efficient Carbon Dioxide Electro-Reduction to Formic Acid and Methanol in Aqueous Solution",
+        title: "A Tunable Metal-Polyaniline Interface for Efficient Carbon Dioxide Electro-Reduction to Formic Acid and Methanol in Aqueous Solution",
         journal: "Chemical Communications, 2016, 52, 13901—13904",
         doi: "10.1039/C6CC07212G",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -455,7 +474,7 @@ const allPublications = [
     {
         number: 6, year: 2015, type: "Article",
         authors: "S. Jones, S.M. Fairclough, M. Gordon-Brown, <u>W. Zheng</u>, A. Kolpin, B. Pang, W.C.H. Kuo, J.M. Smith, S.C.E. Tsang*",
-        title: "Dual doping effects (site blockage and electronic promotion) imposed by adatoms on Pd nanocrystals for catalytic hydrogen production",
+        title: "Dual Doping Effects (Site Blockage and Electronic Promotion) Imposed by Adatoms on Pd Nanocrystals for Catalytic Hydrogen Production",
         journal: "Chemical Communications, 2015, 51, 46-49",
         doi: "10.1039/C4CC06195K",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -473,7 +492,7 @@ const allPublications = [
     {
         number: 4, year: 2014, type: "Article",
         authors: "<u>W. Zheng</u>, S. Jones, X. Hong, S.C.E. Tsang*",
-        title: "Photo and electronic excitation for low temperature catalysis over metal nanoparticles using an organic semiconductor",
+        title: "Photo and Electronic Excitation for Low Temperature Catalysis Over Metal Nanoparticles using an Organic Semiconductor",
         journal: "RSC Advances, 2014, 4, 88, 47488-47496",
         doi: "10.1039/C4RA08297D",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -482,7 +501,7 @@ const allPublications = [
     {
         number: 3, year: 2013, type: "Article",
         authors: "J. Ge, Z. Zeng, F. Liao, <u>W. Zheng</u>, X. Hong, S.C.E. Tsang*",
-        title: "Palladium on iron oxide nanoparticles: the morphological effect of the support in glycerol hydrogenolysis",
+        title: "Palladium on Iron Oxide Nanoparticles: The Morphological Effect of the Support in Glycerol Hydrogenolysis",
         journal: "Green Chemistry, 2013, 15, 8, 2064-2069",
         doi: "10.1039/C3GC40712H",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -491,7 +510,7 @@ const allPublications = [
     {
         number: 2, year: 2011, type: "Article",
         authors: "F. Liao, Y. Huang, J. Ge, <u>W. Zheng</u>, K. Tedsree, P. Collier, X. Hong, S.C.E. Tsang*",
-        title: "Morphology‐Dependent Interactions of ZnO with Cu Nanoparticles at the Materials’ Interface in Selective Hydrogenation of CO2 to CH3OH",
+        title: "Morphology‐Dependent Interactions of ZnO with Cu Nanoparticles at the Materials’ Interface in Selective Hydrogenation of CO<sub>2</sub> to CH<sub>3</sub>OH",
         journal: "Angewandte Chemie International Edition, 2011, 50, 9, 2162-2165",
         doi: "10.1002/anie.201007108",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
@@ -500,7 +519,7 @@ const allPublications = [
     {
         number: 1, year: 2010, type: "Article",
         authors: "Y. Huang, F. Liao, <u>W. Zheng</u>, X. Liu, X. Wu, X. Hong, S.C.E. Tsang*",
-        title: "Temperature and Solvent-Dependent Morphological Sol Gel Transformation: An in Situ microscopic observation",
+        title: "Temperature and Solvent-Dependent Morphological Sol Gel Transformation: An In Situ Microscopic Observation",
         journal: "Langmuir, 2010, 26, 5, 3106-3114",
         doi: "10.1021/la904264u",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
