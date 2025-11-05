@@ -4,6 +4,15 @@ const allPublications = [
 
     // 2025
     {
+        number: 55, year: 2025, type: "Article",
+        authors: "K. Wang, Z. Zhu, Y. Liu, <b><u>W. Zheng</u></b>, Z. Yuan, Z. Lin, R. Semiat, L. Shao, X. He*",
+        title: "Adsorption-enhanced Carbon Membranes Derived from Copolyimide for Ultrafast Sub-angstrom Discriminating CO2 Separation",
+        journal: "Science Advances, accepted",
+        doi: "",
+        imageUrl: "", imageAlt: "SA",
+        dimensionsDoi: ""
+    }, 
+    {
         number: 54, year: 2025, type: "Article",
         authors: "S. Kong, D. Raturi, B. Owens-Baird, <b><u>W. Zheng</u></b>, Y.V. Kolen'ko, P. Singh, D.D. Johnson, K. Kovnir*",
         title: "Facet-Dependent Hydrogen Evolution Reaction on M2P (M = Ni, Co, Fe) Single Crystals",
