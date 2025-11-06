@@ -4,9 +4,18 @@ const allPublications = [
 
     // 2025
     {
+        number: 56, year: 2025, type: "Article",
+        authors: "<b><u>W. Zheng</u></b>*, <b><u>S. Chen</u></b>",
+        title: "Decoding Electrocatalyst Degradation Using Time-Resolved Electrochemical Impedance Analysis",
+        journal: "JACS Au, accepted",
+        doi: "",
+        imageUrl: "../img/jacs_au.jpg", imageAlt: "JACS Au",
+        dimensionsDoi: ""
+    }, 
+    {
         number: 55, year: 2025, type: "Article",
         authors: "K. Wang, Z. Zhu, Y. Liu, <b><u>W. Zheng</u></b>, Z. Yuan, Z. Lin, R. Semiat, L. Shao, X. He*",
-        title: "Adsorption-enhanced Carbon Membranes Derived from Copolyimide for Ultrafast Sub-angstrom Discriminating CO2 Separation",
+        title: "Adsorption-enhanced Carbon Membranes Derived from Copolyimide for Ultrafast Sub-angstrom Discriminating CO<sub>2</sub> Separation",
         journal: "Science Advances, accepted",
         doi: "",
         imageUrl: "", imageAlt: "SA",
@@ -15,8 +24,8 @@ const allPublications = [
     {
         number: 54, year: 2025, type: "Article",
         authors: "S. Kong, D. Raturi, B. Owens-Baird, <b><u>W. Zheng</u></b>, Y.V. Kolen'ko, P. Singh, D.D. Johnson, K. Kovnir*",
-        title: "Facet-Dependent Hydrogen Evolution Reaction on M2P (M = Ni, Co, Fe) Single Crystals",
-        journal: "ACS Catalysis, accepted",
+        title: "Facet-Dependent Hydrogen Evolution Reaction on M<sub>2</sub>P (M = Ni, Co, Fe) Single Crystals",
+        journal: "ACS Catalysis, 2025, 15, 18723-18737",
         doi: "10.1021/acscatal.5c04802",
         imageUrl: "../img/25acscat.jpg", imageAlt: "acs catalysis",
 	comments: ["Featured on the cover"],
