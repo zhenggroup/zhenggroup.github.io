@@ -4,10 +4,19 @@ const allPublications = [
 
     // 2025
     {
+        number: 57, year: 2025, type: "Article",
+        authors: "<b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
+        title: "Electrochemical Instability of Flexible Indium Tin Oxide Film: A Time-Resolved Operando Study",
+        journal: "Chemistry of Materials, online",
+        doi: "10.1021/acs.chemmater.5c01720",
+        imageUrl: "../img/cm.jpg", imageAlt: "CM",
+        dimensionsDoi: "10.1021/acs.chemmater.5c01720"
+    }, 
+    {
         number: 56, year: 2025, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*, <b><u>S. Chen</u></b>",
         title: "Decoding Electrocatalyst Degradation Using Time-Resolved Electrochemical Impedance Analysis",
-        journal: "JACS Au, accepted",
+        journal: "JACS Au, online",
         doi: "10.1021/jacsau.5c01196",
         imageUrl: "../img/jacs_au.jpg", imageAlt: "JACS Au",
         dimensionsDoi: "10.1021/jacsau.5c01196"
@@ -16,10 +25,10 @@ const allPublications = [
         number: 55, year: 2025, type: "Article",
         authors: "K. Wang, Z. Zhu, Y. Liu, <b><u>W. Zheng</u></b>, Z. Yuan, Z. Lin, R. Semiat, L. Shao, X. He*",
         title: "Adsorption-enhanced Carbon Membranes Derived from Copolyimide for Ultrafast Sub-angstrom Discriminating CO<sub>2</sub> Separation",
-        journal: "Science Advances, accepted",
-        doi: "",
+        journal: "Science Advances, 2025, 11, eadv8650",
+        doi: "10.1126/sciadv.adv8650",
         imageUrl: "", imageAlt: "SA",
-        dimensionsDoi: ""
+        dimensionsDoi: "10.1126/sciadv.adv8650"
     }, 
     {
         number: 54, year: 2025, type: "Article",
