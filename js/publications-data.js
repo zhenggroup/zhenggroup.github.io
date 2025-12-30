@@ -16,9 +16,10 @@ const allPublications = [
         number: 56, year: 2025, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*, <b><u>S. Chen</u></b>",
         title: "Decoding Electrocatalyst Degradation Using Time-Resolved Electrochemical Impedance Analysis",
-        journal: "JACS Au, online",
+        journal: "JACS Au, 2025, 5, 12, 6396-6409",
         doi: "10.1021/jacsau.5c01196",
         imageUrl: "../img/jacs_au.jpg", imageAlt: "JACS Au",
+        comments: ["featured on the cover"],
         dimensionsDoi: "10.1021/jacsau.5c01196"
     }, 
     {
