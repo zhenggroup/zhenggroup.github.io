@@ -2,16 +2,28 @@
 
 const allPublications = [
 
-    // 2025
+    // 2026
     {
-        number: 57, year: 2025, type: "Article",
+        number: 58, year: 2026, type: "Article",
+        authors: "S. Kong, E. Soto, J. Hong, R. Davis, E. Nelson, V. Roddatis, O.I. Lebedev, <b><u>W. Zheng</u></b>, H.W. Odhiambo, N. Oh, V. Upadhyay, N.C.M. Spera, D. Raturi, P. Singh, G. Ouyang, F.D. Vila, S.R. Bare, Y.V. Kolen'ko, D.D. Johnson, K. Kovnir*",
+        title: "Probing Terra Incognita of Ni–P Catalysts: Operando Explorations during Hydrogen Evolution Reaction",
+        journal: "Journal of the American Chemical Society, accepted",
+        doi: "",
+        imageUrl: "../img/25jacs.jpg", imageAlt: "",
+        dimensionsDoi: ""
+    }, 
+    {
+        number: 57, year: 2026, type: "Article",
         authors: "<b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Electrochemical Instability of Flexible Indium Tin Oxide Film: A Time-Resolved Operando Study",
         journal: "Chemistry of Materials, online",
         doi: "10.1021/acs.chemmater.5c01720",
         imageUrl: "../img/cm.jpg", imageAlt: "CM",
+        comments: ["featured on the cover"],
         dimensionsDoi: "10.1021/acs.chemmater.5c01720"
     }, 
+
+    // 2025
     {
         number: 56, year: 2025, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*, <b><u>S. Chen</u></b>",
