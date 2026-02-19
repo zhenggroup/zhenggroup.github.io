@@ -8,9 +8,9 @@ const allPublications = [
         authors: "S. Kong, E. Soto, J. Hong, R. Davis, E. Nelson, V. Roddatis, O.I. Lebedev, <b><u>W. Zheng</u></b>, H.W. Odhiambo, N. Oh, V. Upadhyay, N.C.M. Spera, D. Raturi, P. Singh, G. Ouyang, F.D. Vila, S.R. Bare, Y.V. Kolen'ko, D.D. Johnson, K. Kovnir*",
         title: "Probing Terra Incognita of Ni–P Catalysts: Operando Explorations during Hydrogen Evolution Reaction",
         journal: "Journal of the American Chemical Society, accepted",
-        doi: "",
-        imageUrl: "../img/25jacs.jpg", imageAlt: "",
-        dimensionsDoi: ""
+        doi: "10.1021/jacs.6c01756",
+        imageUrl: "../img/25jacs.jpg", imageAlt: "jacs2026",
+        dimensionsDoi: "10.1021/jacs.6c01756"
     }, 
     {
         number: 57, year: 2026, type: "Article",
