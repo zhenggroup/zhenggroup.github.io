@@ -4,6 +4,15 @@ const allPublications = [
 
     // 2026
     {
+        number: 59, year: 2026, type: "Article",
+        authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
+        title: "Time-Resolved Analysis of the FTO Surface Dynamics in Aqueous Solution",
+        journal: "Electrochimica Acta, accepted",
+        doi: " ",
+        imageUrl: "../img/26ea.jpg", imageAlt: "26ea",
+        dimensionsDoi: " "
+    }, 
+    {
         number: 58, year: 2026, type: "Article",
         authors: "S. Kong, E. Soto, J. Hong, R. Davis, E. Nelson, V. Roddatis, O.I. Lebedev, <b><u>W. Zheng</u></b>, H.W. Odhiambo, N. Oh, V. Upadhyay, N.C.M. Spera, D. Raturi, P. Singh, G. Ouyang, F.D. Vila, S.R. Bare, Y.V. Kolen'ko, D.D. Johnson, K. Kovnir*",
         title: "Probing Terra Incognita of Ni–P Catalysts: Operando Explorations during Hydrogen Evolution Reaction",
