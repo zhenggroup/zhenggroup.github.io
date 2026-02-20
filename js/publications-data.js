@@ -7,10 +7,10 @@ const allPublications = [
         number: 59, year: 2026, type: "Article",
         authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Time-Resolved Analysis of the FTO Surface Dynamics in Aqueous Solution",
-        journal: "Electrochimica Acta, accepted",
-        doi: " ",
+        journal: "Electrochimica Acta, online",
+        doi: "10.1016/j.electacta.2026.148501",
         imageUrl: "../img/26ea.jpg", imageAlt: "26ea",
-        dimensionsDoi: " "
+        dimensionsDoi: "10.1016/j.electacta.2026.148501"
     }, 
     {
         number: 58, year: 2026, type: "Article",
