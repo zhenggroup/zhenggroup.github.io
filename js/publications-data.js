@@ -7,7 +7,7 @@ const allPublications = [
         number: 59, year: 2026, type: "Article",
         authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Time-Resolved Analysis of the FTO Surface Dynamics in Aqueous Solution",
-        journal: "Electrochimica Acta, online",
+        journal: "Electrochimica Acta, 2026, 557, 148501",
         doi: "10.1016/j.electacta.2026.148501",
         imageUrl: "../img/26ea.jpg", imageAlt: "26ea",
         dimensionsDoi: "10.1016/j.electacta.2026.148501"
@@ -16,7 +16,7 @@ const allPublications = [
         number: 58, year: 2026, type: "Article",
         authors: "S. Kong, E. Soto, J. Hong, R. Davis, E. Nelson, V. Roddatis, O.I. Lebedev, <b><u>W. Zheng</u></b>, H.W. Odhiambo, N. Oh, V. Upadhyay, N.C.M. Spera, D. Raturi, P. Singh, G. Ouyang, F.D. Vila, S.R. Bare, Y.V. Kolen'ko, D.D. Johnson, K. Kovnir*",
         title: "Probing Terra Incognita of Ni–P Catalysts: Operando Explorations during Hydrogen Evolution Reaction",
-        journal: "Journal of the American Chemical Society, accepted",
+        journal: "Journal of the American Chemical Society, 2026",
         doi: "10.1021/jacs.6c01756",
         imageUrl: "../img/25jacs.jpg", imageAlt: "jacs2026",
         dimensionsDoi: "10.1021/jacs.6c01756"
@@ -25,7 +25,7 @@ const allPublications = [
         number: 57, year: 2026, type: "Article",
         authors: "<b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Electrochemical Instability of Flexible Indium Tin Oxide Film: A Time-Resolved Operando Study",
-        journal: "Chemistry of Materials, online",
+        journal: "Chemistry of Materials, 2026, 38, 4, 1651-1666",
         doi: "10.1021/acs.chemmater.5c01720",
         imageUrl: "../img/cm.jpg", imageAlt: "CM",
         comments: ["featured on the cover"],
