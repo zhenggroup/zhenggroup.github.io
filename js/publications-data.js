@@ -4,6 +4,16 @@ const allPublications = [
 
     // 2026
     {
+        number: 60, year: 2026, type: "Article",
+        authors: "<b><u>W. Zheng</u></b>*",
+        title: "Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis",
+        journal: "ACS Electrochemistry, accepted",
+        doi: "",
+        imageUrl: "../img/acse.jpg", imageAlt: "acse",
+        dimensionsDoi: ""
+    }, 
+
+    {
         number: 59, year: 2026, type: "Article",
         authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Time-Resolved Analysis of the FTO Surface Dynamics in Aqueous Solution",
@@ -16,7 +26,7 @@ const allPublications = [
         number: 58, year: 2026, type: "Article",
         authors: "S. Kong, E. Soto, J. Hong, R. Davis, E. Nelson, V. Roddatis, O.I. Lebedev, <b><u>W. Zheng</u></b>, H.W. Odhiambo, N. Oh, V. Upadhyay, N.C.M. Spera, D. Raturi, P. Singh, G. Ouyang, F.D. Vila, S.R. Bare, Y.V. Kolen'ko, D.D. Johnson, K. Kovnir*",
         title: "Probing Terra Incognita of Ni–P Catalysts: Operando Explorations during Hydrogen Evolution Reaction",
-        journal: "Journal of the American Chemical Society, 2026",
+        journal: "Journal of the American Chemical Society, 2026, 148, 9, 10241–10256",
         doi: "10.1021/jacs.6c01756",
         imageUrl: "../img/25jacs.jpg", imageAlt: "jacs2026",
         dimensionsDoi: "10.1021/jacs.6c01756"
