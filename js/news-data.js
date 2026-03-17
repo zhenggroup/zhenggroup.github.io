@@ -20,14 +20,46 @@
 
 const newsData = [
   {
+    id: "award-sijie-2026",
+    date: "2026-03-17",
+    title: "Sijie Chen is awarded the Excellent Graduate Student of Academic year 2024-2025",
+    content: `<p>Sijie Chen has been awarded the Excellent Graduate Student of Academic year 2024-2025. Congratulations!</p>`,
+    imageAlt: " ",
+    imageFloat: 'left', // DEMO: Image will float to the right
+    imageWidth: '35%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: " "  
+  }, 
+  {
+    id: "paper-published-cm",
+    date: "2025-12-03",
+    title: "Sijie Chen's paper on instability of FTO is published on Chemistry of Materials (featured on the cover)",
+    content: `<p>Indium tin oxide-coated flexible polyethylene terephthalate (ITO-PET) is increasingly utilized in various electrochemical applications due to its exceptional electrical conductivity and optical transparency. However, the chemical and electrochemical instability of ITO coated on a flexible substrate poses significant challenges to maintaining long-term durability and structural integrity under harsh electrochemical conditions. In this study, we conducted a comprehensive ex situ and operando investigation of the electrical and optical degradation of ITO-PET electrodes.</p>`,
+    imageSrc: "../img/10.jpg",
+    imageAlt: "Chemistry of Materials cover",
+    imageFloat: 'left', // DEMO: Image will float to the right
+    imageWidth: '35%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: "Chemistry of Materials"  
+  },
+  {
+    id: "paper-published-jacsau",
+    date: "2025-11-17",
+    title: "Our paper on time-resolved EIS is published on JACS Au (featured on cover)",
+    content: `<p>Our method paper on time-resolved electrochemical impedance analysis is published on JACS Au. Evaluating the long-term stability of electrocatalysts under operational conditions is critical for understanding performance degradation in fuel cells, electrolyzers, and metal-air batteries. Conventional electrochemical techniques, such as chronoamperometry and chronopotentiometry, often rely on simple current or overpotential versus time correlations, offering limited insight into the evolving structure–performance relationships. In this study, we introduce a time-resolved electrochemical impedance analysis (tr-EIA) protocol that enables the real-time tracking of key electrochemical parameters, including current/overpotential, electrochemical double-layer capacitance, charge transfer resistance, electrolyte resistance, and process relaxation times, all in a single experiment. By applying tr-EIA to commercial RuO2 and Pt/C catalysts across representative electrochemical reactions, we reveal time-resolved structural dynamics and uncover distinct degradation pathways at different stages of operation. Notably, structural degradation tied to changes in the electrochemically active surface area is distinguished from kinetic factors, such as increased resistance, with quantitative insights provided by the proposed surface area contribution factor. This single-run tr-EIA approach delivers a comprehensive understanding of electrochemical and structural evolution, offering a powerful tool to decode the mechanisms governing electrocatalyst stability under realistic operating conditions..</p>`,
+    imageSrc: "../img/9.jpg",
+    imageAlt: "JACSAu cover",
+    imageFloat: 'right', // DEMO: Image will float to the right
+    imageWidth: '35%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: "JACS Au cover (Vol 5/Issue 12 2025)"  
+  },
+  {
     id: "paper-published-jpcc-2025",
     date: "2025-07-20",
     title: "Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published",
     content: `<p>Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published in <a href="https://doi.org/10.1021/acs.jpcc.5c02770" target="_blank" rel="noopener noreferrer">The Journal of Physical Chemistry C</a>, featured as front cover. This article is published as part of The Journal of Physical Chemistry C special issue “Jacek Lipkowski Festschrift”.</p> <p>Ammonia electrooxidation (AOR) on metal oxides involves a complex interplay between nitrogen (N)- and oxygen (O)-containing intermediates, critically influencing reaction activity and product selectivity. In this study, we investigate AOR on RuO2 under alkaline conditions with electrochemical and in situ characterization techniques, including differential electrochemical mass spectrometry (DEMS) and ultraviolet–visible (UV–vis) spectroelectrochemistry. The effects of NH3 and OH– concentration (0.1–2.0 M, and 0.01–1.0 M, respectively) as well as applied potential on AOR and the concurrent oxygen evolution reaction (OER) are examined. NO and NO3– are identified as the main AOR products, especially at high OH– concentration and potential, with minor quantities of N2O and no detectable N2 formation. Increasing NH3 concentration suppresses OER by competing for surface sites, particularly at low OH– concentrations, while promoting AOR pathways. Product analysis with DEMS and colorimetry identifies two distinct regimes of N2O and NO3– formation: a low-potential, NH3-driven pathway, and a high-potential, *OOH-mediated pathway. The exclusive formation of NO at high OH– concentration and potential underscores the role of *OOH in *NOH dehydrogenation. Moreover, NO3– arises through both *OOH-assisted and NH3-rich surface mechanisms, depending on the electrolyte environment. The absence of N2 suggests that *N–*N coupling is kinetically or thermodynamically limited on RuO2. These findings highlight the critical role of intermediates (*NHx, *NOH, and *OOH) in dictating product selectivity, offering tunable control over AOR pathways.</p>`,
-    imageSrc: "../img/25jpcc.jpeg",
+    imageSrc: "../img/7.jpg",
     imageAlt: "JPCC cover",
     imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '20%',   // DEMO: Image will take up 45% of the container width
+    imageWidth: '35%',   // DEMO: Image will take up 45% of the container width
     imageCaption: "JPCC cover (Vol 129/Issue 27 2025)"  
   },
   {
