@@ -221,14 +221,29 @@
             margin-left: 1rem;
             vertical-align: middle;
         }
-            max-width: 300px;
-            min-height: 1px; /* Ensure the div takes space even if image fails or is missing */
-             /* --- ADD THESE LINES --- */
-  	   display: flex;           /* Turns the container into a flexbox */
-   	   align-items: center;     /* Vertically centers the flex items (the image) */
-  	   justify-content: center; /* Horizontally centers the flex items */
 
+        .dimensions-badge-inline {
+            display: inline-flex;
+            align-items: center;
+            margin-left: 0.5rem;
+            min-height: 20px;
+            vertical-align: middle;
         }
+
+        .dimensions-badge-inline .__dimensions_badge_embed__ {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .publication-entry {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 1.2rem;
+            margin-bottom: 1.2rem;
+            padding: 1.2rem;
+            background: #ffffff;
+        }
+
         .publication-toc img {
             width: 100%;
             height: auto;
@@ -462,8 +477,8 @@
                 <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Years Active</div>
             </div>
             <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
-                <div style="font-size: 2em; font-weight: 700; color: #9c27b0; font-family: 'Source Sans Pro', sans-serif;">50+</div>
-                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Co-authors</div>
+                <div style="font-size: 2em; font-weight: 700; color: #9c27b0; font-family: 'Source Sans Pro', sans-serif;">20+</div>
+                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Talks Given</div>
             </div>
         </div>
 

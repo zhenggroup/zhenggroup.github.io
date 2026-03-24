@@ -35,10 +35,15 @@ function createPublicationHTML(pub) {
                 <p class="publication-authors">${pub.authors}</p>
                 <p class="publication-journal">${pub.journal}</p>`;
 
-    // Links (DOI, PDF)
+    // Links (DOI, PDF, Dimensions badge)
     html += `<div class="publication-links">`;
     if (pub.doi) {
         html += ` <a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i>${pub.doi}</a>`;
+        const badgeDoi = pub.dimensionsDoi || pub.doi;
+        if (badgeDoi) {
+            // Keep badge inline with DOI link
+            html += ` <span class="dimensions-badge-inline"><span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span></span>`;
+        }
     }
     if (pub.pdfLink) {
         html += ` <a href="${pub.pdfLink}" target="_blank" rel="noopener noreferrer"><i class="far fa-file-pdf"></i>PDF</a>`;
@@ -63,14 +68,6 @@ function createPublicationHTML(pub) {
             }
         });
         html += `</div>`;
-    }
-
-    // Dimensions Badge
-    const badgeDoi = pub.dimensionsDoi || pub.doi;
-    if (badgeDoi) {
-        html += `<div class="dimensions-badge-container" style="display: inline-block; margin-left: 1rem;">
-                    <span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span>
-                 </div>`;
     }
 
     html += `   </div> <!-- End publication-details -->
