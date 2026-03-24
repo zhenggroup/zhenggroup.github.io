@@ -197,13 +197,13 @@
         .publication-comment {
             font-size: 0.9em;
             color: #ff6b35;
-            display: block;
-            margin-top: 0.5rem;
-            padding: 0.5em;
-            background: #fff3e0;
-            border-left: 3px solid #ff6b35;
-            border-radius: 0 4px 4px 0;
-            font-weight: 500;
+            display: inline;
+            margin-top: 0.3rem;
+            padding: 0;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            font-weight: 600;
             font-family: 'Source Sans Pro', sans-serif;
         }
 
@@ -225,31 +225,55 @@
         .dimensions-badge-inline {
             display: inline-flex;
             align-items: center;
-            margin-left: 0.5rem;
+            justify-content: center;
+            margin-left: 0.35rem;
+            padding: 0 0.15rem;
             min-height: 20px;
+            line-height: 1;
             vertical-align: middle;
+            font-size: 0.85em;
         }
 
-        .dimensions-badge-inline .__dimensions_badge_embed__ {
+        .dimensions-badge-inline .__dimensions_badge_embed__,
+        .dimensions-badge-inline iframe,
+        .dimensions-badge-inline img {
             display: inline-block;
             vertical-align: middle;
+            line-height: 1;
+            max-height: 1.5rem;
+        }
+
+        .publication-links a,
+        .publication-links .dimensions-badge-inline {
+            display: inline-flex;
+            align-items: center;
+            vertical-align: middle;
+            line-height: 1.25;
         }
 
         .publication-entry {
             display: flex;
             flex-wrap: nowrap;
-            gap: 1.2rem;
-            margin-bottom: 1.2rem;
-            padding: 1.2rem;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 1.1rem;
             background: #ffffff;
+            border: 1px solid #d8dee3;
+            border-radius: 0.65rem;
+            box-shadow: 0 4px 10px rgba(18, 38, 64, 0.04);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .publication-entry:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 12px rgba(18, 38, 64, 0.08);
         }
 
         .publication-toc img {
             width: 100%;
             height: auto;
             max-height: 160px;
-            object-fit: contain; 
-            border-radius: 0px;
+            object-fit: cover;
+            border-radius: 4px;
             border: 0px solid var(--border-color-medium);
         }
         .publication-details {
@@ -307,15 +331,23 @@
             font-size: 0.90em;
             color: var(--text-link-color);
             text-decoration: none;
-            word-break: break-all; 
+            word-break: break-all;
+            padding: 0.2em 0.45em;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
         }
         .publication-links a .fa-link, .publication-links a .fa-file-pdf {
-            margin-right: 0.2em;
+            margin-right: 0.25em;
             font-size: 0.90em;
         }
         .publication-links a:hover, .publication-featured-links a:hover {
             color: var(--text-link-hover-color);
-            text-decoration: underline;
+            text-decoration: none;
+            border-color: #b0d3ff;
+            background: #eaf5ff;
         }
         .publication-comment {
             font-size: 0.90em;
@@ -461,26 +493,6 @@
             </a>
 
         </section>
-
-        <!-- Academic Statistics Section -->
-        <div class="academic-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px;">
-            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
-                <div style="font-size: 2em; font-weight: 700; color: var(--color-primary-blue); font-family: 'Source Sans Pro', sans-serif;" id="total-pubs">60+</div>
-                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Publications</div>
-            </div>
-            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
-                <div style="font-size: 2em; font-weight: 700; color: #4caf50; font-family: 'Source Sans Pro', sans-serif;">4000+</div>
-                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Citations</div>
-            </div>
-            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
-                <div style="font-size: 2em; font-weight: 700; color: #ff6b35; font-family: 'Source Sans Pro', sans-serif;">15+</div>
-                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Years Active</div>
-            </div>
-            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
-                <div style="font-size: 2em; font-weight: 700; color: #9c27b0; font-family: 'Source Sans Pro', sans-serif;">20+</div>
-                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Talks Given</div>
-            </div>
-        </div>
 
         <h2 class="section-heading">Publications by Year</h2>
         <p class="publication-intro-text">
