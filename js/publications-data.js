@@ -8,11 +8,10 @@ const allPublications = [
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis",
         journal: "ACS Electrochemistry, accepted",
-        doi: "",
+        doi: "10.1021/acselectrochem.6c00058",
         imageUrl: "../img/acse.jpg", imageAlt: "acse",
-        dimensionsDoi: ""
+        dimensionsDoi: "10.1021/acselectrochem.6c00058"
     }, 
-
     {
         number: 59, year: 2026, type: "Article",
         authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",

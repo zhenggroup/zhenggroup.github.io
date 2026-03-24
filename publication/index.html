@@ -16,88 +16,211 @@
     <title>Publications - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for publication/index.html - Common styles are in ../style.css */
+        /* Page-specific styles for publication/index.html - Academic-focused enhancements */
+
+        /* Import academic fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
         .publication-intro-text {
             text-align: center;
             margin-bottom: 2rem;
             color: var(--text-color-medium);
             font-size: 0.9em;
+            font-family: 'Source Sans Pro', sans-serif;
         }
 
+        /* Enhanced featured covers with academic styling */
         .featured-covers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            grid-template-columns: repeat(7, 1fr);
             gap: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        .featured-cover-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
         }
         .featured-cover-item img {
             width: 100%;
             height: auto;
-            border-radius: 2px;
-            box-shadow: 0 2px 8px var(--shadow-color-soft);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .featured-cover-item img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 4px 12px var(--shadow-color-medium);
+            border-radius: 4px;
         }
 
+        /* Academic accordion styling */
         .publication-year-accordion .card {
             background-color: var(--background-color-page);
-            border: 0px solid var(--border-color-light);
-            border-radius: 0px;
-            box-shadow: 0 2px 8px var(--shadow-color-soft);
+            border-radius: 4px;
             margin-bottom: 1rem;
-            overflow: hidden; 
         }
         .publication-year-accordion .card-header {
-            background-color: var(color-light-blue);
-            color: var(--text-color-light);
-            padding: 0.6rem 1rem;
-            border-bottom: none; 
+            background: #f8f9fa;
+            color: #333;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color-light);
             cursor: pointer;
         }
         .publication-year-accordion .card-header .year-toggle {
-            font-size: 1em;
-            font-weight: 500;
-            color: var(--text-color-dark);
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
             text-decoration: none;
-            display: block;
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-family: 'Source Sans Pro', sans-serif;
         }
-        .publication-year-accordion .card-header .year-toggle::after { 
-            content: '\f078'; 
+        .publication-year-accordion .card-header .year-toggle::after {
+            content: '\f078';
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.2s ease;
+            position: static;
+            margin-left: 1rem;
+            transition: transform 0.3s ease;
         }
         .publication-year-accordion .card-header .year-toggle[aria-expanded="true"]::after {
-            transform: translateY(-50%) rotate(-180deg);
+            transform: rotate(-180deg);
         }
         .publication-year-accordion .card-body {
-            padding: 1.25rem;
+            padding: 1.5rem;
         }
 
+        /* Enhanced publication entry styling */
         .publication-entry {
             display: flex;
-            flex-wrap: nowrap; 
-            gap: 1.25rem;
-            margin-bottom: 1.75rem;
-            padding-bottom: 1.75rem;
-            border-bottom: 1px solid var(--border-color-light);
+            flex-wrap: nowrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #ffffff;
         }
         .publication-entry:last-child {
             margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
         }
+
         .publication-toc {
-            flex: 0 0 300px;
+            flex: 0 0 28%;
+            max-width: 28%;
+            min-height: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .publication-toc img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .publication-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .publication-header {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .publication-number {
+            font-weight: 700;
+            color: #666;
+            font-size: 1.1em;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .publication-type-tag {
+            display: inline-block;
+            color: #666;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .publication-authors {
+            font-size: 0.95em;
+            color: var(--text-color-medium);
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .publication-authors u {
+            text-decoration: none;
+            font-weight: 700;
+            color: var(--color-dark-blue);
+        }
+
+        .publication-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--color-dark-blue);
+            display: block;
+            margin-bottom: 0.3rem;
+            line-height: 1.4;
+            font-family: 'Libre Baskerville', serif;
+        }
+
+        .publication-journal {
+            font-style: italic;
+            color: var(--text-color-medium);
+            font-size: 0.95em;
+            margin-bottom: 0.8rem;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .publication-links {
+            margin-bottom: 0.5rem;
+        }
+        .publication-links a, .publication-featured-links a {
+            margin-right: 1rem;
+            font-size: 0.9em;
+            color: var(--text-link-color);
+            text-decoration: none;
+            padding: 0.3em 0.6em;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .publication-links a:hover, .publication-featured-links a:hover {
+            color: var(--text-link-hover-color);
+            background: #e3f2fd;
+            text-decoration: none;
+        }
+
+        .publication-comment {
+            font-size: 0.9em;
+            color: #ff6b35;
+            display: block;
+            margin-top: 0.5rem;
+            padding: 0.5em;
+            background: #fff3e0;
+            border-left: 3px solid #ff6b35;
+            border-radius: 0 4px 4px 0;
+            font-weight: 500;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .publication-featured-links {
+            font-size: 0.9em;
+            margin-top: 0.5rem;
+            font-style: normal;
+            margin-bottom: 0.5rem;
+            color: var(--text-color-subtle);
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .dimensions-badge-container {
+            display: inline-block;
+            margin-left: 1rem;
+            vertical-align: middle;
+        }
             max-width: 300px;
             min-height: 1px; /* Ensure the div takes space even if image fails or is missing */
              /* --- ADD THESE LINES --- */
@@ -199,28 +322,58 @@
         }
         
         @media (max-width: 991px) {
-            .featured-covers-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
-        }
-
-        @media (max-width: 767px) {
-            .publication-year-accordion .card-header .year-toggle { font-size: 1.25em; }
-            .publication-entry {
-                flex-direction: column; 
+            .featured-covers-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 1.2rem;
+                padding: 0.8rem;
             }
-            .publication-toc {
-                flex-basis: auto; 
-                max-width: 220px; 
-                margin: 0 auto 1rem auto; 
-            }
+            .publication-year-accordion .card-body { padding: 1.2rem; }
+            .publication-entry { gap: 1.2rem; padding: 1.2rem; }
+            .publication-toc { flex-basis: 240px; max-width: 240px; }
             .publication-title { font-size: 1.05em; }
         }
 
-        @media (max-width: 480px) {
-            .featured-covers-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 0.75rem;}
-            .publication-year-accordion .card-body { padding: 1rem; }
+        @media (max-width: 767px) {
+            .publication-year-accordion .card-header .year-toggle {
+                font-size: 1.1em;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+            .publication-year-accordion .card-header .year-toggle::after {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+            .publication-entry {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            .publication-toc {
+                flex-basis: auto;
+                max-width: 240px;
+                margin: 0 auto 1rem auto;
+            }
             .publication-title { font-size: 1em; }
-            .publication-authors, .publication-journal, .publication-links a { font-size: 0.85em; }
-            .publication-toc { max-width: 180px; }
+            .publication-authors, .publication-journal, .publication-links a {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .featured-covers-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 0.8rem;
+                padding: 0.6rem;
+            }
+            .publication-year-accordion .card-body { padding: 1rem; }
+            .publication-entry { padding: 0.8rem; }
+            .publication-title { font-size: 0.95em; }
+            .publication-authors, .publication-journal, .publication-links a {
+                font-size: 0.85em;
+            }
+            .publication-toc { max-width: 200px; }
+            .publication-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
         }
     </style>
     
@@ -293,6 +446,26 @@
             </a>
 
         </section>
+
+        <!-- Academic Statistics Section -->
+        <div class="academic-stats" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2rem; padding: 1.5rem; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-radius: 8px;">
+            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
+                <div style="font-size: 2em; font-weight: 700; color: var(--color-primary-blue); font-family: 'Source Sans Pro', sans-serif;" id="total-pubs">60+</div>
+                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Publications</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
+                <div style="font-size: 2em; font-weight: 700; color: #4caf50; font-family: 'Source Sans Pro', sans-serif;">4000+</div>
+                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Citations</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
+                <div style="font-size: 2em; font-weight: 700; color: #ff6b35; font-family: 'Source Sans Pro', sans-serif;">15+</div>
+                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Years Active</div>
+            </div>
+            <div style="text-align: center; padding: 1rem; background: white; border-radius: 6px; box-shadow: 0 2px 8px var(--shadow-color-soft);">
+                <div style="font-size: 2em; font-weight: 700; color: #9c27b0; font-family: 'Source Sans Pro', sans-serif;">50+</div>
+                <div style="font-size: 0.9em; color: var(--text-color-medium); font-family: 'Source Sans Pro', sans-serif;">Co-authors</div>
+            </div>
+        </div>
 
         <h2 class="section-heading">Publications by Year</h2>
         <p class="publication-intro-text">

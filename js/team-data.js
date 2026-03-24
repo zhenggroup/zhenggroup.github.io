@@ -17,7 +17,7 @@
 const piData = {
     name: "Weiran Zheng (郑蔚然)",
     title: "Associate Professor",
-    photoSrc: "../img/d622efbb-fdda-451f-91d8-0e27b900b66f.jpg", // CORRECTED PATH
+    photoSrc: "../img/zheng.jpg", // CORRECTED PATH
     email: "weiran.zheng@gtiit.edu.cn",
     orcid: "https://orcid.org/0000-0002-9915-6982",
     googleScholar: "https://scholar.google.com.hk/citations?user=hEpBUuYAAAAJ&hl=en",
@@ -51,7 +51,7 @@ const currentMembers = [
     },
     {
         name: "Sijie Chen (陈思捷)",
-        role: "MSc student (Technion-GT)<br>2024 -",
+        role: "MSc student (Technion)<br>2024 -",
         photoSrc: "../img/a25005dc4df4171109afb4a3efd090cf.JPG", // CORRECTED PATH
         orcid: null,
         googleScholar: null
@@ -64,9 +64,9 @@ const currentMembers = [
         googleScholar: null
     },
     {
-        name: "Zhaohan Wu (武昭翰)",
-        role: "Undergraduate (21MSE)<br>2023 -",
-        photoSrc: "../img/f2e7908ba3ded17dd17c033581a79250.webp", // CORRECTED PATH
+        name: "Yingshi Su",
+        role: "PhD student (Technion)<br>2026 -",
+        photoSrc: "../img/", // CORRECTED PATH
         orcid: null,
         googleScholar: null
     },
@@ -108,5 +108,12 @@ const previousMembers = [
         photoSrc: "../img/42f44f20efb0f6596b699aaabd2cceb3.webp", // CORRECTED PATH
         orcid: null,
         googleScholar: null
-    }
+    },
+    {
+        name: "Zhaohan Wu (武昭翰)",
+        role: "Undergraduate (21MSE)<br>2023 - 2025",
+        photoSrc: "../img/f2e7908ba3ded17dd17c033581a79250.webp", // CORRECTED PATH
+        orcid: null,
+        googleScholar: null
+    }  
 ];
