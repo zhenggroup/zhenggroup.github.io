@@ -251,8 +251,32 @@
             max-height: 1.5rem;
         }
 
+        .altmetric-badge-inline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.35rem;
+            padding: 0 0.1rem;
+            min-height: 16px;
+            line-height: 1;
+            vertical-align: middle;
+            font-size: 0.75em;
+        }
+
+        .altmetric-badge-inline .altmetric-embed,
+        .altmetric-badge-inline iframe,
+        .altmetric-badge-inline img,
+        .altmetric-badge-inline svg {
+            display: inline-block !important;
+            vertical-align: middle;
+            line-height: 1;
+            max-height: 1.1rem;
+            width: auto !important;
+        }
+
         .publication-links a,
-        .publication-links .dimensions-badge-inline {
+        .publication-links .dimensions-badge-inline,
+        .publication-links .altmetric-badge-inline {
             display: inline-flex;
             align-items: center;
             vertical-align: middle;
@@ -465,7 +489,6 @@
             font-family: var(--font-family-sans-serif);
         }
     </style>
-    
 </head>
 <body data-clean-url="true">
 
@@ -537,17 +560,6 @@
         </section>
 
         <h2 class="section-heading">Publications by Year</h2>
-
-        <div class="publication-stats-row">
-            <div class="publication-stat-item">
-                <span class="publication-stat-label">Publications</span>
-                <span id="publication-count" class="publication-stat-value">0</span>
-            </div>
-            <div class="publication-stat-item">
-                <span id="citation-status-label" class="publication-stat-label">Loading citation data...</span>
-                <span id="citation-status-value" class="publication-stat-value" style="font-size: 1.1em; font-weight: 500;">—</span>
-            </div>
-        </div>
 
         <p class="publication-intro-text">
             *: Corresponding author; ^: Equal contribution; <b>Bold</b>: Zheng Lab members.
@@ -682,6 +694,16 @@
 <!-- Custom scripts for publications -->
 <script src="../js/publications-data.js"></script>
 <script src="../js/publications-loader.js"></script>
+<!-- Altmetric Badge Script - loaded after content generation -->
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+<script>
+    // Ensure Altmetric badges are properly initialized after script loads
+    window.addEventListener('load', function() {
+        if (typeof Altmetric !== 'undefined' && Altmetric.embed) {
+            Altmetric.embed.rescan();
+        }
+    });
+</script>
 <!-- Additional JS END -->
 
 </body>

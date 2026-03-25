@@ -35,14 +35,15 @@ function createPublicationHTML(pub) {
                 <p class="publication-authors">${pub.authors}</p>
                 <p class="publication-journal">${pub.journal}</p>`;
 
-    // Links (DOI, PDF, Dimensions badge)
+    // Links (DOI, PDF, Dimensions badge, Altmetric badge)
     html += `<div class="publication-links">`;
     if (pub.doi) {
         html += ` <a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i>${pub.doi}</a>`;
         const badgeDoi = pub.dimensionsDoi || pub.doi;
         if (badgeDoi) {
-            // Keep badge inline with DOI link
+            // Keep badges inline with DOI link
             html += ` <span class="dimensions-badge-inline"><span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span></span>`;
+            html += ` <span class="altmetric-badge-inline"><div class="altmetric-embed" data-badge-popover="bottom" data-badge-type="small_rectangle" data-doi="${badgeDoi}"></div></span>`;
         }
     }
     if (pub.pdfLink) {
@@ -112,9 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.__dimensions_embed) {
         window.__dimensions_embed.addBadges();
     }
-
-    // Update top summary stats (publications + Dimensions citations)
-    updatePublicationStats();
     
     // LazySizes should pick up new images automatically if it's already loaded and observing.
     // If you face issues, you might need to manually trigger an update for LazySizes,

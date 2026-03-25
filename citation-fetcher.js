@@ -92,30 +92,50 @@ async function fetchFromGoogleScholar() {
 
 /**
  * Parse Google Scholar profile HTML to extract citation data
- * This is a simplified regex-based approach
+ * This enhanced version extracts publication titles and citation counts accurately
  */
 function parseGoogleScholarProfile(html) {
   const citations = {};
   
-  // Look for citation count patterns in the HTML
-  // Google Scholar typically shows: "Cited by: 42" or similar
-  // This is fragile and depends on Google Scholar's HTML structure
+  // Google Scholar profile lists publications with titles and citation info
+  // Each row typically looks like: <tr>...<a href="...scholar...">Title</a>...<a href="..cites..">123</a></tr>
   
-  // Try to extract citation counts from table rows
-  const rows = html.match(/<tr[^>]*>.*?<\/tr>/gs) || [];
+  // Extract all table rows that contain publication data
+  const rowRegex = /<tr[^>]*class="gsc_a_tr"[^>]*>[\s\S]*?<\/tr>/gi;
+  const rows = html.match(rowRegex) || [];
   
-  rows.forEach(row => {
-    // Try to extract title and citation count
-    const titleMatch = row.match(/<a[^>]*title="([^"]*)"[^>]*href="[^"]*"[^>]*>([^<]*)<\/a>/);
-    const citMatch = row.match(/>(\d+)</);
+  if (rows.length === 0) {
+    // Fallback: try simpler row detection
+    const simpleRowRegex = /<tr[^>]*>[\s\S]*?<\/tr>/gi;
+    rows.push(...(html.match(simpleRowRegex) || []));
+  }
+  
+  rows.forEach((row, idx) => {
+    // Extract publication title
+    // Look for the main publication link
+    const titleMatches = row.match(/<a[^>]*?class="gsc_a_t"[^>]*>([^<]+)<\/a>/i) ||
+                        row.match(/<a[^>]*?href="\/scholar\?oi=bibs[^"]*"[^>]*>([^<]+)<\/a>/i) ||
+                        row.match(/<a[^>]*>([^<]{10,})<\/a>/i);
     
-    if (titleMatch && citMatch) {
-      const title = titleMatch[1] || titleMatch[2];
-      const citCount = parseInt(citMatch[1], 10);
-      if (title && !Number.isNaN(citCount)) {
-        // Normalize title for matching
-        citations[title.toLowerCase().trim()] = citCount;
-      }
+    if (!titleMatches) return;
+    
+    const title = titleMatches[1] ? titleMatches[1].trim() : null;
+    if (!title || title.length < 5) return;
+    
+    // Extract citation count
+    // Look for "Cited by X" link
+    const citedByMatch = row.match(/<a[^>]*href="[^"]*\/scholar\?cites=[^"]*"[^>]*>(\d+)<\/a>/i) ||
+                        row.match(/Cited by[\s:]*(\d+)/i) ||
+                        row.match(/<a[^>]*>Cited by<\/a>[\s\S]*?(\d+)/i);
+    
+    let citCount = null;
+    if (citedByMatch) {
+      citCount = parseInt(citedByMatch[1], 10);
+    }
+    
+    if (title && citCount !== null && !Number.isNaN(citCount) && citCount > 0) {
+      console.log(`${LOG_PREFIX} Google Scholar: "${title.substring(0, 60)}..." = ${citCount} citations`);
+      citations[title.toLowerCase().trim()] = citCount;
     }
   });
   
@@ -199,35 +219,6 @@ async function main() {
         console.log(`${LOG_PREFIX} ${doi}: Semantic Scholar fetch failed`);
       }
     });
-  }
-  
-  // Try Google Scholar fallback for failed DOIs
-  const failedDois = dois.filter(doi => !(doi in cache.citations));
-  if (failedDois.length > 0) {
-    console.log(`${LOG_PREFIX} Attempting Google Scholar fallback for ${failedDois.length} publications...`);
-    const scholarResult = await fetchFromGoogleScholar();
-    
-    if (scholarResult.success && scholarResult.citations) {
-      const matchedCitations = matchGoogleScholarCitations(
-        allPublications.filter(pub => failedDois.includes(pub.dimensionsDoi || pub.doi)),
-        scholarResult.citations
-      );
-      
-      Object.entries(matchedCitations).forEach(([doi, count]) => {
-        if (count !== null) {
-          cache.citations[doi] = count;
-          cache.stats.googleScholar.success += 1;
-          console.log(`${LOG_PREFIX} ${doi}: ${count} citations (Google Scholar)`);
-        } else {
-          cache.stats.googleScholar.failed += 1;
-        }
-      });
-    } else {
-      console.log(`${LOG_PREFIX} Google Scholar fallback failed`);
-      failedDois.forEach(doi => {
-        cache.stats.googleScholar.failed += 1;
-      });
-    }
   }
   
   cache.stats.total = cache.stats.semanticScholar.success + cache.stats.googleScholar.success;
