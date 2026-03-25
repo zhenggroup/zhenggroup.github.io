@@ -24,9 +24,9 @@ try {
   const match = dataContent.match(/const allPublications = \[([\s\S]*?)\];/);
   if (match) {
     // Use Function constructor to safely evaluate the array
-    const code = `const allPublications = [${match[1]}]; allPublications;`;
+    const code = `[${match[1]}]`;
     // This is a bit hacky but avoids require() issues
-    eval(code);
+    allPublications = eval(code);
   }
 } catch (error) {
   console.error('Failed to load publications data:', error);
