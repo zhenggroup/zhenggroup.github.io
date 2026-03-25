@@ -18,15 +18,13 @@
     <style>
         /* Page-specific styles for publication/index.html - Academic-focused enhancements */
 
-        /* Import academic fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
-
+        /* Use global font stack from style.css (var(--font-family-sans-serif)) */
         .publication-intro-text {
             text-align: center;
             margin-bottom: 2rem;
             color: var(--text-color-medium);
             font-size: 0.9em;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
 
         /* Enhanced featured covers with academic styling */
@@ -71,7 +69,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
         .publication-year-accordion .card-header .year-toggle::after {
             content: '\f078';
@@ -132,7 +130,7 @@
             font-weight: 700;
             color: #666;
             font-size: 1.1em;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
         .publication-type-tag {
             display: inline-block;
@@ -141,7 +139,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
 
         .publication-authors {
@@ -149,7 +147,7 @@
             color: var(--text-color-medium);
             margin-bottom: 0.8rem;
             line-height: 1.4;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
         .publication-authors u {
             text-decoration: none;
@@ -164,7 +162,17 @@
             display: block;
             margin-bottom: 0.3rem;
             line-height: 1.4;
-            font-family: 'Libre Baskerville', serif;
+            font-family: var(--font-family-sans-serif);
+        }
+
+        .publication-authors,
+        .publication-title,
+        .publication-journal,
+        .publication-type-tag,
+        .publication-number,
+        .publication-links a,
+        .publication-featured-links a {
+            font-family: var(--font-family-sans-serif);
         }
 
         .publication-journal {
@@ -172,7 +180,7 @@
             color: var(--text-color-medium);
             font-size: 0.95em;
             margin-bottom: 0.8rem;
-            font-family: 'Source Sans Pro', sans-serif;
+            /* font-family moved to shared styling above */
         }
 
         .publication-links {
@@ -186,7 +194,7 @@
             padding: 0.3em 0.6em;
             border-radius: 4px;
             transition: all 0.2s ease;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
         .publication-links a:hover, .publication-featured-links a:hover {
             color: var(--text-link-hover-color);
@@ -204,7 +212,7 @@
             border: none;
             border-radius: 0;
             font-weight: 600;
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
 
         .publication-featured-links {
@@ -213,7 +221,7 @@
             font-style: normal;
             margin-bottom: 0.5rem;
             color: var(--text-color-subtle);
-            font-family: 'Source Sans Pro', sans-serif;
+            font-family: var(--font-family-sans-serif);
         }
 
         .dimensions-badge-container {
@@ -422,6 +430,40 @@
             .publication-toc { max-width: 200px; }
             .publication-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
         }
+
+        .publication-stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem auto 1.25rem auto;
+            padding: 0.9rem 1rem;
+            background: #f2f6fb;
+            border: 1px solid #d7e2ed;
+            border-radius: 0.65rem;
+        }
+
+        .publication-stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 180px;
+            text-align: center;
+        }
+
+        .publication-stat-label {
+            font-size: 0.85em;
+            color: #5f6e7f;
+            margin-bottom: 0.2rem;
+            font-weight: 600;
+        }
+
+        .publication-stat-value {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--color-dark-blue);
+            font-family: var(--font-family-sans-serif);
+        }
     </style>
     
 </head>
@@ -495,6 +537,18 @@
         </section>
 
         <h2 class="section-heading">Publications by Year</h2>
+
+        <div class="publication-stats-row">
+            <div class="publication-stat-item">
+                <span class="publication-stat-label">Publications</span>
+                <span id="publication-count" class="publication-stat-value">0</span>
+            </div>
+            <div class="publication-stat-item">
+                <span id="citation-status-label" class="publication-stat-label">Loading citation data...</span>
+                <span id="citation-status-value" class="publication-stat-value" style="font-size: 1.1em; font-weight: 500;">—</span>
+            </div>
+        </div>
+
         <p class="publication-intro-text">
             *: Corresponding author; ^: Equal contribution; <b>Bold</b>: Zheng Lab members.
         </p>

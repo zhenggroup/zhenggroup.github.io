@@ -112,11 +112,72 @@ document.addEventListener('DOMContentLoaded', function() {
     if (window.__dimensions_embed) {
         window.__dimensions_embed.addBadges();
     }
+
+    // Update top summary stats (publications + Dimensions citations)
+    updatePublicationStats();
     
     // LazySizes should pick up new images automatically if it's already loaded and observing.
     // If you face issues, you might need to manually trigger an update for LazySizes,
     // but usually, it's not necessary.
 });
+
+// Top publication stats (publication count + cached citation aggregation)
+async function updatePublicationStats() {
+    const publicationCountEl = document.getElementById('publication-count');
+    const statusLabelEl = document.getElementById('citation-status-label');
+    const statusValueEl = document.getElementById('citation-status-value');
+
+    if (publicationCountEl) {
+        publicationCountEl.textContent = allPublications.length.toString();
+    }
+
+    if (!statusLabelEl || !statusValueEl) {
+        return;
+    }
+
+    try {
+        const response = await fetch('../js/citations-cache.json');
+        if (!response.ok) {
+            throw new Error('Failed to load citation cache');
+        }
+
+        const cache = await response.json();
+        const citations = cache.citations || {};
+        const citationsWithData = Object.values(citations).filter(v => typeof v === 'number').length;
+
+        // Only show citation data if we have fetched it
+        if (citationsWithData === 0) {
+            statusLabelEl.textContent = 'Citations';
+            statusValueEl.textContent = 'Fetching data... (updates daily)';
+        } else {
+            let totalCitations = 0;
+            const doiSet = new Set();
+
+            // Collect unique DOIs and calculate total citations
+            allPublications.forEach(pub => {
+                const doi = pub.dimensionsDoi || pub.doi;
+                if (doi) {
+                    doiSet.add(doi);
+                    const citCount = citations[doi];
+                    if (typeof citCount === 'number') {
+                        totalCitations += citCount;
+                    }
+                }
+            });
+
+            const lastUpdated = cache.lastUpdated ? new Date(cache.lastUpdated).toLocaleDateString() : 'Unknown';
+
+            // Show total citations and publication count
+            statusLabelEl.textContent = `Total Citations: ${totalCitations.toLocaleString()}`;
+            statusValueEl.textContent = `Updated: ${lastUpdated} (${citationsWithData}/${doiSet.size})`;
+        }
+        
+    } catch (error) {
+        console.error('Failed to load citation cache:', error);
+        statusLabelEl.textContent = 'Citation data not available';
+        statusValueEl.textContent = 'Updates run automatically daily';
+    }
+}
 
 // Citation Modal Functionality
 function showCitationModal(pubNumber) {
@@ -125,7 +186,7 @@ function showCitationModal(pubNumber) {
 
     // Create modal HTML
     const modalHtml = `
-        <div id="citation-modal" data-pub-number="${pubNumber}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000; display: flex; align-items: center; justify-content: center; font-family: 'Source Sans Pro', sans-serif;">
+        <div id="citation-modal" data-pub-number="${pubNumber}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000; display: flex; align-items: center; justify-content: center; font-family: var(--font-family-sans-serif);">
             <div style="background: white; padding: 2rem; border-radius: 8px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
                     <h3 style="margin: 0; color: var(--color-primary-blue); font-family: 'Libre Baskerville', serif;">Cite This Publication</h3>

@@ -40,6 +40,17 @@ const newsData = [
     imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
     imageCaption: "Chemistry of Materials (Vol 38/Issue 4 2026)"  
   },
+      {
+    id: "zhengtalk",
+    date: "2025-11-25",
+    title: "Prof. Zheng delivers an invited talk at the ICAE 2025 (Jeju, Korea)",
+    content: `<p>Prof. Zheng presented an invited talk on the 8th International Conference on Advanced Electromaterials (ICAE 2025) on the topic of "Catalyst Deactivation Analysis by In Situ Electrochemistry". The conference is organized by the Korean Institute of Electrical and Electronic Material Engineers.</p>`,
+    imageSrc: "../img/icae2025.jpg",
+    imageAlt: " ",
+    imageFloat: 'left', // DEMO: Image will float to the right
+    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: " "  
+  }, 
   {
     id: "paper-published-jacsau",
     date: "2025-11-17",
@@ -48,7 +59,7 @@ const newsData = [
     imageSrc: "../img/9.jpg",
     imageAlt: "JACSAu cover",
     imageFloat: 'right', // DEMO: Image will float to the right
-    imageWidth: '35%',   // DEMO: Image will take up 45% of the container width
+    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
     imageCaption: "JACS Au cover (Vol 5/Issue 12 2025)"  
   },
   {
@@ -131,7 +142,7 @@ const newsData = [
   {
     id: "ecs-webinar-python-2024",
     date: "2024-08-01",
-    title: "Dr. Zheng delivered an ECS Webinar on Python for Electrochemistry",
+    title: "Dr. Zheng delivered an ECS Webinar on Python for Electrochemistry with >4k audience",
     content: `<p>Dr. Weiran Zheng delivered an ECS Webinar on the topic of “Introducing Python for Electrochemistry Research”. <a href="https://physicsworld.com/a/introducing-python-for-electrochemistry-research/" target="_blank" rel="noopener noreferrer">Watch Webinar</a></p>`,
     imageSrc: null,
     imageAlt: null,
@@ -142,7 +153,7 @@ const newsData = [
   {
     id: "talk-at-ciac-cas-2024",
     date: "2024-05-24",
-    title: "Weiran Zheng delivered a talk at CIAC, CAS",
+    title: "Weiran Zheng delivered a talk at CIAC, Chinese Academy of Sciences",
     content: `<p>Invited by Prof. Wenhui He, Prof. Weiran Zheng delivered an invited lecture on “In-situ Analysis of Electrocatalyst Deactivation” at the Changchun Institute of Applied Chemistry (CIAC), Chinese Academy Of Sciences.</p><p>应中国科学院长春应用化学研究所何文辉研究员邀请，郑蔚然副教授作关于“电催化剂失活过程的原位研究策略”的报告。</p>`,
     imageSrc: "../img/791fda8a572e0f4286e082e46dc912bf.JPG",
     imageAlt: "Weiran Zheng giving a presentation at a lectern.",
@@ -164,7 +175,7 @@ const newsData = [
   {
     id: "talk-at-244th-ecs-meeting-2023",
     date: "2023-10-11",
-    title: "Weiran Zheng delivered a talk at 244th ECS Meeting",
+    title: "Weiran Zheng delivered a talk at the 244th ECS Meeting, Gothenburg, Sweden",
     content: `<p>At the 244th Electrochemical Society (ECS) Meeting, Prof. Weiran Zheng delivered an oral presentation on “How to perform iR compensation in electrocatalytic study”.</p><p>在第244次美国电化学学会（ECS）年会上，郑蔚然副教授就“电催化研究中的iR校正原理与规范”作口头报告。</p>`,
     imageSrc: "../img/530b6f0ea5ae43d916f7de211361d9a5.JPG",
     imageAlt: "Weiran Zheng standing in front of an ECS poster.",
