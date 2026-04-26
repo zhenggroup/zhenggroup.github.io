@@ -20,6 +20,16 @@
 
 const newsData = [
   {
+    id: "yinshi-2026",
+    date: "2026-04-22",
+    title: "Yingshi Su's papers published on Electrochimica Acta and Journal of Physical Chemistry C",
+    content: `<p>The study by Yingshi on spectroelectrochemical and chemical analysis of the optical and electric evolution of FTO is published in Electrochimica Acta (https://doi.org/10.1016/j.electacta.2026.148501) and Journal of the Physical Chemistry C (https://doi.org/10.1021/acs.jpcc.6c00506).</p>`,
+    imageAlt: " ",
+    imageFloat: 'left', // DEMO: Image will float to the right
+    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: " "
+  },
+  {
     id: "award-sijie-2026",
     date: "2026-03-17",
     title: "Sijie Chen is awarded the Excellent Graduate Student of Academic year 2024-2025",
@@ -27,8 +37,8 @@ const newsData = [
     imageAlt: " ",
     imageFloat: 'left', // DEMO: Image will float to the right
     imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
-    imageCaption: " "  
-  }, 
+    imageCaption: " "
+  },
   {
     id: "paper-published-cm",
     date: "2025-12-03",
@@ -38,9 +48,9 @@ const newsData = [
     imageAlt: "Chemistry of Materials cover",
     imageFloat: 'left', // DEMO: Image will float to the right
     imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
-    imageCaption: "Chemistry of Materials (Vol 38/Issue 4 2026)"  
+    imageCaption: "Chemistry of Materials (Vol 38/Issue 4 2026)"
   },
-      {
+  {
     id: "zhengtalk",
     date: "2025-11-25",
     title: "Prof. Zheng delivers an invited talk at the ICAE 2025 (Jeju, Korea)",
@@ -49,8 +59,8 @@ const newsData = [
     imageAlt: " ",
     imageFloat: 'left', // DEMO: Image will float to the right
     imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
-    imageCaption: " "  
-  }, 
+    imageCaption: " "
+  },
   {
     id: "paper-published-jacsau",
     date: "2025-11-17",
@@ -60,7 +70,7 @@ const newsData = [
     imageAlt: "JACSAu cover",
     imageFloat: 'right', // DEMO: Image will float to the right
     imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
-    imageCaption: "JACS Au cover (Vol 5/Issue 12 2025)"  
+    imageCaption: "JACS Au cover (Vol 5/Issue 12 2025)"
   },
   {
     id: "paper-published-jpcc-2025",
@@ -71,7 +81,7 @@ const newsData = [
     imageAlt: "JPCC cover",
     imageFloat: 'left', // DEMO: Image will float to the right
     imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
-    imageCaption: "JPCC cover (Vol 129/Issue 27 2025)"  
+    imageCaption: "JPCC cover (Vol 129/Issue 27 2025)"
   },
   {
     id: "python-may-2025",

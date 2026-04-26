@@ -4,6 +4,15 @@ const allPublications = [
 
     // 2026
     {
+        number: 61, year: 2026, type: "Article",
+        authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*",
+        title: "Spectroelectrochemical Evolution of Fluorine-Doped Tin Oxide in Aqueous Electrolyte",
+        journal: "The Journal of Physical Chemistry C, online",
+        doi: "10.1021/acs.jpcc.6c00506",
+        imageUrl: "../img/jp6c00506_0015.webp", imageAlt: "acse",
+        dimensionsDoi: "10.1021/acs.jpcc.6c00506"
+    }, 
+    {
         number: 60, year: 2026, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis",

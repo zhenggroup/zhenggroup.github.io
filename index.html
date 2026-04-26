@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Zheng Group, electrochemistry, research lab, GTIIT, Guangdong Technion, electrocatalysis, operando methods, Weiran Zheng">
-    <meta name="description" content="Welcome to the Electrochemical Interface & Conversion Lab (The Zheng Group) led by Dr. Weiran Zheng at Guangdong Technion-Israel Institute of Technology (GTIIT). We focus on spectroelectrochemistry and scanning probe microscopy.">
+    <meta name="keywords"
+        content="Zheng Group, electrochemistry, research lab, GTIIT, Guangdong Technion, electrocatalysis, operando methods, Weiran Zheng">
+    <meta name="description"
+        content="Welcome to the Electrochemical Interface & Conversion Lab (The Zheng Group) led by Dr. Weiran Zheng at Guangdong Technion-Israel Institute of Technology (GTIIT). We focus on spectroelectrochemistry and scanning probe microscopy.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-    
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="style.css?1673"> 
-	<link rel="stylesheet" type="text/css" href="./css/animate.min.css?283">
-	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css?7489">
+    <link rel="stylesheet" type="text/css" href="style.css?1673">
+    <link rel="stylesheet" type="text/css" href="./css/animate.min.css?283">
+    <link rel="stylesheet" type="text/css" href="./css/all.min.css">
     <title>Home - The Zheng Group</title>
 
     <style>
@@ -31,17 +34,19 @@
         */
         header #bloc-0 {
             background: transparent !important;
-            border-bottom: none !important; /* ADDED: Remove any bottom border */
-            box-shadow: none !important;    /* ADDED: Remove any box shadow */
+            border-bottom: none !important;
+            /* ADDED: Remove any bottom border */
+            box-shadow: none !important;
+            /* ADDED: Remove any box shadow */
         }
-        
+
         /* Make navigation links white for visibility against the video */
         header #bloc-0 .nav-link {
             color: rgba(255, 255, 255, 0.85);
             font-weight: 500;
             transition: color 0.2s ease-in-out;
         }
-        
+
         /* Make active and hovered links brighter white */
         header #bloc-0 .nav-link.active,
         header #bloc-0 .nav-link:hover {
@@ -57,10 +62,11 @@
         header #bloc-0 .svg-menu-icon {
             stroke: #FFFFFF;
         }
-        
+
         /* Add padding to the top of the hero section to push content down below the header */
         .hero-section {
-            padding-top: 120px; /* Adjust as needed */
+            padding-top: 120px;
+            /* Adjust as needed */
         }
 
         /* Add a dark background to the collapsed mobile menu for readability */
@@ -72,6 +78,7 @@
                 margin-top: 0.5rem;
             }
         }
+
         /* --- End of Custom Homepage Styles --- */
 
         /* Hero Section with Video Background */
@@ -87,7 +94,7 @@
             padding-right: 1rem;
             padding-bottom: 2rem;
         }
-        
+
         .hero-video-background {
             position: absolute;
             top: 50%;
@@ -101,6 +108,7 @@
             opacity: 0;
             transition: opacity 1.0s ease-in-out;
         }
+
         .hero-video-background.video-active {
             opacity: 1;
         }
@@ -128,10 +136,10 @@
         }
 
         .hero-text-content {
-            flex-grow: 1; 
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center; 
+            justify-content: center;
             text-align: center;
         }
 
@@ -142,16 +150,18 @@
             margin-bottom: 0.75rem;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
+
         .hero-text-content h2 {
-            font-size: 1.8em; 
-            font-weight: 400; 
+            font-size: 1.8em;
+            font-weight: 400;
             color: #FFFFFF;
             opacity: 0.95;
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
         }
+
         .hero-text-content .research-focus-intro {
-            font-size: 1.15em; 
+            font-size: 1.15em;
             font-weight: 400;
             color: #FFFFFF;
             opacity: 0.9;
@@ -159,7 +169,8 @@
             line-height: 1.7;
             text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
         }
-        .hero-text-content .research-focus-intro strong { 
+
+        .hero-text-content .research-focus-intro strong {
             font-weight: 600;
             color: #FFFFFF;
         }
@@ -175,9 +186,9 @@
         }
 
         .hero-gallery-image-container {
-            height: 80px; 
+            height: 80px;
         }
-        
+
         .hero-gallery-image {
             width: auto;
             height: 100%;
@@ -185,19 +196,21 @@
             border: none;
             box-shadow: none;
         }
-        
+
         body[data-show-recruitment="false"] #recruitment-alert {
             display: none;
         }
+
         body[data-show-news="false"] #news {
             display: none;
         }
 
         /* Recruitment Alert Section */
         .recruitment-alert-section {
-            padding: 3rem 0; 
+            padding: 3rem 0;
             background-color: var(--background-color-light-gray);
         }
+
         .recruitment-alert {
             background-color: var(--background-color-page);
             border: 1px solid var(--border-color-medium);
@@ -205,26 +218,30 @@
             padding: 1.5rem 2rem;
             border-radius: 6px;
             position: relative;
-            box-shadow: 0 2px 8px rgba(0,86,179,0.08);
+            box-shadow: 0 2px 8px rgba(0, 86, 179, 0.08);
         }
-        .recruitment-alert h3 { 
+
+        .recruitment-alert h3 {
             color: var(--color-dark-blue);
-            font-size: 1.5em; 
+            font-size: 1.5em;
             margin-top: 0;
             margin-bottom: 1rem;
         }
+
         .recruitment-alert p {
             color: var(--text-color-dark);
-            margin-bottom: 1rem; 
+            margin-bottom: 1rem;
             line-height: 1.65;
         }
+
         .recruitment-alert .contact-info {
             margin-top: 1.25rem;
             font-weight: 500;
             color: var(--color-primary-blue);
             font-size: 1.05em;
         }
-        .recruitment-alert .btn-close-alert { 
+
+        .recruitment-alert .btn-close-alert {
             position: absolute;
             top: 1rem;
             right: 1rem;
@@ -234,44 +251,99 @@
             color: var(--color-primary-blue);
             opacity: 0.6;
         }
+
         .recruitment-alert .btn-close-alert:hover {
             opacity: 0.9;
         }
 
         /* News Section */
         .news-section {
-            padding: 3rem 0; 
+            padding: 3rem 0;
             background-color: var(--background-color-page);
         }
 
         /* Responsive Adjustments */
         @media (max-width: 991px) {
-            .hero-section { min-height: 90vh; }
-            .hero-text-content h1 { font-size: 2.8em; }
-            .hero-text-content h2 { font-size: 1.6em; }
+            .hero-section {
+                min-height: 90vh;
+            }
+
+            .hero-text-content h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-text-content h2 {
+                font-size: 1.6em;
+            }
         }
+
         @media (max-width: 767px) {
-            .hero-section { min-height: 85vh; padding-top: 100px; }
-            .hero-text-content h1 { font-size: 2.2em; }
-            .hero-text-content h2 { font-size: 1.4em; }
-            .hero-text-content .research-focus-intro { font-size: 1.05em; }
-            .hero-gallery-image-container { height: 60px; } 
+            .hero-section {
+                min-height: 85vh;
+                padding-top: 100px;
+            }
 
-            .recruitment-alert-section { padding: 2rem 0; }
-            .recruitment-alert h3 { font-size: 1.4em; }
-            .recruitment-alert { padding: 1.5rem; }
+            .hero-text-content h1 {
+                font-size: 2.2em;
+            }
 
-            .news-section { padding: 2rem 0; }
+            .hero-text-content h2 {
+                font-size: 1.4em;
+            }
+
+            .hero-text-content .research-focus-intro {
+                font-size: 1.05em;
+            }
+
+            .hero-gallery-image-container {
+                height: 60px;
+            }
+
+            .recruitment-alert-section {
+                padding: 2rem 0;
+            }
+
+            .recruitment-alert h3 {
+                font-size: 1.4em;
+            }
+
+            .recruitment-alert {
+                padding: 1.5rem;
+            }
+
+            .news-section {
+                padding: 2rem 0;
+            }
         }
-        @media (max-width: 480px) {
-            .hero-text-content h1 { font-size: 2em; }
-            .hero-text-content h2 { font-size: 1.25em; } 
-            .hero-gallery-image-container { height: 50px; } 
-            .hero-image-gallery { gap: 1.5rem; }
 
-            .recruitment-alert h3 { font-size: 1.3em; }
-            .recruitment-alert { padding: 1.25rem; }
-            .recruitment-alert .contact-info { font-size: 1em; }
+        @media (max-width: 480px) {
+            .hero-text-content h1 {
+                font-size: 2em;
+            }
+
+            .hero-text-content h2 {
+                font-size: 1.25em;
+            }
+
+            .hero-gallery-image-container {
+                height: 50px;
+            }
+
+            .hero-image-gallery {
+                gap: 1.5rem;
+            }
+
+            .recruitment-alert h3 {
+                font-size: 1.3em;
+            }
+
+            .recruitment-alert {
+                padding: 1.25rem;
+            }
+
+            .recruitment-alert .contact-info {
+                font-size: 1em;
+            }
         }
 
         /* Homepage News List Styling */
@@ -280,9 +352,11 @@
             padding-left: 0;
             margin-top: 1.5rem;
         }
+
         .homepage-news-item {
             border-bottom: 1px solid var(--border-color-light);
         }
+
         .homepage-news-item a {
             display: flex;
             align-items: baseline;
@@ -291,9 +365,11 @@
             transition: background-color 0.2s ease-in-out;
             gap: 1.5rem;
         }
+
         .homepage-news-item a:hover {
             background-color: var(--background-color-light-gray);
         }
+
         .homepage-news-date {
             font-size: 0.9em;
             font-weight: 500;
@@ -301,6 +377,7 @@
             flex-shrink: 0;
             width: 90px;
         }
+
         .homepage-news-title {
             font-size: 1em;
             color: var(--text-color-dark);
@@ -310,184 +387,205 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+
         .homepage-news-more-link {
             display: block;
             text-align: right;
             margin-top: 1rem;
             font-weight: 500;
         }
+
         .homepage-news-more-link a {
-             color: var(--text-link-color);
-             text-decoration: none;
-        }
-         .homepage-news-more-link a:hover {
-             color: var(--text-link-hover-color);
-             text-decoration: underline;
+            color: var(--text-link-color);
+            text-decoration: none;
         }
 
+        .homepage-news-more-link a:hover {
+            color: var(--text-link-hover-color);
+            text-decoration: underline;
+        }
     </style>
-    
+
 </head>
+
 <body data-show-recruitment="false" data-show-news="true">
 
-<!-- Preloader -->
-<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
-<!-- Preloader END -->
+    <!-- Preloader -->
+    <div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+    <!-- Preloader END -->
 
 
-<!-- Main container -->
-<div class="page-container">
-    
-<header>
-<!-- bloc-0: Navigation -->
-<div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
-	<div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
-		<div class="row">
-			<div class="col">
-				<nav class="navbar navbar-light row navbar-expand-md" role="navigation">
-					<div class="container-fluid">
-						<a class="navbar-brand img-protected" href="./index.html"><img src="img/logo.svg" alt="The Zheng Group Logo" class="me-2" width="200" height="63"></a>
-						<button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-14477">
-							<span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon" d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
-						</button>
-                        <div class="collapse navbar-collapse navbar-35179 navbar-14477">
-                            <ul class="site-navigation nav navbar-nav ms-auto">
-                                <li class="nav-item"><a href="./index.html" class="nav-link active">Home</a></li>
-                                <li class="nav-item"><a href="./research/index.html" class="nav-link">Research</a></li>
-                                <li class="nav-item"><a href="./publication/index.html" class="nav-link">Publication</a></li>
-                                <li class="nav-item"><a href="./team/index.html" class="nav-link">Team</a></li>
-                                <li class="nav-item"><a href="./resource/index.html" class="nav-link">Resource</a></li>
-                                <li class="nav-item"><a href="./news/index.html" class="nav-link">News</a></li>
-                            </ul>
+    <!-- Main container -->
+    <div class="page-container">
+
+        <header>
+            <!-- bloc-0: Navigation -->
+            <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
+                <div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
+                    <div class="row">
+                        <div class="col">
+                            <nav class="navbar navbar-light row navbar-expand-md" role="navigation">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand img-protected" href="./index.html"><img src="img/logo.svg"
+                                            alt="The Zheng Group Logo" class="me-2" width="200" height="63"></a>
+                                    <button id="nav-toggle" type="button"
+                                        class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0"
+                                        aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse"
+                                        data-bs-target=".navbar-14477">
+                                        <span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32"
+                                                width="32">
+                                                <path class="svg-menu-icon" d="m2 9h28m-28 7h28m-28 7h28"></path>
+                                            </svg></span>
+                                    </button>
+                                    <div class="collapse navbar-collapse navbar-35179 navbar-14477">
+                                        <ul class="site-navigation nav navbar-nav ms-auto">
+                                            <li class="nav-item"><a href="./index.html" class="nav-link active">Home</a>
+                                            </li>
+                                            <li class="nav-item"><a href="./research/index.html"
+                                                    class="nav-link">Research</a></li>
+                                            <li class="nav-item"><a href="./publication/index.html"
+                                                    class="nav-link">Publication</a></li>
+                                            <li class="nav-item"><a href="./team/index.html" class="nav-link">Team</a>
+                                            </li>
+                                            <li class="nav-item"><a href="./resource/index.html"
+                                                    class="nav-link">Resource</a></li>
+                                            <li class="nav-item"><a href="./news/index.html" class="nav-link">News</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
                         </div>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-0 END -->
-</header>
-
-<main>
-    <!-- Hero Section with Video Background -->
-    <section class="hero-section" id="hero"> 
-        <video 
-            id="hero-video-player-1" 
-            autoplay 
-            muted 
-            playsinline 
-            class="hero-video-background"
-            data-playlist="video/catalyst_layer_assembly.mp4, video/electrocatalyst_deactivation.mp4, video/python.mp4"
-        ></video>
-        <video 
-            id="hero-video-player-2" 
-            autoplay 
-            muted 
-            playsinline 
-            class="hero-video-background"
-        ></video>
-
-        <div class="hero-content-wrapper">
-            <div class="hero-text-content">
-                <h1>The Zheng Group</h1>
-                <h2>Electrochemical Interface &amp; Conversion Lab @ GTIIT</h2>
-                <p class="research-focus-intro">
-                    Welcome to our research group led by Dr. Weiran Zheng 郑蔚然! Our mission is to deepen the understanding of electrochemical interfaces and processes by leveraging cutting-edge operando electrochemical methods. We focus on tracking electrochemical behavior in real time to unravel the mechanisms behind activity, selectivity, and, most importantly, the degradation of electrocatalysts. Using advanced techniques such as spectroelectrochemistry and scanning probe microscopy, we aim to elucidate the dynamic evolution of surface sites and the underlying causes of catalyst deactivation. By addressing these fundamental challenges, we aim to contribute to the development of more efficient and durable electrocatalysis systems, ultimately helping to achieve a greener and shared future.
-                </p>
+                    </div>
+                </div>
             </div>
+            <!-- bloc-0 END -->
+        </header>
 
-            <div class="hero-image-gallery">
-                <div class="hero-gallery-image-container">
-                    <img src="img/gtiit.png" alt="GTIIT Logo" class="hero-gallery-image">
-                </div>
-                <div class="hero-gallery-image-container">
-                    <img src="img/technion1.png" alt="Technion Logo" class="hero-gallery-image">
-                </div>
-             </div>
-        </div>
-    </section>
-    <!-- Hero Section END -->
+        <main>
+            <!-- Hero Section with Video Background -->
+            <section class="hero-section" id="hero">
+                <video id="hero-video-player-1" autoplay muted playsinline class="hero-video-background"
+                    data-playlist="video/catalyst_layer_assembly.mp4, video/electrocatalyst_deactivation.mp4, video/python.mp4"></video>
+                <video id="hero-video-player-2" autoplay muted playsinline class="hero-video-background"></video>
 
-    <!-- Recruitment Alert Section -->
-    <section class="recruitment-alert-section" id="recruitment-alert">
-        <div class="content-container">
-            <div class="recruitment-alert" role="alert">
-                 <button type="button" class="btn-close btn-close-alert" data-bs-dismiss="alert" aria-label="Close"></button> 
-                <h3>We are looking for team members:</h3>
+                <div class="hero-content-wrapper">
+                    <div class="hero-text-content">
+                        <h1>The Zheng Group</h1>
+                        <h2>Electrochemical Interface &amp; Conversion Lab @ GTIIT</h2>
+                        <p class="research-focus-intro">
+                            Welcome to our research group led by Dr. Weiran Zheng 郑蔚然! Our mission is to deepen the
+                            understanding of electrochemical interfaces and processes by leveraging cutting-edge
+                            operando electrochemical methods. We focus on tracking electrochemical behavior in real time
+                            to unravel the mechanisms behind activity, selectivity, and, most importantly, the
+                            degradation of electrocatalysts. Using advanced techniques such as spectroelectrochemistry
+                            and scanning probe microscopy, we aim to elucidate the dynamic evolution of surface sites
+                            and the underlying causes of catalyst deactivation. By addressing these fundamental
+                            challenges, we aim to contribute to the development of more efficient and durable
+                            electrocatalysis systems, ultimately helping to achieve a greener and shared future.
+                        </p>
+                    </div>
+
+                    <div class="hero-image-gallery">
+                        <div class="hero-gallery-image-container">
+                            <img src="img/gtiit.png" alt="GTIIT Logo" class="hero-gallery-image">
+                        </div>
+                        <div class="hero-gallery-image-container">
+                            <img src="img/technion1.png" alt="Technion Logo" class="hero-gallery-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Hero Section END -->
+
+            <!-- Recruitment Alert Section -->
+            <section class="recruitment-alert-section" id="recruitment-alert">
+                <div class="content-container">
+                    <div class="recruitment-alert" role="alert">
+                        <button type="button" class="btn-close btn-close-alert" data-bs-dismiss="alert"
+                            aria-label="Close"></button>
+                        <h3>We are looking for team members:</h3>
+                        <p>
+                            We are actively looking for a) GTIIT UG students; b) MSc students; and c) PhD students for
+                            the following project:<br>
+                            1. Modeling and detection of double-layer structure during electrocatalysis (skills in
+                            Python, theoretical electrochemistry are required)<br>
+                            2. Isotopically labelled electrocatalysis for in situ spectroscopy and mass spectrometry
+                            (skills in practical electrochemistry and analytical chemistry are required)
+                        </p>
+                        <div class="contact-info">
+                            Send email to weiran.zheng@gtiit.edu.cn for more information/interview.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Recruitment Alert Section END -->
+
+            <!-- News Section -->
+            <section class="news-section" id="news">
+                <div class="content-container">
+                    <h2 class="section-heading">Latest News</h2>
+
+                    <!-- This list will be filled by JavaScript -->
+                    <ul class="homepage-news-list" id="homepage-news-container">
+                        <!-- JS will generate news items here -->
+                    </ul>
+
+                    <div class="homepage-news-more-link">
+                        <a href="./news/index.html">View all news &rarr;</a>
+                    </div>
+                </div>
+            </section>
+            <!-- News Section END -->
+        </main>
+
+        <!-- ScrollToTop Button -->
+        <button aria-label="Scroll to top button" class="bloc-button btn btn-d scrollToTop"
+            onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                viewBox="0 0 32 32">
+                <path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13" />
+            </svg></button>
+        <!-- ScrollToTop Button END-->
+
+
+        <!-- Footer -->
+        <footer class="footer-bloc" id="footer">
+            <div class="content-container">
                 <p>
-                    We are actively looking for a) GTIIT UG students; b) MSc students; and c) PhD students for the following project:<br>
-                    1. Modeling and detection of double-layer structure during electrocatalysis (skills in Python, theoretical electrochemistry are required)<br>
-                    2. Isotopically labelled electrocatalysis for in situ spectroscopy and mass spectrometry (skills in practical electrochemistry and analytical chemistry are required)
+                    Copyright Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel
+                    Institute of Technology (GTIIT)
                 </p>
-                <div class="contact-info">
-                    Send email to weiran.zheng@gtiit.edu.cn for more information/interview.
-                </div>
             </div>
-        </div>
-    </section>
-    <!-- Recruitment Alert Section END -->
+        </footer>
+        <!-- Footer END -->
 
-    <!-- News Section -->
-    <section class="news-section" id="news">
-        <div class="content-container">
-            <h2 class="section-heading">Latest News</h2>
-            
-            <!-- This list will be filled by JavaScript -->
-            <ul class="homepage-news-list" id="homepage-news-container">
-                <!-- JS will generate news items here -->
-            </ul>
-    
-            <div class="homepage-news-more-link">
-                <a href="./news/index.html">View all news &rarr;</a>
-            </div>
-        </div>
-    </section>
-    <!-- News Section END -->
-</main>
+    </div>
+    <!-- Main container END -->
 
-<!-- ScrollToTop Button -->
-<button aria-label="Scroll to top button" class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></button>
-<!-- ScrollToTop Button END-->
+    <!-- Additional JS -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js?3655"></script>
+    <script src="./js/blocs.min.js?4260"></script>
+    <script src="./js/lazysizes.min.js" defer></script>
+    <!-- Additional JS END -->
 
+    <!-- Load Central News Data -->
+    <script src="./js/news-data.js"></script>
 
-<!-- Footer -->
-<footer class="footer-bloc" id="footer">
-	<div class="content-container">
-		<p>
-			Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
-		</p>
-	</div>
-</footer>
-<!-- Footer END -->
+    <!-- Script to Generate Homepage News List -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const container = document.getElementById('homepage-news-container');
+            if (!container) return;
 
-</div>
-<!-- Main container END -->
-    
-<!-- Additional JS -->
-<script src="./js/jquery.min.js"></script>
-<script src="./js/bootstrap.bundle.min.js?3655"></script>
-<script src="./js/blocs.min.js?4260"></script>
-<script src="./js/lazysizes.min.js" defer></script>
-<!-- Additional JS END -->
+            const maxItems = 6;
+            const newsToDisplay = newsData.slice(0, maxItems);
 
-<!-- Load Central News Data -->
-<script src="./js/news-data.js"></script>
+            let newsHTML = '';
+            newsToDisplay.forEach(item => {
+                const displayDate = item.date.substring(0, 7);
 
-<!-- Script to Generate Homepage News List -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const container = document.getElementById('homepage-news-container');
-        if (!container) return;
-
-        const maxItems = 6;
-        const newsToDisplay = newsData.slice(0, maxItems);
-
-        let newsHTML = '';
-        newsToDisplay.forEach(item => {
-            const displayDate = item.date.substring(0, 7);
-            
-            newsHTML += `
+                newsHTML += `
                 <li class="homepage-news-item">
                     <a href="./news/index.html#${item.id}">
                         <span class="homepage-news-date">${displayDate}</span>
@@ -495,68 +593,69 @@
                     </a>
                 </li>
             `;
-        });
-        container.innerHTML = newsHTML;
-    });
-</script>
-
-<!-- JavaScript for smooth crossfade video playlist -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const player1 = document.getElementById('hero-video-player-1');
-        const player2 = document.getElementById('hero-video-player-2');
-        const players = [player1, player2];
-        
-        const playlistAttr = player1.dataset.playlist;
-        if (!playlistAttr) return;
-
-        const videoPlaylist = playlistAttr.split(',').map(item => item.trim());
-        if (videoPlaylist.length <= 1) {
-            if (videoPlaylist.length === 1) {
-                player1.src = videoPlaylist[0];
-                player1.classList.add('video-active');
-                player1.loop = true;
-                player1.play();
-            }
-            return;
-        }
-
-        let currentVideoIndex = 0;
-        let activePlayerIndex = 0;
-
-        function switchVideo() {
-            let activePlayer = players[activePlayerIndex];
-            let hiddenPlayer = players[1 - activePlayerIndex];
-
-            currentVideoIndex = (currentVideoIndex + 1) % videoPlaylist.length;
-            hiddenPlayer.src = videoPlaylist[currentVideoIndex];
-            hiddenPlayer.load();
-
-            hiddenPlayer.addEventListener('canplaythrough', function onCanPlay() {
-                activePlayer.classList.remove('video-active');
-                hiddenPlayer.classList.add('video-active');
-                hiddenPlayer.play();
-                activePlayerIndex = 1 - activePlayerIndex;
-            }, { once: true });
-        }
-
-        function initializePlayer() {
-            players[0].src = videoPlaylist[currentVideoIndex];
-            players[0].load();
-            players[0].classList.add('video-active');
-            players[0].play();
-            
-            players[1].src = videoPlaylist[1];
-            players[1].load();
-
-            players.forEach(player => {
-                player.addEventListener('ended', switchVideo);
             });
-        }
+            container.innerHTML = newsHTML;
+        });
+    </script>
 
-        initializePlayer();
-    });
-</script>
+    <!-- JavaScript for smooth crossfade video playlist -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const player1 = document.getElementById('hero-video-player-1');
+            const player2 = document.getElementById('hero-video-player-2');
+            const players = [player1, player2];
+
+            const playlistAttr = player1.dataset.playlist;
+            if (!playlistAttr) return;
+
+            const videoPlaylist = playlistAttr.split(',').map(item => item.trim());
+            if (videoPlaylist.length <= 1) {
+                if (videoPlaylist.length === 1) {
+                    player1.src = videoPlaylist[0];
+                    player1.classList.add('video-active');
+                    player1.loop = true;
+                    player1.play();
+                }
+                return;
+            }
+
+            let currentVideoIndex = 0;
+            let activePlayerIndex = 0;
+
+            function switchVideo() {
+                let activePlayer = players[activePlayerIndex];
+                let hiddenPlayer = players[1 - activePlayerIndex];
+
+                currentVideoIndex = (currentVideoIndex + 1) % videoPlaylist.length;
+                hiddenPlayer.src = videoPlaylist[currentVideoIndex];
+                hiddenPlayer.load();
+
+                hiddenPlayer.addEventListener('canplaythrough', function onCanPlay() {
+                    activePlayer.classList.remove('video-active');
+                    hiddenPlayer.classList.add('video-active');
+                    hiddenPlayer.play();
+                    activePlayerIndex = 1 - activePlayerIndex;
+                }, { once: true });
+            }
+
+            function initializePlayer() {
+                players[0].src = videoPlaylist[currentVideoIndex];
+                players[0].load();
+                players[0].classList.add('video-active');
+                players[0].play();
+
+                players[1].src = videoPlaylist[1];
+                players[1].load();
+
+                players.forEach(player => {
+                    player.addEventListener('ended', switchVideo);
+                });
+            }
+
+            initializePlayer();
+        });
+    </script>
 
 </body>
+
 </html>
