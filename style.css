@@ -5,6 +5,9 @@
 	Version: 1.3.1 (Centralized Color Control with CSS Variables, Concise Refinements)
 -----------------------------------------------------------------------------------*/
 
+/* Import Source Sans Pro from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap');
+
 /* Define Color Palette using CSS Custom Properties */
 :root {
     --color-primary-blue: #2E2E2E;
@@ -36,7 +39,7 @@
     --shadow-color-medium: rgba(0,0,0,0.1);
 
     /* Added for consistency if used by page-specific styles */
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 /* Global Resets and Base Styles */
@@ -56,7 +59,7 @@ body {
     font-family: var(--font-family-sans-serif); /* Use variable */
     line-height: 1.5;
     color: var(--text-color-dark);
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .page-container {

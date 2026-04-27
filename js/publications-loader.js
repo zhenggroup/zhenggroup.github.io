@@ -39,17 +39,20 @@ function createPublicationHTML(pub) {
     html += `<div class="publication-links">`;
     if (pub.doi) {
         html += ` <a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i>${pub.doi}</a>`;
-        const badgeDoi = pub.dimensionsDoi || pub.doi;
-        if (badgeDoi) {
-            // Keep badges inline with DOI link
-            html += ` <span class="dimensions-badge-inline"><span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span></span>`;
-            html += ` <span class="altmetric-badge-inline"><div class="altmetric-embed" data-badge-popover="bottom" data-badge-type="small_rectangle" data-doi="${badgeDoi}"></div></span>`;
-        }
     }
     if (pub.pdfLink) {
         html += ` <a href="${pub.pdfLink}" target="_blank" rel="noopener noreferrer"><i class="far fa-file-pdf"></i>PDF</a>`;
     }
     html += `</div>`;
+
+    // Badges (Dimensions and Altmetric) - aligned below DOI
+    const badgeDoi = pub.dimensionsDoi || pub.doi;
+    if (badgeDoi) {
+        html += `<div class="publication-badges">`;
+        html += ` <span class="dimensions-badge-inline"><span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span></span>`;
+        html += ` <span class="altmetric-badge-inline"><div class="altmetric-embed" data-badge-popover="bottom" data-badge-type="small_rectangle" data-doi="${badgeDoi}"></div></span>`;
+        html += `</div>`;
+    }
 
     // Comments
     if (pub.comments && pub.comments.length > 0) {
