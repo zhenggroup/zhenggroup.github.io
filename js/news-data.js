@@ -30,6 +30,16 @@ const newsData = [
     imageCaption: " "
   },
   {
+    id: "zheng-2026",
+    date: "2026-03-20",
+    title: "Prof. Zheng's tutorial paper on in situ electrochemistry is published on ACS Electrochemistry",
+    content: `<p>Prof. Zheng has published a tutorial/viewpoint paper on the limitation and traps of in situ methods: "Seeing Is Not Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis". In situ and operando techniques have revolutionized electrochemical research by enabling direct interrogation of electrochemical interfaces. However, these methods introduce new failure modes, including experimental perturbations, observability bias, and interpretive overreach, that can yield internally consistent yet misleading conclusions. In this work, we analyze why operando measurements can disagree across techniques, cell configurations, and laboratories despite high data quality. Through a framework examining observability, kinetics, spatial heterogeneity, and inference logic, we show how thin-layer geometries, reference instability, bubble dynamics, probe perturbations, and spectator-dominated signals decouple measured signals from catalytic events. A fundamental paradox emerges: kinetically important intermediates can be unobservable, while spectroscopically dominant species may reflect accumulation rather than catalytic control. We identify interpretive traps recurring across spectroscopic, microscopic, and scattering approaches to establish clearer boundaries for what operando studies can determine and promote rigorous links between observation and mechanistic inference.</p>`,
+    imageAlt: " ",
+    imageFloat: 'left', // DEMO: Image will float to the right
+    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: " "
+  },
+  {
     id: "award-sijie-2026",
     date: "2026-03-17",
     title: "Sijie Chen is awarded the Excellent Graduate Student of Academic year 2024-2025",
