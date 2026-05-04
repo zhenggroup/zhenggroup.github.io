@@ -16,7 +16,7 @@
     <title>Publications - The Zheng Group</title>
 
     <style>
-        /* Full publication list redesign */
+        /* Full publication list redesign - Clean Minimalist Layout */
         .publication-intro-text,
         .publication-year-accordion,
         .publication-entry,
@@ -35,20 +35,39 @@
 
         .featured-covers-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-            gap: 1.2rem;
-            margin-bottom: 2.5rem;
-            padding: 0;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(248,249,250,0.8), rgba(233,236,239,0.5));
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
         .featured-cover-item {
             overflow: hidden;
-            border-radius: 0;
-            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 6px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
             background: #fff;
-            aspect-ratio: 4 / 5;
+            aspect-ratio: 3 / 4;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+        }
+        .featured-cover-item::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
+            border-radius: 6px;
+            pointer-events: none;
+        }
+        .featured-cover-item:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+            z-index: 2;
         }
         .featured-cover-item img {
             width: 100%;
@@ -60,47 +79,47 @@
         .publication-year-accordion .card {
             background: transparent;
             border: none;
-            border-top: 2px solid rgba(0, 0, 0, 0.1);
-            border-radius: 0;
             margin-bottom: 1.5rem;
             box-shadow: none;
-            margin-top: 1.5rem;
         }
-        .publication-year-accordion .card:first-child {
-            border-top: none;
-            margin-top: 0;
-        }
+        
         .publication-year-accordion .card-header {
-            padding: 1.2rem 0;
-            border-bottom: none;
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--border-color-medium);
             background: transparent;
+            border-radius: 0 !important;
             cursor: pointer;
         }
+        
         .publication-year-accordion .card-header:hover {
-            background: transparent;
+            background: rgba(0, 0, 0, 0.02);
         }
+        
         .publication-year-accordion .card-header .year-toggle {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--text-color-headings);
-            letter-spacing: -0.01em;
+            letter-spacing: 0.02em;
         }
+        
         .publication-year-accordion .card-header .year-toggle::after {
             content: '+';
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             color: var(--text-color-medium);
             transition: transform 0.2s ease;
             margin-left: 1rem;
             font-weight: 300;
         }
+        
         .publication-year-accordion .card-header[aria-expanded="true"] .year-toggle::after {
             content: '−';
             transform: none;
         }
+        
         .publication-year-accordion .card-body {
             padding: 1rem 0 0;
             background: transparent;
@@ -110,47 +129,46 @@
             display: grid;
             grid-template-columns: 200px minmax(0, 1fr);
             gap: 1.5rem;
-            margin-bottom: 1.8rem;
-            padding: 1.2rem 0;
+            margin-bottom: 0.5rem;
+            padding: 1rem 0;
             background: transparent;
             border: none;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            border-bottom: 1px solid var(--border-color-light);
             border-radius: 0;
             box-shadow: none;
-            transition: all 0.2s ease;
             align-items: flex-start;
         }
+        
         .publication-entry:last-child {
-            margin-bottom: 0;
             border-bottom: none;
         }
+        
         .publication-entry:hover {
-            transform: none;
-            box-shadow: none;
-            background: rgba(0, 0, 0, 0.01);
-            border-left: 3px solid var(--color-primary-blue);
-            padding-left: 1rem;
+            background: rgba(0, 0, 0, 0.015);
         }
 
         .publication-toc {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 200px;
-            min-height: 150px;
+            width: 100%;
+            background-color: transparent;
+            border-radius: 0;
+            overflow: hidden;
+            border: none;
         }
+        
         .publication-toc img {
             width: 100%;
+            height: auto;
             max-height: 150px;
-            object-fit: cover;
-            border-radius: 0;
-            border: 1px solid rgba(0, 0, 0, 0.12);
+            object-fit: contain;
         }
 
         .publication-details {
             display: flex;
             flex-direction: column;
-            gap: 0.64rem;
+            gap: 0.4rem;
             min-width: 0;
         }
 
@@ -159,63 +177,63 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
         }
         .publication-number {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: rgba(0, 0, 0, 0.35);
-            min-width: fit-content;
-            border: none;
-            background: transparent;
-        }
-        .publication-type-tag {
-            font-size: 0.72rem;
+            font-size: 0.9rem;
             font-weight: 700;
             letter-spacing: 0.1em;
-            text-transform: capitalize;
+            color: var(--text-color-medium);
+            background: transparent;
+            padding: 0;
+            min-width: fit-content;
+        }
+        .publication-type-tag {
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
             color: var(--color-primary-blue);
             background: transparent;
             padding: 0;
-            border: none;
-            border-radius: 0;
         }
 
         .publication-title {
-            font-size: 1.02rem;
+            font-size: 1.25rem;
             font-weight: 700;
             margin: 0;
             color: var(--text-color-headings);
-            line-height: 1.42;
-            letter-spacing: -0.01em;
+            line-height: 1.4;
         }
         .publication-authors {
             margin: 0;
             color: var(--text-color-medium);
-            font-size: 0.94rem;
-            line-height: 1.65;
+            font-size: 1.05rem;
+            line-height: 1.6;
         }
         .publication-authors u {
             text-decoration: none;
             color: var(--color-dark-blue);
-            font-weight: 600;
+            font-weight: 700;
         }
         .publication-journal {
             margin: 0;
-            color: var(--text-color-subtle);
+            color: var(--text-color-dark);
+            font-weight: 400;
             font-style: italic;
-            font-size: 0.93rem;
+            font-size: 1.05rem;
             line-height: 1.5;
+        }
+        .publication-journal i {
+            font-style: italic;
         }
 
         .publication-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem;
+            gap: 0.5rem;
             align-items: center;
-            margin: 0;
+            margin-top: 0.2rem;
         }
         .publication-badges {
             display: flex;
@@ -274,6 +292,7 @@
             color: var(--text-color-subtle);
             font-size: 0.9rem;
         }
+        
         .publication-links a,
         .publication-featured-links a {
             padding: 0;
@@ -282,57 +301,52 @@
             background: transparent;
             color: var(--text-link-color);
             text-decoration: underline;
-            font-size: 0.88rem;
+            font-size: 0.95rem;
             font-weight: 600;
-            letter-spacing: 0.01em;
-            transition: color 0.15s ease;
+            transition: all 0.2s ease;
         }
+        
         .publication-links a:hover,
         .publication-featured-links a:hover {
             background: transparent;
             color: var(--text-link-hover-color);
-            transform: none;
         }
 
         .publication-comment {
             margin: 0;
             color: var(--text-color-subtle);
-            font-size: 0.91rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.5;
             font-style: italic;
+            padding-left: 0.5rem;
+            border-left: 2px solid var(--border-color-light);
         }
 
         @media (max-width: 991px) {
             .featured-covers-grid {
-                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-                gap: 1rem;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 1.5rem;
+                padding: 1.5rem;
             }
             .publication-entry {
-                grid-template-columns: 170px minmax(0, 1fr);
+                grid-template-columns: 160px minmax(0, 1fr);
                 gap: 1rem;
-            }
-            .publication-toc {
-                min-width: 170px;
-                min-height: 130px;
-            }
-            .publication-toc img {
-                max-height: 130px;
             }
         }
 
         @media (max-width: 767px) {
+            .featured-covers-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 1.2rem;
+                padding: 1.2rem;
+                margin-bottom: 3rem;
+            }
             .publication-entry {
                 grid-template-columns: 1fr;
                 gap: 0.8rem;
-                padding: 1rem 0;
-            }
-            .publication-entry:hover {
-                border-left: none;
-                padding-left: 0;
+                padding: 0.8rem 0;
             }
             .publication-toc {
-                justify-content: center;
-                min-width: 100%;
                 max-width: 200px;
                 margin: 0 auto;
             }
@@ -340,34 +354,19 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
-            .publication-links a,
-            .publication-featured-links a {
-                padding: 0.3em 0.6em;
-                font-size: 0.85rem;
-            }
         }
 
         @media (max-width: 480px) {
             .featured-covers-grid {
-                grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-                gap: 0.8rem;
-            }
-            .publication-entry {
-                grid-template-columns: 1fr;
-                padding: 0.8rem 0;
-                margin-bottom: 1.2rem;
-            }
-            .publication-toc {
-                min-height: 120px;
-            }
-            .publication-toc img {
-                max-height: 120px;
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 1rem;
+                padding: 1rem;
             }
             .publication-title {
-                font-size: 0.98rem;
+                font-size: 1.15rem;
             }
             .publication-authors {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
     </style>

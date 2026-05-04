@@ -35,6 +35,7 @@ const piData = {
         </p>
         <h6>Service</h6>
         <p>
+        2025 — present <strong>Associate Editor</strong> of <strong>Journal of Molecular Liquids</strong><br>
         2024 — present <strong>Early Career Editorial Board Member</strong> of <strong>Journal of Electrochemistry (《电化学(中英文)》)</strong> (official journal of the Chinese Electrochemistry Society)<br>
         </p>
     `

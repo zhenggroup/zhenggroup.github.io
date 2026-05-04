@@ -16,15 +16,21 @@
 
     <style>
         /* Academic-focused styles for resource page */
+        .section-heading,
+        .resource-card h3,
+        .software-list-item h3,
+        .lab-system-buttons .btn {
+            font-family: var(--font-family-sans-serif);
+        }
 
         /* Section headings */
         .section-heading {
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--text-color-headings);
+            font-size: 1.75rem;
             margin-bottom: 1.5rem;
             margin-top: 2rem;
-            border-bottom: 2px solid #e9ecef;
+            border-bottom: 2px solid var(--border-color-medium);
             padding-bottom: 0.5rem;
         }
 
@@ -36,14 +42,16 @@
             gap: 1.5rem;
             margin-bottom: 3rem;
             padding: 2rem;
-            background: #f8f9fa;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(248,249,250,0.8), rgba(233,236,239,0.5));
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
         }
         .lab-system-buttons .btn {
             flex: 1;
             min-width: 250px;
             max-width: 350px;
-            font-size: 1.1em;
+            font-size: 1.1rem;
             font-weight: 600;
             padding: 1rem 1.5rem;
             border: none;
@@ -53,33 +61,41 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .lab-system-buttons .btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
             color: #fff;
             text-decoration: none;
         }
         .lab-system-buttons .btn .fas {
             margin-right: 0.75em;
         }
-        .btn-booking { background-color: #1976d2; }
-        .btn-booking:hover { background-color: #1565c0; }
-        .btn-nas { background-color: #424242; }
-        .btn-nas:hover { background-color: #212121; }
+        .btn-booking { background-color: var(--color-link); }
+        .btn-booking:hover { background-color: var(--color-link-light); }
+        .btn-nas { background-color: var(--color-primary-blue); }
+        .btn-nas:hover { background-color: #000; }
 
         /* Resource Cards - Clean academic styling */
         .resource-card {
-            background-color: #ffffff;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 6px;
+            background: transparent;
+            padding: 1.5rem 0;
+            margin-bottom: 0.5rem;
+            border-radius: 0;
+            border: none;
+            border-bottom: 1px solid var(--border-color-light);
+            box-shadow: none;
+        }
+        .resource-card:last-child {
+            border-bottom: none;
         }
         .resource-card h3 {
-            font-size: 1.3em;
-            color: #2c3e50;
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: var(--text-color-headings);
+            font-weight: 700;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
         }
         .resource-card h3:first-of-type {
             margin-top: 0;
@@ -87,37 +103,43 @@
         .resource-card p, .resource-card ul {
             margin-bottom: 1rem;
             line-height: 1.6;
-            font-size: 1em;
-            color: #495057;
+            font-size: 1.05rem;
+            color: var(--text-color-medium);
         }
         .resource-card ul { padding-left: 20px; }
         .resource-card li { margin-bottom: 0.5rem; }
         .resource-card a {
-            color: #1976d2;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
+            padding: 0;
+            border-radius: 0;
+            border: none;
+            background: transparent;
+            color: var(--text-link-color);
+            text-decoration: underline;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
         }
         .resource-card a:hover {
-            color: #0d47a1;
-            text-decoration: underline;
+            background: transparent;
+            color: var(--text-link-hover-color);
         }
         .resource-card strong {
-            font-weight: 600;
-            color: #2c3e50;
+            font-weight: 700;
+            color: var(--text-color-dark);
         }
         .resource-card .note {
-            font-size: 0.9em;
+            font-size: 1rem;
             font-weight: 400;
-            color: #6c757d;
-            margin-left: 0.75em;
+            color: var(--text-color-subtle);
+            margin-left: 0.75rem;
+            font-style: italic;
         }
 
         /* Software List - Professional styling */
         .software-list-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color-light);
         }
         .software-list-item:last-child {
             border-bottom: none;
@@ -126,15 +148,32 @@
         }
         .software-list-item h3 {
             margin-top: 0;
+            font-size: 1.25rem;
+            color: var(--text-color-headings);
+            font-weight: 700;
         }
         .software-list-item .software-description {
-            margin-bottom: 0.75rem;
-            color: #6c757d;
+            margin-bottom: 0.5rem;
+            color: var(--text-color-subtle);
             font-style: italic;
+            font-size: 1rem;
         }
         .software-list-item ul {
             margin-top: 0.5rem;
             list-style-type: disc;
+            color: var(--text-color-medium);
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+        .software-list-item a {
+            color: var(--text-link-color);
+            text-decoration: underline;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+        .software-list-item a:hover {
+            color: var(--text-link-hover-color);
         }
 
         /* Responsive design */
