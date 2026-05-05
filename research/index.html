@@ -85,17 +85,21 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
             z-index: 1;
-            transition: background-color 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
         }
 
         .research-card:hover {
-            transform: translateY(-8px) scale(1.06);
-            box-shadow: 0 10px 25px var(--shadow-color-medium);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 28px var(--shadow-color-medium);
         }
         .research-card:hover::before {
-            background-color: rgba(0, 0, 0, 0.65);
+            background-color: rgba(0, 0, 0, 0.55);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
         }
         
         #operando-electrochemistry { background-image: url('../img/cover-operando.jpg'); }
@@ -108,28 +112,33 @@
         }
 
         .research-card h2 { 
-            font-size: 1.5em;
+            font-size: 1.6em;
+            font-weight: 700;
             color: #FFFFFF;
             margin-top: 0; 
             margin-bottom: 1rem;
-            text-align: center;
+            text-align: left;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
         
         .research-card .research-topic-intro { 
-             margin-bottom: 1.25rem;
-             color: rgba(255, 255, 255, 0.9);
-             line-height: 1.65; 
-             text-align: center;
+             margin-bottom: 1.5rem;
+             color: #F8F9FA;
+             line-height: 1.6; 
+             text-align: left;
              font-size: 0.95em;
+             text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
 
         .research-card h3 {
-            font-size: 1.2em;
+            font-size: 1.25em;
+            font-weight: 600;
             color: #FFFFFF;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
             padding-bottom: 0.4rem;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.6);
         }
 
         .research-card ul {
@@ -142,32 +151,36 @@
         .research-card .topic-list li {
             font-size: 0.95em; /* Match intro text size */
             line-height: 1.65; /* Match intro text line height */
-            margin-bottom: 0.5rem;
-            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.6rem;
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
         .research-card ul li em, .research-card p em { 
             font-style: italic;
-            color: rgba(255, 255, 255, 0.95);
+            color: #FFFFFF;
         }
         
         /* --- MODIFIED: "Related publications" font size and link styles --- */
         .research-card .publications-list li { 
-            margin-bottom: 0.4rem; /* Increased margin slightly */
+            margin-bottom: 0.5rem; /* Increased margin slightly */
             font-size: 0.85em; /* Decreased font size */
-            line-height: 1.4;
+            line-height: 1.45;
         }
         .research-card .publications-list ul { 
             padding-left: 0;
             list-style-type: none; 
         }
         .research-card .publications-list a {
-            color: rgba(255, 255, 255, 0.85); /* Match li text color */
-            text-decoration: none; /* Remove default underline */
-            transition: color 0.2s ease;
+            color: #E2E8F0;
+            text-decoration: underline;
+            text-decoration-color: rgba(255, 255, 255, 0.3);
+            text-underline-offset: 3px;
+            transition: all 0.2s ease;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
         }
         .research-card .publications-list a:hover {
-            color: #FFFFFF; /* Make brighter on hover */
-            text-decoration: underline; /* Add underline on hover for clarity */
+            color: #FFFFFF;
+            text-decoration-color: #FFFFFF;
         }
 
         /* Responsive Design Adjustments */
@@ -258,7 +271,7 @@
             <h3 class="section-heading left-aligned">Research Philosophy</h3>
             <blockquote class="blockquote">
                 <p class="roboto-it">
-                    The first principle is that you must not fool yourself—and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that.<br><br>It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.
+                    The first principle is that you must not fool yourself—and you are the easiest person to fool. So you have to be very careful about that. After you've not fooled yourself, it's easy not to fool other scientists. You just have to be honest in a conventional way after that.<br>It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.
                 </p>
                 <cite>&mdash; Prof. Richard Feynman</cite>
             </blockquote>
@@ -348,7 +361,7 @@
 <footer class="footer-bloc" id="footer"> <!-- This will be styled by global style.css -->
     <div class="content-container">
         <p>
-            Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+            Copyright Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
         </p>
     </div>
 </footer>

@@ -85,6 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
+    // Enable automatic numbering based on array order (newest first)
+    let currentNumber = allPublications.length;
+    allPublications.forEach(pub => {
+        pub.number = currentNumber--;
+    });
+
     const publicationsByYear = {};
 
     allPublications.forEach(pub => {
