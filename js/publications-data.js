@@ -1,4 +1,8 @@
 // js/publications-data.js
+// Instructions:
+// To add a new publication, add an object to the allPublications array.
+// Supported fields: number, year, type, authors, title, journal, doi, imageUrl, imageAlt, dimensionsDoi, pdfLink, comments, featuredIn.
+// You can also add a `description` field for publication details or an abstract. The `description` field supports Markdown format.
 
 const allPublications = [
 

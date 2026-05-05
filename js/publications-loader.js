@@ -74,6 +74,17 @@ function createPublicationHTML(pub) {
         html += `</div>`;
     }
 
+    // Markdown Description
+    if (pub.description) {
+        html += `<div class="publication-description">`;
+        if (typeof marked !== 'undefined' && marked.parse) {
+            html += marked.parse(pub.description);
+        } else {
+            html += pub.description;
+        }
+        html += `</div>`;
+    }
+
     html += `   </div> <!-- End publication-details -->
             </div> <!-- End publication-entry -->`;
     return html;

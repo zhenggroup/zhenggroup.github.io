@@ -9,7 +9,7 @@
 // - id: A unique identifier for URL anchors (e.g., "paper-published-july-2025"). Must be unique.
 // - date: The display date in "YYYY-MM-DD" format.
 // - title: The news headline. This will be truncated on the homepage.
-// - content: The full description. You can use HTML tags like <p>, <a>, <strong>.
+// - content: The full description. You can now use Markdown format (e.g., **bold**, *italic*, [link](url)) as well as HTML tags.
 //
 // --- IMAGE CONTROLS (OPTIONAL) ---
 // - imageSrc: Path to image (e.g., "../img/my-image.jpg"). Use null for no image.
