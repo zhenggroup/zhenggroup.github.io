@@ -11,18 +11,18 @@ const allPublications = [
         number: 61, year: 2026, type: "Article",
         authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Spectroelectrochemical Evolution of Fluorine-Doped Tin Oxide in Aqueous Electrolyte",
-        journal: "The Journal of Physical Chemistry C, online",
+        journal: "The Journal of Physical Chemistry C, 2026, 130, 18, 6557-6571",
         doi: "10.1021/acs.jpcc.6c00506",
-        imageUrl: "../img/jp6c00506_0015.webp", imageAlt: "acse",
+        imageUrl: "../img/jp6c00506_0015.webp", imageAlt: "jpcc2026",
         dimensionsDoi: "10.1021/acs.jpcc.6c00506"
     }, 
     {
         number: 60, year: 2026, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis",
-        journal: "ACS Electrochemistry, online",
+        journal: "ACS Electrochemistry, 2026, 2, 1127-1137",
         doi: "10.1021/acselectrochem.6c00058",
-        imageUrl: "../img/acse.jpg", imageAlt: "acse",
+        imageUrl: "../img/acse.jpg", imageAlt: "acselectrochem2026",
         dimensionsDoi: "10.1021/acselectrochem.6c00058"
     }, 
     {
