@@ -79,6 +79,21 @@ Featured:
 
 
 
+## Spatiotemporal Visualisation of Electrocatalyst/Electrolyte Interfaces with Electrochemical Atomic Force Microscopy: Applications and Notes
+Year: 2026
+Type: Invited Review
+Authors: <b><u>W. Zheng</u></b>*
+Journal: Journal of Microscopy, 2026, 302 (1), 5-16
+DOI: 10.1111/jmi.13401
+Dimensions DOI: 10.1111/jmi.13401
+PDF: 
+Image: ../img/jmi13401-fig-0006-m.png
+Image Alt: TOC for Spatiotemporal visualisation
+Comments: 
+Featured: 
+
+
+
 ## Decoding Electrocatalyst Degradation Using Time-Resolved Electrochemical Impedance Analysis
 Year: 2025
 Type: Article
@@ -150,21 +165,6 @@ PDF:
 Image: ../img/Screenshot%202025-04-30%20at%208.27.41%E2%80%AFPM.png
 Image Alt: TOC for Selective Ammonia Electrooxidation
 Comments: Featured on the cover
-Featured: 
-
-
-
-## Spatiotemporal Visualisation of Electrocatalyst/Electrolyte Interfaces with Electrochemical Atomic Force Microscopy: Applications and Notes
-Year: 2025
-Type: Invited Review
-Authors: <b><u>W. Zheng</u></b>*
-Journal: Journal of Microscopy, 2025, online
-DOI: 10.1111/jmi.13401
-Dimensions DOI: 10.1111/jmi.13401
-PDF: 
-Image: ../img/jmi13401-fig-0006-m.png
-Image Alt: TOC for Spatiotemporal visualisation
-Comments: 
 Featured: 
 
 
@@ -916,6 +916,5 @@ Image: ../img/placeholder-image.png
 Image Alt: TOC Placeholder
 Comments: 
 Featured: 
-
 
 

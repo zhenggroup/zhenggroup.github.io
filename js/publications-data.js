@@ -103,10 +103,10 @@ const allPublications = [
         dimensionsDoi: "10.1021/acs.jpcc.5c02770"
     }, 
     {
-        number: 51, year: 2025, type: "Invited Review",
+        number: 51, year: 2026, type: "Invited Review",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Spatiotemporal Visualisation of Electrocatalyst/Electrolyte Interfaces with Electrochemical Atomic Force Microscopy: Applications and Notes",
-        journal: "Journal of Microscopy, 2025, online",
+        journal: "Journal of Microscopy, 2026, 302 (1), 5-16",
         doi: "10.1111/jmi.13401",
         imageUrl: "../img/jmi13401-fig-0006-m.png", imageAlt: "TOC for Spatiotemporal visualisation",
         dimensionsDoi: "10.1111/jmi.13401"
