@@ -71,7 +71,7 @@ function parsePublicationsMarkdown(markdown) {
 
 async function loadPublications() {
     try {
-        const response = await fetch('../publication/publications.md?preview-oxford');
+        const response = await fetch('../publication/publications.md?citation-total-1');
         if (!response.ok) {
             throw new Error('publications.md not found');
         }
@@ -86,6 +86,216 @@ async function loadPublications() {
     }
 
     return typeof allPublications !== 'undefined' && Array.isArray(allPublications) ? allPublications : [];
+}
+
+function stripPublicationMarkup(value) {
+    const html = String(value || '')
+        .replace(/<br\s*\/?>/gi, ' ')
+        .replace(/&nbsp;/gi, ' ');
+    const container = document.createElement('div');
+    container.innerHTML = html;
+    return (container.textContent || container.innerText || '')
+        .replace(/\*/g, '')
+        .replace(/\^/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+}
+
+function parsePublicationAuthors(authors) {
+    return stripPublicationMarkup(authors)
+        .split(',')
+        .map(author => author
+            .replace(/\s+/g, ' ')
+            .replace(/[.;]+$/g, '')
+            .trim())
+        .filter(Boolean);
+}
+
+function isWeiranZhengAuthor(author) {
+    return /\bw\.?\s*zheng\b/i.test(author) || /\bweiran\s+zheng\b/i.test(author);
+}
+
+function isWeiranZhengFirstOrLastAuthor(pub) {
+    const authors = parsePublicationAuthors(pub.authors);
+    if (authors.length === 0) {
+        return false;
+    }
+
+    return isWeiranZhengAuthor(authors[0]) || isWeiranZhengAuthor(authors[authors.length - 1]);
+}
+
+function getPublicationDoi(pub) {
+    return (pub.dimensionsDoi || pub.doi || '').trim();
+}
+
+function getCachedCitationCount(cache, doi) {
+    if (!cache || !doi) {
+        return null;
+    }
+
+    const citations = cache.citations || cache;
+    const normalizedDoi = doi.toLowerCase();
+    const directValue = Object.prototype.hasOwnProperty.call(citations, doi)
+        ? citations[doi]
+        : citations[normalizedDoi];
+    return typeof directValue === 'number' ? directValue : null;
+}
+
+function extractCitationCount(payload) {
+    if (!payload) {
+        return null;
+    }
+
+    if (Array.isArray(payload)) {
+        return extractCitationCount(payload[0]);
+    }
+
+    const candidates = [
+        payload.times_cited,
+        payload.timesCited,
+        payload.citations,
+        payload.citation_count,
+        payload.metrics && payload.metrics.times_cited
+    ];
+
+    const value = candidates.find(item => typeof item === 'number' && Number.isFinite(item));
+    return typeof value === 'number' ? value : null;
+}
+
+async function loadCitationCache() {
+    try {
+        const response = await fetch('../js/citations-cache.json?citation-total-1');
+        if (!response.ok) {
+            throw new Error('Citation cache not found');
+        }
+        return await response.json();
+    } catch (error) {
+        return null;
+    }
+}
+
+async function fetchDimensionsCitationCount(doi) {
+    const response = await fetch(`https://metrics-api.dimensions.ai/doi/${encodeURIComponent(doi)}`);
+    if (!response.ok) {
+        throw new Error(`Dimensions citation request failed for ${doi}`);
+    }
+
+    return extractCitationCount(await response.json());
+}
+
+let dimensionsCitationCountsPromise = null;
+
+async function getDimensionsCitationCounts(publications = window.allPublications || []) {
+    if (dimensionsCitationCountsPromise) {
+        return dimensionsCitationCountsPromise;
+    }
+
+    dimensionsCitationCountsPromise = (async () => {
+        const cache = await loadCitationCache();
+        const uniqueDois = Array.from(new Set(publications.map(getPublicationDoi).filter(Boolean)));
+        const pairs = await mapWithConcurrency(uniqueDois, 4, async doi => {
+            const cachedCount = getCachedCitationCount(cache, doi);
+            const citations = cachedCount ?? await fetchDimensionsCitationCount(doi);
+
+            return typeof citations === 'number' ? [doi, citations] : null;
+        });
+        const counts = {};
+
+        pairs.filter(Boolean).forEach(([doi, citations]) => {
+            counts[doi] = citations;
+        });
+
+        return {
+            counts,
+            doiCount: uniqueDois.length,
+            loadedCount: Object.keys(counts).length,
+            source: cache ? 'Dimensions API/cache' : 'Dimensions API'
+        };
+    })();
+
+    return dimensionsCitationCountsPromise;
+}
+
+async function mapWithConcurrency(items, limit, iterator) {
+    const results = new Array(items.length);
+    let nextIndex = 0;
+
+    async function worker() {
+        while (nextIndex < items.length) {
+            const index = nextIndex++;
+            try {
+                results[index] = await iterator(items[index], index);
+            } catch (error) {
+                console.warn(error);
+                results[index] = null;
+            }
+        }
+    }
+
+    await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+    return results;
+}
+
+function createHighlyCitedCard(item, index) {
+    const pub = item.publication;
+    const anchorId = getPublicationAnchor(pub);
+    const citations = item.citations.toLocaleString();
+
+    return `<article class="highly-cited-card">
+        <div class="highly-cited-card-header">
+            <span class="highly-cited-rank">#${index + 1}</span>
+            <div class="highly-cited-count">
+                <strong>${citations}</strong>
+                <span>citations</span>
+            </div>
+        </div>
+        <h3>${pub.title}</h3>
+        <p class="publication-authors">${pub.authors}</p>
+        <p class="publication-journal">${pub.journal}</p>
+        <a class="highly-cited-card-link" href="#${anchorId}">View publication ${pub.number}.</a>
+    </article>`;
+}
+
+async function renderHighlyCitedPapers() {
+    const section = document.getElementById('highly-cited-section');
+    const grid = document.getElementById('highly-cited-grid');
+    const status = document.getElementById('highly-cited-status');
+    const publications = window.allPublications || [];
+
+    if (!section || !grid || !status) {
+        return;
+    }
+
+    const eligiblePublications = publications
+        .filter(isWeiranZhengFirstOrLastAuthor)
+        .filter(pub => getPublicationDoi(pub));
+
+    if (eligiblePublications.length === 0) {
+        status.textContent = 'No eligible DOI records';
+        return;
+    }
+
+    const citationData = await getDimensionsCitationCounts(publications);
+    const ranked = eligiblePublications.map(pub => {
+        const doi = getPublicationDoi(pub);
+        const citations = citationData.counts[doi];
+
+        return typeof citations === 'number' ? { publication: pub, citations } : null;
+    });
+
+    const topPapers = ranked
+        .filter(Boolean)
+        .sort((a, b) => b.citations - a.citations)
+        .slice(0, 4);
+
+    if (topPapers.length === 0) {
+        status.textContent = 'Citation data unavailable';
+        grid.innerHTML = '<p class="publication-intro-text">Dimensions citation data could not be loaded in this preview.</p>';
+        return;
+    }
+
+    grid.innerHTML = topPapers.map(createHighlyCitedCard).join('');
+    status.textContent = 'Ranked by Dimensions API';
 }
 
 function createPublicationHTML(pub) {
@@ -227,6 +437,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     updatePublicationStats();
+    renderHighlyCitedPapers();
 
     // After populating, re-initialize Dimensions badges
     if (window.__dimensions_embed) {
@@ -264,7 +475,7 @@ function openPublicationFromHash() {
 
 window.addEventListener('hashchange', openPublicationFromHash);
 
-// Top publication stats (publication count + cached citation aggregation)
+// Top publication stats (publication count + Dimensions citation aggregation)
 async function updatePublicationStats() {
     const publications = window.allPublications || [];
     const publicationCountEl = document.getElementById('publication-count');
@@ -288,57 +499,34 @@ async function updatePublicationStats() {
     }
 
     try {
-        const response = await fetch('../js/citations-cache.json');
-        if (!response.ok) {
-            throw new Error('Failed to load citation cache');
+        if (citationTotalCardEl && citationTotalCountEl) {
+            citationTotalCardEl.classList.remove('is-hidden');
+            citationTotalCountEl.textContent = '...';
         }
 
-        const cache = await response.json();
-        const citations = cache.citations || {};
-        const citationsWithData = Object.values(citations).filter(v => typeof v === 'number').length;
+        const citationData = await getDimensionsCitationCounts(publications);
+        const totalCitations = Object.values(citationData.counts)
+            .reduce((sum, citations) => sum + citations, 0);
 
-        // Only show citation data if we have fetched it
-        if (citationsWithData === 0) {
-            if (statusLabelEl && statusValueEl) {
-                statusLabelEl.textContent = 'Citations';
-                statusValueEl.textContent = 'Fetching data... (updates daily)';
-            }
-        } else {
-            let totalCitations = 0;
-            const doiSet = new Set();
+        if (citationTotalCardEl && citationTotalCountEl) {
+            citationTotalCountEl.textContent = totalCitations.toLocaleString();
+            citationTotalCardEl.title = `${citationData.source}: ${citationData.loadedCount}/${citationData.doiCount} DOI records loaded`;
+        }
 
-            // Collect unique DOIs and calculate total citations
-            publications.forEach(pub => {
-                const doi = pub.dimensionsDoi || pub.doi;
-                if (doi) {
-                    doiSet.add(doi);
-                    const citCount = citations[doi];
-                    if (typeof citCount === 'number') {
-                        totalCitations += citCount;
-                    }
-                }
-            });
-
-            const lastUpdated = cache.lastUpdated ? new Date(cache.lastUpdated).toLocaleDateString() : 'Unknown';
-
-            if (citationTotalCardEl && citationTotalCountEl) {
-                citationTotalCountEl.textContent = totalCitations.toLocaleString();
-                citationTotalCardEl.classList.remove('is-hidden');
-                citationTotalCardEl.title = `Citation cache updated: ${lastUpdated} (${citationsWithData}/${doiSet.size} DOI records)`;
-            }
-
-            // Show total citations and publication count
-            if (statusLabelEl && statusValueEl) {
-                statusLabelEl.textContent = `Total Citations: ${totalCitations.toLocaleString()}`;
-                statusValueEl.textContent = `Updated: ${lastUpdated} (${citationsWithData}/${doiSet.size})`;
-            }
+        if (statusLabelEl && statusValueEl) {
+            statusLabelEl.textContent = `Total Citations: ${totalCitations.toLocaleString()}`;
+            statusValueEl.textContent = `${citationData.source} (${citationData.loadedCount}/${citationData.doiCount})`;
         }
         
     } catch (error) {
-        console.warn('Citation cache not available:', error);
+        console.warn('Dimensions citation data not available:', error);
+        if (citationTotalCardEl && citationTotalCountEl) {
+            citationTotalCardEl.classList.add('is-hidden');
+            citationTotalCountEl.textContent = '--';
+        }
         if (statusLabelEl && statusValueEl) {
             statusLabelEl.textContent = 'Citation data not available';
-            statusValueEl.textContent = 'Updates run automatically daily';
+            statusValueEl.textContent = 'Dimensions API could not be reached';
         }
     }
 }

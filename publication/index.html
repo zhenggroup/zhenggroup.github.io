@@ -213,8 +213,11 @@
         }
         .publication-authors u {
             text-decoration: none;
-            color: var(--color-dark-blue);
-            font-weight: 700;
+            color: var(--color-gold);
+            font-weight: 400;
+        }
+        .publication-authors b {
+            font-weight: 400;
         }
         .publication-journal {
             margin: 0;
@@ -477,6 +480,143 @@
             font-size: 0.95rem;
         }
 
+        .publication-member-key {
+            color: var(--color-gold);
+            font-weight: 400;
+        }
+
+        .highly-cited-section {
+            margin: 0 0 2.4rem;
+            padding: 1.4rem;
+            border: 1px solid rgba(0, 33, 71, 0.1);
+            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(0, 33, 71, 0.045), rgba(185, 151, 91, 0.11));
+        }
+
+        .highly-cited-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .highly-cited-heading h2 {
+            margin: 0;
+            color: var(--color-primary-blue);
+            font-size: clamp(1.35rem, 2vw, 1.9rem);
+            line-height: 1.15;
+            font-weight: 760;
+        }
+
+        .highly-cited-heading p {
+            max-width: 720px;
+            margin: 0.35rem 0 0;
+            color: var(--text-color-medium);
+            font-size: 0.96rem;
+            line-height: 1.55;
+        }
+
+        .highly-cited-status {
+            flex: 0 0 auto;
+            padding: 0.35rem 0.6rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.68);
+            color: #6c5224;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+        }
+
+        .highly-cited-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+
+        .highly-cited-card {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+            min-height: 100%;
+            padding: 1rem;
+            border: 1px solid rgba(0, 33, 71, 0.08);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 14px 30px rgba(0, 33, 71, 0.08);
+        }
+
+        .highly-cited-card-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .highly-cited-rank {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 2.1rem;
+            height: 2.1rem;
+            border-radius: 999px;
+            background: var(--color-primary-blue);
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        .highly-cited-count {
+            text-align: right;
+            color: var(--color-primary-blue);
+        }
+
+        .highly-cited-count strong {
+            display: block;
+            font-size: 1.55rem;
+            line-height: 1;
+        }
+
+        .highly-cited-count span {
+            display: block;
+            margin-top: 0.18rem;
+            color: var(--text-color-medium);
+            font-size: 0.74rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .highly-cited-card h3 {
+            margin: 0;
+            color: var(--text-color-headings);
+            font-size: 1.02rem;
+            line-height: 1.35;
+            font-weight: 760;
+        }
+
+        .highly-cited-card .publication-authors,
+        .highly-cited-card .publication-journal {
+            margin: 0;
+            font-size: 0.88rem;
+            line-height: 1.45;
+        }
+
+        .highly-cited-card-link {
+            margin-top: auto;
+            color: var(--text-link-color);
+            font-size: 0.88rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .highly-cited-card-link:hover {
+            color: var(--text-link-hover-color);
+            text-decoration: underline;
+        }
+
         .publication-year-accordion .card {
             overflow: hidden;
             margin-bottom: 1rem;
@@ -606,6 +746,18 @@
             .publication-toc img {
                 max-height: 168px;
             }
+
+            .highly-cited-heading {
+                flex-direction: column;
+            }
+
+            .highly-cited-status {
+                white-space: normal;
+            }
+
+            .highly-cited-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
         }
 
         @media (max-width: 560px) {
@@ -616,6 +768,10 @@
             .publication-toc {
                 max-width: 260px;
                 margin: 0 auto;
+            }
+
+            .highly-cited-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -681,6 +837,17 @@
             </div>
         </section>
 
+        <section class="highly-cited-section" id="highly-cited-section" aria-live="polite">
+            <div class="highly-cited-heading">
+                <div>
+                    <h2>Highly Cited Papers</h2>
+                    <p>Top papers with W. Zheng as first or last author, ranked by Dimensions citation counts.</p>
+                </div>
+                <span class="highly-cited-status" id="highly-cited-status">Loading Dimensions citations</span>
+            </div>
+            <div class="highly-cited-grid" id="highly-cited-grid"></div>
+        </section>
+
         <section class="featured-covers-grid" id="featured-covers">
             <a href="#" data-lightbox="../img/6.jpg" data-gallery-id="gallery-covers" class="featured-cover-item">
                 <picture><source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="../img/6.webp"><img src="../img/lazyload-ph.png" data-src="../img/6.jpg" class="lazyload" alt="Featured Cover"></picture>
@@ -709,7 +876,7 @@
         <h2 class="section-heading">Publications by Year</h2>
 
         <p class="publication-intro-text">
-            *: Corresponding author; ^: Equal contribution; <b>Bold</b>: Zheng Lab members.
+            *: Corresponding author; ^: Equal contribution; <span class="publication-member-key">Gold names</span>: Zheng Lab members.
         </p>
 
         <div class="accordion publication-year-accordion" id="publicationsAccordion">
@@ -837,7 +1004,7 @@
 
 <!-- Custom scripts for publications -->
 <script src="../js/publications-data.js"></script>
-<script src="../js/publications-loader.js?preview-oxford-2"></script>
+<script src="../js/publications-loader.js?gold-authors-2"></script>
 <!-- Altmetric Badge Script - loaded after content generation -->
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 <script>
