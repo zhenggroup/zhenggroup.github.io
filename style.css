@@ -7,36 +7,38 @@
 
 /* Define Color Palette using CSS Custom Properties */
 :root {
-    --color-primary-blue: #2E2E2E;
-    --color-dark-blue: #2E2E2E;
-    --color-light-blue: #CECECE;
-    --color-link: #0682c4;
-    --color-link-light: #00a6ff;
+    --color-primary-blue: #002147;
+    --color-dark-blue: #00172f;
+    --color-light-blue: #e7edf5;
+    --color-gold: #b9975b;
+    --color-gold-light: #d8bd7f;
+    --color-link: #005ea8;
+    --color-link-light: #b9975b;
 
 
-    --text-color-dark: #2E2E2E;      /* Main body text, darker elements */
-    --text-color-headings: #2E2E2E;  /* Main headings */
-    --text-color-medium: #2E2E2E;    /* Secondary text */
+    --text-color-dark: #172033;      /* Main body text, darker elements */
+    --text-color-headings: #06182f;  /* Main headings */
+    --text-color-medium: #445066;    /* Secondary text */
     --text-color-light: #ffffff;     /* Text on dark backgrounds */
     --text-color-subtle: #777777;    /* For less important text like dates */
     --text-link-color: var(--color-link);
     --text-link-hover-color: var(--color-link-light);
 
     --background-color-page: #ffffff;
-    --background-color-light-gray: #f8f9fa;
-    --background-color-accent-tag: #e9ecef;
+    --background-color-light-gray: #f6f8fb;
+    --background-color-accent-tag: #eef3f9;
 
     --border-color-light: #eeeeee;
     --border-color-medium: #e0e0e0;
 
-    --footer-background: #2E2E2E;
-    --footer-text-color: #bdc3c7;
+    --footer-background: #00172f;
+    --footer-text-color: #d6dfeb;
 
-    --shadow-color-soft: rgba(0,0,0,0.05);
-    --shadow-color-medium: rgba(0,0,0,0.1);
+    --shadow-color-soft: rgba(0, 33, 71, 0.08);
+    --shadow-color-medium: rgba(0, 33, 71, 0.16);
 
     /* Added for consistency if used by page-specific styles */
-    --font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Global Resets and Base Styles */
@@ -54,7 +56,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: var(--font-family-sans-serif); /* Use variable */
-    line-height: 1.5;
+    line-height: 1.6;
     color: var(--text-color-dark);
     font-size: 16px;
 }
@@ -78,8 +80,8 @@ button {
 }
 
 .content-container {
-    width: 90%;
-    max-width: 1100px; /* Consider making this a variable if it's used elsewhere */
+    width: min(92%, 1180px);
+    max-width: 1180px; /* Consider making this a variable if it's used elsewhere */
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -138,52 +140,58 @@ button {
 
 /* Minimalist Design Common Styles */
 #bloc-0 { /* Header */
-    background-color: var(--background-color-page);
-    border-bottom: 1px solid var(--border-color-light);
+    background-color: rgba(255, 255, 255, 0.88);
+    border-bottom: 1px solid rgba(0, 33, 71, 0.08);
     position: sticky;
     top: 0;
     z-index: 1020;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 }
 #bloc-0 .navbar-brand img {
-    max-height: 50px;
+    max-height: 46px;
     width: auto;
 }
 #bloc-0 .nav-link {
     font-family: inherit; /* Inherits from body, which is var(--font-family-sans-serif) */
     color: var(--text-color-dark);
-    padding: 0.5em 1em;
-    border-radius: 4px;
+    padding: 0.55em 0.85em;
+    border-radius: 999px;
     transition: background-color 0.2s ease, color 0.2s ease;
     font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    text-transform: none;
+    font-size: 0.92em;
+    letter-spacing: 0;
 }
 #bloc-0 .nav-link:hover,
 #bloc-0 .nav-link.active {
-    background-color: var(--color-primary-blue);
-    color: var(--text-color-light) !important;
+    background-color: rgba(185, 151, 91, 0.16);
+    color: var(--color-primary-blue) !important;
 }
 
 .page-title-container { /* Used on other pages, not index.html provided */
-    background-color: var(--color-primary-blue);
+    background:
+        radial-gradient(circle at 12% 0%, rgba(185, 151, 91, 0.22), transparent 32rem),
+        linear-gradient(135deg, var(--color-dark-blue), var(--color-primary-blue));
     color: var(--text-color-light);
-    padding: 2rem 0;
-    text-align: center;
-    margin-bottom: 2rem;
+    padding: 4.5rem 0 3.5rem;
+    text-align: left;
+    margin-bottom: 3rem;
 }
 .page-title-container h1 {
-    font-size: 1.4em;
-    font-weight: 600;
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    font-weight: 700;
     margin: 0;
+    letter-spacing: 0;
 }
 
 .section-heading { /* Used in index.html */
-    font-size: 1.4em;
+    font-size: clamp(1.7rem, 2.4vw, 2.35rem);
     color: var(--text-color-headings);
-    margin: 2rem auto 2rem; /* Simplified margin, auto for left/right with display:inline-block */
+    margin: 2.5rem auto 2rem; /* Simplified margin, auto for left/right with display:inline-block */
     text-align: center; /* Already centered by transform, but good for fallback */
     padding-bottom: 0.6rem;
-    border-bottom: 2px solid var(--color-primary-blue);
+    border-bottom: 3px solid var(--color-gold);
     display: inline-block;
     position: relative; /* Needed for transform centering */
     left: 50%;
@@ -197,12 +205,48 @@ button {
     background-color: var(--footer-background);
     color: var(--footer-text-color);
     text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 1.5rem;
+    padding: 2rem 0;
+    margin-top: 4rem;
     font-size: .75rem;
 }
 .footer-bloc p {
     margin-bottom: 0;
+}
+
+body[data-clean-url="true"] .page-container > header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    width: 100%;
+}
+
+body[data-clean-url="true"] .page-container > header #bloc-0 {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: none;
+}
+
+body[data-clean-url="true"] .page-container > header #bloc-0 .navbar-brand img {
+    filter: brightness(0) invert(1);
+}
+
+body[data-clean-url="true"] .page-container > header #bloc-0 .nav-link {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+body[data-clean-url="true"] .page-container > header #bloc-0 .nav-link:hover,
+body[data-clean-url="true"] .page-container > header #bloc-0 .nav-link.active {
+    background-color: rgba(185, 151, 91, 0.22);
+    color: #ffffff !important;
+}
+
+body[data-clean-url="true"] .page-container > header .svg-menu-icon {
+    stroke: #ffffff;
+}
+
+body[data-clean-url="true"] .page-title-container {
+    padding-top: 8rem;
 }
 
 /* Navigation & UI Elements */
@@ -639,4 +683,149 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     }
     .news-card .card-body { padding: 1rem; }
     .news-card h4 { font-size: 1.1em; }
+}
+
+/* === Oxford blue and gold preview refresh === */
+main {
+    background:
+        linear-gradient(180deg, rgba(246, 248, 251, 0.82), rgba(255, 255, 255, 0) 18rem),
+        var(--background-color-page);
+}
+
+.navbar {
+    padding-top: 0.72rem;
+    padding-bottom: 0.72rem;
+}
+
+.navbar-brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.site-navigation {
+    align-items: center;
+    gap: 0.18rem;
+}
+
+.btn,
+.publication-links a,
+.publication-featured-links a {
+    letter-spacing: 0;
+}
+
+.page-title-container::after {
+    content: "";
+    display: block;
+    width: min(92%, 1180px);
+    max-width: 1180px;
+    height: 3px;
+    margin: 2rem auto 0;
+    background: linear-gradient(90deg, var(--color-gold), rgba(185, 151, 91, 0));
+}
+
+.feynman-quote-section,
+.featured-covers-grid,
+.pi-section,
+.team-member-card:hover,
+.recruitment-alert,
+.publication-year-accordion .card {
+    border-radius: 8px;
+}
+
+.feynman-quote-section {
+    background: #ffffff;
+    border: 1px solid rgba(0, 33, 71, 0.08);
+    border-left: 5px solid var(--color-gold);
+    box-shadow: 0 18px 45px rgba(0, 33, 71, 0.08);
+}
+
+.research-card {
+    border-radius: 8px !important;
+    box-shadow: 0 22px 52px rgba(0, 33, 71, 0.18) !important;
+}
+
+.research-card::before {
+    background:
+        linear-gradient(180deg, rgba(0, 23, 47, 0.68), rgba(0, 33, 71, 0.88)) !important;
+}
+
+.research-card h3 {
+    border-bottom-color: rgba(185, 151, 91, 0.68) !important;
+}
+
+.featured-covers-grid {
+    background: linear-gradient(135deg, rgba(0, 33, 71, 0.055), rgba(185, 151, 91, 0.12));
+    border: 1px solid rgba(0, 33, 71, 0.08);
+    box-shadow: 0 20px 55px rgba(0, 33, 71, 0.08);
+}
+
+.publication-year-accordion .card-header {
+    border-bottom-color: rgba(0, 33, 71, 0.14);
+}
+
+.publication-year-accordion .card-header .year-toggle,
+.publication-number,
+.publication-type-tag {
+    color: var(--color-primary-blue) !important;
+}
+
+.publication-entry {
+    border-bottom-color: rgba(0, 33, 71, 0.09) !important;
+}
+
+.publication-entry:hover {
+    background: rgba(0, 33, 71, 0.025) !important;
+}
+
+.publication-entry-highlight {
+    background: rgba(185, 151, 91, 0.16) !important;
+    box-shadow: inset 4px 0 0 var(--color-gold);
+}
+
+.pi-section {
+    background: linear-gradient(135deg, rgba(0, 33, 71, 0.035), rgba(185, 151, 91, 0.08));
+    border: 1px solid rgba(0, 33, 71, 0.08);
+    padding: 2rem !important;
+}
+
+.pi-image-contact img.member-photo,
+.team-member-card .member-photo {
+    border: 3px solid rgba(185, 151, 91, 0.55);
+}
+
+.team-member-card {
+    border-color: rgba(0, 33, 71, 0.07) !important;
+}
+
+.team-member-card:hover {
+    background: #ffffff !important;
+    box-shadow: 0 18px 40px rgba(0, 33, 71, 0.1) !important;
+}
+
+@media (max-width: 767px) {
+    #bloc-0 .navbar-collapse {
+        background: rgba(255, 255, 255, 0.96);
+        border: 1px solid rgba(0, 33, 71, 0.08);
+        border-radius: 8px;
+        padding: 0.75rem;
+        margin-top: 0.75rem;
+        box-shadow: 0 18px 42px rgba(0, 33, 71, 0.14);
+    }
+
+    .site-navigation {
+        align-items: stretch;
+    }
+
+    #bloc-0 .nav-link {
+        padding: 0.75rem 0.9rem;
+    }
+
+    body[data-clean-url="true"] .page-container > header #bloc-0 .navbar-collapse {
+        background: rgba(0, 23, 47, 0.96);
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    body[data-clean-url="true"] .page-title-container {
+        padding-top: 7rem;
+    }
 }

@@ -154,6 +154,122 @@
             }
         }
 
+        /* News page clarity refresh */
+        .news-summary {
+            padding: 1.4rem 0 1.8rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+        }
+
+        .news-summary h2 {
+            margin: 0 0 0.6rem;
+            color: var(--text-color-headings);
+            font-size: clamp(1.8rem, 3vw, 2.7rem);
+            line-height: 1.1;
+            font-weight: 760;
+        }
+
+        .news-summary p {
+            max-width: 760px;
+            margin: 0;
+            color: var(--text-color-medium);
+            font-size: 1.04rem;
+            line-height: 1.65;
+        }
+
+        .news-stat {
+            min-width: 150px;
+            padding: 1rem 1.1rem;
+            border-radius: 8px;
+            background: var(--color-primary-blue);
+            color: #fff;
+            text-align: right;
+            box-shadow: 0 18px 38px rgba(0, 33, 71, 0.16);
+        }
+
+        .news-stat strong {
+            display: block;
+            font-size: 2rem;
+            line-height: 1;
+        }
+
+        .news-stat span {
+            display: block;
+            margin-top: 0.35rem;
+            color: rgba(255,255,255,0.74);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .news-list-container {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .news-entry-card {
+            display: grid;
+            grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+            gap: 1.3rem;
+            background: #fff;
+            padding: 1.25rem;
+            margin-bottom: 0;
+            border: 1px solid rgba(0, 33, 71, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 14px 34px rgba(0, 33, 71, 0.06);
+        }
+
+        .news-entry-card:hover {
+            box-shadow: 0 20px 45px rgba(0, 33, 71, 0.1);
+        }
+
+        .news-entry-header {
+            margin-bottom: 0;
+        }
+
+        .news-entry-date {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 105px;
+            padding: 0.45rem 0.65rem;
+            border-radius: 999px;
+            background: rgba(185, 151, 91, 0.18);
+            color: #6c5224;
+            font-size: 0.82rem;
+            font-weight: 760;
+        }
+
+        .news-entry-title {
+            margin-top: 0.55rem;
+            color: var(--color-primary-blue);
+            font-size: clamp(1.08rem, 1.55vw, 1.35rem);
+            max-width: 260px;
+        }
+
+        .news-entry-body {
+            min-width: 0;
+            font-size: 0.98rem;
+            line-height: 1.62;
+        }
+
+        .news-image-container {
+            border-color: rgba(0, 33, 71, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 12px 26px rgba(0, 33, 71, 0.08);
+        }
+
+        @media (max-width: 767px) {
+            .news-summary,
+            .news-entry-card {
+                grid-template-columns: 1fr;
+            }
+
+            .news-stat {
+                text-align: left;
+            }
+        }
+
     </style>
     
 </head>
@@ -218,9 +334,13 @@
 
 <main>
     <div class="content-container">
+        <section class="news-summary">
+            <div>
+                <h2>Latest Updates</h2>
+                <p>Lab news, publications, talks, awards, and group activities from the Electrochemical Interface &amp; Conversion Lab.</p>
+            </div>
+        </section>
         
-        <h2 class="section-heading">Latest Updates</h2>
-
         <div class="news-list-container" id="news-items-list">
             <!-- News items will be dynamically generated here by JavaScript -->
         </div> <!-- End #news-items-list -->
@@ -235,7 +355,7 @@
 		<div class="row">
 			<div class="col text-center">
 				<p>
-					Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+					Copyright <span class="copyright-year"></span> Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
 				</p>
 			</div>
 		</div>
@@ -251,20 +371,24 @@
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script> 
 <script src="../js/lazysizes.min.js" defer></script>
+<script src="../js/site-year.js"></script>
 <script src="../js/marked.min.js"></script>
 <!-- Additional JS END -->
 
 <!-- Load Central News Data -->
 <script src="../js/news-data.js"></script>
+<script src="./posts/manifest.js"></script>
+<script src="../js/news-loader.js?preview-oxford"></script>
 
 <!-- Script to Generate Full News Page List -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', async function() {
         const container = document.getElementById('news-items-list');
-        if (!container || typeof newsData === 'undefined') return;
+        if (!container) return;
 
         let newsHTML = '';
-        newsData.forEach(item => {
+        const allNewsItems = await getAllNewsItems({ basePath: './posts/' });
+        allNewsItems.forEach(item => {
             let imageHTML = '';
             // Check if there is an image to include
             if (item.imageSrc) {

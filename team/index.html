@@ -188,6 +188,197 @@
         @media (max-width: 480px) {
             .team-grid { grid-template-columns: 1fr; } 
         }
+
+        /* Team page clarity refresh */
+        .team-summary {
+            padding: 1.4rem 0 1.8rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+        }
+
+        .team-summary h2 {
+            margin: 0 0 0.6rem;
+            color: var(--text-color-headings);
+            font-size: clamp(1.8rem, 3vw, 2.7rem);
+            line-height: 1.1;
+            font-weight: 760;
+        }
+
+        .team-summary p {
+            max-width: 760px;
+            margin: 0;
+            color: var(--text-color-medium);
+            font-size: 1.04rem;
+            line-height: 1.65;
+        }
+
+        .team-stats {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .team-stat {
+            min-width: 120px;
+            padding: 0.95rem 1rem;
+            border-radius: 8px;
+            background: var(--color-primary-blue);
+            color: #fff;
+            text-align: right;
+            box-shadow: 0 18px 38px rgba(0, 33, 71, 0.16);
+        }
+
+        .team-stat.gold {
+            background: linear-gradient(135deg, #6c5224, var(--color-gold));
+        }
+
+        .team-stat strong {
+            display: block;
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        .team-stat span {
+            display: block;
+            margin-top: 0.35rem;
+            color: rgba(255,255,255,0.74);
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .pi-section {
+            background: linear-gradient(135deg, rgba(0, 33, 71, 0.035), rgba(185, 151, 91, 0.08));
+            border: 1px solid rgba(0, 33, 71, 0.08);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 18px 42px rgba(0, 33, 71, 0.08);
+        }
+
+        .pi-image-contact {
+            padding: 0.5rem;
+        }
+
+        .pi-image-contact img.member-photo {
+            width: 190px;
+            height: 190px;
+            border: 3px solid rgba(185, 151, 91, 0.55);
+            box-shadow: 0 18px 38px rgba(0, 33, 71, 0.16);
+        }
+
+        .pi-contact-links a,
+        .member-contact-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            background: rgba(0, 33, 71, 0.07);
+            color: var(--color-primary-blue);
+            font-size: 1rem;
+        }
+
+        .pi-contact-links a:hover,
+        .member-contact-links a:hover {
+            background: rgba(185, 151, 91, 0.18);
+            color: var(--color-primary-blue);
+        }
+
+        .pi-details h6 {
+            color: var(--color-primary-blue);
+            border-bottom-color: rgba(0, 33, 71, 0.1);
+        }
+
+        .team-grid {
+            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            gap: 1rem;
+        }
+
+        .team-member-card {
+            background: #fff;
+            border: 1px solid rgba(0, 33, 71, 0.08);
+            box-shadow: 0 14px 34px rgba(0, 33, 71, 0.06);
+            padding: 1.25rem 1rem;
+        }
+
+        .team-member-card:hover {
+            background: #fff;
+            border-color: rgba(185, 151, 91, 0.32);
+            box-shadow: 0 20px 45px rgba(0, 33, 71, 0.12);
+        }
+
+        .team-member-card .member-photo {
+            width: 132px;
+            height: 132px;
+            border: 3px solid rgba(185, 151, 91, 0.45);
+        }
+
+        .team-member-card .member-name {
+            color: var(--color-primary-blue);
+        }
+
+        #previous-members-grid {
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.75rem;
+        }
+
+        #previous-members-grid .team-member-card {
+            padding: 0.9rem 0.75rem;
+            background: transparent;
+            box-shadow: none;
+            border-color: rgba(0, 33, 71, 0.08);
+        }
+
+        #previous-members-grid .team-member-card:hover {
+            transform: none;
+            background: transparent;
+            border-color: rgba(0, 33, 71, 0.08);
+            box-shadow: none;
+        }
+
+        #previous-members-grid .team-member-card .member-photo {
+            width: 92px;
+            height: 92px;
+            margin-bottom: 0.8rem;
+            border-width: 2px;
+            box-shadow: none;
+        }
+
+        #previous-members-grid .team-member-card:hover .member-photo {
+            transform: none;
+        }
+
+        #previous-members-grid .team-member-card .member-name {
+            font-size: 1rem;
+            color: var(--text-color-headings);
+        }
+
+        #previous-members-grid .team-member-card .member-role {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 767px) {
+            .team-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .team-stats {
+                justify-content: stretch;
+            }
+
+            .team-stat {
+                flex: 1;
+                text-align: left;
+            }
+
+            .pi-section {
+                padding: 1.25rem;
+            }
+        }
     </style>
     
 </head>
@@ -239,6 +430,12 @@
 
 <main>
     <div class="content-container">
+        <section class="team-summary">
+            <div>
+                <h2>People</h2>
+                <p>Meet the researchers and students working on electrochemical interfaces, operando methods, and electrocatalyst stability in the Zheng Group.</p>
+            </div>
+        </section>
         
         <h2 class="section-heading">Lab PI</h2>
         <!-- PI Section: Content will be generated by JavaScript -->
@@ -265,7 +462,7 @@
 <footer class="footer-bloc" id="footer">
 	<div class="content-container">
 		<p>
-			Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+			Copyright <span class="copyright-year"></span> Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
 		</p>
 	</div>
 </footer>
@@ -279,14 +476,14 @@
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script>
 <script src="../js/lazysizes.min.js" defer></script>
+<script src="../js/site-year.js"></script>
 
 <!-- *** NEW: Load the team data *** -->
-<script src="../js/team-data.js"></script>
+<script src="../js/team-data.js?team-update-peter-cambal"></script>
 
 <!-- *** NEW: Script to build the team page from data *** -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-
     // --- 1. GENERATE PI SECTION ---
     const piContainer = document.getElementById('pi-container');
     if (piContainer && typeof piData !== 'undefined') {
@@ -332,9 +529,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const linksHTML = memberLinks ? `<div class="member-contact-links">${memberLinks}</div>` : '';
 
+            const hasPhoto = member.photoSrc && !member.photoSrc.endsWith('/'); 
+            const photoSrc = hasPhoto ? member.photoSrc : '../img/placeholder-image.png';
+
             allCardsHTML += `
                 <div class="team-member-card">
-                    <img src="../img/lazyload-ph.png" data-src="${member.photoSrc}" class="lazyload member-photo" alt="Photo of ${member.name}" width="140" height="140">
+                    <img src="../img/lazyload-ph.png" data-src="${photoSrc}" class="lazyload member-photo" alt="Photo of ${member.name}" width="140" height="140">
                     <h3 class="member-name">${member.name}</h3>
                     <p class="member-role">${member.role}</p>
                     ${linksHTML}

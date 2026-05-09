@@ -79,16 +79,9 @@ const currentMembers = [
         googleScholar: null
     },
     {
-        name: "Zhengyang Deng (邓征阳)",
-        role: "Undergraduate (22Chem)<br>2024 -",
-        photoSrc: "../img/Zhengyang Deng.jpg", // CORRECTED PATH
-        orcid: null,
-        googleScholar: null
-    },
-    {
-        name: "Guanxi Wu (吴冠希)",
-        role: "Undergraduate (22Chem)<br>2024 -",
-        photoSrc: "../img/4339e05276f975da75344856d6a2ea0e 2.JPG", // CORRECTED PATH
+        name: "Peter Cambal",
+        role: "Lab Manager / Postdoc Fellow<br>2026 -",
+        photoSrc: "../img/placeholder-image.png",
         orcid: null,
         googleScholar: null
     }
@@ -114,6 +107,20 @@ const previousMembers = [
         name: "Zhaohan Wu (武昭翰)",
         role: "Undergraduate (21MSE)<br>2023 - 2025",
         photoSrc: "../img/f2e7908ba3ded17dd17c033581a79250.webp", // CORRECTED PATH
+        orcid: null,
+        googleScholar: null
+    },
+    {
+        name: "Zhengyang Deng (邓征阳)",
+        role: "Undergraduate (22Chem)<br>2024 - 2026",
+        photoSrc: "../img/Zhengyang Deng.jpg",
+        orcid: null,
+        googleScholar: null
+    },
+    {
+        name: "Guanxi Wu (吴冠希)",
+        role: "Undergraduate (22Chem)<br>2024 - 2026",
+        photoSrc: "../img/4339e05276f975da75344856d6a2ea0e 2.JPG",
         orcid: null,
         googleScholar: null
     }  

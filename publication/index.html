@@ -379,6 +379,234 @@
                 font-size: 1rem;
             }
         }
+
+        /* Publication page clarity refresh */
+        .publication-summary {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 1.5rem;
+            align-items: end;
+            margin-bottom: 2rem;
+            padding: 1.4rem 0 1.8rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+        }
+
+        .publication-summary h2 {
+            margin: 0 0 0.6rem;
+            color: var(--text-color-headings);
+            font-size: clamp(1.7rem, 2.6vw, 2.45rem);
+            line-height: 1.12;
+            font-weight: 760;
+        }
+
+        .publication-summary p {
+            max-width: 720px;
+            margin: 0;
+            color: var(--text-color-medium);
+            font-size: 1.02rem;
+            line-height: 1.65;
+        }
+
+        .publication-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 0.75rem;
+        }
+
+        .publication-stat {
+            min-width: 150px;
+            padding: 1rem 1.1rem;
+            border-radius: 8px;
+            background: var(--color-primary-blue);
+            color: #ffffff;
+            text-align: right;
+            box-shadow: 0 18px 38px rgba(0, 33, 71, 0.18);
+        }
+
+        .publication-stat.citation-stat {
+            background: linear-gradient(135deg, #6c5224, var(--color-gold));
+        }
+
+        .publication-stat.is-hidden {
+            display: none;
+        }
+
+        .publication-stat strong {
+            display: block;
+            font-size: 2.1rem;
+            line-height: 1;
+        }
+
+        .publication-stat span {
+            display: block;
+            margin-top: 0.35rem;
+            color: rgba(255, 255, 255, 0.74);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .featured-covers-grid {
+            grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+            gap: 1.1rem;
+            margin-bottom: 2.5rem;
+            padding: 1.1rem;
+            border-radius: 8px;
+        }
+
+        .featured-cover-item {
+            border-radius: 6px;
+            box-shadow: 0 10px 24px rgba(0, 33, 71, 0.12);
+        }
+
+        .publication-intro-text {
+            margin: -0.8rem 0 1.3rem;
+            color: var(--text-color-medium);
+            font-size: 0.95rem;
+        }
+
+        .publication-year-accordion .card {
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(0, 33, 71, 0.09);
+            border-radius: 8px !important;
+            background: #ffffff;
+            box-shadow: 0 14px 36px rgba(0, 33, 71, 0.06);
+        }
+
+        .publication-year-accordion .card-header {
+            padding: 1rem 1.15rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.08);
+            background: linear-gradient(90deg, rgba(0, 33, 71, 0.045), rgba(185, 151, 91, 0.08));
+        }
+
+        .publication-year-accordion .card-header .year-toggle {
+            font-size: 1.35rem;
+            color: var(--color-primary-blue);
+        }
+
+        .publication-year-accordion .card-header .year-toggle[data-count]::before {
+            content: attr(data-count) " papers";
+            order: 2;
+            margin-left: auto;
+            margin-right: 1rem;
+            color: var(--text-color-medium);
+            font-size: 0.82rem;
+            font-weight: 650;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .publication-year-accordion .card-body {
+            padding: 0;
+        }
+
+        .publication-entry {
+            grid-template-columns: 232px minmax(0, 1fr);
+            gap: 1.6rem;
+            margin: 0;
+            padding: 1.2rem 1.15rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.075);
+            transition: background-color 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .publication-toc {
+            align-self: start;
+            min-height: 192px;
+            border-radius: 8px;
+            background: var(--background-color-light-gray);
+        }
+
+        .publication-toc img {
+            max-height: 224px;
+        }
+
+        .publication-header {
+            gap: 0.55rem;
+        }
+
+        .publication-number,
+        .publication-type-tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 24px;
+            padding: 0.18rem 0.5rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            letter-spacing: 0.04em;
+            background: rgba(0, 33, 71, 0.07);
+        }
+
+        .publication-number {
+            color: var(--color-primary-blue);
+        }
+
+        .publication-type-tag {
+            color: #6c5224;
+            background: rgba(185, 151, 91, 0.18);
+        }
+
+        .publication-title {
+            max-width: 980px;
+            font-size: clamp(1.08rem, 1.45vw, 1.32rem);
+            line-height: 1.34;
+        }
+
+        .publication-authors,
+        .publication-journal {
+            font-size: 0.98rem;
+            line-height: 1.5;
+        }
+
+        .publication-links a,
+        .publication-featured-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.28rem;
+            text-decoration: none;
+        }
+
+        .publication-links a:hover,
+        .publication-featured-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 767px) {
+            .publication-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .publication-stat {
+                width: 100%;
+                text-align: left;
+            }
+
+            .publication-entry {
+                grid-template-columns: 164px minmax(0, 1fr);
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .publication-toc {
+                min-height: 144px;
+            }
+
+            .publication-toc img {
+                max-height: 168px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .publication-entry {
+                grid-template-columns: 1fr;
+            }
+
+            .publication-toc {
+                max-width: 260px;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body data-clean-url="true">
@@ -424,6 +652,22 @@
 
 <main>
     <div class="content-container">
+
+        <section class="publication-summary">
+            <div>
+                <h2>Publication Library</h2>
+            </div>
+            <div class="publication-stats">
+                <div class="publication-stat">
+                    <strong id="publication-count">--</strong>
+                    <span>publications</span>
+                </div>
+                <div class="publication-stat citation-stat is-hidden" id="citation-total-card">
+                    <strong id="citation-total-count">--</strong>
+                    <span>citations</span>
+                </div>
+            </div>
+        </section>
 
         <section class="featured-covers-grid" id="featured-covers">
             <a href="#" data-lightbox="../img/6.jpg" data-gallery-id="gallery-covers" class="featured-cover-item">
@@ -561,7 +805,7 @@
 <footer class="footer-bloc" id="footer">
 	<div class="content-container">
 		<p>
-			Copyright 2025 Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+			Copyright <span class="copyright-year"></span> Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
 		</p>
 	</div>
 </footer>
@@ -575,16 +819,13 @@
 <script src="../js/bootstrap.bundle.min.js?3655"></script>
 <script src="../js/blocs.min.js?4260"></script>
 <script src="../js/lazysizes.min.js" defer></script>
+<script src="../js/site-year.js"></script>
 <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-<!-- Removed Markdown JS as it's not strictly needed for this new publication rendering method -->
-<!-- 
-<script src="../js/blocsaddons-markdown.js?7366"></script> 
-<script src="../js/marked.min.js?3323"></script> 
--->
+<script src="../js/marked.min.js"></script>
 
 <!-- Custom scripts for publications -->
 <script src="../js/publications-data.js"></script>
-<script src="../js/publications-loader.js"></script>
+<script src="../js/publications-loader.js?preview-oxford-2"></script>
 <!-- Altmetric Badge Script - loaded after content generation -->
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 <script>

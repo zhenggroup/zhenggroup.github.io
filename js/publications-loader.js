@@ -1,7 +1,96 @@
 // js/publications-loader.js
 
+function getPublicationAnchor(pub) {
+    const source = pub.anchor || pub.doi || pub.title || `publication-${pub.number}`;
+    return `pub-${String(source)
+        .toLowerCase()
+        .replace(/<[^>]*>/g, '')
+        .replace(/&[a-z0-9#]+;/gi, '')
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-+|-+$/g, '')}`;
+}
+
+function splitPublicationList(value) {
+    return String(value || '')
+        .split('||')
+        .map(item => item.trim())
+        .filter(Boolean);
+}
+
+function splitFeaturedLinks(value) {
+    return splitPublicationList(value).map(item => {
+        const [text, url] = item.split('|').map(part => part.trim());
+        return { text, url };
+    }).filter(item => item.text && item.url);
+}
+
+function parsePublicationsMarkdown(markdown) {
+    const entries = markdown.split(/\n(?=## )/).filter(section => section.trim().startsWith('## '));
+
+    return entries.map(section => {
+        const lines = section.trim().split(/\r?\n/);
+        const title = lines.shift().replace(/^##\s+/, '').trim();
+        const fields = {};
+        const descriptionLines = [];
+        let inDescription = false;
+
+        lines.forEach(line => {
+            const separatorIndex = line.indexOf(':');
+            const isField = !inDescription && separatorIndex > -1 && /^[A-Za-z ]+$/.test(line.slice(0, separatorIndex));
+
+            if (isField) {
+                const key = line.slice(0, separatorIndex).trim().toLowerCase();
+                const value = line.slice(separatorIndex + 1).trim();
+                fields[key] = value;
+                return;
+            }
+
+            if (line.trim()) {
+                inDescription = true;
+            }
+            descriptionLines.push(line);
+        });
+
+        return {
+            year: Number(fields.year) || 0,
+            type: fields.type || 'Article',
+            authors: fields.authors || '',
+            title,
+            journal: fields.journal || '',
+            doi: fields.doi || '',
+            dimensionsDoi: fields['dimensions doi'] || fields.doi || '',
+            pdfLink: fields.pdf || '',
+            imageUrl: fields.image || '',
+            imageAlt: fields['image alt'] || '',
+            comments: splitPublicationList(fields.comments),
+            featuredIn: splitFeaturedLinks(fields.featured),
+            description: descriptionLines.join('\n').trim()
+        };
+    });
+}
+
+async function loadPublications() {
+    try {
+        const response = await fetch('../publication/publications.md?preview-oxford');
+        if (!response.ok) {
+            throw new Error('publications.md not found');
+        }
+
+        const markdown = await response.text();
+        const parsed = parsePublicationsMarkdown(markdown);
+        if (parsed.length > 0) {
+            return parsed;
+        }
+    } catch (error) {
+        console.warn('Using legacy publication data fallback:', error);
+    }
+
+    return typeof allPublications !== 'undefined' && Array.isArray(allPublications) ? allPublications : [];
+}
+
 function createPublicationHTML(pub) {
-    let html = `<div class="publication-entry">`;
+    const anchorId = getPublicationAnchor(pub);
+    let html = `<div class="publication-entry" id="${anchorId}">`;
 
     // TOC Image
     html += `<div class="publication-toc">`;
@@ -90,21 +179,24 @@ function createPublicationHTML(pub) {
     return html;
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (typeof allPublications === 'undefined' || !Array.isArray(allPublications)) {
-        console.error('Publication data (allPublications array) not found or is not an array.');
+document.addEventListener('DOMContentLoaded', async function() {
+    const publications = await loadPublications();
+    window.allPublications = publications;
+
+    if (!Array.isArray(publications) || publications.length === 0) {
+        console.error('Publication data not found.');
         return;
     }
 
     // Enable automatic numbering based on array order (newest first)
-    let currentNumber = allPublications.length;
-    allPublications.forEach(pub => {
+    let currentNumber = publications.length;
+    publications.forEach(pub => {
         pub.number = currentNumber--;
     });
 
     const publicationsByYear = {};
 
-    allPublications.forEach(pub => {
+    publications.forEach(pub => {
         const yearGroup = pub.year >= 2020 ? pub.year.toString() : 'before2020';
         if (!publicationsByYear[yearGroup]) {
             publicationsByYear[yearGroup] = [];
@@ -124,32 +216,74 @@ document.addEventListener('DOMContentLoaded', function() {
                 yearHtml += createPublicationHTML(pub);
             });
             cardBody.innerHTML = yearHtml;
+            const cardHeader = cardBody.closest('.card')?.querySelector('.card-header');
+            const yearToggle = cardHeader?.querySelector('.year-toggle');
+            if (yearToggle) {
+                yearToggle.dataset.count = publicationsByYear[yearGroup].length;
+            }
         } else {
             console.warn(`Card body with ID ${cardBodyId} not found.`);
         }
     }
 
+    updatePublicationStats();
+
     // After populating, re-initialize Dimensions badges
     if (window.__dimensions_embed) {
         window.__dimensions_embed.addBadges();
     }
+
+    openPublicationFromHash();
     
     // LazySizes should pick up new images automatically if it's already loaded and observing.
     // If you face issues, you might need to manually trigger an update for LazySizes,
     // but usually, it's not necessary.
 });
 
+function openPublicationFromHash() {
+    if (!window.location.hash || !window.location.hash.startsWith('#pub-')) {
+        return;
+    }
+
+    const target = document.querySelector(window.location.hash);
+    if (!target) {
+        return;
+    }
+
+    const collapse = target.closest('.collapse');
+    if (collapse && !collapse.classList.contains('show') && typeof bootstrap !== 'undefined') {
+        bootstrap.Collapse.getOrCreateInstance(collapse, { toggle: false }).show();
+    }
+
+    setTimeout(() => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        target.classList.add('publication-entry-highlight');
+        setTimeout(() => target.classList.remove('publication-entry-highlight'), 2600);
+    }, 250);
+}
+
+window.addEventListener('hashchange', openPublicationFromHash);
+
 // Top publication stats (publication count + cached citation aggregation)
 async function updatePublicationStats() {
+    const publications = window.allPublications || [];
     const publicationCountEl = document.getElementById('publication-count');
+    const citationTotalCardEl = document.getElementById('citation-total-card');
+    const citationTotalCountEl = document.getElementById('citation-total-count');
     const statusLabelEl = document.getElementById('citation-status-label');
     const statusValueEl = document.getElementById('citation-status-value');
 
     if (publicationCountEl) {
-        publicationCountEl.textContent = allPublications.length.toString();
+        publicationCountEl.textContent = publications.length.toString();
     }
 
     if (!statusLabelEl || !statusValueEl) {
+        if (!citationTotalCardEl || !citationTotalCountEl) {
+            return;
+        }
+    }
+
+    if (!citationTotalCardEl && (!statusLabelEl || !statusValueEl)) {
         return;
     }
 
@@ -165,14 +299,16 @@ async function updatePublicationStats() {
 
         // Only show citation data if we have fetched it
         if (citationsWithData === 0) {
-            statusLabelEl.textContent = 'Citations';
-            statusValueEl.textContent = 'Fetching data... (updates daily)';
+            if (statusLabelEl && statusValueEl) {
+                statusLabelEl.textContent = 'Citations';
+                statusValueEl.textContent = 'Fetching data... (updates daily)';
+            }
         } else {
             let totalCitations = 0;
             const doiSet = new Set();
 
             // Collect unique DOIs and calculate total citations
-            allPublications.forEach(pub => {
+            publications.forEach(pub => {
                 const doi = pub.dimensionsDoi || pub.doi;
                 if (doi) {
                     doiSet.add(doi);
@@ -185,21 +321,32 @@ async function updatePublicationStats() {
 
             const lastUpdated = cache.lastUpdated ? new Date(cache.lastUpdated).toLocaleDateString() : 'Unknown';
 
+            if (citationTotalCardEl && citationTotalCountEl) {
+                citationTotalCountEl.textContent = totalCitations.toLocaleString();
+                citationTotalCardEl.classList.remove('is-hidden');
+                citationTotalCardEl.title = `Citation cache updated: ${lastUpdated} (${citationsWithData}/${doiSet.size} DOI records)`;
+            }
+
             // Show total citations and publication count
-            statusLabelEl.textContent = `Total Citations: ${totalCitations.toLocaleString()}`;
-            statusValueEl.textContent = `Updated: ${lastUpdated} (${citationsWithData}/${doiSet.size})`;
+            if (statusLabelEl && statusValueEl) {
+                statusLabelEl.textContent = `Total Citations: ${totalCitations.toLocaleString()}`;
+                statusValueEl.textContent = `Updated: ${lastUpdated} (${citationsWithData}/${doiSet.size})`;
+            }
         }
         
     } catch (error) {
-        console.error('Failed to load citation cache:', error);
-        statusLabelEl.textContent = 'Citation data not available';
-        statusValueEl.textContent = 'Updates run automatically daily';
+        console.warn('Citation cache not available:', error);
+        if (statusLabelEl && statusValueEl) {
+            statusLabelEl.textContent = 'Citation data not available';
+            statusValueEl.textContent = 'Updates run automatically daily';
+        }
     }
 }
 
 // Citation Modal Functionality
 function showCitationModal(pubNumber) {
-    const pub = allPublications.find(p => p.number === pubNumber);
+    const publications = window.allPublications || [];
+    const pub = publications.find(p => p.number === pubNumber);
     if (!pub) return;
 
     // Create modal HTML
@@ -260,7 +407,8 @@ function updateCitation() {
     const style = document.getElementById('citation-style').value;
     const modal = document.getElementById('citation-modal');
     const pubNumber = parseInt(modal.getAttribute('data-pub-number'));
-    const pub = allPublications.find(p => p.number === pubNumber);
+    const publications = window.allPublications || [];
+    const pub = publications.find(p => p.number === pubNumber);
     if (!pub) return;
 
     let citation = '';
