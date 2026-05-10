@@ -409,7 +409,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const publicationsByYear = {};
 
     publications.forEach(pub => {
-        const yearGroup = pub.year >= 2020 ? pub.year.toString() : 'before2020';
+        const yearGroup = pub.year >= 2022 ? pub.year.toString() : 'before2022';
         if (!publicationsByYear[yearGroup]) {
             publicationsByYear[yearGroup] = [];
         }

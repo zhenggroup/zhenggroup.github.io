@@ -212,9 +212,12 @@
             line-height: 1.6;
         }
         .publication-authors u {
-            text-decoration: none;
-            color: var(--color-gold);
+            color: inherit;
             font-weight: 400;
+            text-decoration: underline;
+            text-decoration-color: var(--color-gold);
+            text-decoration-thickness: 0.09em;
+            text-underline-offset: 0.18em;
         }
         .publication-authors b {
             font-weight: 400;
@@ -481,8 +484,12 @@
         }
 
         .publication-member-key {
-            color: var(--color-gold);
+            color: inherit;
             font-weight: 400;
+            text-decoration: underline;
+            text-decoration-color: var(--color-gold);
+            text-decoration-thickness: 0.09em;
+            text-underline-offset: 0.18em;
         }
 
         .highly-cited-section {
@@ -876,7 +883,7 @@
         <h2 class="section-heading">Publications by Year</h2>
 
         <p class="publication-intro-text">
-            *: Corresponding author; ^: Equal contribution; <span class="publication-member-key">Gold names</span>: Zheng Lab members.
+            *: Corresponding author; ^: Equal contribution; <span class="publication-member-key">Underlined names</span>: Zheng Lab members.
         </p>
 
         <div class="accordion publication-year-accordion" id="publicationsAccordion">
@@ -940,38 +947,14 @@
                 </div>
             </div>
 
-            <!-- Year 2021 -->
+            <!-- Before 2022 -->
             <div class="card">
-                <div class="card-header" id="heading2021" data-bs-toggle="collapse" data-bs-target="#collapse2021" aria-expanded="false" aria-controls="collapse2021">
-                    <span class="year-toggle collapsed">2021</span>
+                <div class="card-header" id="headingBefore2022" data-bs-toggle="collapse" data-bs-target="#collapseBefore2022" aria-expanded="false" aria-controls="collapseBefore2022">
+                    <span class="year-toggle collapsed">Before 2022</span>
                 </div>
-                <div id="collapse2021" class="collapse" aria-labelledby="heading2021" data-bs-parent="#publicationsAccordion">
-                    <div class="card-body" id="card-body-2021">
-                        <!-- Publications for 2021 will be injected here by JavaScript -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Year 2020 -->
-            <div class="card">
-                <div class="card-header" id="heading2020" data-bs-toggle="collapse" data-bs-target="#collapse2020" aria-expanded="false" aria-controls="collapse2020">
-                    <span class="year-toggle collapsed">2020</span>
-                </div>
-                <div id="collapse2020" class="collapse" aria-labelledby="heading2020" data-bs-parent="#publicationsAccordion">
-                    <div class="card-body" id="card-body-2020">
-                        <!-- Publications for 2020 will be injected here by JavaScript -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Before 2020 -->
-            <div class="card">
-                <div class="card-header" id="headingBefore2020" data-bs-toggle="collapse" data-bs-target="#collapseBefore2020" aria-expanded="false" aria-controls="collapseBefore2020">
-                    <span class="year-toggle collapsed">Before 2020</span>
-                </div>
-                <div id="collapseBefore2020" class="collapse" aria-labelledby="headingBefore2020" data-bs-parent="#publicationsAccordion">
-                    <div class="card-body" id="card-body-before2020">
-                        <!-- Publications before 2020 will be injected here by JavaScript -->
+                <div id="collapseBefore2022" class="collapse" aria-labelledby="headingBefore2022" data-bs-parent="#publicationsAccordion">
+                    <div class="card-body" id="card-body-before2022">
+                        <!-- Publications before 2022 will be injected here by JavaScript -->
                     </div>
                 </div>
             </div>
@@ -1004,7 +987,7 @@
 
 <!-- Custom scripts for publications -->
 <script src="../js/publications-data.js"></script>
-<script src="../js/publications-loader.js?daily-citations-2"></script>
+<script src="../js/publications-loader.js?underlined-authors-1"></script>
 <!-- Altmetric Badge Script - loaded after content generation -->
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 <script>
