@@ -127,6 +127,63 @@
             z-index: 2;
         }
 
+        .hero-keyword-atmosphere {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .hero-keyword {
+            position: absolute;
+            left: var(--keyword-x, 50%);
+            top: var(--keyword-y, 50%);
+            font-family: var(--font-family-serif-display);
+            font-size: clamp(5.5rem, 15vw, 15rem);
+            font-weight: 600;
+            line-height: 0.82;
+            letter-spacing: 0.01em;
+            color: rgba(255, 255, 255, 0.16);
+            text-shadow:
+                0 0 34px rgba(216, 189, 127, 0.36),
+                0 18px 58px rgba(0, 0, 0, 0.34);
+            opacity: 0;
+            mix-blend-mode: screen;
+            transform: translate(-50%, -50%) scale(0.96);
+            animation: heroKeywordPulse var(--keyword-duration, 24s) ease-in-out infinite;
+            animation-delay: calc(var(--keyword-index, 0) * 4s);
+            white-space: nowrap;
+        }
+
+        .hero-keyword:nth-child(2n) {
+            color: rgba(216, 189, 127, 0.2);
+        }
+
+        .hero-keyword:nth-child(3n) {
+            color: rgba(231, 237, 245, 0.18);
+        }
+
+        @keyframes heroKeywordPulse {
+            0%,
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.92);
+                filter: blur(10px);
+            }
+            7%,
+            18% {
+                opacity: 0.92;
+                transform: translate(-50%, -50%) scale(1);
+                filter: blur(0);
+            }
+            28% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(1.06);
+                filter: blur(12px);
+            }
+        }
+
         .hero-content-wrapper {
             position: relative;
             z-index: 3;
@@ -184,29 +241,23 @@
             color: #FFFFFF;
         }
 
-        .hero-kicker {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: fit-content;
-            margin: 0 auto 1.25rem;
-            padding: 0.48rem 0.78rem;
-            border: 1px solid rgba(216, 189, 127, 0.52);
-            border-radius: 999px;
-            color: #f4dfac;
-            background: rgba(0, 33, 71, 0.42);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            font-size: 0.88rem;
-            font-weight: 650;
-        }
-
         .hero-actions {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 0.85rem;
             margin-top: 2rem;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hero-keyword {
+                animation: none;
+            }
+
+            .hero-keyword:first-child {
+                opacity: 0.28;
+                filter: blur(2px);
+            }
         }
 
         .hero-action {
@@ -217,7 +268,9 @@
             padding: 0.78rem 1.08rem;
             border-radius: 999px;
             font-weight: 650;
-            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
         }
 
         .hero-action:hover {
@@ -225,14 +278,16 @@
         }
 
         .hero-action.primary {
-            color: #00172f;
-            background: #d8bd7f;
+            color: #ffffff;
+            border: 1px solid rgba(216, 189, 127, 0.72);
+            background: rgba(216, 189, 127, 0.52);
+            text-shadow: 0 2px 14px rgba(0, 23, 47, 0.36);
         }
 
         .hero-action.secondary {
             color: #ffffff;
-            border: 1px solid rgba(255, 255, 255, 0.32);
-            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.38);
+            background: rgba(255, 255, 255, 0.04);
         }
 
         .hero-image-gallery {
@@ -363,6 +418,10 @@
                 font-size: 1.05em;
             }
 
+            .hero-keyword {
+                font-size: clamp(4.2rem, 18vw, 8.5rem);
+            }
+
             .hero-gallery-image-container {
                 height: 60px;
             }
@@ -399,6 +458,12 @@
 
             .hero-image-gallery {
                 gap: 1.5rem;
+            }
+
+            .hero-keyword {
+                max-width: 96vw;
+                white-space: normal;
+                text-align: center;
             }
 
             .recruitment-alert h3 {
@@ -562,10 +627,11 @@
                 <video id="hero-video-player-1" autoplay muted playsinline class="hero-video-background"
                     data-playlist="video/catalyst_layer_assembly.mp4, video/electrocatalyst_deactivation.mp4, video/python.mp4"></video>
                 <video id="hero-video-player-2" autoplay muted playsinline class="hero-video-background"></video>
+                <div class="hero-keyword-atmosphere" aria-hidden="true">
+                </div>
 
                 <div class="hero-content-wrapper">
                     <div class="hero-text-content">
-                        <div class="hero-kicker">Operando electrochemistry · Electrocatalysis · Interface science</div>
                         <h1>The Zheng Group</h1>
                         <h2>Electrochemical Interface &amp; Conversion Lab @ GTIIT</h2>
                         <p class="research-focus-intro">
@@ -693,6 +759,61 @@
             `;
             });
             container.innerHTML = newsHTML;
+        });
+    </script>
+
+    <!-- Script to load homepage hero keywords from a plain text file -->
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            const keywordLayer = document.querySelector('.hero-keyword-atmosphere');
+            if (!keywordLayer) return;
+
+            const fallbackKeywords = ['Operando', 'Electrocatalysis', 'Interface', 'Stability', 'Degradation', 'Surface'];
+            const keywordPositions = [
+                ['43%', '33%'],
+                ['57%', '55%'],
+                ['46%', '72%'],
+                ['62%', '34%'],
+                ['41%', '58%'],
+                ['55%', '74%']
+            ];
+
+            async function loadHeroKeywords() {
+                try {
+                    const response = await fetch('./hero-keywords.txt', { cache: 'no-store' });
+                    if (!response.ok) {
+                        throw new Error('hero-keywords.txt not found');
+                    }
+
+                    const text = await response.text();
+                    const keywords = text
+                        .split(/\r?\n/)
+                        .map(line => line.trim())
+                        .filter(line => line && !line.startsWith('#'));
+
+                    return keywords.length > 0 ? keywords : fallbackKeywords;
+                } catch (error) {
+                    console.warn('Using fallback hero keywords:', error);
+                    return fallbackKeywords;
+                }
+            }
+
+            const keywords = await loadHeroKeywords();
+            const duration = Math.max(keywords.length * 4, 16);
+            keywordLayer.innerHTML = '';
+
+            keywords.forEach((keyword, index) => {
+                const keywordElement = document.createElement('span');
+                const position = keywordPositions[index % keywordPositions.length];
+
+                keywordElement.className = 'hero-keyword';
+                keywordElement.textContent = keyword;
+                keywordElement.style.setProperty('--keyword-index', index);
+                keywordElement.style.setProperty('--keyword-duration', `${duration}s`);
+                keywordElement.style.setProperty('--keyword-x', position[0]);
+                keywordElement.style.setProperty('--keyword-y', position[1]);
+                keywordLayer.appendChild(keywordElement);
+            });
         });
     </script>
 
