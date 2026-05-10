@@ -144,10 +144,10 @@
             font-weight: 600;
             line-height: 0.82;
             letter-spacing: 0.01em;
-            color: rgba(255, 255, 255, 0.16);
+            color: rgba(255, 255, 255, 0.11);
             text-shadow:
-                0 0 34px rgba(216, 189, 127, 0.36),
-                0 18px 58px rgba(0, 0, 0, 0.34);
+                0 0 24px rgba(216, 189, 127, 0.22),
+                0 16px 44px rgba(0, 0, 0, 0.26);
             opacity: 0;
             mix-blend-mode: screen;
             transform: translate(-50%, -50%) scale(0.96);
@@ -157,11 +157,11 @@
         }
 
         .hero-keyword:nth-child(2n) {
-            color: rgba(216, 189, 127, 0.2);
+            color: rgba(216, 189, 127, 0.14);
         }
 
         .hero-keyword:nth-child(3n) {
-            color: rgba(231, 237, 245, 0.18);
+            color: rgba(231, 237, 245, 0.13);
         }
 
         @keyframes heroKeywordPulse {
@@ -173,14 +173,14 @@
             }
             7%,
             18% {
-                opacity: 0.92;
+                opacity: 0.62;
                 transform: translate(-50%, -50%) scale(1);
-                filter: blur(0);
+                filter: blur(1px);
             }
             28% {
                 opacity: 0;
                 transform: translate(-50%, -50%) scale(1.06);
-                filter: blur(12px);
+                filter: blur(8px);
             }
         }
 
