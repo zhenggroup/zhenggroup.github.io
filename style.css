@@ -39,6 +39,7 @@
 
     /* Added for consistency if used by page-specific styles */
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-family-serif-display: Georgia, "Times New Roman", Times, serif;
 }
 
 /* Global Resets and Base Styles */
@@ -179,8 +180,9 @@ button {
     margin-bottom: 3rem;
 }
 .page-title-container h1 {
+    font-family: var(--font-family-serif-display);
     font-size: clamp(2.2rem, 4vw, 4rem);
-    font-weight: 700;
+    font-weight: 600;
     margin: 0;
     letter-spacing: 0;
 }
@@ -506,8 +508,9 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     text-align: left;
 }
 .hero-text-content h1 {
+    font-family: var(--font-family-serif-display);
     font-size: 2.8em;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--text-color-headings);
     margin-bottom: 0.75rem;
     line-height: 1.2;
