@@ -164,7 +164,8 @@ function extractCitationCount(payload) {
 
 async function loadCitationCache() {
     try {
-        const response = await fetch('../js/citations-cache.json?citation-total-1');
+        const dailyCacheKey = new Date().toISOString().slice(0, 10);
+        const response = await fetch(`../js/citations-cache.json?daily=${dailyCacheKey}`);
         if (!response.ok) {
             throw new Error('Citation cache not found');
         }
@@ -209,7 +210,8 @@ async function getDimensionsCitationCounts(publications = window.allPublications
             counts,
             doiCount: uniqueDois.length,
             loadedCount: Object.keys(counts).length,
-            source: cache ? 'Dimensions API/cache' : 'Dimensions API'
+            lastUpdated: cache && cache.lastUpdated ? cache.lastUpdated : null,
+            source: cache ? 'Dimensions daily cache' : 'Dimensions API'
         };
     })();
 
@@ -295,7 +297,7 @@ async function renderHighlyCitedPapers() {
     }
 
     grid.innerHTML = topPapers.map(createHighlyCitedCard).join('');
-    status.textContent = 'Ranked by Dimensions API';
+    status.textContent = `Ranked by ${citationData.source}`;
 }
 
 function createPublicationHTML(pub) {
@@ -510,7 +512,10 @@ async function updatePublicationStats() {
 
         if (citationTotalCardEl && citationTotalCountEl) {
             citationTotalCountEl.textContent = totalCitations.toLocaleString();
-            citationTotalCardEl.title = `${citationData.source}: ${citationData.loadedCount}/${citationData.doiCount} DOI records loaded`;
+            const updatedText = citationData.lastUpdated
+                ? `; updated ${new Date(citationData.lastUpdated).toLocaleDateString()}`
+                : '';
+            citationTotalCardEl.title = `${citationData.source}: ${citationData.loadedCount}/${citationData.doiCount} DOI records loaded${updatedText}`;
         }
 
         if (statusLabelEl && statusValueEl) {
