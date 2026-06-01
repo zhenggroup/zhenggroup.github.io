@@ -1,0 +1,2444 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/2x4nap4r",
+    "id": "2x4nap4r",
+    "slide": 2,
+    "layoutId": "/ppt/slideLayouts/slideLayout1.xml",
+    "layoutName": "Title Slide",
+    "masterLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "Office 2013 - 2022",
+    "colors": {
+      "accent1": "#4472C4",
+      "accent2": "#ED7D31",
+      "accent3": "#A5A5A5",
+      "accent4": "#FFC000",
+      "accent5": "#5B9BD5",
+      "accent6": "#70AD47",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#44546A",
+      "lt2": "#E7E6E6",
+      "hlink": "#0563C1",
+      "folHlink": "#954F72"
+    },
+    "typefaces": [
+      "+mj-lt",
+      "Helvetica"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "/ppt/slideLayouts/slideLayout1.xml",
+      "name": "Title Slide",
+      "parentLayoutId": "/ppt/slideMasters/slideMaster1.xml",
+      "backgroundColor": "bg1",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/8",
+          "id": "8",
+          "name": "Straight Connector 7",
+          "bbox": [
+            73.07,
+            140.76,
+            1133.86,
+            0
+          ],
+          "geometry": "line",
+          "lineColor": "tx1",
+          "lineWidth": 1.33
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/11",
+          "id": "11",
+          "name": "Freeform 10",
+          "bbox": [
+            618.22,
+            76.01,
+            21.23,
+            25.67
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/12",
+          "id": "12",
+          "name": "Freeform 11",
+          "bbox": [
+            647.74,
+            96.04,
+            4.81,
+            4.81
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/13",
+          "id": "13",
+          "name": "Freeform 12",
+          "bbox": [
+            581.29,
+            95.92,
+            4.39,
+            4.86
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/14",
+          "id": "14",
+          "name": "Freeform 13",
+          "bbox": [
+            629.41,
+            61.58,
+            14.07,
+            26.02
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 6,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/15",
+          "id": "15",
+          "name": "Freeform 14",
+          "bbox": [
+            623.54,
+            65.9,
+            6.06,
+            8.19
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 7,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/16",
+          "id": "16",
+          "name": "Freeform 15",
+          "bbox": [
+            624.11,
+            69.23,
+            3.42,
+            2.75
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 8,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/17",
+          "id": "17",
+          "name": "Freeform 16",
+          "bbox": [
+            633.75,
+            65.59,
+            8.08,
+            7.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 9,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/18",
+          "id": "18",
+          "name": "Freeform 17",
+          "bbox": [
+            637.16,
+            67.96,
+            4.19,
+            3.7
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 10,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/19",
+          "id": "19",
+          "name": "Freeform 18",
+          "bbox": [
+            637.27,
+            70.11,
+            2.84,
+            2.78
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 11,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/20",
+          "id": "20",
+          "name": "Freeform 19",
+          "bbox": [
+            564.4,
+            17.87,
+            105,
+            105.09
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 12,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/21",
+          "id": "21",
+          "name": "Freeform 20",
+          "bbox": [
+            647.74,
+            96.04,
+            4.81,
+            4.81
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 13,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/22",
+          "id": "22",
+          "name": "Freeform 21",
+          "bbox": [
+            647.74,
+            96.04,
+            4.81,
+            4.81
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 14,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/23",
+          "id": "23",
+          "name": "Freeform 22",
+          "bbox": [
+            647.74,
+            96.04,
+            4.81,
+            4.81
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 15,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/24",
+          "id": "24",
+          "name": "Freeform 23",
+          "bbox": [
+            577.42,
+            86.92,
+            6.97,
+            6.89
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 16,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/25",
+          "id": "25",
+          "name": "Freeform 24",
+          "bbox": [
+            574.36,
+            81.96,
+            7.2,
+            6.48
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 17,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/26",
+          "id": "26",
+          "name": "Freeform 25",
+          "bbox": [
+            573.34,
+            74.97,
+            7.33,
+            6.37
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 18,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/27",
+          "id": "27",
+          "name": "Freeform 26",
+          "bbox": [
+            572.58,
+            69.24,
+            6.9,
+            5.97
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 19,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/28",
+          "id": "28",
+          "name": "Freeform 27",
+          "bbox": [
+            572.94,
+            62.22,
+            7,
+            6.08
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 20,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/29",
+          "id": "29",
+          "name": "Freeform 28",
+          "bbox": [
+            573.77,
+            55.67,
+            7.35,
+            6.72
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 21,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/30",
+          "id": "30",
+          "name": "Freeform 29",
+          "bbox": [
+            576.88,
+            48.79,
+            6.98,
+            6.99
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 22,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/31",
+          "id": "31",
+          "name": "Freeform 30",
+          "bbox": [
+            579.76,
+            41.86,
+            8.92,
+            8.46
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 23,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/32",
+          "id": "32",
+          "name": "Freeform 31",
+          "bbox": [
+            585.65,
+            37.15,
+            7.06,
+            6.91
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 24,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/33",
+          "id": "33",
+          "name": "Freeform 32",
+          "bbox": [
+            590.63,
+            32.4,
+            6.08,
+            7.1
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 25,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/34",
+          "id": "34",
+          "name": "Freeform 33",
+          "bbox": [
+            595.36,
+            29.87,
+            6.81,
+            7.89
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 26,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/35",
+          "id": "35",
+          "name": "Freeform 34",
+          "bbox": [
+            600.96,
+            27.93,
+            6.58,
+            7.06
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 27,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/36",
+          "id": "36",
+          "name": "Freeform 35",
+          "bbox": [
+            607.03,
+            26.18,
+            6.7,
+            7.59
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 28,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/37",
+          "id": "37",
+          "name": "Freeform 36",
+          "bbox": [
+            614.57,
+            25.85,
+            5.79,
+            7.08
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 29,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/38",
+          "id": "38",
+          "name": "Freeform 37",
+          "bbox": [
+            621.33,
+            26.25,
+            2,
+            6.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 30,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/39",
+          "id": "39",
+          "name": "Freeform 38",
+          "bbox": [
+            623.78,
+            27.08,
+            6.98,
+            6.99
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 31,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/40",
+          "id": "40",
+          "name": "Freeform 39",
+          "bbox": [
+            630.24,
+            28.62,
+            7.86,
+            8.61
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 32,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/41",
+          "id": "41",
+          "name": "Freeform 40",
+          "bbox": [
+            584.81,
+            100.14,
+            8.55,
+            4.35
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 33,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/42",
+          "id": "42",
+          "name": "Freeform 41",
+          "bbox": [
+            591.4,
+            104.24,
+            7.93,
+            7.42
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 34,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/43",
+          "id": "43",
+          "name": "Freeform 42",
+          "bbox": [
+            598.66,
+            107.45,
+            6.97,
+            7.36
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 35,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/44",
+          "id": "44",
+          "name": "Freeform 43",
+          "bbox": [
+            606.73,
+            109.47,
+            5.69,
+            6.9
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 36,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/45",
+          "id": "45",
+          "name": "Freeform 44",
+          "bbox": [
+            614.02,
+            110.41,
+            6.25,
+            6.67
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 37,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/46",
+          "id": "46",
+          "name": "Freeform 45",
+          "bbox": [
+            621.05,
+            109.71,
+            7.36,
+            6.72
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 38,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/47",
+          "id": "47",
+          "name": "Freeform 46",
+          "bbox": [
+            628.64,
+            107.89,
+            7.24,
+            6.92
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 39,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/48",
+          "id": "48",
+          "name": "Freeform 47",
+          "bbox": [
+            635.25,
+            104.29,
+            6.98,
+            7.07
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 40,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/49",
+          "id": "49",
+          "name": "Freeform 48",
+          "bbox": [
+            640.62,
+            99.92,
+            8.26,
+            8.26
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 41,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/50",
+          "id": "50",
+          "name": "Freeform 49",
+          "bbox": [
+            638.75,
+            33.56,
+            1.91,
+            2.92
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 42,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/51",
+          "id": "51",
+          "name": "Freeform 50",
+          "bbox": [
+            639.76,
+            34.27,
+            2.91,
+            3.13
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 43,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/52",
+          "id": "52",
+          "name": "Freeform 51",
+          "bbox": [
+            641.63,
+            35.39,
+            3.22,
+            3.77
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 44,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/53",
+          "id": "53",
+          "name": "Freeform 52",
+          "bbox": [
+            643.47,
+            37.64,
+            3.12,
+            3.34
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 45,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/54",
+          "id": "54",
+          "name": "Freeform 53",
+          "bbox": [
+            645.9,
+            38.91,
+            3.48,
+            3.51
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 46,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/55",
+          "id": "55",
+          "name": "Freeform 54",
+          "bbox": [
+            647.65,
+            40.66,
+            2.55,
+            3.38
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 47,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/56",
+          "id": "56",
+          "name": "Freeform 55",
+          "bbox": [
+            649.6,
+            42.92,
+            2.67,
+            2.39
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 48,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/57",
+          "id": "57",
+          "name": "Freeform 56",
+          "bbox": [
+            650.35,
+            43.9,
+            4.02,
+            3.95
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 49,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/58",
+          "id": "58",
+          "name": "Freeform 57",
+          "bbox": [
+            652.4,
+            46.78,
+            3.12,
+            2.72
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 50,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/59",
+          "id": "59",
+          "name": "Freeform 58",
+          "bbox": [
+            653.64,
+            48.33,
+            3.28,
+            2.71
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 51,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/60",
+          "id": "60",
+          "name": "Freeform 59",
+          "bbox": [
+            654.41,
+            50.5,
+            2.97,
+            1.88
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 52,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/61",
+          "id": "61",
+          "name": "Freeform 60",
+          "bbox": [
+            655.13,
+            51.36,
+            3.29,
+            2.5
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 53,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/62",
+          "id": "62",
+          "name": "Freeform 61",
+          "bbox": [
+            656.09,
+            53.66,
+            3.44,
+            3.02
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 54,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/63",
+          "id": "63",
+          "name": "Freeform 62",
+          "bbox": [
+            656.98,
+            56.3,
+            3.32,
+            2.19
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 55,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/64",
+          "id": "64",
+          "name": "Freeform 63",
+          "bbox": [
+            657.5,
+            58.64,
+            3.46,
+            2.67
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 56,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/65",
+          "id": "65",
+          "name": "Freeform 64",
+          "bbox": [
+            658.36,
+            62.01,
+            3.18,
+            3.19
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 57,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/66",
+          "id": "66",
+          "name": "Freeform 65",
+          "bbox": [
+            658.69,
+            65.48,
+            3.26,
+            1.97
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 58,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/67",
+          "id": "67",
+          "name": "Freeform 66",
+          "bbox": [
+            658.91,
+            68.48,
+            3.11,
+            2.11
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 59,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/68",
+          "id": "68",
+          "name": "Freeform 67",
+          "bbox": [
+            658.82,
+            70.98,
+            3.21,
+            1.98
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 60,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/69",
+          "id": "69",
+          "name": "Freeform 68",
+          "bbox": [
+            658.62,
+            73.02,
+            3.21,
+            2.92
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 61,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/70",
+          "id": "70",
+          "name": "Freeform 69",
+          "bbox": [
+            658.05,
+            75.94,
+            3.49,
+            3.1
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 62,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/71",
+          "id": "71",
+          "name": "Freeform 70",
+          "bbox": [
+            657.21,
+            79.01,
+            3.71,
+            3.31
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 63,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/72",
+          "id": "72",
+          "name": "Freeform 71",
+          "bbox": [
+            656.43,
+            82.24,
+            3.18,
+            3.18
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 64,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/73",
+          "id": "73",
+          "name": "Freeform 72",
+          "bbox": [
+            655.22,
+            85.1,
+            3.44,
+            1.78
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 65,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/74",
+          "id": "74",
+          "name": "Freeform 73",
+          "bbox": [
+            654.24,
+            87.22,
+            3.18,
+            3.18
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 66,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/75",
+          "id": "75",
+          "name": "Freeform 74",
+          "bbox": [
+            652.42,
+            90.16,
+            3.3,
+            3.13
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 67,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/76",
+          "id": "76",
+          "name": "Freeform 75",
+          "bbox": [
+            651.37,
+            92.67,
+            3.28,
+            3.09
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 68,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/77",
+          "id": "77",
+          "name": "Freeform 76",
+          "bbox": [
+            635.26,
+            54.77,
+            3.77,
+            9.8
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 69,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/78",
+          "id": "78",
+          "name": "Freeform 77",
+          "bbox": [
+            642.92,
+            54.77,
+            6.53,
+            9.88
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 70,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/79",
+          "id": "79",
+          "name": "Freeform 78",
+          "bbox": [
+            587.25,
+            54.62,
+            6.39,
+            9.89
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 71,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/80",
+          "id": "80",
+          "name": "Freeform 79",
+          "bbox": [
+            596.84,
+            54.62,
+            7.37,
+            10.09
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 72,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/81",
+          "id": "81",
+          "name": "Freeform 80",
+          "bbox": [
+            605.48,
+            52.18,
+            28.13,
+            30.26
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 73,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/82",
+          "id": "82",
+          "name": "Freeform 81",
+          "bbox": [
+            632.52,
+            65.83,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 74,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/83",
+          "id": "83",
+          "name": "Freeform 82",
+          "bbox": [
+            624.6,
+            69.13,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 75,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/84",
+          "id": "84",
+          "name": "Freeform 83",
+          "bbox": [
+            632.52,
+            65.83,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 76,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/85",
+          "id": "85",
+          "name": "Freeform 84",
+          "bbox": [
+            631.17,
+            84.91,
+            0.01,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 77,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/86",
+          "id": "86",
+          "name": "Freeform 85",
+          "bbox": [
+            632.52,
+            65.83,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 78,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/87",
+          "id": "87",
+          "name": "Freeform 86",
+          "bbox": [
+            631.17,
+            84.91,
+            0.01,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 79,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/88",
+          "id": "88",
+          "name": "Freeform 87",
+          "bbox": [
+            632.55,
+            65.8,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 80,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/89",
+          "id": "89",
+          "name": "Freeform 88",
+          "bbox": [
+            632.52,
+            65.83,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 81,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/90",
+          "id": "90",
+          "name": "Freeform 89",
+          "bbox": [
+            604.04,
+            42.1,
+            26.27,
+            8.39
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 82,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/91",
+          "id": "91",
+          "name": "Freeform 90",
+          "bbox": [
+            601.38,
+            62.65,
+            17.86,
+            30.53
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 83,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/92",
+          "id": "92",
+          "name": "Freeform 91",
+          "bbox": [
+            633.12,
+            65.94,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 84,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/93",
+          "id": "93",
+          "name": "Freeform 92",
+          "bbox": [
+            625.04,
+            69.3,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 85,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/94",
+          "id": "94",
+          "name": "Freeform 93",
+          "bbox": [
+            633.12,
+            65.94,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 86,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/95",
+          "id": "95",
+          "name": "Freeform 94",
+          "bbox": [
+            631.75,
+            85.4,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 87,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/96",
+          "id": "96",
+          "name": "Freeform 95",
+          "bbox": [
+            633.12,
+            65.94,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 88,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/97",
+          "id": "97",
+          "name": "Freeform 96",
+          "bbox": [
+            631.75,
+            85.4,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 89,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/98",
+          "id": "98",
+          "name": "Freeform 97",
+          "bbox": [
+            633.14,
+            65.9,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 90,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/99",
+          "id": "99",
+          "name": "Freeform 98",
+          "bbox": [
+            633.12,
+            65.94,
+            0.87,
+            0.87
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 91,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/100",
+          "id": "100",
+          "name": "Freeform 99",
+          "bbox": [
+            681.44,
+            38.61,
+            15.16,
+            19.65
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 92,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/101",
+          "id": "101",
+          "name": "Freeform 100",
+          "bbox": [
+            699.59,
+            44.13,
+            11.79,
+            14.14
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 93,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/102",
+          "id": "102",
+          "name": "Freeform 101",
+          "bbox": [
+            714.17,
+            43.71,
+            11.63,
+            14.57
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 94,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/103",
+          "id": "103",
+          "name": "Freeform 102",
+          "bbox": [
+            729.07,
+            43.71,
+            11.78,
+            14.16
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 95,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/104",
+          "id": "104",
+          "name": "Freeform 103",
+          "bbox": [
+            743.86,
+            43.71,
+            11.76,
+            20.41
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 96,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/105",
+          "id": "105",
+          "name": "Freeform 104",
+          "bbox": [
+            758.73,
+            38.21,
+            11.76,
+            20.09
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 97,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/106",
+          "id": "106",
+          "name": "Freeform 105",
+          "bbox": [
+            773.57,
+            43.71,
+            12.22,
+            14.56
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 98,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/107",
+          "id": "107",
+          "name": "Freeform 106",
+          "bbox": [
+            788.84,
+            43.71,
+            11.77,
+            14.16
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 99,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/108",
+          "id": "108",
+          "name": "Freeform 107",
+          "bbox": [
+            803.61,
+            43.71,
+            11.76,
+            20.41
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 100,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/109",
+          "id": "109",
+          "name": "Freeform 108",
+          "bbox": [
+            823.4,
+            39.04,
+            14.26,
+            18.77
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 101,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/110",
+          "id": "110",
+          "name": "Freeform 109",
+          "bbox": [
+            837.03,
+            43.71,
+            12.23,
+            14.56
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 102,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/111",
+          "id": "111",
+          "name": "Freeform 110",
+          "bbox": [
+            851.76,
+            43.71,
+            11.9,
+            14.65
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 103,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/112",
+          "id": "112",
+          "name": "Freeform 111",
+          "bbox": [
+            866.39,
+            38.21,
+            11.78,
+            19.66
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 104,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/113",
+          "id": "113",
+          "name": "Freeform 112",
+          "bbox": [
+            881.56,
+            43.71,
+            11.78,
+            14.16
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 105,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/114",
+          "id": "114",
+          "name": "Freeform 113",
+          "bbox": [
+            896.61,
+            38.97,
+            3.39,
+            18.93
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 106,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/115",
+          "id": "115",
+          "name": "Freeform 114",
+          "bbox": [
+            902.99,
+            43.71,
+            12.22,
+            14.56
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 107,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/116",
+          "id": "116",
+          "name": "Freeform 115",
+          "bbox": [
+            918.22,
+            43.71,
+            11.78,
+            14.16
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 108,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/117",
+          "id": "117",
+          "name": "Freeform 116",
+          "bbox": [
+            681.41,
+            70.8,
+            1.19,
+            11.61
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 109,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/118",
+          "id": "118",
+          "name": "Freeform 117",
+          "bbox": [
+            684.73,
+            73.76,
+            6.93,
+            8.88
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 110,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/119",
+          "id": "119",
+          "name": "Freeform 118",
+          "bbox": [
+            693.59,
+            73.75,
+            4.38,
+            8.66
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 111,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/120",
+          "id": "120",
+          "name": "Freeform 119",
+          "bbox": [
+            698.73,
+            73.74,
+            6.83,
+            8.9
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 112,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/121",
+          "id": "121",
+          "name": "Freeform 120",
+          "bbox": [
+            707.64,
+            73.76,
+            7.18,
+            8.84
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 113,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/122",
+          "id": "122",
+          "name": "Freeform 121",
+          "bbox": [
+            716.91,
+            70.3,
+            1.1,
+            12.1
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 114,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/123",
+          "id": "123",
+          "name": "Freeform 122",
+          "bbox": [
+            724.87,
+            70.8,
+            1.2,
+            11.61
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 115,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/124",
+          "id": "124",
+          "name": "Freeform 123",
+          "bbox": [
+            728.63,
+            73.76,
+            6.91,
+            8.66
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 116,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/125",
+          "id": "125",
+          "name": "Freeform 124",
+          "bbox": [
+            737.46,
+            73.76,
+            6.89,
+            8.88
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 117,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/126",
+          "id": "126",
+          "name": "Freeform 125",
+          "bbox": [
+            745.33,
+            72.04,
+            5.59,
+            10.6
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 118,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/127",
+          "id": "127",
+          "name": "Freeform 126",
+          "bbox": [
+            752.39,
+            70.99,
+            1.31,
+            11.46
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 119,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/128",
+          "id": "128",
+          "name": "Freeform 127",
+          "bbox": [
+            755.05,
+            72.04,
+            5.59,
+            10.6
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 120,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/129",
+          "id": "129",
+          "name": "Freeform 128",
+          "bbox": [
+            762.14,
+            73.98,
+            6.91,
+            8.63
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 121,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/130",
+          "id": "130",
+          "name": "Freeform 129",
+          "bbox": [
+            770.48,
+            72.04,
+            5.59,
+            10.6
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 122,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/131",
+          "id": "131",
+          "name": "Freeform 130",
+          "bbox": [
+            777.39,
+            73.76,
+            7.16,
+            8.86
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 123,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/132",
+          "id": "132",
+          "name": "Freeform 131",
+          "bbox": [
+            790.47,
+            73.75,
+            7.19,
+            8.89
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 124,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/133",
+          "id": "133",
+          "name": "Freeform 132",
+          "bbox": [
+            798.85,
+            70.3,
+            5.48,
+            12.1
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 125,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/134",
+          "id": "134",
+          "name": "Freeform 133",
+          "bbox": [
+            808.33,
+            70.82,
+            8.45,
+            11.59
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 126,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/135",
+          "id": "135",
+          "name": "Freeform 134",
+          "bbox": [
+            816.44,
+            73.76,
+            7.16,
+            8.84
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 127,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/136",
+          "id": "136",
+          "name": "Freeform 135",
+          "bbox": [
+            825.4,
+            73.75,
+            7.02,
+            8.89
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 128,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/137",
+          "id": "137",
+          "name": "Freeform 136",
+          "bbox": [
+            834.36,
+            70.3,
+            6.91,
+            12.1
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 129,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/138",
+          "id": "138",
+          "name": "Freeform 137",
+          "bbox": [
+            843.61,
+            73.76,
+            6.91,
+            8.66
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 130,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/139",
+          "id": "139",
+          "name": "Freeform 138",
+          "bbox": [
+            852.64,
+            73.75,
+            7.19,
+            8.89
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 131,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/140",
+          "id": "140",
+          "name": "Freeform 139",
+          "bbox": [
+            862.06,
+            70.3,
+            1.09,
+            12.1
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 132,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/141",
+          "id": "141",
+          "name": "Freeform 140",
+          "bbox": [
+            865.38,
+            73.75,
+            7.19,
+            8.89
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 133,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/142",
+          "id": "142",
+          "name": "Freeform 141",
+          "bbox": [
+            874.47,
+            73.75,
+            6.95,
+            12.65
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 134,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/143",
+          "id": "143",
+          "name": "Freeform 142",
+          "bbox": [
+            883.76,
+            74,
+            6.92,
+            12.42
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 135,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/144",
+          "id": "144",
+          "name": "Freeform 143",
+          "bbox": [
+            680.65,
+            93.4,
+            13.45,
+            13.63
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 136,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/145",
+          "id": "145",
+          "name": "Freeform 144",
+          "bbox": [
+            695.83,
+            93.65,
+            13.17,
+            13.15
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 137,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/146",
+          "id": "146",
+          "name": "Freeform 145",
+          "bbox": [
+            710.38,
+            93.63,
+            13.57,
+            13.39
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 138,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/147",
+          "id": "147",
+          "name": "Freeform 146",
+          "bbox": [
+            725.11,
+            93.43,
+            13.63,
+            13.25
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 139,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/148",
+          "id": "148",
+          "name": "Freeform 147",
+          "bbox": [
+            739.96,
+            93.63,
+            12.78,
+            13.62
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 140,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/149",
+          "id": "149",
+          "name": "Freeform 148",
+          "bbox": [
+            754.77,
+            93.98,
+            13.83,
+            12.76
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 141,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/150",
+          "id": "150",
+          "name": "Freeform 149",
+          "bbox": [
+            769.89,
+            94.74,
+            13.33,
+            11.54
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 142,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/151",
+          "id": "151",
+          "name": "Freeform 150",
+          "bbox": [
+            784.79,
+            93.4,
+            13.16,
+            13.55
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 143,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/152",
+          "id": "152",
+          "name": "Freeform 151",
+          "bbox": [
+            799.92,
+            93.46,
+            13.16,
+            13.68
+          ],
+          "geometry": "custom"
+        },
+        {
+          "order": 144,
+          "kind": "image",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/168",
+          "id": "168",
+          "name": "Picture 152",
+          "bbox": [
+            985.9,
+            20.63,
+            221.03,
+            99.57
+          ],
+          "contentType": "image/png",
+          "asset": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 14470
+          },
+          "fillImage": {
+            "assetId": "/ppt/media/image1.png",
+            "contentType": "image/png",
+            "byteLength": 14470
+          }
+        },
+        {
+          "order": 145,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/161",
+          "id": "161",
+          "name": "Date Placeholder 3",
+          "bbox": [
+            73.07,
+            667.33,
+            288,
+            38.33
+          ]
+        },
+        {
+          "order": 146,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/162",
+          "id": "162",
+          "name": "Footer Placeholder 4",
+          "bbox": [
+            424,
+            667.33,
+            432,
+            38.33
+          ]
+        },
+        {
+          "order": 147,
+          "kind": "shape",
+          "scope": "layout",
+          "aid": "template/layout//ppt/slideLayouts/slideLayout1.xml/167",
+          "id": "167",
+          "name": "Text Placeholder 166",
+          "bbox": [
+            73,
+            20.67,
+            317.5,
+            99.5
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "master",
+      "id": "/ppt/slideMasters/slideMaster1.xml",
+      "type": "master",
+      "elements": [
+        {
+          "order": 1,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/2",
+          "id": "2",
+          "name": "Title Placeholder 1",
+          "bbox": [
+            88,
+            38.33,
+            1104,
+            139.17
+          ],
+          "geometry": "rect"
+        },
+        {
+          "order": 2,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/3",
+          "id": "3",
+          "name": "Text Placeholder 2",
+          "bbox": [
+            88,
+            191.67,
+            1104,
+            456.83
+          ],
+          "geometry": "rect"
+        },
+        {
+          "order": 3,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/4",
+          "id": "4",
+          "name": "Date Placeholder 3",
+          "bbox": [
+            88,
+            667.33,
+            288,
+            38.33
+          ],
+          "geometry": "rect"
+        },
+        {
+          "order": 4,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/5",
+          "id": "5",
+          "name": "Footer Placeholder 4",
+          "bbox": [
+            424,
+            667.33,
+            432,
+            38.33
+          ],
+          "geometry": "rect"
+        },
+        {
+          "order": 5,
+          "kind": "shape",
+          "scope": "master",
+          "aid": "template/master//ppt/slideMasters/slideMaster1.xml/6",
+          "id": "6",
+          "name": "Slide Number Placeholder 5",
+          "bbox": [
+            904,
+            667.33,
+            288,
+            38.33
+          ],
+          "geometry": "rect"
+        }
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cvixczed",
+      "id": "2",
+      "name": "Title 1",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "resolvedFontSize": 58.67,
+      "resolvedTextStyle": {
+        "fontSize": 58.67,
+        "typeface": "+mj-lt",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5gbq1ory",
+      "id": "3",
+      "name": "Subtitle 2",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "resolvedFontSize": 21.33,
+      "resolvedTextStyle": {
+        "fontSize": 21.33,
+        "typeface": "Helvetica",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/udg7adsj",
+      "id": "4",
+      "name": "Text Placeholder 3",
+      "bbox": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "resolvedFontSize": 21.33,
+      "resolvedTextStyle": {
+        "fontSize": 21.33,
+        "typeface": "Helvetica",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": ""
+          },
+          {
+            "index": 2,
+            "text": ""
+          }
+        ]
+      }
+    }
+  ],
+  "composeRuns": []
+}

@@ -98,7 +98,7 @@ const allPublications = [
         title: "Selective Ammonia Electrooxidation on RuO<sub>2</sub>: Competitive and Synergistic Interplay between Ammonia and Hydroxide",
         journal: "The Journal of Physical Chemistry C, 2025, 129, 12351-12361",
         doi: "10.1021/acs.jpcc.5c02770",
-        imageUrl: "../img/Screenshot%202025-04-30%20at%208.27.41%E2%80%AFPM.png", imageAlt: "TOC for Selective Ammonia Electrooxidation",
+        imageUrl: "../img/jp5c02770_0009.webp", imageAlt: "TOC for Selective Ammonia Electrooxidation",
         comments: ["Featured on the cover"],
         dimensionsDoi: "10.1021/acs.jpcc.5c02770"
     }, 

@@ -1,0 +1,157 @@
+{
+  "sourcePptx": "/Users/wzheng/Downloads/layout 3.pptx",
+  "workspace": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates",
+  "outDir": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3",
+  "generatedAt": "2026-05-10T14:37:31.501Z",
+  "slideCount": 1,
+  "slideArtifacts": [
+    {
+      "slide": 1,
+      "previewPath": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/source-slides/source-slide-01.png",
+      "previewRelativePath": "inspect-layout-3/source-slides/source-slide-01.png",
+      "layoutPath": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/layouts/source-slide-01.layout.json",
+      "layoutRelativePath": "inspect-layout-3/layouts/source-slide-01.layout.json"
+    }
+  ],
+  "inspectPath": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/template-inspect.ndjson",
+  "inspectRelativePath": "inspect-layout-3/template-inspect.ndjson",
+  "inspectTruncated": false,
+  "inspectMetadata": {
+    "revision": "hbuhso",
+    "target": {
+      "id": "pr/hi0u6s"
+    },
+    "kind": {
+      "requested": "slide,textbox,shape,image,table,chart",
+      "tokens": [
+        "slide",
+        "textbox",
+        "shape",
+        "image",
+        "table",
+        "chart"
+      ]
+    },
+    "include": {
+      "tokens": []
+    },
+    "exclude": {
+      "tokens": []
+    },
+    "notices": []
+  },
+  "extractedMedia": [
+    {
+      "entry": "ppt/media/hdphoto3.wdp",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/assets/ppt/media/hdphoto3.wdp",
+      "relativePath": "inspect-layout-3/assets/ppt/media/hdphoto3.wdp",
+      "bytes": 38256
+    },
+    {
+      "entry": "ppt/media/image3.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/assets/ppt/media/image3.png",
+      "relativePath": "inspect-layout-3/assets/ppt/media/image3.png",
+      "bytes": 26344
+    },
+    {
+      "entry": "ppt/media/hdphoto2.wdp",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/assets/ppt/media/hdphoto2.wdp",
+      "relativePath": "inspect-layout-3/assets/ppt/media/hdphoto2.wdp",
+      "bytes": 109982
+    },
+    {
+      "entry": "ppt/media/image2.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/assets/ppt/media/image2.png",
+      "relativePath": "inspect-layout-3/assets/ppt/media/image2.png",
+      "bytes": 6303794
+    },
+    {
+      "entry": "ppt/media/hdphoto1.wdp",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/assets/ppt/media/hdphoto1.wdp",
+      "relativePath": "inspect-layout-3/assets/ppt/media/hdphoto1.wdp",
+      "bytes": 109982
+    },
+    {
+      "entry": "ppt/media/image1.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/assets/ppt/media/image1.png",
+      "relativePath": "inspect-layout-3/assets/ppt/media/image1.png",
+      "bytes": 14470
+    },
+    {
+      "entry": "ppt/media/image4.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-layout-3/assets/ppt/media/image4.png",
+      "relativePath": "inspect-layout-3/assets/ppt/media/image4.png",
+      "bytes": 1706506
+    }
+  ],
+  "fonts": [
+    "+mj-cs",
+    "+mj-ea",
+    "+mj-lt",
+    "+mn-cs",
+    "+mn-ea",
+    "+mn-lt",
+    "Angsana New",
+    "Aptos",
+    "Aptos Display",
+    "Arial",
+    "Cordia New",
+    "DaunPenh",
+    "DokChampa",
+    "Ebrima",
+    "Estrangelo Edessa",
+    "Euphemia",
+    "Gautami",
+    "Helvetica",
+    "Iskoola Pota",
+    "Javanese Text",
+    "Kalinga",
+    "Kartika",
+    "Latha",
+    "Leelawadee UI",
+    "MV Boli",
+    "Mangal",
+    "Microsoft Himalaya",
+    "Microsoft JhengHei",
+    "Microsoft New Tai Lue",
+    "Microsoft Tai Le",
+    "Microsoft Uighur",
+    "Microsoft Yi Baiti",
+    "Mongolian Baiti",
+    "MoolBoran",
+    "Myanmar Text",
+    "Nirmala UI",
+    "Nyala",
+    "Open Sans ExtraBold",
+    "Open Sans Light",
+    "Phagspa",
+    "PingFang SC",
+    "Plantagenet Cherokee",
+    "Raavi",
+    "Segoe UI",
+    "Shruti",
+    "Sylfaen",
+    "Times New Roman",
+    "Tunga",
+    "Vrinda",
+    "宋体",
+    "微軟正黑體",
+    "新細明體",
+    "游ゴシック",
+    "游ゴシック Light",
+    "等线",
+    "等线 Light",
+    "黑体",
+    "굴림",
+    "맑은 고딕",
+    "바탕",
+    "ＭＳ Ｐゴシック",
+    "ＭＳ Ｐ明朝"
+  ],
+  "packageParts": {
+    "mediaCount": 7,
+    "slideXmlCount": 1,
+    "chartCount": 0,
+    "tableSlideCount": 0
+  }
+}

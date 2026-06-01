@@ -1,0 +1,671 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/5mm0xj",
+    "id": "5mm0xj",
+    "slide": 1,
+    "layoutId": "2838b66a-ef19-4485-bea2-8a03678e358c",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "044fd0bf-dfa8-4ba0-823f-c73168af407f",
+    "masterLayoutName": "Master",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Georgia"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "2838b66a-ef19-4485-bea2-8a03678e358c",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "044fd0bf-dfa8-4ba0-823f-c73168af407f",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "044fd0bf-dfa8-4ba0-823f-c73168af407f",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hwfyxobm",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#00172F",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/65wjudg7",
+      "id": "2",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "#002147",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zqtcj6to",
+      "id": "3",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "rgba(0, 23, 47, 0.8)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oza1gvy9",
+      "id": "4",
+      "bbox": [
+        0,
+        0,
+        520,
+        720
+      ],
+      "geometry": "rect",
+      "fillColor": "rgba(255, 255, 255, 0.03137)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hk3q5o7q",
+      "id": "5",
+      "bbox": [
+        72,
+        91,
+        310,
+        3
+      ],
+      "geometry": "rect",
+      "fillColor": "#B9975B",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6xkf6dcb",
+      "id": "6",
+      "bbox": [
+        72,
+        586,
+        1136,
+        1.4
+      ],
+      "geometry": "rect",
+      "fillColor": "rgba(255, 255, 255, 0.21961)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zed8v6ps",
+      "id": "7",
+      "bbox": [
+        72,
+        589,
+        134,
+        3
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8BD7F",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/orytsvu9",
+      "id": "8",
+      "name": "kicker-label",
+      "bbox": [
+        72,
+        64,
+        310,
+        20
+      ],
+      "geometry": "rect",
+      "text": "THE ZHENG GROUP",
+      "textPreview": "THE ZHENG GROUP",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "fontSize": 10,
+        "typeface": "Aptos",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "THE ZHENG GROUP"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "THE ZHENG GROUP",
+          "runs": [
+            {
+              "index": 1,
+              "text": "THE ZHENG GROUP",
+              "fontSize": 10,
+              "typeface": "Aptos",
+              "color": "#D8BD7F",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hcrmhk3q",
+      "id": "9",
+      "name": "title-placeholder",
+      "bbox": [
+        72,
+        178,
+        760,
+        156
+      ],
+      "geometry": "rect",
+      "text": "Presentation title goes here",
+      "textPreview": "Presentation title goes here",
+      "resolvedFontSize": 58,
+      "resolvedTextStyle": {
+        "fontSize": 58,
+        "typeface": "Georgia",
+        "bold": true,
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Presentation title goes"
+          },
+          {
+            "index": 2,
+            "text": "here"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Presentation title goes here",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Presentation title goes here",
+              "fontSize": 58,
+              "typeface": "Georgia",
+              "color": "#FFFFFF",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/d4vmtwra",
+      "id": "10",
+      "name": "subtitle-placeholder",
+      "bbox": [
+        74,
+        346,
+        650,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Electrochemical Interface & Conversion Lab @ GTIIT",
+      "textPreview": "Electrochemical Interface & Conversion Lab @ GTIIT",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "fontSize": 21,
+        "typeface": "Aptos",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Electrochemical Interface & Conversion Lab @ GTIIT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Electrochemical Interface & Conversion Lab @ GTIIT",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Electrochemical Interface & Conversion Lab @ GTIIT",
+              "fontSize": 21,
+              "typeface": "Aptos",
+              "color": "#E7EDF5"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/oj2t83it",
+      "id": "11",
+      "name": "metadata-placeholder",
+      "bbox": [
+        76,
+        432,
+        640,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Presenter name  |  Meeting / conference  |  Date",
+      "textPreview": "Presenter name  |  Meeting / conference  |  Date",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "fontSize": 13,
+        "typeface": "Aptos",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Presenter name  |  Meeting / conference  |  Date"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Presenter name  |  Meeting / conference  |  Date",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Presenter name  |  Meeting / conference  |  Date",
+              "fontSize": 13,
+              "typeface": "Aptos",
+              "color": "#D6DFEB"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/vy90je9c",
+      "id": "12",
+      "name": "soft-orbit-01",
+      "bbox": [
+        860,
+        150,
+        230,
+        230
+      ],
+      "geometry": "ellipse",
+      "fillColor": "rgba(255, 255, 255, 0.06275)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcbulwv",
+      "id": "13",
+      "name": "soft-orbit-02",
+      "bbox": [
+        940,
+        248,
+        124,
+        124
+      ],
+      "geometry": "ellipse",
+      "fillColor": "rgba(185, 151, 91, 0.14118)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dsji5sne",
+      "id": "14",
+      "bbox": [
+        858,
+        435,
+        246,
+        2
+      ],
+      "geometry": "rect",
+      "fillColor": "#D8BD7F",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/o7qpg3ex",
+      "id": "15",
+      "name": "theme-words",
+      "bbox": [
+        858,
+        455,
+        290,
+        90
+      ],
+      "geometry": "rect",
+      "text": "Operando electrochemistry\nElectrocatalysis\nInterface science",
+      "textPreview": "Operando electrochemistry | Electrocatalysis | Interface science",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "fontSize": 18,
+        "typeface": "Georgia",
+        "alignment": "left"
+      },
+      "textLayout": {
+        "lineCount": 3,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Operando electrochemistry"
+          },
+          {
+            "index": 2,
+            "text": "Electrocatalysis"
+          },
+          {
+            "index": 3,
+            "text": "Interface science"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Operando electrochemistry",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Operando electrochemistry",
+              "fontSize": 18,
+              "typeface": "Georgia",
+              "color": "rgba(255, 255, 255, 0.85098)"
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "text": "Electrocatalysis",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Electrocatalysis",
+              "fontSize": 18,
+              "typeface": "Georgia",
+              "color": "rgba(255, 255, 255, 0.85098)"
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "text": "Interface science",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Interface science",
+              "fontSize": 18,
+              "typeface": "Georgia",
+              "color": "rgba(255, 255, 255, 0.85098)"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/g7adsji5",
+      "id": "16",
+      "bbox": [
+        74,
+        616,
+        245,
+        70
+      ],
+      "alt": "Guangdong Technion logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "a9360841-4618-4097-85c6-e394961dc14c",
+        "contentType": "image/png",
+        "byteLength": 161258
+      }
+    },
+    {
+      "order": 17,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/9s36hcrm",
+      "id": "17",
+      "bbox": [
+        356,
+        616,
+        190,
+        70
+      ],
+      "alt": "Technion logo",
+      "contentType": "image/png",
+      "asset": {
+        "assetId": "e1570964-3a2f-4e91-8559-e6abfd5679ed",
+        "contentType": "image/png",
+        "byteLength": 36165
+      }
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dg7adsji",
+      "id": "18",
+      "name": "footer-lab",
+      "bbox": [
+        932,
+        632,
+        276,
+        18
+      ],
+      "geometry": "rect",
+      "text": "Electrochemical Interface & Conversion Lab",
+      "textPreview": "Electrochemical Interface & Conversion Lab",
+      "resolvedFontSize": 10,
+      "resolvedTextStyle": {
+        "fontSize": 10,
+        "typeface": "Aptos",
+        "alignment": "right"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Electrochemical Interface & Conversion Lab"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Electrochemical Interface & Conversion Lab",
+          "runs": [
+            {
+              "index": 1,
+              "text": "Electrochemical Interface & Conversion Lab",
+              "fontSize": 10,
+              "typeface": "Aptos",
+              "color": "#D6DFEB"
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ovahoza1",
+      "id": "19",
+      "name": "footer-note",
+      "bbox": [
+        976,
+        652,
+        232,
+        16
+      ],
+      "geometry": "rect",
+      "text": "website style template",
+      "textPreview": "website style template",
+      "resolvedFontSize": 8,
+      "resolvedTextStyle": {
+        "fontSize": 8,
+        "typeface": "Aptos",
+        "bold": true,
+        "alignment": "right"
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "website style template"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "website style template",
+          "runs": [
+            {
+              "index": 1,
+              "text": "website style template",
+              "fontSize": 8,
+              "typeface": "Aptos",
+              "color": "#B9975B",
+              "bold": true
+            }
+          ]
+        }
+      ],
+      "fillColor": "rgba(0, 0, 0, 0)",
+      "lineColor": "rgba(0, 0, 0, 0)",
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

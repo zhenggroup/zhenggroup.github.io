@@ -162,7 +162,7 @@ Journal: The Journal of Physical Chemistry C, 2025, 129, 12351-12361
 DOI: 10.1021/acs.jpcc.5c02770
 Dimensions DOI: 10.1021/acs.jpcc.5c02770
 PDF: 
-Image: ../img/Screenshot%202025-04-30%20at%208.27.41%E2%80%AFPM.png
+Image: ../img/jp5c02770_0009.webp
 Image Alt: TOC for Selective Ammonia Electrooxidation
 Comments: Featured on the cover
 Featured: 
@@ -916,5 +916,4 @@ Image: ../img/placeholder-image.png
 Image Alt: TOC Placeholder
 Comments: 
 Featured: 
-
 

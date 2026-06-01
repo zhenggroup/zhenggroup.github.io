@@ -1,0 +1,168 @@
+{
+  "sourcePptx": "/Users/wzheng/Downloads/Presentation2.pptx",
+  "workspace": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates",
+  "outDir": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2",
+  "generatedAt": "2026-05-10T14:37:32.165Z",
+  "slideCount": 1,
+  "slideArtifacts": [
+    {
+      "slide": 1,
+      "previewPath": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/source-slides/source-slide-01.png",
+      "previewRelativePath": "inspect-presentation2/source-slides/source-slide-01.png",
+      "layoutPath": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/layouts/source-slide-01.layout.json",
+      "layoutRelativePath": "inspect-presentation2/layouts/source-slide-01.layout.json"
+    }
+  ],
+  "inspectPath": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/template-inspect.ndjson",
+  "inspectRelativePath": "inspect-presentation2/template-inspect.ndjson",
+  "inspectTruncated": false,
+  "inspectMetadata": {
+    "revision": "1p4d3y",
+    "target": {
+      "id": "pr/ectvu3"
+    },
+    "kind": {
+      "requested": "slide,textbox,shape,image,table,chart",
+      "tokens": [
+        "slide",
+        "textbox",
+        "shape",
+        "image",
+        "table",
+        "chart"
+      ]
+    },
+    "include": {
+      "tokens": []
+    },
+    "exclude": {
+      "tokens": []
+    },
+    "notices": []
+  },
+  "extractedMedia": [
+    {
+      "entry": "ppt/media/image6.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/image6.png",
+      "relativePath": "inspect-presentation2/assets/ppt/media/image6.png",
+      "bytes": 620235
+    },
+    {
+      "entry": "ppt/media/hdphoto2.wdp",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/hdphoto2.wdp",
+      "relativePath": "inspect-presentation2/assets/ppt/media/hdphoto2.wdp",
+      "bytes": 38256
+    },
+    {
+      "entry": "ppt/media/image4.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/image4.png",
+      "relativePath": "inspect-presentation2/assets/ppt/media/image4.png",
+      "bytes": 26344
+    },
+    {
+      "entry": "ppt/media/hdphoto1.wdp",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/hdphoto1.wdp",
+      "relativePath": "inspect-presentation2/assets/ppt/media/hdphoto1.wdp",
+      "bytes": 35272
+    },
+    {
+      "entry": "ppt/media/image3.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/image3.png",
+      "relativePath": "inspect-presentation2/assets/ppt/media/image3.png",
+      "bytes": 431937
+    },
+    {
+      "entry": "ppt/media/image2.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/image2.png",
+      "relativePath": "inspect-presentation2/assets/ppt/media/image2.png",
+      "bytes": 80618
+    },
+    {
+      "entry": "ppt/media/image1.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/image1.png",
+      "relativePath": "inspect-presentation2/assets/ppt/media/image1.png",
+      "bytes": 37980
+    },
+    {
+      "entry": "ppt/media/image5.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/image5.png",
+      "relativePath": "inspect-presentation2/assets/ppt/media/image5.png",
+      "bytes": 30781
+    },
+    {
+      "entry": "ppt/media/image7.png",
+      "path": "/Users/wzheng/Website/github page/zhenggroup.github.io/outputs/manual-20260510-pptx-style/presentations/website-academic-templates/inspect-presentation2/assets/ppt/media/image7.png",
+      "relativePath": "inspect-presentation2/assets/ppt/media/image7.png",
+      "bytes": 1706506
+    }
+  ],
+  "fonts": [
+    "+mn-cs",
+    "+mn-ea",
+    "+mn-lt",
+    "Angsana New",
+    "Aptos",
+    "Aptos Display",
+    "Arial",
+    "Cordia New",
+    "DaunPenh",
+    "DokChampa",
+    "Ebrima",
+    "Estrangelo Edessa",
+    "Euphemia",
+    "Gautami",
+    "Heiti SC Light",
+    "Heiti SC Medium",
+    "Helvetica",
+    "Helvetica Light",
+    "Iskoola Pota",
+    "Javanese Text",
+    "Kalinga",
+    "Kartika",
+    "Latha",
+    "Leelawadee UI",
+    "MV Boli",
+    "Mangal",
+    "Microsoft Himalaya",
+    "Microsoft JhengHei",
+    "Microsoft New Tai Lue",
+    "Microsoft Tai Le",
+    "Microsoft Uighur",
+    "Microsoft Yi Baiti",
+    "Mongolian Baiti",
+    "MoolBoran",
+    "Myanmar Text",
+    "Nirmala UI",
+    "Noto Sans",
+    "Noto Sans SC Light",
+    "Nyala",
+    "Open Sans ExtraBold",
+    "Open Sans Light",
+    "Phagspa",
+    "PingFang SC",
+    "Plantagenet Cherokee",
+    "Raavi",
+    "Segoe UI",
+    "Shruti",
+    "Sylfaen",
+    "Times New Roman",
+    "Tunga",
+    "Vrinda",
+    "微軟正黑體",
+    "新細明體",
+    "游ゴシック",
+    "游ゴシック Light",
+    "等线",
+    "等线 Light",
+    "黑体",
+    "굴림",
+    "맑은 고딕",
+    "ＭＳ Ｐゴシック"
+  ],
+  "packageParts": {
+    "mediaCount": 9,
+    "slideXmlCount": 1,
+    "chartCount": 0,
+    "tableSlideCount": 0
+  }
+}
