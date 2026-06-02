@@ -402,8 +402,18 @@
 
         @media (max-width: 767px) {
             .hero-section {
-                min-height: 85vh;
-                padding-top: 100px;
+                min-height: auto;
+                padding-top: 96px;
+                padding-bottom: 2rem;
+                align-items: flex-start;
+            }
+
+            .hero-content-wrapper {
+                justify-content: center;
+            }
+
+            .hero-text-content {
+                flex-grow: 0;
             }
 
             .hero-text-content h1 {
@@ -424,6 +434,19 @@
 
             .hero-gallery-image-container {
                 height: 60px;
+                width: min(45%, 150px);
+                padding: 0.35rem;
+            }
+
+            .hero-image-gallery {
+                flex-wrap: nowrap;
+                gap: 0.8rem;
+                padding-top: 1rem;
+                padding-bottom: 0;
+            }
+
+            .hero-gallery-image {
+                max-width: 100%;
             }
 
             .recruitment-alert-section {
@@ -560,7 +583,7 @@
             }
 
             .hero-gallery-image-container {
-                height: 72px;
+                height: 48px;
             }
         }
     </style>
