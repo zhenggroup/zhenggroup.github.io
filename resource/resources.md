@@ -2,7 +2,7 @@
 
 ## Intro
 
-Title: Research Resources
+Title: Tools and Learning Materials
 
 Quick access to lab systems, recommended scientific software, group-developed tools, and selected electrochemistry learning materials.
 

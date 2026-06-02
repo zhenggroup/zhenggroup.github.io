@@ -84,7 +84,7 @@ function renderResourceCard(item, extraClass = '') {
 
 function renderIntroSection(section) {
     const titleMatch = section.body.match(/^Title:\s*(.+)$/m);
-    const title = titleMatch ? titleMatch[1].trim() : 'Research Resources';
+    const title = titleMatch ? titleMatch[1].trim() : 'Tools and Learning Materials';
     const bodyWithoutTitle = section.body.replace(/^Title:\s*.+$/m, '').trim();
     const quoteMatch = bodyWithoutTitle.match(/>\s*\*\*(.+?)\*\*\s*\n>\s*(.+)/);
     const description = bodyWithoutTitle.replace(/>\s*\*\*.+?\*\*\s*\n>\s*.+/s, '').trim();
