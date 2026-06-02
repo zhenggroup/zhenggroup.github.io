@@ -9,7 +9,7 @@ Image: ../img/ecs249.jpg
 Image Alt: Prof. Zheng at the 249th ECS Meeting
 Image Float: left
 Image Width: 30%
-Image Caption:  
+Image Caption:
 
 <p>Prof. Zheng recently delivered talks at the Oregon Center for Electrochemistry on "in situ method for electrode deactivation analysis" and the 249th ECS Meeting on "time-resolved electrochemical impedance analysis for electrocatalyst degradation study".</p>
 
@@ -17,11 +17,11 @@ Image Caption:
 ## Yingshi Su's papers published on Electrochimica Acta and Journal of Physical Chemistry C
 ID: yinshi-2026
 Date: 2026-04-22
-Image: 
-Image Alt:  
+Image:
+Image Alt:
 Image Float: left
 Image Width: 30%
-Image Caption:  
+Image Caption:
 
 <p>The study by Yingshi on spectroelectrochemical and chemical analysis of the optical and electric evolution of FTO is published in Electrochimica Acta (https://doi.org/10.1016/j.electacta.2026.148501) and Journal of the Physical Chemistry C (https://doi.org/10.1021/acs.jpcc.6c00506).</p>
 
@@ -29,11 +29,11 @@ Image Caption:
 ## Prof. Zheng's tutorial paper on in situ electrochemistry is published on ACS Electrochemistry
 ID: zheng-2026
 Date: 2026-03-20
-Image: 
-Image Alt:  
+Image:
+Image Alt:
 Image Float: left
 Image Width: 30%
-Image Caption:  
+Image Caption:
 
 <p>Prof. Zheng has published a tutorial/viewpoint paper on the limitation and traps of in situ methods: "Seeing Is Not Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis". In situ and operando techniques have revolutionized electrochemical research by enabling direct interrogation of electrochemical interfaces. However, these methods introduce new failure modes, including experimental perturbations, observability bias, and interpretive overreach, that can yield internally consistent yet misleading conclusions. In this work, we analyze why operando measurements can disagree across techniques, cell configurations, and laboratories despite high data quality. Through a framework examining observability, kinetics, spatial heterogeneity, and inference logic, we show how thin-layer geometries, reference instability, bubble dynamics, probe perturbations, and spectator-dominated signals decouple measured signals from catalytic events. A fundamental paradox emerges: kinetically important intermediates can be unobservable, while spectroscopically dominant species may reflect accumulation rather than catalytic control. We identify interpretive traps recurring across spectroscopic, microscopic, and scattering approaches to establish clearer boundaries for what operando studies can determine and promote rigorous links between observation and mechanistic inference.</p>
 
@@ -41,11 +41,11 @@ Image Caption:
 ## Sijie Chen is awarded the Excellent Graduate Student of Academic year 2024-2025
 ID: award-sijie-2026
 Date: 2026-03-17
-Image: 
-Image Alt:  
+Image:
+Image Alt:
 Image Float: left
 Image Width: 30%
-Image Caption:  
+Image Caption:
 
 <p>Sijie Chen has been awarded the Excellent Graduate Student of Academic year 2024-2025. Congratulations!</p>
 
@@ -66,10 +66,10 @@ Image Caption: Chemistry of Materials (Vol 38/Issue 4 2026)
 ID: zhengtalk
 Date: 2025-11-25
 Image: ../img/icae2025.jpg
-Image Alt:  
+Image Alt:
 Image Float: left
 Image Width: 30%
-Image Caption:  
+Image Caption:
 
 <p>Prof. Zheng presented an invited talk on the 8th International Conference on Advanced Electromaterials (ICAE 2025) on the topic of "Catalyst Deactivation Analysis by In Situ Electrochemistry". The conference is organized by the Korean Institute of Electrical and Electronic Material Engineers.</p>
 
@@ -102,7 +102,7 @@ Image Caption: JPCC cover (Vol 129/Issue 27 2025)
 ID: python-may-2025
 Date: 2025-05-18
 Image: ../img/25ecs.jpeg
-Image Alt: 
+Image Alt:
 Image Float: right
 Image Width: 30%
 Image Caption: Short Course on Python in Electrochemistry
@@ -114,7 +114,7 @@ Image Caption: Short Course on Python in Electrochemistry
 ID: online-lecture-feb-2025
 Date: 2025-02-10
 Image: ../img/keyanyun.jpg
-Image Alt: 
+Image Alt:
 Image Float: left
 Image Width: 30%
 Image Caption: Webinar at 科研云
@@ -125,11 +125,11 @@ Image Caption: Webinar at 科研云
 ## Sijie Chen wins 2nd place in MATEC poster competition
 ID: poster-award-sijie-2024
 Date: 2024-10-25
-Image: 
-Image Alt: 
-Image Float: 
-Image Width: 
-Image Caption: 
+Image:
+Image Alt:
+Image Float:
+Image Width:
+Image Caption:
 
 <p>Ms. Sijie Chen’s poster on ammonia electrooxidation is recognized as the 2nd place in the ‘best poster’ award in the MATEC poster competition.</p>
 
@@ -137,11 +137,11 @@ Image Caption:
 ## Paper on Bismuth doping in copper oxides published in Electrochimica Acta
 ID: paper-published-electrochimica-acta-2024
 Date: 2024-10-15
-Image: 
-Image Alt: 
-Image Float: 
-Image Width: 
-Image Caption: 
+Image:
+Image Alt:
+Image Float:
+Image Width:
+Image Caption:
 
 <p>“Bismuth doping unlocks stability of copper oxides in anodic reaction: A case analysis of glucose electrooxidation” is published on <a href="https://doi.org/10.1016/j.electacta.2024.145178" target="_blank" rel="noopener noreferrer">Electrochimica Acta</a>. The research is led by Jiajing Zhong (PhD candidate).</p>
 
@@ -150,7 +150,7 @@ Image Caption:
 ID: paper-published-acs-energy-lett-2024
 Date: 2024-09-05
 Image: ../img/24acse.jpeg
-Image Alt: 
+Image Alt:
 Image Float: left
 Image Width: 30%
 Image Caption: Potential/current relationship in a three-electrode cell
@@ -161,11 +161,11 @@ Image Caption: Potential/current relationship in a three-electrode cell
 ## Paper on ammonia electrooxidation on NiOOH published in Journal of Catalysis
 ID: paper-published-jcat-2024
 Date: 2024-08-18
-Image: 
-Image Alt: 
-Image Float: 
-Image Width: 
-Image Caption: 
+Image:
+Image Alt:
+Image Float:
+Image Width:
+Image Caption:
 
 <p>"Correlative in situ analysis of the role of oxygen on ammonia electrooxidation selectivity on NiOOH surfaces” is published on <a href="https://doi.org/10.1016/j.jcat.2024.115720" target="_blank" rel="noopener noreferrer">Journal of Catalysis</a>. The research is led by Jing Chen (RA) and Sijie Chen (MSc candidate).</p>
 
@@ -173,11 +173,11 @@ Image Caption:
 ## Dr. Zheng delivered an ECS Webinar on Python for Electrochemistry with >4k audience
 ID: ecs-webinar-python-2024
 Date: 2024-08-01
-Image: 
-Image Alt: 
-Image Float: 
-Image Width: 
-Image Caption: 
+Image:
+Image Alt:
+Image Float:
+Image Width:
+Image Caption:
 
 <p>Dr. Weiran Zheng delivered an ECS Webinar on the topic of “Introducing Python for Electrochemistry Research”. <a href="https://physicsworld.com/a/introducing-python-for-electrochemistry-research/" target="_blank" rel="noopener noreferrer">Watch Webinar</a></p>
 
@@ -197,11 +197,11 @@ Image Caption: Prof. Zheng presenting at CIAC.
 ## Lijie Du’s paper is published on APL Energy
 ID: paper-published-apl-energy-2024
 Date: 2024-03-18
-Image: 
-Image Alt: 
-Image Float: 
-Image Width: 
-Image Caption: 
+Image:
+Image Alt:
+Image Float:
+Image Width:
+Image Caption:
 
 <p>Link to the paper: <a href="https://pubs.aip.org/aip/ape/article/2/2/021501/3284761" target="_blank" rel="noopener noreferrer">Catalyst deactivation during water electrolysis: Understanding and mitigation</a>.</p><p>The paper explores the structural factors contributing to catalyst deactivation, elucidating the underlying mechanisms with detailed case studies of hydrogen and oxygen evolution reactions. The review concludes by emphasizing the necessity for universal test protocols for deactivation and integrating evidence from diverse in situ measurements.</p>
 

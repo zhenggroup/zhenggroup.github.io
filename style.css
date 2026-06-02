@@ -353,7 +353,6 @@ nav .dropdown-menu .nav-link { color: var(--text-color-medium) !important; }
 /* Carousel & Lightbox (Generic from Blocs) */
 .carousel-nav-icon { fill: none; stroke: var(--text-color-light); stroke-width: 2px; fill-rule: evenodd; stroke-linecap: round; }
 .carousel-caption-top { bottom: inherit; top: 20px; }
-.carousel-indicators li::marker { font-size: 0; }
 
 .scrollToTop {
     width: 38px;
@@ -492,11 +491,7 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     .close-lightbox { display:inline-block; } /* Ensure lightbox close is visible */
 }
 
-/* === STYLES MOVED FROM INDEX.HTML (MERGE CAREFULLY) === */
 /* These are the styles you previously had in an inline <style> block in index.html. */
-/* They need to be MERGED with the styles above, especially the media queries. */
-/* Pay attention to selectors like .hero-section, .recruitment-alert, .news-card */
-/* and their responsive overrides. */
 
 /* Example: .hero-section styles (non-responsive part) */
 .hero-section {
@@ -504,7 +499,7 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     color: var(--text-color-dark);
     padding: 4rem 0; /* This overrides .bloc padding if .hero-section is also a .bloc */
 }
-.hero-section .content-container { /* This is fine as is */
+.hero-section .content-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -532,25 +527,25 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
 }
 .hero-text-content .research-focus-intro {
     font-size: 1.1em;
-    font-weight: 400; /* Could be var(--font-weight-normal) */
+    font-weight: 400;
     opacity: 0.85;
     margin-top: 1.5rem;
     line-height: 1.7;
     color: var(--text-color-dark);
 }
 .hero-text-content .research-focus-intro strong {
-    font-weight: 600; /* Could be var(--font-weight-medium) or var(--font-weight-bold) */
+    font-weight: 600;
     color: var(--text-color-headings);
 }
 
-.hero-carousel-content { /* These were also in the inline style */
+.hero-carousel-content {
     flex: 1 1 55%;
     min-width: 320px;
     max-width: 700px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 8px; /* Or var(--card-border-radius) */
-    box-shadow: var(--shadow-color-medium); /* Use theme shadow */
+    border-radius: 8px;
+    box-shadow: var(--shadow-color-medium);
 }
 .hero-carousel-content .carousel-item { min-height: 400px; }
 .hero-carousel-content .carousel-item img {
@@ -561,13 +556,9 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     padding: 1.25rem; position: absolute; bottom: 0; left: 0; right: 0;
 }
  .hero-carousel-content .carousel-caption h3 {
-    color: var(--text-color-light); font-size: 1.6em; font-weight: bold; /* Or var(--font-weight-bold) */
+    color: var(--text-color-light); font-size: 1.6em; font-weight: bold;
     margin-bottom: 0.25rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
 }
-/* .hero-carousel-content .carousel-indicators button and .active are already defined above from Blocs generic styles */
-/* .hero-carousel-content .carousel-control-prev-icon, .next-icon are also defined above from Blocs generic styles */
-/* The specific background-color: var(--shadow-color-medium) for icons from inline styles is a bit unusual. */
-/* You might want to stick to the Blocs default or theme it with a color variable. */
 
 
 /* Recruitment Alert Section from inline styles */
@@ -580,9 +571,9 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     border: 1px solid var(--border-color-medium);
     border-left: 4px solid var(--color-primary-blue);
     padding: 1.5rem 2rem;
-    border-radius: 6px; /* Or var(--card-border-radius) */
+    border-radius: 6px;
     position: relative;
-    box-shadow: 0 2px 8px rgba(0,86,179,0.08); /* Specific shadow, or use var(--shadow-soft) */
+    box-shadow: 0 2px 8px rgba(0,86,179,0.08);
 }
 .recruitment-alert h3 {
     color: var(--color-dark-blue); font-size: 1.5em; margin-top: 0; margin-bottom: 1rem;
@@ -591,10 +582,9 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     color: var(--text-color-dark); margin-bottom: 1rem; line-height: 1.65;
 }
 .recruitment-alert .contact-info {
-    margin-top: 1.25rem; font-weight: 500; /* Or var(--font-weight-medium) */
+    margin-top: 1.25rem; font-weight: 500;
     color: var(--color-primary-blue); font-size: 1.05em;
 }
-.recruitment-alert .btn-close-alert { /* Already defined above from Blocs */
     /* position: absolute; top: 1rem; right: 1rem; background: none; border: none; */
     /* font-size: 1.4rem; color: var(--color-primary-blue); opacity: 0.6; */
 }
@@ -608,10 +598,9 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
 }
 
 /* .news-card and its children from inline styles */
-/* THESE ARE VERY SPECIFIC AND USE !IMPORTANT. MERGE CAREFULLY WITH BLOCS DEFAULTS OR REFACTOR */
 .news-card {
     background-color: var(--background-color-page);
-    border-radius: 6px; /* Or var(--card-border-radius) */
+    border-radius: 6px;
     box-shadow: 0 3px 10px var(--shadow-color-soft);
     border: 1px solid var(--border-color-light);
     width: 320px !important;
@@ -641,20 +630,18 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
 }
 .news-card .news-content p:last-child { margin-bottom: 0; }
 .news-card .news-content a {
-    color: var(--text-link-color); text-decoration: none; font-weight: 500; /* Or var(--font-weight-medium) */
+    color: var(--text-link-color); text-decoration: none; font-weight: 500;
 }
 .news-card .news-content a:hover {
     color: var(--text-link-hover-color); text-decoration: underline;
 }
 
-/* Responsive Adjustments from inline styles - MERGE INTO MAIN MEDIA QUERIES */
 @media (max-width: 991px) {
-    /* Hero section specific overrides */
     .hero-section .content-container { flex-direction: column; }
     .hero-text-content { text-align: center; margin-bottom: 2rem; flex-basis: auto; }
     .hero-carousel-content { flex-basis: auto; max-width: 600px; }
-    .hero-text-content h1 { font-size: 2.5em; } /* Check against global h1 responsive */
-    .hero-text-content h2 { font-size: 1.6em; } /* Check against global h2 responsive */
+    .hero-text-content h1 { font-size: 2.5em; }
+    .hero-text-content h2 { font-size: 1.6em; }
 }
 @media (max-width: 767px) {
     .hero-section { padding: 3rem 0; }
@@ -669,7 +656,7 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     .recruitment-alert { padding: 1.5rem; }
 
     .news-section { padding: 2rem 0; }
-    .news-card { /* From inline */
+    .news-card {
         width: 290px !important; min-width: 290px !important; min-height: 260px;
     }
     .news-card .card-body { padding: 1.25rem; }
@@ -687,10 +674,10 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     .recruitment-alert { padding: 1.25rem; }
     .recruitment-alert .contact-info { font-size: 1em; }
 
-    .news-card { /* From inline */
+    .news-card {
         width: calc(100vw - 30px) !important;
         min-width: calc(100vw - 30px) !important;
-        min-height: auto; /* Changed from inline */
+        min-height: auto;
     }
     .news-card .card-body { padding: 1rem; }
     .news-card h4 { font-size: 1.1em; }
@@ -2211,5 +2198,460 @@ body[data-clean-url="true"] main > .content-container:first-child {
     .resource-card.featured-resource,
     .resource-grid {
         grid-template-columns: 1fr !important;
+    }
+}
+
+/* === Final mobile and color-scheme safeguards === */
+:root,
+html {
+    color-scheme: only light;
+}
+
+html,
+body,
+.page-container,
+main {
+    background: #ffffff !important;
+}
+
+#bloc-0,
+#bloc-0 .container,
+#bloc-0 .container-fluid,
+.navbar {
+    background: #ffffff !important;
+}
+
+.navbar-brand,
+.navbar-brand img {
+    background: #ffffff !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+}
+
+@media (max-width: 767px) {
+    html,
+    body,
+    .page-container {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+
+    .content-container {
+        width: calc(100vw - 40px) !important;
+        max-width: calc(100vw - 40px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    .research-overview h2,
+    .research-card h2,
+    .publication-title,
+    .homepage-news-title {
+        max-width: 100% !important;
+        overflow-wrap: anywhere !important;
+        white-space: normal !important;
+    }
+
+    .hero-section {
+        min-height: max(680px, calc(100svh - 76px)) !important;
+        padding: 6rem 16px 2.4rem !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .hero-content-wrapper {
+        width: min(100%, calc(100vw - 40px), 560px) !important;
+        max-width: calc(100vw - 40px) !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .hero-text-content {
+        width: min(100%, 300px) !important;
+        max-width: calc(100vw - 40px) !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .hero-text-content h1,
+    .hero-text-content h2,
+    .hero-text-content .research-focus-intro {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    .hero-text-content h1 {
+        max-width: 9.5ch !important;
+        font-size: clamp(2.15rem, 9.2vw, 2.75rem) !important;
+    }
+
+    .hero-text-content h2 {
+        max-width: 280px !important;
+        font-size: 0.78rem !important;
+    }
+
+    .hero-text-content .research-focus-intro {
+        max-width: 290px !important;
+        font-size: 1rem !important;
+    }
+
+    .hero-actions {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 1.35rem auto 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 0.7rem !important;
+    }
+
+    .hero-action {
+        flex: 0 1 auto !important;
+        min-width: 145px !important;
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0.65rem 0.9rem !important;
+        text-align: center !important;
+    }
+
+    .hero-keyword-atmosphere {
+        inset: 0 !important;
+        overflow: hidden !important;
+    }
+
+    .hero-keyword {
+        font-size: clamp(3.8rem, 20vw, 7.6rem) !important;
+    }
+
+    .research-overview {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+        padding: 0 0 1rem !important;
+    }
+
+    .research-overview h2 {
+        max-width: 320px !important;
+        font-size: clamp(1.48rem, 6.4vw, 1.72rem) !important;
+    }
+
+    .research-overview p,
+    .research-card p {
+        max-width: 320px !important;
+        font-size: 1rem !important;
+    }
+
+    .research-compass,
+    .research-card-content {
+        max-width: 320px !important;
+    }
+
+    .research-compass {
+        max-width: 300px !important;
+    }
+
+    .research-compass-item {
+        width: 100% !important;
+        max-width: 300px !important;
+        box-sizing: border-box !important;
+    }
+
+    .research-compass-item span,
+    .research-card-content p,
+    .research-method-tag {
+        display: block !important;
+        max-width: 100% !important;
+        overflow-wrap: anywhere !important;
+        white-space: normal !important;
+    }
+
+    .research-compass {
+        max-width: 100% !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .research-card {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 1.35rem 0 !important;
+    }
+
+    .research-card:first-child {
+        padding-top: 0.45rem !important;
+    }
+
+    .research-card-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 0 !important;
+        height: clamp(190px, 54vw, 285px) !important;
+        aspect-ratio: auto !important;
+        border-radius: 8px !important;
+        background-size: cover !important;
+        background-position: center center !important;
+    }
+
+    .research-card-content {
+        width: 100% !important;
+    }
+
+    .research-methods {
+        gap: 0.45rem 0.75rem !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .hero-section {
+        min-height: max(640px, calc(100svh - 70px)) !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .hero-actions {
+        max-width: 300px !important;
+    }
+
+    .hero-action {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+/* === Header contrast, dropdown visibility, and display-heading type === */
+body .page-container h1,
+body .page-container h2,
+body .page-container .section-heading,
+body .page-container .research-overview h2,
+body .page-container .team-summary h2,
+body .page-container .publication-summary h2,
+body .page-container .news-summary h2,
+body .page-container .resource-intro h2,
+body .page-container .highly-cited-heading h2 {
+    font-family: var(--font-family-serif-display) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+}
+
+body.home-page .hero-text-content h2 {
+    max-width: 760px !important;
+    color: var(--color-gold-light) !important;
+    font-family: var(--font-family-sans-serif) !important;
+    font-size: clamp(1.15rem, 2vw, 1.65rem) !important;
+    font-weight: 760 !important;
+    line-height: 1.28 !important;
+    text-transform: none !important;
+    text-shadow: 0 8px 26px rgba(0, 0, 0, 0.42) !important;
+}
+
+#bloc-0 .dropdown-menu {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 33, 71, 0.12) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 18px 42px rgba(0, 33, 71, 0.14) !important;
+}
+
+#bloc-0 .dropdown-menu .dropdown-item,
+#bloc-0 .dropdown-menu .nav-link {
+    color: var(--text-color-dark) !important;
+    background: transparent !important;
+}
+
+#bloc-0 .dropdown-menu .dropdown-item:hover,
+#bloc-0 .dropdown-menu .dropdown-item:focus,
+#bloc-0 .dropdown-menu .nav-link:hover,
+#bloc-0 .dropdown-menu .nav-link:focus {
+    color: var(--color-primary-blue) !important;
+    background: rgba(185, 151, 91, 0.14) !important;
+}
+
+body.home-page #bloc-0 .dropdown-menu {
+    background: rgba(0, 23, 47, 0.97) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+body.home-page #bloc-0 .dropdown-menu .dropdown-item,
+body.home-page #bloc-0 .dropdown-menu .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.home-page #bloc-0 .dropdown-menu .dropdown-item:hover,
+body.home-page #bloc-0 .dropdown-menu .dropdown-item:focus,
+body.home-page #bloc-0 .dropdown-menu .nav-link:hover,
+body.home-page #bloc-0 .dropdown-menu .nav-link:focus {
+    color: #ffffff !important;
+    background: rgba(216, 189, 127, 0.18) !important;
+}
+
+@media (max-width: 767px) {
+    #bloc-0 .navbar .container-fluid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto !important;
+        align-items: center !important;
+        gap: 0.75rem !important;
+        padding-left: 0.85rem !important;
+        padding-right: 0.85rem !important;
+    }
+
+    #bloc-0 .navbar-brand {
+        min-width: 0 !important;
+        max-width: calc(100vw - 108px) !important;
+    }
+
+    #bloc-0 .navbar-brand img {
+        max-width: min(200px, calc(100vw - 112px)) !important;
+        height: auto !important;
+    }
+
+    #nav-toggle {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        margin-left: 0 !important;
+        justify-self: end !important;
+    }
+
+    #nav-toggle .navbar-toggler-icon,
+    #nav-toggle svg {
+        display: block !important;
+    }
+
+    #bloc-0 .navbar-collapse {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+    }
+
+    body[data-clean-url="true"] .page-container > header #bloc-0 .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98) !important;
+        border: 1px solid rgba(0, 33, 71, 0.12) !important;
+        box-shadow: 0 18px 42px rgba(0, 33, 71, 0.14) !important;
+    }
+
+    body[data-clean-url="true"] .page-container > header #bloc-0 .navbar-collapse .nav-link {
+        color: var(--text-color-dark) !important;
+    }
+
+    body[data-clean-url="true"] .page-container > header #bloc-0 .navbar-collapse .nav-link:hover,
+    body[data-clean-url="true"] .page-container > header #bloc-0 .navbar-collapse .nav-link.active {
+        color: var(--color-primary-blue) !important;
+        background: rgba(185, 151, 91, 0.14) !important;
+    }
+
+    body.home-page #bloc-0 .navbar-collapse {
+        background: rgba(0, 23, 47, 0.97) !important;
+        border-color: rgba(255, 255, 255, 0.14) !important;
+    }
+
+    body.home-page #bloc-0 .navbar-collapse .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    body.home-page #bloc-0 .navbar-collapse .nav-link:hover,
+    body.home-page #bloc-0 .navbar-collapse .nav-link.active {
+        color: #ffffff !important;
+        background: rgba(216, 189, 127, 0.18) !important;
+    }
+}
+
+.news-entry-highlight {
+    background: rgba(185, 151, 91, 0.14) !important;
+    box-shadow: inset 4px 0 0 var(--color-gold), 0 20px 45px rgba(0, 33, 71, 0.1) !important;
+}
+
+/* === Unified hover treatment and homepage institute-logo scale === */
+body.home-page .hero-gallery-image-container {
+    height: 87px !important;
+}
+
+body.home-page .hero-gallery-image {
+    opacity: 0.74 !important;
+}
+
+a:not(.nav-link):not(.navbar-brand):not(.hero-action):not(.featured-cover-item) {
+    transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, text-decoration-color 0.18s ease;
+}
+
+a:not(.nav-link):not(.navbar-brand):not(.hero-action):not(.featured-cover-item):hover {
+    color: var(--text-link-hover-color) !important;
+    text-decoration: underline !important;
+    text-decoration-color: currentColor !important;
+}
+
+.research-card,
+.team-member-card,
+#previous-members-grid .team-member-card,
+.resource-card,
+.resource-card.featured-resource,
+.publication-entry,
+.news-entry-card,
+.highly-cited-card,
+.homepage-news-item a,
+.lab-system-buttons .btn {
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.research-card:hover,
+.team-member-card:hover,
+#previous-members-grid .team-member-card:hover,
+.resource-card:hover,
+.resource-card.featured-resource:hover,
+.publication-entry:hover,
+.news-entry-card:hover,
+.highly-cited-card:hover,
+.homepage-news-item a:hover,
+.lab-system-buttons .btn:hover {
+    transform: translateY(-1px) !important;
+    background: rgba(0, 33, 71, 0.018) !important;
+    border-color: rgba(185, 151, 91, 0.42) !important;
+    box-shadow: none !important;
+}
+
+.publication-entry:hover,
+.news-entry-card:hover,
+.research-card:hover,
+.resource-card:hover,
+.resource-card.featured-resource:hover {
+    border-bottom-color: rgba(185, 151, 91, 0.42) !important;
+    border-top-color: rgba(185, 151, 91, 0.42) !important;
+}
+
+.team-member-card:hover,
+#previous-members-grid .team-member-card:hover,
+.highly-cited-card:hover,
+.lab-system-buttons .btn:hover {
+    border-left-color: rgba(185, 151, 91, 0.72) !important;
+}
+
+.homepage-news-item a:hover {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+}
+
+@media (max-width: 767px) {
+    body.home-page .hero-text-content h2 {
+        max-width: 300px !important;
+        font-size: 1.05rem !important;
+    }
+
+    body.home-page .hero-gallery-image-container {
+        height: 72px !important;
     }
 }

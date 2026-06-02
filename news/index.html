@@ -5,9 +5,11 @@
     <meta name="keywords" content="Zheng Group news, electrochemistry updates, lab achievements, research news, GTIIT electrochemistry">
     <meta name="description" content="Stay updated with the latest news, achievements, and announcements from The Zheng Group at GTIIT.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
 	<meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="../website%20icon.png">
-    
+
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
 	<link rel="stylesheet" type="text/css" href="../style.css?eb-garamond-1">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
@@ -15,11 +17,10 @@
     <title>News - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for news/index.html */
         body {
             background-color: var(--background-color-light-gray);
         }
-        
+
         .news-entry-card, .news-entry-title {
             font-family: var(--font-family-sans-serif);
         }
@@ -42,9 +43,9 @@
             padding-bottom: 0;
             border-bottom: none;
         }
-        
+
         .news-entry-date {
-            display: block; 
+            display: block;
             font-size: 0.95rem;
             color: var(--text-color-subtle);
             margin-bottom: 0.25rem;
@@ -52,7 +53,7 @@
         }
 
         .news-entry-title {
-            font-size: 1.25rem; 
+            font-size: 1.25rem;
             font-weight: 700;
             color: var(--text-color-headings);
             margin-bottom: 0;
@@ -115,7 +116,7 @@
             margin-left: 1.5rem;
             margin-bottom: 0.75rem;
         }
-        
+
         /* Default centered layout (when float is null) */
         .news-image-container.centered {
             display: block;
@@ -135,7 +136,7 @@
         /* Responsive Adjustments */
         @media (max-width: 767px) {
             .news-entry-title { font-size: 1.15rem; }
-            
+
             /* On mobile, disable float and center the image */
             .news-image-container.float-left,
             .news-image-container.float-right {
@@ -271,7 +272,7 @@
         }
 
     </style>
-    
+
 </head>
 <body data-clean-url="true">
 
@@ -282,7 +283,7 @@
 
 <!-- Main container -->
 <div class="page-container">
-    
+
 <header>
 <!-- bloc-0: Navigation -->
 <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
@@ -340,11 +341,11 @@
                 <p>Lab news, publications, talks, awards, and group activities from the Electrochemical Interface &amp; Conversion Lab.</p>
             </div>
         </section>
-        
+
         <div class="news-list-container" id="news-items-list">
             <!-- News items will be dynamically generated here by JavaScript -->
         </div> <!-- End #news-items-list -->
-        
+
     </div> <!-- End .content-container -->
 </main>
 
@@ -365,11 +366,11 @@
 
 </div>
 <!-- Main container END -->
-    
+
 <!-- Additional JS -->
 <script src="../js/jquery.min.js" defer></script>
 <script src="../js/bootstrap.bundle.min.js?3655" defer></script>
-<script src="../js/blocs.min.js?4260" defer></script> 
+<script src="../js/blocs.min.js?4260" defer></script>
 <script src="../js/lazysizes.min.js" defer></script>
 <script src="../js/site-year.js" defer></script>
 <script src="../js/marked.min.js" defer></script>
@@ -422,6 +423,23 @@
             `;
         });
         container.innerHTML = newsHTML;
+
+        function scrollNewsFromHash() {
+            if (!window.location.hash) return;
+
+            const targetId = decodeURIComponent(window.location.hash.slice(1));
+            const target = document.getElementById(targetId);
+            if (!target) return;
+
+            setTimeout(() => {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                target.classList.add('news-entry-highlight');
+                setTimeout(() => target.classList.remove('news-entry-highlight'), 2600);
+            }, 150);
+        }
+
+        scrollNewsFromHash();
+        window.addEventListener('hashchange', scrollNewsFromHash);
     });
 </script>
 

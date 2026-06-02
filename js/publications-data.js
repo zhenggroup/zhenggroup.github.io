@@ -15,7 +15,7 @@ const allPublications = [
         doi: "10.1021/acs.jpcc.6c00506",
         imageUrl: "../img/jp6c00506_0015.webp", imageAlt: "jpcc2026",
         dimensionsDoi: "10.1021/acs.jpcc.6c00506"
-    }, 
+    },
     {
         number: 60, year: 2026, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*",
@@ -24,7 +24,7 @@ const allPublications = [
         doi: "10.1021/acselectrochem.6c00058",
         imageUrl: "../img/acse.jpg", imageAlt: "acselectrochem2026",
         dimensionsDoi: "10.1021/acselectrochem.6c00058"
-    }, 
+    },
     {
         number: 59, year: 2026, type: "Article",
         authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
@@ -33,7 +33,7 @@ const allPublications = [
         doi: "10.1016/j.electacta.2026.148501",
         imageUrl: "../img/26ea.jpg", imageAlt: "26ea",
         dimensionsDoi: "10.1016/j.electacta.2026.148501"
-    }, 
+    },
     {
         number: 58, year: 2026, type: "Article",
         authors: "S. Kong, E. Soto, J. Hong, R. Davis, E. Nelson, V. Roddatis, O.I. Lebedev, <b><u>W. Zheng</u></b>, H.W. Odhiambo, N. Oh, V. Upadhyay, N.C.M. Spera, D. Raturi, P. Singh, G. Ouyang, F.D. Vila, S.R. Bare, Y.V. Kolen'ko, D.D. Johnson, K. Kovnir*",
@@ -42,7 +42,7 @@ const allPublications = [
         doi: "10.1021/jacs.6c01756",
         imageUrl: "../img/25jacs.jpg", imageAlt: "jacs2026",
         dimensionsDoi: "10.1021/jacs.6c01756"
-    }, 
+    },
     {
         number: 57, year: 2026, type: "Article",
         authors: "<b><u>S. Chen</u></b>, <b><u>W. Zheng</u></b>*",
@@ -52,7 +52,7 @@ const allPublications = [
         imageUrl: "../img/cm.jpg", imageAlt: "CM",
         comments: ["featured on the cover"],
         dimensionsDoi: "10.1021/acs.chemmater.5c01720"
-    }, 
+    },
 
     // 2025
     {
@@ -64,7 +64,7 @@ const allPublications = [
         imageUrl: "../img/jacs_au.jpg", imageAlt: "JACS Au",
         comments: ["featured on the cover"],
         dimensionsDoi: "10.1021/jacsau.5c01196"
-    }, 
+    },
     {
         number: 55, year: 2025, type: "Article",
         authors: "K. Wang, Z. Zhu, Y. Liu, <b><u>W. Zheng</u></b>, Z. Yuan, Z. Lin, R. Semiat, L. Shao, X. He*",
@@ -73,7 +73,7 @@ const allPublications = [
         doi: "10.1126/sciadv.adv8650",
         imageUrl: "", imageAlt: "SA",
         dimensionsDoi: "10.1126/sciadv.adv8650"
-    }, 
+    },
     {
         number: 54, year: 2025, type: "Article",
         authors: "S. Kong, D. Raturi, B. Owens-Baird, <b><u>W. Zheng</u></b>, Y.V. Kolen'ko, P. Singh, D.D. Johnson, K. Kovnir*",
@@ -82,7 +82,7 @@ const allPublications = [
         doi: "10.1021/acscatal.5c04802",
         imageUrl: "../img/25acscat.jpg", imageAlt: "acs catalysis",
         dimensionsDoi: "10.1021/acscatal.5c04802"
-    }, 
+    },
     {
         number: 53, year: 2025, type: "Invited Review",
         authors: "<b><u>T. Zhang</u></b>,^ Y. Li,&nbsp;<b><u>W. Zheng</u></b>*",
@@ -91,7 +91,7 @@ const allPublications = [
         doi: "10.1007/s43939-025-00393-6",
         imageUrl: "../img/ldh.jpg", imageAlt: "none",
         dimensionsDoi: "10.1007/s43939-025-00393-6"
-    }, 
+    },
     {
         number: 52, year: 2025, type: "Invited Article",
         authors: "<b><u>S. Chen</u></b>,^ <b><u>T. Zhang</u></b>,^ L. Zheng, J. Gao, X. Huang, J. Gu, C. Vogt,&nbsp;<b><u>W. Zheng</u></b>*",
@@ -101,7 +101,7 @@ const allPublications = [
         imageUrl: "../img/jp5c02770_0009.webp", imageAlt: "TOC for Selective Ammonia Electrooxidation",
         comments: ["Featured on the cover"],
         dimensionsDoi: "10.1021/acs.jpcc.5c02770"
-    }, 
+    },
     {
         number: 51, year: 2026, type: "Invited Review",
         authors: "<b><u>W. Zheng</u></b>*",
@@ -135,7 +135,7 @@ const allPublications = [
         number: 48, year: 2024, type: "Article",
         authors: "<b><u>J. Zhong</u></b>, J. Ge, <b><u>Z. Wu</u></b>, Q. Zhang, E. Stavrou, <b><u>W. Zheng</u></b>*",
         title: "Bismuth Doping Unlocks Stability of Copper Oxides in Anodic Reaction: A Case Analysis of Glucose Electrooxidation",
-        journal: "Electrochimica Acta, 2024, 145178", // Original HTML had 497, 145178 - using 145178 as it's likely the article ID
+        journal: "Electrochimica Acta, 2024, 145178",
         doi: "10.1016/j.electacta.2024.145178",
         imageUrl: "../img/1-s2.0-S0013468624014130-ga1_lrg.jpg", imageAlt: "TOC for Bismuth Doping Unlocks Stability",
         dimensionsDoi: "10.1016/j.electacta.2024.145178"
@@ -225,7 +225,6 @@ const allPublications = [
         title: "Beginner's Guide to Raman Spectroelectrochemistry for Electrocatalysis Study",
         journal: "Chemistry Methods, 2023, 3(2), e202200042",
         doi: "10.1002/cmtd.202200042",
-        pdfLink: "../downloads/Chemistry%20Methods%20-%202022%20-%20Zheng%20-%20Beginner%20s%20Guide%20to%20Raman%20Spectroelectrochemistry%20for%20Electrocatalysis%20Study.pdf",
         imageUrl: "../img/cmtd202200042-toc-0001-m.jpg", imageAlt: "TOC for Beginner's Guide to Raman Spectroelectrochemistry",
         featuredIn: [ { text: "Materials Views:为新手准备的电化学原位拉曼光谱实验指南", url: "https://mvc.wiley.cn/research-news/231127-6/" } ],
         dimensionsDoi: "10.1002/cmtd.202200042"
@@ -311,7 +310,7 @@ const allPublications = [
         number: 31, year: 2021, type: "Article",
         authors: "J. Yan, X. Zhang, <u>W. Zheng</u>, L.Y.S. Lee*",
         title: "Interface Engineering of 2D-C<sub>3</sub>N<sub>4</sub>/NiFe-LDH Heterostructure for Highly Efficient Photocatalytic Hydrogen Evolution",
-        journal: "ACS Applied Materials & Interfaces, 2021, 21, 24723", // Original HTML had 13, 24723 - assuming 13 is vol
+        journal: "ACS Applied Materials & Interfaces, 2021, 21, 24723",
         doi: "10.1021/acsami.1c03240",
         imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
         dimensionsDoi: "10.1021/acsami.1c03240"
@@ -360,7 +359,7 @@ const allPublications = [
         number: 26, year: 2020, type: "Article",
         authors: "<u>W. Zheng</u>, M. Liu, L.Y.S. Lee*",
         title: "Best Practices in Using Foam-Type Electrodes for Electrocatalytic Performance Benchmark",
-        journal: "ACS Energy Letters, 2020, 5, 3260", // Original HTML had 3260-3264
+        journal: "ACS Energy Letters, 2020, 5, 3260",
         doi: "10.1021/acsenergylett.0c01958",
         imageUrl: "../img/nz0c01958_0001.webp", imageAlt: "TOC for Best Practices in Using Foam-Type Electrodes",
         dimensionsDoi: "10.1021/acsenergylett.0c01958"
@@ -397,7 +396,7 @@ const allPublications = [
         number: 22, year: 2020, type: "Article",
         authors: "<u>W. Zheng</u>, M. Liu, L.Y.S. Lee*",
         title: "Electrochemical Instability of Metal-Organic Frameworks: In Situ Spectroelectrochemical Investigation of the Real Active Sites",
-        journal: "ACS Catalysis, 2020, 20, 81–92", // Original HTML had 10, 81-92
+        journal: "ACS Catalysis, 2020, 20, 81–92",
         doi: "10.1021/acscatal.9b03790",
         imageUrl: "../img/cs9b03790_0007.webp", imageAlt: "TOC for Electrochemical Instability of Metal-Organic Frameworks",
         comments: ["Highly cited paper, top 1% Chemistry (Clarivate, 2021, 2022, 2023, 2024)"],

@@ -8,6 +8,8 @@
     <meta name="description"
         content="Welcome to the Electrochemical Interface & Conversion Lab (The Zheng Group) led by Dr. Weiran Zheng at Guangdong Technion-Israel Institute of Technology (GTIIT). We focus on spectroelectrochemistry and scanning probe microscopy.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
     <meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="website%20icon.png">
 
@@ -29,15 +31,21 @@
             z-index: 100;
         }
 
-        /* 
-         * Target the specific div (#bloc-0) to make it transparent and remove dividers.
+        /*
+         * Place the homepage navigation directly on the Zheng Group hero block.
         */
         header #bloc-0 {
             background: transparent !important;
             border-bottom: none !important;
-            /* ADDED: Remove any bottom border */
             box-shadow: none !important;
-            /* ADDED: Remove any box shadow */
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+
+        header #bloc-0 .container,
+        header #bloc-0 .container-fluid,
+        header #bloc-0 .navbar {
+            background: transparent !important;
         }
 
         /* Make navigation links white for visibility against the video */
@@ -51,12 +59,15 @@
         header #bloc-0 .nav-link.active,
         header #bloc-0 .nav-link:hover {
             color: #FFFFFF !important;
-            background-color: rgba(185, 151, 91, 0.22);
+            background-color: rgba(216, 189, 127, 0.18);
         }
 
         /* Use a more specific selector to make the logo white */
+        header #bloc-0 .navbar-brand,
         header #bloc-0 .navbar-brand img {
-            filter: brightness(0) invert(1);
+            background: transparent !important;
+            filter: brightness(0) invert(1) !important;
+            mix-blend-mode: normal !important;
         }
 
         /* Change mobile hamburger menu icon to white */
@@ -73,7 +84,8 @@
         /* Add a dark background to the collapsed mobile menu for readability */
         @media (max-width: 767px) {
             header #bloc-0 .navbar-collapse {
-                background-color: rgba(0, 0, 0, 0.85);
+                background-color: rgba(0, 23, 47, 0.97);
+                border: 1px solid rgba(255, 255, 255, 0.14);
                 border-radius: 8px;
                 padding: 1rem;
                 margin-top: 0.5rem;
@@ -590,7 +602,7 @@
 
 </head>
 
-<body data-show-recruitment="false" data-show-news="true">
+<body class="home-page" data-show-recruitment="false" data-show-news="true">
 
     <!-- Preloader -->
     <div id="page-loading-blocs-notifaction" class="page-preloader"></div>

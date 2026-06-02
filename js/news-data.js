@@ -26,8 +26,8 @@ const newsData = [
     content: `<p>Prof. Zheng recently delivered talks at the Oregon Center for Electrochemistry on "in situ method for electrode deactivation analysis" and the 249th ECS Meeting on "time-resolved electrochemical impedance analysis for electrocatalyst degradation study".</p>`,
     imageSrc: "../img/ecs249.jpg",
     imageAlt: "Prof. Zheng at the 249th ECS Meeting",
-    imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'left',
+    imageWidth: '30%',
     imageCaption: " "
   },
   {
@@ -36,8 +36,8 @@ const newsData = [
     title: "Yingshi Su's papers published on Electrochimica Acta and Journal of Physical Chemistry C",
     content: `<p>The study by Yingshi on spectroelectrochemical and chemical analysis of the optical and electric evolution of FTO is published in Electrochimica Acta (https://doi.org/10.1016/j.electacta.2026.148501) and Journal of the Physical Chemistry C (https://doi.org/10.1021/acs.jpcc.6c00506).</p>`,
     imageAlt: " ",
-    imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'left',
+    imageWidth: '30%',
     imageCaption: " "
   },
   {
@@ -46,8 +46,8 @@ const newsData = [
     title: "Prof. Zheng's tutorial paper on in situ electrochemistry is published on ACS Electrochemistry",
     content: `<p>Prof. Zheng has published a tutorial/viewpoint paper on the limitation and traps of in situ methods: "Seeing Is Not Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis". In situ and operando techniques have revolutionized electrochemical research by enabling direct interrogation of electrochemical interfaces. However, these methods introduce new failure modes, including experimental perturbations, observability bias, and interpretive overreach, that can yield internally consistent yet misleading conclusions. In this work, we analyze why operando measurements can disagree across techniques, cell configurations, and laboratories despite high data quality. Through a framework examining observability, kinetics, spatial heterogeneity, and inference logic, we show how thin-layer geometries, reference instability, bubble dynamics, probe perturbations, and spectator-dominated signals decouple measured signals from catalytic events. A fundamental paradox emerges: kinetically important intermediates can be unobservable, while spectroscopically dominant species may reflect accumulation rather than catalytic control. We identify interpretive traps recurring across spectroscopic, microscopic, and scattering approaches to establish clearer boundaries for what operando studies can determine and promote rigorous links between observation and mechanistic inference.</p>`,
     imageAlt: " ",
-    imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'left',
+    imageWidth: '30%',
     imageCaption: " "
   },
   {
@@ -56,8 +56,8 @@ const newsData = [
     title: "Sijie Chen is awarded the Excellent Graduate Student of Academic year 2024-2025",
     content: `<p>Sijie Chen has been awarded the Excellent Graduate Student of Academic year 2024-2025. Congratulations!</p>`,
     imageAlt: " ",
-    imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'left',
+    imageWidth: '30%',
     imageCaption: " "
   },
   {
@@ -67,8 +67,8 @@ const newsData = [
     content: `<p>Indium tin oxide-coated flexible polyethylene terephthalate (ITO-PET) is increasingly utilized in various electrochemical applications due to its exceptional electrical conductivity and optical transparency. However, the chemical and electrochemical instability of ITO coated on a flexible substrate poses significant challenges to maintaining long-term durability and structural integrity under harsh electrochemical conditions. In this study, we conducted a comprehensive ex situ and operando investigation of the electrical and optical degradation of ITO-PET electrodes.</p>`,
     imageSrc: "../img/10.jpg",
     imageAlt: "Chemistry of Materials cover",
-    imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'left',
+    imageWidth: '30%',
     imageCaption: "Chemistry of Materials (Vol 38/Issue 4 2026)"
   },
   {
@@ -78,8 +78,8 @@ const newsData = [
     content: `<p>Prof. Zheng presented an invited talk on the 8th International Conference on Advanced Electromaterials (ICAE 2025) on the topic of "Catalyst Deactivation Analysis by In Situ Electrochemistry". The conference is organized by the Korean Institute of Electrical and Electronic Material Engineers.</p>`,
     imageSrc: "../img/icae2025.jpg",
     imageAlt: " ",
-    imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'left',
+    imageWidth: '30%',
     imageCaption: " "
   },
   {
@@ -89,8 +89,8 @@ const newsData = [
     content: `<p>Our method paper on time-resolved electrochemical impedance analysis is published on JACS Au. Evaluating the long-term stability of electrocatalysts under operational conditions is critical for understanding performance degradation in fuel cells, electrolyzers, and metal-air batteries. Conventional electrochemical techniques, such as chronoamperometry and chronopotentiometry, often rely on simple current or overpotential versus time correlations, offering limited insight into the evolving structure–performance relationships. In this study, we introduce a time-resolved electrochemical impedance analysis (tr-EIA) protocol that enables the real-time tracking of key electrochemical parameters, including current/overpotential, electrochemical double-layer capacitance, charge transfer resistance, electrolyte resistance, and process relaxation times, all in a single experiment. By applying tr-EIA to commercial RuO2 and Pt/C catalysts across representative electrochemical reactions, we reveal time-resolved structural dynamics and uncover distinct degradation pathways at different stages of operation. Notably, structural degradation tied to changes in the electrochemically active surface area is distinguished from kinetic factors, such as increased resistance, with quantitative insights provided by the proposed surface area contribution factor. This single-run tr-EIA approach delivers a comprehensive understanding of electrochemical and structural evolution, offering a powerful tool to decode the mechanisms governing electrocatalyst stability under realistic operating conditions..</p>`,
     imageSrc: "../img/9.jpg",
     imageAlt: "JACSAu cover",
-    imageFloat: 'right', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'right',
+    imageWidth: '30%',
     imageCaption: "JACS Au cover (Vol 5/Issue 12 2025)"
   },
   {
@@ -100,8 +100,8 @@ const newsData = [
     content: `<p>Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published in <a href="https://doi.org/10.1021/acs.jpcc.5c02770" target="_blank" rel="noopener noreferrer">The Journal of Physical Chemistry C</a>, featured as front cover. This article is published as part of The Journal of Physical Chemistry C special issue “Jacek Lipkowski Festschrift”.</p> <p>Ammonia electrooxidation (AOR) on metal oxides involves a complex interplay between nitrogen (N)- and oxygen (O)-containing intermediates, critically influencing reaction activity and product selectivity. In this study, we investigate AOR on RuO2 under alkaline conditions with electrochemical and in situ characterization techniques, including differential electrochemical mass spectrometry (DEMS) and ultraviolet–visible (UV–vis) spectroelectrochemistry. The effects of NH3 and OH– concentration (0.1–2.0 M, and 0.01–1.0 M, respectively) as well as applied potential on AOR and the concurrent oxygen evolution reaction (OER) are examined. NO and NO3– are identified as the main AOR products, especially at high OH– concentration and potential, with minor quantities of N2O and no detectable N2 formation. Increasing NH3 concentration suppresses OER by competing for surface sites, particularly at low OH– concentrations, while promoting AOR pathways.</p>`,
     imageSrc: "../img/7.jpg",
     imageAlt: "JPCC cover",
-    imageFloat: 'left', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'left',
+    imageWidth: '30%',
     imageCaption: "JPCC cover (Vol 129/Issue 27 2025)"
   },
   {
@@ -188,8 +188,8 @@ const newsData = [
     content: `<p>Invited by Prof. Wenhui He, Prof. Weiran Zheng delivered an invited lecture on “In-situ Analysis of Electrocatalyst Deactivation” at the Changchun Institute of Applied Chemistry (CIAC), Chinese Academy Of Sciences.</p><p>应中国科学院长春应用化学研究所何文辉研究员邀请，郑蔚然副教授作关于“电催化剂失活过程的原位研究策略”的报告。</p>`,
     imageSrc: "../img/791fda8a572e0f4286e082e46dc912bf.JPG",
     imageAlt: "Weiran Zheng giving a presentation at a lectern.",
-    imageFloat: 'right', // DEMO: Image will float to the right
-    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageFloat: 'right',
+    imageWidth: '30%',
     imageCaption: "Prof. Zheng presenting at CIAC."
   },
   {
@@ -210,8 +210,8 @@ const newsData = [
     content: `<p>At the 244th Electrochemical Society (ECS) Meeting, Prof. Weiran Zheng delivered an oral presentation on “How to perform iR compensation in electrocatalytic study”.</p><p>在第244次美国电化学学会（ECS）年会上，郑蔚然副教授就“电催化研究中的iR校正原理与规范”作口头报告。</p>`,
     imageSrc: "../img/530b6f0ea5ae43d916f7de211361d9a5.JPG",
     imageAlt: "Weiran Zheng standing in front of an ECS poster.",
-    imageFloat: 'left', // DEMO: Image will float to the left
-    imageWidth: '280px', // DEMO: Image will have a fixed width
+    imageFloat: 'left',
+    imageWidth: '280px',
     imageCaption: "Presenting at the 244th ECS Meeting in Gothenburg."
   }
 ];

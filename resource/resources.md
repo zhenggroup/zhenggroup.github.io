@@ -86,12 +86,12 @@ Python package for parsing and processing .PAR files from electrochemical instru
 
 ### Recent Lectures
 
-**电催化剂失活过程的原位研究策略** (In Situ Study Strategies for Electrocatalyst Deactivation Processes)  
-Researchcloud（科研云） by Weiran Zheng • Feb. 6, 2025  
+**电催化剂失活过程的原位研究策略** (In Situ Study Strategies for Electrocatalyst Deactivation Processes)
+Researchcloud（科研云） by Weiran Zheng • Feb. 6, 2025
 [View on Bilibili →](https://www.bilibili.com/video/BV1bzN4efEDM/)
 
-**Introducing Python for Electrochemistry Research**  
-ECS Webinar by Weiran Zheng • Aug. 28, 2024  
+**Introducing Python for Electrochemistry Research**
+ECS Webinar by Weiran Zheng • Aug. 28, 2024
 [View on ECS Webinar Archive →](https://www.electrochem.org/ecs-webinar-archive)
 
 ### Fundamental Principles

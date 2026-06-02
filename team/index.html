@@ -5,17 +5,18 @@
     <meta name="keywords" content="Zheng Group team, Weiran Zheng, researchers, PhD students, MSc students, electrochemistry lab team">
     <meta name="description" content="Meet the team of the Electrochemical Interface & Conversion Lab (The Zheng Group) at GTIIT, led by Prof. Weiran Zheng.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
 	<meta name="robots" content="index, follow">
     <link rel="shortcut icon" type="image/png" href="../website%20icon.png">
-    
+
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?eb-garamond-1"> 
+	<link rel="stylesheet" type="text/css" href="../style.css?eb-garamond-1">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
     <title>Team - The Zheng Group</title>
 
     <style>
-        /* Page-specific styles for team/index.html */
         .section-heading,
         .pi-name,
         .pi-details h6,
@@ -23,7 +24,6 @@
             font-family: var(--font-family-sans-serif);
         }
 
-        /* Section headings override */
         .section-heading {
             font-weight: 700;
             color: var(--text-color-headings);
@@ -39,7 +39,6 @@
             display: block;
         }
 
-        /* PI Section Styling */
         .pi-section {
             background: transparent;
             padding: 2rem 0;
@@ -48,39 +47,39 @@
             display: flex;
             flex-wrap: wrap;
             gap: 2.5rem;
-            align-items: flex-start; 
+            align-items: flex-start;
         }
         .pi-image-contact {
             flex: 0 0 220px;
             text-align: center;
         }
         .pi-image-contact img.member-photo {
-            width: 180px; 
+            width: 180px;
             height: 180px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
         .pi-image-contact .pi-name {
             font-size: 1.5rem;
-            color: var(--color-dark-blue); 
+            color: var(--color-dark-blue);
             font-weight: 700;
             margin-bottom: 0.35rem;
         }
         .pi-image-contact .pi-title {
             font-size: 1.05rem;
-            color: var(--text-color-medium); 
+            color: var(--text-color-medium);
             margin-bottom: 1.25rem;
         }
         .pi-contact-links a {
-            color: var(--text-link-color); 
+            color: var(--text-link-color);
             margin: 0 0.5rem;
             font-size: 1.5rem;
             transition: color 0.2s ease;
         }
         .pi-contact-links a:hover {
-            color: var(--text-link-hover-color); 
+            color: var(--text-link-hover-color);
         }
         .pi-details {
             flex: 1;
@@ -88,36 +87,36 @@
         }
         .pi-details h6 {
             font-size: 1.25rem;
-            color: var(--text-color-headings); 
+            color: var(--text-color-headings);
             font-weight: 700;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
             padding-bottom: 0.35rem;
-            border-bottom: 1px solid var(--border-color-light); 
+            border-bottom: 1px solid var(--border-color-light);
         }
          .pi-details h6:first-of-type {
             margin-top: 0;
         }
-        .pi-details p { 
+        .pi-details p {
             margin-bottom: 1rem;
             line-height: 1.6;
             font-size: 1.05rem;
-            color: var(--text-color-medium); 
+            color: var(--text-color-medium);
         }
-        .pi-details p strong { 
-            font-weight: 700; 
-            color: var(--text-color-dark); 
+        .pi-details p strong {
+            font-weight: 700;
+            color: var(--text-color-dark);
         }
 
         /* Team Members Grid Styling */
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 2rem; 
+            gap: 2rem;
             margin-bottom: 3rem;
         }
         .team-member-card {
-            background: transparent; 
+            background: transparent;
             padding: 1.5rem 1rem;
             box-shadow: none;
             border: 1px solid transparent;
@@ -132,15 +131,15 @@
             transform: translateY(-4px);
             background: linear-gradient(135deg, rgba(248,249,250,0.5), rgba(233,236,239,0.3));
             border-color: rgba(0,0,0,0.03);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.04); 
+            box-shadow: 0 8px 24px rgba(0,0,0,0.04);
         }
         .team-member-card .member-photo {
-            width: 140px; 
+            width: 140px;
             height: 140px;
-            border-radius: 50%; 
-            object-fit: cover; 
+            border-radius: 50%;
+            object-fit: cover;
             margin-bottom: 1.25rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: transform 0.3s ease;
         }
         .team-member-card:hover .member-photo {
@@ -148,19 +147,19 @@
         }
         .team-member-card .member-name {
             font-size: 1.2rem;
-            color: var(--text-color-headings); 
+            color: var(--text-color-headings);
             font-weight: 700;
             margin-bottom: 0.35rem;
             line-height: 1.3;
         }
         .team-member-card .member-role {
             font-size: 1rem;
-            color: var(--text-color-medium); 
+            color: var(--text-color-medium);
             margin-bottom: 0;
             line-height: 1.5;
             flex-grow: 1; /* Pushes contact links to the bottom */
         }
-        
+
         /* --- NEW STYLES FOR MEMBER CONTACT LINKS --- */
         .member-contact-links {
             margin-top: 1rem; /* Space above the icons */
@@ -186,7 +185,7 @@
             .team-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
         }
         @media (max-width: 480px) {
-            .team-grid { grid-template-columns: 1fr; } 
+            .team-grid { grid-template-columns: 1fr; }
         }
 
         /* Team page clarity refresh */
@@ -380,7 +379,7 @@
             }
         }
     </style>
-    
+
 </head>
 <body data-clean-url="true">
 
@@ -390,7 +389,7 @@
 
 <!-- Main container -->
 <div class="page-container">
-    
+
 <header>
 <!-- bloc-0: Navigation -->
 <div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
@@ -436,23 +435,17 @@
                 <p>Meet the researchers and students working on electrochemical interfaces, operando methods, and electrocatalyst stability in the Zheng Group.</p>
             </div>
         </section>
-        
+
         <h2 class="section-heading">Lab PI</h2>
-        <!-- PI Section: Content will be generated by JavaScript -->
         <section class="pi-section" id="pi-container">
-            <!-- JS will inject PI photo and details here -->
         </section>
 
         <h2 class="section-heading">Current Members</h2>
-        <!-- Current Members Grid: Content will be generated by JavaScript -->
         <section class="team-grid" id="current-members-grid">
-            <!-- JS will inject member cards here -->
         </section>
 
         <h2 class="section-heading">Previous Members</h2>
-        <!-- Previous Members Grid: Content will be generated by JavaScript -->
         <section class="team-grid" id="previous-members-grid">
-            <!-- JS will inject member cards here -->
         </section>
 
     </div>
@@ -470,7 +463,7 @@
 
 </div>
 <!-- Main container END -->
-    
+
 <!-- Additional JS -->
 <script src="../js/jquery.min.js" defer></script>
 <script src="../js/bootstrap.bundle.min.js?3655" defer></script>
@@ -478,10 +471,8 @@
 <script src="../js/lazysizes.min.js" defer></script>
 <script src="../js/site-year.js" defer></script>
 
-<!-- *** NEW: Load the team data *** -->
 <script src="../js/team-data.js?team-update-peter-cambal" defer></script>
 
-<!-- *** NEW: Script to build the team page from data *** -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const escapeHTML = (value) => String(value || '')
@@ -503,7 +494,6 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     };
 
-    // --- 1. GENERATE PI SECTION ---
     const piContainer = document.getElementById('pi-container');
     if (piContainer && typeof piData !== 'undefined') {
         let piLinks = '';
@@ -531,7 +521,6 @@ document.addEventListener('DOMContentLoaded', function() {
         piContainer.innerHTML = piHTML;
     }
 
-    // --- 2. GENERATE MEMBER GRIDS (A REUSABLE FUNCTION) ---
     const generateMemberGrid = (membersArray, containerId) => {
         const container = document.getElementById(containerId);
         if (!container || typeof membersArray === 'undefined') return;
@@ -548,7 +537,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const linksHTML = memberLinks ? `<div class="member-contact-links">${memberLinks}</div>` : '';
 
-            const hasPhoto = member.photoSrc && !member.photoSrc.endsWith('/'); 
+            const hasPhoto = member.photoSrc && !member.photoSrc.endsWith('/');
             const photoSrc = hasPhoto ? member.photoSrc : '../img/placeholder-image.png';
 
             allCardsHTML += `
@@ -563,7 +552,6 @@ document.addEventListener('DOMContentLoaded', function() {
         container.innerHTML = allCardsHTML;
     };
 
-    // --- 3. CALL THE FUNCTION FOR CURRENT AND PREVIOUS MEMBERS ---
     generateMemberGrid(currentMembers, 'current-members-grid');
     generateMemberGrid(previousMembers, 'previous-members-grid');
 });

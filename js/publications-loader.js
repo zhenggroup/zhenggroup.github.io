@@ -526,7 +526,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     schedulePublicationBadgeScripts();
 
     openPublicationFromHash();
-    
+
     // LazySizes should pick up new images automatically if it's already loaded and observing.
     // If you face issues, you might need to manually trigger an update for LazySizes,
     // but usually, it's not necessary.
@@ -601,7 +601,7 @@ async function updatePublicationStats() {
             statusLabelEl.textContent = `Total Citations: ${totalCitations.toLocaleString()}`;
             statusValueEl.textContent = `${citationData.source} (${citationData.loadedCount}/${citationData.doiCount})`;
         }
-        
+
     } catch (error) {
         console.warn('Dimensions citation data not available:', error);
         if (citationTotalCardEl && citationTotalCountEl) {

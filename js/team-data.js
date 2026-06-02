@@ -123,5 +123,5 @@ const previousMembers = [
         photoSrc: "../img/4339e05276f975da75344856d6a2ea0e 2.JPG",
         orcid: null,
         googleScholar: null
-    }  
+    }
 ];
