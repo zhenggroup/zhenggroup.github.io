@@ -6,7 +6,7 @@
     <meta name="description" content="Meet the team of the Electrochemical Interface & Conversion Lab (The Zheng Group) at GTIIT, led by Prof. Weiran Zheng.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<meta name="robots" content="index, follow">
-    <link rel="shortcut icon" type="image/png" href="../favicon.png">
+    <link rel="shortcut icon" type="image/png" href="../website%20icon.png">
     
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
 	<link rel="stylesheet" type="text/css" href="../style.css?eb-garamond-1"> 
@@ -472,18 +472,37 @@
 <!-- Main container END -->
     
 <!-- Additional JS -->
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.bundle.min.js?3655"></script>
-<script src="../js/blocs.min.js?4260"></script>
+<script src="../js/jquery.min.js" defer></script>
+<script src="../js/bootstrap.bundle.min.js?3655" defer></script>
+<script src="../js/blocs.min.js?4260" defer></script>
 <script src="../js/lazysizes.min.js" defer></script>
-<script src="../js/site-year.js"></script>
+<script src="../js/site-year.js" defer></script>
 
 <!-- *** NEW: Load the team data *** -->
-<script src="../js/team-data.js?team-update-peter-cambal"></script>
+<script src="../js/team-data.js?team-update-peter-cambal" defer></script>
 
 <!-- *** NEW: Script to build the team page from data *** -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    const escapeHTML = (value) => String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+
+    const plainName = (name) => String(name || '').replace(/\s*\((.*?)\)\s*$/, ' $1').trim();
+
+    const formatName = (name) => {
+        const match = String(name || '').match(/^(.*?)\s*\((.*?)\)\s*$/);
+        if (!match) {
+            return `<span class="member-name-en">${escapeHTML(name)}</span>`;
+        }
+        return `
+            <span class="member-name-en">${escapeHTML(match[1].trim())}</span>
+            <span class="member-name-zh">${escapeHTML(match[2].trim())}</span>
+        `;
+    };
+
     // --- 1. GENERATE PI SECTION ---
     const piContainer = document.getElementById('pi-container');
     if (piContainer && typeof piData !== 'undefined') {
@@ -500,8 +519,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const piHTML = `
             <div class="pi-image-contact">
-                <img src="../img/lazyload-ph.png" data-src="${piData.photoSrc}" class="lazyload member-photo" alt="Photo of ${piData.name}" width="180" height="180">
-                <h3 class="pi-name">${piData.name}</h3>
+                <img src="../img/lazyload-ph.png" data-src="${piData.photoSrc}" class="lazyload member-photo" alt="Photo of ${escapeHTML(plainName(piData.name))}" width="180" height="180">
+                <h3 class="pi-name">${formatName(piData.name)}</h3>
                 <p class="pi-title">${piData.title}</p>
                 <div class="pi-contact-links">${piLinks}</div>
             </div>
@@ -534,8 +553,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             allCardsHTML += `
                 <div class="team-member-card">
-                    <img src="../img/lazyload-ph.png" data-src="${photoSrc}" class="lazyload member-photo" alt="Photo of ${member.name}" width="140" height="140">
-                    <h3 class="member-name">${member.name}</h3>
+                    <img src="../img/lazyload-ph.png" data-src="${photoSrc}" class="lazyload member-photo" alt="Photo of ${escapeHTML(plainName(member.name))}" width="140" height="140">
+                    <h3 class="member-name">${formatName(member.name)}</h3>
                     <p class="member-role">${member.role}</p>
                     ${linksHTML}
                 </div>

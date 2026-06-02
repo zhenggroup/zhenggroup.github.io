@@ -117,8 +117,8 @@ Journal: Science Advances, 2025, 11, eadv8650
 DOI: 10.1126/sciadv.adv8650
 Dimensions DOI: 10.1126/sciadv.adv8650
 PDF: 
-Image: 
-Image Alt: SA
+Image: ../img/sciadv-adv8650-f4.jpg
+Image Alt: Science Advances carbon membrane gas separation figure
 Comments: 
 Featured: 
 
@@ -193,7 +193,7 @@ DOI: 10.1002/adfm.202414041
 Dimensions DOI: 10.1002/adfm.202414041
 PDF: 
 Image: ../img/2025afm.jpg
-Image Alt: TOC Placeholder
+Image Alt: TOC for organic aluminum additive sodium metal batteries
 Comments: 
 Featured: 
 
@@ -268,7 +268,7 @@ DOI: 10.1002/cssc.202301926
 Dimensions DOI: 10.1002/cssc.202301926
 PDF: 
 Image: ../img/2024csc.jpg
-Image Alt: TOC Placeholder
+Image Alt: TOC for transition metal phosphides in seawater electrolysis
 Comments: Editors' choice: spotlights
 Featured: 
 
@@ -282,8 +282,8 @@ Journal: Advanced Materials, 2024, 36(16), 2311256
 DOI: 10.1002/adma.202311256
 Dimensions DOI: 10.1002/adma.202311256
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-adma202311256.svg
+Image Alt: Thumbnail for stable high-rate Na-metal battery anodes
 Comments: Featured on the cover
 Featured: 
 
@@ -462,8 +462,8 @@ Journal: ACS Applied Materials & Interfaces, 2021, 21, 24723
 DOI: 10.1021/acsami.1c03240
 Dimensions DOI: 10.1021/acsami.1c03240
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-acsami1c03240.svg
+Image Alt: Thumbnail for 2D C3N4 NiFe-LDH heterostructure
 Comments: 
 Featured: 
 
@@ -507,8 +507,8 @@ Journal: Applied Catalysis B: Environmental, 2021, 286, 119857
 DOI: 10.1016/j.apcatb.2020.119857
 Dimensions DOI: 10.1016/j.apcatb.2020.119857
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/1-s2.0-S0926337320312741-ga1_lrg.jpg
+Image Alt: TOC for Interface Engineered NiFe2O4-x/NiMoO4
 Comments: Highly cited paper, top 1% Chemistry (Clarivate, 2022, 2023, 2024)
 Featured: 
 
@@ -522,8 +522,8 @@ Journal: Chemical Engineering Journal, 2021, 417, 127900
 DOI: 10.1016/j.cej.2020.127900
 Dimensions DOI: 10.1016/j.cej.2020.127900
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/1-s2.0-S1385894720340195-ga1_lrg.jpg
+Image Alt: TOC for TiO2 film supported by gold nanorod array
 Comments: 
 Featured: 
 
@@ -552,8 +552,8 @@ Journal: Journal of Materials Chemistry A, 2020, 8, 22828
 DOI: 10.1039/D0TA06281B
 Dimensions DOI: 10.1039/D0TA06281B
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/rsc-d0ta06281b.gif
+Image Alt: TOC for Blue Order Disorder Janus-Type TiO2
 Comments: 
 Featured: 
 
@@ -568,7 +568,7 @@ DOI: 10.1002/aenm.201903490
 Dimensions DOI: 10.1002/aenm.201903490
 PDF: 
 Image: ../img/2020aem.jpg
-Image Alt: TOC Placeholder
+Image Alt: TOC for laser-assisted exfoliation of black phosphorus
 Comments: Featured on the cover
 Featured: 
 
@@ -582,8 +582,8 @@ Journal: Applied Catalysis B: Environmental, 2020, 273, 118927
 DOI: 10.1016/j.apcatb.2020.118927
 Dimensions DOI: 10.1016/j.apcatb.2020.118927
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/1-s2.0-S0926337320303428-ga1_lrg.jpg
+Image Alt: TOC for Copper Phosphosulfides
 Comments: 
 Featured: 
 
@@ -613,7 +613,7 @@ DOI: 10.1016/j.apcatb.2019.117824
 Dimensions DOI: 10.1016/j.apcatb.2019.117824
 PDF: 
 Image: ../img/20acb.jpg
-Image Alt: TOC Placeholder
+Image Alt: TOC for electrochemical degradation of antibiotics
 Comments: 
 Featured: 
 
@@ -627,8 +627,8 @@ Journal: Small, 2019, 15, 1903791
 DOI: 10.1002/smll.201903791
 Dimensions DOI: 10.1002/smll.201903791
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-smll201903791.svg
+Image Alt: Thumbnail for MoS2 laser-induced exfoliation
 Comments: 
 Featured: 
 
@@ -642,8 +642,8 @@ Journal: Small, 2019, 15, 1902649
 DOI: 10.1002/smll.201902649
 Dimensions DOI: 10.1002/smll.201902649
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-smll201902649.svg
+Image Alt: Thumbnail for vanadium-doped MXenes
 Comments: 
 Featured: 
 
@@ -658,7 +658,7 @@ DOI: 10.1016/j.electacta.2019.04.007
 Dimensions DOI: 10.1016/j.electacta.2019.04.007
 PDF: 
 Image: ../img/19ea.jpg
-Image Alt: TOC Placeholder
+Image Alt: TOC for transition metal ion-mediated glucose electrooxidation
 Comments: 
 Featured: 
 
@@ -672,8 +672,8 @@ Journal: Materials Today Chemistry, 2019, 12, 34—60
 DOI: 10.1016/j.mtchem.2018.12.002
 Dimensions DOI: 10.1016/j.mtchem.2018.12.002
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/1-s2.0-S2468519418302386-fx1_lrg.jpg
+Image Alt: Figure for two-dimensional MOF and COF review
 Comments: 
 Featured: 
 
@@ -687,8 +687,8 @@ Journal: Sensors and Actuators B: Chemical, 2019, 282, 187–196
 DOI: 10.1016/j.snb.2018.10.164
 Dimensions DOI: 10.1016/j.snb.2018.10.164
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/1-s2.0-S0925400518319415-gr1_lrg.jpg
+Image Alt: Figure for carbon supports with copper ion glucose sensor
 Comments: 
 Featured: 
 
@@ -702,8 +702,8 @@ Journal: Advanced Materials Interfaces, 2018, 5, 1800849
 DOI: 10.1002/admi.201800849
 Dimensions DOI: 10.1002/admi.201800849
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-admi201800849.svg
+Image Alt: Thumbnail for CoNi MOF water splitting electrocatalysts
 Comments: Featured on the cover
 Featured: 
 
@@ -717,8 +717,8 @@ Journal: Nano Energy, 2018, 52, 360—368
 DOI: 10.1016/j.nanoen.2018.08.010
 Dimensions DOI: 10.1016/j.nanoen.2018.08.010
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/1-s2.0-S221128551830572X-fx1_lrg.jpg
+Image Alt: Figure for Ni Co nanosheet arrays
 Comments: 
 Featured: 
 
@@ -733,7 +733,7 @@ DOI: 10.1002/elan.201800076
 Dimensions DOI: 10.1002/elan.201800076
 PDF: 
 Image: ../img/elan.jpg
-Image Alt: TOC Placeholder
+Image Alt: TOC for Cu-doped carbon nitride MWCNT glucose sensor
 Comments: 
 Featured: 
 
@@ -747,8 +747,8 @@ Journal: ChemElectroChem, 2017, 4, 2788—2792
 DOI: 10.1002/celc.201700712
 Dimensions DOI: 10.1002/celc.201700712
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-celc201700712.svg
+Image Alt: Thumbnail for Cu mediated glucose electrooxidation
 Comments: 
 Featured: 
 
@@ -762,8 +762,8 @@ Journal: Energy Technology, 2017, 5, 937—944
 DOI: 10.1002/ente.201600659
 Dimensions DOI: 10.1002/ente.201600659
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-ente201600659.svg
+Image Alt: Thumbnail for Pd polyaniline CO2 electroreduction
 Comments: 
 Featured: 
 
@@ -777,8 +777,8 @@ Journal: ACS Catalysis, 2017, 7, 592—605
 DOI: 10.1021/acscatal.6b02765
 Dimensions DOI: 10.1021/acscatal.6b02765
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-acscatal6b02765.svg
+Image Alt: Thumbnail for sulfur poisoning effects on Ru and Pd catalysts
 Comments: 
 Featured: 
 
@@ -792,8 +792,8 @@ Journal: Chemical Communications, 2016, 52, 13901—13904
 DOI: 10.1039/C6CC07212G
 Dimensions DOI: 10.1039/C6CC07212G
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/rsc-c6cc07212g.gif
+Image Alt: TOC for metal-polyaniline carbon dioxide electro-reduction
 Comments: 
 Featured: 
 
@@ -807,8 +807,8 @@ Journal: Journal of Electroanalytical Chemistry, 2016, 781, 155—160
 DOI: 10.1016/j.jelechem.2016.08.004
 Dimensions DOI: 10.1016/j.jelechem.2016.08.004
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/1-s2.0-S1572665716304015-fx1_lrg.jpg
+Image Alt: Figure for copper nanoparticles polyaniline graphene glucose sensor
 Comments: 
 Featured: 
 
@@ -822,8 +822,8 @@ Journal: ChemCatChem, 2015, 7, 3826—3831
 DOI: 10.1002/cctc.201500774
 Dimensions DOI: 10.1002/cctc.201500774
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-cctc201500774.svg
+Image Alt: Thumbnail for Pd nanoparticle size and shape effects
 Comments: 
 Featured: 
 
@@ -837,8 +837,8 @@ Journal: Chemical Communications, 2015, 51, 46-49
 DOI: 10.1039/C4CC06195K
 Dimensions DOI: 10.1039/C4CC06195K
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/rsc-c4cc06195k.gif
+Image Alt: TOC for dual doping effects on Pd nanocrystals
 Comments: 
 Featured: 
 
@@ -852,8 +852,8 @@ Journal: Chemical Communications, 2014, 50, 13702-13705
 DOI: 10.1039/C4CC04726E
 Dimensions DOI: 10.1039/C4CC04726E
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/rsc-c4cc04726e.gif
+Image Alt: TOC for niobate single molecular sheets
 Comments: 
 Featured: 
 
@@ -867,8 +867,8 @@ Journal: RSC Advances, 2014, 4, 88, 47488-47496
 DOI: 10.1039/C4RA08297D
 Dimensions DOI: 10.1039/C4RA08297D
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/rsc-c4ra08297d.gif
+Image Alt: TOC for photo and electronic excitation catalysis
 Comments: 
 Featured: 
 
@@ -882,8 +882,8 @@ Journal: Green Chemistry, 2013, 15, 8, 2064-2069
 DOI: 10.1039/C3GC40712H
 Dimensions DOI: 10.1039/C3GC40712H
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/rsc-c3gc40712h.gif
+Image Alt: TOC for palladium on iron oxide nanoparticles
 Comments: 
 Featured: 
 
@@ -897,8 +897,8 @@ Journal: Angewandte Chemie International Edition, 2011, 50, 9, 2162-2165
 DOI: 10.1002/anie.201007108
 Dimensions DOI: 10.1002/anie.201007108
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-anie201007108.svg
+Image Alt: Thumbnail for ZnO Cu interface in CO2 hydrogenation
 Comments: 
 Featured: 
 
@@ -912,8 +912,7 @@ Journal: Langmuir, 2010, 26, 5, 3106-3114
 DOI: 10.1021/la904264u
 Dimensions DOI: 10.1021/la904264u
 PDF: 
-Image: ../img/placeholder-image.png
-Image Alt: TOC Placeholder
+Image: ../img/toc-la904264u.svg
+Image Alt: Thumbnail for sol-gel morphology transformation
 Comments: 
 Featured: 
-

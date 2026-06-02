@@ -24,6 +24,29 @@ function splitFeaturedLinks(value) {
     }).filter(item => item.text && item.url);
 }
 
+function loadPublicationScriptOnce(src) {
+    return new Promise((resolve, reject) => {
+        if (typeof allPublications !== 'undefined' && Array.isArray(allPublications)) {
+            resolve();
+            return;
+        }
+
+        const existingScript = document.querySelector(`script[src="${src}"]`);
+        if (existingScript) {
+            existingScript.addEventListener('load', () => resolve(), { once: true });
+            existingScript.addEventListener('error', reject, { once: true });
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = src;
+        script.defer = true;
+        script.onload = () => resolve();
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+}
+
 function parsePublicationsMarkdown(markdown) {
     const entries = markdown.split(/\n(?=## )/).filter(section => section.trim().startsWith('## '));
 
@@ -71,7 +94,7 @@ function parsePublicationsMarkdown(markdown) {
 
 async function loadPublications() {
     try {
-        const response = await fetch('../publication/publications.md?citation-total-1');
+        const response = await fetch('../publication/publications.md', { cache: 'no-store' });
         if (!response.ok) {
             throw new Error('publications.md not found');
         }
@@ -83,6 +106,12 @@ async function loadPublications() {
         }
     } catch (error) {
         console.warn('Using legacy publication data fallback:', error);
+    }
+
+    try {
+        await loadPublicationScriptOnce('../js/publications-data.js');
+    } catch (error) {
+        console.warn('Legacy publication data could not be loaded:', error);
     }
 
     return typeof allPublications !== 'undefined' && Array.isArray(allPublications) ? allPublications : [];
@@ -182,6 +211,59 @@ async function fetchDimensionsCitationCount(doi) {
     }
 
     return extractCitationCount(await response.json());
+}
+
+function runWhenIdle(callback) {
+    if ('requestIdleCallback' in window) {
+        window.setTimeout(() => {
+            window.requestIdleCallback(callback, { timeout: 2500 });
+        }, 5000);
+        return;
+    }
+
+    window.setTimeout(callback, 5000);
+}
+
+function loadExternalPublicationScript(src, attributes = {}) {
+    return new Promise((resolve, reject) => {
+        const existingScript = document.querySelector(`script[src="${src}"]`);
+        if (existingScript) {
+            existingScript.addEventListener('load', () => resolve(), { once: true });
+            existingScript.addEventListener('error', reject, { once: true });
+            resolve();
+            return;
+        }
+
+        const script = document.createElement('script');
+        script.src = src;
+        script.async = true;
+        Object.entries(attributes).forEach(([key, value]) => {
+            script.setAttribute(key, value);
+        });
+        script.onload = () => resolve();
+        script.onerror = reject;
+        document.body.appendChild(script);
+    });
+}
+
+function schedulePublicationBadgeScripts() {
+    runWhenIdle(() => {
+        loadExternalPublicationScript('https://badge.dimensions.ai/badge.js', { charset: 'utf-8' })
+            .then(() => {
+                if (window.__dimensions_embed) {
+                    window.__dimensions_embed.addBadges();
+                }
+            })
+            .catch(error => console.warn('Dimensions badge script unavailable:', error));
+
+        loadExternalPublicationScript('https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js')
+            .then(() => {
+                if (typeof Altmetric !== 'undefined' && Altmetric.embed) {
+                    Altmetric.embed.rescan();
+                }
+            })
+            .catch(error => console.warn('Altmetric badge script unavailable:', error));
+    });
 }
 
 let dimensionsCitationCountsPromise = null;
@@ -441,10 +523,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     updatePublicationStats();
     renderHighlyCitedPapers();
 
-    // After populating, re-initialize Dimensions badges
-    if (window.__dimensions_embed) {
-        window.__dimensions_embed.addBadges();
-    }
+    schedulePublicationBadgeScripts();
 
     openPublicationFromHash();
     

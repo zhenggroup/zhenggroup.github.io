@@ -65,7 +65,7 @@ const currentMembers = [
         googleScholar: null
     },
     {
-        name: "Yingshi Su",
+        name: "Yingshi Su (苏颖诗)",
         role: "PhD student (Technion)<br>2026 -",
         photoSrc: "../img/", // CORRECTED PATH
         orcid: null,

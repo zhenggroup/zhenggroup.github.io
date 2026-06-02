@@ -6,10 +6,10 @@ Title: Tools and Learning Materials
 
 Quick access to lab systems, recommended scientific software, group-developed tools, and selected electrochemistry learning materials.
 
+## Lab Systems
+
 > **For Zheng Lab members**
 > Use the lab systems below for instrument scheduling and shared data access.
-
-## Lab Systems
 
 ### Instrument Booking
 

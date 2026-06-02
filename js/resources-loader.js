@@ -55,7 +55,7 @@ function renderResourceTitle(item) {
     const linkedTitle = url
         ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${item.title}</a>`
         : item.title;
-    return `${linkedTitle}${note ? `<span class="note">(${note})</span>` : ''}`;
+    return `${linkedTitle}${note ? `<span class="note">${note}</span>` : ''}`;
 }
 
 function renderResourceCard(item, extraClass = '') {
@@ -106,6 +106,7 @@ function renderIntroSection(section) {
 }
 
 function renderLabSystems(section) {
+    const quoteMatch = section.body.match(/>\s*\*\*(.+?)\*\*\s*\n>\s*(.+)/);
     const html = section.items.map(item => {
         const icon = item.fields.icon || 'link';
         const url = item.fields.url || '#';
@@ -118,7 +119,16 @@ function renderLabSystems(section) {
         `;
     }).join('');
 
-    return `<div class="lab-system-buttons">${html}</div>`;
+    return `
+        <h2 class="section-heading">Lab Systems</h2>
+        ${quoteMatch ? `
+            <div class="resource-note-panel lab-system-note">
+                <strong>${quoteMatch[1]}</strong>
+                <span>${quoteMatch[2]}</span>
+            </div>
+        ` : ''}
+        <div class="lab-system-buttons">${html}</div>
+    `;
 }
 
 function renderSoftwareSection(section) {
