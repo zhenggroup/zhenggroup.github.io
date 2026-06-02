@@ -87,8 +87,8 @@ Journal: Journal of Microscopy, 2026, 302 (1), 5-16
 DOI: 10.1111/jmi.13401
 Dimensions DOI: 10.1111/jmi.13401
 PDF: 
-Image: ../img/jmi13401-fig-0006-m.png
-Image Alt: TOC for Spatiotemporal visualisation
+Image: ../img/jm.jpg
+Image Alt: 
 Comments: 
 Featured: 
 

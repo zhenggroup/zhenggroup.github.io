@@ -108,7 +108,7 @@ const allPublications = [
         title: "Spatiotemporal Visualisation of Electrocatalyst/Electrolyte Interfaces with Electrochemical Atomic Force Microscopy: Applications and Notes",
         journal: "Journal of Microscopy, 2026, 302 (1), 5-16",
         doi: "10.1111/jmi.13401",
-        imageUrl: "../img/jmi13401-fig-0006-m.png", imageAlt: "TOC for Spatiotemporal visualisation",
+        imageUrl: "../img/jm.jpg", imageAlt: "TOC",
         dimensionsDoi: "10.1111/jmi.13401"
     },
     {
