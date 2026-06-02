@@ -20,6 +20,17 @@
 
 const newsData = [
   {
+    id: "ecs-2026",
+    date: "2026-05-24",
+    title: "Prof. Zheng delivers talks at the Oregon Center for Electrochemistry and the 249th ECS Meeting",
+    content: `<p>Prof. Zheng recently delivered talks at the Oregon Center for Electrochemistry on "in situ method for electrode deactivation analysis" and the 249th ECS Meeting on "time-resolved electrochemical impedance analysis for electrocatalyst degradation study".</p>`,
+    imageSrc: "../img/ecs249.jpg",
+    imageAlt: "Prof. Zheng at the 249th ECS Meeting",
+    imageFloat: 'left', // DEMO: Image will float to the right
+    imageWidth: '30%',   // DEMO: Image will take up 45% of the container width
+    imageCaption: " "
+  },
+  {
     id: "yinshi-2026",
     date: "2026-04-22",
     title: "Yingshi Su's papers published on Electrochimica Acta and Journal of Physical Chemistry C",
