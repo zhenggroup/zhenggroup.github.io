@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="郑课题组, 郑蔚然, 电化学, 电催化, 原位电化学, 工况电化学, 光谱电化学, 广东以色列理工学院, GTIIT">
+    <meta name="description" content="郑课题组中文简介：研究方向、代表论文、团队成员和电化学学习资源。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" type="image/png" href="../website%20icon.png">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
+    <link rel="stylesheet" type="text/css" href="../style.css?eb-garamond-1">
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
+    <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+    <title>中文 - The Zheng Group</title>
+
+    <style>
+        body {
+            background: #ffffff;
+        }
+
+        .zh-kicker,
+        .zh-intro h2,
+        .zh-section h2,
+        .zh-section h3,
+        .zh-link,
+        .zh-pill {
+            font-family: var(--font-family-sans-serif);
+        }
+
+        .page-title-container {
+            margin-bottom: 0;
+        }
+
+        .zh-intro {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 320px;
+            gap: 2rem;
+            align-items: end;
+            padding: 3rem 0 2.2rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+        }
+
+        .zh-kicker {
+            margin: 0 0 0.65rem;
+            color: #6c5224;
+            font-size: 0.82rem;
+            font-weight: 760;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .zh-intro h2 {
+            max-width: 820px;
+            margin: 0 0 1rem;
+            color: var(--text-color-headings);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 760;
+            line-height: 1.1;
+        }
+
+        .zh-intro p,
+        .zh-section p,
+        .zh-section li,
+        .zh-fact span {
+            color: var(--text-color-medium);
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .zh-intro p {
+            max-width: 780px;
+            margin: 0;
+        }
+
+        .zh-facts {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .zh-fact {
+            padding: 1rem;
+            border-left: 3px solid var(--color-gold);
+            border-radius: 8px;
+            background: var(--background-color-light-gray);
+        }
+
+        .zh-fact strong {
+            display: block;
+            color: var(--color-primary-blue);
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+
+        .zh-fact span {
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 0.92rem;
+        }
+
+        .zh-toc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            padding: 1.2rem 0 0;
+        }
+
+        .zh-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 34px;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(0, 33, 71, 0.06);
+            color: var(--color-primary-blue);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .zh-pill:hover {
+            color: var(--color-primary-blue);
+            text-decoration: none;
+            background: rgba(185, 151, 91, 0.18);
+        }
+
+        .zh-section {
+            padding: 2.4rem 0 0;
+        }
+
+        .zh-section-header {
+            max-width: 820px;
+            margin-bottom: 1.1rem;
+        }
+
+        .zh-section h2 {
+            margin: 0 0 0.55rem;
+            color: var(--text-color-headings);
+            font-size: clamp(1.5rem, 2.4vw, 2rem);
+            font-weight: 760;
+            line-height: 1.2;
+        }
+
+        .zh-section h3 {
+            margin: 0 0 0.45rem;
+            color: var(--color-primary-blue);
+            font-size: 1.08rem;
+            font-weight: 760;
+            line-height: 1.3;
+        }
+
+        .zh-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .zh-block {
+            padding: 1.1rem;
+            border: 1px solid rgba(0, 33, 71, 0.09);
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 14px 32px rgba(0, 33, 71, 0.05);
+        }
+
+        .zh-block p {
+            margin: 0;
+            font-size: 0.96rem;
+        }
+
+        .zh-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.85rem;
+        }
+
+        .zh-tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 26px;
+            padding: 0.22rem 0.5rem;
+            border-radius: 999px;
+            background: rgba(0, 33, 71, 0.06);
+            color: var(--text-color-dark);
+            font-size: 0.82rem;
+            font-weight: 650;
+        }
+
+        .zh-list {
+            display: grid;
+            gap: 0.8rem;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .zh-list li {
+            padding: 0 0 0.8rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.08);
+        }
+
+        .zh-list li:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .zh-list strong {
+            color: var(--text-color-headings);
+        }
+
+        .zh-two-col {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 1rem;
+        }
+
+        .zh-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            margin-top: 0.9rem;
+            color: var(--color-primary-blue);
+            font-size: 0.94rem;
+            font-weight: 760;
+            text-decoration: none;
+        }
+
+        .zh-link:hover {
+            color: var(--text-link-hover-color);
+            text-decoration: none;
+        }
+
+        .zh-contact {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 280px;
+            gap: 1.5rem;
+            align-items: center;
+            margin-top: 2.5rem;
+            padding: 1.4rem;
+            border-radius: 8px;
+            background:
+                linear-gradient(135deg, rgba(0, 33, 71, 0.97), rgba(0, 23, 47, 0.97)),
+                var(--color-dark-blue);
+            color: #ffffff;
+        }
+
+        .zh-contact h2 {
+            color: #ffffff;
+        }
+
+        .zh-contact p {
+            margin: 0;
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .zh-contact a {
+            display: inline-flex;
+            justify-content: center;
+            width: 100%;
+            min-height: 44px;
+            align-items: center;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            background: var(--color-gold);
+            color: #ffffff !important;
+            font-weight: 760;
+            text-decoration: none !important;
+        }
+
+        .zh-contact a:hover {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        @media (max-width: 991px) {
+            .zh-intro,
+            .zh-contact {
+                grid-template-columns: 1fr;
+            }
+
+            .zh-grid,
+            .zh-two-col {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .zh-intro {
+                padding: 2.2rem 0 1.8rem;
+            }
+
+            .zh-block,
+            .zh-contact {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body data-clean-url="true">
+
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+
+<div class="page-container">
+
+<header>
+<div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
+    <div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light row navbar-expand-lg" role="navigation">
+                    <div class="container-fluid">
+                        <a class="navbar-brand img-protected" href="../index.html"><img src="../img/logo.svg" alt="The Zheng Group Logo" class="me-2" width="200" height="63"></a>
+                        <button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-14477">
+                            <span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon" d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
+                        </button>
+                        <div class="collapse navbar-collapse navbar-35179 navbar-14477">
+                            <ul class="site-navigation nav navbar-nav ms-auto">
+                                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="../research/index.html" class="nav-link">Research</a></li>
+                                <li class="nav-item"><a href="../publication/index.html" class="nav-link">Publications</a></li>
+                                <li class="nav-item"><a href="../team/index.html" class="nav-link">Team</a></li>
+                                <li class="nav-item"><a href="../resource/index.html" class="nav-link">Resources</a></li>
+                                <li class="nav-item"><a href="../news/index.html" class="nav-link">News</a></li>
+                                <li class="nav-item"><a href="../service/index.html" class="nav-link">Services</a></li>
+                                <li class="nav-item"><a href="./index.html" class="nav-link active">中文</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+<div class="page-title-container">
+    <div class="content-container">
+        <h1>中文</h1>
+        <p>郑课题组中文简介：研究方向、代表论文、团队成员与资源。</p>
+    </div>
+</div>
+
+<main>
+    <div class="content-container">
+        <section class="zh-intro" aria-labelledby="zh-intro-heading">
+            <div>
+                <p class="zh-kicker">郑课题组 / The Zheng Group</p>
+                <h2 id="zh-intro-heading">电化学界面与转化实验室 @ GTIIT</h2>
+                <p>
+                    郑课题组由郑蔚然博士负责，研究电化学界面在工作状态下的结构演变、光谱响应、电化学响应和失活过程。我们结合原位/工况（operando）表征、电催化稳定性研究、定量电化学方法和 Python 数据工作流，理解催化活性、选择性和稳定性如何随时间演化。
+                </p>
+                <div class="zh-toc" aria-label="中文页面导航">
+                    <a class="zh-pill" href="#research">研究方向</a>
+                    <a class="zh-pill" href="#publications">代表论文</a>
+                    <a class="zh-pill" href="#team">团队</a>
+                    <a class="zh-pill" href="#services">服务</a>
+                    <a class="zh-pill" href="#resources">资源</a>
+                    <a class="zh-pill" href="#contact">联系</a>
+                </div>
+            </div>
+            <div class="zh-facts">
+                <div class="zh-fact">
+                    <strong>PI</strong>
+                    <span>郑蔚然，广东以色列理工学院化学系副教授</span>
+                </div>
+                <div class="zh-fact">
+                    <strong>核心方法</strong>
+                    <span>差分电化学质谱（DEMS）、紫外-可见光谱电化学（UV-vis）、拉曼光谱（Raman）、电化学原子力显微镜（EC-AFM）、电化学阻抗谱（EIS）、Python 数据分析</span>
+                </div>
+                <div class="zh-fact">
+                    <strong>研究目标</strong>
+                    <span>把可靠实验、合理解释和可复现分析连接起来</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="zh-section" id="research" aria-labelledby="zh-research-heading">
+            <div class="zh-section-header">
+                <p class="zh-kicker">Research</p>
+                <h2 id="zh-research-heading">研究方向</h2>
+                <p>我们关注电化学界面在真实工作条件下的变化，并尽量避免测量和解释中的常见误区。</p>
+            </div>
+            <div class="zh-grid">
+                <article class="zh-block">
+                    <h3>原位/工况（operando）光谱电化学与 EC-AFM</h3>
+                    <p>在反应进行时跟踪界面的形貌、光谱和产物变化，把观察结果与活性、选择性和稳定性联系起来。</p>
+                    <div class="zh-tags">
+                        <span class="zh-tag">DEMS</span>
+                        <span class="zh-tag">UV-vis</span>
+                        <span class="zh-tag">Raman</span>
+                        <span class="zh-tag">EC-AFM</span>
+                    </div>
+                </article>
+                <article class="zh-block">
+                    <h3>电催化剂稳定性与失活</h3>
+                    <p>解析长期测试中活性、选择性、阻抗参数、电化学活性面积（ECSA）和界面结构的变化，区分材料或界面失活与实验伪影。</p>
+                    <div class="zh-tags">
+                        <span class="zh-tag">稳定性测试</span>
+                        <span class="zh-tag">失活分析</span>
+                        <span class="zh-tag">tr-EIA</span>
+                    </div>
+                </article>
+                <article class="zh-block">
+                    <h3>定量电化学方法与数据工作流</h3>
+                    <p>围绕欧姆降（iR）校正、电化学阻抗谱（EIS）分析、数据标准化和 Python 工具，建立更透明、更可复现的电化学解释流程。</p>
+                    <div class="zh-tags">
+                        <span class="zh-tag">iR 校正</span>
+                        <span class="zh-tag">EIS</span>
+                        <span class="zh-tag">Python</span>
+                    </div>
+                </article>
+            </div>
+            <a class="zh-link" href="../research/index.html">查看英文研究页面 <span aria-hidden="true">&rarr;</span></a>
+        </section>
+
+        <section class="zh-section" id="publications" aria-labelledby="zh-publications-heading">
+            <div class="zh-section-header">
+                <p class="zh-kicker">Publications</p>
+                <h2 id="zh-publications-heading">代表论文</h2>
+                <p>以下列出近期论文和方法类代表作，完整论文列表请查看 Publications 页面。</p>
+            </div>
+            <ul class="zh-list">
+                <li><strong>Spectroelectrochemical Evolution of Fluorine-Doped Tin Oxide in Aqueous Electrolyte</strong><br>Y. Su, S. Chen, T. Zhang, W. Zheng*, JPCC, 2026.</li>
+                <li><strong>Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis</strong><br>W. Zheng*, ACS Electrochemistry, 2026.</li>
+                <li><strong>Time-Resolved Analysis of the FTO Surface Dynamics in Aqueous Solution</strong><br>Y. Su, S. Chen, W. Zheng*, Electrochimica Acta, 2026.</li>
+                <li><strong>Decoding Electrocatalyst Degradation Using Time-Resolved Electrochemical Impedance Analysis</strong><br>W. Zheng*, S. Chen, JACS Au, 2025.</li>
+                <li><strong>Python for Electrochemistry: A Free and All-In-One Toolset</strong><br>W. Zheng*, ECS Advances, 2023.</li>
+                <li><strong>iR Compensation for Electrocatalysis Studies: Considerations and Recommendations</strong><br>W. Zheng*, ACS Energy Letters, 2023.</li>
+                <li><strong>Beginner's Guide to Raman Spectroelectrochemistry for Electrocatalysis Study</strong><br>W. Zheng*, Chemistry Methods, 2023.</li>
+            </ul>
+            <a class="zh-link" href="../publication/index.html">查看完整论文列表 <span aria-hidden="true">&rarr;</span></a>
+        </section>
+
+        <section class="zh-section" id="team" aria-labelledby="zh-team-heading">
+            <div class="zh-section-header">
+                <p class="zh-kicker">Team</p>
+                <h2 id="zh-team-heading">团队</h2>
+                <p>课题组成员来自化学、材料、电化学、数据分析和相关交叉方向。</p>
+            </div>
+            <div class="zh-two-col">
+                <article class="zh-block">
+                    <h3>PI 简介</h3>
+                    <p>郑蔚然，广东以色列理工学院化学系副教授。2005-2009 年本科就读于武汉大学；2009-2015 年于武汉大学/牛津大学联合培养博士项目获得物理化学博士学位；2015-2022 年在香港理工大学从事博士后和研究员工作；2022 年加入 GTIIT。</p>
+                </article>
+                <article class="zh-block">
+                    <h3>学术服务</h3>
+                    <p>2025 年起担任 Journal of Molecular Liquids 副编辑；2024 年起担任《电化学(中英文)》青年编委。</p>
+                </article>
+            </div>
+            <div class="zh-section-header" style="margin-top: 1.4rem;">
+                <h3>当前成员</h3>
+            </div>
+            <div class="zh-grid">
+                <article class="zh-block"><h3>钟嘉敬</h3><p>博士生，Technion-GT，2023 -</p></article>
+                <article class="zh-block"><h3>陈思捷</h3><p>硕士生，Technion，2024 -</p></article>
+                <article class="zh-block"><h3>张婷</h3><p>硕士生，SUSTech-GT，2023 -</p></article>
+                <article class="zh-block"><h3>苏颖诗</h3><p>博士生，Technion，2026 -</p></article>
+                <article class="zh-block"><h3>刘卫轲</h3><p>本科生，22Chem，2024 -</p></article>
+                <article class="zh-block"><h3>Peter Cambal</h3><p>实验室经理 / 博士后，2026 -</p></article>
+            </div>
+            <a class="zh-link" href="../team/index.html">查看团队页面 <span aria-hidden="true">&rarr;</span></a>
+        </section>
+
+        <section class="zh-section" id="services" aria-labelledby="zh-services-heading">
+            <div class="zh-section-header">
+                <p class="zh-kicker">Services</p>
+                <h2 id="zh-services-heading">服务与咨询</h2>
+                <p>面向中国内地、香港及其他地区的高校、研究机构、初创公司、仪器团队和产业研发团队，提供电化学方法、数据分析和培训相关支持。欢迎直接邮件联系郑蔚然博士。</p>
+            </div>
+            <div class="zh-grid">
+                <article class="zh-block">
+                    <h3>电化学测试与方法咨询</h3>
+                    <p>针对电极体系、测试流程、欧姆降（iR）校正、电化学阻抗谱（EIS）、稳定性测试、原位/工况（operando）实验设计等问题，提供方法设计或数据解释复核。</p>
+                    <div class="zh-tags">
+                        <span class="zh-tag">iR 校正</span>
+                        <span class="zh-tag">EIS</span>
+                        <span class="zh-tag">稳定性测试</span>
+                    </div>
+                </article>
+                <article class="zh-block">
+                    <h3>数据分析流程与科研软件开发</h3>
+                    <p>帮助建立 Python 数据处理、批量作图、仪器文件解析、可复现报告和轻量化科研工具，减少重复手工处理。</p>
+                    <div class="zh-tags">
+                        <span class="zh-tag">Python</span>
+                        <span class="zh-tag">数据管线</span>
+                        <span class="zh-tag">科研软件</span>
+                    </div>
+                </article>
+                <article class="zh-block">
+                    <h3>讲座、课程与团队培训</h3>
+                    <p>可提供高校学术/通识讲座、课题组培训、短课程和企业内部培训，主题包括原位/工况电化学、失活分析、Python for Electrochemistry 等。</p>
+                    <div class="zh-tags">
+                        <span class="zh-tag">高校讲座</span>
+                        <span class="zh-tag">短课程</span>
+                        <span class="zh-tag">团队培训</span>
+                    </div>
+                </article>
+            </div>
+            <div class="zh-two-col" style="margin-top: 1rem;">
+                <article class="zh-block">
+                    <h3>付费服务</h3>
+                    <p>商业咨询、保密技术复核、定制数据分析流程和软件开发通常按付费项目沟通。邮件中请简要说明问题、目标输出、时间安排和是否涉及保密。</p>
+                </article>
+                <article class="zh-block">
+                    <h3>免费或公益服务</h3>
+                    <p>高校讲座、公开科普、学术交流等在主题和时间合适时可免专业服务费；但必要成本通常需要覆盖，例如差旅、住宿、耗材或活动组织成本。</p>
+                </article>
+            </div>
+            <a class="zh-link" href="../service/index.html">查看英文服务页面 <span aria-hidden="true">&rarr;</span></a>
+        </section>
+
+        <section class="zh-section" id="resources" aria-labelledby="zh-resources-heading">
+            <div class="zh-section-header">
+                <p class="zh-kicker">Resources</p>
+                <h2 id="zh-resources-heading">资源</h2>
+                <p>资源页面包括课题组内部系统、推荐软件、课题组开发工具和电化学学习材料。</p>
+            </div>
+            <div class="zh-grid">
+                <article class="zh-block">
+                    <h3>课题组系统</h3>
+                    <p>成员可使用 Instrument Booking 进行仪器预约，并通过 NAS Data &amp; Files 访问共享数据和文件。</p>
+                    <a class="zh-link" href="https://el.easylab.xyz/lab/zhenggroup">仪器预约 <span aria-hidden="true">&rarr;</span></a>
+                </article>
+                <article class="zh-block">
+                    <h3>推荐软件</h3>
+                    <p>Python、Blender、Fiji/ImageJ、VESTA 和 Gwyddion 常用于数据处理、图像分析、晶体结构显示和科学可视化。</p>
+                </article>
+                <article class="zh-block">
+                    <h3>课题组工具</h3>
+                    <p>VersaParse 是用于解析和处理电化学仪器 .PAR 文件的 Python 工具，方便接入可复现的数据分析流程。</p>
+                    <a class="zh-link" href="https://github.com/zhenggroup/versaparse">VersaParse <span aria-hidden="true">&rarr;</span></a>
+                </article>
+            </div>
+            <div class="zh-two-col" style="margin-top: 1rem;">
+                <article class="zh-block">
+                    <h3>中文讲座</h3>
+                    <p>电催化剂失活过程的原位研究策略，Researchcloud（科研云），2025 年 2 月。</p>
+                    <a class="zh-link" href="https://www.bilibili.com/video/BV1bzN4efEDM/">Bilibili 视频 <span aria-hidden="true">&rarr;</span></a>
+                </article>
+                <article class="zh-block">
+                    <h3>Python for Electrochemistry</h3>
+                    <p>ECS Webinar / short course，面向希望把 Python 引入电化学研究工作流的研究人员和学生。</p>
+                    <a class="zh-link" href="https://www.electrochem.org/ecs-webinar-archive">ECS Webinar Archive <span aria-hidden="true">&rarr;</span></a>
+                </article>
+            </div>
+            <a class="zh-link" href="../resource/index.html">查看资源页面 <span aria-hidden="true">&rarr;</span></a>
+        </section>
+
+        <section class="zh-contact" id="contact" aria-labelledby="zh-contact-heading">
+            <div>
+                <p class="zh-kicker">Contact</p>
+                <h2 id="zh-contact-heading">联系</h2>
+                <p>如需了解研究合作、招生、讲座、培训或服务咨询，请联系郑蔚然博士。</p>
+            </div>
+            <div>
+                <a href="mailto:weiran.zheng@gtiit.edu.cn">weiran.zheng@gtiit.edu.cn</a>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="footer-bloc" id="footer">
+    <div class="content-container">
+        <p>
+            Copyright <span class="copyright-year"></span> Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+        </p>
+    </div>
+</footer>
+
+</div>
+
+<script src="../js/jquery.min.js" defer></script>
+<script src="../js/bootstrap.bundle.min.js?3655" defer></script>
+<script src="../js/blocs.min.js?4260" defer></script>
+<script src="../js/lazysizes.min.js" defer></script>
+<script src="../js/site-year.js" defer></script>
+</body>
+</html>

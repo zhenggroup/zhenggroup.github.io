@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="electrochemistry consulting, electrochemical testing methods, electrochemistry software, data analysis pipeline, university talks, Weiran Zheng, Zheng Group services">
+    <meta name="description" content="Electrochemistry consulting and education services from Dr. Weiran Zheng, including hardware and testing methods, data analysis pipelines, software development, invited talks, and training.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="robots" content="index, follow">
+    <link rel="shortcut icon" type="image/png" href="../website%20icon.png">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
+    <link rel="stylesheet" type="text/css" href="../style.css?eb-garamond-1">
+    <link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
+    <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+    <title>Services - The Zheng Group</title>
+
+    <style>
+        body {
+            background: #ffffff;
+        }
+
+        .page-title-container {
+            margin-bottom: 0;
+        }
+
+        .service-kicker,
+        .service-hero h2,
+        .service-card h3,
+        .service-section-heading h2,
+        .service-mode h3,
+        .service-button,
+        .service-contact h2 {
+            font-family: var(--font-family-sans-serif);
+        }
+
+        .service-kicker {
+            margin: 0 0 0.65rem;
+            color: #6c5224;
+            font-size: 0.82rem;
+            font-weight: 760;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .service-hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 330px;
+            gap: 2rem;
+            align-items: center;
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+        }
+
+        .service-hero h2 {
+            max-width: 780px;
+            margin: 0 0 1rem;
+            color: var(--text-color-headings);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 760;
+            line-height: 1.08;
+        }
+
+        .service-hero p,
+        .service-section-heading p,
+        .service-card p,
+        .service-mode p,
+        .service-contact p {
+            color: var(--text-color-medium);
+            line-height: 1.62;
+        }
+
+        .service-hero p {
+            max-width: 760px;
+            margin: 0;
+            font-size: 1.05rem;
+        }
+
+        .service-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.35rem;
+        }
+
+        .service-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-height: 44px;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            font-size: 0.96rem;
+            font-weight: 760;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .service-button:hover {
+            transform: translateY(-2px);
+            text-decoration: none !important;
+        }
+
+        .service-button.primary {
+            background: var(--color-gold);
+            border: 1px solid var(--color-gold);
+            color: #ffffff !important;
+            box-shadow: 0 14px 28px rgba(185, 151, 91, 0.22);
+        }
+
+        body[data-clean-url="true"] .page-container main a.service-button.primary:hover,
+        body[data-clean-url="true"] .page-container main .service-contact a.service-button:hover {
+            color: #ffffff !important;
+            text-decoration: none !important;
+        }
+
+        .service-button.secondary {
+            background: #ffffff;
+            border: 1px solid rgba(0, 33, 71, 0.14);
+            color: var(--color-primary-blue);
+        }
+
+        body[data-clean-url="true"] .page-container main a.service-button.secondary:hover {
+            color: var(--color-primary-blue) !important;
+            text-decoration: none !important;
+        }
+
+        .service-summary {
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 33, 71, 0.1);
+            background: var(--background-color-light-gray);
+            box-shadow: 0 16px 34px rgba(0, 33, 71, 0.08);
+        }
+
+        .service-summary img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .service-summary-content {
+            padding: 1rem;
+        }
+
+        .service-summary-content strong {
+            display: block;
+            color: var(--color-primary-blue);
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+
+        .service-summary-content span {
+            display: block;
+            margin-top: 0.35rem;
+            color: var(--text-color-medium);
+            font-size: 0.92rem;
+            line-height: 1.45;
+        }
+
+        .service-section {
+            padding: 2.3rem 0 0;
+        }
+
+        .service-section-heading {
+            max-width: 800px;
+            margin-bottom: 1.1rem;
+        }
+
+        .service-section-heading h2 {
+            margin: 0 0 0.55rem;
+            color: var(--text-color-headings);
+            font-size: clamp(1.5rem, 2.4vw, 2rem);
+            font-weight: 760;
+            line-height: 1.18;
+        }
+
+        .service-section-heading p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .service-grid,
+        .service-mode-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .service-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .service-mode-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .service-card,
+        .service-mode {
+            padding: 1.2rem;
+            border: 1px solid rgba(0, 33, 71, 0.09);
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 16px 36px rgba(0, 33, 71, 0.06);
+        }
+
+        .service-card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            margin-bottom: 0.9rem;
+            border-radius: 999px;
+            background: rgba(15, 118, 110, 0.1);
+            color: #0f766e;
+            font-size: 1.1rem;
+        }
+
+        .service-card h3,
+        .service-mode h3 {
+            margin: 0 0 0.55rem;
+            color: var(--text-color-headings);
+            font-size: 1.08rem;
+            font-weight: 760;
+            line-height: 1.3;
+        }
+
+        .service-card p,
+        .service-mode p {
+            margin: 0;
+            font-size: 0.96rem;
+        }
+
+        .service-examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: 0.9rem;
+        }
+
+        .service-examples span {
+            display: inline-flex;
+            min-height: 28px;
+            align-items: center;
+            padding: 0.25rem 0.55rem;
+            border-radius: 999px;
+            background: rgba(0, 33, 71, 0.06);
+            color: var(--text-color-dark);
+            font-size: 0.82rem;
+            font-weight: 650;
+            line-height: 1.2;
+        }
+
+        .service-contact {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 320px;
+            gap: 1.5rem;
+            align-items: center;
+            margin-top: 2.6rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background:
+                linear-gradient(135deg, rgba(0, 33, 71, 0.97), rgba(0, 23, 47, 0.97)),
+                var(--color-dark-blue);
+            color: #ffffff;
+        }
+
+        .service-contact h2 {
+            margin: 0 0 0.65rem;
+            color: #ffffff;
+            font-size: 1.55rem;
+            font-weight: 760;
+            line-height: 1.2;
+        }
+
+        .service-contact p {
+            margin: 0;
+            max-width: 760px;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 1rem;
+        }
+
+        .service-contact .service-button {
+            width: 100%;
+            background: var(--color-gold);
+            border: 1px solid var(--color-gold);
+            color: #ffffff !important;
+        }
+
+        .service-note {
+            margin-top: 0.75rem;
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 0.86rem;
+            line-height: 1.45;
+            text-align: center;
+        }
+
+        @media (max-width: 991px) {
+            .service-hero,
+            .service-contact {
+                grid-template-columns: 1fr;
+            }
+
+            .service-summary {
+                max-width: 560px;
+            }
+
+            .service-grid,
+            .service-mode-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .service-hero {
+                padding: 2.2rem 0 1.8rem;
+            }
+
+            .service-actions,
+            .service-button {
+                width: 100%;
+            }
+
+            .service-card,
+            .service-mode,
+            .service-contact {
+                padding: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body data-clean-url="true">
+
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+
+<div class="page-container">
+
+<header>
+<div class="bloc l-bloc" data-bs-theme="light" id="bloc-0">
+    <div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
+        <div class="row">
+            <div class="col">
+                <nav class="navbar navbar-light row navbar-expand-lg" role="navigation">
+                    <div class="container-fluid">
+                        <a class="navbar-brand img-protected" href="../index.html"><img src="../img/logo.svg" alt="The Zheng Group Logo" class="me-2" width="200" height="63"></a>
+                        <button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-14477">
+                            <span class="navbar-toggler-icon"><svg height="32" viewBox="0 0 32 32" width="32"><path class="svg-menu-icon" d="m2 9h28m-28 7h28m-28 7h28"></path></svg></span>
+                        </button>
+                        <div class="collapse navbar-collapse navbar-35179 navbar-14477">
+                            <ul class="site-navigation nav navbar-nav ms-auto">
+                                <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="../research/index.html" class="nav-link">Research</a></li>
+                                <li class="nav-item"><a href="../publication/index.html" class="nav-link">Publications</a></li>
+                                <li class="nav-item"><a href="../team/index.html" class="nav-link">Team</a></li>
+                                <li class="nav-item"><a href="../resource/index.html" class="nav-link">Resources</a></li>
+                                <li class="nav-item"><a href="../news/index.html" class="nav-link">News</a></li>
+                                <li class="nav-item"><a href="./index.html" class="nav-link active">Services</a></li>
+                                <li class="nav-item"><a href="../zh/index.html" class="nav-link">中文</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+<div class="page-title-container">
+    <div class="content-container">
+        <h1>Services</h1>
+        <p>Electrochemistry consulting, research software, and education led by Dr. Weiran Zheng.</p>
+    </div>
+</div>
+
+<main>
+    <div class="content-container">
+        <section class="service-hero" aria-labelledby="service-hero-heading">
+            <div>
+                <p class="service-kicker">Consulting and training</p>
+                <h2 id="service-hero-heading">An expert eye for electrochemistry methods, data, and training.</h2>
+                <p>
+                    I help academic groups, universities, startups, instrument teams, and industrial R&amp;D groups make electrochemical testing and interpretation more reliable. Work can be paid consulting, software development, invited education, or free academic outreach when the scope fits; for free service, essential costs may still need to be covered.
+                </p>
+                <div class="service-actions">
+                    <a class="service-button primary" href="mailto:weiran.zheng@gtiit.edu.cn?subject=Service%20inquiry%20-%20Zheng%20Group"><span class="far fa-envelope" aria-hidden="true"></span>Contact Dr. Zheng</a>
+                    <a class="service-button secondary" href="../research/index.html"><span class="fas fa-flask" aria-hidden="true"></span>Research Basis</a>
+                </div>
+            </div>
+            <div class="service-summary">
+                <img src="../img/cover-methods.jpg" alt="Quantitative electrochemical methods visual">
+                <div class="service-summary-content">
+                    <strong>Start with a short email.</strong>
+                    <span>Send the problem, timeline, available data, and whether the request is academic, educational, or commercial.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-section" aria-labelledby="service-areas-heading">
+            <div class="service-section-heading">
+                <p class="service-kicker">Main areas</p>
+                <h2 id="service-areas-heading">What I can help with</h2>
+                <p>Most requests fall into one of these three categories. If yours does not fit cleanly, describe the problem and I can suggest a practical route.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <span class="service-card-icon fas fa-microscope" aria-hidden="true"></span>
+                    <h3>Electrochemistry methods</h3>
+                    <p>Review or design testing workflows before time, samples, and instrument access are wasted.</p>
+                    <div class="service-examples" aria-label="Electrochemistry method examples">
+                        <span>iR correction</span>
+                        <span>EIS</span>
+                        <span>stability tests</span>
+                        <span>operando cells</span>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-card-icon fas fa-code" aria-hidden="true"></span>
+                    <h3>Data and software workflows</h3>
+                    <p>Build reproducible analysis pipelines or lightweight research tools for recurring electrochemical data.</p>
+                    <div class="service-examples" aria-label="Data and software examples">
+                        <span>Python analysis</span>
+                        <span>batch plotting</span>
+                        <span>dashboards</span>
+                        <span>file parsing</span>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-card-icon fas fa-chalkboard-teacher" aria-hidden="true"></span>
+                    <h3>Talks and training</h3>
+                    <p>Clear lectures or workshops for universities, research centers, societies, companies, or project teams.</p>
+                    <div class="service-examples" aria-label="Talk and training examples">
+                        <span>general talks</span>
+                        <span>short courses</span>
+                        <span>Python workshops</span>
+                        <span>method training</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="service-section" aria-labelledby="service-modes-heading">
+            <div class="service-section-heading">
+                <p class="service-kicker">Engagement types</p>
+                <h2 id="service-modes-heading">Simple ways to work together</h2>
+                <p>The format depends on scope, confidentiality, timeline, and whether the request is academic outreach or commercial work.</p>
+            </div>
+
+            <div class="service-mode-grid">
+                <article class="service-mode">
+                    <h3>Initial scoping</h3>
+                    <p>A short exchange to understand the problem, decide whether I can help, and define the next step.</p>
+                </article>
+                <article class="service-mode">
+                    <h3>Paid consulting or software</h3>
+                    <p>Defined support for method design, interpretation review, R&amp;D decisions, or analysis tool development.</p>
+                </article>
+                <article class="service-mode">
+                    <h3>Free or sponsored education</h3>
+                    <p>University talks, workshops, and public outreach may waive professional fees when the mission and schedule fit. Essential costs, such as travel, lodging, materials, or hosting, should be covered when needed.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="service-contact" aria-labelledby="service-contact-heading">
+            <div>
+                <p class="service-kicker">Start a conversation</p>
+                <h2 id="service-contact-heading">For service inquiries, contact Dr. Weiran Zheng directly.</h2>
+                <p>
+                    Helpful details: the measurement or data problem, desired output, timeline, whether the request is commercial consulting, software development, invited education, or free academic outreach, and whether essential costs can be covered.
+                </p>
+            </div>
+            <div>
+                <a class="service-button" href="mailto:weiran.zheng@gtiit.edu.cn?subject=Service%20inquiry%20-%20Zheng%20Group"><span class="far fa-envelope" aria-hidden="true"></span>weiran.zheng@gtiit.edu.cn</a>
+                <div class="service-note">Direct contact for paid consulting, free academic service with essential-cost coverage, and invited talks.</div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="footer-bloc" id="footer">
+    <div class="content-container">
+        <p>
+            Copyright <span class="copyright-year"></span> Weiran Zheng / Electrochemical Interface and Conversion Lab @ Guangdong Technion-Israel Institute of Technology (GTIIT)
+        </p>
+    </div>
+</footer>
+
+</div>
+
+<script src="../js/jquery.min.js" defer></script>
+<script src="../js/bootstrap.bundle.min.js?3655" defer></script>
+<script src="../js/blocs.min.js?4260" defer></script>
+<script src="../js/lazysizes.min.js" defer></script>
+<script src="../js/site-year.js" defer></script>
+</body>
+</html>
