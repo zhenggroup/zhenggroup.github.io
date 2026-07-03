@@ -2913,3 +2913,275 @@ body.home-page .news-section {
         margin: 0 !important;
     }
 }
+
+/* === Typography and readability refresh === */
+:root {
+    --font-family-sans-serif: "Google Sans Text", "Google Sans", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-display: "Google Sans", "Google Sans Text", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-serif-display: var(--font-family-display);
+    --text-color-dark: #151f31;
+    --text-color-headings: #06182f;
+    --text-color-medium: #3f4c61;
+    --text-color-subtle: #697386;
+    --text-link-color: #004f8f;
+    --text-link-hover-color: #8a6b31;
+    --site-text-width: 780px;
+}
+
+html {
+    font-size: 17px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    color: var(--text-color-dark);
+    font-family: var(--font-family-sans-serif) !important;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.68;
+    letter-spacing: 0;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+}
+
+body .page-container h1,
+body .page-container h2,
+body .page-container .section-heading,
+body .page-container .research-overview h2,
+body .page-container .team-summary h2,
+body .page-container .publication-summary h2,
+body .page-container .news-summary h2,
+body .page-container .resource-intro h2,
+body .page-container .highly-cited-heading h2 {
+    color: var(--text-color-headings) !important;
+    font-family: var(--font-family-display) !important;
+    font-weight: 500 !important;
+    line-height: 1.12 !important;
+    letter-spacing: 0 !important;
+}
+
+body .page-container h3,
+body .page-container h4,
+body .page-container h5,
+body .page-container h6,
+.publication-title,
+.news-entry-title,
+.resource-card h3,
+.research-card h2,
+.team-member-card .member-name,
+.pi-name {
+    color: var(--text-color-headings) !important;
+    font-family: var(--font-family-display) !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0 !important;
+}
+
+main p,
+main li,
+.research-topic-intro,
+.research-card-content p,
+.publication-authors,
+.publication-journal,
+.publication-comment,
+.news-entry-body,
+.resource-card p,
+.pi-details p,
+.member-role,
+.zh-section p,
+.service-card p {
+    color: var(--text-color-medium);
+    line-height: 1.68 !important;
+    letter-spacing: 0 !important;
+}
+
+.research-overview h2,
+.team-summary h2,
+.publication-summary h2,
+.news-summary h2,
+.resource-intro h2,
+.zh-intro h2,
+.service-hero h2 {
+    max-width: 860px !important;
+    font-size: 2.55rem !important;
+}
+
+.section-heading,
+.highly-cited-heading h2,
+.service-section-heading h2,
+.zh-section h2 {
+    font-size: 1.85rem !important;
+}
+
+.research-overview p,
+.team-summary p,
+.publication-summary p,
+.news-summary p,
+.resource-intro p,
+.zh-intro p,
+.service-hero p {
+    max-width: var(--site-text-width) !important;
+    font-size: 1.02rem !important;
+}
+
+#bloc-0 .nav-link {
+    font-size: 0.91rem !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+}
+
+body.home-page .hero-text-content h1 {
+    color: #ffffff !important;
+    font-family: var(--font-family-display) !important;
+    font-size: 4.35rem !important;
+    font-weight: 500 !important;
+    line-height: 1.04 !important;
+    letter-spacing: 0 !important;
+}
+
+body.home-page .hero-text-content h2 {
+    max-width: 760px !important;
+    font-family: var(--font-family-display) !important;
+    font-size: 1.28rem !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0 !important;
+}
+
+body.home-page .hero-text-content .research-focus-intro {
+    max-width: 740px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 1.04rem !important;
+    line-height: 1.72 !important;
+}
+
+.publication-title {
+    font-size: 1.06rem !important;
+}
+
+.publication-authors,
+.publication-journal,
+.publication-comment {
+    font-size: 0.95rem !important;
+}
+
+.news-entry-title {
+    font-size: 1.22rem !important;
+}
+
+.news-entry-body {
+    font-size: 1rem !important;
+}
+
+.research-kicker,
+.research-card-number,
+.publication-number,
+.publication-type-tag,
+.publication-affiliation-note,
+.highly-cited-status,
+.news-entry-date,
+.zh-eyebrow,
+.service-eyebrow {
+    font-weight: 500 !important;
+    letter-spacing: 0 !important;
+}
+
+main p a,
+main li a,
+.publication-links a,
+.publication-featured-links a,
+.research-card-link,
+.resource-link,
+.zh-link,
+.service-button.secondary {
+    text-decoration-thickness: 0.07em !important;
+    text-underline-offset: 0.18em !important;
+}
+
+strong,
+b {
+    color: var(--text-color-headings);
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 16px;
+    }
+
+    body.home-page .hero-text-content h1 {
+        font-size: 3.25rem !important;
+    }
+
+    body.home-page .hero-text-content h2 {
+        font-size: 1.14rem !important;
+    }
+
+    .research-overview h2,
+    .team-summary h2,
+    .publication-summary h2,
+    .news-summary h2,
+    .resource-intro h2,
+    .zh-intro h2,
+    .service-hero h2 {
+        font-size: 2.15rem !important;
+    }
+
+    .section-heading,
+    .highly-cited-heading h2,
+    .service-section-heading h2,
+    .zh-section h2 {
+        font-size: 1.62rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    html {
+        font-size: 16px;
+    }
+
+    body {
+        line-height: 1.62;
+    }
+
+    body.home-page .hero-text-content h1 {
+        font-size: 2.55rem !important;
+        line-height: 1.08 !important;
+    }
+
+    body.home-page .hero-text-content h2 {
+        font-size: 1.02rem !important;
+        line-height: 1.38 !important;
+    }
+
+    body.home-page .hero-text-content .research-focus-intro {
+        font-size: 0.98rem !important;
+        line-height: 1.62 !important;
+    }
+
+    .research-overview h2,
+    .team-summary h2,
+    .publication-summary h2,
+    .news-summary h2,
+    .resource-intro h2,
+    .zh-intro h2,
+    .service-hero h2 {
+        font-size: 1.82rem !important;
+        line-height: 1.16 !important;
+    }
+
+    .section-heading,
+    .highly-cited-heading h2,
+    .service-section-heading h2,
+    .zh-section h2 {
+        font-size: 1.42rem !important;
+        line-height: 1.22 !important;
+    }
+
+    .publication-title,
+    .news-entry-title {
+        font-size: 1.05rem !important;
+    }
+}
