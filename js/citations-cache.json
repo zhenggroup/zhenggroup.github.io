@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T05:49:12.472Z",
+  "lastUpdated": "2026-07-03T05:43:41.072Z",
   "source": "Dimensions Metrics API",
   "doiCount": 61,
   "loadedCount": 61,
@@ -173,13 +173,13 @@
       "times_cited": 36,
       "recent_citations": 30,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 6.35
+      "field_citation_ratio": 6.34
     },
     "10.1002/adma.202311256": {
       "times_cited": 142,
       "recent_citations": 116,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 25.8
+      "field_citation_ratio": 25.78
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 12,
@@ -215,7 +215,7 @@
       "times_cited": 117,
       "recent_citations": 58,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 15.38
+      "field_citation_ratio": 15.37
     },
     "10.1016/j.snb.2021.131334": {
       "times_cited": 26,
@@ -425,7 +425,7 @@
       "times_cited": 427,
       "recent_citations": 44,
       "relative_citation_ratio": 2.52,
-      "field_citation_ratio": 32.86
+      "field_citation_ratio": 32.87
     },
     "10.1021/la904264u": {
       "times_cited": 21,
