@@ -4,6 +4,21 @@ Edit this single Markdown file to update the publication list. Keep entries in n
 
 Each publication starts with `##`, followed by field lines. Optional abstract/notes can be written as normal Markdown after the field list.
 
+## Constructive Transformation of WS<sub>2</sub> into Atomically Dispersed W−O Sites Enables Stable Photocatalysis
+Year: 2026
+Type: Article
+Authors: W. Niu, Y. Li, Z. Xu, Y. Wang, Z.-J. Zhou, M. Duan, P.-L. Ho, <b><u>W. Zheng</u></b>, X. Pan, Y. Wang, H. Fang, R.A. Taylor, X.-P. Wu, Y. Zhu, S.C.E. Tsang*
+Journal: ACS Catalysis, 2026
+DOI: 10.1021/acscatal.6c03395
+Dimensions DOI: 10.1021/acscatal.6c03395
+PDF:
+Image: https://pubs.acs.org/cms/10.1021/acscatal.6c03395/asset/images/medium/cs6c03395_toc.gif
+Image Alt: TOC for atomically dispersed W-O sites photocatalysis
+Comments:
+Featured:
+
+
+
 ## Spectroelectrochemical Evolution of Fluorine-Doped Tin Oxide in Aqueous Electrolyte
 Year: 2026
 Type: Article
