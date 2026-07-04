@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Google+Sans+Text:wght@400;500&display=swap">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?clarity-2">
+	<link rel="stylesheet" type="text/css" href="../style.css?clarity-16">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
     <title>Publications - The Zheng Group</title>
@@ -788,6 +788,396 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Reduce outlines and card framing on the publications page */
+        .highly-cited-section,
+        .featured-covers-grid,
+        .publication-year-accordion .card,
+        .publication-entry,
+        .highly-cited-card,
+        .publication-toc,
+        .publication-toc img {
+            border-radius: 0 !important;
+            box-shadow: none !important;
+        }
+
+        .highly-cited-section,
+        .featured-covers-grid,
+        .publication-year-accordion .card,
+        .highly-cited-card {
+            border: 0 !important;
+        }
+
+        .highly-cited-section,
+        .featured-covers-grid,
+        .publication-year-accordion .card,
+        .publication-entry {
+            background: transparent !important;
+        }
+
+        .highly-cited-section,
+        .featured-covers-grid {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .highly-cited-grid {
+            gap: 1.25rem 1.7rem;
+        }
+
+        .highly-cited-card {
+            padding: 0 !important;
+            background: transparent !important;
+        }
+
+        .publication-year-accordion {
+            gap: 0 !important;
+        }
+
+        .publication-year-accordion .card {
+            margin-bottom: 0 !important;
+            overflow: visible !important;
+        }
+
+        .publication-year-accordion .card + .card {
+            border-top: 1px solid rgba(32, 33, 36, 0.08) !important;
+        }
+
+        .publication-year-accordion .card-header {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            border-bottom: 0 !important;
+            background: transparent !important;
+        }
+
+        .publication-entry,
+        .publication-entry:hover {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            border: 0 !important;
+            border-top: 1px solid rgba(32, 33, 36, 0.06) !important;
+            background: transparent !important;
+        }
+
+        .publication-year-accordion .card-body .publication-entry:first-child {
+            border-top: 0 !important;
+        }
+
+        /* Bounded TOC and cleaner publication metadata layout */
+        .publication-entry,
+        .publication-entry:hover {
+            --publication-toc-max-width: 320px;
+            --publication-toc-max-height: 220px;
+            grid-template-columns: minmax(0, 1fr) fit-content(var(--publication-toc-max-width)) !important;
+            grid-template-areas: "details toc" !important;
+            gap: clamp(1.8rem, 3vw, 2.4rem) !important;
+            align-items: start !important;
+            padding-top: 1.55rem !important;
+            padding-bottom: 1.55rem !important;
+            min-height: 0 !important;
+        }
+
+        .publication-entry.has-no-toc,
+        .publication-entry.has-no-toc:hover {
+            grid-template-columns: minmax(0, 1fr) !important;
+            grid-template-areas: "details" !important;
+        }
+
+        .publication-toc,
+        .publication-toc picture {
+            grid-area: toc !important;
+            display: block !important;
+            width: fit-content !important;
+            min-height: 0 !important;
+            max-width: var(--publication-toc-max-width) !important;
+            max-height: var(--publication-toc-max-height) !important;
+            margin: 0 !important;
+            justify-self: end !important;
+            overflow: visible !important;
+            background: transparent !important;
+        }
+
+        .publication-toc.is-empty {
+            display: none !important;
+        }
+
+        .publication-toc img {
+            display: block !important;
+            width: auto !important;
+            max-width: var(--publication-toc-max-width) !important;
+            height: var(--publication-toc-max-height) !important;
+            max-height: var(--publication-toc-max-height) !important;
+            object-fit: contain !important;
+            object-position: left top !important;
+        }
+
+        .publication-details {
+            grid-area: details !important;
+            gap: 0.48rem !important;
+            padding-top: 0.05rem;
+        }
+
+        .publication-header {
+            gap: 0.55rem !important;
+            flex-direction: row !important;
+            flex-wrap: nowrap !important;
+            align-items: center !important;
+            margin-bottom: 0.05rem !important;
+        }
+
+        .publication-number,
+        .publication-type-tag {
+            min-height: 0 !important;
+            padding: 0 !important;
+            background: transparent !important;
+            border: 0 !important;
+            border-radius: 0 !important;
+            font-size: 0.78rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.03em !important;
+            line-height: 1.25 !important;
+        }
+
+        .publication-title {
+            max-width: 860px !important;
+            font-size: clamp(1.12rem, 1.35vw, 1.32rem) !important;
+            line-height: 1.36 !important;
+            font-weight: 500 !important;
+        }
+
+        .publication-authors,
+        .publication-journal {
+            max-width: 900px !important;
+            font-size: 0.98rem !important;
+            line-height: 1.55 !important;
+        }
+
+        .publication-links {
+            margin-top: 0.2rem !important;
+        }
+
+        .publication-links a {
+            font-size: 0.98rem !important;
+            line-height: 1.35 !important;
+        }
+
+        @media (max-width: 991px) {
+            .publication-entry,
+            .publication-entry:hover {
+                --publication-toc-max-width: 300px;
+                --publication-toc-max-height: 200px;
+                grid-template-columns: minmax(0, 1fr) fit-content(var(--publication-toc-max-width)) !important;
+                grid-template-areas: "details toc" !important;
+                gap: 1.45rem !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .publication-entry,
+            .publication-entry:hover {
+                --publication-toc-max-width: min(100%, 300px);
+                --publication-toc-max-height: 190px;
+                grid-template-columns: 1fr !important;
+                grid-template-areas:
+                    "details"
+                    "toc" !important;
+                gap: 0.95rem !important;
+                padding-top: 1.25rem !important;
+                padding-bottom: 1.25rem !important;
+            }
+
+            .publication-toc {
+                display: block !important;
+                width: fit-content !important;
+                max-width: var(--publication-toc-max-width) !important;
+                max-height: var(--publication-toc-max-height) !important;
+                justify-self: start !important;
+                margin: 0 !important;
+            }
+
+            .publication-toc img {
+                width: auto !important;
+                max-width: var(--publication-toc-max-width) !important;
+                height: var(--publication-toc-max-height) !important;
+                max-height: var(--publication-toc-max-height) !important;
+            }
+        }
+
+        /* Simplified highly cited papers layout */
+        .highly-cited-section {
+            margin-bottom: clamp(2.6rem, 5vw, 4rem) !important;
+            padding-top: 0.4rem !important;
+            padding-bottom: 0.35rem !important;
+        }
+
+        .highly-cited-heading {
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 1rem 2rem !important;
+            align-items: end !important;
+            margin-bottom: clamp(1.35rem, 3vw, 2rem) !important;
+            border-bottom: 0 !important;
+        }
+
+        .highly-cited-heading p {
+            max-width: 620px !important;
+            margin-top: 0.45rem !important;
+            font-size: 0.95rem !important;
+            line-height: 1.55 !important;
+        }
+
+        .highly-cited-status {
+            align-self: end !important;
+            font-size: 0.76rem !important;
+            font-weight: 500 !important;
+            letter-spacing: 0.02em !important;
+            text-transform: none !important;
+            white-space: normal !important;
+            text-align: right;
+        }
+
+        .highly-cited-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: clamp(1.35rem, 3vw, 2.15rem) clamp(2rem, 5vw, 4rem) !important;
+        }
+
+        .highly-cited-card {
+            display: grid !important;
+            grid-template-columns: auto minmax(0, 1fr);
+            grid-template-areas:
+                "meta title"
+                "meta journal";
+            column-gap: 1rem !important;
+            row-gap: 0.35rem !important;
+            align-items: start !important;
+            min-height: 0 !important;
+            padding: 0 !important;
+            border: 0 !important;
+            background: transparent !important;
+        }
+
+        .highly-cited-card + .highly-cited-card {
+            border: 0 !important;
+            border-top: 0 !important;
+        }
+
+        .highly-cited-card-header {
+            grid-area: meta;
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-start !important;
+            justify-content: flex-start !important;
+            gap: 0.3rem !important;
+            min-width: 5rem;
+        }
+
+        .highly-cited-rank {
+            min-width: 0 !important;
+            width: auto !important;
+            height: auto !important;
+            padding: 0 !important;
+            background: transparent !important;
+            color: var(--color-gold) !important;
+            font-size: 0.84rem !important;
+            font-weight: 500 !important;
+            line-height: 1.25 !important;
+        }
+
+        .highly-cited-count {
+            text-align: left !important;
+            color: var(--text-color-medium) !important;
+        }
+
+        .highly-cited-count strong {
+            display: inline !important;
+            color: var(--text-color-headings) !important;
+            font-size: 1.15rem !important;
+            font-weight: 500 !important;
+            line-height: 1.15 !important;
+        }
+
+        .highly-cited-count span {
+            display: inline !important;
+            margin-left: 0.2rem !important;
+            color: var(--text-color-medium) !important;
+            font-size: 0.78rem !important;
+            font-weight: 400 !important;
+            letter-spacing: 0 !important;
+            text-transform: none !important;
+        }
+
+        .highly-cited-card h3 {
+            grid-area: title;
+            max-width: 620px;
+            margin: 0 !important;
+            font-size: clamp(1.02rem, 1.2vw, 1.18rem) !important;
+            font-weight: 500 !important;
+            line-height: 1.38 !important;
+        }
+
+        .highly-cited-title-link,
+        .highly-cited-title-link:hover,
+        .highly-cited-title-link:focus {
+            color: var(--text-color-headings) !important;
+            text-decoration: none !important;
+        }
+
+        .highly-cited-title-link:hover,
+        .highly-cited-title-link:focus {
+            color: var(--text-link-color) !important;
+        }
+
+        body[data-clean-url="true"] .highly-cited-section .highly-cited-grid .highly-cited-card .highly-cited-title-link:hover,
+        body[data-clean-url="true"] .highly-cited-section .highly-cited-grid .highly-cited-card .highly-cited-title-link:focus {
+            text-decoration: none !important;
+            text-decoration-line: none !important;
+            text-decoration-color: transparent !important;
+        }
+
+        .highly-cited-card .publication-journal {
+            grid-area: journal;
+            max-width: 620px;
+            margin: 0 !important;
+            color: var(--text-color-medium) !important;
+            font-size: 0.92rem !important;
+            line-height: 1.5 !important;
+        }
+
+        .highly-cited-card .publication-authors,
+        .highly-cited-card-link {
+            display: none !important;
+        }
+
+        @media (max-width: 767px) {
+            .highly-cited-heading {
+                grid-template-columns: 1fr;
+                align-items: start !important;
+            }
+
+            .highly-cited-status {
+                text-align: left;
+            }
+
+            .highly-cited-grid {
+                grid-template-columns: 1fr !important;
+                gap: 1.35rem !important;
+            }
+
+            .highly-cited-card {
+                grid-template-columns: 1fr !important;
+                grid-template-areas:
+                    "meta"
+                    "title"
+                    "journal";
+                row-gap: 0.42rem !important;
+            }
+
+            .highly-cited-card-header {
+                flex-direction: row;
+                align-items: baseline !important;
+                min-width: 0;
+            }
+        }
     </style>
 </head>
 <body data-clean-url="true">
@@ -994,7 +1384,7 @@
 <script src="../js/marked.min.js" defer></script>
 
 <!-- Custom scripts for publications -->
-<script src="../js/publications-loader.js?markdown-source-1" defer></script>
+<script src="../js/publications-loader.js?markdown-source-4" defer></script>
 <!-- Additional JS END -->
 
 </body>

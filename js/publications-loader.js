@@ -255,14 +255,6 @@ function schedulePublicationBadgeScripts() {
                 }
             })
             .catch(error => console.warn('Dimensions badge script unavailable:', error));
-
-        loadExternalPublicationScript('https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js')
-            .then(() => {
-                if (typeof Altmetric !== 'undefined' && Altmetric.embed) {
-                    Altmetric.embed.rescan();
-                }
-            })
-            .catch(error => console.warn('Altmetric badge script unavailable:', error));
     });
 }
 
@@ -333,10 +325,8 @@ function createHighlyCitedCard(item, index) {
                 <span>citations</span>
             </div>
         </div>
-        <h3>${pub.title}</h3>
-        <p class="publication-authors">${pub.authors}</p>
+        <h3><a class="highly-cited-title-link" href="#${anchorId}">${pub.title}</a></h3>
         <p class="publication-journal">${pub.journal}</p>
-        <a class="highly-cited-card-link" href="#${anchorId}">View publication ${pub.number}.</a>
     </article>`;
 }
 
@@ -384,11 +374,13 @@ async function renderHighlyCitedPapers() {
 
 function createPublicationHTML(pub) {
     const anchorId = getPublicationAnchor(pub);
-    let html = `<div class="publication-entry" id="${anchorId}">`;
+    const hasTocImage = pub.imageUrl && pub.imageUrl !== "../img/placeholder-image.png" && pub.imageUrl !== "https://via.placeholder.com/180x120.png?text=Loading...";
+    let html = `<div class="publication-entry${hasTocImage ? '' : ' has-no-toc'}" id="${anchorId}">`;
+    const imageErrorHandler = "const toc=this.closest('.publication-toc'); toc.classList.add('is-empty'); toc.closest('.publication-entry').classList.add('has-no-toc'); this.remove();";
 
     // TOC Image
-    html += `<div class="publication-toc">`;
-    if (pub.imageUrl && pub.imageUrl !== "../img/placeholder-image.png" && pub.imageUrl !== "https://via.placeholder.com/180x120.png?text=Loading...") {
+    html += `<div class="publication-toc${hasTocImage ? '' : ' is-empty'}">`;
+    if (hasTocImage) {
         const isWebp = pub.imageUrl.endsWith('.webp');
         // Basic assumption: if webp, a png might exist with same name. If not webp, use as is.
         const fallbackImageUrl = isWebp ? pub.imageUrl.replace(/\.webp$/i, '.png') : pub.imageUrl;
@@ -398,10 +390,10 @@ function createPublicationHTML(pub) {
         if (webpImageUrl && fallbackImageUrl !== webpImageUrl) { // If we have distinct webp and fallback
              html += `<picture>
                         <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="${webpImageUrl}">
-                        <img src="../img/lazyload-ph.png" data-src="${fallbackImageUrl}" class="lazyload" alt="${pub.imageAlt || 'Publication TOC'}">
+                        <img src="../img/lazyload-ph.png" data-src="${fallbackImageUrl}" class="lazyload" alt="${pub.imageAlt || 'Publication TOC'}" onerror="${imageErrorHandler}">
                      </picture>`;
         } else { // Only one image format provided or it's not webp initially
-            html += `<img src="../img/lazyload-ph.png" data-src="${pub.imageUrl}" class="lazyload" alt="${pub.imageAlt || 'Publication TOC'}">`;
+            html += `<img src="../img/lazyload-ph.png" data-src="${pub.imageUrl}" class="lazyload" alt="${pub.imageAlt || 'Publication TOC'}" onerror="${imageErrorHandler}">`;
         }
     } else {
         // Keep the div for layout consistency even if no image
@@ -418,7 +410,7 @@ function createPublicationHTML(pub) {
                 <p class="publication-authors">${pub.authors}</p>
                 <p class="publication-journal">${pub.journal}</p>`;
 
-    // Links (DOI, PDF, Dimensions badge, Altmetric badge)
+    // Links (DOI, PDF, Dimensions citation badge)
     html += `<div class="publication-links">`;
     if (pub.doi) {
         html += ` <a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i>${pub.doi}</a>`;
@@ -428,13 +420,13 @@ function createPublicationHTML(pub) {
     }
     html += `</div>`;
 
-    // Badges (Dimensions and Altmetric) - aligned below DOI
     const badgeDoi = pub.dimensionsDoi || pub.doi;
     if (badgeDoi) {
-        html += `<div class="publication-badges">`;
-        html += ` <span class="dimensions-badge-inline"><span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span></span>`;
-        html += ` <span class="altmetric-badge-inline"><div class="altmetric-embed" data-badge-popover="bottom" data-badge-type="small_rectangle" data-doi="${badgeDoi}"></div></span>`;
-        html += `</div>`;
+        html += `<div class="publication-badges" aria-label="Citation metrics">
+                    <span class="dimensions-badge-inline">
+                        <span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span>
+                    </span>
+                </div>`;
     }
 
     // Comments

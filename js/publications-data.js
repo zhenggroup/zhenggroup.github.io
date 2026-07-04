@@ -71,7 +71,7 @@ const allPublications = [
         title: "Adsorption-enhanced Carbon Membranes Derived from Copolyimide for Ultrafast Sub-angstrom Discriminating CO<sub>2</sub> Separation",
         journal: "Science Advances, 2025, 11, eadv8650",
         doi: "10.1126/sciadv.adv8650",
-        imageUrl: "", imageAlt: "SA",
+        imageUrl: "../img/sciadv-adv8650-f4.jpg", imageAlt: "Figure for adsorption-enhanced carbon membranes",
         dimensionsDoi: "10.1126/sciadv.adv8650"
     },
     {
@@ -312,7 +312,7 @@ const allPublications = [
         title: "Interface Engineering of 2D-C<sub>3</sub>N<sub>4</sub>/NiFe-LDH Heterostructure for Highly Efficient Photocatalytic Hydrogen Evolution",
         journal: "ACS Applied Materials & Interfaces, 2021, 21, 24723",
         doi: "10.1021/acsami.1c03240",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/acsami1c03240-fig1.png", imageAlt: "Representative figure for 2D-C3N4/NiFe-LDH heterostructure",
         dimensionsDoi: "10.1021/acsami.1c03240"
     },
     {
@@ -340,7 +340,7 @@ const allPublications = [
         title: "Interface Engineered NiFe2O4-x/NiMoO4 Nanowire Arrays for Electrochemical Oxygen Evolution",
         journal: "Applied Catalysis B: Environmental, 2021, 286, 119857",
         doi: "10.1016/j.apcatb.2020.119857",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/1-s2.0-S0926337320312741-ga1_lrg.jpg", imageAlt: "Graphical abstract for Interface Engineered NiFe2O4-x/NiMoO4 Nanowire Arrays",
         comments: ["Highly cited paper, top 1% Chemistry (Clarivate, 2022, 2023, 2024)"],
         dimensionsDoi: "10.1016/j.apcatb.2020.119857"
     },
@@ -350,7 +350,7 @@ const allPublications = [
         title: "TiO<sub>2</sub> Film Supported by Vertically Aligned Gold Nanorod Superlattice Array for Enhanced Photocatalytic Hydrogen Evolution",
         journal: "Chemical Engineering Journal, 2021, 417, 127900",
         doi: "10.1016/j.cej.2020.127900",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/1-s2.0-S1385894720340195-ga1_lrg.jpg", imageAlt: "Graphical abstract for TiO2 Film Supported by Vertically Aligned Gold Nanorod Superlattice Array",
         dimensionsDoi: "10.1016/j.cej.2020.127900"
     },
 
@@ -370,7 +370,7 @@ const allPublications = [
         title: "Blue Order/Disorder Janus-Type TiO<sub>2</sub> Nanoparticles for Enhanced Photocatalytic Hydrogen Generation",
         journal: "Journal of Materials Chemistry A, 2020, 8, 22828",
         doi: "10.1039/D0TA06281B",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/rsc-d0ta06281b.gif", imageAlt: "TOC for Blue Order/Disorder Janus-Type TiO2 Nanoparticles",
         dimensionsDoi: "10.1039/D0TA06281B"
     },
     {
@@ -389,7 +389,7 @@ const allPublications = [
         title: "Copper Phosphosulfides as a Highly Active and Stable Photocatalyst for Hydrogen Evolution Reaction",
         journal: "Applied Catalysis B: Environmental, 2020, 273, 118927",
         doi: "10.1016/j.apcatb.2020.118927",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/1-s2.0-S0926337320303428-ga1_lrg.jpg", imageAlt: "Graphical abstract for Copper Phosphosulfides",
         dimensionsDoi: "10.1016/j.apcatb.2020.118927"
     },
     {
@@ -446,7 +446,7 @@ const allPublications = [
         title: "Two-Dimensional Metal-Organic Framework and Covalent-Organic Framework: Synthesis and their Energy-Related Applications",
         journal: "Materials Today Chemistry, 2019, 12, 34—60",
         doi: "10.1016/j.mtchem.2018.12.002",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/1-s2.0-S2468519418302386-fx1_lrg.jpg", imageAlt: "Figure for Two-Dimensional Metal-Organic Framework and Covalent-Organic Framework",
         dimensionsDoi: "10.1016/j.mtchem.2018.12.002"
     },
     {
@@ -455,7 +455,7 @@ const allPublications = [
         title: "Use of Carbon Supports with Copper Ion as a Highly Sensitive Non-Enzymatic Glucose Sensor",
         journal: "Sensors and Actuators B: Chemical, 2019, 282, 187–196",
         doi: "10.1016/j.snb.2018.10.164",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/1-s2.0-S0925400518319415-gr1_lrg.jpg", imageAlt: "Graphical abstract for Carbon Supports with Copper Ion glucose sensor",
         dimensionsDoi: "10.1016/j.snb.2018.10.164"
     },
     {
@@ -474,7 +474,7 @@ const allPublications = [
         title: "Ni/Co-Based Nanosheet Arrays for Efficient Oxygen Evolution Reaction",
         journal: "Nano Energy, 2018, 52, 360—368",
         doi: "10.1016/j.nanoen.2018.08.010",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/1-s2.0-S221128551830572X-fx1_lrg.jpg", imageAlt: "Graphical abstract for Ni/Co-Based Nanosheet Arrays",
         dimensionsDoi: "10.1016/j.nanoen.2018.08.010"
     },
     {
@@ -492,7 +492,7 @@ const allPublications = [
         title: "Cu<sup>II</sup>-mediated Ultra-efficient Electrooxidation of Glucose",
         journal: "ChemElectroChem, 2017, 4, 2788—2792",
         doi: "10.1002/celc.201700712",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/celc201700712-fig4.png", imageAlt: "Representative mechanism figure for Cu-mediated glucose electrooxidation",
         dimensionsDoi: "10.1002/celc.201700712"
     },
     {
@@ -519,7 +519,7 @@ const allPublications = [
         title: "A Tunable Metal-Polyaniline Interface for Efficient Carbon Dioxide Electro-Reduction to Formic Acid and Methanol in Aqueous Solution",
         journal: "Chemical Communications, 2016, 52, 13901—13904",
         doi: "10.1039/C6CC07212G",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/rsc-c6cc07212g.gif", imageAlt: "TOC for Tunable Metal-Polyaniline Interface",
         dimensionsDoi: "10.1039/C6CC07212G"
     },
     {
@@ -528,7 +528,7 @@ const allPublications = [
         title: "Copper Nanoparticles/Polyaniline/Graphene Composite as a Highly Sensitive Electrochemical Glucose Sensor",
         journal: "Journal of Electroanalytical Chemistry, 2016, 781, 155—160",
         doi: "10.1016/j.jelechem.2016.08.004",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/1-s2.0-S1572665716304015-fx1_lrg.jpg", imageAlt: "Graphical abstract for Copper Nanoparticles Polyaniline Graphene glucose sensor",
         dimensionsDoi: "10.1016/j.jelechem.2016.08.004"
     },
     {
@@ -546,7 +546,7 @@ const allPublications = [
         title: "Dual Doping Effects (Site Blockage and Electronic Promotion) Imposed by Adatoms on Pd Nanocrystals for Catalytic Hydrogen Production",
         journal: "Chemical Communications, 2015, 51, 46-49",
         doi: "10.1039/C4CC06195K",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/rsc-c4cc06195k.gif", imageAlt: "TOC for Dual Doping Effects Imposed by Adatoms on Pd Nanocrystals",
         dimensionsDoi: "10.1039/C4CC06195K"
     },
     {
@@ -555,7 +555,7 @@ const allPublications = [
         title: "Enhanced Photocatalytic Hydrogen Evolution from Water by Niobate Single Molecular Sheets and Ensembles",
         journal: "Chemical Communications, 2014, 50, 13702-13705",
         doi: "10.1039/C4CC04726E",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/rsc-c4cc04726e.gif", imageAlt: "TOC for Enhanced Photocatalytic Hydrogen Evolution by Niobate Sheets",
         dimensionsDoi: "10.1039/C4CC04726E"
     },
     {
@@ -564,7 +564,7 @@ const allPublications = [
         title: "Photo and Electronic Excitation for Low Temperature Catalysis Over Metal Nanoparticles using an Organic Semiconductor",
         journal: "RSC Advances, 2014, 4, 88, 47488-47496",
         doi: "10.1039/C4RA08297D",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/rsc-c4ra08297d.gif", imageAlt: "TOC for Photo and Electronic Excitation for Low Temperature Catalysis",
         dimensionsDoi: "10.1039/C4RA08297D"
     },
     {
@@ -573,7 +573,7 @@ const allPublications = [
         title: "Palladium on Iron Oxide Nanoparticles: The Morphological Effect of the Support in Glycerol Hydrogenolysis",
         journal: "Green Chemistry, 2013, 15, 8, 2064-2069",
         doi: "10.1039/C3GC40712H",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/rsc-c3gc40712h.gif", imageAlt: "TOC for Palladium on Iron Oxide Nanoparticles",
         dimensionsDoi: "10.1039/C3GC40712H"
     },
     {

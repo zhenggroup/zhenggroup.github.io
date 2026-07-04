@@ -1,0 +1,11 @@
+[    2367ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://metrics-api.dimensions.ai/doi/10.1021%2Facscatal.6c03395:0
+[    2368ms] [WARNING] Error: Dimensions citation request failed for 10.1021/acscatal.6c03395
+    at fetchDimensionsCitationCount (http://127.0.0.1:64482/js/publications-loader.js?markdown-source-4:210:15)
+    at async http://127.0.0.1:64482/js/publications-loader.js?markdown-source-4:273:46
+    at async worker (http://127.0.0.1:64482/js/publications-loader.js?markdown-source-4:303:34)
+    at async Promise.all (index 0)
+    at async mapWithConcurrency (http://127.0.0.1:64482/js/publications-loader.js?markdown-source-4:311:5)
+    at async http://127.0.0.1:64482/js/publications-loader.js?markdown-source-4:271:23 @ http://127.0.0.1:64482/js/publications-loader.js?markdown-source-4:304
+[    2786ms] [ERROR] Failed to load resource: net::ERR_BLOCKED_BY_RESPONSE.NotSameOrigin @ https://pubs.acs.org/cms/10.1021/acscatal.6c03395/asset/images/medium/cs6c03395_toc.gif:0
+[    8699ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://metrics-api.dimensions.ai/doi/10.1021/acscatal.6c03395:0
+[    8776ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://metrics-api.dimensions.ai/doi/10.1021/acscatal.6c03395:0

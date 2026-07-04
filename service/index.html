@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Google+Sans+Text:wght@400;500&display=swap">
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-    <link rel="stylesheet" type="text/css" href="../style.css?clarity-2">
+    <link rel="stylesheet" type="text/css" href="../style.css?clarity-16">
     <link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
     <link rel="stylesheet" type="text/css" href="../css/all.min.css">
     <title>Services - The Zheng Group</title>
@@ -48,12 +48,13 @@
         }
 
         .service-hero {
-            display: grid;
-            grid-template-columns: minmax(0, 1fr) 330px;
-            gap: 2rem;
-            align-items: center;
-            padding: 3rem 0 2rem;
-            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
+            display: grid !important;
+            grid-template-columns: minmax(0, 720px) minmax(220px, 300px) !important;
+            gap: clamp(2rem, 5vw, 4rem) !important;
+            align-items: start !important;
+            max-width: 1120px !important;
+            padding: clamp(2.2rem, 4vw, 3rem) 0 clamp(2.6rem, 5vw, 3.6rem) !important;
+            border-bottom: 0 !important;
         }
 
         .service-hero h2 {
@@ -131,22 +132,29 @@
         }
 
         .service-summary {
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid rgba(0, 33, 71, 0.1);
-            background: var(--background-color-light-gray);
-            box-shadow: 0 16px 34px rgba(0, 33, 71, 0.08);
+            justify-self: end;
+            width: min(100%, 300px);
+            margin-top: 0.15rem;
+            overflow: visible;
+            border: 0 !important;
+            border-radius: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
         }
 
         .service-summary img {
             display: block;
             width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;
+            height: auto;
+            max-height: none;
+            aspect-ratio: auto;
+            object-fit: contain;
+            border-radius: 0 !important;
         }
 
         .service-summary-content {
-            padding: 1rem;
+            max-width: 300px;
+            padding: 0.8rem 0 0;
         }
 
         .service-summary-content strong {
@@ -304,11 +312,14 @@
         @media (max-width: 991px) {
             .service-hero,
             .service-contact {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr !important;
             }
 
             .service-summary {
-                max-width: 560px;
+                justify-self: start;
+                width: min(54vw, 220px);
+                max-width: none;
+                margin-top: 1.6rem;
             }
 
             .service-grid,
@@ -319,7 +330,7 @@
 
         @media (max-width: 767px) {
             .service-hero {
-                padding: 2.2rem 0 1.8rem;
+                padding: 2rem 0 2.2rem !important;
             }
 
             .service-actions,
@@ -331,6 +342,16 @@
             .service-mode,
             .service-contact {
                 padding: 1.1rem;
+            }
+
+            .service-summary {
+                width: min(52vw, 185px);
+                justify-self: center;
+                margin-top: 1.4rem;
+            }
+
+            .service-summary-content {
+                display: none;
             }
         }
     </style>

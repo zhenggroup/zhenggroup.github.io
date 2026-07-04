@@ -477,8 +477,8 @@ Journal: ACS Applied Materials & Interfaces, 2021, 21, 24723
 DOI: 10.1021/acsami.1c03240
 Dimensions DOI: 10.1021/acsami.1c03240
 PDF:
-Image:
-Image Alt: Thumbnail for 2D C3N4 NiFe-LDH heterostructure
+Image: ../img/acsami1c03240-fig1.png
+Image Alt: Representative figure for 2D-C3N4 NiFe-LDH heterostructure
 Comments:
 Featured:
 
@@ -762,8 +762,8 @@ Journal: ChemElectroChem, 2017, 4, 2788—2792
 DOI: 10.1002/celc.201700712
 Dimensions DOI: 10.1002/celc.201700712
 PDF:
-Image:
-Image Alt: Thumbnail for Cu mediated glucose electrooxidation
+Image: ../img/celc201700712-fig4.png
+Image Alt: Representative mechanism figure for Cu-mediated glucose electrooxidation
 Comments:
 Featured:
 
