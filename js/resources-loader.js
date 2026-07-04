@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (!container) return;
 
     try {
-        const response = await fetch('./resources.md?preview-resource-md-3');
+        const response = await fetch('./resources.md?resources-md-3');
         if (!response.ok) throw new Error('resources.md not found');
         const markdown = await response.text();
         container.innerHTML = renderResourceSections(parseResourceMarkdown(markdown));

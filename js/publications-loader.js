@@ -364,7 +364,7 @@ async function renderHighlyCitedPapers() {
 
     if (topPapers.length === 0) {
         status.textContent = 'Citation data unavailable';
-        grid.innerHTML = '<p class="publication-intro-text">Dimensions citation data could not be loaded in this preview.</p>';
+        grid.innerHTML = '<p class="publication-intro-text">Dimensions citation data could not be loaded on this page.</p>';
         return;
     }
 

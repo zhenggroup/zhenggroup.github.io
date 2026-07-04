@@ -683,7 +683,7 @@ a[data-lightbox]:hover img { opacity: 0.7; animation-fill-mode: none; }
     .news-card h4 { font-size: 1.1em; }
 }
 
-/* === Oxford blue and gold preview refresh === */
+/* === Blue And Gold Refinement === */
 main {
     background:
         linear-gradient(180deg, rgba(246, 248, 251, 0.82), rgba(255, 255, 255, 0) 18rem),
@@ -828,10 +828,9 @@ main {
     }
 }
 
-/* === Main site quiet refresh ===
-   A restrained alignment with the minimalist variant. The existing page
-   structure stays intact; this layer mainly normalizes type, spacing, cards,
-   shadows, and navigation. */
+/* === Main Site Baseline Refinement ===
+   The existing page structure stays intact; this layer mainly normalizes type,
+   spacing, cards, shadows, and navigation. */
 :root {
     --text-color-dark: #162033;
     --text-color-headings: #06182f;
@@ -2914,10 +2913,10 @@ body.home-page .news-section {
     }
 }
 
-/* === Typography and readability refresh === */
+/* === Typography And Readability === */
 :root {
-    --font-family-sans-serif: "Google Sans Text", "Google Sans", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-    --font-family-display: "Google Sans", "Google Sans Text", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-sans-serif: "Freight Sans", "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-display: "Freight Display", "Newsreader", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
     --font-family-serif-display: var(--font-family-display);
     --text-color-dark: #151f31;
     --text-color-headings: #06182f;
@@ -3186,7 +3185,7 @@ b {
     }
 }
 
-/* === Google Labs-inspired layout polish === */
+/* === Layout Polish === */
 :root {
     --labs-page: #ffffff;
     --labs-card: #ffffff;
@@ -4661,4 +4660,81 @@ main li,
     .research-card-image {
         min-height: 170px !important;
     }
+}
+
+/* === Main Site Type And Palette ===
+   This maps the selected font and color tokens onto the existing site. It
+   intentionally does not change homepage animation layout. */
+:root {
+    --color-primary-blue: #005ea8;
+    --color-dark-blue: #111111;
+    --color-light-blue: #ffffff;
+    --color-gold: #ffcd05;
+    --color-gold-light: #ffe27a;
+    --color-link: #005ea8;
+    --color-link-light: #111111;
+
+    --text-color-dark: #111111;
+    --text-color-headings: #111111;
+    --text-color-medium: #57534a;
+    --text-color-light: #ffffff;
+    --text-color-subtle: #766f61;
+    --text-link-color: var(--color-link);
+    --text-link-hover-color: var(--color-link-light);
+
+    --background-color-page: #ffffff;
+    --background-color-light-gray: #ffffff;
+    --background-color-accent-tag: #ffffff;
+    --border-color-light: rgba(17, 17, 17, 0.16);
+    --border-color-medium: rgba(17, 17, 17, 0.34);
+    --footer-background: #111111;
+    --footer-text-color: #ffffff;
+
+    --labs-page: #ffffff;
+    --labs-card: #ffffff;
+    --labs-card-soft: #ffffff;
+    --labs-ink: #111111;
+    --labs-muted: #57534a;
+    --labs-rule: rgba(17, 17, 17, 0.16);
+    --labs-rule-strong: rgba(17, 17, 17, 0.28);
+    --labs-blue: #005ea8;
+    --labs-gold: #ffcd05;
+
+    --font-family-sans-serif: "Freight Sans", "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-display: "Freight Display", "Newsreader", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+    --font-family-serif-display: var(--font-family-display);
+}
+
+body,
+body .page-container,
+body main,
+body[data-clean-url="true"] main,
+.bloc,
+.page-title-container,
+.recruitment-alert-section,
+.news-section,
+.research-compass-item,
+.research-flow-card,
+.resource-note-panel,
+.service-summary,
+.service-contact,
+.zh-contact,
+#previous-members-grid .team-member-card {
+    background-color: #ffffff !important;
+    background-image: none !important;
+}
+
+.page-title-container {
+    border-bottom: 1px solid var(--labs-rule-strong) !important;
+    color: var(--text-color-headings) !important;
+}
+
+.page-title-container p {
+    color: var(--text-color-medium) !important;
+}
+
+.pi-image-contact img.member-photo,
+.team-member-card .member-photo {
+    border: 0 !important;
+    box-shadow: none !important;
 }
