@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-07-03T05:43:41.072Z",
+  "lastUpdated": "2026-07-04T05:37:28.766Z",
   "source": "Dimensions Metrics API",
-  "doiCount": 61,
+  "doiCount": 62,
   "loadedCount": 61,
   "citations": {
     "10.1021/acs.jpcc.6c00506": 0,
@@ -434,5 +434,7 @@
       "field_citation_ratio": 2.07
     }
   },
-  "missing": []
+  "missing": [
+    "10.1021/acscatal.6c03395"
+  ]
 }
