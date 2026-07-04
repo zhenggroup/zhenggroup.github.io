@@ -477,8 +477,8 @@ Journal: ACS Applied Materials & Interfaces, 2021, 21, 24723
 DOI: 10.1021/acsami.1c03240
 Dimensions DOI: 10.1021/acsami.1c03240
 PDF:
-Image: ../img/acsami1c03240-fig1.png
-Image Alt: Representative figure for 2D-C3N4 NiFe-LDH heterostructure
+Image: ../img/acsami1c03240-toc.png
+Image Alt: TOC for 2D-C3N4 NiFe-LDH heterostructure photocatalytic hydrogen evolution
 Comments:
 Featured:
 
@@ -642,8 +642,8 @@ Journal: Small, 2019, 15, 1903791
 DOI: 10.1002/smll.201903791
 Dimensions DOI: 10.1002/smll.201903791
 PDF:
-Image:
-Image Alt: Thumbnail for MoS2 laser-induced exfoliation
+Image: ../img/smll201903791-gra-0001-m.png
+Image Alt: TOC for MoS2 laser-induced exfoliation in protic solvents
 Comments:
 Featured:
 
@@ -657,8 +657,8 @@ Journal: Small, 2019, 15, 1902649
 DOI: 10.1002/smll.201902649
 Dimensions DOI: 10.1002/smll.201902649
 PDF:
-Image:
-Image Alt: Thumbnail for vanadium-doped MXenes
+Image: ../img/smll201902649-gra-0001-m.png
+Image Alt: TOC for V-doped MXenes pseudocapacitive performance
 Comments:
 Featured:
 
@@ -717,8 +717,8 @@ Journal: Advanced Materials Interfaces, 2018, 5, 1800849
 DOI: 10.1002/admi.201800849
 Dimensions DOI: 10.1002/admi.201800849
 PDF:
-Image:
-Image Alt: Thumbnail for CoNi MOF water splitting electrocatalysts
+Image: ../img/admi201800849-cover.jpg
+Image Alt: Cover image for CoNi MOF water splitting electrocatalysts
 Comments: Featured on the cover
 Featured:
 
@@ -762,8 +762,8 @@ Journal: ChemElectroChem, 2017, 4, 2788—2792
 DOI: 10.1002/celc.201700712
 Dimensions DOI: 10.1002/celc.201700712
 PDF:
-Image: ../img/celc201700712-fig4.png
-Image Alt: Representative mechanism figure for Cu-mediated glucose electrooxidation
+Image: ../img/celc201700712-toc-0001-m.png
+Image Alt: TOC for Cu-mediated glucose electrooxidation
 Comments:
 Featured:
 
@@ -777,8 +777,8 @@ Journal: Energy Technology, 2017, 5, 937—944
 DOI: 10.1002/ente.201600659
 Dimensions DOI: 10.1002/ente.201600659
 PDF:
-Image:
-Image Alt: Thumbnail for Pd polyaniline CO2 electroreduction
+Image: ../img/ente201600659-toc-0001-m.png
+Image Alt: TOC for Pd polyaniline CO2 electroreduction
 Comments:
 Featured:
 
@@ -792,8 +792,8 @@ Journal: ACS Catalysis, 2017, 7, 592—605
 DOI: 10.1021/acscatal.6b02765
 Dimensions DOI: 10.1021/acscatal.6b02765
 PDF:
-Image:
-Image Alt: Thumbnail for sulfur poisoning effects on Ru and Pd catalysts
+Image: ../img/acscatal6b02765-toc.png
+Image Alt: TOC for sulfur poisoning effects on Ru and Pd catalysts
 Comments:
 Featured:
 
@@ -837,8 +837,8 @@ Journal: ChemCatChem, 2015, 7, 3826—3831
 DOI: 10.1002/cctc.201500774
 Dimensions DOI: 10.1002/cctc.201500774
 PDF:
-Image:
-Image Alt: Thumbnail for Pd nanoparticle size and shape effects
+Image: ../img/cctc201500774-toc.png
+Image Alt: TOC for palladium nanoparticle size and shape effects in formic acid electrooxidation
 Comments:
 Featured:
 

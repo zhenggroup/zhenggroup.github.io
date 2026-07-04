@@ -382,18 +382,15 @@ function createPublicationHTML(pub) {
     html += `<div class="publication-toc${hasTocImage ? '' : ' is-empty'}">`;
     if (hasTocImage) {
         const isWebp = pub.imageUrl.endsWith('.webp');
-        // Basic assumption: if webp, a png might exist with same name. If not webp, use as is.
         const fallbackImageUrl = isWebp ? pub.imageUrl.replace(/\.webp$/i, '.png') : pub.imageUrl;
-        const webpImageUrl = isWebp ? pub.imageUrl : (pub.imageUrl.endsWith('.png') ? pub.imageUrl.replace(/\.png$/i, '.webp') : '');
 
-
-        if (webpImageUrl && fallbackImageUrl !== webpImageUrl) { // If we have distinct webp and fallback
+        if (isWebp && fallbackImageUrl !== pub.imageUrl) {
              html += `<picture>
-                        <source type="image/webp" srcset="../img/lazyload-ph.png" data-srcset="${webpImageUrl}">
-                        <img src="../img/lazyload-ph.png" data-src="${fallbackImageUrl}" class="lazyload" alt="${pub.imageAlt || 'Publication TOC'}" onerror="${imageErrorHandler}">
+                        <source type="image/webp" srcset="${pub.imageUrl}">
+                        <img src="${fallbackImageUrl}" loading="lazy" decoding="async" alt="${pub.imageAlt || 'Publication TOC'}" onerror="${imageErrorHandler}">
                      </picture>`;
-        } else { // Only one image format provided or it's not webp initially
-            html += `<img src="../img/lazyload-ph.png" data-src="${pub.imageUrl}" class="lazyload" alt="${pub.imageAlt || 'Publication TOC'}" onerror="${imageErrorHandler}">`;
+        } else {
+            html += `<img src="${pub.imageUrl}" loading="lazy" decoding="async" alt="${pub.imageAlt || 'Publication TOC'}" onerror="${imageErrorHandler}">`;
         }
     } else {
         // Keep the div for layout consistency even if no image

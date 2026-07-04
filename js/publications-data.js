@@ -312,7 +312,7 @@ const allPublications = [
         title: "Interface Engineering of 2D-C<sub>3</sub>N<sub>4</sub>/NiFe-LDH Heterostructure for Highly Efficient Photocatalytic Hydrogen Evolution",
         journal: "ACS Applied Materials & Interfaces, 2021, 21, 24723",
         doi: "10.1021/acsami.1c03240",
-        imageUrl: "../img/acsami1c03240-fig1.png", imageAlt: "Representative figure for 2D-C3N4/NiFe-LDH heterostructure",
+        imageUrl: "../img/acsami1c03240-toc.png", imageAlt: "TOC for 2D-C3N4/NiFe-LDH heterostructure photocatalytic hydrogen evolution",
         dimensionsDoi: "10.1021/acsami.1c03240"
     },
     {
@@ -419,7 +419,7 @@ const allPublications = [
         title: "Surface Engineering of MoS<sub>2</sub> via Laser-induced Exfoliation in Protic Solvents",
         journal: "Small, 2019, 15, 1903791",
         doi: "10.1002/smll.201903791",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/smll201903791-gra-0001-m.png", imageAlt: "TOC for MoS2 laser-induced exfoliation in protic solvents",
         dimensionsDoi: "10.1002/smll.201903791"
     },
     {
@@ -428,7 +428,7 @@ const allPublications = [
         title: "Highly Enhanced Pseudocapacitive Performance of Vanadium-doped MXenes in Neutral Electrolytes",
         journal: "Small, 2019, 15, 1902649",
         doi: "10.1002/smll.201902649",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/smll201902649-gra-0001-m.png", imageAlt: "TOC for V-doped MXenes pseudocapacitive performance",
         dimensionsDoi: "10.1002/smll.201902649"
     },
     {
@@ -464,7 +464,7 @@ const allPublications = [
         title: "Overall Water Splitting Electrocatalysts based on 2D CoNi Metal-Organic Frameworks and Its Derivative",
         journal: "Advanced Materials Interfaces, 2018, 5, 1800849",
         doi: "10.1002/admi.201800849",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/admi201800849-cover.jpg", imageAlt: "Cover image for CoNi MOF water splitting electrocatalysts",
         comments: ["Featured on the cover"],
         dimensionsDoi: "10.1002/admi.201800849"
     },
@@ -492,7 +492,7 @@ const allPublications = [
         title: "Cu<sup>II</sup>-mediated Ultra-efficient Electrooxidation of Glucose",
         journal: "ChemElectroChem, 2017, 4, 2788—2792",
         doi: "10.1002/celc.201700712",
-        imageUrl: "../img/celc201700712-fig4.png", imageAlt: "Representative mechanism figure for Cu-mediated glucose electrooxidation",
+        imageUrl: "../img/celc201700712-toc-0001-m.png", imageAlt: "TOC for Cu-mediated glucose electrooxidation",
         dimensionsDoi: "10.1002/celc.201700712"
     },
     {
@@ -501,7 +501,7 @@ const allPublications = [
         title: "Electroreduction of Carbon Dioxide to Formic Acid and Methanol over a Palladium/Polyaniline Catalyst in Acidic Solution: A Study of the Palladium Size Effect",
         journal: "Energy Technology, 2017, 5, 937—944",
         doi: "10.1002/ente.201600659",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/ente201600659-toc-0001-m.png", imageAlt: "TOC for Pd polyaniline CO2 electroreduction",
         dimensionsDoi: "10.1002/ente.201600659"
     },
     {
@@ -510,7 +510,7 @@ const allPublications = [
         title: "Quantitative Differences in Sulfur Poisoning Phenomena over Ruthenium and Palladium: An Attempt to Deconvolute Geometric and Electronic Poisoning Effects Using Model Catalysts",
         journal: "ACS Catalysis, 2017, 7, 592—605",
         doi: "10.1021/acscatal.6b02765",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/acscatal6b02765-toc.png", imageAlt: "TOC for sulfur poisoning effects on Ru and Pd catalysts",
         dimensionsDoi: "10.1021/acscatal.6b02765"
     },
     {
@@ -537,7 +537,7 @@ const allPublications = [
         title: "Probing the Size and Shape Effects of Cubic- and Spherical-Shaped Palladium Nanoparticles in the Electrooxidation of Formic Acid",
         journal: "ChemCatChem, 2015, 7, 3826—3831",
         doi: "10.1002/cctc.201500774",
-        imageUrl: "../img/placeholder-image.png", imageAlt: "TOC Placeholder",
+        imageUrl: "../img/cctc201500774-toc.png", imageAlt: "TOC for palladium nanoparticle size and shape effects in formic acid electrooxidation",
         dimensionsDoi: "10.1002/cctc.201500774"
     },
     {
