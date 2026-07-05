@@ -329,13 +329,31 @@
             color: var(--text-color-subtle) !important;
             font-size: 0.82rem !important;
             line-height: 1.42 !important;
-            font-style: italic;
+            font-style: normal;
             padding: 0.08rem 0 0.08rem 0.62rem;
             border-left: 2px solid rgba(185, 151, 91, 0.45);
         }
 
         .publication-comment + .publication-comment {
             margin-top: -0.12rem;
+        }
+
+        .publication-featured-note a {
+            color: var(--text-link-color);
+            font-size: inherit !important;
+            font-weight: 500;
+            text-decoration: underline;
+            text-decoration-thickness: 0.06em;
+            text-underline-offset: 0.16em;
+        }
+
+        .publication-featured-note a:hover {
+            color: var(--text-link-hover-color);
+        }
+
+        .publication-note-label {
+            color: var(--text-color-medium);
+            font-weight: 500;
         }
 
         .publication-description {
@@ -1392,7 +1410,7 @@
 <script src="../js/marked.min.js" defer></script>
 
 <!-- Custom scripts for publications -->
-<script src="../js/publications-loader.js?markdown-source-5" defer></script>
+<script src="../js/publications-loader.js?markdown-source-6" defer></script>
 <!-- Additional JS END -->
 
 </body>

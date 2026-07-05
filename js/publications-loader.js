@@ -436,14 +436,14 @@ function createPublicationHTML(pub) {
 	// Featured In
     if (pub.featuredIn && pub.featuredIn.length > 0) {
         // The <i> and </i> tags have been removed from the lines below
-        html += `<div class="publication-featured-links">Featured in: `;
+        html += `<p class="publication-comment publication-featured-note"><span class="publication-note-label">Featured in:</span> `;
         pub.featuredIn.forEach((link, index) => {
             html += `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a>`;
             if (index < pub.featuredIn.length - 1) {
                 html += `, `;
             }
         });
-        html += `</div>`;
+        html += `</p>`;
     }
 
     // Markdown Description
