@@ -150,7 +150,7 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.jcat.2024.115720"
     },
     {
-        number: 46, year: 2024, type: "Article",
+        number: 46, year: 2024, type: "Viewpoint",
         authors: "<b><u>W. Zheng</u></b>,* <b><u>L. Du</u></b>",
         title: "Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation",
         journal: "ACS Energy Letters, 2024, 9, 9, 4581–4586",
@@ -208,7 +208,7 @@ const allPublications = [
         dimensionsDoi: "10.1149/2754-2734/acff0b"
     },
     {
-        number: 41, year: 2023, type: "Article",
+        number: 41, year: 2023, type: "Viewpoint",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "iR Compensation for Electrocatalysis Studies: Considerations and Recommendations",
         journal: "ACS Energy Letters, 2023, 8, 1952-1958",
@@ -297,7 +297,7 @@ const allPublications = [
         dimensionsDoi: "10.1039/D1NR03294A"
     },
     {
-        number: 32, year: 2021, type: "Article",
+        number: 32, year: 2021, type: "Viewpoint",
         authors: "<u>W. Zheng</u>, L.Y.S. Lee*",
         title: "Metal-Organic Frameworks for Electrocatalysis: Catalyst or Precatalyst?",
         journal: "ACS Energy Letters, 2021, 6, 2838–2843",
@@ -356,7 +356,7 @@ const allPublications = [
 
     // 2020
     {
-        number: 26, year: 2020, type: "Article",
+        number: 26, year: 2020, type: "Viewpoint",
         authors: "<u>W. Zheng</u>, M. Liu, L.Y.S. Lee*",
         title: "Best Practices in Using Foam-Type Electrodes for Electrocatalytic Performance Benchmark",
         journal: "ACS Energy Letters, 2020, 5, 3260",

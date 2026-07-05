@@ -246,7 +246,7 @@ Featured:
 
 ## Applicability of Graphite as Anodic Counter Electrode for Electrocatalyst Evaluation
 Year: 2024
-Type: Article
+Type: Viewpoint
 Authors: <b><u>W. Zheng</u></b>,* <b><u>L. Du</u></b>
 Journal: ACS Energy Letters, 2024, 9, 9, 4581–4586
 DOI: 10.1021/acsenergylett.4c01869
@@ -321,7 +321,7 @@ Featured: ECS Webinar: Introducing Python for Electrochemistry Research | https:
 
 ## iR Compensation for Electrocatalysis Studies: Considerations and Recommendations
 Year: 2023
-Type: Article
+Type: Viewpoint
 Authors: <b><u>W. Zheng</u></b>*
 Journal: ACS Energy Letters, 2023, 8, 1952-1958
 DOI: 10.1021/acsenergylett.3c00366
@@ -456,7 +456,7 @@ Featured:
 
 ## Metal-Organic Frameworks for Electrocatalysis: Catalyst or Precatalyst?
 Year: 2021
-Type: Article
+Type: Viewpoint
 Authors: <u>W. Zheng</u>, L.Y.S. Lee*
 Journal: ACS Energy Letters, 2021, 6, 2838–2843
 DOI: 10.1021/acsenergylett.1c01350
@@ -546,7 +546,7 @@ Featured:
 
 ## Best Practices in Using Foam-Type Electrodes for Electrocatalytic Performance Benchmark
 Year: 2020
-Type: Article
+Type: Viewpoint
 Authors: <u>W. Zheng</u>, M. Liu, L.Y.S. Lee*
 Journal: ACS Energy Letters, 2020, 5, 3260
 DOI: 10.1021/acsenergylett.0c01958
