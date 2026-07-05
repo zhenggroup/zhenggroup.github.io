@@ -429,14 +429,13 @@ function createPublicationHTML(pub) {
     // Comments
     if (pub.comments && pub.comments.length > 0) {
         pub.comments.forEach(comment => {
-            html += `<p class="publication-comment">${comment}</p>`;
+            html += `<p class="publication-note publication-comment">${comment}</p>`;
         });
     }
 
 	// Featured In
     if (pub.featuredIn && pub.featuredIn.length > 0) {
-        // The <i> and </i> tags have been removed from the lines below
-        html += `<p class="publication-comment publication-featured-note"><span class="publication-note-label">Featured in:</span> `;
+        html += `<p class="publication-note publication-comment publication-featured-note"><span class="publication-note-label">Featured in:</span> `;
         pub.featuredIn.forEach((link, index) => {
             html += `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a>`;
             if (index < pub.featuredIn.length - 1) {

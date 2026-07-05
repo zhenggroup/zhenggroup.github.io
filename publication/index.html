@@ -26,6 +26,7 @@
         .publication-entry,
         .publication-links,
         .publication-featured-links,
+        .publication-note,
         .publication-comment,
         .publication-toc,
         .publication-details,
@@ -322,9 +323,10 @@
             color: var(--text-link-hover-color);
         }
 
+        .publication-note,
         .publication-comment {
             width: fit-content;
-            max-width: 860px;
+            max-width: min(860px, 100%);
             margin: 0.02rem 0 0;
             color: var(--text-color-subtle) !important;
             font-size: 0.82rem !important;
@@ -334,11 +336,13 @@
             border-left: 2px solid rgba(185, 151, 91, 0.45);
         }
 
+        .publication-note + .publication-note,
         .publication-comment + .publication-comment {
             margin-top: -0.12rem;
         }
 
-        .publication-featured-note a {
+        .publication-note a,
+        .publication-comment a {
             color: var(--text-link-color);
             font-size: inherit !important;
             font-weight: 500;
@@ -347,7 +351,8 @@
             text-underline-offset: 0.16em;
         }
 
-        .publication-featured-note a:hover {
+        .publication-note a:hover,
+        .publication-comment a:hover {
             color: var(--text-link-hover-color);
         }
 
@@ -1410,7 +1415,7 @@
 <script src="../js/marked.min.js" defer></script>
 
 <!-- Custom scripts for publications -->
-<script src="../js/publications-loader.js?markdown-source-6" defer></script>
+<script src="../js/publications-loader.js?markdown-source-7" defer></script>
 <!-- Additional JS END -->
 
 </body>
