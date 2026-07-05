@@ -39,7 +39,7 @@
 
     /* Added for consistency if used by page-specific styles */
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-family-serif-display: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+    --font-family-serif-display: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
 }
 
 /* Global Resets and Base Styles */
@@ -842,7 +842,7 @@ main {
     --shadow-color-soft: rgba(0, 33, 71, 0.06);
     --shadow-color-medium: rgba(0, 33, 71, 0.1);
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-family-serif-display: Georgia, "Times New Roman", Times, serif;
+    --font-family-serif-display: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
 }
 
 body {
@@ -2916,7 +2916,7 @@ body.home-page .news-section {
 /* === Typography And Readability === */
 :root {
     --font-family-sans-serif: "Freight Sans", "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-    --font-family-display: "Freight Display", "Newsreader", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+    --font-family-display: "Crimson Pro", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
     --font-family-serif-display: var(--font-family-display);
     --text-color-dark: #151f31;
     --text-color-headings: #06182f;
@@ -4701,7 +4701,7 @@ main li,
     --labs-gold: #ffcd05;
 
     --font-family-sans-serif: "Freight Sans", "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-    --font-family-display: "Freight Display", "Newsreader", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
+    --font-family-display: "Crimson Pro", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
     --font-family-serif-display: var(--font-family-display);
 }
 
