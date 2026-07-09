@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T04:59:33.312Z",
+  "lastUpdated": "2026-07-09T06:00:33.989Z",
   "source": "Dimensions Metrics API",
   "doiCount": 62,
   "loadedCount": 62,
@@ -11,7 +11,7 @@
     "10.1021/jacs.6c01756": 1,
     "10.1021/acs.chemmater.5c01720": 3,
     "10.1111/jmi.13401": 4,
-    "10.1021/jacsau.5c01196": 6,
+    "10.1021/jacsau.5c01196": 7,
     "10.1126/sciadv.adv8650": 3,
     "10.1021/acscatal.5c04802": 5,
     "10.1007/s43939-025-00393-6": 15,
@@ -111,8 +111,8 @@
       "field_citation_ratio": null
     },
     "10.1021/jacsau.5c01196": {
-      "times_cited": 6,
-      "recent_citations": 6,
+      "times_cited": 7,
+      "recent_citations": 7,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -150,7 +150,7 @@
       "times_cited": 20,
       "recent_citations": 19,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.6
+      "field_citation_ratio": 3.59
     },
     "10.1016/j.electacta.2024.145178": {
       "times_cited": 3,
@@ -180,13 +180,13 @@
       "times_cited": 37,
       "recent_citations": 31,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 6.46
+      "field_citation_ratio": 6.45
     },
     "10.1002/adma.202311256": {
       "times_cited": 144,
       "recent_citations": 118,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 25.9
+      "field_citation_ratio": 25.88
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 12,
@@ -222,7 +222,7 @@
       "times_cited": 118,
       "recent_citations": 59,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 15.45
+      "field_citation_ratio": 15.44
     },
     "10.1016/j.snb.2021.131334": {
       "times_cited": 27,
@@ -432,7 +432,7 @@
       "times_cited": 427,
       "recent_citations": 44,
       "relative_citation_ratio": 2.52,
-      "field_citation_ratio": 32.86
+      "field_citation_ratio": 32.85
     },
     "10.1021/la904264u": {
       "times_cited": 21,
