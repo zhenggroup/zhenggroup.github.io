@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16T04:51:13.763Z",
+  "lastUpdated": "2026-07-17T04:54:15.489Z",
   "source": "Dimensions Metrics API",
   "doiCount": 62,
   "loadedCount": 62,
@@ -30,7 +30,7 @@
     "10.1002/anse.202200070": 6,
     "10.1002/asia.202200384": 21,
     "10.1016/j.matt.2021.12.010": 118,
-    "10.1016/j.snb.2021.131334": 27,
+    "10.1016/j.snb.2021.131334": 28,
     "10.1201/9781003206507-5": 0,
     "10.1002/9783527828562.ch1": 2,
     "10.1039/D1NR03294A": 108,
@@ -150,7 +150,7 @@
       "times_cited": 20,
       "recent_citations": 19,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.56
+      "field_citation_ratio": 3.55
     },
     "10.1016/j.electacta.2024.145178": {
       "times_cited": 3,
@@ -162,7 +162,7 @@
       "times_cited": 17,
       "recent_citations": 17,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.12
+      "field_citation_ratio": 3.11
     },
     "10.1021/acsenergylett.4c01869": {
       "times_cited": 22,
@@ -186,7 +186,7 @@
       "times_cited": 144,
       "recent_citations": 118,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 25.6
+      "field_citation_ratio": 25.58
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
@@ -225,10 +225,10 @@
       "field_citation_ratio": 15.38
     },
     "10.1016/j.snb.2021.131334": {
-      "times_cited": 27,
-      "recent_citations": 9,
+      "times_cited": 28,
+      "recent_citations": 10,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.84
+      "field_citation_ratio": 3.98
     },
     "10.1201/9781003206507-5": {
       "times_cited": 0,
@@ -312,7 +312,7 @@
       "times_cited": 490,
       "recent_citations": 155,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 38.47
+      "field_citation_ratio": 38.48
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 29,
@@ -360,7 +360,7 @@
       "times_cited": 170,
       "recent_citations": 22,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 15.45
+      "field_citation_ratio": 15.46
     },
     "10.1002/elan.201800076": {
       "times_cited": 33,
