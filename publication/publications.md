@@ -8,11 +8,11 @@ Each publication starts with `##`, followed by field lines. Optional abstract/no
 Year: 2026
 Type: Article
 Authors: W. Niu, Y. Li, Z. Xu, Y. Wang, Z.-J. Zhou, M. Duan, P.-L. Ho, <b><u>W. Zheng</u></b>, X. Pan, Y. Wang, H. Fang, R.A. Taylor, X.-P. Wu, Y. Zhu, S.C.E. Tsang*
-Journal: ACS Catalysis, 2026
+Journal: ACS Catalysis, 2026, 16, 14, 13706–13718
 DOI: 10.1021/acscatal.6c03395
 Dimensions DOI: 10.1021/acscatal.6c03395
 PDF:
-Image: https://pubs.acs.org/cms/10.1021/acscatal.6c03395/asset/images/medium/cs6c03395_toc.gif
+Image: ../img/cs6c03395_toc.png
 Image Alt: TOC for atomically dispersed W-O sites photocatalysis
 Comments:
 Featured:
