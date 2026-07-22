@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-21T04:59:18.775Z",
+  "lastUpdated": "2026-07-22T04:58:52.804Z",
   "source": "Dimensions Metrics API",
   "doiCount": 62,
   "loadedCount": 62,
@@ -150,7 +150,7 @@
       "times_cited": 21,
       "recent_citations": 20,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.71
+      "field_citation_ratio": 3.7
     },
     "10.1016/j.electacta.2024.145178": {
       "times_cited": 3,
@@ -180,13 +180,13 @@
       "times_cited": 38,
       "recent_citations": 32,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 6.51
+      "field_citation_ratio": 6.5
     },
     "10.1002/adma.202311256": {
       "times_cited": 144,
       "recent_citations": 118,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 25.41
+      "field_citation_ratio": 25.38
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
@@ -204,7 +204,7 @@
       "times_cited": 37,
       "recent_citations": 20,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 4.19
+      "field_citation_ratio": 4.18
     },
     "10.1002/anse.202200070": {
       "times_cited": 6,
@@ -222,7 +222,7 @@
       "times_cited": 120,
       "recent_citations": 61,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 15.6
+      "field_citation_ratio": 15.59
     },
     "10.1016/j.snb.2021.131334": {
       "times_cited": 28,
@@ -276,7 +276,7 @@
       "times_cited": 211,
       "recent_citations": 48,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 22.64
+      "field_citation_ratio": 22.63
     },
     "10.1016/j.cej.2020.127900": {
       "times_cited": 36,
@@ -312,7 +312,7 @@
       "times_cited": 491,
       "recent_citations": 156,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 38.51
+      "field_citation_ratio": 38.5
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 29,
@@ -342,7 +342,7 @@
       "times_cited": 141,
       "recent_citations": 22,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 12.82
+      "field_citation_ratio": 12.81
     },
     "10.1016/j.snb.2018.10.164": {
       "times_cited": 43,
