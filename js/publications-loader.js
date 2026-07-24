@@ -148,7 +148,7 @@ async function loadPublications() {
     }
 
     try {
-        await loadPublicationScriptOnce('../js/publications-data.js?fallback-2');
+        await loadPublicationScriptOnce('../js/publications-data.js?fallback-3');
     } catch (error) {
         console.warn('Legacy publication data could not be loaded:', error);
     }
@@ -414,7 +414,7 @@ async function renderHighlyCitedPapers() {
 function createPublicationHTML(pub) {
     const anchorId = getPublicationAnchor(pub);
     const hasTocImage = pub.imageUrl && pub.imageUrl !== "../img/placeholder-image.png" && pub.imageUrl !== "https://via.placeholder.com/180x120.png?text=Loading...";
-    let html = `<div class="publication-entry${hasTocImage ? '' : ' has-no-toc'}" id="${anchorId}">`;
+    let html = `<article class="publication-entry${hasTocImage ? '' : ' has-no-toc'}" id="${anchorId}">`;
     const imageErrorHandler = "const toc=this.closest('.publication-toc'); toc.classList.add('is-empty'); toc.closest('.publication-entry').classList.add('has-no-toc'); this.remove();";
 
     // TOC Image
@@ -442,7 +442,7 @@ function createPublicationHTML(pub) {
                     <span class="publication-number">${pub.number}.</span>
                     <span class="publication-type-tag">${pub.type}</span>
                 </div>
-                <span class="publication-title">${pub.title}</span>
+                <h4 class="publication-title">${pub.title}</h4>
                 <p class="publication-authors">${pub.authors}</p>
                 <p class="publication-journal">${formatPublicationJournal(pub.journal)}</p>`;
 
@@ -512,7 +512,7 @@ function createPublicationHTML(pub) {
     }
 
     html += `   </div> <!-- End publication-details -->
-            </div> <!-- End publication-entry -->`;
+            </article> <!-- End publication-entry -->`;
     return html;
 }
 

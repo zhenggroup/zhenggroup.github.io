@@ -28,7 +28,7 @@ DOI: 10.1021/acs.jpcc.6c00506
 Dimensions DOI: 10.1021/acs.jpcc.6c00506
 PDF:
 Image: ../img/jp6c00506_0015.webp
-Image Alt: jpcc2026
+Image Alt: Graphical abstract for the spectroelectrochemical evolution of fluorine-doped tin oxide
 Comments:
 Featured:
 
@@ -43,7 +43,7 @@ DOI: 10.1021/acselectrochem.6c00058
 Dimensions DOI: 10.1021/acselectrochem.6c00058
 PDF:
 Image: ../img/acse.jpg
-Image Alt: acselectrochem2026
+Image Alt: Graphical abstract illustrating experimental and interpretive traps in operando electrocatalysis
 Comments:
 Featured:
 
@@ -58,7 +58,7 @@ DOI: 10.1016/j.electacta.2026.148501
 Dimensions DOI: 10.1016/j.electacta.2026.148501
 PDF:
 Image: ../img/26ea.jpg
-Image Alt: 26ea
+Image Alt: Graphical abstract for time-resolved FTO surface dynamics in aqueous solution
 Comments:
 Featured:
 
@@ -73,7 +73,7 @@ DOI: 10.1021/jacs.6c01756
 Dimensions DOI: 10.1021/jacs.6c01756
 PDF:
 Image: ../img/25jacs.jpg
-Image Alt: jacs2026
+Image Alt: Graphical abstract for operando analysis of nickel-phosphide catalysts during hydrogen evolution
 Comments:
 Featured:
 
@@ -88,7 +88,7 @@ DOI: 10.1021/acs.chemmater.5c01720
 Dimensions DOI: 10.1021/acs.chemmater.5c01720
 PDF:
 Image: ../img/cm.jpg
-Image Alt: CM
+Image Alt: Graphical abstract for the time-resolved instability of flexible indium tin oxide film
 Comments: featured on the cover
 Featured:
 
@@ -103,7 +103,7 @@ DOI: 10.1111/jmi.13401
 Dimensions DOI: 10.1111/jmi.13401
 PDF:
 Image: ../img/jm.jpg
-Image Alt:
+Image Alt: Graphical abstract for electrochemical AFM visualization of electrocatalyst-electrolyte interfaces
 Comments:
 Featured:
 
@@ -118,7 +118,7 @@ DOI: 10.1021/jacsau.5c01196
 Dimensions DOI: 10.1021/jacsau.5c01196
 PDF:
 Image: ../img/jacs_au.jpg
-Image Alt: JACS Au
+Image Alt: Graphical abstract for time-resolved impedance analysis of electrocatalyst degradation
 Comments: featured on the cover
 Featured:
 

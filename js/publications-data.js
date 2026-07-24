@@ -22,7 +22,7 @@ const allPublications = [
         title: "Spectroelectrochemical Evolution of Fluorine-Doped Tin Oxide in Aqueous Electrolyte",
         journal: "The Journal of Physical Chemistry C, 2026, 130, 18, 6557-6571",
         doi: "10.1021/acs.jpcc.6c00506",
-        imageUrl: "../img/jp6c00506_0015.webp", imageAlt: "jpcc2026",
+        imageUrl: "../img/jp6c00506_0015.webp", imageAlt: "Graphical abstract for the spectroelectrochemical evolution of fluorine-doped tin oxide",
         dimensionsDoi: "10.1021/acs.jpcc.6c00506"
     },
     {
@@ -31,7 +31,7 @@ const allPublications = [
         title: "Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis",
         journal: "ACS Electrochemistry, 2026, 2, 1127-1137",
         doi: "10.1021/acselectrochem.6c00058",
-        imageUrl: "../img/acse.jpg", imageAlt: "acselectrochem2026",
+        imageUrl: "../img/acse.jpg", imageAlt: "Graphical abstract illustrating experimental and interpretive traps in operando electrocatalysis",
         dimensionsDoi: "10.1021/acselectrochem.6c00058"
     },
     {
@@ -40,7 +40,7 @@ const allPublications = [
         title: "Time-Resolved Analysis of the FTO Surface Dynamics in Aqueous Solution",
         journal: "Electrochimica Acta, 2026, 557, 148501",
         doi: "10.1016/j.electacta.2026.148501",
-        imageUrl: "../img/26ea.jpg", imageAlt: "26ea",
+        imageUrl: "../img/26ea.jpg", imageAlt: "Graphical abstract for time-resolved FTO surface dynamics in aqueous solution",
         dimensionsDoi: "10.1016/j.electacta.2026.148501"
     },
     {
@@ -49,7 +49,7 @@ const allPublications = [
         title: "Probing Terra Incognita of Ni–P Catalysts: Operando Explorations during Hydrogen Evolution Reaction",
         journal: "Journal of the American Chemical Society, 2026, 148, 9, 10241–10256",
         doi: "10.1021/jacs.6c01756",
-        imageUrl: "../img/25jacs.jpg", imageAlt: "jacs2026",
+        imageUrl: "../img/25jacs.jpg", imageAlt: "Graphical abstract for operando analysis of nickel-phosphide catalysts during hydrogen evolution",
         dimensionsDoi: "10.1021/jacs.6c01756"
     },
     {
@@ -58,7 +58,7 @@ const allPublications = [
         title: "Electrochemical Instability of Flexible Indium Tin Oxide Film: A Time-Resolved Operando Study",
         journal: "Chemistry of Materials, 2026, 38, 4, 1651-1666",
         doi: "10.1021/acs.chemmater.5c01720",
-        imageUrl: "../img/cm.jpg", imageAlt: "CM",
+        imageUrl: "../img/cm.jpg", imageAlt: "Graphical abstract for the time-resolved instability of flexible indium tin oxide film",
         comments: ["featured on the cover"],
         dimensionsDoi: "10.1021/acs.chemmater.5c01720"
     },
@@ -70,7 +70,7 @@ const allPublications = [
         title: "Decoding Electrocatalyst Degradation Using Time-Resolved Electrochemical Impedance Analysis",
         journal: "JACS Au, 2025, 5, 12, 6396-6409",
         doi: "10.1021/jacsau.5c01196",
-        imageUrl: "../img/jacs_au.jpg", imageAlt: "JACS Au",
+        imageUrl: "../img/jacs_au.jpg", imageAlt: "Graphical abstract for time-resolved impedance analysis of electrocatalyst degradation",
         comments: ["featured on the cover"],
         dimensionsDoi: "10.1021/jacsau.5c01196"
     },
