@@ -14,9 +14,9 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?site-main-1">
+	<link rel="stylesheet" type="text/css" href="../style.css?site-main-3">
 	<link rel="preload" href="../css/animate.min.css?283" as="style" onload="this.onload=null;this.rel='stylesheet'">
 	<link rel="preload" href="../css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <title>Research - The Zheng Group</title>
@@ -255,10 +255,12 @@
             margin: 0;
         }
 
-        .topic-list li {
+        .topic-list li,
+        .publications-list li {
             margin-bottom: 0.5rem;
             color: var(--text-color-medium);
             font-size: 0.95rem;
+            font-weight: 400;
             line-height: 1.55;
         }
 
@@ -272,22 +274,38 @@
             list-style: none;
         }
 
-        .publications-list li {
-            margin-bottom: 0.55rem;
-            font-size: 0.9rem;
-            line-height: 1.45;
+        .publications-list .research-paper-citation {
+            color: inherit;
+            font: inherit;
         }
 
-        .publications-list a {
-            color: var(--text-link-color);
-            text-decoration: underline;
-            text-decoration-thickness: 0.08em;
-            text-underline-offset: 0.18em;
-            font-weight: 600;
+        .publications-list .research-doi-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.15rem;
+            height: 1.15rem;
+            margin-left: 0.35rem;
+            border-radius: 50%;
+            vertical-align: -0.2rem;
+            text-decoration: none;
+            transition: transform 0.18s ease, filter 0.18s ease;
         }
 
-        .publications-list a:hover {
-            color: var(--text-link-hover-color);
+        .publications-list .research-doi-link img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .publications-list .research-doi-link:hover {
+            filter: brightness(0.92);
+            transform: translateY(-1px);
+        }
+
+        .publications-list .research-doi-link:focus-visible {
+            outline: 2px solid var(--color-primary-blue);
+            outline-offset: 3px;
         }
 
         .research-card-link {
@@ -407,6 +425,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="../css/site-harmony.css?visual-1">
 
 <!-- Analytics -->
 
@@ -517,10 +536,10 @@
                     </ul>
                     <h3>Selected Papers</h3>
                     <ul class="publications-list">
-                        <li><a href="../publication/index.html#pub-10-1021-acselectrochem-6c00058">Zheng, W. ACS Electrochemistry, 2026, 2, 1127-1137</a></li>
-                        <li><a href="../publication/index.html#pub-10-1016-j-jcat-2024-115720">Chen, J., et al. Journal of Catalysis, 2024, 438, 115720</a></li>
-                        <li><a href="../publication/index.html#pub-10-1002-cmtd-202200042">Zheng, W. Chemistry Methods, 2023, 3(2), e202200042</a></li>
-                        <li><a href="../publication/index.html#pub-10-1021-acsenergylett-1c01350">Zheng, W., et al. ACS Energy Letters, 2021, 6, 2838-2843</a></li>
+                        <li><span class="research-paper-citation">Zheng, W. ACS Electrochemistry, 2026, 2, 1127-1137</span><a class="research-doi-link" href="https://doi.org/10.1021/acselectrochem.6c00058" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1021/acselectrochem.6c00058" title="Open DOI 10.1021/acselectrochem.6c00058"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
+                        <li><span class="research-paper-citation">Chen, J., et al. Journal of Catalysis, 2024, 438, 115720</span><a class="research-doi-link" href="https://doi.org/10.1016/j.jcat.2024.115720" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1016/j.jcat.2024.115720" title="Open DOI 10.1016/j.jcat.2024.115720"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
+                        <li><span class="research-paper-citation">Zheng, W. Chemistry Methods, 2023, 3(2), e202200042</span><a class="research-doi-link" href="https://doi.org/10.1002/cmtd.202200042" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1002/cmtd.202200042" title="Open DOI 10.1002/cmtd.202200042"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
+                        <li><span class="research-paper-citation">Zheng, W., et al. ACS Energy Letters, 2021, 6, 2838-2843</span><a class="research-doi-link" href="https://doi.org/10.1021/acsenergylett.1c01350" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1021/acsenergylett.1c01350" title="Open DOI 10.1021/acsenergylett.1c01350"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
                     </ul>
                     <a class="research-card-link" href="../publication/index.html">More publications <span aria-hidden="true">&rarr;</span></a>
                 </div>
@@ -547,9 +566,9 @@
                     </ul>
                     <h3>Selected Papers</h3>
                      <ul class="publications-list">
-                        <li><a href="../publication/index.html#pub-10-1021-jacsau-5c01196">Zheng, W. and Chen, S. JACS Au, 2025, 5, 6396-6409</a></li>
-                        <li><a href="../publication/index.html#pub-10-1021-acs-chemmater-5c01720">Chen, S. and Zheng, W. Chemistry of Materials, 2026, 38, 1651-1666</a></li>
-                        <li><a href="../publication/index.html#pub-10-1063-5-0191316">Du, L. and Zheng, W. APL Energy, 2024, 2, 021501</a></li>
+                        <li><span class="research-paper-citation">Zheng, W. and Chen, S. JACS Au, 2025, 5, 6396-6409</span><a class="research-doi-link" href="https://doi.org/10.1021/jacsau.5c01196" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1021/jacsau.5c01196" title="Open DOI 10.1021/jacsau.5c01196"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
+                        <li><span class="research-paper-citation">Chen, S. and Zheng, W. Chemistry of Materials, 2026, 38, 1651-1666</span><a class="research-doi-link" href="https://doi.org/10.1021/acs.chemmater.5c01720" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1021/acs.chemmater.5c01720" title="Open DOI 10.1021/acs.chemmater.5c01720"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
+                        <li><span class="research-paper-citation">Du, L. and Zheng, W. APL Energy, 2024, 2, 021501</span><a class="research-doi-link" href="https://doi.org/10.1063/5.0191316" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1063/5.0191316" title="Open DOI 10.1063/5.0191316"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
                     </ul>
                     <a class="research-card-link" href="../publication/index.html">More publications <span aria-hidden="true">&rarr;</span></a>
                 </div>
@@ -576,9 +595,9 @@
                     </ul>
                     <h3>Selected Papers</h3>
                     <ul class="publications-list">
-                        <li><a href="../publication/index.html#pub-10-1021-acsenergylett-4c01869">Zheng, W. and Du, L. ACS Energy Letters, 2024, 9, 4581-4586</a></li>
-                        <li><a href="../publication/index.html#pub-10-1149-2754-2734-acff0b">Zheng, W. ECS Advances, 2023, 4, 040502</a></li>
-                        <li><a href="../publication/index.html#pub-10-1021-acsenergylett-3c00366">Zheng, W. ACS Energy Letters, 2023, 8, 1952-1958</a></li>
+                        <li><span class="research-paper-citation">Zheng, W. and Du, L. ACS Energy Letters, 2024, 9, 4581-4586</span><a class="research-doi-link" href="https://doi.org/10.1021/acsenergylett.4c01869" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1021/acsenergylett.4c01869" title="Open DOI 10.1021/acsenergylett.4c01869"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
+                        <li><span class="research-paper-citation">Zheng, W. ECS Advances, 2023, 4, 040502</span><a class="research-doi-link" href="https://doi.org/10.1149/2754-2734/acff0b" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1149/2754-2734/acff0b" title="Open DOI 10.1149/2754-2734/acff0b"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
+                        <li><span class="research-paper-citation">Zheng, W. ACS Energy Letters, 2023, 8, 1952-1958</span><a class="research-doi-link" href="https://doi.org/10.1021/acsenergylett.3c00366" target="_blank" rel="noopener noreferrer" aria-label="Open DOI 10.1021/acsenergylett.3c00366" title="Open DOI 10.1021/acsenergylett.3c00366"><img src="../img/doi.svg" alt="" aria-hidden="true"></a></li>
                     </ul>
                     <a class="research-card-link" href="../publication/index.html">More publications <span aria-hidden="true">&rarr;</span></a>
                 </div>

@@ -119,7 +119,7 @@ const newsData = [
     id: "online-lecture-feb-2025",
     date: "2025-02-10",
     title: "Prof. Zheng delivered an online lecture on Operando Methods",
-    content: `<p>Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a href="https://www.bilibili.com/video/BV1bzN4efEDM/" target="_blank" rel="noopener noreferrer">View Lecture</a></p>`,
+    content: `<p>Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a class="brand-icon-link" href="https://www.bilibili.com/video/BV1bzN4efEDM/" target="_blank" rel="noopener noreferrer"><span class="simple-icon simple-icon-bilibili" aria-hidden="true"></span>View Lecture</a></p>`,
     imageSrc: "../img/keyanyun.jpg",
     imageAlt: null,
     imageFloat: 'left',

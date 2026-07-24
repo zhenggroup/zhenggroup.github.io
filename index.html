@@ -15,14 +15,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css?7489">
-    <link rel="stylesheet" type="text/css" href="style.css?site-main-1">
+    <link rel="stylesheet" type="text/css" href="style.css?site-main-3">
     <link rel="stylesheet" type="text/css" href="./css/animate.min.css?283">
     <link rel="stylesheet" type="text/css" href="./css/all.min.css">
     <title>Home - The Zheng Group</title>
 
     <style>
+        :root {
+            --homepage-tail-blue: #2b3a4d;
+        }
+
         /* --- Transparent Header on Hero Section (Homepage Only) --- */
 
         /* Position the entire header block over the hero section */
@@ -137,6 +141,7 @@
             right: 0;
             bottom: 0;
             background:
+                linear-gradient(180deg, transparent 68%, var(--homepage-tail-blue) 100%),
                 radial-gradient(circle at 50% 24%, rgba(185, 151, 91, 0.24), transparent 28rem),
                 linear-gradient(180deg, rgba(0, 23, 47, 0.62), rgba(0, 23, 47, 0.88));
             z-index: 2;
@@ -601,7 +606,49 @@
                 height: 48px;
             }
         }
+
+        /* Continue the homepage navy background through news and the footer. */
+        body.home-page,
+        body.home-page .page-container,
+        body.home-page main,
+        body.home-page .news-section,
+        body.home-page .footer-bloc {
+            background-color: var(--homepage-tail-blue) !important;
+            background-image: none !important;
+        }
+
+        body.home-page .news-section {
+            color: #ffffff !important;
+        }
+
+        body.home-page .news-section .section-heading,
+        body.home-page .news-section .homepage-news-title,
+        body.home-page .news-section .homepage-news-more-link a {
+            color: #ffffff !important;
+        }
+
+        body.home-page .news-section .homepage-news-date {
+            color: rgba(255, 255, 255, 0.78) !important;
+        }
+
+        body.home-page .news-section .homepage-news-item a:hover,
+        body.home-page .news-section .homepage-news-item a:focus {
+            background-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        body.home-page .news-section .homepage-news-item a:hover .homepage-news-title,
+        body.home-page .news-section .homepage-news-item a:focus .homepage-news-title,
+        body.home-page .news-section .homepage-news-more-link a:hover,
+        body.home-page .news-section .homepage-news-more-link a:focus {
+            color: #ffffff !important;
+        }
+
+        body.home-page .footer-bloc {
+            color: rgba(255, 255, 255, 0.78) !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.14);
+        }
     </style>
+    <link rel="stylesheet" type="text/css" href="./css/site-harmony.css?visual-1">
 
 </head>
 
@@ -684,8 +731,8 @@
                         </p>
                         <div class="hero-actions">
                             <a class="hero-action primary" href="./research/index.html">Explore Research</a>
-                            <a class="hero-action secondary" href="./service/index.html">Services &amp; Consulting</a>
                             <a class="hero-action secondary" href="./publication/index.html">View Publications</a>
+                            <a class="hero-action secondary" href="./service/index.html">Services &amp; Consulting</a>
                         </div>
                     </div>
 
@@ -774,7 +821,7 @@
     <!-- Additional JS END -->
 
     <!-- Load Markdown-first news data -->
-    <script src="./js/news-loader.js?markdown-index-1" defer></script>
+    <script src="./js/news-loader.js?markdown-index-2" defer></script>
 
     <!-- Script to Generate Homepage News List -->
     <script>

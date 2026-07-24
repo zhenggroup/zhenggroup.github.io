@@ -49,12 +49,21 @@ function renderMarkdown(markdown) {
     return markdown || '';
 }
 
+function renderSimpleIcon(slug) {
+    const normalizedSlug = String(slug || '').toLowerCase().replace(/[^a-z0-9-]/g, '');
+    return normalizedSlug
+        ? `<span class="simple-icon simple-icon-${normalizedSlug}" aria-hidden="true"></span>`
+        : '';
+}
+
 function renderResourceTitle(item) {
     const url = item.fields.url;
     const note = item.fields.note;
+    const icon = renderSimpleIcon(item.fields['simple icon']);
+    const titleContent = `${icon}${item.title}`;
     const linkedTitle = url
-        ? `<a href="${url}" target="_blank" rel="noopener noreferrer">${item.title}</a>`
-        : item.title;
+        ? `<a class="${icon ? 'brand-icon-link' : ''}" href="${url}" target="_blank" rel="noopener noreferrer">${titleContent}</a>`
+        : titleContent;
     return `${linkedTitle}${note ? `<span class="note">${note}</span>` : ''}`;
 }
 
@@ -109,11 +118,15 @@ function renderLabSystems(section) {
     const quoteMatch = section.body.match(/>\s*\*\*(.+?)\*\*\s*\n>\s*(.+)/);
     const html = section.items.map(item => {
         const icon = item.fields.icon || 'link';
+        const simpleIcon = item.fields['simple icon'];
+        const iconMarkup = simpleIcon
+            ? renderSimpleIcon(simpleIcon)
+            : `<i class="fas fa-${icon}" aria-hidden="true"></i>`;
         const url = item.fields.url || '#';
         const style = item.fields.style === 'nas' ? 'btn-nas' : 'btn-booking';
         return `
             <a href="${url}" target="_blank" rel="noopener noreferrer" class="btn ${style}">
-                <i class="fas fa-${icon}"></i>
+                ${iconMarkup}
                 <strong>${item.title}<span>${renderMarkdown(item.bodyLines.join('\n')).replace(/^<p>|<\/p>\n?$/g, '')}</span></strong>
             </a>
         `;
@@ -173,11 +186,26 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (!container) return;
 
     try {
-        const response = await fetch('./resources.md?resources-md-3');
+        const response = await fetch('./resources.md?resources-md-4');
         if (!response.ok) throw new Error('resources.md not found');
         const markdown = await response.text();
         container.innerHTML = renderResourceSections(parseResourceMarkdown(markdown));
     } catch (error) {
-        console.error('Failed to load resources.md:', error);
+        const fallbackMarkdown = window.resourceMarkdownFallback;
+        if (typeof fallbackMarkdown === 'string' && fallbackMarkdown.trim()) {
+            container.innerHTML = renderResourceSections(parseResourceMarkdown(fallbackMarkdown));
+            console.warn('Using local resource data because resources.md could not be loaded:', error);
+            return;
+        }
+
+        console.error('Failed to load resources.md and no local resource data is available:', error);
+        container.innerHTML = `
+            <section class="resource-intro">
+                <div>
+                    <h2>Resources temporarily unavailable</h2>
+                    <p>Please reload the page or try again later.</p>
+                </div>
+            </section>
+        `;
     }
 });

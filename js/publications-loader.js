@@ -24,6 +24,45 @@ function splitFeaturedLinks(value) {
     }).filter(item => item.text && item.url);
 }
 
+function getPublicationBrandIcon(url) {
+    const normalizedUrl = String(url || '').toLowerCase();
+    if (/^https?:\/\/(www\.)?bilibili\.com\//.test(normalizedUrl)) {
+        return 'bilibili';
+    }
+    if (/^https?:\/\/mp\.weixin\.qq\.com\//.test(normalizedUrl)) {
+        return 'wechat';
+    }
+    return '';
+}
+
+function formatPublicationJournal(value) {
+    const journal = String(value || '').trim();
+    if (!journal) {
+        return '';
+    }
+
+    const bookChapterMatch = journal.match(/^in\s+(.+),\s*([^,]+),\s*((?:19|20)\d{2})$/i);
+    if (bookChapterMatch) {
+        return `in <em class="publication-journal-name">${bookChapterMatch[1]}</em><span class="publication-journal-details">, ${bookChapterMatch[2]}, ${bookChapterMatch[3]}</span>`;
+    }
+
+    const detailsMatch = journal.match(/,\s*(?:19|20)\d{2}(?=,|&nbsp;|\s|$)/i);
+    if (detailsMatch && typeof detailsMatch.index === 'number') {
+        const name = journal.slice(0, detailsMatch.index);
+        const details = journal.slice(detailsMatch.index);
+        return `<em class="publication-journal-name">${name}</em><span class="publication-journal-details">${details}</span>`;
+    }
+
+    const firstCommaIndex = journal.indexOf(',');
+    if (firstCommaIndex > 0) {
+        const name = journal.slice(0, firstCommaIndex);
+        const details = journal.slice(firstCommaIndex);
+        return `<em class="publication-journal-name">${name}</em><span class="publication-journal-details">${details}</span>`;
+    }
+
+    return `<em class="publication-journal-name">${journal}</em>`;
+}
+
 function loadPublicationScriptOnce(src) {
     return new Promise((resolve, reject) => {
         if (typeof allPublications !== 'undefined' && Array.isArray(allPublications)) {
@@ -109,7 +148,7 @@ async function loadPublications() {
     }
 
     try {
-        await loadPublicationScriptOnce('../js/publications-data.js');
+        await loadPublicationScriptOnce('../js/publications-data.js?fallback-2');
     } catch (error) {
         console.warn('Legacy publication data could not be loaded:', error);
     }
@@ -326,7 +365,7 @@ function createHighlyCitedCard(item, index) {
             </div>
         </div>
         <h3><a class="highly-cited-title-link" href="#${anchorId}">${pub.title}</a></h3>
-        <p class="publication-journal">${pub.journal}</p>
+        <p class="publication-journal">${formatPublicationJournal(pub.journal)}</p>
     </article>`;
 }
 
@@ -405,25 +444,36 @@ function createPublicationHTML(pub) {
                 </div>
                 <span class="publication-title">${pub.title}</span>
                 <p class="publication-authors">${pub.authors}</p>
-                <p class="publication-journal">${pub.journal}</p>`;
+                <p class="publication-journal">${formatPublicationJournal(pub.journal)}</p>`;
 
-    // Links (DOI, PDF, Dimensions citation badge)
-    html += `<div class="publication-links">`;
-    if (pub.doi) {
-        html += ` <a href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i>${pub.doi}</a>`;
-    }
+    // PDF link
     if (pub.pdfLink) {
-        html += ` <a href="${pub.pdfLink}" target="_blank" rel="noopener noreferrer"><i class="far fa-file-pdf"></i>PDF</a>`;
+        html += `<div class="publication-links">
+                    <a href="${pub.pdfLink}" target="_blank" rel="noopener noreferrer"><i class="far fa-file-pdf"></i>PDF</a>
+                 </div>`;
     }
-    html += `</div>`;
 
+    // DOI and Dimensions badges
     const badgeDoi = pub.dimensionsDoi || pub.doi;
+    if (pub.doi || badgeDoi) {
+        html += `<div class="publication-badges" aria-label="Publication identifier and citation metrics">`;
+    }
+    if (pub.doi) {
+        html += `<a class="publication-doi-badge" href="https://doi.org/${pub.doi}" target="_blank" rel="noopener noreferrer" aria-label="Open DOI ${pub.doi}" title="Open DOI ${pub.doi}">
+                        <span class="publication-doi-label" aria-hidden="true">
+                            <img class="publication-doi-icon" src="../img/doi.svg" alt="">
+                            <span>doi</span>
+                        </span>
+                        <span class="publication-doi-value">${pub.doi}</span>
+                    </a>`;
+    }
     if (badgeDoi) {
-        html += `<div class="publication-badges" aria-label="Citation metrics">
-                    <span class="dimensions-badge-inline">
+        html += `<span class="dimensions-badge-inline">
                         <span class="__dimensions_badge_embed__" data-doi="${badgeDoi}" data-style="small_rectangle"></span>
-                    </span>
-                </div>`;
+                 </span>`;
+    }
+    if (pub.doi || badgeDoi) {
+        html += `</div>`;
     }
 
     // Comments
@@ -437,7 +487,12 @@ function createPublicationHTML(pub) {
     if (pub.featuredIn && pub.featuredIn.length > 0) {
         html += `<p class="publication-note publication-comment publication-featured-note"><span class="publication-note-label">Featured in:</span> `;
         pub.featuredIn.forEach((link, index) => {
-            html += `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.text}</a>`;
+            const iconSlug = getPublicationBrandIcon(link.url);
+            const iconMarkup = iconSlug
+                ? `<span class="simple-icon simple-icon-${iconSlug}" aria-hidden="true"></span>`
+                : '';
+            const linkClass = iconSlug ? ' class="brand-icon-link publication-featured-brand-link"' : '';
+            html += `<a${linkClass} href="${link.url}" target="_blank" rel="noopener noreferrer">${iconMarkup}${link.text}</a>`;
             if (index < pub.featuredIn.length - 1) {
                 html += `, `;
             }
@@ -508,9 +563,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
     }
 
-    updatePublicationStats();
-    renderHighlyCitedPapers();
-
     schedulePublicationBadgeScripts();
 
     openPublicationFromHash();
@@ -544,65 +596,6 @@ function openPublicationFromHash() {
 
 window.addEventListener('hashchange', openPublicationFromHash);
 
-// Top publication stats (publication count + Dimensions citation aggregation)
-async function updatePublicationStats() {
-    const publications = window.allPublications || [];
-    const publicationCountEl = document.getElementById('publication-count');
-    const citationTotalCardEl = document.getElementById('citation-total-card');
-    const citationTotalCountEl = document.getElementById('citation-total-count');
-    const statusLabelEl = document.getElementById('citation-status-label');
-    const statusValueEl = document.getElementById('citation-status-value');
-
-    if (publicationCountEl) {
-        publicationCountEl.textContent = publications.length.toString();
-    }
-
-    if (!statusLabelEl || !statusValueEl) {
-        if (!citationTotalCardEl || !citationTotalCountEl) {
-            return;
-        }
-    }
-
-    if (!citationTotalCardEl && (!statusLabelEl || !statusValueEl)) {
-        return;
-    }
-
-    try {
-        if (citationTotalCardEl && citationTotalCountEl) {
-            citationTotalCardEl.classList.remove('is-hidden');
-            citationTotalCountEl.textContent = '...';
-        }
-
-        const citationData = await getDimensionsCitationCounts(publications);
-        const totalCitations = Object.values(citationData.counts)
-            .reduce((sum, citations) => sum + citations, 0);
-
-        if (citationTotalCardEl && citationTotalCountEl) {
-            citationTotalCountEl.textContent = totalCitations.toLocaleString();
-            const updatedText = citationData.lastUpdated
-                ? `; updated ${new Date(citationData.lastUpdated).toLocaleDateString()}`
-                : '';
-            citationTotalCardEl.title = `${citationData.source}: ${citationData.loadedCount}/${citationData.doiCount} DOI records loaded${updatedText}`;
-        }
-
-        if (statusLabelEl && statusValueEl) {
-            statusLabelEl.textContent = `Total Citations: ${totalCitations.toLocaleString()}`;
-            statusValueEl.textContent = `${citationData.source} (${citationData.loadedCount}/${citationData.doiCount})`;
-        }
-
-    } catch (error) {
-        console.warn('Dimensions citation data not available:', error);
-        if (citationTotalCardEl && citationTotalCountEl) {
-            citationTotalCardEl.classList.add('is-hidden');
-            citationTotalCountEl.textContent = '--';
-        }
-        if (statusLabelEl && statusValueEl) {
-            statusLabelEl.textContent = 'Citation data not available';
-            statusValueEl.textContent = 'Dimensions API could not be reached';
-        }
-    }
-}
-
 // Citation Modal Functionality
 function showCitationModal(pubNumber) {
     const publications = window.allPublications || [];
@@ -614,12 +607,12 @@ function showCitationModal(pubNumber) {
         <div id="citation-modal" data-pub-number="${pubNumber}" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 10000; display: flex; align-items: center; justify-content: center; font-family: var(--font-family-sans-serif);">
             <div style="background: white; padding: 2rem; border-radius: 8px; max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-                    <h3 style="margin: 0; color: var(--color-primary-blue); font-family: 'Libre Baskerville', serif;">Cite This Publication</h3>
+                    <h3 style="margin: 0; color: var(--color-primary-blue); font-family: var(--font-family-sans-serif);">Cite This Publication</h3>
                     <button onclick="closeCitationModal()" style="background: none; border: none; font-size: 1.5em; cursor: pointer; color: #666;">&times;</button>
                 </div>
 
                 <div style="margin-bottom: 1.5rem;">
-                    <strong style="color: var(--color-dark-blue); font-family: 'Libre Baskerville', serif;">${pub.title}</strong><br>
+                    <strong style="color: var(--color-dark-blue); font-family: var(--font-family-sans-serif);">${pub.title}</strong><br>
                     <span style="color: var(--text-color-medium); font-style: italic;">${pub.authors}</span><br>
                     <span style="color: var(--text-color-subtle);">${pub.journal}</span>
                 </div>

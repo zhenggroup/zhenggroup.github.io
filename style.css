@@ -38,8 +38,8 @@
     --shadow-color-medium: rgba(0, 33, 71, 0.16);
 
     /* Added for consistency if used by page-specific styles */
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-family-serif-display: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
+    --font-family-sans-serif: "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-serif-display: var(--font-family-sans-serif);
 }
 
 /* Global Resets and Base Styles */
@@ -841,8 +841,8 @@ main {
     --background-color-light-gray: #f6f8fb;
     --shadow-color-soft: rgba(0, 33, 71, 0.06);
     --shadow-color-medium: rgba(0, 33, 71, 0.1);
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    --font-family-serif-display: "Crimson Pro", Georgia, "Times New Roman", Times, serif;
+    --font-family-sans-serif: "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-serif-display: var(--font-family-sans-serif);
 }
 
 body {
@@ -2915,9 +2915,9 @@ body.home-page .news-section {
 
 /* === Typography And Readability === */
 :root {
-    --font-family-sans-serif: "Freight Sans", "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-    --font-family-display: "Crimson Pro", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
-    --font-family-serif-display: var(--font-family-display);
+    --font-family-sans-serif: "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-display: var(--font-family-sans-serif);
+    --font-family-serif-display: var(--font-family-sans-serif);
     --text-color-dark: #151f31;
     --text-color-headings: #06182f;
     --text-color-medium: #3f4c61;
@@ -4700,9 +4700,9 @@ main li,
     --labs-blue: #005ea8;
     --labs-gold: #ffcd05;
 
-    --font-family-sans-serif: "Freight Sans", "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-    --font-family-display: "Crimson Pro", Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
-    --font-family-serif-display: var(--font-family-display);
+    --font-family-sans-serif: "Libre Franklin", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    --font-family-display: var(--font-family-sans-serif);
+    --font-family-serif-display: var(--font-family-sans-serif);
 }
 
 body,
@@ -4737,4 +4737,86 @@ body[data-clean-url="true"] main,
 .team-member-card .member-photo {
     border: 0 !important;
     box-shadow: none !important;
+}
+
+/* Simple Icons brand marks, vendored locally from simple-icons/simple-icons. */
+.simple-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex: 0 0 1em;
+    color: inherit;
+    background-color: currentColor;
+    vertical-align: -0.12em;
+    -webkit-mask: var(--simple-icon-src) center / contain no-repeat;
+    mask: var(--simple-icon-src) center / contain no-repeat;
+}
+
+.simple-icon-orcid {
+    --simple-icon-src: url("img/simple-icons/orcid.svg");
+}
+
+.simple-icon-googlescholar {
+    --simple-icon-src: url("img/simple-icons/googlescholar.svg");
+}
+
+.simple-icon-synology {
+    --simple-icon-src: url("img/simple-icons/synology.svg");
+}
+
+.simple-icon-python {
+    --simple-icon-src: url("img/simple-icons/python.svg");
+}
+
+.simple-icon-blender {
+    --simple-icon-src: url("img/simple-icons/blender.svg");
+}
+
+.simple-icon-imagej {
+    --simple-icon-src: url("img/simple-icons/imagej.svg");
+}
+
+.simple-icon-github {
+    --simple-icon-src: url("img/simple-icons/github.svg");
+}
+
+.simple-icon-bilibili {
+    --simple-icon-src: url("img/simple-icons/bilibili.svg");
+}
+
+.simple-icon-wechat {
+    --simple-icon-src: url("img/simple-icons/wechat.svg");
+}
+
+.brand-icon-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 0.34em;
+}
+
+.resource-card h3 .simple-icon,
+.software-list-item h3 .simple-icon {
+    width: 0.95em;
+    height: 0.95em;
+    flex-basis: 0.95em;
+}
+
+.lab-system-buttons .btn > .simple-icon {
+    display: inline-block !important;
+    width: 1rem !important;
+    height: 1rem !important;
+    flex: 0 0 1rem !important;
+    color: var(--color-gold) !important;
+    background-color: currentColor !important;
+}
+
+.pi-contact-links .simple-icon,
+.member-contact-links .simple-icon {
+    display: inline-block;
+}
+
+.publication-featured-brand-link .simple-icon {
+    width: 0.9em;
+    height: 0.9em;
+    flex-basis: 0.9em;
 }

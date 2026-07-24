@@ -51,23 +51,9 @@ const currentMembers = [
         googleScholar: null
     },
     {
-        name: "Sijie Chen (陈思捷)",
-        role: "MSc student (Technion)<br>2024 -",
-        photoSrc: "../img/a25005dc4df4171109afb4a3efd090cf.JPG", // CORRECTED PATH
-        orcid: null,
-        googleScholar: null
-    },
-    {
-        name: "Ting Zhang (张婷)",
-        role: "MSc student (SUSTech-GT)<br>2023 -",
-        photoSrc: "../img/bc9f0bb4fe1cbc20f290c46000d6c702.JPG", // CORRECTED PATH
-        orcid: null,
-        googleScholar: null
-    },
-    {
         name: "Yingshi Su (苏颖诗)",
         role: "PhD student (Technion)<br>2026 -",
-        photoSrc: "../img/", // CORRECTED PATH
+        photoSrc: "../img/yingshi-su.png",
         orcid: null,
         googleScholar: null
     },
@@ -81,7 +67,7 @@ const currentMembers = [
     {
         name: "Peter Cambal",
         role: "Lab Manager / Postdoc Fellow<br>2026 -",
-        photoSrc: "../img/placeholder-image.png",
+        photoSrc: "../img/peter-cambal.png",
         orcid: null,
         googleScholar: null
     }
@@ -121,6 +107,20 @@ const previousMembers = [
         name: "Guanxi Wu (吴冠希)",
         role: "Undergraduate (22Chem)<br>2024 - 2026",
         photoSrc: "../img/4339e05276f975da75344856d6a2ea0e 2.JPG",
+        orcid: null,
+        googleScholar: null
+    },
+    {
+        name: "Sijie Chen (陈思捷)",
+        role: "MSc student (Technion)<br>2024 - 2026",
+        photoSrc: "../img/a25005dc4df4171109afb4a3efd090cf.JPG", // CORRECTED PATH
+        orcid: null,
+        googleScholar: null
+    },
+    {
+        name: "Ting Zhang (张婷)",
+        role: "MSc student (SUSTech-GT)<br>2023 - 2026",
+        photoSrc: "../img/bc9f0bb4fe1cbc20f290c46000d6c702.JPG", // CORRECTED PATH
         orcid: null,
         googleScholar: null
     }

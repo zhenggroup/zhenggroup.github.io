@@ -12,9 +12,9 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Libre+Franklin:wght@400;500;600;700;800&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?site-main-1">
+	<link rel="stylesheet" type="text/css" href="../style.css?site-main-3">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
     <title>Team - The Zheng Group</title>
@@ -382,6 +382,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="../css/site-harmony.css?visual-1">
 
 </head>
 <body data-clean-url="true">
@@ -476,7 +477,7 @@
 <script src="../js/lazysizes.min.js" defer></script>
 <script src="../js/site-year.js" defer></script>
 
-<script src="../js/team-data.js?team-update-peter-cambal" defer></script>
+<script src="../js/team-data.js?team-yingshi-photo-1" defer></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -503,10 +504,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (piContainer && typeof piData !== 'undefined') {
         let piLinks = '';
         if (piData.orcid) {
-            piLinks += `<a href="${piData.orcid}" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><span class="fab fa-orcid"></span></a>`;
+            piLinks += `<a href="${piData.orcid}" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><span class="simple-icon simple-icon-orcid" aria-hidden="true"></span></a>`;
         }
         if (piData.googleScholar) {
-            piLinks += `<a href="${piData.googleScholar}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="fab fa-google"></span></a>`;
+            piLinks += `<a href="${piData.googleScholar}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="simple-icon simple-icon-googlescholar" aria-hidden="true"></span></a>`;
         }
         if (piData.email) {
             piLinks += `<a href="mailto:${piData.email}" aria-label="Email"><span class="far fa-envelope"></span></a>`;
@@ -534,10 +535,10 @@ document.addEventListener('DOMContentLoaded', function() {
         membersArray.forEach(member => {
             let memberLinks = '';
             if (member.orcid) {
-                memberLinks += `<a href="${member.orcid}" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><span class="fab fa-orcid"></span></a>`;
+                memberLinks += `<a href="${member.orcid}" target="_blank" rel="noopener noreferrer" aria-label="ORCID"><span class="simple-icon simple-icon-orcid" aria-hidden="true"></span></a>`;
             }
             if (member.googleScholar) {
-                memberLinks += `<a href="${member.googleScholar}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="fab fa-google"></span></a>`;
+                memberLinks += `<a href="${member.googleScholar}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><span class="simple-icon simple-icon-googlescholar" aria-hidden="true"></span></a>`;
             }
 
             const linksHTML = memberLinks ? `<div class="member-contact-links">${memberLinks}</div>` : '';

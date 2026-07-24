@@ -48,10 +48,10 @@ function inferNewsManifestPath(basePath) {
 
 function inferLegacyNewsDataPath(basePath) {
     if (basePath.includes('news/posts')) {
-        return './js/news-data.js';
+        return './js/news-data.js?simple-icons-1';
     }
 
-    return '../js/news-data.js';
+    return '../js/news-data.js?simple-icons-1';
 }
 
 function splitNewsMarkdownSections(markdown) {

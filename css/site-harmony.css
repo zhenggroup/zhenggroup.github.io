@@ -1,0 +1,710 @@
+/*
+ * Zheng Group shared visual rhythm
+ * Loaded after page-specific styles so every page uses one coherent type and
+ * spacing scale while retaining its own layout and color treatment.
+ */
+
+:root {
+    --harmony-content-width: 1120px;
+    --harmony-reading-width: 760px;
+    --harmony-rule: rgba(17, 17, 17, 0.14);
+    --harmony-text: #111111;
+    --harmony-muted: #57534a;
+    --harmony-subtle: #766f61;
+    --harmony-section-gap: clamp(2.6rem, 4vw, 3.8rem);
+    --harmony-block-gap: clamp(1.5rem, 3vw, 2.4rem);
+    --harmony-card-gap: clamp(1rem, 2vw, 1.4rem);
+    --harmony-card-padding: clamp(1rem, 1.8vw, 1.3rem);
+    --harmony-page-title: clamp(1.9rem, 3.2vw, 2.55rem);
+    --harmony-intro-title: clamp(1.35rem, 2.2vw, 1.72rem);
+    --harmony-section-title: clamp(1.12rem, 1.55vw, 1.38rem);
+    --harmony-card-title: clamp(1rem, 1.12vw, 1.1rem);
+    --harmony-body: clamp(0.92rem, 0.96vw, 0.97rem);
+    --harmony-small: 0.82rem;
+    --harmony-meta: 0.76rem;
+}
+
+html {
+    font-size: 16px !important;
+}
+
+body {
+    font-family: var(--font-family-sans-serif) !important;
+    font-size: var(--harmony-body) !important;
+    line-height: 1.6 !important;
+    letter-spacing: 0 !important;
+}
+
+body .content-container {
+    width: min(92%, var(--harmony-content-width)) !important;
+    max-width: var(--harmony-content-width) !important;
+    margin-inline: auto !important;
+}
+
+#bloc-0 .nav-link {
+    padding: 0.7rem 0.72rem !important;
+    font-size: 0.84rem !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+}
+
+body[data-clean-url="true"] .page-title-container {
+    padding-bottom: clamp(2rem, 3.8vw, 2.8rem) !important;
+    margin-bottom: clamp(1.6rem, 3vw, 2.3rem) !important;
+}
+
+body[data-clean-url="true"] .page-title-container h1 {
+    font-size: var(--harmony-page-title) !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+}
+
+body[data-clean-url="true"] :is(
+    .research-overview,
+    .team-summary,
+    .publication-summary,
+    .news-summary,
+    .resource-intro,
+    .service-hero,
+    .zh-intro
+) {
+    padding-top: 0.55rem !important;
+    padding-bottom: clamp(1.7rem, 3vw, 2.2rem) !important;
+    margin-bottom: clamp(1.8rem, 3.5vw, 2.7rem) !important;
+}
+
+body[data-clean-url="true"] :is(
+    .research-overview,
+    .team-summary,
+    .publication-summary,
+    .news-summary,
+    .resource-intro,
+    .service-hero,
+    .zh-intro
+) h2 {
+    max-width: var(--harmony-reading-width) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.65rem !important;
+    font-size: var(--harmony-intro-title) !important;
+    font-weight: 500 !important;
+    line-height: 1.18 !important;
+}
+
+body[data-clean-url="true"] :is(
+    .research-overview,
+    .team-summary,
+    .publication-summary,
+    .news-summary,
+    .resource-intro,
+    .service-hero,
+    .zh-intro
+) p {
+    max-width: var(--harmony-reading-width) !important;
+    margin-top: 0 !important;
+    font-size: var(--harmony-body) !important;
+    line-height: 1.62 !important;
+}
+
+body[data-clean-url="true"] .section-heading {
+    margin-top: var(--harmony-section-gap) !important;
+    margin-bottom: 1.15rem !important;
+    font-size: var(--harmony-section-title) !important;
+    font-weight: 500 !important;
+    line-height: 1.28 !important;
+}
+
+body[data-clean-url="true"] :is(.service-section-heading h2, .zh-section h2) {
+    margin-top: 0 !important;
+    margin-bottom: 0.55rem !important;
+    font-size: var(--harmony-section-title) !important;
+    font-weight: 500 !important;
+    line-height: 1.28 !important;
+}
+
+body[data-clean-url="true"] main :is(p, li) {
+    font-size: var(--harmony-body) !important;
+    line-height: 1.6 !important;
+}
+
+body[data-clean-url="true"] main p {
+    margin-top: 0;
+    margin-bottom: 0.9rem;
+}
+
+body[data-clean-url="true"] main :is(ul, ol) {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+body[data-clean-url="true"] :is(
+    .research-card h2,
+    .resource-card h3,
+    .service-card h3,
+    .service-mode h3,
+    .zh-section h3,
+    .team-member-card .member-name,
+    .news-entry-title,
+    .publication-title
+) {
+    font-size: var(--harmony-card-title) !important;
+    font-weight: 500 !important;
+    line-height: 1.36 !important;
+}
+
+body[data-clean-url="true"] :is(
+    .research-card-number,
+    .research-method-tag,
+    .publication-number,
+    .publication-type-tag,
+    .publication-affiliation-note,
+    .news-entry-date,
+    .service-kicker,
+    .service-tag,
+    .zh-kicker,
+    .zh-pill
+) {
+    font-size: var(--harmony-meta) !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0.02em !important;
+}
+
+body[data-clean-url="true"] :is(
+    .research-section,
+    .team-grid,
+    .resource-grid,
+    .service-grid,
+    .service-mode-grid,
+    .zh-grid
+) {
+    gap: var(--harmony-card-gap) !important;
+}
+
+body[data-clean-url="true"] :is(
+    .research-card-content,
+    .team-member-card,
+    .resource-card,
+    .service-card,
+    .service-mode,
+    .zh-block
+) {
+    padding: var(--harmony-card-padding) !important;
+}
+
+body[data-clean-url="true"] :is(
+    .research-card,
+    .team-member-card,
+    .resource-card,
+    .news-entry-card,
+    .service-card,
+    .service-mode,
+    .zh-block
+) {
+    box-shadow: none !important;
+}
+
+body[data-clean-url="true"] .footer-bloc {
+    margin-top: clamp(2.5rem, 4vw, 3.5rem) !important;
+    padding-top: 1.45rem !important;
+    padding-bottom: 1.45rem !important;
+    font-size: 0.74rem !important;
+    line-height: 1.5 !important;
+}
+
+/* Homepage */
+body.home-page .hero-text-content h1 {
+    font-size: clamp(2.8rem, 6vw, 4.8rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.02 !important;
+}
+
+body.home-page .hero-text-content h2 {
+    max-width: 780px !important;
+    font-size: clamp(1.1rem, 1.8vw, 1.42rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+}
+
+body.home-page .hero-text-content .research-focus-intro {
+    max-width: 780px !important;
+    font-size: clamp(0.92rem, 1.05vw, 1rem) !important;
+    line-height: 1.66 !important;
+}
+
+body.home-page .hero-actions {
+    gap: 0.72rem !important;
+    margin-top: 1.7rem !important;
+}
+
+body.home-page .hero-action {
+    min-height: 44px !important;
+    padding: 0.7rem 1rem !important;
+    font-size: 0.86rem !important;
+}
+
+body.home-page .news-section {
+    padding-top: clamp(3rem, 6vw, 4.5rem) !important;
+    padding-bottom: clamp(3.5rem, 7vw, 5.5rem) !important;
+}
+
+body.home-page .news-section .section-heading {
+    margin-top: 0 !important;
+    margin-bottom: 1.25rem !important;
+    font-size: var(--harmony-section-title) !important;
+    line-height: 1.28 !important;
+}
+
+body.home-page .homepage-news-list {
+    margin-top: 0.7rem !important;
+}
+
+body.home-page .homepage-news-item a {
+    gap: clamp(0.8rem, 2vw, 1.35rem) !important;
+    padding-top: 0.78rem !important;
+    padding-bottom: 0.78rem !important;
+}
+
+body.home-page .homepage-news-date {
+    width: 82px !important;
+    font-size: var(--harmony-meta) !important;
+}
+
+body.home-page .homepage-news-title {
+    font-size: clamp(0.9rem, 1vw, 0.96rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+}
+
+body.home-page .homepage-news-more-link {
+    margin-top: 1.15rem !important;
+    font-size: 0.84rem !important;
+}
+
+body.home-page .footer-bloc {
+    margin-top: 0 !important;
+    padding-top: 1.45rem !important;
+    padding-bottom: 1.45rem !important;
+    font-size: 0.74rem !important;
+}
+
+/* Research */
+body[data-clean-url="true"] .research-overview {
+    gap: clamp(1.5rem, 3vw, 2.4rem) !important;
+}
+
+body[data-clean-url="true"] .research-section {
+    margin-top: 0 !important;
+}
+
+body[data-clean-url="true"] .research-card h2 {
+    margin-top: 0.42rem !important;
+    margin-bottom: 0.65rem !important;
+}
+
+body[data-clean-url="true"] .research-card h3 {
+    margin-top: 0.95rem !important;
+    margin-bottom: 0.45rem !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}
+
+body[data-clean-url="true"] .research-card .research-topic-intro,
+body[data-clean-url="true"] .research-card :is(.topic-list li, .publications-list li) {
+    font-size: 0.9rem !important;
+    line-height: 1.58 !important;
+}
+
+body[data-clean-url="true"] .research-methods {
+    gap: 0.38rem !important;
+    margin-bottom: 0.1rem !important;
+}
+
+body[data-clean-url="true"] .research-method-tag {
+    min-height: 26px !important;
+    padding: 0.24rem 0.48rem !important;
+}
+
+body[data-clean-url="true"] .research-card-link {
+    padding-top: 0.85rem !important;
+    font-size: 0.84rem !important;
+}
+
+body[data-clean-url="true"] .feynman-quote-section {
+    gap: 1.35rem !important;
+    margin-top: clamp(2.5rem, 5vw, 4rem) !important;
+    padding: 1.25rem !important;
+}
+
+body[data-clean-url="true"] .feynman-quote-section h3 {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+}
+
+body[data-clean-url="true"] .feynman-quote-section blockquote {
+    font-size: 0.94rem !important;
+    line-height: 1.6 !important;
+}
+
+/* Publications */
+body[data-clean-url="true"] .publication-summary h2 {
+    font-size: clamp(1.28rem, 1.9vw, 1.58rem) !important;
+}
+
+body[data-clean-url="true"] .featured-covers-grid {
+    gap: clamp(0.75rem, 1.5vw, 1rem) !important;
+    margin-bottom: clamp(2rem, 4vw, 3rem) !important;
+    padding-top: 0.9rem !important;
+    padding-bottom: 0.9rem !important;
+}
+
+body[data-clean-url="true"] .publication-year-accordion .card-header {
+    padding-top: 0.82rem !important;
+    padding-bottom: 0.82rem !important;
+}
+
+body[data-clean-url="true"] .publication-year-accordion .year-toggle {
+    font-size: clamp(1.04rem, 1.3vw, 1.14rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+}
+
+body[data-clean-url="true"] .publication-entry,
+body[data-clean-url="true"] .publication-entry:hover {
+    padding-top: 1.3rem !important;
+    padding-bottom: 1.3rem !important;
+}
+
+body[data-clean-url="true"] .publication-details {
+    gap: 0.36rem !important;
+}
+
+body[data-clean-url="true"] .publication-title {
+    max-width: 760px !important;
+    font-size: clamp(1rem, 1.08vw, 1.16rem) !important;
+    line-height: 1.42 !important;
+}
+
+body[data-clean-url="true"] :is(.publication-authors, .publication-journal) {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+}
+
+body[data-clean-url="true"] :is(.publication-intro-text, .publication-links a, .publication-featured-links) {
+    font-size: var(--harmony-small) !important;
+    line-height: 1.45 !important;
+}
+
+body[data-clean-url="true"] :is(.publication-note, .publication-comment) {
+    font-size: 0.76rem !important;
+    line-height: 1.45 !important;
+}
+
+/* Team */
+body[data-clean-url="true"] .pi-section {
+    gap: clamp(1.5rem, 3vw, 2.25rem) !important;
+    padding-top: 1.35rem !important;
+    padding-bottom: 1.35rem !important;
+    margin-bottom: clamp(2.25rem, 4vw, 3.4rem) !important;
+}
+
+body[data-clean-url="true"] .pi-name {
+    margin-bottom: 0.3rem !important;
+    font-size: clamp(1.22rem, 1.8vw, 1.45rem) !important;
+    line-height: 1.25 !important;
+}
+
+body[data-clean-url="true"] .pi-title {
+    margin-bottom: 1rem !important;
+    font-size: 0.94rem !important;
+    line-height: 1.5 !important;
+}
+
+body[data-clean-url="true"] .pi-details h6 {
+    margin-top: 1.15rem !important;
+    margin-bottom: 0.45rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.4 !important;
+}
+
+body[data-clean-url="true"] .team-grid {
+    margin-bottom: clamp(2rem, 4vw, 3rem) !important;
+}
+
+body[data-clean-url="true"] .team-member-card .member-name {
+    margin-bottom: 0.28rem !important;
+    font-size: 1rem !important;
+}
+
+body[data-clean-url="true"] .team-member-card .member-role {
+    font-size: 0.86rem !important;
+    line-height: 1.45 !important;
+}
+
+body[data-clean-url="true"] #previous-members-grid .team-member-card .member-name {
+    font-size: 0.92rem !important;
+}
+
+body[data-clean-url="true"] #previous-members-grid .team-member-card .member-role {
+    font-size: 0.8rem !important;
+}
+
+/* Resources */
+body[data-clean-url="true"] .resource-intro {
+    gap: clamp(1.5rem, 3vw, 2.25rem) !important;
+}
+
+body[data-clean-url="true"] .resource-note-panel {
+    padding: 0.9rem 1rem !important;
+}
+
+body[data-clean-url="true"] .resource-note-panel strong {
+    font-size: 0.88rem !important;
+}
+
+body[data-clean-url="true"] .resource-note-panel span {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+}
+
+body[data-clean-url="true"] .lab-system-buttons {
+    gap: var(--harmony-card-gap) !important;
+    margin-bottom: clamp(2rem, 4vw, 3rem) !important;
+}
+
+body[data-clean-url="true"] .lab-system-buttons .btn {
+    min-height: 78px !important;
+    padding: 0.85rem 1rem !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+}
+
+body[data-clean-url="true"] .lab-system-buttons .btn span {
+    font-size: 0.78rem !important;
+    line-height: 1.45 !important;
+}
+
+body[data-clean-url="true"] .resource-card h3 {
+    margin-bottom: 0.5rem !important;
+}
+
+body[data-clean-url="true"] .resource-card :is(p, li) {
+    font-size: 0.9rem !important;
+    line-height: 1.58 !important;
+}
+
+body[data-clean-url="true"] .resource-card .note {
+    font-size: 0.76rem !important;
+    line-height: 1.5 !important;
+}
+
+/* News */
+body[data-clean-url="true"] .news-list-container {
+    gap: 0 !important;
+}
+
+body[data-clean-url="true"] .news-entry-card {
+    gap: clamp(1rem, 2.5vw, 1.6rem) !important;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+    margin-bottom: 0 !important;
+}
+
+body[data-clean-url="true"] .news-entry-date {
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    font-weight: 500 !important;
+}
+
+body[data-clean-url="true"] .news-entry-title {
+    margin-top: 0.4rem !important;
+    font-size: clamp(1rem, 1.12vw, 1.12rem) !important;
+    line-height: 1.4 !important;
+}
+
+body[data-clean-url="true"] .news-entry-body {
+    font-size: 0.92rem !important;
+    line-height: 1.62 !important;
+}
+
+body[data-clean-url="true"] .news-entry-caption {
+    font-size: 0.76rem !important;
+    line-height: 1.45 !important;
+}
+
+/* Services */
+body[data-clean-url="true"] .service-hero {
+    gap: clamp(1.75rem, 4vw, 3rem) !important;
+}
+
+body[data-clean-url="true"] .service-actions {
+    gap: 0.62rem !important;
+    margin-top: 1.15rem !important;
+}
+
+body[data-clean-url="true"] .service-button {
+    min-height: 42px !important;
+    padding: 0.62rem 0.9rem !important;
+    font-size: 0.86rem !important;
+}
+
+body[data-clean-url="true"] .service-summary {
+    padding-top: 0.7rem !important;
+}
+
+body[data-clean-url="true"] .service-section {
+    padding-top: clamp(2.3rem, 4vw, 3.25rem) !important;
+}
+
+body[data-clean-url="true"] .service-section-heading {
+    margin-bottom: 1.15rem !important;
+}
+
+body[data-clean-url="true"] .service-section-heading p,
+body[data-clean-url="true"] :is(.service-card, .service-mode) p {
+    font-size: 0.9rem !important;
+    line-height: 1.58 !important;
+}
+
+body[data-clean-url="true"] .service-tag {
+    padding: 0.22rem 0.48rem !important;
+}
+
+body[data-clean-url="true"] .service-contact {
+    gap: 1.25rem !important;
+    margin-top: clamp(2.6rem, 5vw, 4rem) !important;
+    padding: clamp(1.2rem, 2.5vw, 1.6rem) !important;
+}
+
+body[data-clean-url="true"] .service-contact h2 {
+    margin-bottom: 0.55rem !important;
+    font-size: clamp(1.18rem, 1.8vw, 1.42rem) !important;
+}
+
+body[data-clean-url="true"] .service-contact p {
+    font-size: 0.9rem !important;
+    line-height: 1.58 !important;
+}
+
+/* Chinese landing page */
+body[data-clean-url="true"] .zh-intro {
+    gap: clamp(1.5rem, 3vw, 2.4rem) !important;
+}
+
+body[data-clean-url="true"] .zh-section {
+    padding-top: clamp(2.3rem, 4vw, 3.25rem) !important;
+}
+
+body[data-clean-url="true"] .zh-section-header {
+    margin-bottom: 1.15rem !important;
+}
+
+body[data-clean-url="true"] .zh-section :is(p, li) {
+    font-size: 0.92rem !important;
+    line-height: 1.65 !important;
+}
+
+body[data-clean-url="true"] .zh-section h3 {
+    margin-bottom: 0.42rem !important;
+}
+
+body[data-clean-url="true"] .zh-pill {
+    padding: 0.22rem 0.48rem !important;
+}
+
+body[data-clean-url="true"] .zh-contact {
+    gap: 1.25rem !important;
+    margin-top: clamp(2.6rem, 5vw, 4rem) !important;
+    padding: clamp(1.2rem, 2.5vw, 1.6rem) !important;
+}
+
+body[data-clean-url="true"] .zh-contact h2 {
+    font-size: clamp(1.18rem, 1.8vw, 1.42rem) !important;
+}
+
+body[data-clean-url="true"] .zh-contact p {
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --harmony-section-gap: 2.6rem;
+        --harmony-block-gap: 1.6rem;
+        --harmony-card-gap: 0.9rem;
+        --harmony-card-padding: 1rem;
+    }
+
+    body .content-container {
+        width: min(92%, var(--harmony-content-width)) !important;
+    }
+
+    #bloc-0 .nav-link {
+        padding: 0.62rem 0.35rem !important;
+    }
+
+    body[data-clean-url="true"] .page-title-container {
+        padding-bottom: 1.9rem !important;
+        margin-bottom: 1.45rem !important;
+    }
+
+    body[data-clean-url="true"] :is(
+        .research-overview,
+        .team-summary,
+        .publication-summary,
+        .news-summary,
+        .resource-intro,
+        .service-hero,
+        .zh-intro
+    ) {
+        padding-bottom: 1.55rem !important;
+        margin-bottom: 1.75rem !important;
+    }
+
+    body[data-clean-url="true"] .section-heading {
+        margin-top: 2.5rem !important;
+    }
+
+    body.home-page .hero-section {
+        padding-bottom: 1.5rem !important;
+    }
+
+    body.home-page .hero-actions {
+        gap: 0.6rem !important;
+    }
+
+    body.home-page .homepage-news-item a {
+        gap: 0.22rem !important;
+    }
+
+    body.home-page .homepage-news-date {
+        width: auto !important;
+    }
+
+    body[data-clean-url="true"] .publication-entry,
+    body[data-clean-url="true"] .publication-entry:hover {
+        padding-top: 1.1rem !important;
+        padding-bottom: 1.1rem !important;
+    }
+
+    body[data-clean-url="true"] .news-entry-card {
+        padding-top: 1.05rem !important;
+        padding-bottom: 1.05rem !important;
+    }
+
+    body[data-clean-url="true"] :is(.service-section, .zh-section) {
+        padding-top: 2.35rem !important;
+    }
+
+    body[data-clean-url="true"] :is(.service-contact, .zh-contact) {
+        margin-top: 2.6rem !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body *,
+    body *::before,
+    body *::after {
+        scroll-behavior: auto !important;
+    }
+}

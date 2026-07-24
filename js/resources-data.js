@@ -1,4 +1,6 @@
-# Resources
+// Local fallback for file:// previews.
+// Keep this content synchronized with resource/resources.md.
+window.resourceMarkdownFallback = String.raw`# Resources
 
 ## Intro
 
@@ -110,3 +112,4 @@ ECS Webinar by Weiran Zheng • Aug. 28, 2024
 - [Gamry Instruments Application Notes](https://www.gamry.com/application-notes/) - Technical guides for electrochemical measurements
 - [Pine Research Theory & Applications](https://pineresearch.com/shop/kb/knowledge-category/theory/) - In-depth electrochemical theory
 - **Reference Text:** ["Electrochemical Methods: Fundamentals and Applications"](https://www.wiley.com/en-kr/Electrochemical+Methods:+Fundamentals+and+Applications,+2nd+Edition-p-9780471043720) by Bard, Faulkner, White & Leddy - The electrochemistry bible
+`;

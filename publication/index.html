@@ -12,9 +12,9 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?site-main-1">
+	<link rel="stylesheet" type="text/css" href="../style.css?site-main-3">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
     <title>Publications - The Zheng Group</title>
@@ -249,9 +249,9 @@
         .publication-badges {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.6rem;
+            gap: 0.34rem;
             align-items: flex-start;
-            margin: 0.5rem 0 0 0;
+            margin: 0.38rem 0 0 0;
             flex-direction: column;
         }
         .dimensions-badge-inline {
@@ -1208,7 +1208,210 @@
                 min-width: 0;
             }
         }
+
+        /* DOI badge: Simple Icons DOI mark with a compact two-part label */
+        .publication-badges a.publication-doi-badge {
+            display: inline-flex !important;
+            align-items: stretch !important;
+            gap: 0 !important;
+            width: fit-content;
+            max-width: 100%;
+            min-height: 22px;
+            padding: 0 !important;
+            overflow: hidden;
+            color: #2f3437 !important;
+            background: #edf2f4 !important;
+            border: 1px solid rgba(47, 52, 55, 0.14) !important;
+            border-radius: 4px !important;
+            box-shadow: 0 1px 2px rgba(0, 33, 71, 0.08) !important;
+            text-decoration: none !important;
+            line-height: 1 !important;
+            transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease !important;
+        }
+
+        .publication-badges a.publication-doi-badge:hover {
+            color: #1f2528 !important;
+            background: #f3f7f8 !important;
+            border-color: rgba(0, 33, 71, 0.34) !important;
+            box-shadow: 0 3px 8px rgba(0, 33, 71, 0.12) !important;
+            text-decoration: none !important;
+            transform: translateY(-1px);
+        }
+
+        .publication-badges a.publication-doi-badge:focus-visible {
+            outline: 2px solid var(--color-gold);
+            outline-offset: 3px;
+        }
+
+        .publication-doi-label,
+        .publication-doi-value {
+            display: inline-flex;
+            align-items: center;
+            min-height: 22px;
+        }
+
+        .publication-doi-label {
+            flex: 0 0 auto;
+            gap: 0.26rem;
+            padding: 0 0.4rem;
+            color: #ffffff;
+            background: #3f4346;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            text-transform: lowercase;
+        }
+
+        .publication-doi-icon {
+            display: block;
+            width: 13px;
+            height: 13px;
+            flex: 0 0 13px;
+        }
+
+        .publication-doi-value {
+            min-width: 0;
+            padding: 0 0.42rem;
+            overflow: hidden;
+            color: #30363a;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+            font-size: 0.72rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Unified publication typography: sans-serif text, italic journal name only. */
+        .publication-title,
+        .publication-title *,
+        .publication-authors,
+        .publication-authors *,
+        .publication-journal,
+        .publication-journal *,
+        .publication-description,
+        .publication-description *,
+        .publication-comment,
+        .publication-comment *,
+        .highly-cited-card h3,
+        .highly-cited-title-link {
+            font-family: var(--font-family-sans-serif) !important;
+        }
+
+        .publication-authors b,
+        .publication-authors strong,
+        .publication-authors u {
+            font-size: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .publication-journal {
+            font-style: normal !important;
+        }
+
+        .publication-journal .publication-journal-name {
+            font-style: italic !important;
+        }
+
+        .publication-journal .publication-journal-details {
+            font-style: normal !important;
+        }
+
+        /* Harmonized publication-page type scale and vertical rhythm. */
+        body[data-clean-url="true"] .page-title-container h1 {
+            font-size: clamp(1.85rem, 3vw, 2.4rem) !important;
+            line-height: 1.1 !important;
+        }
+
+        body[data-clean-url="true"] .publication-summary h2 {
+            font-size: clamp(1.28rem, 1.9vw, 1.58rem) !important;
+            line-height: 1.2 !important;
+            margin-bottom: 0.5rem !important;
+        }
+
+        body[data-clean-url="true"] main .section-heading {
+            font-size: clamp(1.08rem, 1.45vw, 1.32rem) !important;
+            line-height: 1.28 !important;
+        }
+
+        body[data-clean-url="true"] .publication-year-accordion .card-header {
+            padding-top: 0.82rem !important;
+            padding-bottom: 0.82rem !important;
+        }
+
+        body[data-clean-url="true"] .publication-year-accordion .card-header .year-toggle {
+            font-size: clamp(1.04rem, 1.3vw, 1.14rem) !important;
+            font-weight: 600 !important;
+            line-height: 1.3 !important;
+        }
+
+        body[data-clean-url="true"] .publication-year-accordion .card-header .year-toggle[data-count]::before {
+            font-size: 0.72rem !important;
+            font-weight: 500 !important;
+        }
+
+        body[data-clean-url="true"] .publication-entry,
+        body[data-clean-url="true"] .publication-entry:hover {
+            padding-top: 1.3rem !important;
+            padding-bottom: 1.3rem !important;
+        }
+
+        body[data-clean-url="true"] .publication-details {
+            gap: 0.36rem !important;
+        }
+
+        body[data-clean-url="true"] .publication-header {
+            gap: 0.45rem !important;
+        }
+
+        body[data-clean-url="true"] .publication-title {
+            max-width: 760px !important;
+            font-size: clamp(1rem, 1.08vw, 1.16rem) !important;
+            font-weight: 500 !important;
+            line-height: 1.42 !important;
+        }
+
+        body[data-clean-url="true"] .publication-authors,
+        body[data-clean-url="true"] .publication-journal {
+            font-size: 0.9rem !important;
+            line-height: 1.5 !important;
+        }
+
+        body[data-clean-url="true"] .publication-number,
+        body[data-clean-url="true"] .publication-type-tag {
+            font-size: 0.72rem !important;
+            line-height: 1.3 !important;
+        }
+
+        body[data-clean-url="true"] .publication-intro-text {
+            font-size: 0.84rem !important;
+            line-height: 1.5 !important;
+        }
+
+        body[data-clean-url="true"] .publication-links a,
+        body[data-clean-url="true"] .publication-featured-links,
+        body[data-clean-url="true"] .publication-featured-links a {
+            font-size: 0.86rem !important;
+            line-height: 1.4 !important;
+        }
+
+        body[data-clean-url="true"] .publication-note,
+        body[data-clean-url="true"] .publication-comment {
+            font-size: 0.78rem !important;
+            line-height: 1.45 !important;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .publication-badges a.publication-doi-badge {
+                transition: none !important;
+            }
+
+            .publication-badges a.publication-doi-badge:hover {
+                transform: none;
+            }
+        }
     </style>
+    <link rel="stylesheet" type="text/css" href="../css/site-harmony.css?visual-1">
 </head>
 <body data-clean-url="true">
 
@@ -1261,27 +1464,6 @@
                 <h2>Overview</h2>
                 <div class="publication-affiliation-note">Joined GTIIT in January 2022</div>
             </div>
-            <div class="publication-stats">
-                <div class="publication-stat">
-                    <strong id="publication-count">--</strong>
-                    <span>publications</span>
-                </div>
-                <div class="publication-stat citation-stat is-hidden" id="citation-total-card">
-                    <strong id="citation-total-count">--</strong>
-                    <span>citations</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="highly-cited-section" id="highly-cited-section" aria-live="polite">
-            <div class="highly-cited-heading">
-                <div>
-                    <h2>Highly Cited Papers</h2>
-                    <p>Top papers with W. Zheng as first or last author, ranked by Dimensions citation counts.</p>
-                </div>
-                <span class="highly-cited-status" id="highly-cited-status">Loading Dimensions citations</span>
-            </div>
-            <div class="highly-cited-grid" id="highly-cited-grid"></div>
         </section>
 
         <h2 class="section-heading">Featured Covers</h2>
@@ -1416,7 +1598,7 @@
 <script src="../js/marked.min.js" defer></script>
 
 <!-- Custom scripts for publications -->
-<script src="../js/publications-loader.js?markdown-source-7" defer></script>
+<script src="../js/publications-loader.js?markdown-source-15" defer></script>
 <!-- Additional JS END -->
 
 </body>

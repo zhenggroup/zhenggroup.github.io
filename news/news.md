@@ -119,7 +119,7 @@ Image Float: left
 Image Width: 30%
 Image Caption: Webinar at 科研云
 
-<p>Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a href="https://www.bilibili.com/video/BV1bzN4efEDM/" target="_blank" rel="noopener noreferrer">View Lecture</a></p>
+<p>Prof. Zheng delivered an online lecture on “Operando methods for Electrocatalyst Degradation Analysis” (Chinese): <a class="brand-icon-link" href="https://www.bilibili.com/video/BV1bzN4efEDM/" target="_blank" rel="noopener noreferrer"><span class="simple-icon simple-icon-bilibili" aria-hidden="true"></span>View Lecture</a></p>
 
 
 ## Sijie Chen wins 2nd place in MATEC poster competition
@@ -216,4 +216,3 @@ Image Width: 280px
 Image Caption: Presenting at the 244th ECS Meeting in Gothenburg.
 
 <p>At the 244th Electrochemical Society (ECS) Meeting, Prof. Weiran Zheng delivered an oral presentation on “How to perform iR compensation in electrocatalytic study”.</p><p>在第244次美国电化学学会（ECS）年会上，郑蔚然副教授就“电催化研究中的iR校正原理与规范”作口头报告。</p>
-

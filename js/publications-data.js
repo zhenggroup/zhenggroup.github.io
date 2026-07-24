@@ -8,6 +8,15 @@ const allPublications = [
 
     // 2026
     {
+        number: 62, year: 2026, type: "Article",
+        authors: "W. Niu, Y. Li, Z. Xu, Y. Wang, Z.-J. Zhou, M. Duan, P.-L. Ho, <b><u>W. Zheng</u></b>, X. Pan, Y. Wang, H. Fang, R.A. Taylor, X.-P. Wu, Y. Zhu, S.C.E. Tsang*",
+        title: "Constructive Transformation of WS<sub>2</sub> into Atomically Dispersed W−O Sites Enables Stable Photocatalysis",
+        journal: "ACS Catalysis, 2026, 16, 14, 13706–13718",
+        doi: "10.1021/acscatal.6c03395",
+        imageUrl: "../img/cs6c03395_toc.png", imageAlt: "TOC for atomically dispersed W-O sites photocatalysis",
+        dimensionsDoi: "10.1021/acscatal.6c03395"
+    },
+    {
         number: 61, year: 2026, type: "Article",
         authors: "<b><u>Y. Su</u></b>, <b><u>S. Chen</u></b>, <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Spectroelectrochemical Evolution of Fluorine-Doped Tin Oxide in Aqueous Electrolyte",
