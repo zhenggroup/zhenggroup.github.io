@@ -8,6 +8,13 @@ const allPublications = [
 
     // 2026
     {
+        number: 63, year: 2026, type: "Article",
+        authors: "<b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>",
+        title: "Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation",
+        journal: "ACS Electrochemistry, 2026, accepted",
+        imageUrl: "../img/uncompensated-resistance-dynamic-toc.png", imageAlt: "TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation"
+    },
+    {
         number: 62, year: 2026, type: "Article",
         authors: "W. Niu, Y. Li, Z. Xu, Y. Wang, Z.-J. Zhou, M. Duan, P.-L. Ho, <b><u>W. Zheng</u></b>, X. Pan, Y. Wang, H. Fang, R.A. Taylor, X.-P. Wu, Y. Zhu, S.C.E. Tsang*",
         title: "Constructive Transformation of WS<sub>2</sub> into Atomically Dispersed W−O Sites Enables Stable Photocatalysis",

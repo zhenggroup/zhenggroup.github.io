@@ -4,6 +4,21 @@ Edit this single Markdown file to update the publication list. Keep entries in n
 
 Each publication starts with `##`, followed by field lines. Optional abstract/notes can be written as normal Markdown after the field list.
 
+## Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation
+Year: 2026
+Type: Article
+Authors: <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>
+Journal: ACS Electrochemistry, 2026, accepted
+DOI:
+Dimensions DOI:
+PDF:
+Image: ../img/uncompensated-resistance-dynamic-toc.png
+Image Alt: TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation
+Comments:
+Featured:
+
+
+
 ## Constructive Transformation of WS<sub>2</sub> into Atomically Dispersed W−O Sites Enables Stable Photocatalysis
 Year: 2026
 Type: Article
