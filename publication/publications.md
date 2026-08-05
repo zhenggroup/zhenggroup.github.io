@@ -7,7 +7,7 @@ Each publication starts with `##`, followed by field lines. Optional abstract/no
 ## Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation
 Year: 2026
 Type: Article
-Authors: <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>
+Authors: <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*
 Journal: ACS Electrochemistry, 2026, accepted
 DOI:
 Dimensions DOI:

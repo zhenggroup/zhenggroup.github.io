@@ -9,7 +9,7 @@ const allPublications = [
     // 2026
     {
         number: 63, year: 2026, type: "Article",
-        authors: "<b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>",
+        authors: "<b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation",
         journal: "ACS Electrochemistry, 2026, accepted",
         imageUrl: "../img/uncompensated-resistance-dynamic-toc.png", imageAlt: "TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation"
