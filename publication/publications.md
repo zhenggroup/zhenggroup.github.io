@@ -9,12 +9,12 @@ Year: 2026
 Type: Article
 Authors: <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*
 Journal: ACS Electrochemistry, 2026, accepted
-DOI:
-Dimensions DOI:
+DOI: 10.1021/acselectrochem.6c00264
+Dimensions DOI: 10.1021/acselectrochem.6c00264
 PDF:
 Image: ../img/uncompensated-resistance-dynamic-toc.png
 Image Alt: TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation
-Comments:
+Comments: featured on the cover
 Featured:
 
 
