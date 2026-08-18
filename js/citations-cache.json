@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "2026-08-17T02:51:37.025Z",
+  "lastUpdated": "2026-08-18T02:47:12.198Z",
   "source": "Dimensions Metrics API",
-  "doiCount": 62,
+  "doiCount": 63,
   "loadedCount": 62,
   "citations": {
     "10.1021/acscatal.6c03395": 0,
@@ -441,5 +441,7 @@
       "field_citation_ratio": 2.07
     }
   },
-  "missing": []
+  "missing": [
+    "10.1021/acselectrochem.6c00264"
+  ]
 }
