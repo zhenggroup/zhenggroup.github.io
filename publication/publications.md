@@ -4,6 +4,21 @@ Edit this single Markdown file to update the publication list. Keep entries in n
 
 Each publication starts with `##`, followed by field lines. Optional abstract/notes can be written as normal Markdown after the field list.
 
+## Does Low Charge-Transfer Resistance Justify High Intrinsic Activity of Electrocatalysts?
+Year: 2026
+Type: Perspective
+Authors: <b><u>W. Zheng</u></b>*
+Journal: ACS Electrochemistry, 2026, accepted
+DOI:
+Dimensions DOI:
+PDF:
+Image: ../img/charge-transfer-resistance-activity-toc.png
+Image Alt: TOC graphic of local charge-transfer resistances on an electrocatalyst surface
+Comments:
+Featured:
+
+
+
 ## Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation
 Year: 2026
 Type: Article
@@ -696,14 +711,14 @@ Featured:
 
 ## Two-Dimensional Metal-Organic Framework and Covalent-Organic Framework: Synthesis and their Energy-Related Applications
 Year: 2019
-Type: Article
+Type: Review
 Authors: <u>W. Zheng</u>, C.-S. Tsang, L.Y.S. Lee,* K.-Y. Wong*
 Journal: Materials Today Chemistry, 2019, 12, 34—60
 DOI: 10.1016/j.mtchem.2018.12.002
 Dimensions DOI: 10.1016/j.mtchem.2018.12.002
 PDF:
-Image: ../img/1-s2.0-S2468519418302386-fx1_lrg.jpg
-Image Alt: Figure for two-dimensional MOF and COF review
+Image:
+Image Alt:
 Comments:
 Featured:
 

@@ -8,6 +8,13 @@ const allPublications = [
 
     // 2026
     {
+        number: 64, year: 2026, type: "Perspective",
+        authors: "<b><u>W. Zheng</u></b>*",
+        title: "Does Low Charge-Transfer Resistance Justify High Intrinsic Activity of Electrocatalysts?",
+        journal: "ACS Electrochemistry, 2026, accepted",
+        imageUrl: "../img/charge-transfer-resistance-activity-toc.png", imageAlt: "TOC graphic of local charge-transfer resistances on an electrocatalyst surface"
+    },
+    {
         number: 63, year: 2026, type: "Article",
         authors: "<b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation",
@@ -460,12 +467,11 @@ const allPublications = [
         dimensionsDoi: "10.1016/j.electacta.2019.04.007"
     },
     {
-        number: 17, year: 2019, type: "Article",
+        number: 17, year: 2019, type: "Review",
         authors: "<u>W. Zheng</u>, C.-S. Tsang, L.Y.S. Lee,* K.-Y. Wong*",
         title: "Two-Dimensional Metal-Organic Framework and Covalent-Organic Framework: Synthesis and their Energy-Related Applications",
         journal: "Materials Today Chemistry, 2019, 12, 34—60",
         doi: "10.1016/j.mtchem.2018.12.002",
-        imageUrl: "../img/1-s2.0-S2468519418302386-fx1_lrg.jpg", imageAlt: "Figure for Two-Dimensional Metal-Organic Framework and Covalent-Organic Framework",
         dimensionsDoi: "10.1016/j.mtchem.2018.12.002"
     },
     {
