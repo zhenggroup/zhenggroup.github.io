@@ -12,7 +12,9 @@ const allPublications = [
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Does Low Charge-Transfer Resistance Justify High Intrinsic Activity of Electrocatalysts?",
         journal: "ACS Electrochemistry, 2026, accepted",
-        imageUrl: "../img/charge-transfer-resistance-activity-toc.png", imageAlt: "TOC graphic of local charge-transfer resistances on an electrocatalyst surface"
+        doi: "10.1021/acselectrochem.6c00329",
+        imageUrl: "../img/charge-transfer-resistance-activity-toc.png", imageAlt: "TOC graphic of local charge-transfer resistances on an electrocatalyst surface",
+        dimensionsDoi: "10.1021/acselectrochem.6c00329"
     },
     {
         number: 63, year: 2026, type: "Article",

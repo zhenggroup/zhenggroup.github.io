@@ -9,8 +9,8 @@ Year: 2026
 Type: Perspective
 Authors: <b><u>W. Zheng</u></b>*
 Journal: ACS Electrochemistry, 2026, accepted
-DOI:
-Dimensions DOI:
+DOI: 10.1021/acselectrochem.6c00329
+Dimensions DOI: 10.1021/acselectrochem.6c00329
 PDF:
 Image: ../img/charge-transfer-resistance-activity-toc.png
 Image Alt: TOC graphic of local charge-transfer resistances on an electrocatalyst surface
