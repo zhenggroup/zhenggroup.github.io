@@ -20,6 +20,17 @@
 
 const newsData = [
   {
+    id: "paper-published-ctr-2026",
+    date: "2026-08-29",
+    title: "Prof. Zheng's Perspective on charge-transfer resistance and intrinsic activity is published on ACS Electrochemistry",
+    content: `<p>Prof. Zheng's Perspective, "Does Low Charge-Transfer Resistance Justify High Intrinsic Activity of Electrocatalysts?", is published in <a href="https://doi.org/10.1021/acselectrochem.6c00329" target="_blank" rel="noopener noreferrer">ACS Electrochemistry</a>. The article examines whether a low charge-transfer resistance can be taken as evidence of high intrinsic electrocatalyst activity, and discusses the interpretive pitfalls of using impedance-derived metrics for activity benchmarking.</p>`,
+    imageSrc: "../img/charge-transfer-resistance-activity-toc.png",
+    imageAlt: "TOC graphic of local charge-transfer resistances on an electrocatalyst surface",
+    imageFloat: 'left',
+    imageWidth: '30%',
+    imageCaption: " "
+  },
+  {
     id: "ecs-2026",
     date: "2026-05-24",
     title: "Prof. Zheng delivers talks at the Oregon Center for Electrochemistry and the 249th ECS Meeting",

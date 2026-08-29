@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?site-main-3">
+	<link rel="stylesheet" type="text/css" href="../style.css?site-main-4">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
     <title>News - The Zheng Group</title>
@@ -24,145 +24,14 @@
             background-color: var(--background-color-light-gray);
         }
 
-        .news-entry-card, .news-entry-title {
+        .news-entry-card,
+        .news-entry-title {
             font-family: var(--font-family-sans-serif);
         }
 
-        .news-entry-card {
-            background: transparent;
-            padding: 1.5rem 0;
-            margin-bottom: 0.5rem;
-            border-radius: 0;
-            border: none;
-            border-bottom: 1px solid var(--border-color-light);
-            box-shadow: none;
-        }
-        .news-entry-card:last-child {
-            border-bottom: none;
-        }
-
-        .news-entry-header {
-            margin-bottom: 0.5rem;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .news-entry-date {
-            display: block;
-            font-size: 0.95rem;
-            color: var(--text-color-subtle);
-            margin-bottom: 0.25rem;
-            font-weight: 600;
-        }
-
-        .news-entry-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-color-headings);
-            margin-bottom: 0;
-            line-height: 1.4;
-        }
-
-        .news-entry-body {
-            font-size: 1.05rem;
-            line-height: 1.6;
-            color: var(--text-color-medium);
-        }
-        .news-entry-body p {
-            margin-bottom: 1rem;
-        }
-        .news-entry-body p:last-child {
-            margin-bottom: 0;
-        }
-        .news-entry-body a {
-            color: var(--text-link-color);
-            text-decoration: underline;
-            font-weight: 600;
-            transition: all 0.2s ease;
-        }
-        .news-entry-body a:hover {
-            color: var(--text-link-hover-color);
-        }
-
-        /* --- NEW STYLES FOR IMAGE LAYOUT --- */
-
-        /* Container for the image and its caption */
-        .news-image-container {
-            border: 1px solid var(--border-color-light);
-            background-color: #fdfdfd;
-            padding: 0.5rem;
-            border-radius: 0.25rem;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        .news-image-container img {
-            display: block;
-            width: 100%; /* Image fills the container */
-            height: auto;
-            border-radius: 0.125rem;
-        }
-        .news-image-caption {
-            font-size: 0.85em;
-            color: var(--text-color-subtle);
-            padding: 0.5rem 0.25rem 0.25rem;
-            text-align: center;
-            line-height: 1.4;
-        }
-
-        /* Classes for floating */
-        .news-image-container.float-left {
-            float: left;
-            margin-right: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-        .news-image-container.float-right {
-            float: right;
-            margin-left: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        /* Default centered layout (when float is null) */
-        .news-image-container.centered {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Clearfix: Ensures the card container properly wraps floated children */
-        .news-entry-body::after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 767px) {
-            .news-entry-title { font-size: 1.15rem; }
-
-            /* On mobile, disable float and center the image */
-            .news-image-container.float-left,
-            .news-image-container.float-right {
-                float: none;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 1.5rem;
-                max-width: 90%;
-            }
-        }
-        @media (max-width: 480px) {
-            .news-entry-title { font-size: 1.1rem; }
-            .news-image-container.float-left,
-            .news-image-container.float-right {
-                max-width: 100%;
-            }
-        }
-
-        /* News page clarity refresh */
         .news-summary {
             padding: 1.4rem 0 1.8rem;
             margin-bottom: 2rem;
-            border-bottom: 1px solid rgba(0, 33, 71, 0.1);
         }
 
         .news-summary h2 {
@@ -181,101 +50,150 @@
             line-height: 1.65;
         }
 
-        .news-stat {
-            min-width: 150px;
-            padding: 1rem 1.1rem;
-            border-radius: 8px;
-            background: var(--color-primary-blue);
-            color: #fff;
-            text-align: right;
-            box-shadow: 0 18px 38px rgba(0, 33, 71, 0.16);
-        }
-
-        .news-stat strong {
-            display: block;
-            font-size: 2rem;
-            line-height: 1;
-        }
-
-        .news-stat span {
-            display: block;
-            margin-top: 0.35rem;
-            color: rgba(255,255,255,0.74);
-            font-size: 0.78rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-
         .news-list-container {
-            display: grid;
-            gap: 1rem;
+            display: block;
         }
 
+        /* Single-column article; image floats inside the body */
         .news-entry-card {
-            display: grid;
-            grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
-            gap: 1.3rem;
-            background: #fff;
-            padding: 1.25rem;
-            margin-bottom: 0;
-            border: 1px solid rgba(0, 33, 71, 0.08);
-            border-radius: 8px;
-            box-shadow: 0 14px 34px rgba(0, 33, 71, 0.06);
+            display: block;
+            padding: 1.35rem 0;
+            margin: 0;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid rgba(0, 33, 71, 0.08);
+            border-radius: 0;
+            box-shadow: none;
         }
 
-        .news-entry-card:hover {
-            box-shadow: 0 20px 45px rgba(0, 33, 71, 0.1);
+        .news-entry-card:last-child {
+            border-bottom: none;
+        }
+
+        .news-entry-main {
+            min-width: 0;
         }
 
         .news-entry-header {
-            margin-bottom: 0;
+            margin-bottom: 0.75rem;
+            padding: 0;
+            border: 0;
         }
 
         .news-entry-date {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 105px;
-            padding: 0.45rem 0.65rem;
-            border-radius: 999px;
-            background: rgba(185, 151, 91, 0.18);
-            color: #6c5224;
+            display: block;
+            margin: 0 0 0.3rem;
+            padding: 0;
+            color: var(--color-gold);
+            background: transparent;
             font-size: 0.82rem;
             font-weight: 760;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
         }
 
         .news-entry-title {
-            margin-top: 0.55rem;
-            color: var(--color-primary-blue);
-            font-size: clamp(1.08rem, 1.55vw, 1.35rem);
-            max-width: 260px;
+            max-width: none;
+            margin: 0;
+            color: var(--text-color-headings);
+            font-size: clamp(1.08rem, 1.7vw, 1.32rem);
+            font-weight: 700;
+            line-height: 1.35;
         }
 
         .news-entry-body {
+            position: relative;
             min-width: 0;
+            display: flow-root;
+            color: var(--text-color-medium);
             font-size: 0.98rem;
-            line-height: 1.62;
+            line-height: 1.65;
         }
 
-        .news-image-container {
-            border-color: rgba(0, 33, 71, 0.08);
-            border-radius: 8px;
-            box-shadow: 0 12px 26px rgba(0, 33, 71, 0.08);
+        .news-entry-body::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .news-entry-body p {
+            margin: 0 0 0.85rem;
+        }
+
+        .news-entry-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .news-entry-body a {
+            color: var(--text-link-color);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        .news-entry-body a:hover {
+            color: var(--text-link-hover-color);
+        }
+
+        .news-entry-media {
+            margin: 0.15rem 0 0.85rem;
+            max-width: min(36%, 320px);
+        }
+
+        .news-entry-media.float-left {
+            float: left;
+            margin-right: 1.25rem;
+        }
+
+        .news-entry-media.float-right {
+            float: right;
+            margin-left: 1.25rem;
+        }
+
+        .news-entry-media.is-centered {
+            float: none;
+            display: block;
+            width: min(72%, 520px);
+            max-width: 100%;
+            margin: 0.35rem auto 1rem;
+        }
+
+        .news-entry-media img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: none;
+            object-fit: contain;
+            background: #fff;
+            border: 1px solid rgba(0, 33, 71, 0.08);
+            border-radius: 4px;
+        }
+
+        .news-entry-caption {
+            margin-top: 0.4rem;
+            color: var(--text-color-subtle);
+            font-size: 0.8rem;
+            line-height: 1.4;
+            text-align: center;
         }
 
         @media (max-width: 767px) {
-            .news-summary,
-            .news-entry-card {
-                grid-template-columns: 1fr;
+            .news-entry-title {
+                font-size: 1.12rem;
             }
 
-            .news-stat {
-                text-align: left;
+            .news-entry-media,
+            .news-entry-media.float-left,
+            .news-entry-media.float-right,
+            .news-entry-media.is-centered {
+                float: none;
+                display: block;
+                width: min(100%, 420px);
+                max-width: 100%;
+                margin: 0 auto 1rem;
             }
         }
-
     </style>
-    <link rel="stylesheet" type="text/css" href="../css/site-harmony.css?visual-4">
+    <link rel="stylesheet" type="text/css" href="../css/site-harmony.css?visual-5">
 
 </head>
 <body data-clean-url="true">
@@ -400,33 +318,41 @@
             .replace(/"/g, '&quot;')
             .replace(/</g, '&lt;');
 
+        const resolveFloatClass = (value) => {
+            const float = String(value || '').trim().toLowerCase();
+            if (float === 'left') return 'float-left';
+            if (float === 'right') return 'float-right';
+            return 'is-centered';
+        };
+
         let newsHTML = '';
         const allNewsItems = await getAllNewsItems({ basePath: './posts/' });
         allNewsItems.forEach(item => {
-            const hasImage = Boolean(item.imageSrc);
-            let imageHTML = '';
-            if (hasImage) {
-                const captionHTML = item.imageCaption ? `<figcaption class="news-entry-caption">${item.imageCaption}</figcaption>` : '';
+            const hasImage = Boolean(item.imageSrc && String(item.imageSrc).trim());
+            const caption = String(item.imageCaption || '').trim();
+            const width = String(item.imageWidth || '').trim();
+            const floatClass = resolveFloatClass(item.imageFloat);
+            const widthStyle = width
+                ? ` style="width:${escapeAttr(width)};max-width:100%"`
+                : '';
 
-                imageHTML = `
-                    <figure class="news-entry-media">
-                        <img src="${escapeAttr(item.imageSrc)}" loading="lazy" decoding="async" alt="${escapeAttr(item.imageAlt || item.title)}">
-                        ${captionHTML}
-                    </figure>
-                `;
-            }
+            const imageHTML = hasImage ? `
+                <figure class="news-entry-media ${floatClass}"${widthStyle}>
+                    <img src="${escapeAttr(item.imageSrc)}" loading="lazy" decoding="async" alt="${escapeAttr(item.imageAlt || item.title)}">
+                    ${caption ? `<figcaption class="news-entry-caption">${caption}</figcaption>` : ''}
+                </figure>
+            ` : '';
 
             newsHTML += `
-                <!-- News Item Anchor -->
                 <article class="news-entry-card ${hasImage ? 'has-image' : 'no-image'}" id="${item.id}">
-                    ${imageHTML}
                     <div class="news-entry-main">
                         <div class="news-entry-header">
                             <time class="news-entry-date" datetime="${escapeAttr(item.date)}">${item.date}</time>
                             <h3 class="news-entry-title">${item.title}</h3>
                         </div>
                         <div class="news-entry-body">
-                            ${marked.parse(item.content)}
+                            ${imageHTML}
+                            ${marked.parse(item.content || '')}
                         </div>
                     </div>
                 </article>

@@ -23,7 +23,7 @@ const allPublications = [
         journal: "ACS Electrochemistry, 2026, accepted",
         doi: "10.1021/acselectrochem.6c00264",
         imageUrl: "../img/uncompensated-resistance-dynamic-toc.png", imageAlt: "TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation",
-        comments: ["featured on the cover"],
+        comments: ["featured on the cover", "ACS Editors' Choice"],
         dimensionsDoi: "10.1021/acselectrochem.6c00264"
     },
     {
@@ -91,6 +91,7 @@ const allPublications = [
         doi: "10.1021/jacsau.5c01196",
         imageUrl: "../img/jacs_au.jpg", imageAlt: "Graphical abstract for time-resolved impedance analysis of electrocatalyst degradation",
         comments: ["featured on the cover"],
+        featuredIn: [ { text: "special collection: JACS Au ECAB Selects", url: "https://pubs.acs.org/page/jaaucr/vc/jacs-au-ecab-selects" } ],
         dimensionsDoi: "10.1021/jacsau.5c01196"
     },
     {

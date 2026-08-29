@@ -29,7 +29,7 @@ Dimensions DOI: 10.1021/acselectrochem.6c00264
 PDF:
 Image: ../img/uncompensated-resistance-dynamic-toc.png
 Image Alt: TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation
-Comments: featured on the cover
+Comments: featured on the cover || ACS Editors' Choice
 Featured:
 
 
@@ -150,7 +150,7 @@ PDF:
 Image: ../img/jacs_au.jpg
 Image Alt: Graphical abstract for time-resolved impedance analysis of electrocatalyst degradation
 Comments: featured on the cover
-Featured:
+Featured: special collection: JACS Au ECAB Selects | https://pubs.acs.org/page/jaaucr/vc/jacs-au-ecab-selects
 
 
 
