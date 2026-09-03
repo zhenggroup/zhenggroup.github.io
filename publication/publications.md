@@ -8,7 +8,7 @@ Each publication starts with `##`, followed by field lines. Optional abstract/no
 Year: 2026
 Type: Perspective
 Authors: <b><u>W. Zheng</u></b>*
-Journal: ACS Electrochemistry, 2026, accepted
+Journal: ACS Electrochemistry, 2026, 2, 9, 2125–2137
 DOI: 10.1021/acselectrochem.6c00329
 Dimensions DOI: 10.1021/acselectrochem.6c00329
 PDF:
@@ -120,7 +120,7 @@ PDF:
 Image: ../img/cm.jpg
 Image Alt: Graphical abstract for the time-resolved instability of flexible indium tin oxide film
 Comments: featured on the cover
-Featured:
+Featured: special collection: Operando and In Situ Characterization of Energy Storage Materials | https://doi.org/10.1021/acs.chemmater.6c01553
 
 
 

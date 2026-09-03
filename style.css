@@ -1482,7 +1482,7 @@ main {
     gap: 0 !important;
     align-items: stretch !important;
     margin-bottom: 0 !important;
-    padding: 1.25rem 0 !important;
+    padding: 2.55rem 0 !important;
     background: transparent !important;
     border: 0 !important;
     border-bottom: 1px solid rgba(0, 33, 71, 0.08) !important;
@@ -1567,7 +1567,7 @@ main {
 }
 
 .news-entry-header {
-    margin-bottom: 0.65rem !important;
+    margin-bottom: 1.2rem !important;
     padding: 0 !important;
     border-bottom: 0 !important;
 }
@@ -1590,7 +1590,21 @@ main {
     margin: 0.28rem 0 0 !important;
     color: var(--text-color-headings) !important;
     font-size: clamp(1.08rem, 1.7vw, 1.32rem) !important;
-    line-height: 1.28 !important;
+    line-height: 1.4 !important;
+}
+
+.news-entry-title-zh {
+    margin: 0.5rem 0 0 !important;
+    color: var(--text-color-subtle) !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    line-height: 1.55 !important;
+}
+
+.news-entry-body p:not([lang="zh-CN"]) + p[lang="zh-CN"] {
+    margin-top: 0.35rem;
+    padding-top: 0;
+    border-top: 0;
 }
 
 .news-entry-body {

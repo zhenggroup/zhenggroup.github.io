@@ -14,7 +14,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700;800&display=swap">
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css?7489">
-	<link rel="stylesheet" type="text/css" href="../style.css?site-main-4">
+	<link rel="stylesheet" type="text/css" href="../style.css?site-main-10">
 	<link rel="stylesheet" type="text/css" href="../css/animate.min.css?283">
 	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
     <title>News - The Zheng Group</title>
@@ -30,8 +30,8 @@
         }
 
         .news-summary {
-            padding: 1.4rem 0 1.8rem;
-            margin-bottom: 2rem;
+            padding: 1.4rem 0 1.6rem;
+            margin-bottom: 0.6rem;
         }
 
         .news-summary h2 {
@@ -57,7 +57,7 @@
         /* Single-column article; image floats inside the body */
         .news-entry-card {
             display: block;
-            padding: 1.35rem 0;
+            padding: 2.55rem 0;
             margin: 0;
             background: transparent;
             border: 0;
@@ -75,14 +75,14 @@
         }
 
         .news-entry-header {
-            margin-bottom: 0.75rem;
+            margin-bottom: 1.2rem;
             padding: 0;
             border: 0;
         }
 
         .news-entry-date {
             display: block;
-            margin: 0 0 0.3rem;
+            margin: 0 0 0.55rem;
             padding: 0;
             color: var(--color-gold);
             background: transparent;
@@ -98,7 +98,15 @@
             color: var(--text-color-headings);
             font-size: clamp(1.08rem, 1.7vw, 1.32rem);
             font-weight: 700;
-            line-height: 1.35;
+            line-height: 1.4;
+        }
+
+        .news-entry-title-zh {
+            margin: 0.5rem 0 0;
+            color: var(--text-color-subtle);
+            font-size: 0.9rem;
+            font-weight: 400;
+            line-height: 1.55;
         }
 
         .news-entry-body {
@@ -107,7 +115,7 @@
             display: flow-root;
             color: var(--text-color-medium);
             font-size: 0.98rem;
-            line-height: 1.65;
+            line-height: 1.75;
         }
 
         .news-entry-body::after {
@@ -117,11 +125,21 @@
         }
 
         .news-entry-body p {
-            margin: 0 0 0.85rem;
+            margin: 0 0 0.9rem;
         }
 
         .news-entry-body p:last-child {
             margin-bottom: 0;
+        }
+
+        .news-entry-body p[lang="zh-CN"] {
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .news-entry-body p:not([lang="zh-CN"]) + p[lang="zh-CN"] {
+            margin-top: 0.35rem;
         }
 
         .news-entry-body a {
@@ -177,6 +195,10 @@
         }
 
         @media (max-width: 767px) {
+            .news-entry-card {
+                padding: 1.9rem 0;
+            }
+
             .news-entry-title {
                 font-size: 1.12rem;
             }
@@ -193,7 +215,7 @@
             }
         }
     </style>
-    <link rel="stylesheet" type="text/css" href="../css/site-harmony.css?visual-5">
+    <link rel="stylesheet" type="text/css" href="../css/site-harmony.css?visual-11">
 
 </head>
 <body data-clean-url="true">
@@ -305,7 +327,7 @@
 <!-- Additional JS END -->
 
 <!-- Load Markdown-first news data -->
-<script src="../js/news-loader.js?markdown-index-2" defer></script>
+<script src="../js/news-loader.js?markdown-index-3" defer></script>
 
 <!-- Script to Generate Full News Page List -->
 <script>
@@ -349,6 +371,7 @@
                         <div class="news-entry-header">
                             <time class="news-entry-date" datetime="${escapeAttr(item.date)}">${item.date}</time>
                             <h3 class="news-entry-title">${item.title}</h3>
+                            ${item.titleZh ? `<p class="news-entry-title-zh" lang="zh-CN">${item.titleZh}</p>` : ''}
                         </div>
                         <div class="news-entry-body">
                             ${imageHTML}

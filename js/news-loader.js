@@ -94,6 +94,7 @@ function parseNewsIndexMarkdown(markdown) {
             id: slugifyNewsId(id),
             date: fields.date || '',
             title,
+            titleZh: fields['title zh'] || '',
             content: bodyLines.join('\n').trim(),
             imageSrc: fields.image || fields['image src'] || null,
             imageAlt: fields['image alt'] || null,

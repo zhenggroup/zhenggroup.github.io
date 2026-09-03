@@ -11,7 +11,7 @@ const allPublications = [
         number: 64, year: 2026, type: "Perspective",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Does Low Charge-Transfer Resistance Justify High Intrinsic Activity of Electrocatalysts?",
-        journal: "ACS Electrochemistry, 2026, accepted",
+        journal: "ACS Electrochemistry, 2026, 2, 9, 2125–2137",
         doi: "10.1021/acselectrochem.6c00329",
         imageUrl: "../img/charge-transfer-resistance-activity-toc.png", imageAlt: "TOC graphic of local charge-transfer resistances on an electrocatalyst surface",
         dimensionsDoi: "10.1021/acselectrochem.6c00329"
@@ -79,6 +79,7 @@ const allPublications = [
         doi: "10.1021/acs.chemmater.5c01720",
         imageUrl: "../img/cm.jpg", imageAlt: "Graphical abstract for the time-resolved instability of flexible indium tin oxide film",
         comments: ["featured on the cover"],
+        featuredIn: [ { text: "special collection: Operando and In Situ Characterization of Energy Storage Materials", url: "https://doi.org/10.1021/acs.chemmater.6c01553" } ],
         dimensionsDoi: "10.1021/acs.chemmater.5c01720"
     },
 
