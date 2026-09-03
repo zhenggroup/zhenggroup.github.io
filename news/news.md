@@ -127,7 +127,7 @@ ID: paper-published-jacsau
 Date: 2025-11-17
 Title ZH: 时间分辨EIS方法论文发表于JACS Au（封面文章）
 Image: ../img/9.jpg
-Image Alt: JACSAu cover
+Image Alt: JACS Au cover, Volume 5 Issue 12 2025
 Image Float: right
 Image Width: 30%
 Image Caption: JACS Au cover (Vol 5/Issue 12 2025)

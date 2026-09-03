@@ -138,7 +138,7 @@ const newsData = [
 <p lang="zh-CN">郑蔚然副教授与陈思捷的论文“<a href="https://doi.org/10.1021/jacsau.5c01196" target="_blank" rel="noopener noreferrer">Decoding Electrocatalyst Degradation Using Time-Resolved Electrochemical Impedance Analysis</a>”发表于<a href="https://doi.org/10.1021/jacsau.5c01196" target="_blank" rel="noopener noreferrer">JACS Au</a>，入选封面文章，并被收入特刊合集<a href="https://pubs.acs.org/page/jaaucr/vc/jacs-au-ecab-selects" target="_blank" rel="noopener noreferrer">JACS Au ECAB Selects</a>。</p>
 <p lang="zh-CN">该工作提出时间分辨电化学阻抗分析（tr-EIA）方法，可在一次实验中追踪电流或过电位、双电层电容、电荷转移电阻等参数，从而区分商业RuO<sub>2</sub>和Pt/C催化剂的结构性与动力学降解。</p>`,
     imageSrc: "../img/9.jpg",
-    imageAlt: "JACSAu cover",
+    imageAlt: "JACS Au cover, Volume 5 Issue 12 2025",
     imageFloat: 'right',
     imageWidth: '30%',
     imageCaption: "JACS Au cover (Vol 5/Issue 12 2025)"
