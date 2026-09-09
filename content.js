@@ -1075,6 +1075,38 @@ window.CONCEPT_CONTENT = {
   ],
   "news": [
     {
+      "id": "paper-published-dynamic-ru-2026",
+      "date": "2026-09-01",
+      "title": {
+        "en": "Ting Zhang's paper on dynamic uncompensated resistance is published in ACS Electrochemistry (ACS Editors' Choice)",
+        "zh": "张婷关于未补偿电阻动态变化的论文发表于ACS Electrochemistry，入选ACS Editors' Choice"
+      },
+      "summary": {
+        "en": "Ting Zhang and Prof. Zheng's paper, \"Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation\", is published in ACS Electrochemistry and selected as an ACS Editors' Choice article.",
+        "zh": "张婷与郑蔚然副教授的论文“Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation”发表于ACS Electrochemistry，并入选ACS Editors' Choice。"
+      },
+      "body": {
+        "en": "Ting Zhang and Prof. Zheng's paper, \"Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation\", is published in ACS Electrochemistry and selected as an ACS Editors' Choice article.\n\nThe study tracks how uncompensated resistance changes with time and potential during electrocatalysis. It pairs resistance measurements with current and potential at the same electrode state, improving iR correction for polarization curves, Tafel analysis, and stability evaluation.",
+        "zh": "张婷与郑蔚然副教授的论文“Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation”发表于ACS Electrochemistry，并入选ACS Editors' Choice。\n\n研究追踪电催化过程中未补偿电阻随时间和电位的变化，将电阻测量值与同一电极状态下的电流、电位相匹配，改进极化曲线、Tafel分析和稳定性评价中的iR校正。"
+      },
+      "href": "news.html#paper-published-dynamic-ru-2026",
+      "tag": {
+        "en": "Group news",
+        "zh": "课题组动态"
+      },
+      "image": "img/uncompensated-resistance-dynamic-toc.png",
+      "imageAlt": "TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation",
+      "links": [
+        {
+          "title": {
+            "en": "Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation",
+            "zh": "Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation"
+          },
+          "href": "https://doi.org/10.1021/acselectrochem.6c00264"
+        }
+      ]
+    },
+    {
       "id": "nsfc-general-program-2026",
       "date": "2026-08-29",
       "title": {
