@@ -1,31 +1,26 @@
 const fs = require('fs/promises');
 const path = require('path');
 
-const PUBLICATIONS_FILE = path.join(__dirname, 'publication', 'publications.md');
+const CONTENT_FILE = path.join(__dirname, 'content.js');
 const CACHE_FILE = path.join(__dirname, 'js', 'citations-cache.json');
 const DIMENSIONS_API_BASE = 'https://metrics-api.dimensions.ai/doi/';
 
-function parsePublicationDois(markdown) {
+function parsePublicationDois(source) {
+    // The website stores JSON in this assignment; parse the data without executing JavaScript.
+    const assignment = source.match(/(?:^|\n)\s*window\.CONCEPT_CONTENT\s*=\s*(\{[\s\S]*\})\s*;?\s*$/);
+    if (!assignment) {
+        throw new Error('content.js must contain a window.CONCEPT_CONTENT JSON assignment.');
+    }
+
+    const content = JSON.parse(assignment[1]);
+    if (!Array.isArray(content.publications)) {
+        throw new Error('content.js must contain a publications array.');
+    }
+
     const dois = new Set();
-    const sections = markdown.split(/\n(?=## )/).filter(section => section.trim().startsWith('## '));
-
-    sections.forEach(section => {
-        const fields = {};
-
-        section.split(/\r?\n/).forEach(line => {
-            const separatorIndex = line.indexOf(':');
-            if (separatorIndex === -1) {
-                return;
-            }
-
-            const key = line.slice(0, separatorIndex).trim().toLowerCase();
-            const value = line.slice(separatorIndex + 1).trim();
-            if (/^[a-z ]+$/.test(key)) {
-                fields[key] = value;
-            }
-        });
-
-        const doi = fields['dimensions doi'] || fields.doi;
+    content.publications.forEach(publication => {
+        const doi = (typeof publication.dimensionsDoi === 'string' && publication.dimensionsDoi.trim())
+            || (typeof publication.doi === 'string' && publication.doi.trim());
         if (doi) {
             dois.add(doi);
         }
@@ -97,8 +92,8 @@ async function fetchCitationRecord(doi) {
 }
 
 async function main() {
-    const markdown = await fs.readFile(PUBLICATIONS_FILE, 'utf8');
-    const dois = parsePublicationDois(markdown);
+    const source = await fs.readFile(CONTENT_FILE, 'utf8');
+    const dois = parsePublicationDois(source);
     const records = await mapWithConcurrency(dois, 4, fetchCitationRecord);
     const citations = {};
     const details = {};
@@ -143,7 +138,11 @@ async function main() {
     }
 }
 
-main().catch(error => {
-    console.error(error);
-    process.exitCode = 1;
-});
+if (require.main === module) {
+    main().catch(error => {
+        console.error(error);
+        process.exitCode = 1;
+    });
+}
+
+module.exports = { parsePublicationDois };

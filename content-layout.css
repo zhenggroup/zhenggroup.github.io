@@ -1,0 +1,52 @@
+/* Layout for complete source content on the independent preview pages. */
+.cover-caption>span{display:block;font-size:13px;line-height:1.65;margin-top:4px}
+.cover-opened{overflow:hidden}
+.cover-open:focus-visible,.cover-dialog-close:focus-visible{outline:3px solid #cc824b;outline-offset:4px}
+.news-body h2{font-size:clamp(21px,2vw,28px);line-height:1.5;letter-spacing:-.02em;margin:0 0 16px}
+.news-body p{font-size:17px;line-height:1.85;max-width:850px;margin:0 0 17px}
+.news-body .news-image{display:block;max-width:min(100%,640px);max-height:480px;width:auto;height:auto;object-fit:contain;margin:22px 0 26px;background:#fff}
+.news-body .text-link{font-size:14px;margin-top:10px}
+.news-item{align-items:start;cursor:auto}
+.resources-page #resource-grid{display:block}
+.resource-group+.resource-group{margin-top:64px;padding-top:38px;border-top:1px solid var(--line,#cbd4d0)}
+.resource-group>h2{font-size:clamp(27px,3vw,38px);line-height:1.35;letter-spacing:-.03em;margin:0 0 24px}
+.resource-group-description{font-size:17px;line-height:1.8;margin-bottom:26px;max-width:850px}
+.resource-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 48px}
+.resource-item{min-width:0;cursor:auto}
+.resource-item h3{font-size:22px;line-height:1.45}
+.resource-item>p,.resource-details{font-size:16px;line-height:1.8}
+.resource-details{padding-left:23px;margin-top:18px}
+.resource-details li+li{margin-top:8px}
+.resource-links{display:flex;flex-wrap:wrap;gap:12px 22px;font-size:15px;line-height:1.7;margin-top:22px}
+.resource-links a{text-decoration:underline;text-underline-offset:4px}
+.resource-note{margin-top:16px;opacity:.85}
+.alumni-grid .member-portrait>div{height:250px;overflow:hidden}
+.alumni-grid .member-portrait img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.alumni-grid .member-portrait strong{font-size:17px;display:block;margin-top:15px}
+.alumni-grid .member-portrait>span{font-size:14px;line-height:1.7;display:block;margin-top:5px}
+.research-card .text-link{font-size:14px;line-height:1.65;margin-top:20px}
+.publication-card,.paper-meta>span{min-width:0}
+.paper-meta{flex-wrap:wrap;gap:8px 14px}
+.paper-meta,.paper-authors,.paper-citation,.paper-bottom,.paper-type,.paper-index{font-size:14px;line-height:1.7}
+.publication-card h3{font-size:21px;line-height:1.5}
+.publication-image img{object-fit:contain}
+.publication-count{font-size:16px}
+.publication-search input{font-size:16px}
+@media(max-width:760px){
+  .resource-items{grid-template-columns:1fr;gap:34px}
+  .resource-group+.resource-group{margin-top:44px;padding-top:32px}
+  .news-body p,.resource-group-description{font-size:16px;line-height:1.85}
+  .news-body h2{font-size:23px}
+  .news-tag{display:none}
+  .alumni-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 18px}
+  .alumni-grid .member-portrait>div{height:210px}
+  .publication-card h3{font-size:22px}
+}
+@media(max-width:420px){
+  .alumni-grid .member-portrait>div{height:170px}
+  .paper-meta,.paper-authors,.paper-citation,.paper-bottom,.paper-type,.paper-index{font-size:14px}
+}
+
+.toc-open{width:100%;padding:0;border:0;cursor:zoom-in;background:#fff}.toc-open:focus-visible{outline:3px solid #cc824b;outline-offset:4px}.paper-notes{font-size:14px;line-height:1.7;padding-left:19px;margin:14px 0}.paper-related{display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.7;margin:15px 0}.paper-related a{text-decoration:underline;text-underline-offset:3px}.paper-bottom{flex-wrap:wrap;gap:12px}
+
+.publication-card h3,.paper-authors,.paper-citation,.paper-related a,.resource-item h3{overflow-wrap:anywhere}
