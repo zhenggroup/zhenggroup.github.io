@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Zheng Group three-electrode cell</title>
+  <path fill="#0b1b39" d="M15 2h34l13 13v34L49 62H15L2 49V15Z"/>
+  <path fill="none" stroke="#d8bc80" stroke-width="2.5" d="M16 5h32l11 11v32L48 59H16L5 48V16Z"/>
+
+  <g stroke-linecap="square">
+    <path fill="none" stroke="#7aa6cc" stroke-width="3.5" d="M22 14v22"/>
+    <path fill="#7aa6cc" d="m22 8 4 4-4 4-4-4Z"/>
+
+    <path fill="none" stroke="#d8bc80" stroke-width="4" d="M32 14v22"/>
+    <path fill="#d8bc80" d="m32 7 4.5 4.5L32 16l-4.5-4.5Z"/>
+
+    <path fill="none" stroke="#b86246" stroke-width="3.5" d="M42 14v22"/>
+    <path fill="#b86246" d="m42 8 4 4-4 4-4-4Z"/>
+  </g>
+
+  <path fill="none" stroke="#d8bc80" stroke-width="2.5" stroke-linejoin="round" d="M12 35h40M14.5 35v8.5C14.5 51.5 21 57 32 57s17.5-5.5 17.5-13.5V35"/>
+  <path fill="none" stroke="#dce7f4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M17 42h6l3-3 4 6 4-6 4 6 3-3h6"/>
+</svg>

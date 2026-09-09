@@ -32,12 +32,13 @@ body:not(.home-page) main{background:#fff;min-height:60vh}
 .cover-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:31px 28px}
 .cover-card{margin:0;min-width:0}
 .cover-open{height:290px;width:100%;padding:0;border:0;background:transparent;box-shadow:none;display:flex;align-items:flex-end;justify-content:flex-start;transition:opacity .2s}
-.cover-open img{max-width:100%;width:auto;height:100%;object-fit:contain;object-position:left bottom;filter:none}
+.cover-open img{max-width:100%;width:auto;height:100%;object-fit:contain;object-position:left bottom;filter:none;box-shadow:0 0 0 1px rgba(0,0,0,.72)}
 .cover-open:hover{background:transparent;transform:none;opacity:.87}
 .cover-caption,.cover-caption strong{padding:13px 0 0;font-size:14px;line-height:1.7;color:var(--muted);font-weight:400}
 .cover-caption>span{font-size:14px;margin-top:3px;line-height:1.7}
 .cover-dialog{background:#fff;border:0;padding:43px 22px 20px}
 .cover-dialog::backdrop{background:#07152ee8}
+.cover-dialog figure img{box-shadow:0 0 0 1px rgba(0,0,0,.72)}
 .cover-dialog figcaption{font-size:14px;color:var(--muted)}
 .cover-dialog-close{font-size:26px}
 
