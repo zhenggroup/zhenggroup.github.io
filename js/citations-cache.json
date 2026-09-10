@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-09T06:52:54.410Z",
+  "lastUpdated": "2026-09-10T06:49:23.035Z",
   "source": "Dimensions Metrics API",
   "doiCount": 64,
   "loadedCount": 64,
@@ -8,7 +8,7 @@
     "10.1021/acselectrochem.6c00264": 1,
     "10.1021/acscatal.6c03395": 0,
     "10.1021/acs.jpcc.6c00506": 0,
-    "10.1021/acselectrochem.6c00058": 3,
+    "10.1021/acselectrochem.6c00058": 4,
     "10.1016/j.electacta.2026.148501": 4,
     "10.1021/jacs.6c01756": 3,
     "10.1021/acs.chemmater.5c01720": 5,
@@ -27,8 +27,8 @@
     "10.1002/cssc.202301926": 40,
     "10.1002/adma.202311256": 159,
     "10.1149/2754-2734/acff0b": 13,
-    "10.1021/acsenergylett.3c00366": 284,
-    "10.1002/cmtd.202200042": 38,
+    "10.1021/acsenergylett.3c00366": 286,
+    "10.1002/cmtd.202200042": 39,
     "10.1002/anse.202200070": 7,
     "10.1002/asia.202200384": 21,
     "10.1016/j.matt.2021.12.010": 126,
@@ -95,8 +95,8 @@
       "field_citation_ratio": null
     },
     "10.1021/acselectrochem.6c00058": {
-      "times_cited": 3,
-      "recent_citations": 3,
+      "times_cited": 4,
+      "recent_citations": 4,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -188,7 +188,7 @@
       "times_cited": 31,
       "recent_citations": 27,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 6.84
+      "field_citation_ratio": 6.83
     },
     "10.1002/cssc.202301926": {
       "times_cited": 40,
@@ -200,7 +200,7 @@
       "times_cited": 159,
       "recent_citations": 133,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 26.33
+      "field_citation_ratio": 26.31
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
@@ -209,16 +209,16 @@
       "field_citation_ratio": 2.05
     },
     "10.1021/acsenergylett.3c00366": {
-      "times_cited": 284,
-      "recent_citations": 198,
+      "times_cited": 286,
+      "recent_citations": 200,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
     "10.1002/cmtd.202200042": {
-      "times_cited": 38,
-      "recent_citations": 21,
+      "times_cited": 39,
+      "recent_citations": 22,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.93
+      "field_citation_ratio": 4.03
     },
     "10.1002/anse.202200070": {
       "times_cited": 7,
@@ -290,7 +290,7 @@
       "times_cited": 213,
       "recent_citations": 50,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 22.19
+      "field_citation_ratio": 22.18
     },
     "10.1016/j.cej.2020.127900": {
       "times_cited": 36,
@@ -320,13 +320,13 @@
       "times_cited": 41,
       "recent_citations": 9,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.59
+      "field_citation_ratio": 3.58
     },
     "10.1021/acscatal.9b03790": {
       "times_cited": 499,
       "recent_citations": 166,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 38.86
+      "field_citation_ratio": 38.85
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 30,
