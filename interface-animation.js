@@ -67,6 +67,8 @@
       } else {
         window.addEventListener('scroll', this._onScroll, { passive: true, capture: true });
       }
+      this._onFontsLoaded = () => this._draw();
+      document.fonts?.addEventListener('loadingdone', this._onFontsLoaded);
       this._resize();
     }
 
@@ -104,6 +106,7 @@
       this._stop();
       this.resizeObserver?.disconnect();
       this.intersectionObserver?.disconnect();
+      document.fonts?.removeEventListener('loadingdone', this._onFontsLoaded);
       document.removeEventListener('visibilitychange', this._onVisibility);
       window.removeEventListener('resize', this._onResize);
       window.removeEventListener('scroll', this._onScroll, true);
@@ -182,7 +185,7 @@
 
     _label(text, x, y, align = 'center', color = COLORS.muted) {
       const c = this.ctx;
-      c.font = '500 10px "Avenir Next", "Segoe UI", "PingFang SC", sans-serif';
+      c.font = '500 10px "Noto Sans", "Noto Sans SC", "Segoe UI", "PingFang SC", sans-serif';
       c.fillStyle = color;
       c.textAlign = align;
       c.textBaseline = 'middle';
