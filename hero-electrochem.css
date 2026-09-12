@@ -33,12 +33,12 @@ html[lang=zh-CN] .home-page .hero-description{max-width:480px;font-size:17px;lin
 @media(max-width:760px){.home-page .hero-copy>.institution-logos img{height:63px}.home-page .hero-copy>.institution-logos{column-gap:28.5px}}
 @media(max-width:380px){.home-page .hero-copy>.institution-logos img{height:52.5px}.home-page .hero-copy>.institution-logos{column-gap:22.5px}}
 
-/* Keep the complete desktop homepage—header, hero, and footer—inside one viewport. */
+/* Fill the desktop viewport, but let longer content grow without clipping the logos. */
 @media(min-width:1101px){
-body.home-page{height:100vh;height:100svh;display:flex;flex-direction:column}
+body.home-page{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
 .home-page .site-header,.home-page .site-footer{flex:0 0 auto}
-.home-page main{display:flex;flex:1 1 auto;min-height:0}
-.home-page .hero{flex:1 1 auto;width:100%;min-height:0}
+.home-page main{display:flex;flex:1 0 auto}
+.home-page .hero{flex:1 0 auto;width:100%;min-height:0}
 }
 
 /* Compress only the vertical rhythm on shorter desktop screens. */
