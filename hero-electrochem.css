@@ -10,6 +10,8 @@
 .home-page .hero h1{margin:26px 0 29px;font-size:clamp(49px,4.35vw,65px);line-height:1.13}
 html[lang=en] .home-page .hero h1{font-weight:700}
 .home-page .hero-description{max-width:505px;font-size:17px;line-height:1.85;color:#c4cfdd}
+.home-page .hero-description p{margin:0;font:inherit;color:inherit}
+.home-page .hero-description p+p{margin-top:12px}
 .home-page .hero-copy>.institution-logos{margin-top:26px}
 #electrode-signals{position:absolute;inset:0;z-index:2;display:block;width:100%;height:100%;pointer-events:none}
 
@@ -36,7 +38,7 @@ html[lang=zh-CN] .home-page .hero-description{max-width:480px;font-size:17px;lin
 /* Fill the desktop viewport, but let longer content grow without clipping the logos. */
 @media(min-width:1101px){
 body.home-page{min-height:100vh;min-height:100svh;display:flex;flex-direction:column}
-.home-page .site-header,.home-page .site-footer{flex:0 0 auto}
+.home-page .site-header{flex:0 0 auto}
 .home-page main{display:flex;flex:1 0 auto}
 .home-page .hero{flex:1 0 auto;width:100%;min-height:0}
 }
@@ -47,7 +49,6 @@ body.home-page{min-height:100vh;min-height:100svh;display:flex;flex-direction:co
 .home-page .hero h1,html[lang=zh-CN] .home-page .hero h1{margin:clamp(8px,1.2vh,12px) 0}
 .home-page .hero-buttons{margin-top:clamp(8px,1.4vh,14px)}
 .home-page .hero-copy>.institution-logos{margin-top:clamp(6px,1.2vh,12px);row-gap:14px}
-.home-page .site-footer{padding-top:clamp(12px,2vh,20px);padding-bottom:clamp(12px,2vh,20px)}
 }
 
 /* Keep Noto Sans text and the full-size logos clear on compact desktops. */
@@ -62,4 +63,34 @@ body.home-page{min-height:100vh;min-height:100svh;display:flex;flex-direction:co
 @media(min-width:1101px) and (max-height:760px){
 body.home-page{height:auto;min-height:100vh;min-height:100svh}
 .home-page .hero{min-height:520px}
+}
+
+/* Place the small copyright notice on the artwork in both desktop and stacked layouts. */
+.home-page .hero-art::after{content:"";position:absolute;inset:auto 0 0;height:90px;z-index:3;pointer-events:none;background:linear-gradient(transparent,rgba(11,27,57,.8))}
+.home-page .hero-copyright{position:absolute;right:20px;bottom:12px;z-index:4;max-width:min(760px,calc(100% - 40px));color:#c4cfdd;text-align:right;text-shadow:0 1px 3px #0b1b39}
+.home-page .hero-copyright p{margin:0;font-size:10px;line-height:1.5}
+@media(min-width:1101px){
+.home-page .hero{padding-bottom:24px}
+.home-page .hero-carousel-controls{bottom:64px}
+}
+
+/* Give the introduction a quieter scale and distinct reading groups. */
+.home-page .hero-copy>.eyebrow{font-size:18px}
+.home-page .hero-description,html[lang=zh-CN] .home-page .hero-description{font-size:15px;line-height:1.75;max-width:520px}
+@media(min-width:1101px){
+.home-page .hero-copy,html[lang=zh-CN] .home-page .hero-copy{padding-top:clamp(24px,3vh,48px)}
+.home-page .hero h1,html[lang=zh-CN] .home-page .hero h1{margin:18px 0 22px}
+.home-page .hero-buttons{margin-top:22px}
+.home-page .hero-copy>.institution-logos{margin-top:16px}
+}
+@media(min-width:1600px){
+.home-page .hero-description,html[lang=zh-CN] .home-page .hero-description{font-size:16px;max-width:550px}
+}
+@media(max-width:1100px){
+.home-page .hero-description,html[lang=zh-CN] .home-page .hero-description{max-width:650px}
+}
+@media(max-width:760px){
+.home-page .hero-copy>.eyebrow{font-size:16px}
+.home-page .hero-description,html[lang=zh-CN] .home-page .hero-description{font-size:15px;line-height:1.85}
+.home-page .hero-description p+p{margin-top:14px}
 }
