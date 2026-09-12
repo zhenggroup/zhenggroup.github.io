@@ -17,6 +17,7 @@
       this.paused = false; this.pending = false; this.destroyed = false; this.request = 0;
       this.ready = this.slides.map(() => false); this.loads = []; this.listeners = [];
       this.preference = matchMedia('(prefers-reduced-motion: reduce)');
+      this.connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
       this.tick = this.tick.bind(this); this.updateActivity = this.updateActivity.bind(this);
       this.checkViewport = this.checkViewport.bind(this);
       this.buttons.forEach((button, index) => this.listen(button, 'click', () => this.show(index, true)));
@@ -45,6 +46,7 @@
       this.listen(this.stage, 'pointercancel', () => { this.touchStart = null; });
       this.listen(document, 'visibilitychange', this.updateActivity);
       this.listen(this.preference, 'change', this.updateActivity);
+      if (this.connection?.addEventListener) this.listen(this.connection, 'change', this.updateActivity);
       this.classObserver = new MutationObserver(records => {
         if (records.some(record => record.attributeName === 'lang')) this.translate();
         this.updateActivity();
@@ -54,7 +56,6 @@
       if ('IntersectionObserver' in window) {
         this.observer = new IntersectionObserver(entries => {
           this.inView = entries.some(entry => entry.isIntersecting && entry.intersectionRatio > 0);
-          if (this.inView) this.loadAll();
           this.updateActivity();
         }, { threshold: 0.01 });
         this.observer.observe(this.stage);
@@ -65,10 +66,18 @@
       }
       this.stage.dataset.activeScene = this.slides[0].dataset.scene;
       this.translate(); this.updateActivity();
-      this.ensureLoaded(0).then(loaded => {
+      this.ensureLoaded(0).then(async loaded => {
         if (this.destroyed) return;
         if (loaded) this.updateActivity();
-        this.loadAll();
+        else {
+          // Recover from a missing first image without preloading every slide.
+          for (let index = 1; index < this.slides.length; index += 1) {
+            if (this.destroyed || this.request !== 0) break;
+            const available = await this.ensureLoaded(index);
+            if (this.destroyed || this.request !== 0) break;
+            if (available) { this.show(index); break; }
+          }
+        }
       });
     }
     listen(node, event, listener, options) {
@@ -80,12 +89,14 @@
     motionBlocked() {
       return this.preference.matches || [document.body, document.documentElement].some(node => node.classList.contains('motion-paused') || node.classList.contains('page-inactive'));
     }
-    shouldRun() { return !this.destroyed && this.inView && !document.hidden && !this.motionBlocked() && !this.paused && !this.focused && !this.pending && this.ready[this.currentIndex]; }
+    constrainedConnection() {
+      return Boolean(this.connection?.saveData || /^(slow-2g|2g|3g)$/.test(this.connection?.effectiveType || ''));
+    }
+    shouldRun() { return !this.destroyed && this.inView && !document.hidden && !this.motionBlocked() && !this.constrainedConnection() && !this.paused && !this.focused && !this.pending && this.ready[this.currentIndex]; }
     setPaused(value) { this.paused = Boolean(value); this.updateActivity(); }
     checkViewport() {
       const rect = this.stage.getBoundingClientRect();
       this.inView = rect.bottom > 0 && rect.top < innerHeight;
-      if (this.inView) this.loadAll();
       this.updateActivity();
     }
     ensureLoaded(index) {
@@ -101,23 +112,19 @@
         img.addEventListener('load', finish, { once: true });
         img.addEventListener('error', fail, { once: true });
         const deferred = img.dataset.src;
-        if (deferred) { img.loading = 'eager'; img.src = deferred; delete img.dataset.src; }
+        if (deferred) {
+          img.loading = 'eager';
+          if (img.dataset.srcset) {
+            img.srcset = img.dataset.srcset;
+            delete img.dataset.srcset;
+          }
+          img.src = deferred;
+          delete img.dataset.src;
+        }
         if (img.complete && img.naturalWidth) finish();
         else if (!deferred && img.complete && img.getAttribute('src')) fail();
       });
       return this.loads[index];
-    }
-    loadAll() {
-      if (this.loadingAll || this.destroyed) return;
-      this.loadingAll = true;
-      Promise.all(this.images.map((_, index) => this.ensureLoaded(index))).then(results => {
-        if (this.destroyed) return;
-        if (!this.ready[this.currentIndex]) {
-          const alternative = results.indexOf(true);
-          if (alternative >= 0) this.show(alternative);
-        }
-        this.updateActivity();
-      });
     }
     async show(index, manual = false) {
       index = this.normalize(index);

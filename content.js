@@ -10,94 +10,94 @@
 // Chinese research/resource text is translated; citation metadata is preserved.
 window.CONCEPT_CONTENT = {
   "research": [
-    {
-      "id": "operando",
-      "title": {
-        "en": "Operando Spectroelectrochemistry and EC-AFM",
-        "zh": "工况光谱电化学与电化学原子力显微镜"
-      },
-      "description": {
-        "en": "We observe electrochemical interfaces as they evolve, then connect the observed changes to activity, selectivity, and stability.",
-        "zh": "观察电化学界面的演化，研究这些变化与活性、选择性和稳定性的关系。"
-      },
-      "tags": [
-        "DEMS",
-        "UV–vis spectroelectrochemistry",
-        "EC-AFM"
-      ],
-      "questions": {
-        "en": [
-          "Which surface changes occur during operation rather than before or after testing?",
-          "How do structural and morphological dynamics affect catalytic output?",
-          "Which signals are robust enough to guide catalyst design?"
-        ],
-        "zh": [
-          "哪些表面变化发生在反应过程中，而不是测试之前或之后？",
-          "结构和形貌的动态变化如何影响催化性能？",
-          "哪些信号能够可靠地指导催化剂设计？"
-        ]
-      },
-      "href": "research.html#operando-electrochemistry"
+  {
+    "id": "operando",
+    "title": {
+      "en": "Operando Interfaces and Reaction Selectivity",
+      "zh": "工况界面与反应选择性"
     },
-    {
-      "id": "catalysis",
-      "title": {
-        "en": "Electrocatalyst Degradation and Stability Analysis",
-        "zh": "电催化剂降解与稳定性分析"
-      },
-      "description": {
-        "en": "We investigate why catalyst performance changes over time and how active sites, supports, and electrolytes contribute to that instability.",
-        "zh": "研究催化剂性能随时间变化的原因，以及活性位点、载体和电解液对不稳定性的影响。"
-      },
-      "tags": [
-        "Stability testing",
-        "Interface reconstruction",
-        "Selectivity tracking"
-      ],
-      "questions": {
-        "en": [
-          "Which degradation pathway dominates under realistic operating histories?",
-          "How can transition-metal catalysts balance activity with durability?",
-          "What measurements distinguish true catalyst change from measurement artifacts?"
-        ],
-        "zh": [
-          "在实际运行条件下，哪一种降解路径起主导作用？",
-          "过渡金属催化剂如何兼顾活性与耐久性？",
-          "哪些测量能够区分催化剂的真实变化与测量伪影？"
-        ]
-      },
-      "href": "research.html#electrocatalyst-degradation"
+    "description": {
+      "en": "We combine electrochemical measurements with operando Raman and UV–vis spectroscopy, differential electrochemical mass spectrometry (DEMS), and electrochemical atomic force microscopy (EC-AFM) to examine changing interfaces. Correlating surface observations with gaseous and dissolved products helps connect electrode chemistry to reaction pathways.",
+      "zh": "我们结合电化学测量、工况拉曼与紫外–可见光谱、差分电化学质谱（DEMS）及电化学原子力显微镜（EC-AFM），研究持续演变的界面。通过关联表面观测与气相、液相产物分析，将电极化学与反应路径联系起来。"
     },
-    {
-      "id": "methods",
-      "title": {
-        "en": "Quantitative Electrochemical Methods and Data Workflows",
-        "zh": "定量电化学方法与数据工作流程"
-      },
-      "description": {
-        "en": "We develop practical guidance and open computational workflows for electrochemical measurements that are easy to misinterpret.",
-        "zh": "针对容易产生误读的电化学测量，发展实用的方法指南与开放计算流程。"
-      },
-      "tags": [
-        "Python tools",
-        "Protocol design",
-        "Data standardization"
+    "tags": [
+      "Operando spectroscopy",
+      "DEMS",
+      "EC-AFM"
+    ],
+    "questions": {
+      "en": [
+        "How do ammonia, hydroxide, and oxygen chemistry redirect reaction pathways?",
+        "Which surface states persist or change while the reaction is running?",
+        "How can complementary measurements distinguish relevant intermediates from spectator signals and probe effects?"
       ],
-      "questions": {
-        "en": [
-          "Which assumptions in common electrochemical workflows are fragile?",
-          "How should data be processed so others can reproduce the interpretation?",
-          "How can computational tools reduce avoidable analysis errors?"
-        ],
-        "zh": [
-          "常用电化学流程中的哪些假设需要检验？",
-          "如何处理数据，使分析和解释能够复现？",
-          "计算工具如何减少可避免的分析误差？"
-        ]
-      },
-      "href": "research.html#quantitative-electrochemistry"
-    }
-  ],
+      "zh": [
+        "氨、氢氧根及氧相关化学过程如何改变反应路径？",
+        "反应进行时，哪些表面状态得以保持，哪些发生变化？",
+        "如何通过互补测量区分与反应有关的中间体、旁观物种信号及探针影响？"
+      ]
+    },
+    "href": "research.html#operando-electrochemistry"
+  },
+  {
+    "id": "catalysis",
+    "title": {
+      "en": "Degradation, Electrode Stability, and Catalyst Design",
+      "zh": "降解、电极稳定性与催化剂设计"
+    },
+    "description": {
+      "en": "We investigate how surface reconstruction, dissolution, and changing electrical properties contribute to performance loss. Time-resolved electrochemical impedance analysis follows the evolution of interfacial capacitance, resistance, and relaxation behavior alongside current and potential. Studies of RuO₂ and Pt/C connect these measurements with degradation during oxygen and hydrogen electrocatalysis.",
+      "zh": "我们研究表面重构、溶解及电学性质变化如何导致性能衰减。时间分辨电化学阻抗分析将界面电容、电阻和弛豫行为的演变与电流、电位对应起来。通过 RuO₂ 和 Pt/C 等体系，研究这些测量参数与氧、氢相关电催化过程中的降解之间的联系。"
+    },
+    "tags": [
+      "Time-resolved impedance",
+      "Substrate stability",
+      "Interface design"
+    ],
+    "questions": {
+      "en": [
+        "Which interfacial changes accompany activation, gradual decay, or irreversible failure?",
+        "How do electrolyte composition and polarization history affect catalyst and substrate stability?",
+        "How can interface and support design improve durability while retaining catalytic activity?"
+      ],
+      "zh": [
+        "哪些界面变化伴随活化、缓慢衰减或不可逆失效？",
+        "电解液组成与极化历程如何影响催化剂和基底的稳定性？",
+        "如何通过界面与载体设计，在保持催化活性的同时提升耐久性？"
+      ]
+    },
+    "href": "research.html#electrocatalyst-degradation"
+  },
+  {
+    "id": "methods",
+    "title": {
+      "en": "Quantitative Electrochemistry and Reliable Evaluation",
+      "zh": "定量电化学与可靠评价"
+    },
+    "description": {
+      "en": "We develop measurement and analysis methods that account for the changing state of an electrode. Our work on uncompensated resistance combines time- and potential-resolved measurements with state-matched, point-by-point iR correction. This approach addresses errors that arise when a single resistance value is applied throughout a changing experiment.",
+      "zh": "我们发展考虑电极状态变化的测量与分析方法。在未补偿电阻研究中，将时间与电位分辨测量同对应电极状态的逐点 iR 校正结合起来，处理用单一电阻值校正整个动态实验时可能引入的误差。"
+    },
+    "tags": [
+      "Dynamic iR correction",
+      "Impedance interpretation",
+      "Protocol validation"
+    ],
+    "questions": {
+      "en": [
+        "How should resistance, current, and potential be paired when an electrode changes during a measurement?",
+        "When does a fitted resistance reflect interfacial kinetics, and what additional evidence is needed?",
+        "How do counter electrodes, cell geometry, and measurement protocols influence the conclusions?"
+      ],
+      "zh": [
+        "电极在测量过程中变化时，应如何对应电阻、电流与电位？",
+        "拟合电阻何时反映界面动力学，还需要哪些补充证据？",
+        "对电极、电池几何结构与测量流程如何影响结论？"
+      ]
+    },
+    "href": "research.html#quantitative-electrochemistry"
+  }
+],
   "publications": [
     {
       "number": 64,

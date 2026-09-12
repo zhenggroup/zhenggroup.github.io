@@ -4,8 +4,9 @@
   const $ = selector => document.querySelector(selector);
   const $$ = selector => [...document.querySelectorAll(selector)];
   const content = window.CONCEPT_CONTENT;
-  if (!content) return;
   const page = document.body.dataset.page || 'home';
+  // Home is already in HTML; navigation and translation need no content catalogue.
+  if (!content && page !== 'home') return;
   const theme = document.body.dataset.theme === 'deco' ? 'deco' : 'a2';
   const storagePrefix = theme === 'deco' ? 'deco-lab' : 'sky-lab';
   const readSetting = key => { try { return localStorage.getItem(`${storagePrefix}-${key}`); } catch { return null; } };
@@ -201,8 +202,10 @@
     $('.scene-controls')?.setAttribute('aria-label', language === 'zh' ? '选择界面动画场景' : 'Choose an interface scene');
     const name = (pageNames[page] || pageNames.home)[language === 'zh' ? 1 : 0];
     document.title = language === 'zh' ? `${name} · 郑蔚然课题组` : `${name} · The Zheng Group`;
-    populateYears();
-    renderResearch();renderPublications();renderPeople();renderNews();renderResources();renderCovers();
+    if (content) {
+      populateYears();
+      renderResearch();renderPublications();renderPeople();renderNews();renderResources();renderCovers();
+    }
     updateScene();updateMotion();setMenu(false);observeReveals();
     saveSetting('language',language);
     const url = new URL(location.href);
