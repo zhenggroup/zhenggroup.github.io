@@ -17,8 +17,8 @@ window.CONCEPT_CONTENT = {
       "zh": "工况界面与反应选择性"
     },
     "description": {
-      "en": "We combine electrochemical measurements with operando Raman and UV–vis spectroscopy, differential electrochemical mass spectrometry (DEMS), and electrochemical atomic force microscopy (EC-AFM) to examine changing interfaces. Correlating surface observations with gaseous and dissolved products helps connect electrode chemistry to reaction pathways.",
-      "zh": "我们结合电化学测量、工况拉曼与紫外–可见光谱、差分电化学质谱（DEMS）及电化学原子力显微镜（EC-AFM），研究持续演变的界面。通过关联表面观测与气相、液相产物分析，将电极化学与反应路径联系起来。"
+      "en": "We investigate how electrochemical interfaces evolve under operating conditions and how this evolution governs reaction pathways and product selectivity. Our focus is on the interplay among electrode potential, the electrolyte environment, surface species, and interfacial structure. By combining operando spectroscopy, electrochemical microscopy, product analysis, and electrochemical measurements, we connect changes at the interface with reaction rates and product distributions. We aim to identify the processes that control selective conversion and develop a mechanistic basis for designing effective electrocatalytic systems.",
+      "zh": "我们研究工作条件下电化学界面的动态演变，以及这种演变如何影响反应路径与产物选择性，重点关注电极电位、电解液环境、表面物种和界面结构之间的相互作用。通过结合工况光谱、电化学显微表征、产物分析与电化学测量，我们将界面变化与反应速率、产物分布联系起来，识别控制选择性转化的关键过程，为电催化体系的设计提供机理依据。"
     },
     "tags": [
       "Operando spectroscopy",
@@ -46,8 +46,8 @@ window.CONCEPT_CONTENT = {
       "zh": "降解、电极稳定性与催化剂设计"
     },
     "description": {
-      "en": "We investigate how surface reconstruction, dissolution, and changing electrical properties contribute to performance loss. Time-resolved electrochemical impedance analysis follows the evolution of interfacial capacitance, resistance, and relaxation behavior alongside current and potential. Studies of RuO₂ and Pt/C connect these measurements with degradation during oxygen and hydrogen electrocatalysis.",
-      "zh": "我们研究表面重构、溶解及电学性质变化如何导致性能衰减。时间分辨电化学阻抗分析将界面电容、电阻和弛豫行为的演变与电流、电位对应起来。通过 RuO₂ 和 Pt/C 等体系，研究这些测量参数与氧、氢相关电催化过程中的降解之间的联系。"
+      "en": "We study the origins of performance loss in catalysts, supports, and electrode substrates, and use this understanding to guide durable material and interface design. We examine how chemical, structural, and electrical changes develop during operation, distinguishing reversible changes from irreversible degradation and identifying the role of surface reconstruction. Time-resolved electrochemical measurements, combined with complementary chemical and structural characterization, help relate evolving material states to activity and stability. Our goal is to understand how operating conditions and material interactions govern electrode durability and to develop design strategies that balance catalytic performance with long-term reliability.",
+      "zh": "我们研究催化剂、载体和电极基底中性能衰减的来源，并以此指导耐久材料与界面的设计。研究关注运行过程中化学组成、结构和电学性质的变化，区分可逆变化与不可逆降解，并识别表面重构的作用。通过时间分辨电化学测量与互补的化学、结构表征，我们将材料状态的演变与活性和稳定性联系起来，理解运行条件及材料间相互作用对电极耐久性的影响，探索兼顾催化性能与长期可靠性的设计策略。"
     },
     "tags": [
       "Time-resolved impedance",
@@ -75,8 +75,8 @@ window.CONCEPT_CONTENT = {
       "zh": "定量电化学与可靠评价"
     },
     "description": {
-      "en": "We develop measurement and analysis methods that account for the changing state of an electrode. Our work on uncompensated resistance combines time- and potential-resolved measurements with state-matched, point-by-point iR correction. This approach addresses errors that arise when a single resistance value is applied throughout a changing experiment.",
-      "zh": "我们发展考虑电极状态变化的测量与分析方法。在未补偿电阻研究中，将时间与电位分辨测量同对应电极状态的逐点 iR 校正结合起来，处理用单一电阻值校正整个动态实验时可能引入的误差。"
+      "en": "We develop quantitative electrochemical methods that make measurements and material comparisons more reliable. Our work examines how interfacial kinetics, electrical resistance, mass transport, and changing electrode states contribute to measured responses, and how these contributions can be distinguished. We integrate experimental design, impedance analysis, signal correction, activity normalization, and reproducible data processing to connect observations with physically meaningful quantities. Through validated protocols and accessible analysis tools, we aim to clarify the assumptions and limits of electrochemical interpretation and support transparent, reproducible evaluation.",
+      "zh": "我们发展定量电化学方法，提高测量结果与材料性能比较的可靠性。研究关注界面动力学、电阻、传质和电极状态变化如何共同影响测量响应，以及如何区分这些贡献。通过整合实验设计、阻抗分析、信号校正、活性归一化与可复现的数据处理，我们建立观测结果与具有明确物理意义的参数之间的联系，并通过经验证的实验流程和易于使用的分析工具，厘清电化学解释的假设与适用边界，支持透明、可复现的性能评价。"
     },
     "tags": [
       "Dynamic iR correction",
