@@ -5,7 +5,7 @@ body[data-theme=deco]:not(.home-page) .eyebrow{font-size:14px}
 body:not(.home-page) main{background:#fff;min-height:60vh}
 .section{max-width:1220px;padding-left:60px;padding-right:60px}
 .site-header{background:#0b1b39;border-bottom:1px solid #ffffff12;backdrop-filter:none}
-.site-header .group-logo{width:190px;padding:0;background:transparent;border:0;box-shadow:none}
+.site-header .group-logo{width:161.5px;padding:0;background:transparent;border:0;box-shadow:none}
 .site-header .group-logo img{filter:brightness(0) invert(1);width:100%;height:auto}
 .main-nav a{font-size:15px}.main-nav{gap:22px}.contact-link{font-size:14px}
 .page-heading{padding:54px 60px 35px;background:#fff;color:var(--ink);border:0;overflow:visible}
@@ -170,18 +170,18 @@ body:not(.home-page) main{background:#fff;min-height:60vh}
 
 @media(max-width:1180px){
  .section{padding-left:5%;padding-right:5%}.page-heading{padding-left:5%;padding-right:5%}
- .main-nav{gap:17px}.main-nav a{font-size:15px}.site-header .group-logo{width:173px}
+ .main-nav{gap:17px}.main-nav a{font-size:15px}.site-header .group-logo{width:147.05px}
  .cover-grid{gap:30px 22px}.cover-open{height:260px}
  .publication-card{grid-template-columns:245px minmax(0,1fr);gap:30px}
  .research-detail{grid-template-columns:235px minmax(0,1fr);gap:33px}
  .team-content .member-portrait>div,.team-content .alumni-grid .member-portrait>div{height:235px}
 }
-@media(max-width:1050px){.site-header .group-logo{width:185px}.main-nav a{font-size:17px}}
+@media(max-width:1050px){.site-header .group-logo{width:157.25px}.main-nav a{font-size:17px}}
 @media(max-width:760px){
  .section{padding-left:6%;padding-right:6%}.page-heading{padding:35px 6% 25px}
  .page-heading h1,html[lang=zh-CN] .page-heading h1{font-size:35px;line-height:1.35;margin:0 0 16px}
  .page-heading .page-intro,.page-heading-inner>p:not(.eyebrow){font-size:17px;line-height:1.85}
- .site-header .group-logo{width:170px}.site-footer{padding:23px 6%;font-size:14px}
+ .site-header .group-logo{width:144.5px}.site-footer{padding:23px 6%;font-size:14px}
  .content-section{padding-top:13px;padding-bottom:48px}.section-heading{display:block;margin-bottom:24px}
  .section-heading h2{font-size:27px}.section-heading .text-link{margin-top:14px}
  .cover-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:27px 22px}
@@ -235,7 +235,7 @@ body:not(.home-page) main{background:#fff;min-height:60vh}
  .pi-profile{grid-template-columns:1fr;gap:22px}.pi-profile>img{width:190px;height:245px}
 }
 @media(max-width:360px){
- .site-header .group-logo{width:148px}.cover-open{height:180px}.cover-grid{gap:23px 17px}
+ .site-header .group-logo{width:125.8px}.cover-open{height:180px}.cover-grid{gap:23px 17px}
  .team-content .member-portrait>div,.team-content .alumni-grid .member-portrait>div{height:170px}
  .team-content .member-portraits{gap:27px 18px}.page-heading h1,html[lang=zh-CN] .page-heading h1{font-size:33px}
  .science-panel-top{padding:11px 13px}.science-panel-top>span:first-child{gap:5px}
