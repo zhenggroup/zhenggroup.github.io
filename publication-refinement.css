@@ -71,7 +71,7 @@
   margin:0 0 12px;
   padding:0;
   font-family:inherit;
-  font-size:21px;
+  font-size:19px;
   font-weight:600;
   line-height:1.5;
   letter-spacing:0;
@@ -239,7 +239,6 @@
   }
   .publication-copy>h3,
   .publication-copy>.publication-number{
-    font-size:21px;
     line-height:1.5;
   }
   .publication-copy .paper-bottom{gap:5px 16px}
