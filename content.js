@@ -1052,8 +1052,8 @@ window.CONCEPT_CONTENT = {
       "year": 2011,
       "type": "Article",
       "doi": "10.1002/anie.201007108",
-      "image": "",
-      "imageAlt": "Thumbnail for ZnO Cu interface in CO2 hydrogenation",
+      "image": "img/zno-cu-morphology-co2-hydrogenation-toc.gif",
+      "imageAlt": "TOC schematic of band alignment between platelike ZnO and Cu for selective CO2 hydrogenation to methanol",
       "comments": [],
       "featuredIn": [],
       "pdfLink": ""
@@ -1066,8 +1066,8 @@ window.CONCEPT_CONTENT = {
       "year": 2010,
       "type": "Article",
       "doi": "10.1021/la904264u",
-      "image": "",
-      "imageAlt": "Thumbnail for sol-gel morphology transformation",
+      "image": "img/sol-gel-morphological-transformation-toc.png",
+      "imageAlt": "TOC schematic of temperature-dependent morphological transformations between molecular assemblies, liquid crystals, and branched fibers",
       "comments": [],
       "featuredIn": [],
       "pdfLink": ""
