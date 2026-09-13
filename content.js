@@ -440,8 +440,8 @@ window.CONCEPT_CONTENT = {
       "year": 2024,
       "type": "Review",
       "doi": "10.1002/adma.202311256",
-      "image": "",
-      "imageAlt": "Thumbnail for stable high-rate Na-metal battery anodes",
+      "image": "img/stable-anodes-high-rate-na-metal-batteries-toc.jpg",
+      "imageAlt": "Advanced Materials cover illustration for Building Stable Anodes for High-Rate Na-Metal Batteries",
       "comments": [
         "Featured on the cover"
       ],

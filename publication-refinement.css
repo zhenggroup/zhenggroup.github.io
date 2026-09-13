@@ -23,8 +23,9 @@
 }
 .publications-page .publication-image{
   grid-column:1;
-  align-self:start;
-  margin:4px 0 0;
+  align-self:center;
+  justify-self:center;
+  margin:0;
   padding:0;
 }
 .publications-page .publication-image img{
@@ -32,7 +33,7 @@
   height:auto;
   max-height:230px;
   object-fit:contain;
-  object-position:left top;
+  object-position:center;
 }
 .publication-copy{
   display:grid;
