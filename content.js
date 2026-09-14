@@ -169,7 +169,12 @@ window.CONCEPT_CONTENT = {
       "image": "img/acse.jpg",
       "imageAlt": "Graphical abstract illustrating experimental and interpretive traps in operando electrocatalysis",
       "comments": [],
-      "featuredIn": [],
+      "featuredIn": [
+        {
+          "text": "公众号-研之成理",
+          "url": "https://mp.weixin.qq.com/s/8beFLe0DHl4dVdPsH5L7cg"
+        }
+      ],
       "pdfLink": ""
     },
     {
@@ -252,6 +257,14 @@ window.CONCEPT_CONTENT = {
         {
           "text": "special collection: JACS Au ECAB Selects",
           "url": "https://pubs.acs.org/page/jaaucr/vc/jacs-au-ecab-selects"
+        },
+        {
+          "text": "公众号-研之成理",
+          "url": "https://mp.weixin.qq.com/s/akFTSql9LQ3VdQccF1HjLw"
+        },
+        {
+          "text": "公众号-普林斯顿输力强电化学",
+          "url": "https://mp.weixin.qq.com/s/UqAEWwNz9xLnXsQrNYYtcQ"
         }
       ],
       "pdfLink": ""
