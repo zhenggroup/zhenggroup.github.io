@@ -1,0 +1,40 @@
+/* Decorative light follows each image crop and stays behind the reading layer. */
+.home-page .hero-prism-lights{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:block;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  user-select:none;
+  mix-blend-mode:screen;
+  overflow:hidden;
+}
+.home-page .hero-background-slide:not([data-scene=electrochem])>.hero-prism-lights{
+  transform:translate(var(--hero-pan-x,0%),var(--hero-pan-y,0%)) scale(var(--hero-zoom,1));
+  transform-origin:center;
+}
+.hero-prism-facet{
+  transform-box:fill-box;
+  transform-origin:center;
+  opacity:.5;
+  animation:hero-prism-drift var(--prism-duration) ease-in-out var(--prism-delay) infinite alternate;
+  animation-play-state:paused;
+}
+.hero-background-slide.is-active .hero-prism-facet{animation-play-state:running}
+.hero-motion-suspended .hero-prism-facet,
+.hero-motion-paused .hero-prism-facet,
+.motion-paused .hero-prism-facet,
+.page-inactive .hero-prism-facet,
+.hero.is-out-of-view .hero-prism-facet{animation-play-state:paused}
+@keyframes hero-prism-drift{
+  from{transform:translate(0,0) rotate(0);opacity:.25}
+  to{transform:translate(var(--prism-x),var(--prism-y)) rotate(var(--prism-turn));opacity:.75}
+}
+@media(max-width:1100px){
+  .home-page .hero-background-slide:not([data-scene=electrochem])>.hero-prism-lights{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-prism-facet{animation:none;transform:none;opacity:.35}
+}
