@@ -563,7 +563,7 @@ window.CONCEPT_CONTENT = {
       "year": 2022,
       "type": "Review",
       "doi": "10.1016/j.matt.2021.12.010",
-      "image": "img/fx1_lrg.jpg",
+      "image": "img/beyond-sonication-toc.jpg",
       "imageAlt": "TOC for Beyond Sonication",
       "comments": [],
       "featuredIn": [],
