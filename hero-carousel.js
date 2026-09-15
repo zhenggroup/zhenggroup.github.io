@@ -22,7 +22,13 @@
       this.checkViewport = this.checkViewport.bind(this);
       this.buttons.forEach((button, index) => this.listen(button, 'click', () => this.show(index, true)));
       hero.querySelectorAll('[data-hero-direction]').forEach(button => this.listen(button, 'click', () => this.step(Number(button.dataset.heroDirection), true)));
-      this.listen(this.controls, 'focusin', () => { this.focused = true; this.updateActivity(); });
+      // Keyboard focus pauses rotation for reading; mouse/touch focus must not
+      // leave autoplay stopped after clicking an arrow or a slide dot.
+      this.listen(this.controls, 'pointerdown', () => { this.focused = false; this.updateActivity(); });
+      this.listen(this.controls, 'focusin', event => {
+        this.focused = event.target.matches(':focus-visible');
+        this.updateActivity();
+      });
       this.listen(this.controls, 'focusout', event => {
         if (!this.controls.contains(event.relatedTarget)) { this.focused = false; this.updateActivity(); }
       });
@@ -30,6 +36,7 @@
         const destinations = { ArrowLeft: this.currentIndex - 1, ArrowRight: this.currentIndex + 1, Home: 0, End: this.slides.length - 1 };
         if (!(event.key in destinations)) return;
         event.preventDefault();
+        this.focused = true;
         const index = this.normalize(destinations[event.key]);
         this.show(index, true);
         if (event.target.matches('[data-hero-slide]')) this.buttons[index].focus();
@@ -89,10 +96,12 @@
     motionBlocked() {
       return this.preference.matches || [document.body, document.documentElement].some(node => node.classList.contains('motion-paused') || node.classList.contains('page-inactive'));
     }
-    constrainedConnection() {
-      return Boolean(this.connection?.saveData || /^(slow-2g|2g|3g)$/.test(this.connection?.effectiveType || ''));
+    dataSavingEnabled() {
+      // Network speed is an estimate, not a request to stop the slideshow.
+      // Keep lazy loading and honor the visitor's explicit data-saving setting.
+      return Boolean(this.connection?.saveData);
     }
-    shouldRun() { return !this.destroyed && this.inView && !document.hidden && !this.motionBlocked() && !this.constrainedConnection() && !this.paused && !this.focused && !this.pending && this.ready[this.currentIndex]; }
+    shouldRun() { return !this.destroyed && this.inView && !document.hidden && !this.motionBlocked() && !this.dataSavingEnabled() && !this.paused && !this.focused && !this.pending && this.ready[this.currentIndex]; }
     setPaused(value) { this.paused = Boolean(value); this.updateActivity(); }
     checkViewport() {
       const rect = this.stage.getBoundingClientRect();
