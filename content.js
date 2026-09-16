@@ -2059,8 +2059,8 @@ window.CONCEPT_CONTENT = {
           "zh": "刘卫轲"
         },
         "role": {
-          "en": "Undergraduate (22Chem) · 2024–present",
-          "zh": "本科生（22Chem）· 2024年至今"
+          "en": "MSc student (Technion) · 2026–present",
+          "zh": "硕士研究生（Technion）· 2026年至今"
         },
         "image": "img/7fc5c8360d2a86757e73696a7d7ca0f7.JPG"
       },

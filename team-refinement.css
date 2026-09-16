@@ -96,7 +96,7 @@ html[lang=zh-CN] .team-page .page-heading h1{
 }
 .team-page .team-content .member-portraits{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(3,minmax(0,1fr));
   column-gap:40px;
   row-gap:23px;
   padding:0 0 4px;
@@ -160,7 +160,7 @@ html[lang=zh-CN] .team-page .page-heading h1{
 @media(max-width:1050px){
   .team-page .pi-biography>section{grid-template-columns:140px minmax(0,1fr);gap:25px}
   .team-page .pi-biography dl{grid-template-columns:116px minmax(0,1fr);gap:11px 16px}
-  .team-page .team-content .member-portraits{column-gap:30px}
+  .team-page .team-content .member-portraits{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:30px}
   .team-page .member-portrait{column-gap:18px}
 }
 @media(max-width:849px){
