@@ -28,3 +28,8 @@ html body[data-theme="deco"][data-page] time {
   font-family: var(--display);
   font-weight: 400;
 }
+
+/* Paper titles read as part of each citation, alongside its authors and journal. */
+html body[data-theme="deco"][data-page="publications"] .publication-copy > h3 {
+  font-family: var(--font);
+}
