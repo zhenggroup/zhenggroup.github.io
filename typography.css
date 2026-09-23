@@ -1,0 +1,30 @@
+/* Faculty Glyphic for headings and Neutral Sans for reading text.
+   Both fonts are self-hosted under the SIL Open Font License. */
+@font-face {
+  font-family: "Faculty Glyphic";
+  src: url("fonts/faculty-glyphic/FacultyGlyphic-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neutral Sans";
+  src: url("fonts/neutral-sans/NeutralSansVF.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+}
+
+:root {
+  --font: "Neutral Sans", "Noto Sans SC", "Noto Sans", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --display: "Faculty Glyphic", "Noto Sans SC", "Noto Sans", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* The site's page-specific styles set several headings back to --font.
+   Keep the same heading family and regular weight on every active page. */
+html body[data-theme="deco"][data-page] :is(h1, h2, h3, h4, h5, h6),
+html body[data-theme="deco"][data-page] time {
+  font-family: var(--display);
+  font-weight: 400;
+}

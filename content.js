@@ -1088,6 +1088,28 @@ window.CONCEPT_CONTENT = {
   ],
   "news": [
     {
+      "id": "gcii-seed-fund-2026",
+      "date": "2026-09-23",
+      "title": {
+        "en": "Prof. Zheng was awarded the GCII Seed Fund (2026–2027)",
+        "zh": "郑蔚然副教授获GCII种子基金资助（2026–2027）"
+      },
+      "summary": {
+        "en": "Prof. Zheng was awarded the GCII Seed Fund for 2026–2027.",
+        "zh": "郑蔚然副教授获GCII种子基金资助，资助期为2026–2027年。"
+      },
+      "body": {
+        "en": "Prof. Zheng was awarded the GCII Seed Fund for 2026–2027.",
+        "zh": "郑蔚然副教授获GCII种子基金资助，资助期为2026–2027年。"
+      },
+      "href": "news.html#gcii-seed-fund-2026",
+      "tag": {
+        "en": "Group news",
+        "zh": "课题组动态"
+      },
+      "links": []
+    },
+    {
       "id": "paper-published-dynamic-ru-2026",
       "date": "2026-09-01",
       "title": {
