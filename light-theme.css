@@ -1,0 +1,171 @@
+/* Light colorway for the site. */
+.site-header {
+  background: #f8f9fa;
+  color: #1c3347;
+  border-bottom: 1px solid #e1e6e9;
+}
+
+.site-header .group-logo img { filter: none; }
+.site-header .main-nav a:hover,
+.site-header .main-nav a[aria-current=page] { color: #315e78; }
+.site-header .contact-link {
+  color: #23465c;
+  border-color: #aabac5;
+}
+.site-header .contact-link:hover { background: #dce5e9; }
+.site-header .menu-toggle span { background: #23465c; }
+
+.home-page .hero {
+  background: #f5f7f7;
+  color: #193348;
+}
+.home-page .hero h1 { color: #193348; }
+.home-page .hero h1 em { color: #86643d; }
+.home-page .hero-copy > .eyebrow,
+.home-page .hero .eyebrow { color: #826544; }
+.home-page .hero-description,
+.home-page .hero-description p { color: #394e5f; }
+.home-page .art-wash {
+  background: linear-gradient(90deg,
+    rgba(249, 249, 247, .99) 0%,
+    rgba(249, 249, 247, .97) 24%,
+    rgba(249, 249, 247, .83) 35%,
+    rgba(249, 249, 247, .38) 48%,
+    transparent 61%);
+}
+.home-page .hero-art::after {
+  background: linear-gradient(transparent, rgba(248, 249, 247, .65));
+}
+.home-page .hero-copyright {
+  right: 24px;
+  bottom: 16px;
+  max-width: calc(100% - 48px);
+  color: #43596a;
+  text-align: right;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, .9);
+}
+.home-page .hero-copyright p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.home-page .button-primary {
+  background: #d8bd8e;
+  color: #1d3446;
+  border-color: #c7a977;
+  box-shadow: none;
+}
+.home-page .button-primary:hover { background: #e3cba4; }
+.home-page .button-text { color: #28506a; }
+.home-page .institution-logos {
+  background: transparent;
+  border: 0;
+  padding-left: 0;
+}
+.home-page .institution-logos img {
+  filter: brightness(0) opacity(.76);
+}
+.home-page .hero-prism-lights { opacity: .4; }
+
+.hero-carousel-controls { color: #38576a; }
+.hero-carousel-controls::before {
+  background: radial-gradient(ellipse at center,
+    rgba(249, 249, 247, .95) 0%,
+    rgba(249, 249, 247, .77) 50%,
+    transparent 83%);
+}
+.hero-carousel-controls .hero-carousel-arrow:hover { color: #173b52; }
+.hero-carousel-controls button:focus-visible { outline-color: #315e78; }
+.hero-carousel-dot > span { background: #9eacb5; }
+.hero-carousel-dot.is-active > span,
+.hero-carousel-dot[aria-pressed=true] > span { background: #44687d; }
+.hero-carousel-dot:hover > span { background: #6b889b; }
+.hero-carousel-progress { background: #9baebd6b; }
+.hero-carousel-progress > span { background: #4e7185; }
+
+/* Let the Research artwork continue beneath its copy, fading across the full row. */
+.research-page .research-detail {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.research-page .research-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  aspect-ratio: auto;
+  margin: 0;
+  -webkit-mask-image: linear-gradient(90deg,
+    #000 0%,
+    #000 23%,
+    rgba(0, 0, 0, .55) 30%,
+    rgba(0, 0, 0, .13) 36%,
+    rgba(0, 0, 0, .035) 56%,
+    transparent 100%);
+  mask-image: linear-gradient(90deg,
+    #000 0%,
+    #000 23%,
+    rgba(0, 0, 0, .55) 30%,
+    rgba(0, 0, 0, .13) 36%,
+    rgba(0, 0, 0, .035) 56%,
+    transparent 100%);
+}
+.research-page .research-art > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.research-page .research-art-canvas { display: none; }
+.research-page .research-detail-copy {
+  position: relative;
+  z-index: 1;
+  grid-column: 2;
+}
+
+@media (max-width: 1100px) {
+  .home-page .art-wash {
+    background: linear-gradient(180deg,
+      #f5f7f7 0%,
+      rgba(245, 247, 247, .42) 7%,
+      transparent 18%);
+  }
+  .hero-carousel-controls { background: #f5f7f7; }
+}
+
+@media (max-width: 1050px) {
+  .site-header .main-nav {
+    background: #f8f9fa;
+    border-bottom-color: #b8c8d1;
+    box-shadow: 0 14px 24px rgba(42, 62, 75, .14);
+  }
+  .site-header .main-nav a { border-bottom-color: #ccd7dd; }
+  .site-header .main-nav a[aria-current=page] { background: #e1e9ed; }
+}
+
+@media (max-width: 760px) {
+  .home-page .hero-copyright {
+    right: 14px;
+    bottom: 12px;
+    max-width: calc(100% - 28px);
+  }
+  .home-page .hero-copyright p {
+    font-size: 10px;
+    white-space: normal;
+  }
+  .research-page .research-art {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    margin-bottom: -20px;
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 57%, transparent 100%);
+    mask-image: linear-gradient(180deg, #000 0%, #000 57%, transparent 100%);
+  }
+  .research-page .research-detail-copy { grid-column: 1; }
+}
