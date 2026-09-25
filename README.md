@@ -11,6 +11,12 @@ The production website is the approved Art Deco–Cubist edition at **https://ww
 - Dimensions provides live citation badges on the publications page. `publication-refinement.css` changes their appearance; the official widget supplies counts and details. The existing citation-cache workflow remains available separately.
 - English and Chinese share the same pages. `?lang=en` and `?lang=zh` choose the initial language; the language button saves the preference for other pages.
 
+## Homepage video backgrounds
+
+The homepage plays the silent H.264 clips in `assets/videos/` in order, advancing when each clip ends. JPEG posters appear before playback and when automatic playback is disabled. Pausing keeps the current video frame. Only the active video plays; the following video loads halfway through the active clip. The existing motion button, arrows, dots, keyboard navigation, and touch swipes control playback.
+
+To add a clip, place its web-optimized MP4 and poster in `assets/videos/`, add a `.hero-background-slide` with its English/Chinese labels and a `video` with `data-src` in `index.html`, and add the matching numbered `data-hero-slide` button. `hero-carousel.js` derives the count from those slides. On smaller screens, the video retains its full 16:9 frame.
+
 ## Compatibility and backup
 
 The old `/research/`, `/publication/`, `/team/`, `/news/`, `/resource/`, `/service/`, and `/zh/` entry points now redirect to the corresponding new page. Existing news/research anchors and per-publication DOI anchors remain usable. `legacy-redirect.js` handles these entry points.

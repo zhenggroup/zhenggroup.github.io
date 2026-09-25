@@ -1,4 +1,4 @@
-/* Five backgrounds share one title hero; only the active scene is animated. */
+/* Muted background videos play in order; posters remain available without motion. */
 (() => {
   'use strict';
   class HeroCarousel {
@@ -6,24 +6,38 @@
       this.hero = hero;
       this.stage = hero.querySelector('.hero-art');
       this.slides = [...hero.querySelectorAll('.hero-background-slide')];
-      this.images = this.slides.map(slide => slide.querySelector('img'));
+      this.videos = this.slides.map(slide => slide.querySelector('video'));
       this.controls = hero.querySelector('.hero-carousel-controls');
       this.buttons = [...hero.querySelectorAll('[data-hero-slide]')];
       this.progress = hero.querySelector('.hero-carousel-progress>span');
       this.announcement = hero.querySelector('.hero-carousel-announcement');
-      this.names = ['Three-electrode system', 'ACS Electrochemistry', 'Chemistry of Materials', 'JPCC', 'JACS Au'];
-      this.currentIndex = 0; this.elapsed = 0; this.visualTime = 0; this.duration = 8;
-      this.frame = null; this.lastTime = null; this.inView = false; this.focused = false;
+      this.currentIndex = 0;
+      this.frame = null; this.inView = false; this.focused = false;
       this.paused = false; this.pending = false; this.destroyed = false; this.request = 0;
-      this.ready = this.slides.map(() => false); this.loads = []; this.listeners = [];
+      this.autoplayBlocked = false;
+      this.ready = this.slides.map(() => false);
+      this.failed = this.slides.map(() => false);
+      this.loads = []; this.listeners = []; this.playRequests = new Map();
       this.preference = matchMedia('(prefers-reduced-motion: reduce)');
       this.connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
       this.tick = this.tick.bind(this); this.updateActivity = this.updateActivity.bind(this);
       this.checkViewport = this.checkViewport.bind(this);
+      this.videos.forEach((video, index) => {
+        video.muted = true;
+        this.listen(video, 'ended', () => {
+          if (index === this.currentIndex && this.shouldRun()) this.step(1);
+        });
+        this.listen(video, 'playing', () => {
+          if (index !== this.currentIndex || !this.shouldRun()) video.pause();
+        });
+        this.listen(video, 'error', () => {
+          this.failed[index] = true; this.ready[index] = false;
+          if (index === this.currentIndex && !this.pending && this.wantsPlayback()) this.step(1);
+        });
+      });
       this.buttons.forEach((button, index) => this.listen(button, 'click', () => this.show(index, true)));
       hero.querySelectorAll('[data-hero-direction]').forEach(button => this.listen(button, 'click', () => this.step(Number(button.dataset.heroDirection), true)));
-      // Keyboard focus pauses rotation for reading; mouse/touch focus must not
-      // leave autoplay stopped after clicking an arrow or a slide dot.
+      // Pointer focus must not leave autoplay stopped after a manual selection.
       this.listen(this.controls, 'pointerdown', () => { this.focused = false; this.updateActivity(); });
       this.listen(this.controls, 'focusin', event => {
         this.focused = event.target.matches(':focus-visible');
@@ -35,8 +49,7 @@
       this.listen(this.controls, 'keydown', event => {
         const destinations = { ArrowLeft: this.currentIndex - 1, ArrowRight: this.currentIndex + 1, Home: 0, End: this.slides.length - 1 };
         if (!(event.key in destinations)) return;
-        event.preventDefault();
-        this.focused = true;
+        event.preventDefault(); this.focused = true;
         const index = this.normalize(destinations[event.key]);
         this.show(index, true);
         if (event.target.matches('[data-hero-slide]')) this.buttons[index].focus();
@@ -51,6 +64,10 @@
         if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.4) this.step(dx < 0 ? 1 : -1, true);
       });
       this.listen(this.stage, 'pointercancel', () => { this.touchStart = null; });
+      const motionToggle = document.querySelector('#motion-toggle');
+      if (motionToggle) this.listen(motionToggle, 'click', () => {
+        this.autoplayBlocked = false; this.updateActivity();
+      });
       this.listen(document, 'visibilitychange', this.updateActivity);
       this.listen(this.preference, 'change', this.updateActivity);
       if (this.connection?.addEventListener) this.listen(this.connection, 'change', this.updateActivity);
@@ -73,19 +90,6 @@
       }
       this.stage.dataset.activeScene = this.slides[0].dataset.scene;
       this.translate(); this.updateActivity();
-      this.ensureLoaded(0).then(async loaded => {
-        if (this.destroyed) return;
-        if (loaded) this.updateActivity();
-        else {
-          // Recover from a missing first image without preloading every slide.
-          for (let index = 1; index < this.slides.length; index += 1) {
-            if (this.destroyed || this.request !== 0) break;
-            const available = await this.ensureLoaded(index);
-            if (this.destroyed || this.request !== 0) break;
-            if (available) { this.show(index); break; }
-          }
-        }
-      });
     }
     listen(node, event, listener, options) {
       node.addEventListener(event, listener, options);
@@ -96,12 +100,11 @@
     motionBlocked() {
       return this.preference.matches || [document.body, document.documentElement].some(node => node.classList.contains('motion-paused') || node.classList.contains('page-inactive'));
     }
-    dataSavingEnabled() {
-      // Network speed is an estimate, not a request to stop the slideshow.
-      // Keep lazy loading and honor the visitor's explicit data-saving setting.
-      return Boolean(this.connection?.saveData);
+    dataSavingEnabled() { return Boolean(this.connection?.saveData); }
+    wantsPlayback() {
+      return !this.destroyed && this.inView && !document.hidden && !this.motionBlocked() && !this.dataSavingEnabled() && !this.paused && !this.focused && !this.autoplayBlocked;
     }
-    shouldRun() { return !this.destroyed && this.inView && !document.hidden && !this.motionBlocked() && !this.dataSavingEnabled() && !this.paused && !this.focused && !this.pending && this.ready[this.currentIndex]; }
+    shouldRun() { return this.wantsPlayback() && !this.pending && this.ready[this.currentIndex] && !this.failed[this.currentIndex]; }
     setPaused(value) { this.paused = Boolean(value); this.updateActivity(); }
     checkViewport() {
       const rect = this.stage.getBoundingClientRect();
@@ -110,40 +113,52 @@
     }
     ensureLoaded(index) {
       if (this.loads[index]) return this.loads[index];
-      const img = this.images[index];
+      const video = this.videos[index];
       this.loads[index] = new Promise(resolve => {
-        const fail = () => { this.buttons[index].disabled = true; img.style.visibility = 'hidden'; resolve(false); };
-        const finish = async () => {
-          if (!img.complete || !img.naturalWidth) { fail(); return; }
-          try { await img.decode(); } catch { /* The loaded raster can still be used. */ }
-          this.ready[index] = true; resolve(true);
+        const cleanup = () => {
+          video.removeEventListener('loadeddata', finish);
+          video.removeEventListener('canplay', finish);
+          video.removeEventListener('error', fail);
         };
-        img.addEventListener('load', finish, { once: true });
-        img.addEventListener('error', fail, { once: true });
-        const deferred = img.dataset.src;
-        if (deferred) {
-          img.loading = 'eager';
-          if (img.dataset.srcset) {
-            img.srcset = img.dataset.srcset;
-            delete img.dataset.srcset;
-          }
-          img.src = deferred;
-          delete img.dataset.src;
-        }
-        if (img.complete && img.naturalWidth) finish();
-        else if (!deferred && img.complete && img.getAttribute('src')) fail();
+        const finish = () => {
+          if (video.readyState < 2) return;
+          cleanup(); this.ready[index] = true; resolve(true);
+        };
+        const fail = () => {
+          cleanup(); this.failed[index] = true; resolve(false);
+        };
+        video.addEventListener('loadeddata', finish);
+        video.addEventListener('canplay', finish);
+        video.addEventListener('error', fail, { once: true });
+        video.preload = 'auto';
+        video.src = video.dataset.src;
+        video.load();
       });
       return this.loads[index];
     }
+    nextAvailable(direction) {
+      for (let distance = 1; distance <= this.slides.length; distance += 1) {
+        const index = this.normalize(this.currentIndex + direction * distance);
+        if (!this.failed[index]) return index;
+      }
+      return null;
+    }
     async show(index, manual = false) {
       index = this.normalize(index);
+      if (manual) this.autoplayBlocked = false;
       const request = ++this.request;
       this.pending = true; this.updateActivity();
-      const loaded = await this.ensureLoaded(index);
+      // Keep the current frame visible until the incoming video has a frame.
+      // Paused, reduced-motion and data-saving visitors can switch posters directly.
+      if (this.wantsPlayback() && !this.failed[index]) {
+        const loaded = await this.ensureLoaded(index);
+        if (this.destroyed || request !== this.request) return;
+        if (!loaded && !manual) { this.pending = false; this.step(1); return; }
+      }
       if (this.destroyed || request !== this.request) return;
-      this.pending = false;
-      if (!loaded) { this.elapsed = 0; this.updateActivity(); return; }
-      this.currentIndex = index; this.elapsed = 0;
+      this.currentIndex = index; this.pending = false;
+      const video = this.videos[index];
+      if (video.readyState >= 1) video.currentTime = 0;
       this.slides.forEach((slide, i) => {
         slide.classList.toggle('is-active', i === index);
         slide.setAttribute('aria-hidden', String(i !== index)); slide.inert = i !== index;
@@ -154,66 +169,92 @@
       });
       this.stage.dataset.activeScene = this.slides[index].dataset.scene;
       if (this.progress) this.progress.style.transform = 'scaleX(0)';
-      const status = this.hero.querySelector('.hero-carousel-status');
-      if (status) status.textContent = `${String(index + 1).padStart(2, '0')} / 05`;
       if (manual && this.announcement) this.announcement.textContent = this.label(index);
       this.updateActivity();
     }
     step(direction, manual = false) {
-      for (let distance = 1; distance <= this.slides.length; distance += 1) {
-        const index = this.normalize(this.currentIndex + direction * distance);
-        if (!this.buttons[index].disabled) { this.show(index, manual); break; }
-      }
+      const index = manual ? this.normalize(this.currentIndex + direction) : this.nextAvailable(direction);
+      if (index === null) { this.updateActivity(); return; }
+      this.show(index, manual);
+    }
+    playCurrent() {
+      const index = this.currentIndex, video = this.videos[index];
+      if (!video.paused || this.playRequests.has(video)) return;
+      if (video.ended) { this.step(1); return; }
+      const request = video.play();
+      this.playRequests.set(video, request);
+      request.then(() => {
+        if (index !== this.currentIndex || !this.shouldRun()) video.pause();
+      }).catch(error => {
+        if (this.destroyed || error.name === 'AbortError' || index !== this.currentIndex) return;
+        if (error.name === 'NotAllowedError') {
+          this.autoplayBlocked = true; this.updateActivity();
+        } else {
+          this.failed[index] = true; this.step(1);
+        }
+      }).finally(() => {
+        this.playRequests.delete(video);
+        // A quick pause/resume can cancel play before its promise settles.
+        if (index === this.currentIndex && this.shouldRun() && video.paused) this.updateActivity();
+      });
     }
     updateActivity() {
       if (this.destroyed) return;
       this.hero.classList.toggle('hero-motion-paused', this.motionBlocked() || this.paused);
       this.hero.classList.toggle('hero-motion-suspended', !this.shouldRun());
       this.hero.classList.toggle('is-out-of-view', !this.inView || document.hidden);
+      this.videos.forEach((video, index) => {
+        if (index !== this.currentIndex || !this.shouldRun()) video.pause();
+      });
+      if (this.wantsPlayback() && !this.pending && !this.loads[this.currentIndex] && !this.failed[this.currentIndex]) {
+        this.ensureLoaded(this.currentIndex).then(() => this.updateActivity());
+      }
       if (this.shouldRun()) {
-        if (this.frame === null) { this.lastTime = null; this.frame = requestAnimationFrame(this.tick); }
+        this.playCurrent();
+        if (this.frame === null) this.frame = requestAnimationFrame(this.tick);
       } else {
         if (this.frame !== null) cancelAnimationFrame(this.frame);
-        this.frame = null; this.lastTime = null;
+        this.frame = null;
       }
     }
-    tick(timestamp) {
+    tick() {
       this.frame = null;
-      if (!this.shouldRun()) { this.lastTime = null; return; }
-      const dt = this.lastTime === null ? 0 : Math.min((timestamp - this.lastTime) / 1000, 0.08);
-      this.lastTime = timestamp; this.elapsed += dt; this.visualTime += dt;
-      const phase = this.visualTime / 14;
-      this.stage.style.setProperty('--hero-pan-x', `${Math.sin(phase) * 0.13}%`);
-      this.stage.style.setProperty('--hero-pan-y', `${Math.cos(phase * 0.8) * 0.1}%`);
-      this.stage.style.setProperty('--hero-zoom', String(1.008 + Math.sin(phase * 0.65) * 0.004));
-      const sweep = (this.visualTime / 18) % 1;
-      this.stage.style.setProperty('--hero-sweep', `${-65 + sweep * 130}%`);
-      this.stage.style.setProperty('--hero-glint-opacity', String(Math.sin(sweep * Math.PI) ** 2 * 0.045));
-      if (this.progress) this.progress.style.transform = `scaleX(${Math.min(this.elapsed / this.duration, 1)})`;
-      if (this.elapsed >= this.duration) { this.step(1); return; }
+      if (!this.shouldRun()) return;
+      const video = this.videos[this.currentIndex];
+      const fraction = Number.isFinite(video.duration) && video.duration > 0 ? video.currentTime / video.duration : 0;
+      if (this.progress) this.progress.style.transform = `scaleX(${Math.min(fraction, 1)})`;
+      // Download only the following clip, once the current one is halfway through.
+      if (fraction >= 0.5) {
+        const next = this.nextAvailable(1);
+        if (next !== null && next !== this.currentIndex && !this.loads[next]) this.ensureLoaded(next);
+      }
+      if (video.ended) { this.step(1); return; }
       this.frame = requestAnimationFrame(this.tick);
     }
     label(index) {
       const zh = document.documentElement.lang.startsWith('zh');
-      const name = index === 0 && zh ? '三电极体系' : this.names[index];
-      return zh ? `背景 ${index + 1} / 5：${name}` : `Background ${index + 1} of 5: ${name}`;
+      const slide = this.slides[index];
+      const name = zh ? slide.dataset.zhLabel : slide.dataset.label;
+      return zh ? `视频背景 ${index + 1} / ${this.slides.length}：${name}` : `Video background ${index + 1} of ${this.slides.length}: ${name}`;
     }
     translate() {
       const zh = document.documentElement.lang.startsWith('zh');
-      this.controls.setAttribute('aria-label', zh ? '首页背景切换' : 'Homepage background controls');
+      this.controls.setAttribute('aria-label', zh ? '首页视频背景切换' : 'Homepage video background controls');
       this.buttons.forEach((button, i) => button.setAttribute('aria-label', this.label(i)));
-      this.hero.querySelector('[data-hero-direction="-1"]').setAttribute('aria-label', zh ? '上一幅背景' : 'Previous background');
-      this.hero.querySelector('[data-hero-direction="1"]').setAttribute('aria-label', zh ? '下一幅背景' : 'Next background');
+      this.hero.querySelector('[data-hero-direction="-1"]').setAttribute('aria-label', zh ? '上一个视频背景' : 'Previous video background');
+      this.hero.querySelector('[data-hero-direction="1"]').setAttribute('aria-label', zh ? '下一个视频背景' : 'Next video background');
     }
     destroy() {
-      if (this.destroyed) return; this.destroyed = true;
-      if (this.frame !== null) cancelAnimationFrame(this.frame); this.frame = null;
+      if (this.destroyed) return;
+      this.destroyed = true; this.request += 1;
+      if (this.frame !== null) cancelAnimationFrame(this.frame);
+      this.frame = null; this.videos.forEach(video => video.pause());
       this.listeners.forEach(remove => remove()); this.classObserver.disconnect(); this.observer?.disconnect();
     }
   }
   const start = () => {
     const hero = document.querySelector('#home');
-    if (!hero?.querySelector('.hero-background-slide')) return;
+    if (!hero?.querySelector('.hero-background-slide video')) return;
     window.HeroCarousel = new HeroCarousel(hero);
     if (location.hash === '#cover-art') {
       history.replaceState(null, '', `${location.pathname}${location.search}#home`);
