@@ -23,6 +23,7 @@
 }
 .research-page .research-quote p {
   color: #344b5f;
+  font-family: var(--display);
   font-size: 18px;
   line-height: 1.7;
   font-style: italic;
