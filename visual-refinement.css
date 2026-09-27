@@ -1,0 +1,162 @@
+/* Typography and interaction refinements shared by the eight active pages. */
+:root { --accent: #0f2c59; }
+
+/* Keep the site's existing backgrounds and layout. */
+*, *::before, *::after { border-radius: 0 !important; }
+
+/* Reserve the single accent for selection, hover, and one headline phrase. */
+.site-header .main-nav a[aria-current="page"],
+.site-header .main-nav a.active,
+.site-header .main-nav a:hover,
+.site-header .contact-link:hover,
+.site-header .language-toggle:hover,
+.site-header .motion-toggle:hover,
+.text-link:hover, .publication-card h3 a:hover,
+.paper-related a:hover, .paper-bottom a:hover,
+.resource-item h3 a:hover, .resource-links a:hover,
+.contact-details .contact-email:hover { color: var(--accent); }
+.home-page .hero-copy > .eyebrow,
+.home-page .hero .eyebrow,
+.text-link, .paper-related a, .paper-bottom a,
+.resource-item h3 a, .resource-links,
+.contact-details .contact-email,
+.news-related { color: inherit; }
+.site-header .contact-link:hover,
+.home-page .button-primary:hover { border-color: var(--accent); }
+.site-header .main-nav a::after { background: var(--accent); }
+.home-page .button-primary:hover,
+.home-page .button-text:hover { color: var(--accent); }
+.home-page .button-primary,
+.home-page .button-primary:hover { box-shadow: none; }
+.home-page .button-primary { background: #fff; color: inherit; border-color: currentColor; }
+.home-page .button-primary:hover { background: #fff; }
+.home-page .button-text { color: inherit; }
+.home-page .hero h1 { color: #0f2c59; }
+.home-page .hero h1 em { color: #9b743c; }
+.home-page .hero-copy > .eyebrow,
+.home-page .hero .eyebrow { color: #9b743c; }
+.home-page .hero-carousel-progress > span { background: #c5a059; }
+.home-page .hero-carousel-dot.is-active > span,
+.home-page .hero-carousel-dot[aria-pressed="true"] > span { background: #c5a059; }
+.research-page .research-quote { border-left-color: #e5e5e5; }
+.section-number, .research-method-tag, .tags span { color: #4a4a4a; }
+.scene-controls button[aria-pressed="true"] {
+  color: #1a1a1a;
+  background: #f9f9fb;
+  box-shadow: none;
+}
+.hero-carousel-controls { color: #1a1a1a; }
+.hero-carousel-controls .hero-carousel-arrow:hover { color: var(--accent); }
+.hero-carousel-controls button:focus-visible,
+.cover-open:focus-visible, .publication-image:focus-visible { outline-color: var(--accent); }
+.hero-carousel-dot.is-active > span,
+.hero-carousel-dot[aria-pressed="true"] > span,
+.hero-carousel-dot:hover > span,
+.hero-carousel-progress > span { background: var(--accent); }
+
+/* The arrow has fixed glyph metrics in both languages. */
+.site-header .contact-link .external-arrow {
+  display: inline-block;
+  margin-inline-start: .25em;
+  font: normal 400 14px/1 "Neutral Sans", "Noto Sans", sans-serif;
+  vertical-align: baseline;
+  transform: none;
+}
+
+/* A subtle outline marks carousel and gallery media. */
+.home-page .hero-art,
+.cover-open img, .publication-image img,
+.research-art img, .research-detail-image,
+.news-body .news-image { border: 1px solid #e5e5e5; }
+.cover-open img, .publication-image img,
+.research-card, .research-illustration,
+.cover-dialog figure img { box-shadow: none !important; }
+
+/* Hover creates a 2px offset and an unblurred lower-left corner. */
+.cover-open, .publication-image, .research-card {
+  position: relative;
+  transition: transform .2s ease;
+}
+.cover-open:hover, .publication-image:hover, .research-card:hover {
+  transform: translate(2px, -2px);
+  opacity: 1;
+}
+.cover-open::after, .publication-image::after, .research-card::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  bottom: -3px;
+  width: 20px;
+  height: 20px;
+  border-left: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
+}
+.cover-open:hover::after, .publication-image:hover::after,
+.research-card:hover::after { display: block; opacity: 1; }
+.publication-card:hover .publication-image img { transform: none; }
+.publication-image:hover img { opacity: 1; }
+.research-card:hover { background: transparent; }
+
+/* TOC thumbnails stay still and unframed; their existing click target remains. */
+.publications-page .publication-image,
+.publications-page .publication-image:hover,
+.publications-page .publication-image img,
+.publications-page .publication-image:hover img {
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+  animation: none !important;
+}
+.publications-page .publication-image::after { display: none !important; }
+
+.hero-carousel-counter {
+  min-width: 6ch;
+  white-space: nowrap;
+  text-align: center;
+  font: 500 13px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Chinese system fonts and paragraph rhythm. */
+html[lang="zh-CN"] body {
+  --font: "Source Han Sans SC", "Source Han Sans CN", "PingFang SC", "Noto Sans SC", sans-serif;
+  --display: var(--font);
+  font-family: var(--font);
+}
+html[lang="zh-CN"] body[data-theme="deco"][data-page] :is(h1,h2,h3,h4,h5,h6),
+html[lang="zh-CN"] body[data-theme="deco"][data-page] time { font-family: var(--font); }
+html[lang="zh-CN"] :is(main p, main li, main dd, main figcaption, .site-footer p) {
+  color: #1a1a1a;
+  line-height: 1.55;
+  letter-spacing: -0.75px;
+  text-autospace: ideograph-alpha ideograph-numeric;
+}
+html[lang="zh-CN"] .home-page .hero-description,
+html[lang="zh-CN"] .home-page .hero-description p,
+html[lang="zh-CN"] .research-detail-copy p,
+html[lang="zh-CN"] .research-detail-copy li,
+html[lang="zh-CN"] .page-heading .page-intro {
+  color: #1a1a1a;
+  line-height: 1.55;
+  letter-spacing: -0.75px;
+}
+
+@media (max-width: 760px) {
+  .home-page .hero-art { order: 0; }
+  .home-page .hero-copy { order: 1; }
+  .home-page .hero-carousel-controls { order: 2; }
+  html[lang="en"] :is(.home-page .hero h1, .page-heading h1, .section-heading h2) {
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
+  }
+  .hero-carousel-counter { font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cover-open, .publication-image, .research-card { transition: none; }
+}

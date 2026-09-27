@@ -10,6 +10,7 @@
       this.controls = hero.querySelector('.hero-carousel-controls');
       this.buttons = [...hero.querySelectorAll('[data-hero-slide]')];
       this.progress = hero.querySelector('.hero-carousel-progress>span');
+      this.counter = hero.querySelector('.hero-carousel-counter');
       this.announcement = hero.querySelector('.hero-carousel-announcement');
       this.currentIndex = 0;
       this.frame = null; this.inView = false; this.focused = false;
@@ -89,6 +90,7 @@
         this.checkViewport();
       }
       this.stage.dataset.activeScene = this.slides[0].dataset.scene;
+      this.updateCounter();
       this.translate(); this.updateActivity();
     }
     listen(node, event, listener, options) {
@@ -168,6 +170,7 @@
         button.setAttribute('aria-pressed', String(i === index));
       });
       this.stage.dataset.activeScene = this.slides[index].dataset.scene;
+      this.updateCounter();
       if (this.progress) this.progress.style.transform = 'scaleX(0)';
       if (manual && this.announcement) this.announcement.textContent = this.label(index);
       this.updateActivity();
@@ -236,6 +239,9 @@
       const slide = this.slides[index];
       const name = zh ? slide.dataset.zhLabel : slide.dataset.label;
       return zh ? `视频背景 ${index + 1} / ${this.slides.length}：${name}` : `Video background ${index + 1} of ${this.slides.length}: ${name}`;
+    }
+    updateCounter() {
+      if (this.counter) this.counter.textContent = `${String(this.currentIndex + 1).padStart(2, '0')} / ${String(this.slides.length).padStart(2, '0')}`;
     }
     translate() {
       const zh = document.documentElement.lang.startsWith('zh');

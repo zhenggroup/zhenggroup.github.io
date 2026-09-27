@@ -18,6 +18,34 @@
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const motionPaused = () => userPaused || reducedMotion.matches;
   const originalText = new Map($$('[data-i18n], [data-zh]').map(el => [el, el.innerHTML]));
+  const spacedTextNodes = new Map();
+  function restoreChineseSpacing() {
+    spacedTextNodes.forEach((original, node) => {
+      if (node.isConnected) node.textContent = original;
+    });
+    spacedTextNodes.clear();
+  }
+  function applyChineseSpacing() {
+    // Use native inter-script spacing when available; thin spaces cover older browsers.
+    if (CSS.supports('text-autospace', 'ideograph-alpha ideograph-numeric')) return;
+    spacedTextNodes.forEach((_, node) => {
+      if (!node.isConnected) spacedTextNodes.delete(node);
+    });
+    document.querySelectorAll('main p, main li, main dd, main figcaption, .site-footer p').forEach(container => {
+      const walker = document.createTreeWalker(container, NodeFilter.SHOW_TEXT);
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        const original = node.textContent;
+        const spaced = original
+          .replace(/([\u3400-\u9fff])(?=[A-Za-z0-9])/g, '$1\u2009')
+          .replace(/([A-Za-z0-9])(?=[\u3400-\u9fff])/g, '$1\u2009');
+        if (spaced !== original) {
+          spacedTextNodes.set(node, original);
+          node.textContent = spaced;
+        }
+      }
+    });
+  }
   const zh = {
     skip:'跳至正文',
     navResearch:'研究', navPublications:'论文', navPeople:'团队', navNews:'新闻', navResources:'资源', letsTalk:'联系',
@@ -194,6 +222,7 @@
     observeReveals();
   }
   function setLanguage(next) {
+    restoreChineseSpacing();
     language = next;
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
     originalText.forEach((original,el)=>{el.innerHTML = language === 'zh' ? (el.dataset.zh ?? zh[el.dataset.i18n] ?? original) : original;});
@@ -213,6 +242,7 @@
       populateYears();
       renderResearch();renderPublications();renderPeople();renderNews();renderResources();renderCovers();
     }
+    if (language === 'zh') applyChineseSpacing();
     updateScene();updateMotion();setMenu(false);observeReveals();
     saveSetting('language',language);
     const url = new URL(location.href);
@@ -245,8 +275,12 @@
   document.addEventListener('click',event=>{if(document.body.classList.contains('menu-open') && !event.target.closest('.site-header')) setMenu(false);});
   document.addEventListener('focusin',event=>{if(document.body.classList.contains('menu-open') && !event.target.closest('.site-header')) setMenu(false);});
   matchMedia('(max-width:1050px)').addEventListener('change',event=>{if(!event.matches) setMenu(false);});
-  $('#publication-search')?.addEventListener('input',renderPublications);
-  $('#publication-year')?.addEventListener('change',renderPublications);
+  const refreshPublications = () => {
+    renderPublications();
+    if (language === 'zh') applyChineseSpacing();
+  };
+  $('#publication-search')?.addEventListener('input',refreshPublications);
+  $('#publication-year')?.addEventListener('change',refreshPublications);
   $$('[data-scene]').forEach(button=>button.addEventListener('click',()=>{scene = button.dataset.scene;updateScene();}));
   $('#animation-speed')?.addEventListener('input',event=>{const speed = Number(event.target.value);$('#speed-value').textContent = `${speed.toFixed(1)}×`;animation?.setSpeed(speed);});
   if (hero && art) {
