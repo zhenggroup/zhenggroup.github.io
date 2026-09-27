@@ -31,6 +31,17 @@
 .home-page .button-primary { background: #fff; color: inherit; border-color: currentColor; }
 .home-page .button-primary:hover { background: #fff; }
 .home-page .button-text { color: inherit; }
+.home-page .hero-buttons .button-primary,
+.home-page .hero-buttons .button-primary:hover,
+.home-page .hero-buttons .button-primary:focus-visible {
+  background: #c5a059;
+  border-color: #c5a059;
+  color: #0f2c59;
+  box-shadow: none;
+  transform: none;
+  transition: none;
+  animation: none;
+}
 .home-page .hero h1 { color: #0f2c59; }
 .home-page .hero h1 em { color: #9b743c; }
 .home-page .hero-copy > .eyebrow,
@@ -150,6 +161,25 @@ html[lang="zh-CN"] .page-heading .page-intro {
   .home-page .hero-art { order: 0; }
   .home-page .hero-copy { order: 1; }
   .home-page .hero-carousel-controls { order: 2; }
+  .home-page .hero-copyright {
+    position: static;
+    order: 3;
+    align-self: stretch;
+    max-width: none;
+    margin: 0;
+    padding: 18px 7% 24px;
+    border-top: 1px solid #e5e5e5;
+    color: #1a1a1a;
+    background: #fff;
+    text-align: left;
+    text-shadow: none;
+  }
+  .home-page .hero-copyright p {
+    color: inherit;
+    font-size: 11px;
+    line-height: 1.55;
+    white-space: normal;
+  }
   html[lang="en"] :is(.home-page .hero h1, .page-heading h1, .section-heading h2) {
     word-break: keep-all;
     overflow-wrap: normal;
