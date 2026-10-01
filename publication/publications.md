@@ -23,7 +23,7 @@ Featured:
 Year: 2026
 Type: Article
 Authors: <b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*
-Journal: ACS Electrochemistry, 2026, accepted
+Journal: ACS Electrochemistry, 2026, 2, 10, 2481–2490
 DOI: 10.1021/acselectrochem.6c00264
 Dimensions DOI: 10.1021/acselectrochem.6c00264
 PDF:
@@ -68,7 +68,7 @@ Featured:
 Year: 2026
 Type: Article
 Authors: <b><u>W. Zheng</u></b>*
-Journal: ACS Electrochemistry, 2026, 2, 1127-1137
+Journal: ACS Electrochemistry, 2026, 2, 5, 1127–1137
 DOI: 10.1021/acselectrochem.6c00058
 Dimensions DOI: 10.1021/acselectrochem.6c00058
 PDF:

@@ -20,7 +20,7 @@ const allPublications = [
         number: 63, year: 2026, type: "Article",
         authors: "<b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*",
         title: "Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation",
-        journal: "ACS Electrochemistry, 2026, accepted",
+        journal: "ACS Electrochemistry, 2026, 2, 10, 2481–2490",
         doi: "10.1021/acselectrochem.6c00264",
         imageUrl: "../img/uncompensated-resistance-dynamic-toc.png", imageAlt: "TOC graphic illustrating the dynamic nature of uncompensated resistance in electrocatalyst evaluation",
         comments: ["featured on the cover", "ACS Editors' Choice"],
@@ -48,7 +48,7 @@ const allPublications = [
         number: 60, year: 2026, type: "Article",
         authors: "<b><u>W. Zheng</u></b>*",
         title: "Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis",
-        journal: "ACS Electrochemistry, 2026, 2, 1127-1137",
+        journal: "ACS Electrochemistry, 2026, 2, 5, 1127–1137",
         doi: "10.1021/acselectrochem.6c00058",
         imageUrl: "../img/acse.jpg", imageAlt: "Graphical abstract illustrating experimental and interpretive traps in operando electrocatalysis",
         dimensionsDoi: "10.1021/acselectrochem.6c00058"

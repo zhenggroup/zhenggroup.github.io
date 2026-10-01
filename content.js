@@ -117,7 +117,7 @@ window.CONCEPT_CONTENT = {
       "number": 63,
       "title": "Addressing the Dynamic Nature of Uncompensated Resistance in Electrocatalyst Evaluation",
       "authors": "<b><u>T. Zhang</u></b>, <b><u>W. Zheng</u></b>*",
-      "journal": "ACS Electrochemistry, 2026, accepted",
+      "journal": "ACS Electrochemistry, 2026, 2, 10, 2481–2490",
       "year": 2026,
       "type": "Article",
       "doi": "10.1021/acselectrochem.6c00264",
@@ -162,7 +162,7 @@ window.CONCEPT_CONTENT = {
       "number": 60,
       "title": "Seeing isn't Always Believing: Experimental and Interpretive Traps of In Situ/Operando Electrocatalysis",
       "authors": "<b><u>W. Zheng</u></b>*",
-      "journal": "ACS Electrochemistry, 2026, 2, 1127-1137",
+      "journal": "ACS Electrochemistry, 2026, 2, 5, 1127–1137",
       "year": 2026,
       "type": "Article",
       "doi": "10.1021/acselectrochem.6c00058",
@@ -2205,12 +2205,16 @@ window.CONCEPT_CONTENT = {
   },
   "covers": [
     {
-      "image": "img/11.jpg",
+      "image": "img/acs-electrochemistry-2026-2-10-cover.jpg",
       "title": {
         "en": "ACS Electrochemistry",
         "zh": "ACS Electrochemistry"
       },
-      "alt": "ACS Electrochemistry featured cover for uncompensated resistance",
+      "alt": "ACS Electrochemistry front cover, Volume 2 Issue 10, October 2026, featuring dynamic uncompensated resistance",
+      "detail": {
+        "en": "Volume 2 · Issue 10 · October 2026",
+        "zh": "第2卷 · 第10期 · 2026年10月"
+      },
       "doi": "10.1021/acselectrochem.6c00264"
     },
     {
