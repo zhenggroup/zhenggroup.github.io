@@ -157,6 +157,12 @@ html[lang=zh-CN] .team-page .page-heading h1{
   color:#546173;
   overflow-wrap:anywhere;
 }
+.team-page .team-content .alumni-grid .member-portrait{
+  display:block;
+}
+.team-page .team-content .alumni-grid .member-portrait>div{
+  display:none;
+}
 @media(max-width:1050px){
   .team-page .pi-biography>section{grid-template-columns:140px minmax(0,1fr);gap:25px}
   .team-page .pi-biography dl{grid-template-columns:116px minmax(0,1fr);gap:11px 16px}
