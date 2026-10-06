@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-05T07:55:41.611Z",
+  "lastUpdated": "2026-10-06T08:18:20.209Z",
   "source": "Dimensions Metrics API",
   "doiCount": 64,
   "loadedCount": 64,
@@ -188,19 +188,19 @@
       "times_cited": 34,
       "recent_citations": 30,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 7.26
+      "field_citation_ratio": 7.25
     },
     "10.1002/cssc.202301926": {
       "times_cited": 42,
       "recent_citations": 36,
       "relative_citation_ratio": 2.08,
-      "field_citation_ratio": 6.47
+      "field_citation_ratio": 6.46
     },
     "10.1002/adma.202311256": {
       "times_cited": 165,
       "recent_citations": 139,
       "relative_citation_ratio": 7.57,
-      "field_citation_ratio": 26.43
+      "field_citation_ratio": 26.4
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
@@ -242,7 +242,7 @@
       "times_cited": 28,
       "recent_citations": 10,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.65
+      "field_citation_ratio": 3.64
     },
     "10.1201/9781003206507-5": {
       "times_cited": 0,
@@ -260,7 +260,7 @@
       "times_cited": 114,
       "recent_citations": 49,
       "relative_citation_ratio": 1.59,
-      "field_citation_ratio": 9.88
+      "field_citation_ratio": 9.87
     },
     "10.1021/acsenergylett.1c01350": {
       "times_cited": 394,
@@ -272,7 +272,7 @@
       "times_cited": 109,
       "recent_citations": 45,
       "relative_citation_ratio": 1.6,
-      "field_citation_ratio": 10.04
+      "field_citation_ratio": 10.03
     },
     "10.1016/j.isci.2021.102342": {
       "times_cited": 19,
@@ -290,7 +290,7 @@
       "times_cited": 215,
       "recent_citations": 52,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 22.16
+      "field_citation_ratio": 22.15
     },
     "10.1016/j.cej.2020.127900": {
       "times_cited": 36,
@@ -326,7 +326,7 @@
       "times_cited": 502,
       "recent_citations": 169,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 38.86
+      "field_citation_ratio": 38.85
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 30,
@@ -386,7 +386,7 @@
       "times_cited": 26,
       "recent_citations": 4,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 2.43
+      "field_citation_ratio": 2.42
     },
     "10.1002/ente.201600659": {
       "times_cited": 30,
