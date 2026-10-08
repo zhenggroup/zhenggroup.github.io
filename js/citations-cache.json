@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07T07:55:04.083Z",
+  "lastUpdated": "2026-10-08T08:10:03.661Z",
   "source": "Dimensions Metrics API",
   "doiCount": 64,
   "loadedCount": 64,
@@ -38,7 +38,7 @@
     "10.1039/D1NR03294A": 114,
     "10.1021/acsenergylett.1c01350": 394,
     "10.1021/acsami.1c03240": 109,
-    "10.1016/j.isci.2021.102342": 19,
+    "10.1016/j.isci.2021.102342": 20,
     "10.1002/smll.202007768": 19,
     "10.1016/j.apcatb.2020.119857": 216,
     "10.1016/j.cej.2020.127900": 36,
@@ -164,7 +164,7 @@
       "times_cited": 27,
       "recent_citations": 26,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 4.32
+      "field_citation_ratio": 4.31
     },
     "10.1016/j.electacta.2024.145178": {
       "times_cited": 4,
@@ -194,13 +194,13 @@
       "times_cited": 42,
       "recent_citations": 36,
       "relative_citation_ratio": 2.08,
-      "field_citation_ratio": 6.46
+      "field_citation_ratio": 6.45
     },
     "10.1002/adma.202311256": {
       "times_cited": 165,
       "recent_citations": 139,
       "relative_citation_ratio": 7.57,
-      "field_citation_ratio": 26.37
+      "field_citation_ratio": 26.36
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
@@ -275,10 +275,10 @@
       "field_citation_ratio": 10.03
     },
     "10.1016/j.isci.2021.102342": {
-      "times_cited": 19,
-      "recent_citations": 5,
+      "times_cited": 20,
+      "recent_citations": 6,
       "relative_citation_ratio": 0.42,
-      "field_citation_ratio": 2
+      "field_citation_ratio": 2.1
     },
     "10.1002/smll.202007768": {
       "times_cited": 19,
@@ -326,13 +326,13 @@
       "times_cited": 503,
       "recent_citations": 170,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 38.92
+      "field_citation_ratio": 38.91
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 30,
       "recent_citations": 10,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 2.29
+      "field_citation_ratio": 2.28
     },
     "10.1002/smll.201903791": {
       "times_cited": 36,
@@ -446,7 +446,7 @@
       "times_cited": 435,
       "recent_citations": 52,
       "relative_citation_ratio": 2.66,
-      "field_citation_ratio": 33.25
+      "field_citation_ratio": 33.24
     },
     "10.1021/la904264u": {
       "times_cited": 21,
