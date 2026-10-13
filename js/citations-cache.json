@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-12T08:16:48.574Z",
+  "lastUpdated": "2026-10-13T08:42:09.980Z",
   "source": "Dimensions Metrics API",
   "doiCount": 64,
   "loadedCount": 64,
@@ -10,13 +10,13 @@
     "10.1021/acs.jpcc.6c00506": 0,
     "10.1021/acselectrochem.6c00058": 4,
     "10.1016/j.electacta.2026.148501": 4,
-    "10.1021/jacs.6c01756": 6,
+    "10.1021/jacs.6c01756": 7,
     "10.1021/acs.chemmater.5c01720": 6,
     "10.1111/jmi.13401": 5,
     "10.1021/jacsau.5c01196": 13,
     "10.1126/sciadv.adv8650": 11,
     "10.1021/acscatal.5c04802": 7,
-    "10.1007/s43939-025-00393-6": 25,
+    "10.1007/s43939-025-00393-6": 26,
     "10.1021/acs.jpcc.5c02770": 6,
     "10.1021/acsaenm.5c00053": 0,
     "10.1002/adfm.202414041": 27,
@@ -25,7 +25,7 @@
     "10.1021/acsenergylett.4c01869": 29,
     "10.1063/5.0191316": 34,
     "10.1002/cssc.202301926": 44,
-    "10.1002/adma.202311256": 165,
+    "10.1002/adma.202311256": 166,
     "10.1149/2754-2734/acff0b": 13,
     "10.1021/acsenergylett.3c00366": 292,
     "10.1002/cmtd.202200042": 39,
@@ -35,8 +35,8 @@
     "10.1016/j.snb.2021.131334": 28,
     "10.1201/9781003206507-5": 0,
     "10.1002/9783527828562.ch1": 2,
-    "10.1039/D1NR03294A": 114,
-    "10.1021/acsenergylett.1c01350": 395,
+    "10.1039/D1NR03294A": 115,
+    "10.1021/acsenergylett.1c01350": 397,
     "10.1021/acsami.1c03240": 109,
     "10.1016/j.isci.2021.102342": 20,
     "10.1002/smll.202007768": 19,
@@ -107,8 +107,8 @@
       "field_citation_ratio": null
     },
     "10.1021/jacs.6c01756": {
-      "times_cited": 6,
-      "recent_citations": 6,
+      "times_cited": 7,
+      "recent_citations": 7,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -143,8 +143,8 @@
       "field_citation_ratio": null
     },
     "10.1007/s43939-025-00393-6": {
-      "times_cited": 25,
-      "recent_citations": 25,
+      "times_cited": 26,
+      "recent_citations": 26,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -164,7 +164,7 @@
       "times_cited": 27,
       "recent_citations": 26,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 4.29
+      "field_citation_ratio": 4.28
     },
     "10.1016/j.electacta.2024.145178": {
       "times_cited": 4,
@@ -176,7 +176,7 @@
       "times_cited": 22,
       "recent_citations": 22,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.64
+      "field_citation_ratio": 3.63
     },
     "10.1021/acsenergylett.4c01869": {
       "times_cited": 29,
@@ -188,19 +188,19 @@
       "times_cited": 34,
       "recent_citations": 30,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 7.2
+      "field_citation_ratio": 7.19
     },
     "10.1002/cssc.202301926": {
       "times_cited": 44,
       "recent_citations": 38,
       "relative_citation_ratio": 2.02,
-      "field_citation_ratio": 6.72
+      "field_citation_ratio": 6.71
     },
     "10.1002/adma.202311256": {
-      "times_cited": 165,
-      "recent_citations": 139,
+      "times_cited": 166,
+      "recent_citations": 140,
       "relative_citation_ratio": 7.49,
-      "field_citation_ratio": 26.21
+      "field_citation_ratio": 26.33
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
@@ -236,7 +236,7 @@
       "times_cited": 133,
       "recent_citations": 74,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 15.62
+      "field_citation_ratio": 15.61
     },
     "10.1016/j.snb.2021.131334": {
       "times_cited": 28,
@@ -257,14 +257,14 @@
       "field_citation_ratio": 0.24
     },
     "10.1039/D1NR03294A": {
-      "times_cited": 114,
-      "recent_citations": 49,
+      "times_cited": 115,
+      "recent_citations": 50,
       "relative_citation_ratio": 1.58,
-      "field_citation_ratio": 9.85
+      "field_citation_ratio": 9.93
     },
     "10.1021/acsenergylett.1c01350": {
-      "times_cited": 395,
-      "recent_citations": 169,
+      "times_cited": 397,
+      "recent_citations": 171,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -290,13 +290,13 @@
       "times_cited": 217,
       "recent_citations": 54,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 22.3
+      "field_citation_ratio": 22.29
     },
     "10.1016/j.cej.2020.127900": {
       "times_cited": 36,
       "recent_citations": 8,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.44
+      "field_citation_ratio": 3.43
     },
     "10.1021/acsenergylett.0c01958": {
       "times_cited": 293,
@@ -326,7 +326,7 @@
       "times_cited": 505,
       "recent_citations": 172,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 39.03
+      "field_citation_ratio": 39.02
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 30,
