@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-14T06:53:13.417Z",
+  "lastUpdated": "2026-10-15T06:42:38.142Z",
   "source": "Dimensions Metrics API",
   "doiCount": 64,
   "loadedCount": 64,
@@ -164,7 +164,7 @@
       "times_cited": 27,
       "recent_citations": 26,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 4.28
+      "field_citation_ratio": 4.27
     },
     "10.1016/j.electacta.2024.145178": {
       "times_cited": 4,
@@ -200,7 +200,7 @@
       "times_cited": 166,
       "recent_citations": 140,
       "relative_citation_ratio": 7.49,
-      "field_citation_ratio": 26.3
+      "field_citation_ratio": 26.28
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
