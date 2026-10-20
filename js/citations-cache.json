@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-10-19T07:06:12.897Z",
+  "lastUpdated": "2026-10-20T06:50:54.514Z",
   "source": "Dimensions Metrics API",
   "doiCount": 64,
   "loadedCount": 64,
   "citations": {
-    "10.1021/acselectrochem.6c00329": 0,
+    "10.1021/acselectrochem.6c00329": 1,
     "10.1021/acselectrochem.6c00264": 1,
     "10.1021/acscatal.6c03395": 0,
     "10.1021/acs.jpcc.6c00506": 0,
@@ -23,11 +23,11 @@
     "10.1016/j.electacta.2024.145178": 4,
     "10.1016/j.jcat.2024.115720": 22,
     "10.1021/acsenergylett.4c01869": 31,
-    "10.1063/5.0191316": 35,
+    "10.1063/5.0191316": 36,
     "10.1002/cssc.202301926": 44,
     "10.1002/adma.202311256": 166,
     "10.1149/2754-2734/acff0b": 13,
-    "10.1021/acsenergylett.3c00366": 294,
+    "10.1021/acsenergylett.3c00366": 296,
     "10.1002/cmtd.202200042": 40,
     "10.1002/anse.202200070": 8,
     "10.1002/asia.202200384": 21,
@@ -54,7 +54,7 @@
     "10.1016/j.mtchem.2018.12.002": 141,
     "10.1016/j.snb.2018.10.164": 46,
     "10.1002/admi.201800849": 100,
-    "10.1016/j.nanoen.2018.08.010": 174,
+    "10.1016/j.nanoen.2018.08.010": 175,
     "10.1002/elan.201800076": 34,
     "10.1002/celc.201700712": 26,
     "10.1002/ente.201600659": 30,
@@ -71,8 +71,8 @@
   },
   "details": {
     "10.1021/acselectrochem.6c00329": {
-      "times_cited": 0,
-      "recent_citations": 0,
+      "times_cited": 1,
+      "recent_citations": 1,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -170,7 +170,7 @@
       "times_cited": 4,
       "recent_citations": 4,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 0.61
+      "field_citation_ratio": 0.6
     },
     "10.1016/j.jcat.2024.115720": {
       "times_cited": 22,
@@ -185,22 +185,22 @@
       "field_citation_ratio": null
     },
     "10.1063/5.0191316": {
-      "times_cited": 35,
-      "recent_citations": 31,
+      "times_cited": 36,
+      "recent_citations": 32,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 7.35
+      "field_citation_ratio": 7.55
     },
     "10.1002/cssc.202301926": {
       "times_cited": 44,
       "recent_citations": 38,
       "relative_citation_ratio": 2.02,
-      "field_citation_ratio": 6.66
+      "field_citation_ratio": 6.65
     },
     "10.1002/adma.202311256": {
       "times_cited": 166,
       "recent_citations": 140,
       "relative_citation_ratio": 7.49,
-      "field_citation_ratio": 26.14
+      "field_citation_ratio": 26.1
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 13,
@@ -209,8 +209,8 @@
       "field_citation_ratio": 1.98
     },
     "10.1021/acsenergylett.3c00366": {
-      "times_cited": 294,
-      "recent_citations": 208,
+      "times_cited": 296,
+      "recent_citations": 210,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -236,13 +236,13 @@
       "times_cited": 133,
       "recent_citations": 74,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 15.56
+      "field_citation_ratio": 15.55
     },
     "10.1016/j.snb.2021.131334": {
       "times_cited": 28,
       "recent_citations": 10,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.62
+      "field_citation_ratio": 3.61
     },
     "10.1201/9781003206507-5": {
       "times_cited": 0,
@@ -290,13 +290,13 @@
       "times_cited": 218,
       "recent_citations": 55,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 22.34
+      "field_citation_ratio": 22.33
     },
     "10.1016/j.cej.2020.127900": {
       "times_cited": 36,
       "recent_citations": 8,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.43
+      "field_citation_ratio": 3.42
     },
     "10.1021/acsenergylett.0c01958": {
       "times_cited": 295,
@@ -326,7 +326,7 @@
       "times_cited": 506,
       "recent_citations": 173,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 39.05
+      "field_citation_ratio": 39.03
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 30,
@@ -356,7 +356,7 @@
       "times_cited": 141,
       "recent_citations": 23,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 12.56
+      "field_citation_ratio": 12.55
     },
     "10.1016/j.snb.2018.10.164": {
       "times_cited": 46,
@@ -371,10 +371,10 @@
       "field_citation_ratio": 8.95
     },
     "10.1016/j.nanoen.2018.08.010": {
-      "times_cited": 174,
-      "recent_citations": 27,
+      "times_cited": 175,
+      "recent_citations": 28,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 15.58
+      "field_citation_ratio": 15.66
     },
     "10.1002/elan.201800076": {
       "times_cited": 34,
