@@ -17,11 +17,12 @@ window.CONCEPT_CONTENT = {
       "zh": "工况界面与反应选择性"
     },
     "description": {
-      "en": "We investigate how electrochemical interfaces evolve under operating conditions and how this evolution governs reaction pathways and product selectivity. Our focus is on the interplay among electrode potential, the electrolyte environment, surface species, and interfacial structure. By combining operando spectroscopy, electrochemical microscopy, product analysis, and electrochemical measurements, we connect changes at the interface with reaction rates and product distributions. We aim to identify the processes that control selective conversion and develop a mechanistic basis for designing effective electrocatalytic systems.",
-      "zh": "我们研究工作条件下电化学界面的动态演变，以及这种演变如何影响反应路径与产物选择性，重点关注电极电位、电解液环境、表面物种和界面结构之间的相互作用。通过结合工况光谱、电化学显微表征、产物分析与电化学测量，我们将界面变化与反应速率、产物分布联系起来，识别控制选择性转化的关键过程，为电催化体系的设计提供机理依据。"
+      "en": "We investigate how electrochemical interfaces evolve under operating conditions and how this evolution governs reaction pathways and product selectivity. Our focus is on the interplay among electrode potential, the electrolyte environment, surface species, and interfacial structure. Our capabilities include operando ultraviolet–visible (UV–Vis) and Raman spectroelectrochemistry, time-resolved electrochemical impedance analysis (tr-EIA), differential electrochemical mass spectrometry (DEMS), and electrochemical atomic force microscopy (EC-AFM). These complementary methods track chemical species, interfacial impedance responses, gaseous products, and surface morphology, respectively. By relating these observations to reaction rates and product distributions, we aim to identify the processes that control selective conversion and guide the design of electrocatalytic systems.",
+      "zh": "我们研究工作条件下电化学界面的动态演变，以及这种演变如何影响反应路径与产物选择性，重点关注电极电位、电解液环境、表面物种和界面结构之间的相互作用。我们具备工况紫外–可见（UV–Vis）与拉曼光谱电化学、时间分辨电化学阻抗分析（tr-EIA）、差分电化学质谱（DEMS）和电化学原子力显微镜（EC-AFM）表征能力。这些互补方法分别用于跟踪化学物种、界面阻抗响应、气体产物和表面形貌的演变。通过将这些信息与反应速率和产物分布联系起来，我们识别控制选择性转化的关键过程，为电催化体系的设计提供机理依据。"
     },
     "tags": [
-      "Operando spectroscopy",
+      "Operando UV–Vis/Raman",
+      "tr-EIA",
       "DEMS",
       "EC-AFM"
     ],
