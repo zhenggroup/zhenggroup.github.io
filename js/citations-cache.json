@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-24T06:40:01.909Z",
+  "lastUpdated": "2026-10-25T07:05:48.694Z",
   "source": "Dimensions Metrics API",
   "doiCount": 64,
   "loadedCount": 64,
@@ -16,7 +16,7 @@
     "10.1021/jacsau.5c01196": 15,
     "10.1126/sciadv.adv8650": 12,
     "10.1021/acscatal.5c04802": 7,
-    "10.1007/s43939-025-00393-6": 30,
+    "10.1007/s43939-025-00393-6": 31,
     "10.1021/acs.jpcc.5c02770": 6,
     "10.1021/acsaenm.5c00053": 0,
     "10.1002/adfm.202414041": 28,
@@ -42,7 +42,7 @@
     "10.1002/smll.202007768": 21,
     "10.1016/j.apcatb.2020.119857": 228,
     "10.1016/j.cej.2020.127900": 38,
-    "10.1021/acsenergylett.0c01958": 308,
+    "10.1021/acsenergylett.0c01958": 309,
     "10.1039/D0TA06281B": 34,
     "10.1002/aenm.201903490": 76,
     "10.1016/j.apcatb.2020.118927": 41,
@@ -143,8 +143,8 @@
       "field_citation_ratio": null
     },
     "10.1007/s43939-025-00393-6": {
-      "times_cited": 30,
-      "recent_citations": 30,
+      "times_cited": 31,
+      "recent_citations": 31,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -164,7 +164,7 @@
       "times_cited": 28,
       "recent_citations": 27,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 5.09
+      "field_citation_ratio": 5.08
     },
     "10.1016/j.electacta.2024.145178": {
       "times_cited": 4,
@@ -188,19 +188,19 @@
       "times_cited": 38,
       "recent_citations": 34,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 9.03
+      "field_citation_ratio": 9.02
     },
     "10.1002/cssc.202301926": {
       "times_cited": 47,
       "recent_citations": 41,
       "relative_citation_ratio": 2.02,
-      "field_citation_ratio": 8.13
+      "field_citation_ratio": 8.12
     },
     "10.1002/adma.202311256": {
       "times_cited": 170,
       "recent_citations": 142,
       "relative_citation_ratio": 7.49,
-      "field_citation_ratio": 30.9
+      "field_citation_ratio": 30.86
     },
     "10.1149/2754-2734/acff0b": {
       "times_cited": 14,
@@ -218,7 +218,7 @@
       "times_cited": 40,
       "recent_citations": 23,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 4.3
+      "field_citation_ratio": 4.29
     },
     "10.1002/anse.202200070": {
       "times_cited": 8,
@@ -236,7 +236,7 @@
       "times_cited": 135,
       "recent_citations": 74,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 16.61
+      "field_citation_ratio": 16.6
     },
     "10.1016/j.snb.2021.131334": {
       "times_cited": 29,
@@ -260,7 +260,7 @@
       "times_cited": 121,
       "recent_citations": 55,
       "relative_citation_ratio": 1.58,
-      "field_citation_ratio": 10.29
+      "field_citation_ratio": 10.28
     },
     "10.1021/acsenergylett.1c01350": {
       "times_cited": 408,
@@ -290,17 +290,17 @@
       "times_cited": 228,
       "recent_citations": 61,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 23.13
+      "field_citation_ratio": 23.12
     },
     "10.1016/j.cej.2020.127900": {
       "times_cited": 38,
       "recent_citations": 9,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.58
+      "field_citation_ratio": 3.57
     },
     "10.1021/acsenergylett.0c01958": {
-      "times_cited": 308,
-      "recent_citations": 155,
+      "times_cited": 309,
+      "recent_citations": 156,
       "relative_citation_ratio": null,
       "field_citation_ratio": null
     },
@@ -314,7 +314,7 @@
       "times_cited": 76,
       "recent_citations": 19,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 5.93
+      "field_citation_ratio": 5.92
     },
     "10.1016/j.apcatb.2020.118927": {
       "times_cited": 41,
@@ -326,7 +326,7 @@
       "times_cited": 519,
       "recent_citations": 179,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 39.6
+      "field_citation_ratio": 39.58
     },
     "10.1016/j.apcatb.2019.117824": {
       "times_cited": 33,
@@ -362,7 +362,7 @@
       "times_cited": 47,
       "recent_citations": 8,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 3.72
+      "field_citation_ratio": 3.71
     },
     "10.1002/admi.201800849": {
       "times_cited": 102,
@@ -398,7 +398,7 @@
       "times_cited": 51,
       "recent_citations": 16,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 5.03
+      "field_citation_ratio": 5.02
     },
     "10.1039/C6CC07212G": {
       "times_cited": 62,
@@ -416,7 +416,7 @@
       "times_cited": 18,
       "recent_citations": 4,
       "relative_citation_ratio": null,
-      "field_citation_ratio": 1.28
+      "field_citation_ratio": 1.27
     },
     "10.1039/C4CC06195K": {
       "times_cited": 17,
