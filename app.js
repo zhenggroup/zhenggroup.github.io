@@ -111,7 +111,8 @@
     if (!grid) return;
     const query = ($('#publication-search')?.value || '').trim().toLocaleLowerCase();
     const year = $('#publication-year')?.value || 'all';
-    const selected = content.publications.filter(p => (year === 'all' || String(p.year) === year) && plain([p.title,p.authors,p.journal,p.doi].join(' ')).toLocaleLowerCase().includes(query));
+    const type = $('#publication-type')?.value || 'all';
+    const selected = content.publications.filter(p => (year === 'all' || String(p.year) === year) && (type === 'all' || typeGroup(p) === type) && plain([p.title,p.authors,p.journal,p.doi].join(' ')).toLocaleLowerCase().includes(query));
     let beforeGTIITShown = false;
     grid.innerHTML = selected.map(p => {
       const doi = `https://doi.org/${encodeURI(p.doi)}`;
@@ -128,6 +129,18 @@
     window.__dimensions_embed?.addBadges();
     if ($('#empty-state')) $('#empty-state').hidden = selected.length > 0;
     if ($('#publication-count')) $('#publication-count').textContent = language === 'zh' ? `显示 ${selected.length} 篇论文，共 ${content.publications.length} 篇` : `${selected.length} of ${content.publications.length} publications`;
+  }
+  const typeGroups = {'Article':'article','Invited Article':'article','Review':'review','Invited Review':'review','Viewpoint':'perspective','Tutorial':'perspective','Book Chapter':'chapter'};
+  const typeLabels = {all:['All types','全部类型'],article:['Articles','研究论文'],review:['Reviews','综述'],perspective:['Perspectives & tutorials','观点与教程'],chapter:['Book chapters','书籍章节']};
+  const typeGroup = paper => typeGroups[paper.type] || 'article';
+  function populateTypes() {
+    const select = $('#publication-type');
+    if (!select) return;
+    const previous = select.value || 'all';
+    const present = new Set(content.publications.map(typeGroup));
+    select.innerHTML = Object.keys(typeLabels).filter(key=>key === 'all' || present.has(key)).map(key=>`<option value="${key}">${typeLabels[key][language === 'zh' ? 1 : 0]}</option>`).join('');
+    select.value = previous;
+    select.setAttribute('aria-label', language === 'zh' ? '按类型筛选论文' : 'Filter publications by type');
   }
   function populateYears() {
     const select = $('#publication-year');
@@ -149,6 +162,41 @@
     const list = $('#news-list');
     if (!list) return;
     list.innerHTML = content.news.map(n=>`<article class="news-item" id="${escape(n.id || '')}"><time class="news-date" datetime="${escape(n.date)}">${escape(n.date.replaceAll('-','.'))}</time><div class="news-body"><h2>${escape(text(n.title))}</h2><div class="news-story"><div class="news-copy">${String(text(n.body || n.summary)).split(/\n\s*\n/).map(paragraph=>`<p>${escape(paragraph)}</p>`).join('')}${n.links?.length ? `<div class="news-related">${n.links.map(link=>`<a href="${safeURL(link.href)}"${external(link.href)}>${escape(text(link.title))} ↗</a>`).join('')}</div>` : ''}</div>${n.image ? `<img class="news-image" src="${safeURL(n.image)}" alt="${escape(n.imageAlt || text(n.title))}" loading="lazy">` : ''}</div></div></article>`).join('');
+  }
+  function renderHomeNews() {
+    const list = $('#home-news');
+    if (!list) return;
+    const limit = Number(list.dataset.limit) || 4;
+    list.innerHTML = [...content.news].sort((x,y)=>String(y.date).localeCompare(String(x.date))).slice(0,limit).map(n=>`<li><time datetime="${escape(n.date)}">${escape(String(n.date).replaceAll('-','.'))}</time><a href="${safeURL('news.html#' + (n.id || ''))}">${escape(text(n.title))}</a></li>`).join('');
+  }
+  function addNewsYears() {
+    const list = $('#news-list');
+    if (!list) return;
+    const years = [];
+    list.querySelectorAll('.news-item').forEach(item=>{
+      const year = (item.querySelector('time')?.getAttribute('datetime') || '').slice(0,4);
+      if (!year || years.includes(year)) return;
+      years.push(year);
+      const heading = document.createElement('h2');
+      heading.className = 'news-year';
+      heading.id = `news-year-${year}`;
+      heading.textContent = year;
+      item.before(heading);
+    });
+    const nav = $('#news-years');
+    if (nav) {
+      nav.innerHTML = years.map(year=>`<a href="#news-year-${year}">${year}</a>`).join('');
+      nav.setAttribute('aria-label', language === 'zh' ? '按年份浏览新闻' : 'News by year');
+    }
+  }
+  function addResourceJump() {
+    const grid = $('#resource-grid');
+    if (!grid || !content.resourceGroups?.length) return;
+    const nav = document.createElement('nav');
+    nav.className = 'resource-jump';
+    nav.setAttribute('aria-label', language === 'zh' ? '资源分类' : 'Resource categories');
+    nav.innerHTML = content.resourceGroups.map(group=>`<a href="#group-${escape(group.id)}">${escape(text(group.title))}</a>`).join('');
+    grid.prepend(nav);
   }
   function renderResources() {
     const grid = $('#resource-grid');
@@ -239,8 +287,8 @@
     const name = (pageNames[page] || pageNames.home)[language === 'zh' ? 1 : 0];
     document.title = language === 'zh' ? `${name} · 郑蔚然课题组` : `${name} · The Zheng Group`;
     if (content) {
-      populateYears();
-      renderResearch();renderPublications();renderPeople();renderNews();renderResources();renderCovers();
+      populateYears();populateTypes();
+      renderResearch();renderPublications();renderPeople();renderNews();addNewsYears();renderResources();addResourceJump();renderCovers();renderHomeNews();
     }
     if (language === 'zh') applyChineseSpacing();
     updateScene();updateMotion();setMenu(false);observeReveals();
@@ -281,6 +329,7 @@
   };
   $('#publication-search')?.addEventListener('input',refreshPublications);
   $('#publication-year')?.addEventListener('change',refreshPublications);
+  $('#publication-type')?.addEventListener('change',refreshPublications);
   $$('[data-scene]').forEach(button=>button.addEventListener('click',()=>{scene = button.dataset.scene;updateScene();}));
   $('#animation-speed')?.addEventListener('input',event=>{const speed = Number(event.target.value);$('#speed-value').textContent = `${speed.toFixed(1)}×`;animation?.setSpeed(speed);});
   if (hero && art) {
