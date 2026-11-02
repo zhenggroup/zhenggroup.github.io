@@ -16,3 +16,8 @@
 @media(max-width:1100px){.research-detail{grid-template-columns:minmax(270px,32%) minmax(0,1fr);gap:34px}.research-art{top:100px}}
 @media(max-width:760px){.research-detail{grid-template-columns:minmax(0,1fr);gap:27px}.research-art{position:relative;top:auto;max-width:440px;aspect-ratio:2/3}.research-art-note{font-size:14px;margin-top:15px}}
 @media(prefers-reduced-motion:reduce){.research-art-canvas{display:none}}
+
+/* Paper titles above each selected citation. */
+.research-citations .research-paper-title{display:block;color:var(--ink)}
+.research-citations .research-paper-source{display:block;color:#4e5e70}
+.research-citations li+li{margin-top:10px}

@@ -213,3 +213,7 @@ html[lang=zh-CN] .team-page .page-heading h1{
   .team-page .pi-biography dt:first-child{margin-top:0}
   .team-page .pi-biography dd{margin:2px 0 0}
 }
+
+/* Link from the member list to the student opportunities on the Contact page. */
+.team-page .team-join-note{margin:28px 0 0}
+.team-page .team-join-note .text-link{margin-top:0}

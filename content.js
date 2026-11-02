@@ -1168,7 +1168,7 @@ window.CONCEPT_CONTENT = {
       "id": "paper-published-ctr-2026",
       "date": "2026-08-29",
       "title": {
-        "en": "Prof. Zheng's Perspective on charge-transfer resistance and intrinsic activity is published on ACS Electrochemistry",
+        "en": "Prof. Zheng's Perspective on charge-transfer resistance and intrinsic activity is published in ACS Electrochemistry",
         "zh": "郑蔚然副教授关于电荷转移电阻与本征活性的Perspective发表于ACS Electrochemistry"
       },
       "summary": {
@@ -1224,7 +1224,7 @@ window.CONCEPT_CONTENT = {
       "id": "yinshi-2026",
       "date": "2026-04-22",
       "title": {
-        "en": "Yingshi Su's papers published on Electrochimica Acta and Journal of Physical Chemistry C",
+        "en": "Yingshi Su's papers published in Electrochimica Acta and Journal of Physical Chemistry C",
         "zh": "苏颖诗的论文发表于Electrochimica Acta和The Journal of Physical Chemistry C"
       },
       "summary": {
@@ -1261,7 +1261,7 @@ window.CONCEPT_CONTENT = {
       "id": "zheng-2026",
       "date": "2026-03-20",
       "title": {
-        "en": "Prof. Zheng's tutorial paper on in situ electrochemistry is published on ACS Electrochemistry",
+        "en": "Prof. Zheng's tutorial paper on in situ electrochemistry is published in ACS Electrochemistry",
         "zh": "郑蔚然副教授关于原位电化学的教程论文发表于ACS Electrochemistry"
       },
       "summary": {
@@ -1369,7 +1369,7 @@ window.CONCEPT_CONTENT = {
       "id": "paper-published-jacsau",
       "date": "2025-11-17",
       "title": {
-        "en": "Our paper on time-resolved EIS is published on JACS Au (featured on cover)",
+        "en": "Our paper on time-resolved EIS is published in JACS Au (featured on cover)",
         "zh": "时间分辨EIS方法论文发表于JACS Au（封面文章）"
       },
       "summary": {
@@ -1664,7 +1664,7 @@ window.CONCEPT_CONTENT = {
       "id": "paper-published-apl-energy-2024",
       "date": "2024-03-18",
       "title": {
-        "en": "Lijie Du’s paper is published on APL Energy",
+        "en": "Lijie Du’s paper is published in APL Energy",
         "zh": "杜礼杰的综述发表于APL Energy"
       },
       "summary": {
