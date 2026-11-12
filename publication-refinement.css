@@ -121,16 +121,17 @@
 .publication-copy .paper-notes p+p{margin-top:2px}
 .publication-copy .paper-related{
   display:flex;
-  flex-flow:row nowrap;
+  flex-flow:row wrap;
   align-items:baseline;
-  gap:16px;
-  overflow-x:auto;
+  gap:4px 16px;
   margin:12px 0 0;
   padding:0;
 }
 .publication-copy .paper-related a{
-  flex:0 0 auto;
-  white-space:nowrap;
+  flex:0 1 auto;
+  max-width:100%;
+  white-space:normal;
+  overflow-wrap:anywhere;
   color:#28577f;
 }
 .publication-copy .paper-bottom{

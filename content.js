@@ -281,7 +281,12 @@ window.CONCEPT_CONTENT = {
       "image": "img/sciadv-adv8650-f4.jpg",
       "imageAlt": "Science Advances carbon membrane gas separation figure",
       "comments": [],
-      "featuredIn": [],
+      "featuredIn": [
+        {
+          "text": "GTIIT Research News",
+          "url": "https://www.gtiit.edu.cn/en/viewNews_5686.aspx"
+        }
+      ],
       "pdfLink": ""
     },
     {
@@ -325,7 +330,16 @@ window.CONCEPT_CONTENT = {
       "comments": [
         "Featured on the cover"
       ],
-      "featuredIn": [],
+      "featuredIn": [
+        {
+          "text": "special collection: Jacek Lipkowski Festschrift: Electrochemistry and Surface Science",
+          "url": "https://pubs.acs.org/jpccck/collection/6038/Jacek-Lipkowski-Festschrift-Electrochemistry-and"
+        },
+        {
+          "text": "PalmSens application feature",
+          "url": "https://palmsens.cn/RuO2.html"
+        }
+      ],
       "pdfLink": ""
     },
     {
@@ -479,6 +493,10 @@ window.CONCEPT_CONTENT = {
         {
           "text": "ECS Webinar: Introducing Python for Electrochemistry Research",
           "url": "https://physicsworld.com/a/introducing-python-for-electrochemistry-research/"
+        },
+        {
+          "text": "Physics World feature (ECS-sponsored)",
+          "url": "https://physicsworld.com/a/how-publishing-in-electrochemical-society-journals-fosters-a-sense-of-community/"
         }
       ],
       "pdfLink": "downloads/Zheng_2023_ECS_Adv._2_040502.pdf"
@@ -498,6 +516,14 @@ window.CONCEPT_CONTENT = {
         "Most read paper of the year on ACS Energy Letters"
       ],
       "featuredIn": [
+        {
+          "text": "special collection: Tutorials in Electrochemistry: Electrocatalysis",
+          "url": "https://pubs.acs.org/collection/277/Tutorials-in-Electrochemistry-Electrocatalysis"
+        },
+        {
+          "text": "special collection: Best Research Practices in Energy Conversion and Storage",
+          "url": "https://pubs.acs.org/page/aelccp/vi/best-practices-in-energy"
+        },
         {
           "text": "bilibili-如何正确的处理IR补偿?",
           "url": "https://www.bilibili.com/video/BV1Ze411z7Bw/?spm_id_from=333.337.search-card.all.click&vd_source=fc9ab070c3e43559b55603564026a5de"
@@ -639,7 +665,12 @@ window.CONCEPT_CONTENT = {
       "comments": [
         "Highly cited paper, top 1% Materials Science (Clarivate, 2022, 2023, 2024)"
       ],
-      "featuredIn": [],
+      "featuredIn": [
+        {
+          "text": "special collection: Tutorials in Electrochemistry: Electrocatalysis",
+          "url": "https://pubs.acs.org/collection/277/Tutorials-in-Electrochemistry-Electrocatalysis"
+        }
+      ],
       "pdfLink": ""
     },
     {
@@ -727,7 +758,16 @@ window.CONCEPT_CONTENT = {
       "image": "img/nz0c01958_0001.webp",
       "imageAlt": "TOC for Best Practices in Using Foam-Type Electrodes",
       "comments": [],
-      "featuredIn": [],
+      "featuredIn": [
+        {
+          "text": "special collection: Tutorials in Electrochemistry: Electrocatalysis",
+          "url": "https://pubs.acs.org/collection/277/Tutorials-in-Electrochemistry-Electrocatalysis"
+        },
+        {
+          "text": "special collection: Why Seeing is Not Always Believing: Common Pitfalls in Photocatalysis and Electrocatalysis",
+          "url": "https://doi.org/10.1021/acsenergylett.1c00064"
+        }
+      ],
       "pdfLink": ""
     },
     {
@@ -787,7 +827,12 @@ window.CONCEPT_CONTENT = {
       "comments": [
         "Highly cited paper, top 1% Chemistry (Clarivate, 2021, 2022, 2023, 2024)"
       ],
-      "featuredIn": [],
+      "featuredIn": [
+        {
+          "text": "研之成理（搜狐）",
+          "url": "https://www.sohu.com/a/358216417_489486"
+        }
+      ],
       "pdfLink": ""
     },
     {
