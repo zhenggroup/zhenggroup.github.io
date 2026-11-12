@@ -301,7 +301,7 @@ window.CONCEPT_CONTENT = {
     {
       "number": 52,
       "title": "Morphological Control Synthesis of Layered Double Hydroxides for Energy Applications",
-      "authors": "<b><u>T. Zhang</u></b>,^ Y. Li,&nbsp;<b><u>W. Zheng</u></b>*",
+      "authors": "<b><u>T. Zhang</u></b>, Y. Li,&nbsp;<b><u>W. Zheng</u></b>*",
       "journal": "Discover Materials, 2025, 5, 191",
       "year": 2025,
       "type": "Invited Review",
