@@ -1,15 +1,15 @@
 /* Editorial hierarchy: expressive serif mastheads, clear sans-serif content.
    Font trial only; preserve the site's blue/gold identity and illustrations. */
 html body[data-theme="deco"][data-page] h1 {
-  font-family: var(--display); font-weight: 550; font-optical-sizing: auto;
+  font-family: var(--display); font-weight: 500; font-optical-sizing: auto;
   line-height: 1.18; letter-spacing: -.025em; text-transform: none;
 }
 html body[data-theme="deco"][data-page] :is(h2,h3,h4,h5,h6) {
-  font-family: var(--font); font-weight: 650; line-height: 1.3; letter-spacing: -.015em;
+  font-family: var(--font); font-weight: 600; line-height: 1.3; letter-spacing: -.015em;
 }
 html body[data-theme="deco"][data-page] time { font-family: var(--font); font-weight: 400; letter-spacing: 0; }
-html[lang="en"] .home-page .hero h1 { font-size: clamp(42px,4.25vw,64px); max-width: 11.5em; margin: 24px 0; }
-html[lang="en"] .home-page .hero h1 em { font-style: normal; font-weight: 550; letter-spacing: -.025em; }
+html[lang="en"] .home-page .hero h1 { font-size: clamp(42px,4.25vw,64px); font-weight: 500; max-width: 11.5em; margin: 24px 0; }
+html[lang="en"] .home-page .hero h1 em { font-style: normal; font-weight: 500; letter-spacing: -.025em; }
 html[lang="en"] .home-page .hero-description { font-size: 16px; line-height: 1.65; max-width: 34em; }
 html[lang="en"] .home-page .hero-description p { line-height: 1.65; letter-spacing: 0; }
 html[lang="en"] .page-heading h1 { font-size: clamp(36px,4vw,54px); }
@@ -21,8 +21,9 @@ html[lang="en"] .home-research-item h3 { font-size: 20px; line-height: 1.35; }
 html[lang="en"] :is(.home-research-item p,.research-detail-copy p,.research-detail-copy li) { line-height: 1.65; }
 html[lang="en"] .publication-copy > h3 { font-size: 18px; line-height: 1.4; font-weight: 600; }
 html[lang="en"] .news-body h3 { font-size: 21px; line-height: 1.35; }
-html[lang="zh-CN"] body[data-theme="deco"][data-page] h1 { font-family: var(--font); font-weight: 600; letter-spacing: .015em; line-height: 1.4; }
-html[lang="zh-CN"] body[data-theme="deco"][data-page] :is(h2,h3,h4,h5,h6) { letter-spacing: 0; line-height: 1.45; font-weight: 600; }
+html[lang="zh-CN"] body[data-theme="deco"][data-page] h1 { font-family: var(--font); font-weight: 500; letter-spacing: .015em; line-height: 1.4; }
+html[lang="zh-CN"] .home-page .hero h1 em { font-weight: 500; }
+html[lang="zh-CN"] body[data-theme="deco"][data-page] :is(h2,h3,h4,h5,h6) { letter-spacing: 0; line-height: 1.45; font-weight: 500; }
 html[lang="zh-CN"] :is(main p,main li,main dd,main figcaption,.site-footer p),
 html[lang="zh-CN"] .home-page .hero-description p,
 html[lang="zh-CN"] .page-heading .page-intro,
