@@ -169,26 +169,6 @@
     const limit = Number(list.dataset.limit) || 4;
     list.innerHTML = [...content.news].sort((x,y)=>String(y.date).localeCompare(String(x.date))).slice(0,limit).map(n=>`<li><time datetime="${escape(n.date)}">${escape(String(n.date).replaceAll('-','.'))}</time><a href="${safeURL('news.html#' + (n.id || ''))}">${escape(text(n.title))}</a></li>`).join('');
   }
-  function addNewsYears() {
-    const list = $('#news-list');
-    if (!list) return;
-    const years = [];
-    list.querySelectorAll('.news-item').forEach(item=>{
-      const year = (item.querySelector('time')?.getAttribute('datetime') || '').slice(0,4);
-      if (!year || years.includes(year)) return;
-      years.push(year);
-      const heading = document.createElement('h2');
-      heading.className = 'news-year';
-      heading.id = `news-year-${year}`;
-      heading.textContent = year;
-      item.before(heading);
-    });
-    const nav = $('#news-years');
-    if (nav) {
-      nav.innerHTML = years.map(year=>`<a href="#news-year-${year}">${year}</a>`).join('');
-      nav.setAttribute('aria-label', language === 'zh' ? '按年份浏览新闻' : 'News by year');
-    }
-  }
   function addResourceJump() {
     const grid = $('#resource-grid');
     if (!grid || !content.resourceGroups?.length) return;
@@ -288,7 +268,7 @@
     document.title = language === 'zh' ? `${name} · 郑蔚然课题组` : `${name} · The Zheng Group`;
     if (content) {
       populateYears();populateTypes();
-      renderResearch();renderPublications();renderPeople();renderNews();addNewsYears();renderResources();addResourceJump();renderCovers();renderHomeNews();
+      renderResearch();renderPublications();renderPeople();renderNews();renderResources();addResourceJump();renderCovers();renderHomeNews();
     }
     if (language === 'zh') applyChineseSpacing();
     updateScene();updateMotion();setMenu(false);observeReveals();
