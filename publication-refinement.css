@@ -106,6 +106,13 @@
   margin:0;
   color:#253c53;
 }
+/* Keep cover notes and related links together as a compact annotation group. */
+.publications-page .publication-copy .paper-notes,
+.publications-page .publication-copy .paper-notes p,
+.publications-page .publication-copy .paper-related,
+.publications-page .publication-copy .paper-related a{
+  line-height:1.5;
+}
 .publication-copy .paper-notes{
   display:block;
   margin:12px 0 0;
@@ -123,10 +130,11 @@
   display:flex;
   flex-flow:row wrap;
   align-items:baseline;
-  gap:4px 16px;
+  gap:2px 16px;
   margin:12px 0 0;
   padding:0;
 }
+.publication-copy .paper-notes + .paper-related{margin-top:2px}
 .publication-copy .paper-related a{
   flex:0 1 auto;
   max-width:100%;
