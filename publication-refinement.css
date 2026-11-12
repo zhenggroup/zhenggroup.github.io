@@ -264,9 +264,18 @@
   letter-spacing:0;
   color:#536477;
 }
-.publication-author-legend strong{font-weight:550;color:#46586c}
 /* The source identifies group members with <u>, including older records without <b>. */
-.publication-copy .paper-authors u{font-weight:550;text-decoration:none}
+.publication-copy .paper-authors b,
+.publication-copy .paper-authors strong{font-weight:inherit}
+.publication-author-legend u,
+.publication-copy .paper-authors u{
+  font-weight:400;
+  color:inherit;
+  text-decoration-line:underline;
+  text-decoration-color:var(--layout-gold,var(--gold));
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
 @media(max-width:760px){
   .publication-author-legend{margin:0 0 21px;font-size:16px;line-height:1.75}
 }
