@@ -1,35 +1,10 @@
-/* Faculty Glyphic for headings and Neutral Sans for reading text.
-   Both fonts are self-hosted under the SIL Open Font License. */
-@font-face {
-  font-family: "Faculty Glyphic";
-  src: url("fonts/faculty-glyphic/FacultyGlyphic-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Neutral Sans";
-  src: url("fonts/neutral-sans/NeutralSansVF.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-}
+/* Self-hosted open-source fonts; licenses accompany each font family. */
+@font-face { font-family: "Literata"; src: url("fonts/literata/Literata[opsz,wght].ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Literata"; src: url("fonts/literata/Literata-Italic[opsz,wght].ttf") format("truetype"); font-weight: 200 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Open Sans"; src: url("fonts/opensans/OpenSans[wdth,wght].ttf") format("truetype"); font-weight: 300 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Open Sans"; src: url("fonts/opensans/OpenSans-Italic[wdth,wght].ttf") format("truetype"); font-weight: 300 800; font-style: italic; font-display: swap; }
 
 :root {
-  --font: "Neutral Sans", "Noto Sans SC", "Noto Sans", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --display: "Faculty Glyphic", "Noto Sans SC", "Noto Sans", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-}
-
-/* The site's page-specific styles set several headings back to --font.
-   Keep the same heading family and regular weight on every active page. */
-html body[data-theme="deco"][data-page] :is(h1, h2, h3, h4, h5, h6),
-html body[data-theme="deco"][data-page] time {
-  font-family: var(--display);
-  font-weight: 400;
-}
-
-/* Paper titles read as part of each citation, alongside its authors and journal. */
-html body[data-theme="deco"][data-page="publications"] .publication-copy > h3 {
-  font-family: var(--font);
+  --font: "Open Sans", "Noto Sans SC", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --display: "Literata", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", serif;
 }
