@@ -15,31 +15,47 @@
 @media(max-width:760px){.research-detail{grid-template-columns:minmax(0,1fr);gap:27px}.research-art{position:relative;top:auto;max-width:440px;aspect-ratio:2/3}.research-art-note{font-size:14px;margin-top:15px}}
 @media(prefers-reduced-motion:reduce){.research-art-canvas{display:none}}
 
-/* Selected papers follow the archive's title, journal and DOI hierarchy. */
-.research-detail-copy .research-citations{
-  list-style:none;
-  margin:0;
-  padding:0;
-  border-top:1px solid var(--layout-line);
+/* Reading lists within the research themes. */
+.research-detail-copy .research-reading-list {
+  display: grid;
+  row-gap: .3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.research-citations > li{
-  margin:0;
-  padding:1rem 0;
-  border-bottom:1px solid var(--layout-line);
+.research-detail-copy .research-reading-list > li {
+  display: grid;
+  grid-template-columns: 4ch minmax(0, 1fr);
+  column-gap: .75rem;
+  align-items: baseline;
+  margin: 0;
 }
-.research-citations .research-paper-title{
-  margin:0;
-  color:#172a42;
-  font:600 1.125rem/1.4 var(--font);
-  letter-spacing:-.01em;
-  overflow-wrap:anywhere;
+.research-reading-list time {
+  color: var(--layout-muted);
+  font-size: .875rem;
+  font-variant-numeric: tabular-nums;
 }
-.research-page .research-citations .research-paper-source{
-  margin:.3rem 0 .55rem;
-  color:#46586c;
-  font:400 1rem/1.5 var(--font);
+.research-reading-entry {
+  min-width: 0;
+  padding-block: .14rem;
+  font: 400 1rem/1.4 var(--font);
+  overflow-wrap: anywhere;
 }
-.research-citations .paper-identifiers{
-  display:flex;
-  width:fit-content;
+.research-reading-entry a {
+  color: var(--layout-link);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: .16em;
+}
+.research-reading-entry a:is(:hover, :focus-visible) {
+  text-decoration-color: currentColor;
+}
+.research-reading-entry cite {
+  color: var(--layout-muted);
+  font-size: .875rem;
+  font-style: italic;
+}
+.research-reading-entry cite::before {
+  content: "·\00a0";
+  font-style: normal;
 }
