@@ -17,6 +17,13 @@
   let userPaused = readSetting('paused') === 'true';
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const motionPaused = () => userPaused || reducedMotion.matches;
+  const navigation = $('#main-nav');
+  const compactHeader = matchMedia('(max-width: 64rem)');
+  let expandedGroup = null;
+  let groupPinned = false;
+  addNavigationGroups();
+  // Select the English headline before recording the text used by the language switch.
+  const refreshHeroTitle = setupHeroTitle($('#hero-title'));
   const originalText = new Map($$('[data-i18n], [data-zh]').map(el => [el, el.innerHTML]));
   const spacedTextNodes = new Map();
   function restoreChineseSpacing() {
@@ -115,14 +122,17 @@
     const selected = content.publications.filter(p => (year === 'all' || String(p.year) === year) && (type === 'all' || typeGroup(p) === type) && plain([p.title,p.authors,p.journal,p.doi].join(' ')).toLocaleLowerCase().includes(query));
     let beforeGTIITShown = false;
     grid.innerHTML = selected.map(p => {
-      const doi = `https://doi.org/${encodeURI(p.doi)}`;
+      const doi = p.doi ? 'https://doi.org/' + p.doi.split('/').map(encodeURIComponent).join('/') : '';
+      const doiBadge = doi ? `<a class="paper-doi" href="${escape(doi)}" target="_blank" rel="noopener noreferrer" title="${escape(p.doi)}" aria-label="${escape((language === 'zh' ? '打开论文 DOI ' : 'Open DOI ') + p.doi)}"><span class="doi-symbol" aria-hidden="true"><img src="img/doi.svg" alt="" width="18" height="18"></span><span class="doi-value">${escape(p.doi)}</span></a>` : '';
       const number = p.number ?? content.publications.length - content.publications.indexOf(p);
+      const typeName = language === 'zh' ? (publicationTypeZh[p.type] || p.type) : p.type?.toLowerCase();
+      const typeBadge = p.type ? `<span class="paper-type-badge" title="${language === 'zh' ? '论文类型' : 'Publication type'}"><span class="paper-type-symbol" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 1.5h5.7l3.3 3.3v9.7h-9z M9 1.75v3.5h3.25 M5.9 8h4.2 M5.9 10.7h4.2"/></svg></span><span class="paper-type-value">${escape(typeName)}</span></span>` : '';
       const badgeDoi = p.dimensionsDoi || p.doi;
       const legacyAnchor = 'pub-' + (p.anchor || p.doi || p.title).toLowerCase().replace(/<[^>]*>/g,'').replace(/&[a-z0-9#]+;/gi,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
       const eraHeading = Number(number) <= 35 && !beforeGTIITShown
         ? '<h3 class="publication-era-heading" id="before-gtiit">' + (language === 'zh' ? '加入广东以色列理工学院之前' : 'Before GTIIT') + '</h3>' : '';
       if (Number(number) <= 35) beforeGTIITShown = true;
-      return `${eraHeading}<article class="publication-card${p.image ? '' : ' no-image'}" id="paper-${number}" aria-labelledby="paper-title-${number}">${p.image ? `<button type="button" class="publication-image toc-open" data-paper-number="${number}" aria-haspopup="dialog" aria-label="${escape((language === 'zh' ? '放大 TOC 图：' : 'Enlarge TOC: ') + plain(p.title))}"><img src="${safeURL(p.image)}" alt="${escape(p.imageAlt || plain(p.title))}" loading="lazy" width="500" height="280"></button>` : ''}<div class="publication-copy" id="${escape(legacyAnchor)}"><span class="publication-number">${number}.</span><h3 id="paper-title-${number}"><a href="${escape(doi)}" target="_blank" rel="noopener noreferrer">${inlineHTML(p.title)}</a>${p.type ? ` <span class="paper-type">(${escape(p.type.toLowerCase())})</span>` : ''}</h3><p class="paper-authors">${inlineHTML(p.authors)}</p><p class="paper-citation">${publicationCitation(p)}</p>${p.comments?.length ? `<div class="paper-notes">${p.comments.map(note=>`<p>${escape(note)}</p>`).join('')}</div>` : ''}${p.featuredIn?.length ? `<div class="paper-related">${p.featuredIn.map(link=>`<a href="${safeURL(link.url)}"${external(link.url)}>${escape(link.text)} ↗</a>`).join('')}</div>` : ''}<div class="paper-bottom"><span class="paper-identifiers"><span class="dimensions-badge-inline" aria-label="Dimensions citations"><span class="__dimensions_badge_embed__" data-doi="${escape(badgeDoi)}" data-style="small_rectangle" data-legend="hover-bottom"></span></span></span>${p.pdfLink ? `<a href="${safeURL(p.pdfLink)}" target="_blank" rel="noopener noreferrer">PDF ↗</a>` : ''}</div></div></article>`;
+      return `${eraHeading}<article class="publication-card${p.image ? '' : ' no-image'}" id="paper-${number}" aria-labelledby="paper-title-${number}">${p.image ? `<button type="button" class="publication-image toc-open" data-paper-number="${number}" aria-haspopup="dialog" aria-label="${escape((language === 'zh' ? '放大 TOC 图：' : 'Enlarge TOC: ') + plain(p.title))}"><img src="${safeURL(p.image)}" alt="${escape(p.imageAlt || plain(p.title))}" loading="lazy" width="500" height="280"></button>` : ''}<div class="publication-copy" id="${escape(legacyAnchor)}"><span class="publication-number">${number}.</span><h3 id="paper-title-${number}">${inlineHTML(p.title)}</h3><p class="paper-authors">${inlineHTML(p.authors)}</p><p class="paper-citation">${publicationCitation(p)}</p>${p.comments?.length ? `<div class="paper-notes">${p.comments.map(note=>`<p>${escape(note)}</p>`).join('')}</div>` : ''}${p.featuredIn?.length ? `<div class="paper-related">${p.featuredIn.map(link=>`<a href="${safeURL(link.url)}"${external(link.url)}>${escape(link.text)} ↗</a>`).join('')}</div>` : ''}<div class="paper-bottom"><span class="paper-identifiers"><span class="dimensions-badge-inline" aria-label="Dimensions citations"><span class="__dimensions_badge_embed__" data-doi="${escape(badgeDoi)}" data-style="small_rectangle" data-legend="hover-bottom"></span></span>${doiBadge}${typeBadge}</span></div></div></article>`;
     }).join('');
     grid.querySelectorAll('[data-paper-number]').forEach(button=>button.addEventListener('click',()=>{const paper = content.publications.find(p=>String(p.number) === button.dataset.paperNumber);if(paper) openImage({image:paper.image,alt:paper.imageAlt,title:plain(paper.title)});}));
     // Dimensions automatically handles initial load; refresh after filters or language changes.
@@ -130,6 +140,7 @@
     if ($('#empty-state')) $('#empty-state').hidden = selected.length > 0;
     if ($('#publication-count')) $('#publication-count').textContent = language === 'zh' ? `显示 ${selected.length} 篇论文，共 ${content.publications.length} 篇` : `${selected.length} of ${content.publications.length} publications`;
   }
+  const publicationTypeZh = {Article:'研究论文','Invited Article':'特邀研究论文',Review:'综述','Invited Review':'特邀综述',Viewpoint:'观点文章',Tutorial:'教程','Book Chapter':'书籍章节'};
   const typeGroups = {'Article':'article','Invited Article':'article','Review':'review','Invited Review':'review','Viewpoint':'perspective','Tutorial':'perspective','Book Chapter':'chapter'};
   const typeLabels = {all:['All types','全部类型'],article:['Articles','研究论文'],review:['Reviews','综述'],perspective:['Perspectives & tutorials','观点与教程'],chapter:['Book chapters','书籍章节']};
   const typeGroup = paper => typeGroups[paper.type] || 'article';
@@ -167,7 +178,27 @@
     const list = $('#home-news');
     if (!list) return;
     const limit = Number(list.dataset.limit) || 4;
-    list.innerHTML = [...content.news].sort((x,y)=>String(y.date).localeCompare(String(x.date))).slice(0,limit).map(n=>`<li><time datetime="${escape(n.date)}">${escape(String(n.date).replaceAll('-','.'))}</time><a href="${safeURL('news.html#' + (n.id || ''))}">${escape(text(n.title))}</a></li>`).join('');
+    const news = content.news.filter(item => item.category === 'group')
+      .sort((a, b) => b.date.localeCompare(a.date)).slice(0, limit);
+    list.innerHTML = news.map(item => `<li>
+      <time class="home-item-meta" datetime="${escape(item.date)}">${escape(item.date.replaceAll('-', '.'))}</time>
+      <a class="home-item-title" href="${safeURL('news.html#' + item.id)}">${escape(text(item.title))}</a>
+    </li>`).join('');
+  }
+  function renderHomePublications() {
+    const list = $('#home-publications');
+    if (!list) return;
+    const limit = Number(list.dataset.limit) || 4;
+    list.innerHTML = content.publications.slice(0, limit).map((paper, index) => {
+      const number = paper.number ?? content.publications.length - index;
+      return `<li><a class="home-paper" href="${safeURL('publications.html#paper-' + number)}">
+        ${paper.image ? `<img src="${safeURL(paper.image)}" alt="" width="90" height="66" loading="lazy" decoding="async">` : ''}
+        <span class="home-paper-copy">
+          <span class="home-item-meta">${publicationCitation(paper)}</span>
+          <span class="home-item-title" lang="en">${inlineHTML(paper.title)}</span>
+        </span>
+      </a></li>`;
+    }).join('');
   }
   function addResourceJump() {
     const grid = $('#resource-grid');
@@ -233,6 +264,84 @@
     animation?.setScene(scene);
     animation?.setLanguage(language);
   }
+  function setupHeroTitle(heading) {
+    const lead = heading?.querySelector('[data-title-lead]');
+    if (!lead) return;
+    const versions = [
+      {lead:'Probing interfaces', opening:'before and after a reaction.', compact:true},
+      {lead:'Discovering interfaces', opening:'through snapshots.', compact:false}
+    ];
+    const version = versions[Math.floor(Math.random() * versions.length)];
+    lead.textContent = version.lead;
+    const ending = heading.querySelector('em').textContent;
+    let played = false;
+    let inView = !('IntersectionObserver' in window);
+    let observer, finish;
+
+    function refresh() {
+      if (language !== 'en' || motionPaused() || document.hidden) {
+        finish?.();
+        return;
+      }
+      if (played || !inView) return;
+      played = true;
+      observer?.disconnect();
+      const visual = document.createElement('span');
+      visual.className = 'hero-title-typing';
+      visual.setAttribute('aria-hidden','true');
+      const stem = document.createElement('span');
+      const tail = document.createElement('em');
+      tail.classList.add('opening-clause');
+      tail.classList.toggle('long-clause', version.compact);
+      visual.append(stem, document.createElement('br'), tail);
+      heading.append(visual);
+      heading.classList.add('is-typing');
+
+      let timer;
+      finish = () => {
+        clearTimeout(timer);
+        visual.remove();
+        heading.classList.remove('is-typing');
+        document.removeEventListener('visibilitychange',refresh);
+        finish = null;
+      };
+      const stages = [
+        {node:stem, text:version.lead, delay:0, speed:40},
+        {node:tail, text:version.opening, delay:45, speed:39},
+        {node:tail, text:'', delay:950, speed:24},
+        {node:tail, text:ending, delay:140, speed:47}
+      ];
+      function play(index) {
+        const stage = stages[index];
+        if (!stage) { finish(); return; }
+        timer = setTimeout(() => {
+          stem.classList.toggle('typing-caret',stage.node === stem);
+          tail.classList.toggle('typing-caret',stage.node === tail);
+          if (stage.text === ending) tail.classList.remove('opening-clause','long-clause');
+          const deleting = stage.text.length === 0;
+          const word = deleting ? stage.node.textContent : stage.text;
+          let length = stage.node.textContent.length;
+          function typeCharacter() {
+            length += deleting ? -1 : 1;
+            stage.node.textContent = word.slice(0,length);
+            if (length === stage.text.length) play(index+1);
+            else timer = setTimeout(typeCharacter,stage.speed);
+          }
+          typeCharacter();
+        },stage.delay);
+      }
+      play(0);
+    }
+    if (!inView) {
+      observer = new IntersectionObserver(([entry]) => {
+        inView = entry.isIntersecting;
+        refresh();
+      },{threshold:0.25});
+      observer.observe(heading);
+    }
+    document.addEventListener('visibilitychange',refresh);
+    return refresh;
+  }
   function updateMotion() {
     const paused = motionPaused();
     document.body.classList.toggle('motion-paused',paused);
@@ -244,9 +353,11 @@
       const label = reducedMotion.matches ? (language === 'zh' ? '已遵循系统的减少动态效果设置' : 'Animations reduced by your system preference') : (paused ? (language === 'zh' ? '播放动画' : 'Play animations') : (language === 'zh' ? '暂停动画' : 'Pause animations'));
       button.setAttribute('aria-label',label);
       button.title = label;
-      if (button.querySelector('span')) button.querySelector('span').textContent = paused ? '▷' : 'Ⅱ';
+      const symbol = button.querySelector('.pause-symbol');
+      if (symbol) symbol.textContent = paused ? '▷' : 'Ⅱ';
     }
     animation?.setPaused(paused);
+    refreshHeroTitle?.();
     observeReveals();
   }
   function setLanguage(next) {
@@ -262,13 +373,13 @@
       $('#publication-search').placeholder = language === 'zh' ? '搜索标题、作者、期刊或 DOI…' : 'Search title, author, journal or DOI…';
       $('#publication-search').setAttribute('aria-label', language === 'zh' ? '搜索论文' : 'Search publications');
     }
-    $('.main-nav')?.setAttribute('aria-label', language === 'zh' ? '主导航' : 'Main navigation');
+    navigation?.setAttribute('aria-label', language === 'zh' ? '主导航' : 'Main navigation');
     $('.scene-controls')?.setAttribute('aria-label', language === 'zh' ? '选择界面动画场景' : 'Choose an interface scene');
     const name = (pageNames[page] || pageNames.home)[language === 'zh' ? 1 : 0];
     document.title = language === 'zh' ? `${name} · 郑蔚然课题组` : `${name} · The Zheng Group`;
     if (content) {
       populateYears();populateTypes();
-      renderResearch();renderPublications();renderPeople();renderNews();renderResources();addResourceJump();renderCovers();renderHomeNews();
+      renderResearch();renderPublications();renderPeople();renderNews();renderResources();addResourceJump();renderCovers();renderHomeNews();renderHomePublications();
     }
     if (language === 'zh') applyChineseSpacing();
     updateScene();updateMotion();setMenu(false);observeReveals();
@@ -279,13 +390,108 @@
       history.replaceState(null,'',url);
     }
   }
+  // Top-level links work as ordinary HTML. Enhance them with shortcuts to existing sections.
+  function addNavigationGroups() {
+    if (!navigation?.closest('.masthead')) return;
+    const sections = {
+      'research.html': [
+        ['', 'Research overview', '研究概览'],
+        ['operando-electrochemistry', 'Operando interfaces', '工况界面分析'],
+        ['electrocatalyst-degradation', 'Degradation and stability', '降解与稳定性'],
+        ['quantitative-electrochemistry', 'Quantitative electrochemistry', '定量电化学'],
+      ],
+      'publications.html': [
+        ['publication-list-title', 'Publication list', '论文列表'],
+        ['covers-title', 'Featured covers', '封面展示'],
+      ],
+      'team.html': [
+        ['pi-title', 'Weiran Zheng', '郑蔚然'],
+        ['member-portraits', 'Current members', '在组成员'],
+        ['alumni-grid', 'Previous members', '往届成员'],
+      ],
+      'resources.html': (content?.resourceGroups || []).map(group => [
+        'group-' + group.id, group.title.en, group.title.zh,
+      ]),
+      'contact.html': [
+        ['contact', 'Contact details', '联系方式'],
+        ['recruitment-title', 'Student opportunities', '学生招募'],
+      ],
+    };
+    for (const link of navigation.querySelectorAll(':scope > a')) {
+      const file = link.getAttribute('href');
+      const entries = sections[file];
+      if (!entries?.length) continue;
+
+      const group = document.createElement('div');
+      group.className = 'nav-group';
+      const list = document.createElement('ul');
+      list.className = 'nav-dropdown';
+      list.id = 'nav-' + file.split('.')[0];
+      list.hidden = true;
+      for (const [id, en, zh] of entries) {
+        const item = document.createElement('li');
+        const shortcut = document.createElement('a');
+        shortcut.href = id ? file + '#' + id : file;
+        shortcut.textContent = en;
+        shortcut.dataset.zh = zh;
+        item.append(shortcut);
+        list.append(item);
+      }
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'nav-disclosure';
+      button.setAttribute('aria-controls', list.id);
+      button.setAttribute('aria-expanded', 'false');
+      const label = document.createElement('span');
+      label.className = 'sr-only';
+      label.textContent = link.textContent.trim() + ' submenu';
+      label.dataset.zh = link.querySelector('[data-zh]').dataset.zh + '子菜单';
+      button.append(label);
+      link.before(group);
+      group.append(link, button, list);
+
+      button.addEventListener('click', () => {
+        setExpandedGroup(expandedGroup === group && groupPinned ? null : group, true);
+      });
+      group.addEventListener('pointerenter', event => {
+        if (!compactHeader.matches && event.pointerType === 'mouse' && expandedGroup !== group) setExpandedGroup(group);
+      });
+      group.addEventListener('pointerleave', () => {
+        if (expandedGroup === group && !groupPinned && !list.contains(document.activeElement)) setExpandedGroup(null);
+      });
+    }
+    // Keep every page in the static navigation, then group related destinations.
+    for (const [child, parent] of [['news', 'team'], ['services', 'contact']]) {
+      const link = navigation.querySelector(`:scope > a[href="${child}.html"]`);
+      const list = navigation.querySelector('#nav-' + parent);
+      if (!link || !list) continue;
+      const item = document.createElement('li');
+      item.className = 'nav-related';
+      item.append(link);
+      list.append(item);
+    }
+    navigation.closest('.masthead').classList.add('is-interactive');
+  }
+  function setExpandedGroup(group, pinned = false) {
+    if (expandedGroup && expandedGroup !== group) {
+      expandedGroup.querySelector('.nav-disclosure').setAttribute('aria-expanded', 'false');
+      expandedGroup.querySelector('.nav-dropdown').hidden = true;
+    }
+    expandedGroup = group;
+    groupPinned = pinned;
+    if (group) {
+      group.querySelector('.nav-disclosure').setAttribute('aria-expanded', 'true');
+      group.querySelector('.nav-dropdown').hidden = false;
+    }
+  }
   function setMenu(open,restoreFocus=false) {
+    setExpandedGroup(null);
     document.body.classList.toggle('menu-open',open);
     const button = $('#menu-toggle');
     if (!button) return;
     button.setAttribute('aria-expanded',String(open));
     button.setAttribute('aria-label', open ? (language === 'zh' ? '关闭菜单' : 'Close menu') : (language === 'zh' ? '打开菜单' : 'Open menu'));
-    if (open) $('.main-nav a')?.focus();
+    if (open) navigation?.querySelector('a')?.focus();
     if (restoreFocus) button.focus();
   }
   const hero = $('#home'), art = $('#hero-art');
@@ -298,11 +504,36 @@
   $('#motion-toggle')?.addEventListener('click',()=>{userPaused = !userPaused;saveSetting('paused',String(userPaused));updateMotion();});
   reducedMotion.addEventListener('change',updateMotion);
   $('#menu-toggle')?.addEventListener('click',()=>setMenu(!document.body.classList.contains('menu-open')));
-  $$('.main-nav a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
-  document.addEventListener('keydown',event=>{if(event.key === 'Escape' && document.body.classList.contains('menu-open')) setMenu(false,true);});
-  document.addEventListener('click',event=>{if(document.body.classList.contains('menu-open') && !event.target.closest('.site-header')) setMenu(false);});
-  document.addEventListener('focusin',event=>{if(document.body.classList.contains('menu-open') && !event.target.closest('.site-header')) setMenu(false);});
-  matchMedia('(max-width:1050px)').addEventListener('change',event=>{if(!event.matches) setMenu(false);});
+  navigation?.addEventListener('click', event => {
+    if (event.target.closest('a')) setMenu(false);
+  });
+  navigation?.addEventListener('keydown', event => {
+    if (event.key !== 'ArrowDown' || !event.target.matches('.nav-disclosure, .nav-group > a')) return;
+    event.preventDefault();
+    const group = event.target.closest('.nav-group');
+    setExpandedGroup(group, true);
+    group.querySelector('.nav-dropdown a').focus();
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key !== 'Escape') return;
+    if (expandedGroup) {
+      const button = expandedGroup.querySelector('.nav-disclosure');
+      const returnFocus = expandedGroup.contains(document.activeElement);
+      setExpandedGroup(null);
+      if (returnFocus) button.focus();
+    } else if (document.body.classList.contains('menu-open')) setMenu(false, true);
+  });
+  function dismissNavigation(event) {
+    if (expandedGroup && !expandedGroup.contains(event.target)) setExpandedGroup(null);
+    if (document.body.classList.contains('menu-open') && !event.target.closest('.site-header')) setMenu(false);
+  }
+  document.addEventListener('click', dismissNavigation);
+  document.addEventListener('focusin', event => {
+    // A touch gives the next row focus before its click. Keep it under the finger.
+    if (compactHeader.matches && navigation?.contains(event.target)) return;
+    dismissNavigation(event);
+  });
+  compactHeader.addEventListener('change', () => setMenu(false));
   const refreshPublications = () => {
     renderPublications();
     if (language === 'zh') applyChineseSpacing();

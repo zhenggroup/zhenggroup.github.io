@@ -2,6 +2,7 @@
 // Active content source: edit this JSON-compatible data for future list updates.
 // Original bibliography: publication/publications.md, cross-checked with js/publications-data.js.
 // News: primary news/news.md, cross-checked with js/news-data.js.
+// Use category "group" for lab events and "publication" for paper announcements.
 // Original research HTML is preserved by archive/pre-deco-2026-09-09; current details are in research.html.
 // Original members: js/team-data.js. Resources: resource/resources.md.
 // Covers: archived publication/index.html and original cover images (journal names visually verified).
@@ -537,7 +538,7 @@ window.CONCEPT_CONTENT = {
       "authors": "<b><u>W. Zheng</u></b>*",
       "journal": "Chemistry Methods, 2023, 3(2), e202200042",
       "year": 2023,
-      "type": "Review",
+      "type": "Tutorial",
       "doi": "10.1002/cmtd.202200042",
       "image": "img/cmtd202200042-toc-0001-m.jpg",
       "imageAlt": "TOC for Beginner's Guide to Raman Spectroelectrochemistry",
@@ -644,7 +645,7 @@ window.CONCEPT_CONTENT = {
       "authors": "<u>W. Zheng</u>, L.Y.S. Lee,* K. Y. Wong*",
       "journal": "Nanoscale, 2021, 13, 15177–15187",
       "year": 2021,
-      "type": "Article",
+      "type": "Review",
       "doi": "10.1039/D1NR03294A",
       "image": "img/Get.jpeg",
       "imageAlt": "TOC for Improving the Performance Stability of Direct Seawater Electrolysis",
@@ -1135,6 +1136,7 @@ window.CONCEPT_CONTENT = {
   "news": [
     {
       "id": "gcii-seed-fund-2026",
+      "category": "group",
       "date": "2026-09-23",
       "title": {
         "en": "Prof. Zheng was awarded the GCII Seed Fund (2026–2027)",
@@ -1157,6 +1159,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-dynamic-ru-2026",
+      "category": "publication",
       "date": "2026-09-01",
       "title": {
         "en": "Ting Zhang's paper on dynamic uncompensated resistance is published in ACS Electrochemistry (ACS Editors' Choice)",
@@ -1189,6 +1192,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "nsfc-general-program-2026",
+      "category": "group",
       "date": "2026-08-29",
       "title": {
         "en": "Prof. Zheng was awarded the NSFC General Program (2027–2030)",
@@ -1211,6 +1215,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-ctr-2026",
+      "category": "publication",
       "date": "2026-08-29",
       "title": {
         "en": "Prof. Zheng's Perspective on charge-transfer resistance and intrinsic activity is published in ACS Electrochemistry",
@@ -1243,6 +1248,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "ecs-2026",
+      "category": "group",
       "date": "2026-05-24",
       "title": {
         "en": "Prof. Zheng delivers talks at the Oregon Center for Electrochemistry and the 249th ECS Meeting",
@@ -1267,6 +1273,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "yinshi-2026",
+      "category": "publication",
       "date": "2026-04-22",
       "title": {
         "en": "Yingshi Su's papers published in Electrochimica Acta and Journal of Physical Chemistry C",
@@ -1304,6 +1311,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "zheng-2026",
+      "category": "publication",
       "date": "2026-03-20",
       "title": {
         "en": "Prof. Zheng's tutorial paper on in situ electrochemistry is published in ACS Electrochemistry",
@@ -1334,6 +1342,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "award-sijie-2026",
+      "category": "group",
       "date": "2026-03-17",
       "title": {
         "en": "Sijie Chen is awarded the Excellent Graduate Student of Academic year 2024-2025",
@@ -1356,6 +1365,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-cm",
+      "category": "publication",
       "date": "2025-12-03",
       "title": {
         "en": "Sijie Chen's paper on flexible ITO instability is published in Chemistry of Materials (featured on the cover)",
@@ -1388,6 +1398,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "zhengtalk",
+      "category": "group",
       "date": "2025-11-25",
       "title": {
         "en": "Prof. Zheng delivers an invited talk at the ICAE 2025 (Jeju, Korea)",
@@ -1412,6 +1423,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-jacsau",
+      "category": "publication",
       "date": "2025-11-17",
       "title": {
         "en": "Our paper on time-resolved EIS is published in JACS Au (featured on cover)",
@@ -1451,6 +1463,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-jpcc-2025",
+      "category": "publication",
       "date": "2025-07-20",
       "title": {
         "en": "Sijie Chen and Ting Zhang's paper on RuO2-catalyzed ammonia electrooxidation is published (featured on the cover of JPCC)",
@@ -1483,6 +1496,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "python-may-2025",
+      "category": "group",
       "date": "2025-05-18",
       "title": {
         "en": "Prof. Zheng delivered a short course at the 247th ECS Meeting in Montreal, Canada",
@@ -1507,6 +1521,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "online-lecture-feb-2025",
+      "category": "group",
       "date": "2025-02-10",
       "title": {
         "en": "Prof. Zheng delivered an online lecture on Operando Methods",
@@ -1539,6 +1554,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "poster-award-sijie-2024",
+      "category": "group",
       "date": "2024-10-25",
       "title": {
         "en": "Sijie Chen wins 2nd place in MATEC poster competition",
@@ -1561,6 +1577,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-electrochimica-acta-2024",
+      "category": "publication",
       "date": "2024-10-15",
       "title": {
         "en": "Paper on Bismuth doping in copper oxides published in Electrochimica Acta",
@@ -1591,6 +1608,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-acs-energy-lett-2024",
+      "category": "publication",
       "date": "2024-09-05",
       "title": {
         "en": "Paper on graphite counter electrodes published in ACS Energy Letters",
@@ -1623,6 +1641,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-jcat-2024",
+      "category": "publication",
       "date": "2024-08-18",
       "title": {
         "en": "Paper on ammonia electrooxidation on NiOOH published in Journal of Catalysis",
@@ -1653,6 +1672,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "ecs-webinar-python-2024",
+      "category": "group",
       "date": "2024-08-01",
       "title": {
         "en": "Dr. Zheng delivered an ECS Webinar on Python for Electrochemistry with >4k audience",
@@ -1683,6 +1703,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "talk-at-ciac-cas-2024",
+      "category": "group",
       "date": "2024-05-24",
       "title": {
         "en": "Weiran Zheng delivered a talk at CIAC, Chinese Academy of Sciences",
@@ -1707,6 +1728,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "paper-published-apl-energy-2024",
+      "category": "publication",
       "date": "2024-03-18",
       "title": {
         "en": "Lijie Du’s paper is published in APL Energy",
@@ -1737,6 +1759,7 @@ window.CONCEPT_CONTENT = {
     },
     {
       "id": "talk-at-244th-ecs-meeting-2023",
+      "category": "group",
       "date": "2023-10-11",
       "title": {
         "en": "Weiran Zheng delivered a talk at the 244th ECS Meeting, Gothenburg, Sweden",

@@ -15,6 +15,34 @@ html body[data-theme="deco"].news-page .news-body h2 { color: #171a1f; font-fami
 html[lang="en"] .publication-copy > h3 { color: #172a42; font-size: 20px; font-weight: 600; line-height: 1.35; letter-spacing: -.015em; }
 html[lang="en"] :is(.paper-authors,.paper-citation) { color: #363b43; line-height: 1.55; }
 html[lang="zh-CN"] .news-page .news-copy p { font-size: 17px; line-height: 1.75; }
+
+/* Give text the same hierarchy in both languages on the light reading surfaces. */
+#main-content {
+  --reading-navy: #0f2c59;
+  --reading-ink: #1e2024;
+  --reading-muted: #60666d;
+  --layout-ink: var(--reading-navy);
+  --layout-link: var(--reading-navy);
+  --layout-muted: var(--reading-muted);
+  color: var(--reading-ink);
+}
+#main-content :is(p, li, dd),
+#main-content .pi-biography dd > span { color: var(--reading-ink); }
+#main-content :is(h1, h2, h3, h4, h5, h6, a, .home-item-title, .pi-position),
+#main-content .hero-description p:first-child,
+#main-content .pi-biography dd > strong,
+#main-content .member-portrait > strong { color: var(--reading-navy); }
+#main-content .hero .eyebrow { color: var(--layout-gold); }
+#main-content :is(.home-item-meta, .publication-number, .publication-count,
+    .publication-author-legend, .publication-year-label, .paper-notes p,
+    .cover-caption > span, .research-quote cite, .research-method-tag,
+    .research-art-note, .resource-note, .tags > span, .member-portrait > span,
+    .pi-biography dt, .pi-biography dd > .bio-separator,
+    .research-index a > span:first-child) { color: var(--reading-muted); }
+#main-content .cover-caption { color: var(--reading-ink); }
+#main-content .service-mode-grid article::before { color: var(--reading-muted); }
+#main-content .resource-note { opacity: 1; }
+#main-content .news-date { color: var(--reading-muted); background: #e8ebed; }
 @media (max-width: 760px) {
   .news-page .news-list .news-item { padding: 0 20px 24px; margin: 24px 0; }
   .news-page .news-list .news-date { margin-left: -20px; margin-bottom: 18px; }
