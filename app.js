@@ -17,6 +17,7 @@
   let userPaused = readSetting('paused') === 'true';
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   const motionPaused = () => userPaused || reducedMotion.matches;
+  const animatedLogoSource = $('.masthead-brand source');
   const navigation = $('#main-nav');
   const compactHeader = matchMedia('(max-width: 64rem)');
   let expandedGroup = null;
@@ -346,6 +347,8 @@
     const paused = motionPaused();
     document.body.classList.toggle('motion-paused',paused);
     document.documentElement.classList.toggle('motion-paused',paused);
+    // A paused header displays the complete original wordmark.
+    if (animatedLogoSource) animatedLogoSource.media = paused ? 'not all' : 'all';
     const button = $('#motion-toggle');
     if (button) {
       button.setAttribute('aria-pressed',String(paused));
