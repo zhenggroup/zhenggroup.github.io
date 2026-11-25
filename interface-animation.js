@@ -23,7 +23,6 @@
       if (!this.ctx) throw new Error('The 2D canvas context is unavailable.');
       this.scene = ['double', 'gas', 'probe'].includes(options.scene) ? options.scene : 'double';
       this.speed = Number.isFinite(Number(options.speed)) ? clamp(Number(options.speed), 0, 3) : 1;
-      this.language = String(options.language || 'en').startsWith('zh') ? 'zh' : 'en';
       const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       this.paused = options.paused === undefined ? Boolean(reducedMotion) : Boolean(options.paused);
       this.elapsed = 0;
@@ -69,6 +68,7 @@
       }
       this._onFontsLoaded = () => this._draw();
       document.fonts?.addEventListener('loadingdone', this._onFontsLoaded);
+      this.setLanguage(options.language || 'en');
       this._resize();
     }
 
@@ -97,6 +97,7 @@
     setLanguage(language) {
       if (this.disposed) return;
       this.language = String(language).startsWith('zh') ? 'zh' : 'en';
+      this.labelFont = `500 10px ${getComputedStyle(this.canvas).fontFamily}`;
       this._draw();
     }
 
@@ -185,7 +186,7 @@
 
     _label(text, x, y, align = 'center', color = COLORS.muted) {
       const c = this.ctx;
-      c.font = '500 10px "Noto Sans", "Noto Sans SC", "Segoe UI", "PingFang SC", sans-serif';
+      c.font = this.labelFont;
       c.fillStyle = color;
       c.textAlign = align;
       c.textBaseline = 'middle';

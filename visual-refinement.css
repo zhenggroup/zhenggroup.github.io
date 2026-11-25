@@ -69,7 +69,7 @@
 .site-header .contact-link .external-arrow {
   display: inline-block;
   margin-inline-start: .25em;
-  font: normal 400 14px/1 "Neutral Sans", "Noto Sans", sans-serif;
+  font: normal 400 14px/1 var(--font);
   vertical-align: baseline;
   transform: none;
 }
@@ -129,16 +129,11 @@
   min-width: 6ch;
   white-space: nowrap;
   text-align: center;
-  font: 500 13px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font: 500 13px/1.2 var(--font);
   font-variant-numeric: tabular-nums;
 }
 
-/* Chinese system fonts and paragraph rhythm. */
-html[lang="zh-CN"] body {
-  --font: "Source Han Sans SC", "Source Han Sans CN", "PingFang SC", "Noto Sans SC", sans-serif;
-  --display: var(--font);
-  font-family: var(--font);
-}
+/* Chinese paragraph rhythm. */
 html[lang="zh-CN"] body[data-theme="deco"][data-page] :is(h1,h2,h3,h4,h5,h6),
 html[lang="zh-CN"] body[data-theme="deco"][data-page] time { font-family: var(--font); }
 html[lang="zh-CN"] :is(main p, main li, main dd, main figcaption, .site-footer p) {

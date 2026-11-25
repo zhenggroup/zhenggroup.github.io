@@ -1,5 +1,4 @@
-/* Editorial hierarchy: expressive serif mastheads, clear sans-serif content.
-   Font trial only; preserve the site's blue/gold identity and illustrations. */
+/* Heading hierarchy and reading rhythm for each language. */
 html body[data-theme="deco"][data-page] h1 {
   font-family: var(--display); font-weight: 500; font-optical-sizing: auto;
   line-height: 1.18; letter-spacing: -.025em; text-transform: none;

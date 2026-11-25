@@ -1,10 +1,25 @@
-/* Self-hosted open-source fonts; licenses accompany each font family. */
-@font-face { font-family: "Literata"; src: url("fonts/literata/Literata[opsz,wght].ttf") format("truetype"); font-weight: 200 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Literata"; src: url("fonts/literata/Literata-Italic[opsz,wght].ttf") format("truetype"); font-weight: 200 900; font-style: italic; font-display: swap; }
-@font-face { font-family: "Open Sans"; src: url("fonts/opensans/OpenSans[wdth,wght].ttf") format("truetype"); font-weight: 300 800; font-style: normal; font-display: swap; }
-@font-face { font-family: "Open Sans"; src: url("fonts/opensans/OpenSans-Italic[wdth,wght].ttf") format("truetype"); font-weight: 300 800; font-style: italic; font-display: swap; }
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/google-sans/google-sans.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Google Sans";
+  src: url("fonts/google-sans/google-sans-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+}
 
 :root {
-  --font: "Open Sans", "Noto Sans SC", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --display: "Literata", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", serif;
+  --font-fallback: "Noto Sans SC", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font: "Google Sans", var(--font-fallback);
+  --display: var(--font);
+}
+
+html[lang="zh-CN"] {
+  --font-fallback: "Source Han Sans SC", "Source Han Sans CN", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
 }
